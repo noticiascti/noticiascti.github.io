@@ -2,12 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feed CTI Noticias</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Inter', sans-serif; }
     .card { @apply bg-gray-800 text-white shadow-lg rounded-xl p-5 border border-gray-700; }
-    .category-btn { @apply px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer transition; }
+    .category-btn { @apply px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer transition flex items-center space-x-2; }
     .category-btn:hover { @apply bg-yellow-500 text-black; }
     .active { @apply bg-yellow-500 text-black; }
   </style>
@@ -35,15 +36,15 @@
   </div>
 
   <script>
-    // 🔹 Categorías largas → cortas
+    // 🔹 Categorías largas → cortas + iconos
     const categoryMap = {
-      "Incidentes y Fugas de Datos en Empresas": "Incidentes & DataBreach",
-      "Tendencias de Ataques al Sector Financiero": "Tendencias",
-      "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques": "Noticias locales",
-      "Prevención / Innovación en el Sector Financiero": "Innovación & Prevención"
+      "all": { short: "Inicio", icon: "🏠" },
+      "Incidentes y Fugas de Datos en Empresas": { short: "Incidentes & DataBreach", icon: "💥" },
+      "Tendencias de Ataques al Sector Financiero": { short: "Tendencias", icon: "📊" },
+      "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques": { short: "Noticias locales", icon: "🇨🇱" },
+      "Prevención / Innovación en el Sector Financiero": { short: "Innovación & Prevención", icon: "💡" }
     };
 
-    // 🔹 Fetch al data.json
     let data = [];
     fetch("data.json")
       .then(res => res.json())
@@ -70,8 +71,8 @@
         const card = document.createElement("div");
         card.className = "card border-t border-gray-600 pt-4";
         card.innerHTML = `
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm font-bold text-yellow-400">${categoryMap[item.categoria] || item.categoria}</span>
+          <div class="flex justify-between items-center mb-2 flex-wrap">
+            <span class="text-sm font-bold text-yellow-400">${(categoryMap[item.categoria]?.short) || item.categoria}</span>
             <span class="text-xs text-gray-400">${new Date(item.timestamp).toLocaleString()}</span>
           </div>
           <p class="mb-3 text-gray-300 whitespace-pre-line">${item.resumen}</p>
@@ -95,17 +96,12 @@
       const cont = document.getElementById("categoriasContainer");
       cont.innerHTML = "";
 
-      const todasBtn = document.createElement("button");
-      todasBtn.className = "category-btn active w-full text-left md:w-auto md:text-center";
-      todasBtn.textContent = "Todas";
-      todasBtn.onclick = (e) => filtrarCategoria("all", todasBtn);
-      cont.appendChild(todasBtn);
-
-      Object.entries(categoryMap).forEach(([longName, shortName]) => {
+      Object.entries(categoryMap).forEach(([key, value]) => {
         const btn = document.createElement("button");
         btn.className = "category-btn w-full text-left md:w-auto md:text-center";
-        btn.textContent = shortName;
-        btn.onclick = () => filtrarCategoria(longName, btn);
+        btn.innerHTML = `${value.icon} <span>${value.short}</span>`;
+        btn.onclick = () => filtrarCategoria(key, btn);
+        if (key === "all") btn.classList.add("active");
         cont.appendChild(btn);
       });
     }
@@ -117,6 +113,11 @@
       paginaActual = 1;
       const filtrados = categoria === "all" ? data : data.filter(item => item.categoria === categoria);
       renderFeed(filtrados);
+
+      // cerrar menú en móvil tras seleccionar
+      if (window.innerWidth < 768) {
+        document.getElementById("categoriasContainer").classList.add("hidden");
+      }
     }
 
     function cambiarPagina(direccion) {
@@ -132,3 +133,4 @@
   </script>
 </body>
 </html>
+
