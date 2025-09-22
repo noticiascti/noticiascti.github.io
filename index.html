@@ -2,13 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CTI Feeds</title>
+  <title>Feed CTI Noticias</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Inter', sans-serif; }
     .card { @apply bg-gray-800 text-white shadow-lg rounded-xl p-5 border border-gray-700; }
-    .category-btn { @apply px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer transition w-full text-left; }
+    .category-btn { @apply px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer transition; }
     .category-btn:hover { @apply bg-yellow-500 text-black; }
     .active { @apply bg-yellow-500 text-black; }
   </style>
@@ -18,12 +17,12 @@
   <!-- Header -->
   <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-yellow-400">CTI Feeds</h1>
-    <button id="menuToggle" class="text-yellow-400 text-2xl">☰</button>
+    <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleMenu()">☰</button>
   </div>
 
-  <!-- Categorías (ocultas en móvil hasta abrir menú) -->
-  <div id="categoriasContainer" class="hidden flex-col space-y-2 p-4 bg-gray-950 border-b border-gray-700 md:flex md:flex-row md:space-x-4 md:space-y-0">
-    <!-- botones se generan dinámicamente -->
+  <!-- Categorías -->
+  <div id="categoriasContainer"
+    class="hidden flex-col space-y-2 p-4 bg-gray-950 border-b border-gray-700 md:flex md:flex-row md:space-x-4 md:space-y-0">
   </div>
 
   <!-- Contenido -->
@@ -36,7 +35,7 @@
   </div>
 
   <script>
-    // Diccionario largo -> corto
+    // 🔹 Categorías largas → cortas
     const categoryMap = {
       "Incidentes y Fugas de Datos en Empresas": "Incidentes & DataBreach",
       "Tendencias de Ataques al Sector Financiero": "Tendencias",
@@ -44,45 +43,20 @@
       "Prevención / Innovación en el Sector Financiero": "Innovación & Prevención"
     };
 
+    // 🔹 Fetch al data.json
     let data = [];
+    fetch("data.json")
+      .then(res => res.json())
+      .then(json => {
+        data = json.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        renderCategorias();
+        renderFeed(data);
+      })
+      .catch(err => console.error("Error cargando feed:", err));
+
     const itemsPorPagina = 10;
     let paginaActual = 1;
     let categoriaActual = "all";
-
-    async function cargarDatos() {
-      try {
-        // ⚠️ Reemplaza esta URL por la de tu GitHub Pages
-        const resp = await fetch("https://noticiascti.github.io/data.json");
-        data = await resp.json();
-
-        // Ordenar por fecha (últimos primero)
-        data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
-        renderCategorias();
-        renderFeed(data);
-      } catch (e) {
-        console.error("Error cargando data.json:", e);
-      }
-    }
-
-    function renderCategorias() {
-      const cont = document.getElementById("categoriasContainer");
-      cont.innerHTML = "";
-
-      const todasBtn = document.createElement("button");
-      todasBtn.className = "category-btn active";
-      todasBtn.textContent = "Todas";
-      todasBtn.onclick = (e) => filtrarCategoria("all", todasBtn);
-      cont.appendChild(todasBtn);
-
-      Object.entries(categoryMap).forEach(([longName, shortName]) => {
-        const btn = document.createElement("button");
-        btn.className = "category-btn";
-        btn.textContent = shortName;
-        btn.onclick = () => filtrarCategoria(longName, btn);
-        cont.appendChild(btn);
-      });
-    }
 
     function renderFeed(items) {
       const feed = document.getElementById("feed");
@@ -95,13 +69,10 @@
       paginatedItems.forEach(item => {
         const card = document.createElement("div");
         card.className = "card border-t border-gray-600 pt-4";
-        const catShort = categoryMap[item.categoria] || item.categoria;
-        const fecha = item.timestamp ? new Date(item.timestamp).toLocaleString() : "";
-
         card.innerHTML = `
           <div class="flex justify-between items-center mb-2">
-            <span class="text-sm font-bold text-yellow-400">${catShort}</span>
-            <span class="text-xs text-gray-400">${fecha}</span>
+            <span class="text-sm font-bold text-yellow-400">${categoryMap[item.categoria] || item.categoria}</span>
+            <span class="text-xs text-gray-400">${new Date(item.timestamp).toLocaleString()}</span>
           </div>
           <p class="mb-3 text-gray-300 whitespace-pre-line">${item.resumen}</p>
           <div class="text-sm text-gray-400">
@@ -120,6 +91,25 @@
       document.getElementById("nextBtn").disabled = fin >= items.length;
     }
 
+    function renderCategorias() {
+      const cont = document.getElementById("categoriasContainer");
+      cont.innerHTML = "";
+
+      const todasBtn = document.createElement("button");
+      todasBtn.className = "category-btn active w-full text-left md:w-auto md:text-center";
+      todasBtn.textContent = "Todas";
+      todasBtn.onclick = (e) => filtrarCategoria("all", todasBtn);
+      cont.appendChild(todasBtn);
+
+      Object.entries(categoryMap).forEach(([longName, shortName]) => {
+        const btn = document.createElement("button");
+        btn.className = "category-btn w-full text-left md:w-auto md:text-center";
+        btn.textContent = shortName;
+        btn.onclick = () => filtrarCategoria(longName, btn);
+        cont.appendChild(btn);
+      });
+    }
+
     function filtrarCategoria(categoria, btn) {
       document.querySelectorAll(".category-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
@@ -135,14 +125,10 @@
       renderFeed(filtrados);
     }
 
-    // Toggle menú móvil
-    document.getElementById("menuToggle").addEventListener("click", () => {
+    function toggleMenu() {
       const cont = document.getElementById("categoriasContainer");
       cont.classList.toggle("hidden");
-    });
-
-    // Inicialización
-    cargarDatos();
+    }
   </script>
 </body>
 </html>
