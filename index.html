@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feed Noticias CTI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .card { @apply bg-gray-800 text-white shadow-lg rounded-xl p-5 border border-gray-700; }
+    .category-btn { @apply px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer transition; }
+    .category-btn:hover { @apply bg-yellow-500 text-black; }
+    .active { @apply bg-yellow-500 text-black; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+  <!-- Header -->
+  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700">
+    <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
+  </div>
+
+  <!-- Categorías -->
+  <div class="flex space-x-4 p-4 overflow-x-auto bg-gray-950 border-b border-gray-700">
+    <button class="category-btn active" onclick="filtrarCategoria('all')">Todas</button>
+    <button class="category-btn" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')">Incidentes y Fugas de Datos en Empresas</button>
+    <button class="category-btn" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')">Tendencias de Ataques al Sector Financiero</button>
+    <button class="category-btn" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')">Noticias Locales (Chile) sobre Ciberfraude / Ciberataques</button>
+    <button class="category-btn" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')">Prevención / Innovación en el Sector Financiero</button>
+  </div>
+
+  <!-- Contenido -->
+  <div id="feed" class="p-6 space-y-6"></div>
+
+  <!-- Paginación -->
+  <div class="flex justify-center space-x-2 p-4">
+    <button id="prevBtn" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50" onclick="cambiarPagina(-1)">⬅️ Anterior</button>
+    <button id="nextBtn" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50" onclick="cambiarPagina(1)">Siguiente ➡️</button>
+  </div>
+
+  <script>
+    const itemsPorPagina = 10;
+    let paginaActual = 1;
+    let categoriaActual = "all";
+    let data = [];
+
+    async function cargarDatos() {
+      try {
+        const resp = await fetch("./data.json");
+        data = await resp.json();
+        renderFeed(data);
+      } catch (e) {
+        console.error("Error cargando data.json:", e);
+      }
+    }
+
+    function formatearFecha(isoString) {
+      if (!isoString) return "";
+      try {
+        const fecha = new Date(isoString);
+        return fecha.toLocaleString("es-CL", {
+          dateStyle: "short",
+          timeStyle: "short"
+        });
+      } catch {
+        return isoString;
+      }
+    }
+
+    function renderFeed(items) {
+      const feed = document.getElementById("feed");
+      feed.innerHTML = "";
+
+      const inicio = (paginaActual - 1) * itemsPorPagina;
+      const fin = inicio + itemsPorPagina;
+      const paginatedItems = items.slice(inicio, fin);
+
+      paginatedItems.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card border-t border-gray-600 pt-4";
+        card.innerHTML = `
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-sm font-bold text-yellow-400">${item.categoria}</span>
+            <span class="text-xs text-gray-400">${formatearFecha(item.timestamp)}</span>
+          </div>
+          <p class="mb-3 text-gray-300 whitespace-pre-line">${item.resumen}</p>
+          <div class="text-sm text-gray-400">
+            <strong>🌍 País:</strong> ${item.pais || "-"} &nbsp; 
+            <strong>🏛 Sector:</strong> ${item.sector || "-"}
+          </div>
+          <div class="text-sm text-gray-400 mt-1">
+            <strong>🔑 Claves:</strong> ${(item.palabras_claves || []).join(", ")}
+          </div>
+          ${item.url ? `<a href="${item.url}" target="_blank" class="text-yellow-400 underline mt-3 block">🔗 Ver noticia</a>` : ""}
+        `;
+        feed.appendChild(card);
+      });
+
+      document.getElementById("prevBtn").disabled = paginaActual === 1;
+      document.getElementById("nextBtn").disabled = fin >= items.length;
+    }
+
+    function filtrarCategoria(categoria) {
+      document.querySelectorAll(".category-btn").forEach(btn => btn.classList.remove("active"));
+      event.target.classList.add("active");
+      categoriaActual = categoria;
+      paginaActual = 1;
+      const filtrados = categoria === "all" ? data : data.filter(item => item.categoria === categoria);
+      renderFeed(filtrados);
+    }
+
+    function cambiarPagina(direccion) {
+      paginaActual += direccion;
+      const filtrados = categoriaActual === "all" ? data : data.filter(item => item.categoria === categoriaActual);
+      renderFeed(filtrados);
+    }
+
+    cargarDatos();
+  </script>
+</body>
+</html>
