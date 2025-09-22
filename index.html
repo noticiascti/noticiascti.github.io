@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Feed Noticias CTI</title>
+  <title>Feed CTI Noticias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Inter', sans-serif; }
@@ -15,18 +16,23 @@
 <body class="bg-gray-900 text-gray-200">
 
   <!-- Header -->
-  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700">
-    <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
+  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-yellow-400">CTI Feeds</h1>
+    <!-- Botón menú móvil -->
+    <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleMenu()">≡</button>
   </div>
 
   <!-- Categorías -->
-  <div class="flex space-x-4 p-4 overflow-x-auto bg-gray-950 border-b border-gray-700">
+  <div id="menuCategorias" class="flex-col md:flex-row md:flex space-y-2 md:space-y-0 md:space-x-4 p-4 bg-gray-950 border-b border-gray-700 hidden md:flex">
     <button class="category-btn active" onclick="filtrarCategoria('all')">Todas</button>
     <button class="category-btn" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')">Incidentes y Fugas de Datos en Empresas</button>
     <button class="category-btn" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')">Tendencias de Ataques al Sector Financiero</button>
     <button class="category-btn" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')">Noticias Locales (Chile) sobre Ciberfraude / Ciberataques</button>
     <button class="category-btn" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')">Prevención / Innovación en el Sector Financiero</button>
   </div>
+
+  <!-- Botón de nuevas noticias -->
+  <div id="newPostsBtn" class="hidden text-center bg-blue-600 text-white font-semibold py-2 cursor-pointer sticky top-0 z-50"></div>
 
   <!-- Contenido -->
   <div id="feed" class="p-6 space-y-6"></div>
@@ -38,31 +44,24 @@
   </div>
 
   <script>
-    const itemsPorPagina = 10;
-    let paginaActual = 1;
-    let categoriaActual = "all";
     let data = [];
+    let paginaActual = 1;
+    const itemsPorPagina = 10;
+    let categoriaActual = "all";
+    let ultFecha = null;
+    let nuevosPendientes = [];
 
-    async function cargarDatos() {
+    async function cargarData() {
       try {
-        const resp = await fetch("./data.json");
-        data = await resp.json();
+        const res = await fetch("data.json");
+        const json = await res.json();
+        // ordenar descendente por timestamp
+        json.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        data = json;
+        ultFecha = data.length > 0 ? new Date(data[0].timestamp) : null;
         renderFeed(data);
       } catch (e) {
-        console.error("Error cargando data.json:", e);
-      }
-    }
-
-    function formatearFecha(isoString) {
-      if (!isoString) return "";
-      try {
-        const fecha = new Date(isoString);
-        return fecha.toLocaleString("es-CL", {
-          dateStyle: "short",
-          timeStyle: "short"
-        });
-      } catch {
-        return isoString;
+        console.error("Error cargando feed:", e);
       }
     }
 
@@ -80,7 +79,7 @@
         card.innerHTML = `
           <div class="flex justify-between items-center mb-2">
             <span class="text-sm font-bold text-yellow-400">${item.categoria}</span>
-            <span class="text-xs text-gray-400">${formatearFecha(item.timestamp)}</span>
+            <span class="text-xs text-gray-400">${new Date(item.timestamp).toLocaleString()}</span>
           </div>
           <p class="mb-3 text-gray-300 whitespace-pre-line">${item.resumen}</p>
           <div class="text-sm text-gray-400">
@@ -114,7 +113,40 @@
       renderFeed(filtrados);
     }
 
-    cargarDatos();
+    // 🔄 Revisión periódica de nuevas noticias
+    async function revisarNuevas() {
+      try {
+        const res = await fetch("data.json");
+        const json = await res.json();
+        json.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+        const nuevas = ultFecha ? json.filter(item => new Date(item.timestamp) > ultFecha) : [];
+        if (nuevas.length > 0) {
+          nuevosPendientes = nuevas.concat(nuevosPendientes);
+          document.getElementById("newPostsBtn").innerText = `🔵 ${nuevas.length} noticias nuevas – Mostrar`;
+          document.getElementById("newPostsBtn").classList.remove("hidden");
+          document.getElementById("newPostsBtn").onclick = () => {
+            data = nuevas.concat(data);
+            ultFecha = new Date(data[0].timestamp);
+            renderFeed(data);
+            nuevosPendientes = [];
+            document.getElementById("newPostsBtn").classList.add("hidden");
+          };
+        }
+      } catch (e) {
+        console.error("Error revisando nuevas noticias:", e);
+      }
+    }
+
+    // menú responsive
+    function toggleMenu() {
+      const menu = document.getElementById("menuCategorias");
+      menu.classList.toggle("hidden");
+    }
+
+    // inicializar
+    cargarData();
+    setInterval(revisarNuevas, 30000); // cada 30s
   </script>
 </body>
 </html>
