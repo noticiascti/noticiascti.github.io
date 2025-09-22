@@ -17,7 +17,11 @@
 
   <!-- Header -->
   <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
+    <div class="flex items-center space-x-3">
+      <!-- Logo iSecurity -->
+      <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
+      <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
+    </div>
     <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleMenu()">☰</button>
   </div>
 
@@ -77,7 +81,7 @@
           </div>
           <p class="mb-3 text-gray-300 whitespace-pre-line">${item.resumen}</p>
           <div class="text-sm text-gray-400">
-            <strong>🌍 País:</strong> ${item.pais || "-"} &nbsp; 
+            <strong>🌍 País:</strong> ${item.pais || "-"} &nbsp;
             <strong>🏛 Sector:</strong> ${item.sector || "-"}
           </div>
           <div class="text-sm text-gray-400 mt-1">
@@ -114,7 +118,6 @@
       const filtrados = categoria === "all" ? data : data.filter(item => item.categoria === categoria);
       renderFeed(filtrados);
 
-      // cerrar menú en móvil tras seleccionar
       if (window.innerWidth < 768) {
         document.getElementById("categoriasContainer").classList.add("hidden");
       }
@@ -133,4 +136,3 @@
   </script>
 </body>
 </html>
-
