@@ -37,8 +37,8 @@
       "sii": { logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/Logotipo_Servicio_de_Impuestos_Internos.svg" }
     };
 
-    // Cargar datos
-    fetch("status_data.json")
+    // 🔹 Cargar datos con cache busting
+    fetch("status_data.json?t=" + new Date().getTime())
       .then(r => r.json())
       .then(allData => {
         const data = allData.data;
@@ -94,7 +94,7 @@
             new Chart(ctx, {
               type: "line",
               data: {
-                labels: dataset.map(p => 
+                labels: dataset.map(p =>
                   new Date(p.x).toLocaleTimeString("es-CL", {
                     timeZone:"America/Santiago",
                     hour:"2-digit",
@@ -113,7 +113,7 @@
                 }]
               },
               options: {
-                plugins: { 
+                plugins: {
                   legend: { display: false },
                   tooltip: {
                     callbacks: {
