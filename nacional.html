@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias Nacionales</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 p-6">
+
+  <!-- Header -->
+  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center mb-6">
+    <div class="flex items-center space-x-3">
+      <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
+      <h1 class="text-2xl font-bold text-yellow-400">Noticias Nacionales</h1>
+    </div>
+  </div>
+
+  <!-- Grid de noticias -->
+  <div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+  <script>
+    fetch("nacional_status.json?t=" + new Date().getTime()) // cache busting
+      .then(r => r.json())
+      .then(news => {
+        const container = document.getElementById("newsGrid");
+
+        news.forEach(n => {
+          const card = document.createElement("div");
+          card.className = "bg-white rounded-xl shadow-lg overflow-hidden text-gray-900 flex flex-col";
+
+          card.innerHTML = `
+            <img src="${n.image}" alt="${n.title}" class="h-48 w-full object-cover">
+            <div class="p-4 flex flex-col flex-grow">
+              <p class="text-xs text-gray-500">${n.date} - ${n.time}</p>
+              <h2 class="mt-2 text-lg font-bold text-gray-800 hover:text-yellow-600">
+                <a href="${n.url}" target="_blank">${n.title}</a>
+              </h2>
+              <p class="mt-2 text-sm text-gray-700 flex-grow">${n.description}</p>
+              <p class="mt-3 text-xs text-gray-500">Fuente: ${n.source}</p>
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      })
+      .catch(err => console.error("Error cargando noticias:", err));
+  </script>
+
+</body>
+</html>
