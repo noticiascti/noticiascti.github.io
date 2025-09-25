@@ -3,147 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Status Monitor</title>
+  <title>Noticias CTI</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { font-family: 'Inter', sans-serif; }
+    .card { @apply bg-gray-800 text-white shadow-lg rounded-xl p-5 border border-gray-700; }
+    .category-btn { @apply px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer transition flex items-center space-x-2; }
+    .category-btn:hover { @apply bg-yellow-500 text-black; }
+    .active { @apply bg-yellow-500 text-black; }
   </style>
 </head>
-<body class="bg-gray-900 text-gray-200 p-6">
+<body class="bg-gray-900 text-gray-200">
 
   <!-- Header -->
-  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center mb-6">
+  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center relative">
     <div class="flex items-center space-x-3">
       <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
-      <h1 class="text-2xl font-bold text-yellow-400">Status Monitor</h1>
+      <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
     </div>
+    <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleMenu()">☰</button>
   </div>
 
-  <!-- Grid de servicios -->
-  <div id="statusGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <!-- Menú principal -->
+  <nav class="bg-gray-950 border-b border-gray-700">
+    <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
+      <!-- Inicio -->
+      <li><a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+
+      <!-- Noticias Ciberseguridad (dropdown) -->
+      <li class="relative">
+        <button id="dropdownBtn" class="hover:text-yellow-400 flex items-center">
+          🔒 Noticias Ciberseguridad ▾
+        </button>
+        <ul id="dropdownMenu" class="absolute hidden bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
+          <li><a href="#" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
+          <li><a href="#" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
+          <li><a href="#" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias locales</a></li>
+          <li><a href="#" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
+        </ul>
+      </li>
+
+      <!-- Medios Nacionales -->
+      <li><a href="/nacional.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
+
+      <!-- Status -->
+      <li><a href="/status.html" class="hover:text-yellow-400">📊 Status</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido -->
+  <div id="feed" class="p-6 space-y-6"></div>
+
+  <!-- Paginación -->
+  <div class="flex justify-center space-x-2 p-4">
+    <button id="prevBtn" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50" onclick="cambiarPagina(-1)">⬅️ Anterior</button>
+    <button id="nextBtn" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50" onclick="cambiarPagina(1)">Siguiente ➡️</button>
+  </div>
 
   <script>
-    // 🔹 Configuración de servicios con logos
-    const servicesConfig = {
-      "bci": { logo: "https://cdn.worldvectorlogo.com/logos/bci-logotype.svg" },
-      "banco_estado": { logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_BancoEstado.svg" },
-      "transbank": { logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/Transbank-1200px-logo.png" },
-      "banco_itau": { logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Ita%C3%BA_Unibanco_logo_2023.svg" },
-      "banco_chile": { logo: "https://upload.wikimedia.org/wikipedia/en/b/b3/Banco_de_Chile_logo.svg" },
-      "santander": { logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Banco_Santander_Logotipo.svg" },
-      "banco_falabella": { logo: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Banco_Falabella_Logo.svg" },
-      "scotiabank": { logo: "https://upload.wikimedia.org/wikipedia/commons/2/22/Scotiabank_logo.svg" },
-      "sii": { logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/Logotipo_Servicio_de_Impuestos_Internos.svg" }
+    // 🔹 Dropdown toggle
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // 🔹 Cerrar si hago click afuera
+    document.addEventListener("click", (e) => {
+      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+
+    // 🔹 Categorías largas → cortas
+    const categoryMap = {
+      "all": { short: "Inicio", icon: "🏠" },
+      "Incidentes y Fugas de Datos en Empresas": { short: "Incidentes & DataBreach", icon: "💥" },
+      "Tendencias de Ataques al Sector Financiero": { short: "Tendencias", icon: "📊" },
+      "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques": { short: "Noticias locales", icon: "🇨🇱" },
+      "Prevención / Innovación en el Sector Financiero": { short: "Innovación & Prevención", icon: "💡" }
     };
 
-    // 🔹 Cargar datos con cache busting
-    fetch("status_data.json?t=" + new Date().getTime())
-      .then(r => r.json())
-      .then(allData => {
-        const data = allData.data;
-        const container = document.getElementById("statusGrid");
-
-        Object.keys(servicesConfig).forEach(key => {
-          const service = servicesConfig[key];
-          const serviceData = data[key] || {};
-          const dataset = serviceData.data || [];
-
-          const card = document.createElement("div");
-          card.className = "bg-white rounded-xl shadow-lg p-4 text-gray-900 flex flex-col items-center";
-
-          // Calcular métricas
-          let avg24 = 0, lastHour = 0;
-          if (Array.isArray(dataset)) {
-            const now = new Date();
-            const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24*60*60*1000);
-            const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60*60*1000);
-
-            avg24 = last24.reduce((a,b)=>a+b.y,0) / (last24.length || 1);
-            lastHour = last1.reduce((a,b)=>a+b.y,0);
-          }
-
-          // Plantilla de cada card
-          card.innerHTML = `
-            <div class="flex justify-center mb-3">
-              <img src="${service.logo}" alt="${key}" class="h-12">
-            </div>
-            <canvas id="chart-${key}" height="100"></canvas>
-            <div class="mt-3 text-sm text-gray-700 w-full">
-              📅 Última actualización: ${
-                serviceData.ultima_actualizacion
-                  ? new Date(serviceData.ultima_actualizacion).toLocaleString("es-CL", { timeZone: "America/Santiago" })
-                  : "Sin datos"
-              }<br>
-              📊 Promedio últimas 24 hrs: <span class="font-bold">${avg24.toFixed(1)}</span><br>
-              🚨 Última hora: <span class="font-bold text-red-600">${lastHour}</span>
-            </div>
-          `;
-
-          container.appendChild(card);
-
-          // Renderizar gráfico con estilo mejorado
-          if (Array.isArray(dataset) && dataset.length > 0) {
-            const ctx = card.querySelector("canvas").getContext("2d");
-
-            // Crear gradiente para el relleno
-            const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-            gradient.addColorStop(0, "rgba(59,130,246,0.4)");  // azul 40%
-            gradient.addColorStop(1, "rgba(59,130,246,0)");    // transparente
-
-            new Chart(ctx, {
-              type: "line",
-              data: {
-                labels: dataset.map(p =>
-                  new Date(p.x).toLocaleTimeString("es-CL", {
-                    timeZone:"America/Santiago",
-                    hour:"2-digit",
-                    minute:"2-digit"
-                  })
-                ),
-                datasets: [{
-                  label: "Reportes",
-                  data: dataset.map(p => p.y),
-                  borderColor: "rgba(59,130,246,1)",   // azul fuerte
-                  backgroundColor: gradient,          // gradiente
-                  borderWidth: 2,
-                  tension: 0.4,   // curva más suave
-                  pointRadius: 0, // sin puntitos
-                  fill: true
-                }]
-              },
-              options: {
-                plugins: {
-                  legend: { display: false },
-                  tooltip: {
-                    callbacks: {
-                      title: function(context) {
-                        // 🕒 Hora exacta
-                        return "🕒 Hora: " + dataset[context[0].dataIndex].x;
-                      },
-                      label: function(context) {
-                        return "📊 Reportes: " + context.raw;
-                      }
-                    }
-                  }
-                },
-                scales: {
-                  x: {
-                    ticks: { maxTicksLimit: 6, color: "#6b7280" },
-                    grid: { display: false }
-                  },
-                  y: {
-                    beginAtZero: true,
-                    ticks: { stepSize: 1, color: "#6b7280" },
-                    grid: { color: "rgba(0,0,0,0.05)" }
-                  }
-                }
-              }
-            });
-          }
-        });
+    let data = [];
+    fetch("data.json")
+      .then(res => res.json())
+      .then(json => {
+        data = json.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        renderFeed(data);
       })
-      .catch(err => console.error("Error cargando status:", err));
+      .catch(err => console.error("Error cargando feed:", err));
+
+    const itemsPorPagina = 10;
+    let paginaActual = 1;
+    let categoriaActual = "all";
+
+    function renderFeed(items) {
+      const feed = document.getElementById("feed");
+      feed.innerHTML = "";
+
+      const inicio = (paginaActual - 1) * itemsPorPagina;
+      const fin = inicio + itemsPorPagina;
+      const paginatedItems = items.slice(inicio, fin);
+
+      paginatedItems.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card border-t border-gray-600 pt-4";
+        card.innerHTML = `
+          <div class="flex justify-between items-center mb-2 flex-wrap">
+            <span class="text-sm font-bold text-yellow-400">${(categoryMap[item.categoria]?.short) || item.categoria}</span>
+            <span class="text-xs text-gray-400">${new Date(item.timestamp).toLocaleString()}</span>
+          </div>
+          <p class="mb-3 text-gray-300 whitespace-pre-line text-justify">${item.resumen}</p>
+          <div class="text-sm text-gray-400">
+            <strong>🌍 País:</strong> ${item.pais || "-"} &nbsp;
+            <strong>🏛 Sector:</strong> ${item.sector || "-"}
+          </div>
+          <div class="text-sm text-gray-400 mt-1">
+            <strong>🔑 Claves:</strong> ${(item.palabras_claves || []).join(", ")}
+          </div>
+          ${item.url ? `<a href="${item.url}" target="_blank" class="text-yellow-400 underline mt-3 block">🔗 Ver noticia</a>` : ""}
+        `;
+        feed.appendChild(card);
+      });
+
+      document.getElementById("prevBtn").disabled = paginaActual === 1;
+      document.getElementById("nextBtn").disabled = fin >= items.length;
+    }
+
+    function filtrarCategoria(categoria) {
+      categoriaActual = categoria;
+      paginaActual = 1;
+      const filtrados = categoria === "all" ? data : data.filter(item => item.categoria === categoria);
+      renderFeed(filtrados);
+      dropdownMenu.classList.add("hidden"); // cerrar el menú después de elegir
+    }
+
+    function cambiarPagina(direccion) {
+      paginaActual += direccion;
+      const filtrados = categoriaActual === "all" ? data : data.filter(item => item.categoria === categoriaActual);
+      renderFeed(filtrados);
+    }
+
+    function toggleMenu() {
+      const cont = document.querySelector("nav ul");
+      cont.classList.toggle("hidden");
+    }
   </script>
 </body>
 </html>
