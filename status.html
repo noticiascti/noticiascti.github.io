@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -9,20 +10,68 @@
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="bg-gray-900 text-gray-200 p-6">
+<body class="bg-gray-900 text-gray-200">
 
   <!-- Header -->
-  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center mb-6">
+  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center relative">
     <div class="flex items-center space-x-3">
       <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
       <h1 class="text-2xl font-bold text-yellow-400">Status Monitor</h1>
     </div>
+    <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleMenu()">☰</button>
   </div>
 
+  <!-- Menú principal -->
+  <nav class="bg-gray-950 border-b border-gray-700">
+    <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
+      <!-- Inicio -->
+      <li><a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+
+      <!-- Noticias Ciberseguridad (dropdown) -->
+      <li class="relative">
+        <button id="dropdownBtn" class="hover:text-yellow-400 flex items-center">
+          🔒 Noticias Ciberseguridad ▾
+        </button>
+        <ul id="dropdownMenu" class="absolute hidden bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
+          <li><a href="/index.html#incidentes" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
+          <li><a href="/index.html#tendencias" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
+          <li><a href="/index.html#locales" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias locales</a></li>
+          <li><a href="/index.html#prevencion" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
+        </ul>
+      </li>
+
+      <!-- Medios Nacionales -->
+      <li><a href="/nacional.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
+
+      <!-- Status -->
+      <li><a href="/status.html" class="text-yellow-400 font-semibold">📊 Status</a></li>
+    </ul>
+  </nav>
+
   <!-- Grid de servicios -->
-  <div id="statusGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <div id="statusGrid" class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
   <script>
+    // 🔹 Dropdown toggle
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+
+    function toggleMenu() {
+      const cont = document.querySelector("nav ul");
+      cont.classList.toggle("hidden");
+    }
+
     // 🔹 Configuración de servicios con logos
     const servicesConfig = {
       "bci": { logo: "https://cdn.worldvectorlogo.com/logos/bci-logotype.svg" },
@@ -81,14 +130,12 @@
 
           container.appendChild(card);
 
-          // Renderizar gráfico con estilo mejorado
+          // Renderizar gráfico
           if (Array.isArray(dataset) && dataset.length > 0) {
             const ctx = card.querySelector("canvas").getContext("2d");
-
-            // Crear gradiente para el relleno
             const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-            gradient.addColorStop(0, "rgba(59,130,246,0.4)");  // azul 40%
-            gradient.addColorStop(1, "rgba(59,130,246,0)");    // transparente
+            gradient.addColorStop(0, "rgba(59,130,246,0.4)");
+            gradient.addColorStop(1, "rgba(59,130,246,0)");
 
             new Chart(ctx, {
               type: "line",
@@ -103,11 +150,11 @@
                 datasets: [{
                   label: "Reportes",
                   data: dataset.map(p => p.y),
-                  borderColor: "rgba(59,130,246,1)",   // azul fuerte
-                  backgroundColor: gradient,          // gradiente
+                  borderColor: "rgba(59,130,246,1)",
+                  backgroundColor: gradient,
                   borderWidth: 2,
-                  tension: 0.4,   // curva más suave
-                  pointRadius: 0, // sin puntitos
+                  tension: 0.4,
+                  pointRadius: 0,
                   fill: true
                 }]
               },
@@ -117,7 +164,6 @@
                   tooltip: {
                     callbacks: {
                       title: function(context) {
-                        // 🕒 Hora exacta
                         return "🕒 Hora: " + dataset[context[0].dataIndex].x;
                       },
                       label: function(context) {
