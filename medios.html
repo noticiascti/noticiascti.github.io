@@ -71,6 +71,25 @@
     cont.classList.toggle("hidden");
   }
 
+  // 🔹 Función para parsear fechas en español
+  function parseFecha(fechaStr, horaStr) {
+    const meses = {
+      "enero": 0, "febrero": 1, "marzo": 2, "abril": 3,
+      "mayo": 4, "junio": 5, "julio": 6, "agosto": 7,
+      "septiembre": 8, "octubre": 9, "noviembre": 10, "diciembre": 11
+    };
+
+    const match = fechaStr.match(/(\d{1,2}) de (\w+) de (\d{4})/i);
+    if (!match) return new Date(0); // fallback viejo
+
+    const dia = parseInt(match[1], 10);
+    const mes = meses[match[2].toLowerCase()];
+    const año = parseInt(match[3], 10);
+
+    const [h, m] = horaStr.split(":").map(Number);
+    return new Date(año, mes, dia, h, m);
+  }
+
   // Noticias
   fetch("status_nacional.json?t=" + new Date().getTime()) // cache busting
     .then(r => r.json())
@@ -79,8 +98,8 @@
 
       // 🔹 Ordenar por fecha + hora (más reciente primero)
       news.sort((a, b) => {
-        const fechaA = new Date(`${a.date} ${a.time}`);
-        const fechaB = new Date(`${b.date} ${b.time}`);
+        const fechaA = parseFecha(a.date, a.time);
+        const fechaB = parseFecha(b.date, b.time);
         return fechaB - fechaA; // descendente
       });
 
