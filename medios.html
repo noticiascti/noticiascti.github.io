@@ -50,54 +50,61 @@
   <!-- Grid de noticias -->
   <div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6"></div>
 
-  <script>
-    // Dropdown toggle
-    const dropdownBtn = document.getElementById("dropdownBtn");
-    const dropdownMenu = document.getElementById("dropdownMenu");
+<script>
+  // Dropdown toggle
+  const dropdownBtn = document.getElementById("dropdownBtn");
+  const dropdownMenu = document.getElementById("dropdownMenu");
 
-    dropdownBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      dropdownMenu.classList.toggle("hidden");
-    });
+  dropdownBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdownMenu.classList.toggle("hidden");
+  });
 
-    document.addEventListener("click", (e) => {
-      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add("hidden");
-      }
-    });
-
-    function toggleMenu() {
-      const cont = document.querySelector("nav ul");
-      cont.classList.toggle("hidden");
+  document.addEventListener("click", (e) => {
+    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.add("hidden");
     }
+  });
 
-    // Noticias
-    fetch("status_nacional.json?t=" + new Date().getTime()) // cache busting
-      .then(r => r.json())
-      .then(news => {
-        const container = document.getElementById("newsGrid");
+  function toggleMenu() {
+    const cont = document.querySelector("nav ul");
+    cont.classList.toggle("hidden");
+  }
 
-        news.forEach(n => {
-          const card = document.createElement("div");
-          card.className = "bg-white rounded-xl shadow-lg overflow-hidden text-gray-900 flex flex-col";
+  // Noticias
+  fetch("status_nacional.json?t=" + new Date().getTime()) // cache busting
+    .then(r => r.json())
+    .then(news => {
+      const container = document.getElementById("newsGrid");
 
-          card.innerHTML = `
-            <img src="${n.image}" alt="${n.title}" class="h-48 w-full object-cover">
-            <div class="p-4 flex flex-col flex-grow">
-              <p class="text-xs text-gray-500">${n.date} - ${n.time}</p>
-              <h2 class="mt-2 text-lg font-bold text-gray-800 hover:text-yellow-600">
-                <a href="${n.url}" target="_blank">${n.title}</a>
-              </h2>
-              <p class="mt-2 text-sm text-gray-700 flex-grow">${n.description || ""}</p>
-              <p class="mt-3 text-xs text-gray-500">Fuente: ${n.source}</p>
-            </div>
-          `;
+      // 🔹 Ordenar por fecha + hora (más reciente primero)
+      news.sort((a, b) => {
+        const fechaA = new Date(`${a.date} ${a.time}`);
+        const fechaB = new Date(`${b.date} ${b.time}`);
+        return fechaB - fechaA; // descendente
+      });
 
-          container.appendChild(card);
-        });
-      })
-      .catch(err => console.error("Error cargando noticias:", err));
-  </script>
+      news.forEach(n => {
+        const card = document.createElement("div");
+        card.className = "bg-white rounded-xl shadow-lg overflow-hidden text-gray-900 flex flex-col";
+
+        card.innerHTML = `
+          <img src="${n.image}" alt="${n.title}" class="h-48 w-full object-cover">
+          <div class="p-4 flex flex-col flex-grow">
+            <p class="text-xs text-gray-500">${n.date} - ${n.time}</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-800 hover:text-yellow-600">
+              <a href="${n.url}" target="_blank">${n.title}</a>
+            </h2>
+            <p class="mt-2 text-sm text-gray-700 flex-grow">${n.description || ""}</p>
+            <p class="mt-3 text-xs text-gray-500">Fuente: ${n.source}</p>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    })
+    .catch(err => console.error("Error cargando noticias:", err));
+</script>
 
 </body>
 </html>
