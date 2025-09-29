@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reclamos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+  <!-- Header -->
+  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3">
+    <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
+    <h1 class="text-2xl font-bold text-yellow-400">Reclamos</h1>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+    <!-- Últimos reclamos -->
+    <div>
+      <h2 class="text-lg font-semibold text-yellow-400 mb-2">Últimos reclamos</h2>
+      <div class="overflow-x-auto">
+        <table class="table-auto w-full border border-gray-700 rounded-lg text-sm">
+          <thead class="bg-gray-800 text-gray-300">
+            <tr>
+              <th class="px-3 py-2 text-left">Fecha</th>
+              <th class="px-3 py-2 text-left">Título</th>
+            </tr>
+          </thead>
+          <tbody id="tablaReclamos" class="divide-y divide-gray-700"></tbody>
+        </table>
+      </div>
+      <!-- Paginación -->
+      <div class="flex justify-between mt-2">
+        <button id="prevBtn" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">◀ Anterior</button>
+        <button id="nextBtn" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">Siguiente ▶</button>
+      </div>
+    </div>
+
+    <!-- Tendencia -->
+    <div>
+      <h2 class="text-lg font-semibold text-yellow-400 mb-2">Tendencia últimos 30 días</h2>
+      <div class="bg-gray-800 p-4 rounded-lg h-72">
+        <canvas id="reclamosChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coincidencias -->
+  <div class="p-6">
+    <h2 class="text-lg font-semibold text-yellow-400 mb-2">Coincidencias</h2>
+    <div id="coincidencias" class="space-y-4"></div>
+  </div>
+
+  <script>
+    let reclamos = [];
+    let busqueda = [];
+    let currentPage = 0;
+    const pageSize = 10;
+
+    // Convertir fecha DD-MM-YY → Date
+    function parseFecha(fechaStr) {
+      const [dd, mm, yy] = fechaStr.split("-");
+      return new Date(`20${yy}-${mm}-${dd}T00:00:00`);
+    }
+
+    // Generar últimos 30 días con ceros
+    function generarFechasUltimos30() {
+      const fechas = [];
+      const hoy = new Date();
+      for (let i = 29; i >= 0; i--) {
+        const d = new Date();
+        d.setDate(hoy.getDate() - i);
+        const key = d.toISOString().split("T")[0];
+        fechas.push(key);
+      }
+      return fechas;
+    }
+
+    // Renderizar tabla
+    function renderTable() {
+      const tbody = document.getElementById("tablaReclamos");
+      tbody.innerHTML = "";
+      const start = currentPage * pageSize;
+      const items = reclamos.slice(start, start + pageSize);
+
+      items.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-700";
+        tr.innerHTML = `
+          <td class="px-3 py-2">${r.fecha}</td>
+          <td class="px-3 py-2 text-yellow-300">
+            <a href="${r.url}" target="_blank">${r.titulo}</a>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Renderizar gráfico
+    function renderChart() {
+      const counts = {};
+      reclamos.forEach(r => {
+        const d = parseFecha(r.fecha);
+        const diffDays = (new Date() - d) / (1000 * 60 * 60 * 24);
+        if (diffDays <= 30) {
+          const key = d.toISOString().split("T")[0];
+          counts[key] = (counts[key] || 0) + 1;
+        }
+      });
+
+      const fechas = generarFechasUltimos30();
+      const labels = fechas.map(f => {
+        const [y, m, d] = f.split("-");
+        return `${d}/${m}`;
+      });
+      const values = fechas.map(f => counts[f] || 0);
+
+      const maxVal = Math.max(...values);
+      const suggestedMax = Math.max(3, Math.ceil(maxVal * 1.5)); // al menos 3 o 1.5x del máximo
+
+      new Chart(document.getElementById("reclamosChart"), {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "Reclamos",
+            data: values,
+            borderColor: "#facc15",
+            backgroundColor: "rgba(250, 204, 21, 0.3)",
+            tension: 0.3,
+            fill: true,
+            pointRadius: 3,
+            pointBackgroundColor: "#facc15",
+            pointBorderColor: "#000"
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { labels: { color: "#facc15" } }
+          },
+          scales: {
+            x: { 
+              ticks: { 
+                color: "#d1d5db",
+                maxTicksLimit: 5,   // 👈 máximo 5 etiquetas visibles
+                autoSkip: true      // 👈 salta etiquetas automáticamente
+              },
+              grid: { color: "#374151" }
+            },
+            y: { 
+              beginAtZero: true,
+              suggestedMax: suggestedMax,
+              ticks: { color: "#d1d5db", stepSize: 1 },
+              grid: { color: "#374151" }
+            }
+          }
+        }
+      });
+    }
+
+    // Renderizar coincidencias
+    function renderCoincidencias() {
+      const cont = document.getElementById("coincidencias");
+      cont.innerHTML = "";
+      busqueda.forEach(b => {
+        const div = document.createElement("div");
+        div.className = "bg-gray-800 p-4 rounded-lg";
+        const fraseCorta = b.frase_coincidencia
+          ? b.frase_coincidencia.split(" ").slice(0, 100).join(" ") + "..."
+          : "";
+        div.innerHTML = `
+          <p class="text-xs text-gray-400">${b.fecha}</p>
+          <h3 class="font-semibold text-yellow-300"><a href="${b.url}" target="_blank">${b.titulo}</a></h3>
+          <p class="text-sm text-gray-300 mt-1">${fraseCorta}</p>
+        `;
+        cont.appendChild(div);
+      });
+    }
+
+    // Paginación
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      if (currentPage > 0) {
+        currentPage--;
+        renderTable();
+      }
+    });
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if ((currentPage + 1) * pageSize < reclamos.length) {
+        currentPage++;
+        renderTable();
+      }
+    });
+
+    // Cargar JSON
+    fetch("reclamos.json?t=" + new Date().getTime())
+      .then(r => r.json())
+      .then(data => {
+        reclamos = data.empresa;
+        busqueda = data.busqueda;
+        renderTable();
+        renderChart();
+        renderCoincidencias();
+      });
+  </script>
+</body>
+</html>
