@@ -43,13 +43,37 @@
   <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3">
     <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
     <h1 class="text-2xl font-bold text-yellow-400">Dashboard CTI</h1>
-    <nav class="ml-6 space-x-4 text-sm">
-      <a class="text-gray-300 hover:text-yellow-400" href="#">Inicio</a>
-      <a class="text-gray-300 hover:text-yellow-400" href="#">Medios Nacionales</a>
-      <a class="text-gray-300 hover:text-yellow-400" href="#">Status</a>
-      <span class="text-yellow-400 font-semibold">KEV & Ransomware</span>
-    </nav>
   </div>
+
+  <!-- Menú principal -->
+  <nav class="bg-gray-950 border-b border-gray-700">
+    <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
+      <!-- Inicio -->
+      <li><a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+
+      <!-- Noticias Ciberseguridad (dropdown) -->
+      <li class="relative">
+        <button id="dropdownBtn" class="hover:text-yellow-400 flex items-center">
+          🔒 Noticias Ciberseguridad ▾
+        </button>
+        <ul id="dropdownMenu" class="absolute hidden bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
+          <li><a href="/index.html#incidentes" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
+          <li><a href="/index.html#tendencias" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
+          <li><a href="/index.html#locales" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias locales</a></li>
+          <li><a href="/index.html#prevencion" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
+        </ul>
+      </li>
+
+      <!-- Medios Nacionales -->
+      <li><a href="/medios.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
+
+      <!-- Status -->
+      <li><a href="/status.html" class="hover:text-yellow-400">📊 Status</a></li>
+
+      <!-- KEV & Ransomware -->
+      <li><a href="/kev_ransomware.html" class="text-yellow-400 font-semibold">⚡ KEV & Ransomware</a></li>
+    </ul>
+  </nav>
 
   <!-- Main grid -->
   <div class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -59,8 +83,8 @@
       <h2 class="text-yellow-400 font-semibold mb-4">Vulnerabilidades explotadas activamente - Últimos 30 días</h2>
 
       <!-- table (5 rows) -->
-      <div id="kev-table-wrap" class="mb-3">
-        <table class="w-full compact">
+      <div id="kev-table-wrap" class="mb-3 overflow-x-auto">
+        <table class="w-full compact min-w-[600px]">
           <thead>
             <tr>
               <th class="text-left">CVE</th>
@@ -91,8 +115,8 @@
         </div>
 
         <div>
-          <div class="bg-gray-800 rounded p-2">
-            <table class="w-full compact">
+          <div class="bg-gray-800 rounded p-2 overflow-x-auto">
+            <table class="w-full compact min-w-[250px]">
               <thead><tr><th class="text-left">Vendor</th><th class="text-right">Total</th></tr></thead>
               <tbody id="kev-totals"></tbody>
             </table>
@@ -107,13 +131,13 @@
       <h2 class="text-yellow-400 font-semibold mb-4">Ransomware - Víctimas</h2>
 
       <!-- Global table -->
-      <div class="mb-4">
+      <div class="mb-4 overflow-x-auto">
         <div class="flex items-center gap-2 mb-2">
           <span class="text-blue-300">🌐</span>
           <h3 class="text-sm text-gray-200 font-semibold">Global</h3>
         </div>
 
-        <table class="w-full compact ransom-table">
+        <table class="w-full compact ransom-table min-w-[600px]">
           <thead>
             <tr><th class="text-left">Fecha</th><th class="text-left">Víctima</th><th class="text-left">País</th><th class="text-left">Grupo</th></tr>
           </thead>
@@ -127,13 +151,13 @@
       </div>
 
       <!-- LATAM table -->
-      <div class="mb-4">
+      <div class="mb-4 overflow-x-auto">
         <div class="flex items-center gap-2 mb-2">
           <span class="text-cyan-300">🌎</span>
           <h3 class="text-sm text-gray-200 font-semibold">LATAM</h3>
         </div>
 
-        <table class="w-full compact ransom-table">
+        <table class="w-full compact ransom-table min-w-[600px]">
           <thead>
             <tr><th class="text-left">Fecha</th><th class="text-left">Víctima</th><th class="text-left">País</th><th class="text-left">Grupo</th></tr>
           </thead>
@@ -150,6 +174,13 @@
   </div>
 
   <script>
+    // Dropdown toggle
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    dropdownBtn.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
     // -----------------------
     // Utilities
     // -----------------------
@@ -163,27 +194,15 @@
       return `${y}-${m}-${day}`;
     }
 
-    function lastNDaysLabels(n) {
-      const out = [];
-      const today = new Date();
-      for (let i = n-1; i >= 0; i--) {
-        const d = new Date();
-        d.setDate(today.getDate() - i);
-        out.push(d.toISOString().split("T")[0]);
-      }
-      return out;
-    }
-
     const LATAM = new Set(["AR","BO","BR","CL","CO","CR","CU","DO","EC","GT","HN","MX","NI","PA","PE","PY","UY","VE"]);
 
     function flagUrl(cc) {
       if (!cc) return "";
-      const c = cc.toLowerCase();
-      return `https://flagcdn.com/w40/${c}.png`;
+      return `https://flagcdn.com/w40/${cc.toLowerCase()}.png`;
     }
 
     // -----------------------
-    // KEV (left)
+    // KEV
     // -----------------------
     const kevState = { items: [], page: 0, pageSize: 5, pie: null };
 
@@ -191,21 +210,16 @@
       fetch("kev.json?t=" + Date.now())
         .then(r => r.json())
         .then(data => {
-          const items = (data.vulnerabilities || []).filter(v => {
+          kevState.items = (data.vulnerabilities || []).filter(v => {
             if (!v.dateAdded) return false;
             const added = new Date(v.dateAdded);
             const now = new Date();
-            const diff = (now - added) / (1000*60*60*24);
-            return diff <= 30;
+            return (now - added) / (1000*60*60*24) <= 30;
           });
 
-          kevState.items = items;
           kevState.page = 0;
           renderKevTable();
           renderKevPieAndTotals();
-        })
-        .catch(err => {
-          console.error("Error cargando kev.json:", err);
         });
     }
 
@@ -213,20 +227,17 @@
       const tbody = document.getElementById("kev-tbody");
       tbody.innerHTML = "";
       const start = kevState.page * kevState.pageSize;
-      const pageItems = kevState.items.slice(start, start + kevState.pageSize);
-      pageItems.forEach(v => {
+      kevState.items.slice(start, start + kevState.pageSize).forEach(v => {
         const tr = document.createElement("tr");
-        const desc = (v.shortDescription || v.vulnerabilityName || "").replace(/\n/g," ");
         tr.innerHTML = `
-          <td style="vertical-align:top; color:#facc15;"><a href="#" class="underline text-yellow-300">${v.cveID}</a></td>
-          <td style="vertical-align:top">${v.vendorProject || ""}</td>
-          <td style="vertical-align:top">${v.product || ""}</td>
-          <td style="vertical-align:top">${v.dateAdded ? v.dateAdded : ""}</td>
-          <td style="vertical-align:top">${desc}</td>
+          <td class="text-yellow-300 underline">${v.cveID}</td>
+          <td>${v.vendorProject || ""}</td>
+          <td>${v.product || ""}</td>
+          <td>${v.dateAdded || ""}</td>
+          <td>${(v.shortDescription || v.vulnerabilityName || "").replace(/\n/g," ")}</td>
         `;
         tbody.appendChild(tr);
       });
-
       const totalPages = Math.ceil(kevState.items.length / kevState.pageSize);
       document.getElementById("kev-prev").disabled = kevState.page <= 0;
       document.getElementById("kev-next").disabled = kevState.page >= totalPages-1;
@@ -250,40 +261,40 @@
       const labels = Object.keys(counts);
       const values = labels.map(l => counts[l]);
 
-      const palette = [
-        "#facc15","#f87171","#60a5fa","#34d399","#c084fc","#fb923c","#60a5fa","#94a3b8",
-        "#a3e635","#f472b6","#60a5fa"
-      ];
-      const colors = labels.map((_,i) => palette[i % palette.length]);
+      const colors = ["#facc15","#f87171","#60a5fa","#34d399","#c084fc","#fb923c","#94a3b8","#a3e635","#f472b6"];
 
+      // legend
       const legend = document.getElementById("kev-legend");
       legend.innerHTML = "";
-      labels.slice(0, 12).forEach((lab, i) => {
+      labels.forEach((lab, i) => {
         const pill = document.createElement("div");
         pill.className = "legend-item";
-        pill.innerHTML = `<span style="display:inline-block;width:18px;height:10px;background:${colors[i]};border-radius:2px"></span><span style="font-size:12px;color:#e5e7eb">${lab}</span>`;
+        pill.innerHTML = `<span style="width:18px;height:10px;background:${colors[i % colors.length]};border-radius:2px"></span>
+                          <span style="font-size:12px;color:#e5e7eb">${lab}</span>`;
         legend.appendChild(pill);
       });
 
+      // totals
       const totalsBody = document.getElementById("kev-totals");
       totalsBody.innerHTML = "";
       labels.forEach((lab, i) => {
         const tr = document.createElement("tr");
-        tr.innerHTML = `<td style="color:#e5e7eb">${lab}</td><td style="text-align:right;color:#facc15">${counts[lab]}</td>`;
+        tr.innerHTML = `<td>${lab}</td><td class="text-right text-yellow-400">${counts[lab]}</td>`;
         totalsBody.appendChild(tr);
       });
 
+      // pie
       const ctx = document.getElementById("kevPie").getContext("2d");
       if (kevState.pie) kevState.pie.destroy();
       kevState.pie = new Chart(ctx, {
         type: "pie",
-        data: { labels, datasets: [{ data: values, backgroundColor: colors, borderColor: "#0b1220", borderWidth: 2 }]},
+        data: { labels, datasets: [{ data: values, backgroundColor: colors }]},
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
       });
     }
 
     // -----------------------
-    // RANSOMWARE (right)
+    // Ransomware
     // -----------------------
     const ransomState = { items: [], globalPage: 0, latamPage: 0, pageSize: 5 };
 
@@ -297,16 +308,9 @@
             country: (it.country || "").toUpperCase(),
             group: it.group || "",
             raw: it
-          }));
-
-          ransomState.items.sort((a,b) => (new Date(b.date) - new Date(a.date)));
-
+          })).sort((a,b) => new Date(b.date) - new Date(a.date));
           renderGlobalTable();
           renderLatamTable();
-        })
-        .catch(err => {
-          console.error("Error cargando ransomware.json:", err);
-          document.getElementById("ransom-global-body").innerHTML = `<tr><td colspan="4" class="muted">Error cargando ransomware.json</td></tr>`;
         });
     }
 
@@ -314,15 +318,14 @@
       const tbody = document.getElementById("ransom-global-body");
       tbody.innerHTML = "";
       const start = ransomState.globalPage * ransomState.pageSize;
-      const pageItems = ransomState.items.slice(start, start + ransomState.pageSize);
-      pageItems.forEach(it => {
-        const tr = document.createElement("tr");
-        const flagImg = it.country ? `<img class="flag" src="${flagUrl(it.country)}" onerror="this.style.display='none'"> ${it.country}` : `<span class="muted">--</span>`;
-        tr.innerHTML = `<td>${it.date}</td>
-                        <td><a href="${(it.raw && it.raw.url) ? it.raw.url : '#'}" target="_blank" class="text-gray-200 hover:underline">${it.victim}</a></td>
-                        <td>${flagImg}</td>
-                        <td>${it.group}</td>`;
-        tbody.appendChild(tr);
+      ransomState.items.slice(start, start + ransomState.pageSize).forEach(it => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${it.date}</td>
+            <td><a href="${it.raw.url || '#'}" target="_blank" class="hover:underline">${it.victim}</a></td>
+            <td>${it.country ? `<img class="flag" src="${flagUrl(it.country)}"> ${it.country}` : '--'}</td>
+            <td>${it.group}</td>
+          </tr>`;
       });
       document.getElementById("r-global-prev").disabled = ransomState.globalPage <= 0;
       document.getElementById("r-global-next").disabled = (ransomState.globalPage+1) * ransomState.pageSize >= ransomState.items.length;
@@ -333,15 +336,14 @@
       tbody.innerHTML = "";
       const latamItems = ransomState.items.filter(it => LATAM.has(it.country));
       const start = ransomState.latamPage * ransomState.pageSize;
-      const pageItems = latamItems.slice(start, start + ransomState.pageSize);
-      pageItems.forEach(it => {
-        const tr = document.createElement("tr");
-        const flagImg = it.country ? `<img class="flag" src="${flagUrl(it.country)}" onerror="this.style.display='none'"> ${it.country}` : `<span class="muted">--</span>`;
-        tr.innerHTML = `<td>${it.date}</td>
-                        <td><a href="${(it.raw && it.raw.url) ? it.raw.url : '#'}" target="_blank" class="text-gray-200 hover:underline">${it.victim}</a></td>
-                        <td>${flagImg}</td>
-                        <td>${it.group}</td>`;
-        tbody.appendChild(tr);
+      latamItems.slice(start, start + ransomState.pageSize).forEach(it => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${it.date}</td>
+            <td><a href="${it.raw.url || '#'}" target="_blank" class="hover:underline">${it.victim}</a></td>
+            <td>${it.country ? `<img class="flag" src="${flagUrl(it.country)}"> ${it.country}` : '--'}</td>
+            <td>${it.group}</td>
+          </tr>`;
       });
       document.getElementById("r-latam-prev").disabled = ransomState.latamPage <= 0;
       document.getElementById("r-latam-next").disabled = (ransomState.latamPage+1) * ransomState.pageSize >= latamItems.length;
@@ -353,7 +355,6 @@
     document.getElementById("r-global-next").addEventListener("click", () => {
       if ((ransomState.globalPage+1) * ransomState.pageSize < ransomState.items.length) { ransomState.globalPage++; renderGlobalTable(); }
     });
-
     document.getElementById("r-latam-prev").addEventListener("click", () => {
       if (ransomState.latamPage > 0) { ransomState.latamPage--; renderLatamTable(); }
     });
@@ -362,9 +363,7 @@
       if ((ransomState.latamPage+1) * ransomState.pageSize < latamItems.length) { ransomState.latamPage++; renderLatamTable(); }
     });
 
-    // -----------------------
-    // Init all
-    // -----------------------
+    // Init
     loadKev();
     loadRansomware();
   </script>
