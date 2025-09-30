@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard CTI — Estadísticas</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .card { background: #111827; border-radius: 8px; padding: 18px; border: 1px solid #1f2937; }
+    .muted { color: #9ca3af; }
+    .accent { color: #facc15; }
+    /* compact table look */
+    table.compact th, table.compact td { padding: 10px 8px; border-bottom: 1px dashed rgba(255,255,255,0.03); color:#e5e7eb; }
+    table.compact thead th { background:#0f1724; color:#cbd5e1; font-weight:600; font-size:13px; }
+    /* small buttons */
+    .btn { background:#111827; border:1px solid #374151; color:#e5e7eb; padding:8px 12px; border-radius:6px; }
+    .mini { padding:6px 10px; font-size:13px; }
+    /* ensure canvas containers keep sensible sizes */
+    .kev-pie { max-width:220px; max-height:220px; }
+    /* flag image */
+    .flag { width:20px; height:14px; object-fit:cover; border-radius:2px; margin-right:8px; vertical-align:middle; }
+    /* legend container small */
+    .legend-inline { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
+    .legend-item { display:flex; align-items:center; gap:6px; padding:4px 8px; border-radius:4px; background:transparent; color:#facc15; }
+    /* ransomware tables */
+    .ransom-table th, .ransom-table td {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .ransom-table td:nth-child(2) { /* Victima */
+      width: 40%;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+  <!-- Header -->
+  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3">
+    <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
+    <h1 class="text-2xl font-bold text-yellow-400">Dashboard CTI</h1>
+    <nav class="ml-6 space-x-4 text-sm">
+      <a class="text-gray-300 hover:text-yellow-400" href="#">Inicio</a>
+      <a class="text-gray-300 hover:text-yellow-400" href="#">Medios Nacionales</a>
+      <a class="text-gray-300 hover:text-yellow-400" href="#">Status</a>
+      <span class="text-yellow-400 font-semibold">KEV & Ransomware</span>
+    </nav>
+  </div>
+
+  <!-- Main grid -->
+  <div class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- LEFT: KEV -->
+    <div class="lg:col-span-6 card">
+      <h2 class="text-yellow-400 font-semibold mb-4">Vulnerabilidades explotadas activamente - Últimos 30 días</h2>
+
+      <!-- table (5 rows) -->
+      <div id="kev-table-wrap" class="mb-3">
+        <table class="w-full compact">
+          <thead>
+            <tr>
+              <th class="text-left">CVE</th>
+              <th class="text-left">Vendor</th>
+              <th class="text-left">Producto</th>
+              <th class="text-left">Fecha</th>
+              <th class="text-left">Descripción</th>
+            </tr>
+          </thead>
+          <tbody id="kev-tbody"></tbody>
+        </table>
+
+        <!-- pagination -->
+        <div class="flex justify-between mt-3">
+          <button id="kev-prev" class="btn mini">◀ Anterior</button>
+          <button id="kev-next" class="btn mini">Siguiente ▶</button>
+        </div>
+      </div>
+
+      <!-- legend + pie + totals -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start mt-4">
+
+        <div class="flex flex-col items-start">
+          <div class="legend-inline mb-3" id="kev-legend"></div>
+          <div class="flex justify-center w-full">
+            <canvas id="kevPie" class="kev-pie"></canvas>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-gray-800 rounded p-2">
+            <table class="w-full compact">
+              <thead><tr><th class="text-left">Vendor</th><th class="text-right">Total</th></tr></thead>
+              <tbody id="kev-totals"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT: Ransomware -->
+    <div class="lg:col-span-6 card">
+      <h2 class="text-yellow-400 font-semibold mb-4">Ransomware - Víctimas</h2>
+
+      <!-- Global table -->
+      <div class="mb-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-blue-300">🌐</span>
+          <h3 class="text-sm text-gray-200 font-semibold">Global</h3>
+        </div>
+
+        <table class="w-full compact ransom-table">
+          <thead>
+            <tr><th class="text-left">Fecha</th><th class="text-left">Víctima</th><th class="text-left">País</th><th class="text-left">Grupo</th></tr>
+          </thead>
+          <tbody id="ransom-global-body"></tbody>
+        </table>
+
+        <div class="flex justify-between mt-2">
+          <button id="r-global-prev" class="btn mini">◀ Anterior</button>
+          <button id="r-global-next" class="btn mini">Siguiente ▶</button>
+        </div>
+      </div>
+
+      <!-- LATAM table -->
+      <div class="mb-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-cyan-300">🌎</span>
+          <h3 class="text-sm text-gray-200 font-semibold">LATAM</h3>
+        </div>
+
+        <table class="w-full compact ransom-table">
+          <thead>
+            <tr><th class="text-left">Fecha</th><th class="text-left">Víctima</th><th class="text-left">País</th><th class="text-left">Grupo</th></tr>
+          </thead>
+          <tbody id="ransom-latam-body"></tbody>
+        </table>
+
+        <div class="flex justify-between mt-2">
+          <button id="r-latam-prev" class="btn mini">◀ Anterior</button>
+          <button id="r-latam-next" class="btn mini">Siguiente ▶</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // -----------------------
+    // Utilities
+    // -----------------------
+    function fmtDate(iso) {
+      if (!iso) return "";
+      const d = new Date(iso.replace(" ", "T"));
+      if (isNaN(d)) return iso.split(" ")[0] || iso;
+      const y = d.getFullYear();
+      const m = String(d.getMonth()+1).padStart(2,"0");
+      const day = String(d.getDate()).padStart(2,"0");
+      return `${y}-${m}-${day}`;
+    }
+
+    function lastNDaysLabels(n) {
+      const out = [];
+      const today = new Date();
+      for (let i = n-1; i >= 0; i--) {
+        const d = new Date();
+        d.setDate(today.getDate() - i);
+        out.push(d.toISOString().split("T")[0]);
+      }
+      return out;
+    }
+
+    const LATAM = new Set(["AR","BO","BR","CL","CO","CR","CU","DO","EC","GT","HN","MX","NI","PA","PE","PY","UY","VE"]);
+
+    function flagUrl(cc) {
+      if (!cc) return "";
+      const c = cc.toLowerCase();
+      return `https://flagcdn.com/w40/${c}.png`;
+    }
+
+    // -----------------------
+    // KEV (left)
+    // -----------------------
+    const kevState = { items: [], page: 0, pageSize: 5, pie: null };
+
+    function loadKev() {
+      fetch("kev.json?t=" + Date.now())
+        .then(r => r.json())
+        .then(data => {
+          const items = (data.vulnerabilities || []).filter(v => {
+            if (!v.dateAdded) return false;
+            const added = new Date(v.dateAdded);
+            const now = new Date();
+            const diff = (now - added) / (1000*60*60*24);
+            return diff <= 30;
+          });
+
+          kevState.items = items;
+          kevState.page = 0;
+          renderKevTable();
+          renderKevPieAndTotals();
+        })
+        .catch(err => {
+          console.error("Error cargando kev.json:", err);
+        });
+    }
+
+    function renderKevTable() {
+      const tbody = document.getElementById("kev-tbody");
+      tbody.innerHTML = "";
+      const start = kevState.page * kevState.pageSize;
+      const pageItems = kevState.items.slice(start, start + kevState.pageSize);
+      pageItems.forEach(v => {
+        const tr = document.createElement("tr");
+        const desc = (v.shortDescription || v.vulnerabilityName || "").replace(/\n/g," ");
+        tr.innerHTML = `
+          <td style="vertical-align:top; color:#facc15;"><a href="#" class="underline text-yellow-300">${v.cveID}</a></td>
+          <td style="vertical-align:top">${v.vendorProject || ""}</td>
+          <td style="vertical-align:top">${v.product || ""}</td>
+          <td style="vertical-align:top">${v.dateAdded ? v.dateAdded : ""}</td>
+          <td style="vertical-align:top">${desc}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      const totalPages = Math.ceil(kevState.items.length / kevState.pageSize);
+      document.getElementById("kev-prev").disabled = kevState.page <= 0;
+      document.getElementById("kev-next").disabled = kevState.page >= totalPages-1;
+    }
+
+    document.getElementById("kev-prev").addEventListener("click", () => {
+      if (kevState.page > 0) { kevState.page--; renderKevTable(); }
+    });
+    document.getElementById("kev-next").addEventListener("click", () => {
+      const totalPages = Math.ceil(kevState.items.length / kevState.pageSize);
+      if (kevState.page < totalPages-1) { kevState.page++; renderKevTable(); }
+    });
+
+    function renderKevPieAndTotals() {
+      const counts = {};
+      kevState.items.forEach(v => {
+        const vendor = v.vendorProject || "Unknown";
+        counts[vendor] = (counts[vendor] || 0) + 1;
+      });
+
+      const labels = Object.keys(counts);
+      const values = labels.map(l => counts[l]);
+
+      const palette = [
+        "#facc15","#f87171","#60a5fa","#34d399","#c084fc","#fb923c","#60a5fa","#94a3b8",
+        "#a3e635","#f472b6","#60a5fa"
+      ];
+      const colors = labels.map((_,i) => palette[i % palette.length]);
+
+      const legend = document.getElementById("kev-legend");
+      legend.innerHTML = "";
+      labels.slice(0, 12).forEach((lab, i) => {
+        const pill = document.createElement("div");
+        pill.className = "legend-item";
+        pill.innerHTML = `<span style="display:inline-block;width:18px;height:10px;background:${colors[i]};border-radius:2px"></span><span style="font-size:12px;color:#e5e7eb">${lab}</span>`;
+        legend.appendChild(pill);
+      });
+
+      const totalsBody = document.getElementById("kev-totals");
+      totalsBody.innerHTML = "";
+      labels.forEach((lab, i) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td style="color:#e5e7eb">${lab}</td><td style="text-align:right;color:#facc15">${counts[lab]}</td>`;
+        totalsBody.appendChild(tr);
+      });
+
+      const ctx = document.getElementById("kevPie").getContext("2d");
+      if (kevState.pie) kevState.pie.destroy();
+      kevState.pie = new Chart(ctx, {
+        type: "pie",
+        data: { labels, datasets: [{ data: values, backgroundColor: colors, borderColor: "#0b1220", borderWidth: 2 }]},
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      });
+    }
+
+    // -----------------------
+    // RANSOMWARE (right)
+    // -----------------------
+    const ransomState = { items: [], globalPage: 0, latamPage: 0, pageSize: 5 };
+
+    function loadRansomware() {
+      fetch("ransomware.json?t=" + Date.now())
+        .then(r => r.json())
+        .then(data => {
+          ransomState.items = data.map(it => ({
+            date: fmtDate(it.discovered || it.attackdate || it.attack_date || ""),
+            victim: it.victim || it.domain || "",
+            country: (it.country || "").toUpperCase(),
+            group: it.group || "",
+            raw: it
+          }));
+
+          ransomState.items.sort((a,b) => (new Date(b.date) - new Date(a.date)));
+
+          renderGlobalTable();
+          renderLatamTable();
+        })
+        .catch(err => {
+          console.error("Error cargando ransomware.json:", err);
+          document.getElementById("ransom-global-body").innerHTML = `<tr><td colspan="4" class="muted">Error cargando ransomware.json</td></tr>`;
+        });
+    }
+
+    function renderGlobalTable() {
+      const tbody = document.getElementById("ransom-global-body");
+      tbody.innerHTML = "";
+      const start = ransomState.globalPage * ransomState.pageSize;
+      const pageItems = ransomState.items.slice(start, start + ransomState.pageSize);
+      pageItems.forEach(it => {
+        const tr = document.createElement("tr");
+        const flagImg = it.country ? `<img class="flag" src="${flagUrl(it.country)}" onerror="this.style.display='none'"> ${it.country}` : `<span class="muted">--</span>`;
+        tr.innerHTML = `<td>${it.date}</td>
+                        <td><a href="${(it.raw && it.raw.url) ? it.raw.url : '#'}" target="_blank" class="text-gray-200 hover:underline">${it.victim}</a></td>
+                        <td>${flagImg}</td>
+                        <td>${it.group}</td>`;
+        tbody.appendChild(tr);
+      });
+      document.getElementById("r-global-prev").disabled = ransomState.globalPage <= 0;
+      document.getElementById("r-global-next").disabled = (ransomState.globalPage+1) * ransomState.pageSize >= ransomState.items.length;
+    }
+
+    function renderLatamTable() {
+      const tbody = document.getElementById("ransom-latam-body");
+      tbody.innerHTML = "";
+      const latamItems = ransomState.items.filter(it => LATAM.has(it.country));
+      const start = ransomState.latamPage * ransomState.pageSize;
+      const pageItems = latamItems.slice(start, start + ransomState.pageSize);
+      pageItems.forEach(it => {
+        const tr = document.createElement("tr");
+        const flagImg = it.country ? `<img class="flag" src="${flagUrl(it.country)}" onerror="this.style.display='none'"> ${it.country}` : `<span class="muted">--</span>`;
+        tr.innerHTML = `<td>${it.date}</td>
+                        <td><a href="${(it.raw && it.raw.url) ? it.raw.url : '#'}" target="_blank" class="text-gray-200 hover:underline">${it.victim}</a></td>
+                        <td>${flagImg}</td>
+                        <td>${it.group}</td>`;
+        tbody.appendChild(tr);
+      });
+      document.getElementById("r-latam-prev").disabled = ransomState.latamPage <= 0;
+      document.getElementById("r-latam-next").disabled = (ransomState.latamPage+1) * ransomState.pageSize >= latamItems.length;
+    }
+
+    document.getElementById("r-global-prev").addEventListener("click", () => {
+      if (ransomState.globalPage > 0) { ransomState.globalPage--; renderGlobalTable(); }
+    });
+    document.getElementById("r-global-next").addEventListener("click", () => {
+      if ((ransomState.globalPage+1) * ransomState.pageSize < ransomState.items.length) { ransomState.globalPage++; renderGlobalTable(); }
+    });
+
+    document.getElementById("r-latam-prev").addEventListener("click", () => {
+      if (ransomState.latamPage > 0) { ransomState.latamPage--; renderLatamTable(); }
+    });
+    document.getElementById("r-latam-next").addEventListener("click", () => {
+      const latamItems = ransomState.items.filter(it => LATAM.has(it.country));
+      if ((ransomState.latamPage+1) * ransomState.pageSize < latamItems.length) { ransomState.latamPage++; renderLatamTable(); }
+    });
+
+    // -----------------------
+    // Init all
+    // -----------------------
+    loadKev();
+    loadRansomware();
+  </script>
+
+</body>
+</html>
