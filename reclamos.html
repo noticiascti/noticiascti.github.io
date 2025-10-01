@@ -199,7 +199,7 @@
     });
 
     // Cargar JSON
-    fetch("reclamos.json?t=" + new Date().getTime())
+    fetch("reclamos_bci.json?t=" + new Date().getTime())
       .then(r => r.json())
       .then(data => {
         reclamos = data.empresa;
