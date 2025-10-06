@@ -87,13 +87,17 @@
     };
 
     let data = [];
-    fetch(`data.json?t=${Date.now()}`) // 🔹 evita caché del navegador
+    fetch(`data.json?t=${Date.now()}`) // 🔹 evita caché
   .then(res => res.json())
   .then(json => {
-    // 🔹 Normaliza y ordena por fecha (más recientes primero)
+    // 🔹 Normaliza strings y fuerza orden descendente
     data = json
-      .filter(item => item.timestamp) // elimina posibles registros sin fecha
-      .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      .filter(item => item.timestamp)
+      .sort((a, b) => {
+        const dateA = new Date(a.timestamp.replace(" ", "T"));
+        const dateB = new Date(b.timestamp.replace(" ", "T"));
+        return dateB - dateA; // más reciente primero
+      });
 
     renderFeed(data);
   })
