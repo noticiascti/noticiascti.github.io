@@ -87,13 +87,17 @@
     };
 
     let data = [];
-    fetch("data.json")
-      .then(res => res.json())
-      .then(json => {
-        data = json.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-        renderFeed(data);
-      })
-      .catch(err => console.error("Error cargando feed:", err));
+    fetch(`data.json?t=${Date.now()}`) // 🔹 evita caché del navegador
+  .then(res => res.json())
+  .then(json => {
+    // 🔹 Normaliza y ordena por fecha (más recientes primero)
+    data = json
+      .filter(item => item.timestamp) // elimina posibles registros sin fecha
+      .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+    renderFeed(data);
+  })
+  .catch(err => console.error("Error cargando feed:", err));
 
     const itemsPorPagina = 10;
     let paginaActual = 1;
