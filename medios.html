@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <base href="https://noticiascti.github.io/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medios nacionales</title>
+  <title>Medios Nacionales — iSecurity</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Inter', sans-serif; }
@@ -12,118 +13,127 @@
 <body class="bg-gray-900 text-gray-200">
 
   <!-- Header -->
-  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center relative">
-    <div class="flex items-center space-x-3">
-      <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
-      <h1 class="text-2xl font-bold text-yellow-400">Medios nacionales</h1>
-    </div>
-    <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleMenu()">☰</button>
-  </div>
+  <header class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3 cursor-pointer"
+          onclick="window.location.href='index.html'">
+    <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
+    <h1 class="text-2xl font-bold text-yellow-400">Medios Nacionales</h1>
+  </header>
 
   <!-- Menú principal -->
   <nav class="bg-gray-950 border-b border-gray-700">
     <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
       <!-- Inicio -->
-      <li><a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+      <li><a href="index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
 
       <!-- Noticias Ciberseguridad (dropdown) -->
-      <li class="relative">
-        <button id="dropdownBtn" class="hover:text-yellow-400 flex items-center">
-          🔒 Noticias Ciberseguridad ▾
-        </button>
-        <ul id="dropdownMenu" class="absolute hidden bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
-          <li><a href="/index.html#incidentes" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
-          <li><a href="/index.html#tendencias" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
-          <li><a href="/index.html#locales" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias locales</a></li>
-          <li><a href="/index.html#prevencion" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
+      <li class="relative group">
+        <button class="hover:text-yellow-400 flex items-center">🔒 Noticias Ciberseguridad ▾</button>
+        <ul class="absolute hidden group-hover:block bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
+          <li><a href="index.html#incidentes" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
+          <li><a href="index.html#tendencias" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
+          <li><a href="index.html#locales" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias Locales</a></li>
+          <li><a href="index.html#prevencion" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
         </ul>
       </li>
 
       <!-- Medios Nacionales -->
-      <li><a href="/medios.html" class="text-yellow-400 font-semibold">📰 Medios Nacionales</a></li>
+      <li><a href="medios.html" class="text-yellow-400 font-semibold">📰 Medios Nacionales</a></li>
 
       <!-- Status -->
-      <li><a href="/status.html" class="hover:text-yellow-400">📊 Status</a></li>
+      <li><a href="status.html" class="hover:text-yellow-400">📊 Status</a></li>
+
+      <!-- Ransom & Vulnerabilidades -->
+      <li><a href="ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Ransom & Vulnerabilidades</a></li>
+
+      <!-- Reclamos -->
+      <li><a href="reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
     </ul>
   </nav>
 
-  <!-- Grid de noticias -->
-  <div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6"></div>
+  <!-- Contenedor principal -->
+  <main class="p-6">
 
-<script>
-  // Dropdown toggle
-  const dropdownBtn = document.getElementById("dropdownBtn");
-  const dropdownMenu = document.getElementById("dropdownMenu");
+    <!-- Bloque de logos -->
+    <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">
+      Sitios web monitoreados
+    </h2>
+    <div class="bg-white rounded-xl shadow-md mb-6 p-6">
+      <div class="flex flex-wrap justify-center items-center gap-6">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/24_horas_2023_logo.png" alt="24 Horas" class="h-20 object-contain">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Logotipo_de_Teletrece.svg/640px-Logotipo_de_Teletrece.svg.png" alt="T13" class="h-20 object-contain">
+        <img src="https://cdn.brandfetch.io/idbvH4nfxl/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="The Clinic" class="h-20 object-contain">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/39/b6/af39b69a-0ed8-9633-f968-786862398c9c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="BioBio" class="h-20 object-contain">
+        <img src="https://r.prcdn.co/res/es-ar/g25056/t490995764/2/images/new-logo-diariofinanciero.png" alt="Diario Financiero" class="h-20 object-contain">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Logolatercera2017.png" alt="La Tercera" class="h-20 object-contain">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Radio_Cooperativa_Logo.svg/1920px-Radio_Cooperativa_Logo.svg.png" alt="Cooperativa" class="h-20 object-contain">
+      </div>
+    </div>
 
-  dropdownBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    dropdownMenu.classList.toggle("hidden");
-  });
+    <!-- Grid de noticias -->
+    <div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
-  document.addEventListener("click", (e) => {
-    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-      dropdownMenu.classList.add("hidden");
+  </main>
+
+  <script>
+    // 🔹 Dropdown toggle
+    const dropdownBtns = document.querySelectorAll(".group > button");
+    dropdownBtns.forEach(btn => {
+      const menu = btn.nextElementSibling;
+      btn.addEventListener("click", e => {
+        e.stopPropagation();
+        menu.classList.toggle("hidden");
+      });
+      document.addEventListener("click", e => {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    });
+
+    // 🔹 Parsear fechas en español
+    function parseFecha(fechaStr, horaStr) {
+      const meses = {
+        "enero": 0, "febrero": 1, "marzo": 2, "abril": 3,
+        "mayo": 4, "junio": 5, "julio": 6, "agosto": 7,
+        "septiembre": 8, "octubre": 9, "noviembre": 10, "diciembre": 11
+      };
+      const match = fechaStr.match(/(\d{1,2}) de (\w+) de (\d{4})/i);
+      if (!match) return new Date(0);
+      const dia = parseInt(match[1], 10);
+      const mes = meses[match[2].toLowerCase()];
+      const año = parseInt(match[3], 10);
+      const [h, m] = horaStr.split(":").map(Number);
+      return new Date(año, mes, dia, h, m);
     }
-  });
 
-  function toggleMenu() {
-    const cont = document.querySelector("nav ul");
-    cont.classList.toggle("hidden");
-  }
+    // 🔹 Cargar noticias
+    fetch("status_nacional.json?t=" + Date.now())
+      .then(r => r.json())
+      .then(news => {
+        const container = document.getElementById("newsGrid");
 
-  // 🔹 Función para parsear fechas en español
-  function parseFecha(fechaStr, horaStr) {
-    const meses = {
-      "enero": 0, "febrero": 1, "marzo": 2, "abril": 3,
-      "mayo": 4, "junio": 5, "julio": 6, "agosto": 7,
-      "septiembre": 8, "octubre": 9, "noviembre": 10, "diciembre": 11
-    };
+        // Ordenar de más reciente a más antiguo
+        news.sort((a, b) => parseFecha(b.date, b.time) - parseFecha(a.date, a.time));
 
-    const match = fechaStr.match(/(\d{1,2}) de (\w+) de (\d{4})/i);
-    if (!match) return new Date(0); // fallback viejo
+        news.forEach(n => {
+          const card = document.createElement("div");
+          card.className = "bg-white rounded-xl shadow-lg overflow-hidden text-gray-900 flex flex-col";
 
-    const dia = parseInt(match[1], 10);
-    const mes = meses[match[2].toLowerCase()];
-    const año = parseInt(match[3], 10);
-
-    const [h, m] = horaStr.split(":").map(Number);
-    return new Date(año, mes, dia, h, m);
-  }
-
-  // Noticias
-  fetch("status_nacional.json?t=" + new Date().getTime()) // cache busting
-    .then(r => r.json())
-    .then(news => {
-      const container = document.getElementById("newsGrid");
-
-      // 🔹 Ordenar por fecha + hora (más reciente primero)
-      news.sort((a, b) => {
-        const fechaA = parseFecha(a.date, a.time);
-        const fechaB = parseFecha(b.date, b.time);
-        return fechaB - fechaA; // descendente
-      });
-
-      news.forEach(n => {
-        const card = document.createElement("div");
-        card.className = "bg-white rounded-xl shadow-lg overflow-hidden text-gray-900 flex flex-col";
-
-        card.innerHTML = `
-          <img src="${n.image}" alt="${n.title}" class="h-48 w-full object-cover">
-          <div class="p-4 flex flex-col flex-grow">
-            <p class="text-xs text-gray-500">${n.date} - ${n.time}</p>
-            <h2 class="mt-2 text-lg font-bold text-gray-800 hover:text-yellow-600">
-              <a href="${n.url}" target="_blank">${n.title}</a>
-            </h2>
-            <p class="mt-2 text-sm text-gray-700 flex-grow">${n.description || ""}</p>
-            <p class="mt-3 text-xs text-gray-500">Fuente: ${n.source}</p>
-          </div>
-        `;
-
-        container.appendChild(card);
-      });
-    })
-    .catch(err => console.error("Error cargando noticias:", err));
-</script>
-
+          card.innerHTML = `
+            <img src="${n.image}" alt="${n.title}" class="h-48 w-full object-cover">
+            <div class="p-4 flex flex-col flex-grow">
+              <p class="text-xs text-gray-500">${n.date} - ${n.time}</p>
+              <h2 class="mt-2 text-lg font-bold text-gray-800 hover:text-yellow-600">
+                <a href="${n.url}" target="_blank">${n.title}</a>
+              </h2>
+              <p class="mt-2 text-sm text-gray-700 flex-grow">${n.description || ""}</p>
+              <p class="mt-3 text-xs text-gray-500">Fuente: ${n.source}</p>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => console.error("Error cargando noticias:", err));
+  </script>
 </body>
 </html>
