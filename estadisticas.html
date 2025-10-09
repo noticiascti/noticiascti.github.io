@@ -3,370 +3,235 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dashboard CTI — Estadísticas</title>
-
-  <!-- Tailwind (CDN) -->
+  <title>Ransom & Vulnerabilidades — iSecurity</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <style>
-    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    body { font-family: 'Inter', sans-serif; }
     .card { background: #111827; border-radius: 8px; padding: 18px; border: 1px solid #1f2937; }
-    .muted { color: #9ca3af; }
-    .accent { color: #facc15; }
-    /* compact table look */
-    table.compact th, table.compact td { padding: 10px 8px; border-bottom: 1px dashed rgba(255,255,255,0.03); color:#e5e7eb; }
+    table.compact th, table.compact td { padding: 10px 8px; border-bottom: 1px dashed rgba(255,255,255,0.08); color:#e5e7eb; }
     table.compact thead th { background:#0f1724; color:#cbd5e1; font-weight:600; font-size:13px; }
-    /* small buttons */
-    .btn { background:#111827; border:1px solid #374151; color:#e5e7eb; padding:8px 12px; border-radius:6px; }
-    .mini { padding:6px 10px; font-size:13px; }
-    /* ensure canvas containers keep sensible sizes */
-    .kev-pie { max-width:220px; max-height:220px; }
-    /* flag image */
-    .flag { width:20px; height:14px; object-fit:cover; border-radius:2px; margin-right:8px; vertical-align:middle; }
-    /* legend container small */
-    .legend-inline { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
-    .legend-item { display:flex; align-items:center; gap:6px; padding:4px 8px; border-radius:4px; background:transparent; color:#facc15; }
-    /* ransomware tables */
-    .ransom-table th, .ransom-table td {
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .ransom-table td:nth-child(2) { /* Victima */
-      width: 40%;
-    }
+    .btn { background:#111827; border:1px solid #374151; color:#e5e7eb; padding:6px 10px; border-radius:6px; font-size:13px; }
+    .flag { width:20px; height:14px; object-fit:cover; border-radius:2px; margin-right:6px; vertical-align:middle; }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
 
   <!-- Header -->
-  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3">
+  <header class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3 cursor-pointer" onclick="window.location.href='/index.html'">
     <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
-    <h1 class="text-2xl font-bold text-yellow-400">Dashboard CTI</h1>
-  </div>
+    <h1 class="text-2xl font-bold text-yellow-400">Ransom & Vulnerabilidades</h1>
+  </header>
 
-  <!-- Menú principal -->
+  <!-- Menú superior -->
   <nav class="bg-gray-950 border-b border-gray-700">
     <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
-      <!-- Inicio -->
       <li><a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
-
-      <!-- Noticias Ciberseguridad (dropdown) -->
-      <li class="relative">
-        <button id="dropdownBtn" class="hover:text-yellow-400 flex items-center">
-          🔒 Noticias Ciberseguridad ▾
-        </button>
-        <ul id="dropdownMenu" class="absolute hidden bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
-          <li><a href="/index.html#incidentes" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
-          <li><a href="/index.html#tendencias" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
-          <li><a href="/index.html#locales" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias locales</a></li>
-          <li><a href="/index.html#prevencion" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
+      <li class="relative group">
+        <button class="hover:text-yellow-400 flex items-center">🔒 Noticias Ciberseguridad ▾</button>
+        <ul class="absolute hidden group-hover:block bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
+          <li><a href="/index.html#incidentes" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
+          <li><a href="/index.html#tendencias" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
+          <li><a href="/index.html#locales" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias Locales</a></li>
+          <li><a href="/index.html#prevencion" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
         </ul>
       </li>
-
-      <!-- Medios Nacionales -->
       <li><a href="/medios.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
-
-      <!-- Status -->
       <li><a href="/status.html" class="hover:text-yellow-400">📊 Status</a></li>
-
-      <!-- KEV & Ransomware -->
-      <li><a href="/kev_ransomware.html" class="text-yellow-400 font-semibold">⚡ KEV & Ransomware</a></li>
+      <li><a href="/ransom_vulnerabilidades.html" class="text-yellow-400 font-semibold">⚡ Ransom & Vulnerabilidades</a></li>
+      <li><a href="/reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
     </ul>
   </nav>
 
-  <!-- Main grid -->
-  <div class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+  <!-- Main -->
+  <main class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-    <!-- LEFT: KEV -->
-    <div class="lg:col-span-6 card">
-      <h2 class="text-yellow-400 font-semibold mb-4">Vulnerabilidades explotadas activamente - Últimos 30 días</h2>
-
-      <!-- table (5 rows) -->
-      <div id="kev-table-wrap" class="mb-3 overflow-x-auto">
-        <table class="w-full compact min-w-[600px]">
-          <thead>
-            <tr>
-              <th class="text-left">CVE</th>
-              <th class="text-left">Vendor</th>
-              <th class="text-left">Producto</th>
-              <th class="text-left">Fecha</th>
-              <th class="text-left">Descripción</th>
-            </tr>
-          </thead>
-          <tbody id="kev-tbody"></tbody>
-        </table>
-
-        <!-- pagination -->
-        <div class="flex justify-between mt-3">
-          <button id="kev-prev" class="btn mini">◀ Anterior</button>
-          <button id="kev-next" class="btn mini">Siguiente ▶</button>
+    <!-- LEFT COLUMN -->
+    <section class="lg:col-span-6 space-y-6">
+      
+      <!-- CISA -->
+      <div class="card">
+        <h2 class="text-yellow-400 font-semibold mb-4">🛡️ CISA - Known Exploited Vulnerabilities</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full compact">
+            <thead><tr><th>Fecha</th><th>CVE</th><th>Vendor</th><th>Producto</th><th>Descripción</th></tr></thead>
+            <tbody id="cisa-body"></tbody>
+          </table>
         </div>
-      </div>
-
-      <!-- legend + pie + totals -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start mt-4">
-
-        <div class="flex flex-col items-start">
-          <div class="legend-inline mb-3" id="kev-legend"></div>
-          <div class="flex justify-center w-full">
-            <canvas id="kevPie" class="kev-pie"></canvas>
-          </div>
-        </div>
-
-        <div>
-          <div class="bg-gray-800 rounded p-2 overflow-x-auto">
-            <table class="w-full compact min-w-[250px]">
-              <thead><tr><th class="text-left">Vendor</th><th class="text-right">Total</th></tr></thead>
-              <tbody id="kev-totals"></tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT: Ransomware -->
-    <div class="lg:col-span-6 card">
-      <h2 class="text-yellow-400 font-semibold mb-4">Ransomware - Víctimas</h2>
-
-      <!-- Global table -->
-      <div class="mb-4 overflow-x-auto">
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-blue-300">🌐</span>
-          <h3 class="text-sm text-gray-200 font-semibold">Global</h3>
-        </div>
-
-        <table class="w-full compact ransom-table min-w-[600px]">
-          <thead>
-            <tr><th class="text-left">Fecha</th><th class="text-left">Víctima</th><th class="text-left">País</th><th class="text-left">Grupo</th></tr>
-          </thead>
-          <tbody id="ransom-global-body"></tbody>
-        </table>
-
         <div class="flex justify-between mt-2">
-          <button id="r-global-prev" class="btn mini">◀ Anterior</button>
-          <button id="r-global-next" class="btn mini">Siguiente ▶</button>
+          <button id="cisa-prev" class="btn">◀</button>
+          <button id="cisa-next" class="btn">▶</button>
         </div>
       </div>
 
-      <!-- LATAM table -->
-      <div class="mb-4 overflow-x-auto">
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-cyan-300">🌎</span>
-          <h3 class="text-sm text-gray-200 font-semibold">LATAM</h3>
+      <!-- CVEMON -->
+      <div class="card">
+        <h2 class="text-yellow-400 font-semibold mb-4">🌍 CVEMON - Tendencias y Vulnerabilidades Activas</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full compact">
+            <thead><tr><th>Fecha</th><th>CVE</th><th>Descripción</th></tr></thead>
+            <tbody id="cvemon-body"></tbody>
+          </table>
         </div>
-
-        <table class="w-full compact ransom-table min-w-[600px]">
-          <thead>
-            <tr><th class="text-left">Fecha</th><th class="text-left">Víctima</th><th class="text-left">País</th><th class="text-left">Grupo</th></tr>
-          </thead>
-          <tbody id="ransom-latam-body"></tbody>
-        </table>
-
         <div class="flex justify-between mt-2">
-          <button id="r-latam-prev" class="btn mini">◀ Anterior</button>
-          <button id="r-latam-next" class="btn mini">Siguiente ▶</button>
+          <button id="cvemon-prev" class="btn">◀</button>
+          <button id="cvemon-next" class="btn">▶</button>
         </div>
       </div>
-    </div>
 
-  </div>
+      <!-- INCIBE -->
+      <div class="card">
+        <h2 class="text-yellow-400 font-semibold mb-4">🇪🇸 INCIBE-CERT - Vulnerabilidades Recientes</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full compact">
+            <thead><tr><th>Fecha</th><th>CVE</th><th>Descripción</th></tr></thead>
+            <tbody id="incibe-body"></tbody>
+          </table>
+        </div>
+        <div class="flex justify-between mt-2">
+          <button id="incibe-prev" class="btn">◀</button>
+          <button id="incibe-next" class="btn">▶</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RIGHT COLUMN -->
+    <aside class="lg:col-span-6 card">
+      <h2 class="text-yellow-400 font-semibold mb-4">🦠 Ransomware - Víctimas</h2>
+
+      <!-- GLOBAL -->
+      <div class="mb-4">
+        <h3 class="text-blue-300 font-semibold mb-2">🌐 Global</h3>
+        <table class="w-full compact"><thead><tr><th>Fecha</th><th>Víctima</th><th>País</th><th>Grupo</th></tr></thead>
+          <tbody id="ransom-global"></tbody>
+        </table>
+        <div class="flex justify-between mt-2">
+          <button id="r-global-prev" class="btn">◀</button>
+          <button id="r-global-next" class="btn">▶</button>
+        </div>
+      </div>
+
+      <!-- LATAM -->
+      <div>
+        <h3 class="text-cyan-300 font-semibold mb-2">🌎 LATAM</h3>
+        <table class="w-full compact"><thead><tr><th>Fecha</th><th>Víctima</th><th>País</th><th>Grupo</th></tr></thead>
+          <tbody id="ransom-latam"></tbody>
+        </table>
+        <div class="flex justify-between mt-2">
+          <button id="r-latam-prev" class="btn">◀</button>
+          <button id="r-latam-next" class="btn">▶</button>
+        </div>
+      </div>
+    </aside>
+
+  </main>
 
   <script>
-    // Dropdown toggle
-    const dropdownBtn = document.getElementById("dropdownBtn");
-    const dropdownMenu = document.getElementById("dropdownMenu");
-    dropdownBtn.addEventListener("click", () => {
-      dropdownMenu.classList.toggle("hidden");
-    });
-
-    // -----------------------
-    // Utilities
-    // -----------------------
-    function fmtDate(iso) {
-      if (!iso) return "";
-      const d = new Date(iso.replace(" ", "T"));
-      if (isNaN(d)) return iso.split(" ")[0] || iso;
-      const y = d.getFullYear();
-      const m = String(d.getMonth()+1).padStart(2,"0");
-      const day = String(d.getDate()).padStart(2,"0");
-      return `${y}-${m}-${day}`;
-    }
-
     const LATAM = new Set(["AR","BO","BR","CL","CO","CR","CU","DO","EC","GT","HN","MX","NI","PA","PE","PY","UY","VE"]);
+    const flag = cc => cc ? `<img class="flag" src="https://flagcdn.com/w40/${cc.toLowerCase()}.png"> ${cc}` : "--";
 
-    function flagUrl(cc) {
-      if (!cc) return "";
-      return `https://flagcdn.com/w40/${cc.toLowerCase()}.png`;
+    // ---------- CISA ----------
+    const cisa = { items: [], page: 0, pageSize: 5 };
+    async function loadCisa() {
+      const data = await (await fetch("kev_cisa.json")).json();
+      cisa.items = data || [];
+      renderCisa();
     }
-
-    // -----------------------
-    // KEV
-    // -----------------------
-    const kevState = { items: [], page: 0, pageSize: 5, pie: null };
-
-    function loadKev() {
-      fetch("kev.json?t=" + Date.now())
-        .then(r => r.json())
-        .then(data => {
-          kevState.items = (data.vulnerabilities || []).filter(v => {
-            if (!v.dateAdded) return false;
-            const added = new Date(v.dateAdded);
-            const now = new Date();
-            return (now - added) / (1000*60*60*24) <= 30;
-          });
-
-          kevState.page = 0;
-          renderKevTable();
-          renderKevPieAndTotals();
-        });
-    }
-
-    function renderKevTable() {
-      const tbody = document.getElementById("kev-tbody");
-      tbody.innerHTML = "";
-      const start = kevState.page * kevState.pageSize;
-      kevState.items.slice(start, start + kevState.pageSize).forEach(v => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td class="text-yellow-300 underline">${v.cveID}</td>
-          <td>${v.vendorProject || ""}</td>
-          <td>${v.product || ""}</td>
-          <td>${v.dateAdded || ""}</td>
-          <td>${(v.shortDescription || v.vulnerabilityName || "").replace(/\n/g," ")}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-      const totalPages = Math.ceil(kevState.items.length / kevState.pageSize);
-      document.getElementById("kev-prev").disabled = kevState.page <= 0;
-      document.getElementById("kev-next").disabled = kevState.page >= totalPages-1;
-    }
-
-    document.getElementById("kev-prev").addEventListener("click", () => {
-      if (kevState.page > 0) { kevState.page--; renderKevTable(); }
-    });
-    document.getElementById("kev-next").addEventListener("click", () => {
-      const totalPages = Math.ceil(kevState.items.length / kevState.pageSize);
-      if (kevState.page < totalPages-1) { kevState.page++; renderKevTable(); }
-    });
-
-    function renderKevPieAndTotals() {
-      const counts = {};
-      kevState.items.forEach(v => {
-        const vendor = v.vendorProject || "Unknown";
-        counts[vendor] = (counts[vendor] || 0) + 1;
-      });
-
-      const labels = Object.keys(counts);
-      const values = labels.map(l => counts[l]);
-
-      const colors = ["#facc15","#f87171","#60a5fa","#34d399","#c084fc","#fb923c","#94a3b8","#a3e635","#f472b6"];
-
-      // legend
-      const legend = document.getElementById("kev-legend");
-      legend.innerHTML = "";
-      labels.forEach((lab, i) => {
-        const pill = document.createElement("div");
-        pill.className = "legend-item";
-        pill.innerHTML = `<span style="width:18px;height:10px;background:${colors[i % colors.length]};border-radius:2px"></span>
-                          <span style="font-size:12px;color:#e5e7eb">${lab}</span>`;
-        legend.appendChild(pill);
-      });
-
-      // totals
-      const totalsBody = document.getElementById("kev-totals");
-      totalsBody.innerHTML = "";
-      labels.forEach((lab, i) => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${lab}</td><td class="text-right text-yellow-400">${counts[lab]}</td>`;
-        totalsBody.appendChild(tr);
-      });
-
-      // pie
-      const ctx = document.getElementById("kevPie").getContext("2d");
-      if (kevState.pie) kevState.pie.destroy();
-      kevState.pie = new Chart(ctx, {
-        type: "pie",
-        data: { labels, datasets: [{ data: values, backgroundColor: colors }]},
-        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+    function renderCisa() {
+      const tb = document.getElementById("cisa-body");
+      tb.innerHTML = "";
+      const start = cisa.page * cisa.pageSize;
+      cisa.items.slice(start, start + cisa.pageSize).forEach(v => {
+        tb.innerHTML += `<tr>
+          <td>${v.fecha || "-"}</td>
+          <td class="text-yellow-300">${v.cve || "-"}</td>
+          <td>${v.vendor || "-"}</td>
+          <td>${v.producto || "-"}</td>
+          <td>${(v.descripcion || "").substring(0, 150)}...</td>
+        </tr>`;
       });
     }
+    document.getElementById("cisa-prev").onclick=()=>{if(cisa.page>0){cisa.page--;renderCisa();}};
+    document.getElementById("cisa-next").onclick=()=>{if((cisa.page+1)*cisa.pageSize<cisa.items.length){cisa.page++;renderCisa();}};
 
-    // -----------------------
-    // Ransomware
-    // -----------------------
-    const ransomState = { items: [], globalPage: 0, latamPage: 0, pageSize: 5 };
-
-    function loadRansomware() {
-      fetch("ransomware.json?t=" + Date.now())
-        .then(r => r.json())
-        .then(data => {
-          ransomState.items = data.map(it => ({
-            date: fmtDate(it.discovered || it.attackdate || it.attack_date || ""),
-            victim: it.victim || it.domain || "",
-            country: (it.country || "").toUpperCase(),
-            group: it.group || "",
-            raw: it
-          })).sort((a,b) => new Date(b.date) - new Date(a.date));
-          renderGlobalTable();
-          renderLatamTable();
-        });
+    // ---------- CVEMON ----------
+    const cvemon = { items: [], page:0, pageSize:5 };
+    async function loadCvemon() {
+      const data = await (await fetch("kev_cvemon.json")).json();
+      cvemon.items = data || [];
+      renderCvemon();
     }
-
-    function renderGlobalTable() {
-      const tbody = document.getElementById("ransom-global-body");
-      tbody.innerHTML = "";
-      const start = ransomState.globalPage * ransomState.pageSize;
-      ransomState.items.slice(start, start + ransomState.pageSize).forEach(it => {
-        tbody.innerHTML += `
-          <tr>
-            <td>${it.date}</td>
-            <td><a href="${it.raw.url || '#'}" target="_blank" class="hover:underline">${it.victim}</a></td>
-            <td>${it.country ? `<img class="flag" src="${flagUrl(it.country)}"> ${it.country}` : '--'}</td>
-            <td>${it.group}</td>
-          </tr>`;
+    function renderCvemon(){
+      const tb=document.getElementById("cvemon-body");
+      tb.innerHTML="";
+      const start=cvemon.page*cvemon.pageSize;
+      cvemon.items.slice(start,start+cvemon.pageSize).forEach(i=>{
+        tb.innerHTML+=`<tr>
+          <td>${i.fecha || "-"}</td>
+          <td class="text-yellow-300">${i.cve || "Sin CVE"}</td>
+          <td>${(i.descripcion||"").substring(0,150)}...</td>
+        </tr>`;
       });
-      document.getElementById("r-global-prev").disabled = ransomState.globalPage <= 0;
-      document.getElementById("r-global-next").disabled = (ransomState.globalPage+1) * ransomState.pageSize >= ransomState.items.length;
     }
+    document.getElementById("cvemon-prev").onclick=()=>{if(cvemon.page>0){cvemon.page--;renderCvemon();}};
+    document.getElementById("cvemon-next").onclick=()=>{if((cvemon.page+1)*cvemon.pageSize<cvemon.items.length){cvemon.page++;renderCvemon();}};
 
-    function renderLatamTable() {
-      const tbody = document.getElementById("ransom-latam-body");
-      tbody.innerHTML = "";
-      const latamItems = ransomState.items.filter(it => LATAM.has(it.country));
-      const start = ransomState.latamPage * ransomState.pageSize;
-      latamItems.slice(start, start + ransomState.pageSize).forEach(it => {
-        tbody.innerHTML += `
-          <tr>
-            <td>${it.date}</td>
-            <td><a href="${it.raw.url || '#'}" target="_blank" class="hover:underline">${it.victim}</a></td>
-            <td>${it.country ? `<img class="flag" src="${flagUrl(it.country)}"> ${it.country}` : '--'}</td>
-            <td>${it.group}</td>
-          </tr>`;
+    // ---------- INCIBE ----------
+    const incibe={items:[],page:0,pageSize:5};
+    async function loadIncibe(){
+      const data=await (await fetch("kev_incibe.json")).json();
+      incibe.items=data || [];
+      renderIncibe();
+    }
+    function renderIncibe(){
+      const tb=document.getElementById("incibe-body");
+      tb.innerHTML="";
+      const start=incibe.page*incibe.pageSize;
+      incibe.items.slice(start,start+incibe.pageSize).forEach(i=>{
+        tb.innerHTML+=`<tr>
+          <td>${i.fecha || "-"}</td>
+          <td class="text-yellow-300">${i.cve || "Sin CVE"}</td>
+          <td>${(i.descripcion||"").substring(0,150)}...</td>
+        </tr>`;
       });
-      document.getElementById("r-latam-prev").disabled = ransomState.latamPage <= 0;
-      document.getElementById("r-latam-next").disabled = (ransomState.latamPage+1) * ransomState.pageSize >= latamItems.length;
     }
+    document.getElementById("incibe-prev").onclick=()=>{if(incibe.page>0){incibe.page--;renderIncibe();}};
+    document.getElementById("incibe-next").onclick=()=>{if((incibe.page+1)*incibe.pageSize<incibe.items.length){incibe.page++;renderIncibe();}};
 
-    document.getElementById("r-global-prev").addEventListener("click", () => {
-      if (ransomState.globalPage > 0) { ransomState.globalPage--; renderGlobalTable(); }
-    });
-    document.getElementById("r-global-next").addEventListener("click", () => {
-      if ((ransomState.globalPage+1) * ransomState.pageSize < ransomState.items.length) { ransomState.globalPage++; renderGlobalTable(); }
-    });
-    document.getElementById("r-latam-prev").addEventListener("click", () => {
-      if (ransomState.latamPage > 0) { ransomState.latamPage--; renderLatamTable(); }
-    });
-    document.getElementById("r-latam-next").addEventListener("click", () => {
-      const latamItems = ransomState.items.filter(it => LATAM.has(it.country));
-      if ((ransomState.latamPage+1) * ransomState.pageSize < latamItems.length) { ransomState.latamPage++; renderLatamTable(); }
-    });
+    // ---------- Ransomware ----------
+    const ransom={items:[],globalPage:0,latamPage:0,pageSize:5};
+    async function loadRansom(){
+      const data=await (await fetch("ransomware.json")).json();
+      ransom.items=data.map(d=>({
+        date:d.date||d.discovered||"",
+        victim:d.victim||d.domain||"",
+        country:(d.country||"").toUpperCase(),
+        group:d.group||"",
+        url:d.url||"#"
+      }));
+      renderRansom();
+    }
+    function renderRansom(){
+      const g=document.getElementById("ransom-global");
+      const l=document.getElementById("ransom-latam");
+      g.innerHTML=""; l.innerHTML="";
+      const startG=ransom.globalPage*ransom.pageSize;
+      ransom.items.slice(startG,startG+ransom.pageSize).forEach(i=>{
+        g.innerHTML+=`<tr><td>${i.date}</td><td><a href="${i.url}" class="underline">${i.victim}</a></td><td>${flag(i.country)}</td><td>${i.group}</td></tr>`;
+      });
+      const latamItems=ransom.items.filter(i=>LATAM.has(i.country));
+      const startL=ransom.latamPage*ransom.pageSize;
+      latamItems.slice(startL,startL+ransom.pageSize).forEach(i=>{
+        l.innerHTML+=`<tr><td>${i.date}</td><td><a href="${i.url}" class="underline">${i.victim}</a></td><td>${flag(i.country)}</td><td>${i.group}</td></tr>`;
+      });
+    }
+    document.getElementById("r-global-prev").onclick=()=>{if(ransom.globalPage>0){ransom.globalPage--;renderRansom();}};
+    document.getElementById("r-global-next").onclick=()=>{if((ransom.globalPage+1)*ransom.pageSize<ransom.items.length){ransom.globalPage++;renderRansom();}};
+    document.getElementById("r-latam-prev").onclick=()=>{if(ransom.latamPage>0){ransom.latamPage--;renderRansom();}};
+    document.getElementById("r-latam-next").onclick=()=>{const latamItems=ransom.items.filter(i=>LATAM.has(i.country));if((ransom.latamPage+1)*ransom.pageSize<latamItems.length){ransom.latamPage++;renderRansom();}};
 
-    // Init
-    loadKev();
-    loadRansomware();
+    // INIT
+    loadCisa(); loadCvemon(); loadIncibe(); loadRansom();
   </script>
-
 </body>
 </html>
