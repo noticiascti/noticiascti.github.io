@@ -93,7 +93,7 @@
     };
 
     let data = [];
-    fetch(`data.json?t=${Date.now()}`) // 🔹 evita caché
+    fetch(`./data.json?t=${Date.now()}`) // 🔹 evita caché
   .then(res => res.json())
   .then(json => {
     // 🔹 Normaliza strings y fuerza orden descendente
