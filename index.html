@@ -17,7 +17,7 @@
 
   <!-- Header -->
   <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center relative">
-    <div class="flex items-center space-x-3">
+    <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='./index.html'">
       <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
       <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
     </div>
@@ -26,28 +26,32 @@
 
   <!-- Menú principal -->
   <nav class="bg-gray-950 border-b border-gray-700">
-    <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
+    <ul id="menu" class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
       <!-- Inicio -->
-      <li><a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+      <li><a href="./index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
 
       <!-- Noticias Ciberseguridad (dropdown) -->
-      <li class="relative">
-        <button id="dropdownBtn" class="hover:text-yellow-400 flex items-center">
-          🔒 Noticias Ciberseguridad ▾
-        </button>
-        <ul id="dropdownMenu" class="absolute hidden bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
+      <li class="relative group">
+        <button class="hover:text-yellow-400 flex items-center">🔒 Noticias Ciberseguridad ▾</button>
+        <ul class="absolute hidden group-hover:block bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
           <li><a href="#" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
           <li><a href="#" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
-          <li><a href="#" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias locales</a></li>
+          <li><a href="#" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias Locales</a></li>
           <li><a href="#" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
         </ul>
       </li>
 
       <!-- Medios Nacionales -->
-      <li><a href="/medios.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
+      <li><a href="./medios.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
 
       <!-- Status -->
-      <li><a href="/status.html" class="hover:text-yellow-400">📊 Status</a></li>
+      <li><a href="./status.html" class="hover:text-yellow-400">📊 Status</a></li>
+
+      <!-- Ransom & Vulnerabilidades -->
+      <li><a href="./ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Ransom & Vulnerabilidades</a></li>
+
+      <!-- Reclamos -->
+      <li><a href="./reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
     </ul>
   </nav>
 
@@ -65,16 +69,17 @@
     const dropdownBtn = document.getElementById("dropdownBtn");
     const dropdownMenu = document.getElementById("dropdownMenu");
 
-    dropdownBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      dropdownMenu.classList.toggle("hidden");
-    });
-
-    // 🔹 Cerrar si hago click afuera
-    document.addEventListener("click", (e) => {
-      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add("hidden");
-      }
+    // Compatibilidad con hover + click
+    document.querySelectorAll(".group").forEach(group => {
+      const button = group.querySelector("button");
+      const menu = group.querySelector("ul");
+      button.addEventListener("click", e => {
+        e.stopPropagation();
+        menu.classList.toggle("hidden");
+      });
+      document.addEventListener("click", e => {
+        if (!group.contains(e.target)) menu.classList.add("hidden");
+      });
     });
 
     // 🔹 Categorías largas → cortas
@@ -82,31 +87,27 @@
       "all": { short: "Inicio", icon: "🏠" },
       "Incidentes y Fugas de Datos en Empresas": { short: "Incidentes & DataBreach", icon: "💥" },
       "Tendencias de Ataques al Sector Financiero": { short: "Tendencias", icon: "📊" },
-      "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques": { short: "Noticias locales", icon: "🇨🇱" },
+      "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques": { short: "Noticias Locales", icon: "🇨🇱" },
       "Prevención / Innovación en el Sector Financiero": { short: "Innovación & Prevención", icon: "💡" }
     };
 
     let data = [];
-    fetch(`data.json?t=${Date.now()}`) // 🔹 evita caché
-  .then(res => res.json())
-  .then(json => {
-    // 🔹 Normaliza strings y fuerza orden descendente
-    data = json
-      .filter(item => item.timestamp)
-      .sort((a, b) => {
-        const dateA = new Date(a.timestamp.replace(" ", "T"));
-        const dateB = new Date(b.timestamp.replace(" ", "T"));
-        return dateB - dateA; // más reciente primero
-      });
-
-    renderFeed(data);
-  })
-  .catch(err => console.error("Error cargando feed:", err));
-
     const itemsPorPagina = 10;
     let paginaActual = 1;
     let categoriaActual = "all";
 
+    // 🔹 Cargar noticias (JSON)
+    fetch(`./data.json?t=${Date.now()}`) // ✅ ruta relativa, evita caché
+      .then(res => res.json())
+      .then(json => {
+        data = json
+          .filter(item => item.timestamp)
+          .sort((a, b) => new Date(b.timestamp.replace(" ", "T")) - new Date(a.timestamp.replace(" ", "T")));
+        renderFeed(data);
+      })
+      .catch(err => console.error("Error cargando feed:", err));
+
+    // 🔹 Render de noticias
     function renderFeed(items) {
       const feed = document.getElementById("feed");
       feed.innerHTML = "";
@@ -140,20 +141,23 @@
       document.getElementById("nextBtn").disabled = fin >= items.length;
     }
 
+    // 🔹 Filtro por categoría
     function filtrarCategoria(categoria) {
       categoriaActual = categoria;
       paginaActual = 1;
       const filtrados = categoria === "all" ? data : data.filter(item => item.categoria === categoria);
       renderFeed(filtrados);
-      dropdownMenu.classList.add("hidden"); // cerrar el menú después de elegir
+      document.querySelectorAll(".group ul").forEach(menu => menu.classList.add("hidden"));
     }
 
+    // 🔹 Paginación
     function cambiarPagina(direccion) {
       paginaActual += direccion;
       const filtrados = categoriaActual === "all" ? data : data.filter(item => item.categoria === categoriaActual);
       renderFeed(filtrados);
     }
 
+    // 🔹 Menú móvil
     function toggleMenu() {
       const cont = document.querySelector("nav ul");
       cont.classList.toggle("hidden");
