@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-10",
-    "cve": "CVE-2025-11450",
-    "descripcion": "ServiceNow has addressed a reflected cross-site scripting vulnerability that was identified in the ServiceNow AI Platform. This vulnerability could result in arbitrary code being executed within the browsers of ServiceNow users who click on a specially crafted link. ServiceNow has addressed this vulnerability by deploying a relevant security update to the majority of hosted instances. Relevant security updates also have been provided to ServiceNow self-hosted customers, partners, and hosted customers with unique configurations. Further, the vulnerability is addressed in the listed patches and hot fixes. We recommend customers promptly apply appropriate updates or upgrade if they have not already done so. 10/10/2025 10/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-62292",
+    "descripcion": "In SonarQube before 25.6, 2025.3 Commercial, and 2025.1.3 LTA, authenticated low-privileged users can query the /api/v2/users-management/users endpoint and obtain user fields intended for administrators only, including the email addresses of other accounts. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-10",
-    "cve": "CVE-2025-11449",
-    "descripcion": "ServiceNow has addressed a reflected cross-site scripting vulnerability that was identified in the ServiceNow AI Platform. This vulnerability could result in arbitrary code being executed within the browsers of ServiceNow users who click on a specially crafted link. ServiceNow has addressed this vulnerability by deploying a relevant security update to the majority of hosted instances. Relevant security updates also have been provided to ServiceNow self-hosted customers, partners, and hosted customers with unique configuration. Further, the vulnerability is addressed in the listed patches and hot fixes. We recommend customers promptly apply appropriate updates or upgrade if they have not already done so. 10/10/2025 10/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-21070",
+    "descripcion": "Out-of-bounds write in the SPI decoder in Samsung Notes prior to version 4.4.30.63 allows local attackers to write out-of-bounds memory. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-61928",
-    "descripcion": "Better Auth is an authentication and authorization library for TypeScript. In versions prior to 1.3.26, unauthenticated attackers can create or modify API keys for any user by passing that user&#39;s id in the request body to the `api/auth/api-key/create` route. `session?.user ?? (authRequired ? null : { id: ctx.body.userId })`. When no session exists but `userId` is present in the request body, `authRequired` becomes false and the user object is set to the attacker-controlled ID. Server-only field validation only executes when `authRequired` is true (lines 280-295), allowing attackers to set privileged fields. No additional authentication occurs before the database operation, so the malicious payload is accepted. The same pattern exists in the update endpoint. This is a critical authentication bypass enabling full an unauthenticated attacker can generate an API key for any user and immediately gain complete authenticated access. This allows the attacker to perform any action as the victim user using the api key, potentially compromise the user data and the application depending on the victim&#39;s privileges. Version 1.3.26 contains a patch for the issue. 10/10/2025 10/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21069",
+    "descripcion": "Out-of-bounds read in the parsing of image data in Samsung Notes prior to version 4.4.30.63 allows local attackers to access out-of-bounds memory. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-61926",
-    "descripcion": "Allstar is a GitHub App to set and enforce security policies. In versions prior to 4.5, a vulnerability in Allstar’s Reviewbot component caused inbound webhook requests to be validated against a hard-coded, shared secret. The value used for the secret token was compiled into the Allstar binary and could not be configured at runtime. In practice, this meant that every deployment using Reviewbot would validate requests with the same secret unless the operator modified source code and rebuilt the component - an expectation that is not documented and is easy to miss. All Allstar releases prior to v4.5 that include the Reviewbot code path are affected. Deployments on v4.5 and later are not affected. Those who have not enabled or exposed the Reviewbot endpoint are not exposed to this issue. 10/10/2025 10/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21068",
+    "descripcion": "Out-of-bounds read in the reading of image data in Samsung Notes prior to version 4.4.30.63 allows local attackers to access out-of-bounds memory. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-62240",
-    "descripcion": "Multiple cross-site scripting (XSS) vulnerabilities with Calendar events in Liferay Portal 7.4.3.35 through 7.4.3.111, and Liferay DXP 2023.Q4.0 through 2023.Q4.5, 2023.Q3.1 through 2023.Q3.7, 7.4 update 35 through update 92, and 7.3 update 25 through update 36 allow remote attackers to inject arbitrary web script or HTML via a crafted payload injected into a user’s (1) First Name, (2) Middle Name or (3) Last Name text field. 09/10/2025 09/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21067",
+    "descripcion": "Out-of-bounds read in the allocation of image buffer in Samsung Notes prior to version 4.4.30.63 allows local attackers to access out-of-bounds memory. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-61783",
-    "descripcion": "Python Social Auth is a social authentication/registration mechanism. In versions prior to 5.6.0, upon authentication, the user could be associated by e-mail even if the `associate_by_email` pipeline was not included. This could lead to account compromise when a third-party authentication service does not validate provided e-mail addresses or doesn&#39;t require unique e-mail addresses. Version 5.6.0 contains a patch. As a workaround, review the authentication service policy on e-mail addresses; many will not allow exploiting this vulnerability. 09/10/2025 09/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21066",
+    "descripcion": "Out-of-bounds read in the SPI decoder in Samsung Notes prior to version 4.4.30.63 allows local attackers to access out-of-bounds memory. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-61779",
-    "descripcion": "Confidential Containers&#39;s Trustee project contains tools and components for attesting confidential guests and providing secrets to them. In versions prior to 0.15.0, the attestation-policy endpoint didn&#39;t check if the kbs-client submitting the request was actually authenticated (had the right key). This allowed any kbs-client to actually change the attestation policy. Version 0.15.0 fixes the issue. 09/10/2025 09/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21065",
+    "descripcion": "Improper input validation in Retail Mode prior to version 5.59.11 allows self attackers to execute privileged commands on their own devices. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-61773",
-    "descripcion": "pyLoad is a free and open-source download manager written in Python. In versions prior to 0.5.0b3.dev91, pyLoad web interface contained insufficient input validation in both the Captcha script endpoint and the Click&#39;N&#39;Load (CNL) Blueprint. This flaw allowed untrusted user input to be processed unsafely, which could be exploited by an attacker to inject arbitrary content into the web UI or manipulate request handling. The vulnerability could lead to client-side code execution (XSS) or other unintended behaviors when a malicious payload is submitted. user-supplied parameters from HTTP requests were not adequately validated or sanitized before being passed into the application logic and response generation. This allowed crafted input to alter the expected execution flow. CNL (Click&#39;N&#39;Load) blueprint exposed unsafe handling of untrusted parameters in HTTP requests. The application did not consistently enforce input validation or encoding, making it possible for an attacker to craft malicious requests. Version 0.5.0b3.dev91 contains a patch for the issue. 09/10/2025 09/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21064",
+    "descripcion": "Improper authentication in Smart Switch prior to version 3.7.66.6 allows adjacent attackers to access transferring data. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-61602",
-    "descripcion": "BigBlueButton is an open-source virtual classroom. A denial-of-service (DoS) vulnerability in versions prior to 3.0.13 allows any authenticated user to crash the chat functionality for all participants in a meeting by sending a malformed `reactionEmojiId` in the GraphQL mutation `chatSendMessageReaction`. Version 3.0.13 contains a patch. No known workarounds are available. 09/10/2025 09/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21063",
+    "descripcion": "Improper access control in Samsung Voice Recorder prior to version 21.5.73.12 in Android 15 and 21.5.81.40 in Android 16 allows physical attackers to access recording files on the lock screen. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-09",
-    "cve": "CVE-2025-61601",
-    "descripcion": "BigBlueButton is an open-source virtual classroom. A Denial of Service (DoS) vulnerability in versions prior to 3.0.13 allows any authenticated user to freeze or crash the entire server by abusing the polling feature&#39;s `Choices` response type. By submitting a malicious payload with a massive array in the `answerIds` field, the attacker can cause the current meeting — and potentially all meetings on the server — to become unresponsive. Version 3.0.13 contains a patch. No known workarounds are available. 09/10/2025 09/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-10",
+    "cve": "CVE-2025-21062",
+    "descripcion": "Use of a broken or risky cryptographic algorithm in Smart Switch prior to version 3.7.67.2 allows local attackers to replace the restoring application. User interaction is required for triggering this vulnerability. 10/10/2025 10/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
