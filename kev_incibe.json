@@ -1,5 +1,20 @@
 [
   {
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-10700",
+    "descripcion": "The Ally – Web Accessibility & Usability plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.8.0. This is due to missing or incorrect nonce validation on the enable_unfiltered_files_upload function. This makes it possible for unauthenticated attackers to enable unfiltered file upload and add svg files to the upload list via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-62580",
+    "descripcion": "ASDA-Soft Stack-based Buffer Overflow Vulnerability 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-62579",
+    "descripcion": "ASDA-Soft Stack-based Buffer Overflow Vulnerability 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2025-10-15",
     "cve": "CVE-2025-11683",
     "descripcion": "YAML::Syck versions before 1.36 for Perl has missing null-terminators which causes out-of-bounds read and potential information disclosure Missing null terminators in token.c leads to but-of-bounds read which allows adjacent variable to be read The issue is seen with complex YAML files with a hash of all keys and empty values. There is no indication that the issue leads to accessing memory outside that allocated to the module. 16/10/2025 16/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -33,20 +48,5 @@
     "fecha": "2025-10-15",
     "cve": "CVE-2025-11619",
     "descripcion": "Improper certificate validation when connecting to gateways in Devolutions Server 2025.3.2 and earlier allows attackers in MitM position to intercept traffic. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-11568",
-    "descripcion": "A data corruption vulnerability has been identified in the luksmeta utility when used with the LUKS1 disk encryption format. An attacker with the necessary permissions can exploit this flaw by writing a large amount of metadata to an encrypted device. The utility fails to correctly validate the available space, causing the metadata to overwrite and corrupt the user&#39;s encrypted data. This action leads to a permanent loss of the stored information. Devices using the LUKS formats other than LUKS1 are not affected by this issue. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-11832",
-    "descripcion": "Allocation of Resources Without Limits or Throttling vulnerability in Azure Access Technology BLU-IC2, Azure Access Technology BLU-IC4 allows Flooding.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5. 15/10/2025 15/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-62410",
-    "descripcion": "In versions before 20.0.2, it was found that --disallow-code-generation-from-strings is not sufficient for isolating untrusted JavaScript in happy-dom. The untrusted script and the rest of the application still run in the same Isolate/process, so attackers can deploy prototype pollution payloads to hijack important references like &#34;process&#34; in the example below, or to hijack control flow via flipping checks of undefined property. This vulnerability is due to an incomplete fix for CVE-2025-61927. The vulnerability is fixed in 20.0.2. 15/10/2025 15/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
