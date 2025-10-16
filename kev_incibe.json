@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2025-10-15",
+    "cve": "CVE-2025-62375",
+    "descripcion": "go-witness and witness are Go modules for generating attestations. In go-witness versions 0.8.6 and earlier and witness versions 0.9.2 and earlier the AWS attestor improperly verifies AWS EC2 instance identity documents. Verification can incorrectly succeed when a signature is not present or is empty, and when RSA signature verification fails. The attestor also embeds a single legacy global AWS public certificate and does not account for newer region specific certificates issued in 2024, making detection of forged documents difficult without additional trusted region data. An attacker able to supply or intercept instance identity document data (such as through Instance Metadata Service impersonation) can cause a forged identity document to be accepted, leading to incorrect trust decisions based on the attestation. This is fixed in go-witness 0.9.1 and witness 0.10.1. As a workaround, manually verify the included identity document, signature, and public key with standard tools (for example openssl) following AWS’s verification guidance, or disable use of the AWS attestor until upgraded. 15/10/2025 15/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-15",
+    "cve": "CVE-2025-43313",
+    "descripcion": "A logic issue was addressed with improved restrictions. This issue is fixed in macOS Ventura 13.7.7, macOS Sonoma 14.7.7, macOS Sequoia 15.6. An app may be able to access sensitive user data. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-15",
+    "cve": "CVE-2025-43282",
+    "descripcion": "A double free issue was addressed with improved memory management. This issue is fixed in macOS Sequoia 15.6, iOS 18.6 and iPadOS 18.6, watchOS 11.6, tvOS 18.6, visionOS 2.6, macOS Ventura 13.7.7, macOS Sonoma 14.7.7, iPadOS 17.7.9. An app may be able to cause unexpected system termination. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-15",
+    "cve": "CVE-2025-43281",
+    "descripcion": "The issue was addressed with improved authentication. This issue is fixed in macOS Sequoia 15.6. A local attacker may be able to elevate their privileges. 15/10/2025 15/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-15",
+    "cve": "CVE-2025-43280",
+    "descripcion": "The issue was resolved by not loading remote images This issue is fixed in iOS 18.6 and iPadOS 18.6. Forwarding an email could display remote images in Mail in Lockdown Mode. 15/10/2025 15/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-15",
+    "cve": "CVE-2025-11619",
+    "descripcion": "Improper certificate validation when connecting to gateways in Devolutions Server 2025.3.2 and earlier allows attackers in MitM position to intercept traffic. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-15",
+    "cve": "CVE-2025-11568",
+    "descripcion": "A data corruption vulnerability has been identified in the luksmeta utility when used with the LUKS1 disk encryption format. An attacker with the necessary permissions can exploit this flaw by writing a large amount of metadata to an encrypted device. The utility fails to correctly validate the available space, causing the metadata to overwrite and corrupt the user&#39;s encrypted data. This action leads to a permanent loss of the stored information. Devices using the LUKS formats other than LUKS1 are not affected by this issue. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-15",
     "cve": "CVE-2025-11832",
     "descripcion": "Allocation of Resources Without Limits or Throttling vulnerability in Azure Access Technology BLU-IC2, Azure Access Technology BLU-IC4 allows Flooding.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5. 15/10/2025 15/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -13,40 +48,5 @@
     "fecha": "2025-10-15",
     "cve": "CVE-2025-62382",
     "descripcion": "Frigate is a network video recorder (NVR) with realtime local object detection for IP cameras. Prior to 0.16.2, Frigate&#39;s export workflow allows an authenticated operator to nominate any filesystem location as the thumbnail source for a video export. Because that path is copied verbatim into the publicly served clips directory, the feature can be abused to read arbitrary files that reside on the host running Frigate. In practice, a low-privilege user with API access can pivot from viewing camera footage to exfiltrating sensitive configuration files, secrets, or user data from the appliance itself. This behavior violates the principle of least privilege for the export subsystem and turns a convenience feature into a direct information disclosure vector, with exploitation hinging on a short race window while the background exporter copies the chosen file into place before cleanup runs. This vulnerability is fixed in 0.16.2. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-62381",
-    "descripcion": "sveltekit-superforms makes SvelteKit forms a pleasure to use. sveltekit-superforms v2.27.3 and prior are susceptible to a prototype pollution vulnerability within the parseFormData function of formData.js. An attacker can inject string and array properties into Object.prototype, leading to denial of service, type confusion, and potential remote code execution in downstream applications that rely on polluted objects. This vulnerability is fixed in 2.27.4. 15/10/2025 15/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-62371",
-    "descripcion": "OpenSearch Data Prepper as an open source data collector for observability data. In versions prior to 2.12.2, the OpenSearch sink and source plugins in Data Prepper trust all SSL certificates by default when no certificate path is provided. Prior to this fix, the OpenSearch sink and source plugins would automatically use a trust all SSL strategy when connecting to OpenSearch clusters if no certificate path was explicitly configured. This behavior bypasses SSL certificate validation, potentially allowing attackers to intercept and modify data in transit through man-in-the-middle attacks. The vulnerability affects connections to OpenSearch when the cert parameter is not explicitly provided. This issue has been patched in version 2.12.2. As a workaround, users can add the cert parameter to their OpenSearch sink or source configuration with the path to the cluster&#39;s CA certificate. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-62380",
-    "descripcion": "mailgen is a Node.js package that generates responsive HTML e-mails for sending transactional mail. Mailgen versions through 2.0.31 contain an HTML injection vulnerability in plaintext emails generated with the generatePlaintext method when user generated content is supplied. The plaintext generation code attempts to strip HTML tags using a regular expression and then decodes HTML entities, but tags that include certain Unicode line separator characters are not matched and removed. These encoded tags are later decoded into valid HTML content, allowing unexpected HTML to remain in output intended to be plaintext. Projects are affected if they call Mailgen.generatePlaintext with untrusted input and then render or otherwise process the returned string in a context where HTML is interpreted. This can lead to execution of attacker supplied script in the victim’s browser. Version 2.0.32 fixes the issue. 15/10/2025 15/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.90 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-62378",
-    "descripcion": "CommandKit is the discord.js meta-framework for building Discord bots. In versions 1.2.0-rc.1 through 1.2.0-rc.11, a logic flaw exists in the message command handler that affects how the commandName property is exposed to both middleware functions and command execution contexts when handling command aliases. When a message command is invoked using an alias, the ctx.commandName value reflects the alias rather than the canonical command name. This occurs in both middleware functions and within the command&#39;s own run function. Although not explicitly documented, CommandKit&#39;s examples and guidance around middleware usage implicitly convey that ctx.commandName represents the canonical command identifier. Middleware examples in the documentation consistently use ctx.commandName to reference the command being executed. Developers who assume ctx.commandName is canonical may introduce unintended behavior when relying on it for logic such as permission checks, rate limiting, or audit logging. This could allow unauthorized command execution or inaccurate access control decisions. Slash commands and context menu commands are not affected. This issue has been patched in version 1.2.0-rc.12, where ctx.commandName now consistently returns the actual canonical command name regardless of the alias used to invoke it. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-58133",
-    "descripcion": "Authentication bypass in some Zoom Rooms Clients before version 6.5.1 may allow an unauthenticated user to conduct a disclosure of information via network access. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-58132",
-    "descripcion": "Command injection in some Zoom Clients for Windows may allow an authenticated user to conduct a disclosure of information via network access. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-54271",
-    "descripcion": "Creative Cloud Desktop versions 6.7.0.278 and earlier are affected by a Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability that could lead to arbitrary file system write. A low-privileged attacker could exploit the timing between the check and use of a resource, potentially allowing unauthorized modifications to files. Exploitation of this issue does not require user interaction. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
