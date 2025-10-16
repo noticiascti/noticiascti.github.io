@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-16",
-    "cve": "CVE-2025-10700",
-    "descripcion": "The Ally – Web Accessibility & Usability plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.8.0. This is due to missing or incorrect nonce validation on the enable_unfiltered_files_upload function. This makes it possible for unauthenticated attackers to enable unfiltered file upload and add svg files to the upload list via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-62585",
+    "descripcion": "Whale browser before 4.33.325.17 allows an attacker to bypass the Content Security Policy via a specific scheme in a dual-tab environment. 16/10/2025 16/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-16",
-    "cve": "CVE-2025-62580",
-    "descripcion": "ASDA-Soft Stack-based Buffer Overflow Vulnerability 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-62584",
+    "descripcion": "Whale browser before 4.33.325.17 allows an attacker to bypass the Same-Origin Policy in a dual-tab environment. 16/10/2025 16/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-16",
-    "cve": "CVE-2025-62579",
-    "descripcion": "ASDA-Soft Stack-based Buffer Overflow Vulnerability 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-62583",
+    "descripcion": "Whale Browser before 4.33.325.17 allows an attacker to escape the iframe sandbox in a dual-tab environment. 16/10/2025 16/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-11683",
-    "descripcion": "YAML::Syck versions before 1.36 for Perl has missing null-terminators which causes out-of-bounds read and potential information disclosure Missing null terminators in token.c leads to but-of-bounds read which allows adjacent variable to be read The issue is seen with complex YAML files with a hash of all keys and empty values. There is no indication that the issue leads to accessing memory outside that allocated to the module. 16/10/2025 16/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-55090",
+    "descripcion": "In NetX Duo before 6.4.4, the networking support module for Eclipse Foundation ThreadX, there was a potential out of bound read issue in _nx_ipv4_packet_receive() function when received an Ethernet frame with less than 4 bytes of IP packet. 16/10/2025 16/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-62375",
-    "descripcion": "go-witness and witness are Go modules for generating attestations. In go-witness versions 0.8.6 and earlier and witness versions 0.9.2 and earlier the AWS attestor improperly verifies AWS EC2 instance identity documents. Verification can incorrectly succeed when a signature is not present or is empty, and when RSA signature verification fails. The attestor also embeds a single legacy global AWS public certificate and does not account for newer region specific certificates issued in 2024, making detection of forged documents difficult without additional trusted region data. An attacker able to supply or intercept instance identity document data (such as through Instance Metadata Service impersonation) can cause a forged identity document to be accepted, leading to incorrect trust decisions based on the attestation. This is fixed in go-witness 0.9.1 and witness 0.10.1. As a workaround, manually verify the included identity document, signature, and public key with standard tools (for example openssl) following AWS’s verification guidance, or disable use of the AWS attestor until upgraded. 15/10/2025 15/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-55089",
+    "descripcion": "In FileX before 6.4.2, the file support module for Eclipse Foundation ThreadX, there was a possible buffer overflow in the FileX RAM disk driver. It could cause a remote execurtion after receiving a crafted sequence of packets 16/10/2025 16/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-43313",
-    "descripcion": "A logic issue was addressed with improved restrictions. This issue is fixed in macOS Ventura 13.7.7, macOS Sonoma 14.7.7, macOS Sequoia 15.6. An app may be able to access sensitive user data. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-55084",
+    "descripcion": "In NetX Duo version before 6.4.4, the component of Eclipse Foundation ThreadX, there was an incorrect bound check in_nx_secure_tls_proc_clienthello_supported_versions_extension() in the extension version field. 16/10/2025 16/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-43282",
-    "descripcion": "A double free issue was addressed with improved memory management. This issue is fixed in macOS Sequoia 15.6, iOS 18.6 and iPadOS 18.6, watchOS 11.6, tvOS 18.6, visionOS 2.6, macOS Ventura 13.7.7, macOS Sonoma 14.7.7, iPadOS 17.7.9. An app may be able to cause unexpected system termination. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-10850",
+    "descripcion": "The Felan Framework plugin for WordPress is vulnerable to improper authentication in versions up to, and including, 1.1.4. This is due to the hardcoded password in the &#39;fb_ajax_login_or_register&#39; function and in the &#39;google_ajax_login_or_register&#39; function. This makes it possible for unauthenticated attackers to log in as any existing user on the site, if they registered with facebook or google social login and did not change their password. 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-43281",
-    "descripcion": "The issue was addressed with improved authentication. This issue is fixed in macOS Sequoia 15.6. A local attacker may be able to elevate their privileges. 15/10/2025 15/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-10849",
+    "descripcion": "The Felan Framework plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;process_plugin_actions&#39; function called via an AJAX action in versions up to, and including, 1.1.4. This makes it possible for unauthenticated attackers to activate or deactivate arbitrary plugins. 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-43280",
-    "descripcion": "The issue was resolved by not loading remote images This issue is fixed in iOS 18.6 and iPadOS 18.6. Forwarding an email could display remote images in Mail in Lockdown Mode. 15/10/2025 15/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-10742",
+    "descripcion": "The Truelysell Core plugin for WordPress is vulnerable to Arbitrary User Password Change in versions up to, and including, 1.8.6. This is due to the plugin providing user-controlled access to objects, letting a user bypass authorization and access system resources. This makes it possible for unauthenticated attackers to change user passwords and potentially take over administrator accounts. Note: This can only be exploited unauthenticated if the attacker knows which page contains the &#39;truelysell_edit_staff&#39; shortcode. 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2025-10-15",
-    "cve": "CVE-2025-11619",
-    "descripcion": "Improper certificate validation when connecting to gateways in Devolutions Server 2025.3.2 and earlier allows attackers in MitM position to intercept traffic. 15/10/2025 15/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-16",
+    "cve": "CVE-2025-10706",
+    "descripcion": "The Classified Pro theme for WordPress is vulnerable to unauthorized plugin installation due to a missing capability check in the &#39;cwp_addons_update_plugin_cb&#39; function in all versions up to, and including, 1.0.14. This makes it possible for authenticated attackers, with subscriber-level access and above, to install arbitrary plugins on the affected site&#39;s server which may make remote code execution possible. Note: The required nonce for the vulnerability is in the CubeWP Framework plugin. 16/10/2025 16/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
