@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-10-17",
+    "cve": "CVE-2025-11895",
+    "descripcion": "The Binary MLM Plan plugin for WordPress is vulnerable to insecure direct object reference in versions up to, and including, 3.0. This is due to the bmp_user_payout_detail_of_current_user() function selecting payout records solely by id without verifying ownership. This makes it possible for authenticated attackers with the bmp_user role (often subscribers) to view other members&#39; payout summaries via direct requests to the /bmp-account-detail/ endpoint with a crafted payout-id parameter granted they can access the shortcode output. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-17",
     "cve": "CVE-2025-55100",
     "descripcion": "In USBX before 6.4.3, the USB support module for Eclipse Foundation ThreadX, there was a potential out of bound read issue in _ux_host_class_audio10_sam_parse_func() when parsing a list of sampling frequencies. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:A/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-10-17",
     "cve": "CVE-2025-55092",
     "descripcion": "In Eclipse Foundation NetX Duo before 6.4.4, the networking support module for Eclipse Foundation ThreadX, there was a potential out of bound read issue in _nx_ipv4_option_process() when processing an IPv4 packet with the timestamp option. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-11849",
-    "descripcion": "Versions of the package mammoth from 0.3.25 and before 1.11.0; versions of the package mammoth from 0.3.25 and before 1.11.0; versions of the package mammoth before 1.11.0; versions of the package org.zwobble.mammoth:mammoth before 1.11.0 are vulnerable to Directory Traversal due to the lack of path or file type validation when processing a docx file containing an image with an external link (r:link attribute instead of embedded r:embed). The library resolves the URI to a file path and after reading, the content is encoded as base64 and included in the HTML output as a data URI. An attacker can read arbitrary files on the system where the conversion is performed or cause an excessive resources consumption by crafting a docx file that links to special device files such as /dev/random or /dev/zero. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:H/SI:N/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:H Gravedad 4.0 6.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
