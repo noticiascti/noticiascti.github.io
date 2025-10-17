@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2025-10-17",
+    "cve": "CVE-2023-28815",
+    "descripcion": "Some versions of Hikvision&#39;s iSecure Center Product contain insufficient parameter validation, resulting in a command injection vulnerability. Attackers may exploit this to gain platform privileges and execute arbitrary commands on the system.iSecure Center is software released for China&#39;s domestic market only, with no overseas release. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2023-28814",
+    "descripcion": "Some versions of Hikvision&#39;s iSecure Center Product have an improper file upload control vulnerability. Due to the improper verification of file to be uploaded, attackers may upload malicious files to the server. iSecure Center is software released for China&#39;s domestic market only, with no overseas release. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-10-17",
     "cve": "CVE-2025-11895",
     "descripcion": "The Binary MLM Plan plugin for WordPress is vulnerable to insecure direct object reference in versions up to, and including, 3.0. This is due to the bmp_user_payout_detail_of_current_user() function selecting payout records solely by id without verifying ownership. This makes it possible for authenticated attackers with the bmp_user role (often subscribers) to view other members&#39; payout summaries via direct requests to the /bmp-account-detail/ endpoint with a crafted payout-id parameter granted they can access the shortcode output. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2025-10-17",
     "cve": "CVE-2025-55087",
     "descripcion": "In NextX Duo&#39;s snmp addon versions before 6.4.4, a part of the Eclipse Foundation ThreadX, an attacker could cause an out-of-bound read by a crafted SNMPv3 security parameters. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-55093",
-    "descripcion": "In NetX Duo before 6.4.4, the networking support module for Eclipse Foundation ThreadX, there was a potential out of bound read issue in _nx_ipv4_packet_receive() when handling unicast DHCP messages that could cause corruption of 4 bytes of memory. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-55092",
-    "descripcion": "In Eclipse Foundation NetX Duo before 6.4.4, the networking support module for Eclipse Foundation ThreadX, there was a potential out of bound read issue in _nx_ipv4_option_process() when processing an IPv4 packet with the timestamp option. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
