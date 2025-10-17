@@ -1,6 +1,46 @@
 [
   {
     "fecha": "2025-10-17",
+    "cve": "CVE-2025-62430",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. ClipBucket v5 through build 5.5.2 #145 allows stored cross-site scripting (XSS) in multiple video and photo metadata fields. For videos the Tags field and the Genre, Actors, Producer, Executive Producer, and Director fields in Movieinfos accept user supplied values without adequate sanitization. For photos the Photo Title and Photo Tags fields accept user supplied values without adequate sanitization. A regular user who can edit a video or photo can inject script (for example by supplying a value such as a closing delimiter followed by a script element). The injected script executes when any user, including an unauthenticated visitor or an administrator, views the affected video or photo page. Although cookies are set with the HttpOnly attribute and cannot be read directly, the injected script can issue fetch requests to endpoints such as admin_area pages and exfiltrate their contents or trigger unintended actions. Version 5.5.2 build #146 and later contain a fix. Update to build 5.5.2 #146 or later. No known workarounds exist. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2025-62424",
+    "descripcion": "ClipBucket is a web-based video-sharing platform. In ClipBucket version 5.5.2 - #146 and earlier, the /admin_area/template_editor.php endpoint is vulnerable to path traversal. The validation of the file-loading path is inadequate, allowing authenticated administrators to read and write arbitrary files outside the intended template directory by inserting path traversal sequences into the folder parameter. An attacker with administrator privileges can exploit this vulnerability to read sensitive files such as /etc/passwd and modify writable files on the system, potentially leading to sensitive information disclosure and compromise of the application or server. This issue is fixed in version 5.5.2 - #147. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2025-62422",
+    "descripcion": "DataEase is an open source data visualization and analytics platform. In versions 2.10.13 and earlier, the /de2api/datasetData/tableField interface is vulnerable to SQL injection. An attacker can construct a malicious tableName parameter to execute arbitrary SQL commands. This issue is fixed in version 2.10.14. No known workarounds exist. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2025-62421",
+    "descripcion": "DataEase is a data visualization and analytics platform. In DataEase versions through 2.10.13, a stored cross-site scripting vulnerability exists due to improper file upload validation and authentication bypass. The StaticResourceApi interface defines a route upload/{fileId} that uses a URL path parameter where both the filename and extension of uploaded files are controllable by users. During permission validation, the TokenFilter invokes the WhitelistUtils#match method to determine if the URL path is in the allowlist. If the requestURI ends with .js or similar extensions, it is directly deemed safe and bypasses permission checks. This allows an attacker to access &#34;upload/1.js&#34; while specifying arbitrary file extensions, enabling the upload of HTML files containing malicious JavaScript. The vulnerability is fixed in version 2.10.14. No known workarounds exist. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2025-62420",
+    "descripcion": "DataEase is a data visualization and analytics platform. In DataEase versions through 2.10.13, a JDBC driver bypass vulnerability exists in the H2 database connection handler. The getJdbc function in H2.java checks if the jdbcUrl starts with jdbc:h2 but returns a separate jdbc field as the actual connection URL. An attacker can provide a jdbcUrl that starts with jdbc:h2 while supplying a different jdbc field with an arbitrary JDBC driver and connection string. This allows an authenticated attacker to trigger arbitrary JDBC connections with malicious drivers, potentially leading to remote code execution. The vulnerability is fixed in version 2.10.14. No known workarounds exist. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2025-62419",
+    "descripcion": "DataEase is a data visualization and analytics platform. In DataEase versions through 2.10.13, a JDBC URL injection vulnerability exists in the DB2 and MongoDB data source configuration handlers. In the DB2 data source handler, when the extraParams field is empty, the HOSTNAME, PORT, and DATABASE values are directly concatenated into the JDBC URL without filtering illegal parameters. This allows an attacker to inject a malicious JDBC string into the HOSTNAME field to bypass previously patched vulnerabilities CVE-2025-57773 and CVE-2025-58045. The vulnerability is fixed in version 2.10.14. No known workarounds exist. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2025-62171",
+    "descripcion": "ImageMagick is an open source software suite for displaying, converting, and editing raster image files. In ImageMagick versions prior to 7.1.2-7 and 6.9.13-32, an integer overflow vulnerability exists in the BMP decoder on 32-bit systems. The vulnerability occurs in coders/bmp.c when calculating the extent value by multiplying image columns by bits per pixel. On 32-bit systems with size_t of 4 bytes, a malicious BMP file with specific dimensions can cause this multiplication to overflow and wrap to zero. The overflow check added to address CVE-2025-57803 is placed after the overflow occurs, making it ineffective. A specially crafted 58-byte BMP file with width set to 536,870,912 and 32 bits per pixel can trigger this overflow, causing the bytes_per_line calculation to become zero. This vulnerability only affects 32-bit builds of ImageMagick where default resource limits for width, height, and area have been manually increased beyond their defaults. 64-bit systems with size_t of 8 bytes are not vulnerable, and systems using default ImageMagick resource limits are not vulnerable. The vulnerability is fixed in versions 7.1.2-7 and 6.9.13-32. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-17",
+    "cve": "CVE-2025-62168",
+    "descripcion": "Squid is a caching proxy for the Web. In Squid versions prior to 7.2, a failure to redact HTTP authentication credentials in error handling allows information disclosure. The vulnerability allows a script to bypass browser security protections and learn the credentials a trusted client uses to authenticate. This potentially allows a remote client to identify security tokens or credentials used internally by a web application using Squid for backend load balancing. These attacks do not require Squid to be configured with HTTP authentication. The vulnerability is fixed in version 7.2. As a workaround, disable debug information in administrator mailto links generated by Squid by configuring squid.conf with email_err_data off. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-10-17",
     "cve": "CVE-2025-8414",
     "descripcion": "Due to improper input validation, a buffer overflow vulnerability is present in Zigbee EZSP Host Applications. If the buffer overflows, stack corruption is possible. In certain conditions, this could lead to arbitrary code execution. Access to a network key is required to exploit this vulnerability. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -8,45 +48,5 @@
     "fecha": "2025-10-17",
     "cve": "CVE-2025-62356",
     "descripcion": "A path traversal vulnerability in all versions of the Qodo Qodo Gen IDE enables a threat actor to read arbitrary local files in and outside of current projects on an end user’s system. The vulnerability can be reached directly and through indirect prompt injection. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-62353",
-    "descripcion": "A path traversal vulnerability in all versions of the Windsurf IDE enables a threat actor to read and write arbitrary local files in and outside of current projects on an end user’s system. The vulnerability can be reached directly and through indirect prompt injection. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-60279",
-    "descripcion": "A server-side request forgery (SSRF) vulnerability in Illia Cloud illia-Builder before v4.8.5 allows authenticated users to send arbitrary requests to internal services via the API. An attacker can leverage this to enumerate open ports based on response discrepancies and interact with internal services. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-59043",
-    "descripcion": "OpenBao is an open source identity-based secrets management system. In OpenBao versions prior to 2.4.1, JSON objects after decoding may use significantly more memory than their serialized version. It is possible to craft a JSON payload to maximize the factor between serialized memory usage and deserialized memory usage, similar to a zip bomb, with factors reaching approximately 35. This can be used to circumvent the max_request_size configuration parameter which is intended to protect against denial of service attacks. The request body is parsed into a map very early in the request handling chain before authentication, which means an unauthenticated attacker can send a specifically crafted JSON object and cause an out-of-memory crash. Additionally, for requests with large numbers of strings, the audit subsystem can consume large quantities of CPU. The vulnerability is fixed in version 2.4.1. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-58747",
-    "descripcion": "Dify is an LLM application development platform. In Dify versions through 1.9.1, the MCP OAuth component is vulnerable to cross-site scripting when a victim connects to an attacker-controlled remote MCP server. The vulnerability exists in the OAuth flow implementation where the authorization_url provided by a remote MCP server is directly passed to window.open without validation or sanitization. An attacker can craft a malicious MCP server that returns a JavaScript URI (such as javascript:alert(1)) in the authorization_url field, which is then executed when the victim attempts to connect to the MCP server. This allows the attacker to execute arbitrary JavaScript in the context of the Dify application. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.00 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-57567",
-    "descripcion": "A remote code execution (RCE) vulnerability exists in the PluXml CMS theme editor, specifically in the minify.php file located under the default theme directory (/themes/defaut/css/minify.php). An authenticated administrator user can overwrite this file with arbitrary PHP code via the admin panel, enabling execution of system commands. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-49655",
-    "descripcion": "Deserialization of untrusted data can occur in versions of the Keras framework running versions 3.11.0 up to but not including 3.11.3, enabling a maliciously uploaded Keras file containing a TorchModuleWrapper class to run arbitrary code on an end user’s system when loaded despite safe mode being enabled. The vulnerability can be triggered through both local and remote files. 17/10/2025 17/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-26625",
-    "descripcion": "Git LFS is a Git extension for versioning large files. In Git LFS versions 0.5.2 through 3.7.0, when populating a Git repository&#39;s working tree with the contents of Git LFS objects, certain Git LFS commands may write to files visible outside the current Git working tree if symbolic or hard links exist which collide with the paths of files tracked by Git LFS. The git lfs checkout and git lfs pull commands do not check for symbolic links before writing to files in the working tree, allowing an attacker to craft a repository containing symbolic or hard links that cause Git LFS to write to arbitrary file system locations accessible to the user running these commands. As well, when the git lfs checkout and git lfs pull commands are run in a bare repository, they could write to files visible outside the repository. The vulnerability is fixed in version 3.7.1. As a workaround, support for symlinks in Git may be disabled by setting the core.symlinks configuration option to false, after which further clones and fetches will not create symbolic links. However, any symbolic or hard links in existing repositories will still provide the opportunity for Git LFS to write to their targets. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-17",
-    "cve": "CVE-2025-11905",
-    "descripcion": "A vulnerability was found in yanyutao0402 ChanCMS up to 3.3.2. This vulnerability affects the function getArticle of the file app\\modules\\cms\\controller\\gather.js. The manipulation results in code injection. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. 17/10/2025 17/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
