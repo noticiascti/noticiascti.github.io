@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-10-18",
+    "cve": "CVE-2025-11926",
+    "descripcion": "The Related Posts Lite plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.12 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 18/10/2025 18/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-18",
     "cve": "CVE-2025-9890",
     "descripcion": "The Theme Editor plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.0. This is due to missing or incorrect nonce validation on the &#39;theme_editor_theme&#39; page. This makes it possible for unauthenticated attackers to achieve remote code execution via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 18/10/2025 18/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-10-18",
     "cve": "CVE-2025-11741",
     "descripcion": "The WPC Smart Quick View for WooCommerce plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 4.2.5 via the &#39;woosq_quickview&#39; AJAX endpoint due to insufficient restrictions on which posts can be included. This makes it possible for unauthenticated attackers to extract data from password protected, private, or draft products that they should not have access to. 18/10/2025 18/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-18",
-    "cve": "CVE-2025-11703",
-    "descripcion": "The WP Go Maps (formerly WP Google Maps) plugin for WordPress is vulnerable to Cache Poisoning in all versions up to, and including, 9.0.48. This is due to the plugin not serving cached data from server-side responses and instead relying on user-input. This makes it possible for unauthenticated attackers to poison the cache location for location search results. 18/10/2025 18/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
