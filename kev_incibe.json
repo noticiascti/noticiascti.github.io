@@ -1,5 +1,20 @@
 [
   {
+    "fecha": "2025-10-20",
+    "cve": "CVE-2025-62577",
+    "descripcion": "ETERNUS SF provided by Fsas Technologies Inc. contains an incorrect default permissions vulnerability. A low-privileged user with access to the management server may obtain database credentials, potentially allowing execution of OS commands with administrator privileges. 20/10/2025 20/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-20",
+    "cve": "CVE-2025-40004",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/9p: Fix buffer overflow in USB transport layer A buffer overflow vulnerability exists in the USB 9pfs transport layer where inconsistent size validation between packet header parsing and actual data copying allows a malicious USB host to overflow heap buffers. The issue occurs because: - usb9pfs_rx_header() validates only the declared size in packet header - usb9pfs_rx_complete() uses req->actual (actual received bytes) for memcpy This allows an attacker to craft packets with small declared size (bypassing validation) but large actual payload (triggering overflow in memcpy). Add validation in usb9pfs_rx_complete() to ensure req->actual does not exceed the buffer capacity before copying data. 20/10/2025 20/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-20",
+    "cve": "CVE-2025-11948",
+    "descripcion": "Document Management System developed by Excellent Infotek has an Arbitrary File Upload vulnerability, allowing unauthenticated remote attackers to upload and execute web shell backdoors, thereby enabling arbitrary code execution on the server. 20/10/2025 20/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
     "fecha": "2025-10-19",
     "cve": "CVE-2025-11947",
     "descripcion": "A weakness has been identified in bftpd up to 6.2. Impacted is the function expand_groups of the file options.c of the component Configuration File Handler. Executing manipulation can lead to heap-based buffer overflow. It is possible to launch the attack on the local host. Attacks of this nature are highly complex. The exploitability is considered difficult. The exploit has been made available to the public and could be exploited. The vendor was contacted early about this disclosure but did not respond in any way. 20/10/2025 20/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:H/Au:S/C:P/I:P/A:P Gravedad 4.0 2.00 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -33,20 +48,5 @@
     "fecha": "2025-10-19",
     "cve": "CVE-2025-11941",
     "descripcion": "A vulnerability was detected in e107 CMS up to 2.3.3. This impacts an unknown function of the file /e107_admin/image.php?mode=main&action=avatar of the component Avatar Handler. Performing manipulation of the argument multiaction[] results in path traversal. It is possible to initiate the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 19/10/2025 19/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-19",
-    "cve": "CVE-2025-11940",
-    "descripcion": "A security vulnerability has been detected in LibreWolf up to 143.0.4-1 on Windows. This affects an unknown function of the file assets/setup.nsi of the component Installer. Such manipulation leads to uncontrolled search path. The attack must be carried out locally. Attacks of this nature are highly complex. The exploitability is reported as difficult. Upgrading to version 144.0-1 mitigates this issue. The name of the patch is dd10e31dd873e9cb309fad8aed921d45bf905a55. It is suggested to upgrade the affected component. 19/10/2025 19/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:L/AC:H/Au:S/C:C/I:C/A:C Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-19",
-    "cve": "CVE-2025-11939",
-    "descripcion": "A vulnerability was determined in ChurchCRM up to 5.18.0. This issue affects some unknown processing of the file src/ChurchCRM/Backup/RestoreJob.php of the component Backup Restore Handler. Executing manipulation of the argument restoreFile can lead to path traversal. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way. 19/10/2025 19/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-19",
-    "cve": "CVE-2025-11938",
-    "descripcion": "A vulnerability was found in ChurchCRM up to 5.18.0. This vulnerability affects unknown code of the file setup/routes/setup.php. Performing manipulation of the argument DB_PASSWORD/ROOT_PATH/URL results in deserialization. The attack may be initiated remotely. The attack&#39;s complexity is rated as high. It is stated that the exploitability is difficult. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. 19/10/2025 19/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:P/A:P Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
