@@ -23,10 +23,7 @@
   <!-- Menú principal -->
   <nav class="bg-gray-950 border-b border-gray-700">
     <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
-      <!-- Inicio -->
       <li><a href="index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
-
-      <!-- Noticias Ciberseguridad (dropdown) -->
       <li class="relative group">
         <button class="hover:text-yellow-400 flex items-center">🔒 Noticias Ciberseguridad ▾</button>
         <ul class="absolute hidden group-hover:block bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
@@ -36,23 +33,30 @@
           <li><a href="index.html#prevencion" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
         </ul>
       </li>
-
-      <!-- Medios Nacionales -->
       <li><a href="medios.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
-
-      <!-- Status -->
       <li><a href="status.html" class="text-yellow-400 font-semibold">📊 Status</a></li>
-
-      <!-- Ransom & Vulnerabilidades -->
       <li><a href="ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Ransom & Vulnerabilidades</a></li>
-
-      <!-- Reclamos -->
       <li><a href="reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
     </ul>
   </nav>
 
-  <!-- Grid de servicios -->
-  <div id="statusGrid" class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <!-- 🔹 Sección Plataformas Nacionales -->
+  <main class="p-6 space-y-10">
+    <section>
+      <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">
+        Plataformas Nacionales
+      </h2>
+      <div id="statusGridNacional" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- 🔹 Sección Plataformas Globales -->
+    <section>
+      <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">
+        Plataformas Globales
+      </h2>
+      <div id="statusGridGlobal" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+  </main>
 
   <script>
     // 🔹 Configuración del dropdown
@@ -70,14 +74,8 @@
       });
     });
 
-    // 🔹 Función para colapsar menú en móvil
-    function toggleMenu() {
-      const cont = document.querySelector("nav ul");
-      cont.classList.toggle("hidden");
-    }
-
-    // 🔹 Configuración de servicios con logos
-    const servicesConfig = {
+    // 🔹 Configuración de servicios nacionales
+    const nacionales = {
       "bci": { logo: "https://cdn.worldvectorlogo.com/logos/bci-logotype.svg" },
       "banco_estado": { logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_BancoEstado.svg" },
       "transbank": { logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/Transbank-1200px-logo.png" },
@@ -89,99 +87,108 @@
       "sii": { logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/Logotipo_Servicio_de_Impuestos_Internos.svg" }
     };
 
-    // 🔹 Cargar datos con cache busting
-    fetch("status_data.json?t=" + new Date().getTime())
-      .then(r => r.json())
-      .then(allData => {
-        const data = allData.data;
-        const container = document.getElementById("statusGrid");
+    // 🔹 Configuración de servicios globales
+    const globales = {
+      "googlegemini": { logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" },
+      "openai": { logo: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" },
+      "microsoft_copilot": { logo: "https://stoneridgesoftware.com/wp-content/uploads/2024/03/copilot-logo-color.png" },
+      "aws": { logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
+      "google_cloud": { logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" },
+      "azure": { logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Windows_Azure_logo.png" },
+      "ibm_cloud": { logo: "https://wp.logos-download.com/wp-content/uploads/2023/02/IBM_Cloud_Logo-3000x695.png" },
+      "oracle_cloud": { logo: "https://cdn.worldvectorlogo.com/logos/oracle-cloud-1.svg" },
+      "cloudflare": { logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg" },
+      "outlook": { logo: "https://wibrahim.com/wp-content/uploads/2020/09/png-transparent-microsoft-outlook-logo-outlook-com-microsoft-outlook-email-microsoft-office-365-outlook-miscellaneous-blue-text-2.png" },
+      "teams": { logo: "https://logodownload.org/wp-content/uploads/2021/08/microsoft-teams-logo-2.png" },
+      "google_meet": { logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Google_Meet_text_logo_%282020%29.svg/1024px-Google_Meet_text_logo_%282020%29.svg.png" },
+      "gmail": { logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Gmail2020.logo.png" },
+      "github": { logo: "https://pngimg.com/d/github_PNG25.png" },
+      "whatsapp": { logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-9.svg" }
+    };
 
-        Object.keys(servicesConfig).forEach(key => {
-          const service = servicesConfig[key];
-          const serviceData = data[key] || {};
-          const dataset = serviceData.data || [];
+    // 🔹 Función general para renderizar
+    function renderCards(data, config, containerId) {
+      const container = document.getElementById(containerId);
+      Object.keys(config).forEach(key => {
+        const service = config[key];
+        const serviceData = data[key] || {};
+        const dataset = serviceData.data || [];
 
-          const card = document.createElement("div");
-          card.className = "bg-white rounded-xl shadow-lg p-4 text-gray-900 flex flex-col items-center";
+        const card = document.createElement("div");
+        card.className = "bg-white rounded-xl shadow-lg p-4 text-gray-900 flex flex-col items-center";
 
-          // Calcular métricas
-          let avg24 = 0, lastHour = 0;
-          if (Array.isArray(dataset)) {
-            const now = new Date();
-            const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24*60*60*1000);
-            const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60*60*1000);
+        let avg24 = 0, lastHour = 0;
+        if (Array.isArray(dataset)) {
+          const now = new Date();
+          const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24*60*60*1000);
+          const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60*60*1000);
+          avg24 = last24.reduce((a,b)=>a+b.y,0) / (last24.length || 1);
+          lastHour = last1.reduce((a,b)=>a+b.y,0);
+        }
 
-            avg24 = last24.reduce((a,b)=>a+b.y,0) / (last24.length || 1);
-            lastHour = last1.reduce((a,b)=>a+b.y,0);
-          }
+        card.innerHTML = `
+          <div class="flex justify-center mb-3">
+            <img src="${service.logo}" alt="${key}" class="h-12">
+          </div>
+          <canvas id="chart-${key}" height="100"></canvas>
+          <div class="mt-3 text-sm text-gray-700 w-full">
+            📅 Última actualización: ${
+              serviceData.ultima_actualizacion
+                ? new Date(serviceData.ultima_actualizacion).toLocaleString("es-CL", { timeZone: "America/Santiago" })
+                : "Sin datos"
+            }<br>
+            📊 Promedio últimas 24 hrs: <span class="font-bold">${avg24.toFixed(1)}</span><br>
+            🚨 Última hora: <span class="font-bold text-red-600">${lastHour}</span>
+          </div>
+        `;
 
-          // Plantilla de cada card
-          card.innerHTML = `
-            <div class="flex justify-center mb-3">
-              <img src="${service.logo}" alt="${key}" class="h-12">
-            </div>
-            <canvas id="chart-${key}" height="100"></canvas>
-            <div class="mt-3 text-sm text-gray-700 w-full">
-              📅 Última actualización: ${
-                serviceData.ultima_actualizacion
-                  ? new Date(serviceData.ultima_actualizacion).toLocaleString("es-CL", { timeZone: "America/Santiago" })
-                  : "Sin datos"
-              }<br>
-              📊 Promedio últimas 24 hrs: <span class="font-bold">${avg24.toFixed(1)}</span><br>
-              🚨 Última hora: <span class="font-bold text-red-600">${lastHour}</span>
-            </div>
-          `;
+        container.appendChild(card);
 
-          container.appendChild(card);
+        if (Array.isArray(dataset) && dataset.length > 0) {
+          const ctx = card.querySelector("canvas").getContext("2d");
+          const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+          gradient.addColorStop(0, "rgba(59,130,246,0.4)");
+          gradient.addColorStop(1, "rgba(59,130,246,0)");
 
-          // Renderizar gráfico
-          if (Array.isArray(dataset) && dataset.length > 0) {
-            const ctx = card.querySelector("canvas").getContext("2d");
-            const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-            gradient.addColorStop(0, "rgba(59,130,246,0.4)");
-            gradient.addColorStop(1, "rgba(59,130,246,0)");
-
-            new Chart(ctx, {
-              type: "line",
-              data: {
-                labels: dataset.map(p =>
-                  new Date(p.x).toLocaleTimeString("es-CL", {
-                    timeZone:"America/Santiago",
-                    hour:"2-digit",
-                    minute:"2-digit"
-                  })
-                ),
-                datasets: [{
-                  label: "Reportes",
-                  data: dataset.map(p => p.y),
-                  borderColor: "rgba(59,130,246,1)",
-                  backgroundColor: gradient,
-                  borderWidth: 2,
-                  tension: 0.4,
-                  pointRadius: 0,
-                  fill: true
-                }]
-              },
-              options: {
-                plugins: {
-                  legend: { display: false },
-                  tooltip: {
-                    callbacks: {
-                      title: ctx => "🕒 Hora: " + dataset[ctx[0].dataIndex].x,
-                      label: ctx => "📊 Reportes: " + ctx.raw
-                    }
-                  }
-                },
-                scales: {
-                  x: { ticks: { maxTicksLimit: 6, color: "#6b7280" }, grid: { display: false } },
-                  y: { beginAtZero: true, ticks: { stepSize: 1, color: "#6b7280" }, grid: { color: "rgba(0,0,0,0.05)" } }
-                }
+          new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: dataset.map(p => new Date(p.x).toLocaleTimeString("es-CL", { timeZone:"America/Santiago", hour:"2-digit", minute:"2-digit" })),
+              datasets: [{
+                label: "Reportes",
+                data: dataset.map(p => p.y),
+                borderColor: "rgba(59,130,246,1)",
+                backgroundColor: gradient,
+                borderWidth: 2,
+                tension: 0.4,
+                pointRadius: 0,
+                fill: true
+              }]
+            },
+            options: {
+              plugins: { legend: { display: false } },
+              scales: {
+                x: { ticks: { color: "#6b7280", maxTicksLimit: 6 }, grid: { display: false } },
+                y: { beginAtZero: true, ticks: { color: "#6b7280", stepSize: 1 }, grid: { color: "rgba(0,0,0,0.05)" } }
               }
-            });
-          }
-        });
-      })
-      .catch(err => console.error("Error cargando status:", err));
+            }
+          });
+        }
+      });
+    }
+
+    // 🔹 Cargar datos nacionales
+    fetch("status_data.json?t=" + Date.now())
+      .then(r => r.json())
+      .then(allData => renderCards(allData.data, nacionales, "statusGridNacional"))
+      .catch(err => console.error("Error cargando nacionales:", err));
+
+    // 🔹 Cargar datos globales
+    fetch("status_data_global.json?t=" + Date.now())
+      .then(r => r.json())
+      .then(allData => renderCards(allData.data, globales, "statusGridGlobal"))
+      .catch(err => console.error("Error cargando globales:", err));
   </script>
+
 </body>
 </html>
