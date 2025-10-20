@@ -106,76 +106,94 @@
       "whatsapp": { logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-9.svg" }
     };
 
-    // 🔹 Función general para renderizar
-    function renderCards(data, config, containerId) {
-      const container = document.getElementById(containerId);
-      Object.keys(config).forEach(key => {
-        const service = config[key];
-        const serviceData = data[key] || {};
-        const dataset = serviceData.data || [];
+function renderCards(data, config, containerId) {
+  const container = document.getElementById(containerId);
+  const now = new Date();
 
-        const card = document.createElement("div");
-        card.className = "bg-white rounded-xl shadow-lg p-4 text-gray-900 flex flex-col items-center";
+  // 🔸 Precalcular las métricas para ordenar correctamente
+  const stats = Object.keys(config).map(key => {
+    const dataset = (data[key] && data[key].data) || [];
+    let lastHour = 0, avg24 = 0;
 
-        let avg24 = 0, lastHour = 0;
-        if (Array.isArray(dataset)) {
-          const now = new Date();
-          const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24*60*60*1000);
-          const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60*60*1000);
-          avg24 = last24.reduce((a,b)=>a+b.y,0) / (last24.length || 1);
-          lastHour = last1.reduce((a,b)=>a+b.y,0);
-        }
+    if (Array.isArray(dataset) && dataset.length > 0) {
+      const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60 * 60 * 1000);
+      const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24 * 60 * 60 * 1000);
+      lastHour = last1.reduce((a, b) => a + b.y, 0);
+      avg24 = last24.reduce((a, b) => a + b.y, 0) / (last24.length || 1);
+    }
 
-        card.innerHTML = `
-          <div class="flex justify-center mb-3">
-            <img src="${service.logo}" alt="${key}" class="h-12">
-          </div>
-          <canvas id="chart-${key}" height="100"></canvas>
-          <div class="mt-3 text-sm text-gray-700 w-full">
-            📅 Última actualización: ${
-              serviceData.ultima_actualizacion
-                ? new Date(serviceData.ultima_actualizacion).toLocaleString("es-CL", { timeZone: "America/Santiago" })
-                : "Sin datos"
-            }<br>
-            📊 Promedio últimas 24 hrs: <span class="font-bold">${avg24.toFixed(1)}</span><br>
-            🚨 Última hora: <span class="font-bold text-red-600">${lastHour}</span>
-          </div>
-        `;
+    return { key, lastHour, avg24 };
+  });
 
-        container.appendChild(card);
+  // 🔸 Ordenar descendente según reportes en la última hora
+  const sorted = stats.sort((a, b) => b.lastHour - a.lastHour);
 
-        if (Array.isArray(dataset) && dataset.length > 0) {
-          const ctx = card.querySelector("canvas").getContext("2d");
-          const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-          gradient.addColorStop(0, "rgba(59,130,246,0.4)");
-          gradient.addColorStop(1, "rgba(59,130,246,0)");
+  // 🔸 Renderizar en orden
+  sorted.forEach(({ key, lastHour, avg24 }, index) => {
+    const service = config[key];
+    const serviceData = data[key] || {};
+    const dataset = serviceData.data || [];
 
-          new Chart(ctx, {
-            type: "line",
-            data: {
-              labels: dataset.map(p => new Date(p.x).toLocaleTimeString("es-CL", { timeZone:"America/Santiago", hour:"2-digit", minute:"2-digit" })),
-              datasets: [{
-                label: "Reportes",
-                data: dataset.map(p => p.y),
-                borderColor: "rgba(59,130,246,1)",
-                backgroundColor: gradient,
-                borderWidth: 2,
-                tension: 0.4,
-                pointRadius: 0,
-                fill: true
-              }]
-            },
-            options: {
-              plugins: { legend: { display: false } },
-              scales: {
-                x: { ticks: { color: "#6b7280", maxTicksLimit: 6 }, grid: { display: false } },
-                y: { beginAtZero: true, ticks: { color: "#6b7280", stepSize: 1 }, grid: { color: "rgba(0,0,0,0.05)" } }
-              }
-            }
-          });
+    const card = document.createElement("div");
+    card.className = "bg-white rounded-xl shadow-lg p-4 text-gray-900 flex flex-col items-center";
+
+     card.innerHTML = `
+      <div class="flex justify-center mb-3">
+        <img src="${service.logo}" alt="${key}" class="h-12">
+      </div>
+      <canvas id="chart-${key}" height="100"></canvas>
+      <div class="mt-3 text-sm text-gray-700 w-full">
+        📅 Última actualización: ${
+          serviceData.ultima_actualizacion
+            ? new Date(serviceData.ultima_actualizacion).toLocaleString("es-CL", { timeZone: "America/Santiago" })
+            : "Sin datos"
+        }<br>
+        📊 Promedio últimas 24 hrs: <span class="font-bold">${avg24.toFixed(1)}</span><br>
+        🚨 Última hora: <span class="font-bold text-red-600">${lastHour}</span>
+      </div>
+    `;
+
+    container.appendChild(card);
+
+    if (Array.isArray(dataset) && dataset.length > 0) {
+      const ctx = card.querySelector("canvas").getContext("2d");
+      const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+      gradient.addColorStop(0, "rgba(59,130,246,0.4)");
+      gradient.addColorStop(1, "rgba(59,130,246,0)");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: dataset.map(p =>
+            new Date(p.x).toLocaleTimeString("es-CL", {
+              timeZone: "America/Santiago",
+              hour: "2-digit",
+              minute: "2-digit"
+            })
+          ),
+          datasets: [{
+            label: "Reportes",
+            data: dataset.map(p => p.y),
+            borderColor: "rgba(59,130,246,1)",
+            backgroundColor: gradient,
+            borderWidth: 2,
+            tension: 0.4,
+            pointRadius: 0,
+            fill: true
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: "#6b7280", maxTicksLimit: 6 }, grid: { display: false } },
+            y: { beginAtZero: true, ticks: { color: "#6b7280", stepSize: 1 }, grid: { color: "rgba(0,0,0,0.05)" } }
+          }
         }
       });
     }
+  });
+}
+
 
     // 🔹 Cargar datos nacionales
     fetch("status_data.json?t=" + Date.now())
