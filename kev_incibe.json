@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-22",
-    "cve": "CVE-2025-62775",
-    "descripcion": "Mercku M6a devices through 2.1.0 allow root TELNET logins via the web admin password. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-11411",
+    "descripcion": "NLnet Labs Unbound up to and including version 1.24.0 is vulnerable to possible domain hijack attacks. Promiscuous NS RRSets that complement positive DNS replies in the authority section can be used to trick resolvers to update their delegation information for the zone. Usually these RRSets are used to update the resolver&#39;s knowledge of the zone&#39;s name servers. A malicious actor can exploit the possible poisonous effect by injecting NS RRSets (and possibly their respective address records) in a reply. This could be done for example by trying to spoof a packet or fragmentation attacks. Unbound would then proceed to update the NS RRSet data it already has since the new data has enough trust for it, i.e., in-zone data for the delegation point. Unbound 1.24.1 includes a fix that scrubs unsolicited NS RRSets (and their respective address records) from replies mitigating the possible poison effect. 22/10/2025 22/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-22",
-    "cve": "CVE-2025-62774",
-    "descripcion": "On Mercku M6a devices through 2.1.0, the authentication system uses predictable session tokens based on timestamps. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-11086",
+    "descripcion": "The Academy LMS – WordPress LMS Plugin for Complete eLearning Solution plugin for WordPress is vulnerable to privilege escalation in all versions up to, and including, 3.3.7. This is due to the plugin not properly validating a user&#39;s role prior to registering a user via the Social Login addon. This makes it possible for unauthenticated attackers to update their role to Administrator when registering on the site. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-22",
-    "cve": "CVE-2025-62773",
-    "descripcion": "Mercku M6a devices through 2.1.0 allow TELNET sessions via a router.telnet.enabled.update request by an administrator. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-6833",
+    "descripcion": "The All in One Time Clock Lite – Tracking Employee Time Has Never Been Easier plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.0 via the &#39;aio_time_clock_lite_js&#39; AJAX action due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber access and above, to clock other users in and out. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-22",
-    "cve": "CVE-2025-62772",
-    "descripcion": "On Mercku M6a devices through 2.1.0, session tokens remain valid for at least months in some cases. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-11915",
+    "descripcion": "Connection desynchronization between an HTTP proxy and the model backend. The fixes were rolled out for all proxies in front of impacted models by 2025-09-28. Users do not need to take any action. 22/10/2025 22/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:L/SC:L/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Clear Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-22",
-    "cve": "CVE-2025-62771",
-    "descripcion": "Mercku M6a devices through 2.1.0 allow password changes via intranet CSRF attacks. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-41110",
+    "descripcion": "Encrypted WiFi and SSH credentials were found in the Ghost Robotics Vision 60 v0.27.2 APK. This vulnerability allows an attacker to connect to the robot&#39;s WiFi and view all its data, as it runs on ROS 2 without default authentication. In addition, the attacker can connect via SSH and gain full control of the robot, which could cause physical damage to the robot itself or its environment. 22/10/2025 22/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-22",
-    "cve": "CVE-2024-58274",
-    "descripcion": "Hikvision CSMP (Comprehensive Security Management Platform) iSecure Center through 2024-08-01 allows execution of a command within $( ) in /center/api/installation/detection JSON data, as exploited in the wild in 2024 and 2025. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-41109",
+    "descripcion": "Ghost Robotics Vision 60 v0.27.2 includes, among its physical interfaces, three RJ45 connectors and a USB Type-C port. The vulnerability is due to the lack of authentication mechanisms when establishing connections through these ports. Specifically, with regard to network connectivity, the robot&#39;s internal router automatically assigns IP addresses to any device physically connected to it. An attacker could connect a WiFi access point under their control to gain access to the robot&#39;s network without needing the credentials for the deployed network. Once inside, the attacker can monitor all its data, as the robot runs on ROS 2 without authentication by default. 22/10/2025 22/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-22",
-    "cve": "CVE-2023-53691",
-    "descripcion": "Hikvision CSMP (Comprehensive Security Management Platform) iSecure Center through 2023-06-25 allows file upload via /center/api/files directory traversal, as exploited in the wild in 2024 and 2025. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-41108",
+    "descripcion": "The communication protocol implemented in Ghost Robotics Vision 60 v0.27.2 could allow an attacker to send commands to the robot from an external attack station, impersonating the control station (tablet) and gaining unauthorised full control of the robot. The absence of encryption and authentication mechanisms in the communication protocol allows an attacker to capture legitimate traffic between the robot and the controller, replicate it, and send any valid command to the robot from any attacking computer or device. The communication protocol used in this interface is based on MAVLink, a widely documented protocol, which increases the likelihood of attack. There are two methods for connecting to the robot remotely: Wi-Fi and 4G/LTE. 22/10/2025 22/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-10-21",
-    "cve": "CVE-2025-22167",
-    "descripcion": "This High severity Path Traversal (Arbitrary Write) vulnerability was introduced in versions: 9.12.0, 10.3.0 and remain present in 11.0.0 of Jira Software Data Center and Server. This Path Traversal (Arbitrary Write) vulnerability, with a CVSS Score of 8.7, allows an attacker to modify any filesystem path writable by the Jira JVM process. Atlassian recommends that Jira Software Data Center and Server customers upgrade to the latest version; if you are unable to do so, upgrade your instance to one of the specified supported fixed versions: Jira Software Data Center and Server 9.12: Upgrade to a release greater than or equal to 9.12.28 Jira Software Data Center and Server 10.3: Upgrade to a release greater than or equal to 10.3.12 Jira Software Data Center and Server 11.0: Upgrade to a release greater than or equal to 11.1.0 See the release notes. You can download the latest version of Jira Software Data Center and Server from the download center. This vulnerability was reported via our Atlassian (Internal) program. 22/10/2025 22/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-22",
+    "cve": "CVE-2025-11952",
+    "descripcion": "Stored Cross-site Scripting (XSS) in Oct8ne Chatbot v2.3. This vulnerability allows an attacker to execute JavaScript code in the victim&#39;s browser by injecting a malicious payload through the creation of a transcript that is sent by email. This vulnerability can be exploited to steal sensitive user data, such as session cookies, or to perform actions on behalf of the user, through /Records/SendSummaryMail. 22/10/2025 22/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-10-21",
-    "cve": "CVE-2025-61756",
-    "descripcion": "Vulnerability in the Oracle Financial Services Analytical Applications Infrastructure product of Oracle Financial Services Applications (component: System Configuration). Supported versions that are affected are 8.0.7.9, 8.0.8.7 and 8.1.2.5. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Financial Services Analytical Applications Infrastructure. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle Financial Services Analytical Applications Infrastructure. CVSS 3.1 Base Score 7.5 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H). 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-22",
+    "cve": "CVE-2025-11883",
+    "descripcion": "The Responsive Progress Bar plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s rprogress shortcode in versions less than, or equal to, 1.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-21",
-    "cve": "CVE-2025-62641",
-    "descripcion": "Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core). Supported versions that are affected are 7.1.12 and 7.2.2. Easily exploitable vulnerability allows high privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox. While the vulnerability is in Oracle VM VirtualBox, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in takeover of Oracle VM VirtualBox. CVSS 3.1 Base Score 8.2 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H). 21/10/2025 21/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-22",
+    "cve": "CVE-2025-11880",
+    "descripcion": "The SM CountDown Widget plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s smcountdown shortcode in versions less than, or equal to, 1.2 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 22/10/2025 22/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
