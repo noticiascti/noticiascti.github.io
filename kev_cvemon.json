@@ -21,18 +21,8 @@
   },
   {
     "fecha": "2025-10-26",
-    "cve": "CVE-2025-37947",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ksmbd: prevent out-of-bounds stream writes by validating *pos ksmbd_vfs_stream_write() did not validate whether the write offset (*pos) was within the bounds of the existing stream data length (v_len). If *pos ..."
-  },
-  {
-    "fecha": "2025-10-26",
-    "cve": "CVE-2023-20869",
-    "descripcion": "VMware Workstation (17.x) and VMware Fusion (13.x) contain a stack-based buffer-overflow vulnerability that exists in the functionality for sharing host Bluetooth devices with the virtual machine."
-  },
-  {
-    "fecha": "2025-10-26",
-    "cve": "CVE-2025-2776",
-    "descripcion": "SysAid On-Prem versions <= 23.3.40 are vulnerable to an unauthenticated XML External Entity (XXE) vulnerability in the Server URL processing functionality, allowing for administrator account takeover and file read primitives."
+    "cve": "CVE-2023-34044",
+    "descripcion": "VMware Workstation( 17.x prior to 17.5) and Fusion(13.x prior to 13.5) contain an out-of-bounds read vulnerability that exists in the functionality for sharing host Bluetooth devices with the virtual machine. A malicious actor with local administrative privileges on a virtual ..."
   },
   {
     "fecha": "2025-10-26",
@@ -46,7 +36,17 @@
   },
   {
     "fecha": "2025-10-26",
+    "cve": "CVE-2025-2776",
+    "descripcion": "SysAid On-Prem versions <= 23.3.40 are vulnerable to an unauthenticated XML External Entity (XXE) vulnerability in the Server URL processing functionality, allowing for administrator account takeover and file read primitives."
+  },
+  {
+    "fecha": "2025-10-26",
     "cve": "CVE-2025-2778",
     "descripcion": "Currently trending CVE - Hype Score: 1"
+  },
+  {
+    "fecha": "2025-10-26",
+    "cve": "CVE-2025-37947",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ksmbd: prevent out-of-bounds stream writes by validating *pos ksmbd_vfs_stream_write() did not validate whether the write offset (*pos) was within the bounds of the existing stream data length (v_len). If *pos ..."
   }
 ]
