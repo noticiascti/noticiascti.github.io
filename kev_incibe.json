@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-34133",
-    "descripcion": "Wimi Teamwork versions prior to 7.38.17 contains a cross-site request forgery (CSRF) vulnerability in its API. The API accepts any authenticated request that contains a JSON field named &#39;csrf_token&#39; without validating the field’s value; only the presence of the field is checked. An attacker can craft a cross-site request that causes a logged-in victim’s browser to submit a JSON POST containing an arbitrary or empty &#39;csrf_token&#39;, and the API will execute the request with the victim’s privileges. Successful exploitation can allow an attacker to perform privileged actions as the victim potentially resulting in account takeover, privilege escalation, or service disruption. 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-54970",
+    "descripcion": "An issue was discovered in BAE SOCET GXP before 4.6.0.2. The SOCET GXP Job Status Service fails to authenticate requests. In some configurations, this may allow remote or local users to abort jobs or read information without the permissions of the job owner. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-12294",
-    "descripcion": "A security flaw has been discovered in SourceCodester Point of Sales 1.0. Impacted is an unknown function of the file /delete_category.php. Performing manipulation of the argument ID results in sql injection. The attack can be initiated remotely. The exploit has been released to the public and may be exploited. 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-54969",
+    "descripcion": "An issue was discovered in BAE SOCET GXP before 4.6.0.2. The SOCET GXP Job Status Service does not implement CSRF protections. An attacker who social engineers a valid user into clicking a malicious link or visiting a malicious website may be able to submit requests to the Job Status Service without the user&#39;s knowledge. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-12293",
-    "descripcion": "A vulnerability was identified in SourceCodester Point of Sales 1.0. This issue affects some unknown processing of the file /category.php. Such manipulation of the argument Category leads to sql injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-54968",
+    "descripcion": "An issue was discovered in BAE SOCET GXP before 4.6.0.2. The SOCET GXP Job Service does not require authentication. In some configurations, this may allow remote users to submit jobs, or local users to submit jobs that will execute with the permissions of other users. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-12292",
-    "descripcion": "A vulnerability was determined in SourceCodester Point of Sales 1.0. This vulnerability affects unknown code of the file /index.php. This manipulation of the argument Username causes sql injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-54967",
+    "descripcion": "An issue was discovered in BAE SOCET GXP before 4.6.0.3. It permits external entities in certain XML-based files. An attacker who is able to social engineer a SOCET GXP user into opening a malicious file can trigger a variety of outbound requests, potentially compromising sensitive information in the process. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-12291",
-    "descripcion": "A vulnerability was found in ashymuzuro Full-Ecommece-Website and Muzuro Ecommerce System up to 1.1.0. This affects an unknown part of the file /admin/index.php?add_product of the component Add Product Page. The manipulation results in unrestricted upload. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-27225",
+    "descripcion": "TRUfusion Enterprise through 7.10.4.0 exposes the /trufusionPortal/jsp/internal_admin_contact_login.jsp endpoint to unauthenticated users. This endpoint discloses sensitive internal information including PII to unauthenticated attackers. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-10023",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Centreon Infra Monitoring (Services Meta-services modules) allows Stored XSS by users with elevated privileges.This issue affects Infra Monitoring: from 24.10.0 before 24.10.9, from 24.04.0 before 24.04.16, from 23.10.0 before 23.10.26. 27/10/2025 27/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-27224",
+    "descripcion": "TRUfusion Enterprise through 7.10.4.0 uses the /trufusionPortal/fileupload endpoint to upload files. However, the application doesn&#39;t properly sanitize the input to this endpoint, ultimately allowing path traversal sequences to be included. This can be used to write to any filename with any file type at any location on the local server, ultimately allowing execution of arbitrary code. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2023-49440",
-    "descripcion": "AhnLab EPP 1.0.15 is vulnerable to SQL Injection via the &#34;preview parameter.&#34; 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-27223",
+    "descripcion": "TRUfusion Enterprise through 7.10.4.0 exposes the encrypted COOKIEID as an authentication mechanism for some endpoints such as /trufusionPortal/getProjectList. However, the application uses a static key to create the encrypted cookie, ultimately allowing anyone to forge cookies and gain access to sensitive internal information. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2023-37749",
-    "descripcion": "Incorrect access control in the REST API endpoint of HubSpot v1.29441 allows unauthenticated attackers to view users&#39; data without proper authorization. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-27222",
+    "descripcion": "TRUfusion Enterprise through 7.10.4.0 uses the /trufusionPortal/getCobrandingData endpoint to retrieve files. However, the application doesn&#39;t properly sanitize the input to this endpoint, ultimately allowing path traversal sequences to be included. This can be used to read any local server file that is accessible by the TRUfusion user and can also be used to leak cleartext passwords of TRUfusion Enterprise itself. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-34292",
-    "descripcion": "Rox, the software running BeWelcome, contains a PHP object injection vulnerability resulting from deserialization of untrusted data. User-controlled input is passed to PHP&#39;s unserialize(): the POST parameter `formkit_memory_recovery` in \\\\RoxPostHandler::getCallbackAction and the &#39;memory cookie&#39; read by \\\\RoxModelBase::getMemoryCookie (bwRemember). (1) If present, `formkit_memory_recovery` is processed and passed to unserialize(), and (2) restore-from-memory functionality calls unserialize() on the bwRemember cookie value. Gadget chains present in Rox and bundled libraries enable exploitation of object injection to write arbitrary files or achieve remote code execution. Successful exploitation can lead to full site compromise. This vulnerability was remediated with commit c60bf04 (2025-06-16). 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12299",
+    "descripcion": "A security flaw has been discovered in code-projects Simple Food Ordering System 1.0. This vulnerability affects unknown code of the file /addproduct.php. The manipulation of the argument pname/category/price results in cross site scripting. It is possible to launch the attack remotely. The exploit has been released to the public and may be exploited. 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-27",
-    "cve": "CVE-2025-52268",
-    "descripcion": "StarCharge Artemis AC Charger 7-22 kW v1.0.4 was discovered to contain a hardcoded AES key which allows attackers to forge or decrypt valid login tokens. 27/10/2025 27/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12298",
+    "descripcion": "A vulnerability was identified in code-projects Simple Food Ordering System 1.0. This affects an unknown part of the file /editcategory.php. The manipulation of the argument pname leads to cross site scripting. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. 27/10/2025 27/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
