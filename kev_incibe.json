@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-10-28",
+    "cve": "CVE-2025-53855",
+    "descripcion": "An out-of-bounds write vulnerability exists in the XML parser functionality of GCC Productions Inc. Fade In 4.2.0. A specially crafted .fadein file can lead to an out-of-bounds write. An attacker can provide a malicious file to trigger this vulnerability. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-53814",
+    "descripcion": "A use-after-free vulnerability exists in the XML parser functionality of GCC Productions Inc. Fade In 4.2.0. A specially crafted .xml file can lead to heap-based memory corruption. An attacker can provide a malicious file to trigger this vulnerability. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-12390",
+    "descripcion": "A flaw was found in Keycloak. In Keycloak where a user can accidentally get access to another user&#39;s session if both use the same device and browser. This happens because Keycloak sometimes reuses session identifiers and doesn’t clean up properly during logout when browser cookies are missing. As a result, one user may receive tokens that belong to another user. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-12380",
+    "descripcion": "Starting with Firefox 142, it was possible for a compromised child process to trigger a use-after-free in the GPU or browser process using WebGPU-related IPC calls. This may have been usable to escape the child process sandbox. This vulnerability affects Firefox 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-12103",
+    "descripcion": "A flaw was found in Red Hat Openshift AI Service. The TrustyAI component is granting all service accounts and users on a cluster permissions to get, list, watch any pod in any namespace on the cluster. TrustyAI is creating a role `trustyai-service-operator-lmeval-user-role` and a CRB `trustyai-service-operator-default-lmeval-user-rolebinding` which is being applied to `system:authenticated` making it so that every single user or service account can get a list of pods running in any namespace on the cluster Additionally users can access all `persistentvolumeclaims` and `lmevaljobs` 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-28",
     "cve": "CVE-2025-1038",
     "descripcion": "The “Diagnostics Tools” page of the web-based configuration utility does not properly validate user-controlled input, allowing an authenticated user with high privileges to inject commands into the command shell of the TropOS 4th Gen device. The injected commands can be exploited to execute several set-uid (SUID) applications to ultimately gain root access to the TropOS device. 28/10/2025 28/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -23,30 +48,5 @@
     "fecha": "2025-10-28",
     "cve": "CVE-2025-40082",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: hfsplus: fix slab-out-of-bounds read in hfsplus_uni2asc() BUG: KASAN: slab-out-of-bounds in hfsplus_uni2asc+0xa71/0xb90 fs/hfsplus/unicode.c:186 Read of size 2 at addr ffff8880289ef218 by task syz.6.248/14290 CPU: 0 UID: 0 PID: 14290 Comm: syz.6.248 Not tainted 6.16.4 #1 PREEMPT(full) Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014 Call Trace: __dump_stack lib/dump_stack.c:94 [inline] dump_stack_lvl+0x116/0x1b0 lib/dump_stack.c:120 print_address_description mm/kasan/report.c:378 [inline] print_report+0xca/0x5f0 mm/kasan/report.c:482 kasan_report+0xca/0x100 mm/kasan/report.c:595 hfsplus_uni2asc+0xa71/0xb90 fs/hfsplus/unicode.c:186 hfsplus_listxattr+0x5b6/0xbd0 fs/hfsplus/xattr.c:738 vfs_listxattr+0xbe/0x140 fs/xattr.c:493 listxattr+0xee/0x190 fs/xattr.c:924 filename_listxattr fs/xattr.c:958 [inline] path_listxattrat+0x143/0x360 fs/xattr.c:988 do_syscall_x64 arch/x86/entry/syscall_64.c:63 [inline] do_syscall_64+0xcb/0x4c0 arch/x86/entry/syscall_64.c:94 entry_SYSCALL_64_after_hwframe+0x77/0x7f RIP: 0033:0x7fe0e9fae16d Code: 02 b8 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48 RSP: 002b:00007fe0eae67f98 EFLAGS: 00000246 ORIG_RAX: 00000000000000c3 RAX: ffffffffffffffda RBX: 00007fe0ea205fa0 RCX: 00007fe0e9fae16d RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000200000000000 RBP: 00007fe0ea0480f0 R08: 0000000000000000 R09: 0000000000000000 R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000000 R13: 00007fe0ea206038 R14: 00007fe0ea205fa0 R15: 00007fe0eae48000 Allocated by task 14290: kasan_save_stack+0x24/0x50 mm/kasan/common.c:47 kasan_save_track+0x14/0x30 mm/kasan/common.c:68 poison_kmalloc_redzone mm/kasan/common.c:377 [inline] __kasan_kmalloc+0xaa/0xb0 mm/kasan/common.c:394 kasan_kmalloc include/linux/kasan.h:260 [inline] __do_kmalloc_node mm/slub.c:4333 [inline] __kmalloc_noprof+0x219/0x540 mm/slub.c:4345 kmalloc_noprof include/linux/slab.h:909 [inline] hfsplus_find_init+0x95/0x1f0 fs/hfsplus/bfind.c:21 hfsplus_listxattr+0x331/0xbd0 fs/hfsplus/xattr.c:697 vfs_listxattr+0xbe/0x140 fs/xattr.c:493 listxattr+0xee/0x190 fs/xattr.c:924 filename_listxattr fs/xattr.c:958 [inline] path_listxattrat+0x143/0x360 fs/xattr.c:988 do_syscall_x64 arch/x86/entry/syscall_64.c:63 [inline] do_syscall_64+0xcb/0x4c0 arch/x86/entry/syscall_64.c:94 entry_SYSCALL_64_after_hwframe+0x77/0x7f When hfsplus_uni2asc is called from hfsplus_listxattr, it actually passes in a struct hfsplus_attr_unistr*. The size of the corresponding structure is different from that of hfsplus_unistr, so the previous fix (94458781aee6) is insufficient. The pointer on the unicode buffer is still going beyond the allocated memory. This patch introduces two warpper functions hfsplus_uni2asc_xattr_str and hfsplus_uni2asc_str to process two unicode buffers, struct hfsplus_attr_unistr* and struct hfsplus_unistr* respectively. When ustrlen value is bigger than the allocated memory size, the ustrlen value is limited to an safe size. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-40081",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: perf: arm_spe: Prevent overflow in PERF_IDX2OFF() Cast nr_pages to unsigned long to avoid overflow when handling large AUX buffer sizes (>= 2 GiB). 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-40080",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: nbd: restrict sockets to TCP and UDP Recently, syzbot started to abuse NBD with all kinds of sockets. Commit cf1b2326b734 (&#34;nbd: verify socket is supported during setup&#34;) made sure the socket supported a shutdown() method. Explicitely accept TCP and UNIX stream sockets. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-40079",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: riscv, bpf: Sign extend struct ops return values properly The ns_bpf_qdisc selftest triggers a kernel panic: Unable to handle kernel paging request at virtual address ffffffffa38dbf58 Current test_progs pgtable: 4K pagesize, 57-bit VAs, pgdp=0x00000001109cc000 [ffffffffa38dbf58] pgd=000000011fffd801, p4d=000000011fffd401, pud=000000011fffd001, pmd=0000000000000000 Oops [#1] Modules linked in: bpf_testmod(OE) xt_conntrack nls_iso8859_1 [...] [last unloaded: bpf_testmod(OE)] CPU: 1 UID: 0 PID: 23584 Comm: test_progs Tainted: G W OE 6.17.0-rc1-g2465bb83e0b4 #1 NONE Tainted: [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE Hardware name: Unknown Unknown Product/Unknown Product, BIOS 2024.01+dfsg-1ubuntu5.1 01/01/2024 epc : __qdisc_run+0x82/0x6f0 ra : __qdisc_run+0x6e/0x6f0 epc : ffffffff80bd5c7a ra : ffffffff80bd5c66 sp : ff2000000eecb550 gp : ffffffff82472098 tp : ff60000096895940 t0 : ffffffff8001f180 t1 : ffffffff801e1664 t2 : 0000000000000000 s0 : ff2000000eecb5d0 s1 : ff60000093a6a600 a0 : ffffffffa38dbee8 a1 : 0000000000000001 a2 : ff2000000eecb510 a3 : 0000000000000001 a4 : 0000000000000000 a5 : 0000000000000010 a6 : 0000000000000000 a7 : 0000000000735049 s2 : ffffffffa38dbee8 s3 : 0000000000000040 s4 : ff6000008bcda000 s5 : 0000000000000008 s6 : ff60000093a6a680 s7 : ff60000093a6a6f0 s8 : ff60000093a6a6ac s9 : ff60000093140000 s10: 0000000000000000 s11: ff2000000eecb9d0 t3 : 0000000000000000 t4 : 0000000000ff0000 t5 : 0000000000000000 t6 : ff60000093a6a8b6 status: 0000000200000120 badaddr: ffffffffa38dbf58 cause: 000000000000000d [] __qdisc_run+0x82/0x6f0 [] __dev_queue_xmit+0x4c0/0x1128 [] neigh_resolve_output+0xd0/0x170 [] ip6_finish_output2+0x226/0x6c8 [] ip6_finish_output+0x10c/0x2a0 [] ip6_output+0x5e/0x178 [] ip6_xmit+0x29a/0x608 [] inet6_csk_xmit+0xe6/0x140 [] __tcp_transmit_skb+0x45c/0xaa8 [] tcp_connect+0x9ce/0xd10 [] tcp_v6_connect+0x4ac/0x5e8 [] __inet_stream_connect+0xd8/0x318 [] inet_stream_connect+0x3e/0x68 [] __sys_connect_file+0x50/0x88 [] __sys_connect+0x96/0xc8 [] __riscv_sys_connect+0x20/0x30 [] do_trap_ecall_u+0x256/0x378 [] handle_exception+0x14a/0x156 Code: 892a 0363 1205 489c 8bc1 c7e5 2d03 084a 2703 080a (2783) 0709 ---[ end trace 0000000000000000 ]--- The bpf_fifo_dequeue prog returns a skb which is a pointer. The pointer is treated as a 32bit value and sign extend to 64bit in epilogue. This behavior is right for most bpf prog types but wrong for struct ops which requires RISC-V ABI. So let&#39;s sign extend struct ops return values according to the function model and RISC-V ABI([0]). [0]: https://riscv.org/wp-content/uploads/2024/12/riscv-calling.pdf 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-40078",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: bpf: Explicitly check accesses to bpf_sock_addr Syzkaller found a kernel warning on the following sock_addr program: 0: r0 = 0 1: r2 = *(u32 *)(r1 +60) 2: exit which triggers: verifier bug: error during ctx access conversion (0) This is happening because offset 60 in bpf_sock_addr corresponds to an implicit padding of 4 bytes, right after msg_src_ip4. Access to this padding isn&#39;t rejected in sock_addr_is_valid_access and it thus later fails to convert the access. This patch fixes it by explicitly checking the various fields of bpf_sock_addr in sock_addr_is_valid_access. I checked the other ctx structures and is_valid_access functions and didn&#39;t find any other similar cases. Other cases of (properly handled) padding are covered in new tests in a subsequent patch. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-40077",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: f2fs: fix to avoid overflow while left shift operation Should cast type of folio->index from pgoff_t to loff_t to avoid overflow while left shift operation. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
