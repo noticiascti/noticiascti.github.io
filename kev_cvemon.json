@@ -1,13 +1,13 @@
 [
   {
     "fecha": "2025-10-28",
-    "cve": "CVE-2025-59287",
-    "descripcion": "Deserialization of untrusted data in Windows Server Update Service allows an unauthorized attacker to execute code over a network."
+    "cve": "CVE-2025-55752",
+    "descripcion": "Relative Path Traversal vulnerability in Apache Tomcat. The fix for bug 60013 introduced a regression where the rewritten URL was normalized before it was decoded. This introduced the possibility that, for rewrite rules that rewrite query parameters to the ..."
   },
   {
     "fecha": "2025-10-28",
-    "cve": "CVE-2025-55752",
-    "descripcion": "Relative Path Traversal vulnerability in Apache Tomcat. The fix for bug 60013 introduced a regression where the rewritten URL was normalized before it was decoded. This introduced the possibility that, for rewrite rules that rewrite query parameters to the ..."
+    "cve": "CVE-2025-59287",
+    "descripcion": "Deserialization of untrusted data in Windows Server Update Service allows an unauthorized attacker to execute code over a network."
   },
   {
     "fecha": "2025-10-28",
@@ -21,13 +21,18 @@
   },
   {
     "fecha": "2025-10-28",
+    "cve": "CVE-2025-55754",
+    "descripcion": "Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in Apache Tomcat. Tomcat did not escape ANSI escape sequences in log messages. If Tomcat was running in a console on a Windows operating system, and the console supported ANSI escape sequences, it was ..."
+  },
+  {
+    "fecha": "2025-10-28",
     "cve": "CVE-2025-57819",
     "descripcion": "FreePBX is an open-source web-based graphical user interface. FreePBX 15, 16, and 17 endpoints are vulnerable due to insufficiently sanitized user-supplied data allowing unauthenticated access to FreePBX Administrator leading to arbitrary database manipulation and remote code ..."
   },
   {
     "fecha": "2025-10-28",
-    "cve": "CVE-2023-46747",
-    "descripcion": "Undisclosed requests may bypass configuration utility authentication, allowing an attacker with network access to the BIG-IP system through the management port and/or self IP addresses to execute arbitrary system commands. Note: Software versions which have reached End of ..."
+    "cve": "CVE-2025-61795",
+    "descripcion": "Improper Resource Shutdown or Release vulnerability in Apache Tomcat. If an error occurred (including exceeding limits) during the processing of a multipart upload, temporary copies of the uploaded parts written to disc were not cleaned up immediately but left for the garbage ..."
   },
   {
     "fecha": "2025-10-28",
@@ -36,17 +41,12 @@
   },
   {
     "fecha": "2025-10-28",
-    "cve": "CVE-2025-55754",
-    "descripcion": "Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in Apache Tomcat. Tomcat did not escape ANSI escape sequences in log messages. If Tomcat was running in a console on a Windows operating system, and the console supported ANSI escape sequences, it was ..."
+    "cve": "CVE-2023-46747",
+    "descripcion": "Undisclosed requests may bypass configuration utility authentication, allowing an attacker with network access to the BIG-IP system through the management port and/or self IP addresses to execute arbitrary system commands. Note: Software versions which have reached End of ..."
   },
   {
     "fecha": "2025-10-28",
     "cve": "CVE-2025-8061",
     "descripcion": "A potential insufficient access control vulnerability was reported in the Lenovo Dispatcher 3.0 and Dispatcher 3.1 drivers used by some Lenovo consumer notebooks that could allow an authenticated local user to execute code with elevated privileges. The Lenovo Dispatcher 3.2 ..."
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-22131",
-    "descripcion": "PhpSpreadsheet is a PHP library for reading and writing spreadsheet files. Cross-Site Scripting (XSS) vulnerability in the code which translates the XLSX file into a HTML representation and displays it in the response."
   }
 ]
