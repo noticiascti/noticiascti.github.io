@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-28",
+    "cve": "CVE-2025-62367",
+    "descripcion": "Taiga is an open source project management platform. In versions 6.8.3 and earlier, Taiga API is vulnerable to time-based blind SQL injection allowing sensitive data disclosure via response timing. This issue is fixed in version 6.9.0. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-61235",
+    "descripcion": "An issue was discovered in Dataphone A920 v2025.07.161103. A custom packet based on public documentation can be crafted, where some fields can contain arbitrary or trivial data. Normally, such data should cause the device to reject the packet. However, due to a lack of validation, the device accepts it with no authetication and triggers the functionality instead. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-59837",
+    "descripcion": "Astro is a web framework that includes an image proxy. In versions 5.13.4 and later before 5.13.10, the image proxy domain validation can be bypassed by using backslashes in the href parameter, allowing server-side requests to arbitrary URLs. This can lead to server-side request forgery (SSRF) and potentially cross-site scripting (XSS). This vulnerability exists due to an incomplete fix for CVE-2025-58179. Fixed in 5.13.10. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-27093",
+    "descripcion": "Sliver is a command and control framework that uses a custom Wireguard netstack. In versions 1.5.43 and earlier, and in development version 1.6.0-dev, the netstack does not limit traffic between Wireguard clients. This allows clients to communicate with each other unrestrictedly, potentially enabling leaked or recovered keypairs to be used to attack operators or allowing port forwardings to be accessible from other implants. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-40843",
+    "descripcion": "CodeChecker is an analyzer tooling, defect database and viewer extension for the Clang Static Analyzer and Clang Tidy. CodeChecker versions up to 6.26.1 contain a buffer overflow vulnerability in the internal ldlogger library, which is executed by the CodeChecker log command. This issue affects CodeChecker: through 6.26.1. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-12425",
+    "descripcion": "Local Privilege Escalation.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 . 28/10/2025 28/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-12424",
+    "descripcion": "Privilege Escalation through SUID-bit Binary.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 . 28/10/2025 28/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-28",
+    "cve": "CVE-2025-12423",
+    "descripcion": "Protocol manipulation might lead to denial of service.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5 . 28/10/2025 28/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-28",
     "cve": "CVE-2025-61080",
-    "descripcion": "A reflected Cross-Site Scripting (XSS) vulnerability has been identified in Clear2Pay Bank Visibility Application - Payment Execution 1.10.0.104 via the ID parameter in the URL. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "descripcion": "A reflected Cross-Site Scripting (XSS) vulnerability has been identified in Clear2Pay Bank Visibility Application - Payment Execution 1.10.0.104 via the ID parameter in the URL. 28/10/2025 28/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-28",
     "cve": "CVE-2025-60805",
     "descripcion": "An issue was discovered in BESSystem BES Application Server thru 9.5.x allowing unauthorized attackers to gain sensitive information via the &#34;pre-resource&#34; option in bes-web.xml. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-60800",
-    "descripcion": "Incorrect access control in the /jshERP-boot/user/info interface of jshERP up to commit 90c411a allows attackers to access sensitive information via a crafted GET request. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-60355",
-    "descripcion": "zhangyd-c OneBlog before 2.3.9 was vulnerable to SSTI (Server-Side Template Injection) via FreeMarker templates. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-60354",
-    "descripcion": "Unauthorized modification of arbitrary articles vulnerability exists in blog-vue-springboot. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-12422",
-    "descripcion": "Vulnerable Upgrade Feature (Arbitrary File Write) may lead to obtaining super user permissions on board.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5. 28/10/2025 28/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-54605",
-    "descripcion": "Bitcoin Core through 29.0 allows Uncontrolled Resource Consumption (issue 2 of 2). 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-54604",
-    "descripcion": "Bitcoin Core through 29.0 allows Uncontrolled Resource Consumption (issue 1 of 2). 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-61155",
-    "descripcion": "Hotta Studio GameDriverX64.sys 7.23.4.7, a signed kernel-mode anti-cheat driver, allows local attackers to cause a denial of service by crashing arbitrary processes via sending crafted IOCTL requests. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-60858",
-    "descripcion": "Reolink Video Doorbell Wi-Fi DB_566128M5MP_W stores and transmits DDNS credentials in plaintext within its configuration and update scripts, allowing attackers to intercept or extract sensitive information. 28/10/2025 28/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
