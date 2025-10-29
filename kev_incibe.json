@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-10-29",
+    "cve": "CVE-2025-11702",
+    "descripcion": "GitLab has remediated an issue in EE affecting all versions from 17.1 before 18.3.5, 18.4 before 18.4.3, and 18.5 before 18.5.1 that could have allowed an authenticated attacker with specific permissions to hijack project runners from other projects. 29/10/2025 29/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-29",
+    "cve": "CVE-2023-7320",
+    "descripcion": "The WooCommerce plugin for WordPress is vulnerable to Sensitive Information Exposure in versions up to, and including, 7.8.2, due to improper CORS handling on the Store API&#39;s REST endpoints allowing direct external access from any origin. This can allow unauthenticated attackers to extract sensitive user information including PII(Personal Identifiable Information). 29/10/2025 29/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-29",
+    "cve": "CVE-2025-9544",
+    "descripcion": "The Doppler Forms WordPress plugin through 2.5.1 registers an AJAX action install_extension without verifying user capabilities or using a nonce. As a result, any authenticated user — including those with the Subscriber role — can install and activate additional Doppler Forms WordPress plugin through 2.5.1 (limited to those whitelisted by the main Doppler Forms WordPress plugin through 2.5.1). 29/10/2025 29/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-29",
+    "cve": "CVE-2025-62776",
+    "descripcion": "The installer of WTW EAGLE (for Windows) 3.0.8.0 contains an issue with the DLL search path, which may lead to insecurely loading Dynamic Link Libraries. As a result, arbitrary code may be executed with the privileges of the running application. 29/10/2025 29/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-29",
     "cve": "CVE-2025-49042",
     "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Automattic WooCommerce woocommerce allows Stored XSS.This issue affects WooCommerce: from n/a through 10.0.2. 29/10/2025 29/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-10-29",
     "cve": "CVE-2025-64160",
     "descripcion": "Rejected reason: Not used 29/10/2025 29/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-29",
-    "cve": "CVE-2025-64159",
-    "descripcion": "Rejected reason: Not used 29/10/2025 29/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-29",
-    "cve": "CVE-2025-64158",
-    "descripcion": "Rejected reason: Not used 29/10/2025 29/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-29",
-    "cve": "CVE-2025-57931",
-    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in Ays Pro Popup box allows Cross Site Request Forgery.This issue affects Popup box: from n/a through 5.5.4. 29/10/2025 29/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-28",
-    "cve": "CVE-2025-4665",
-    "descripcion": "WordPress plugin Contact Form CFDB7 versions up to and including 1.3.2 are affected by a pre-authentication SQL injection vulnerability that cascades into insecure deserialization (PHP Object Injection). The weakness arises due to insufficient validation of user input in plugin endpoints, allowing crafted input to influence backend queries in unexpected ways. Using specially crafted payloads, this can escalate into unsafe deserialization, enabling arbitrary object injection in PHP. Although the issue is remotely exploitable without authentication, it does require a crafted interaction with the affected endpoint in order to trigger successfully. 29/10/2025 29/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
