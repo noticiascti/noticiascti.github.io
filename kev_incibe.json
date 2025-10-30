@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-11906",
-    "descripcion": "A vulnerability exists in Progress Flowmon versions prior 12.5.6 where certain system configuration files have incorrect file permissions, allowing a user with access to the default flowmon system user account used for SSH access to potentially escalate privileges to root during service initialization. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-10317",
+    "descripcion": "Quick.Cart is vulnerable to Cross-Site Request Forgery in product creation functionality. Malicious attacker can craft special website, which when visited by the admin, will automatically send a POST request creating a malicious product with content defined by the attacker. This software does not implement any protection against this type of attack. All forms available in this software are potentially vulnerable. The vendor was notified early about this vulnerability, but didn&#39;t respond with the details of vulnerability or vulnerable version range. Only version 6.7 was tested and confirmed as vulnerable, other versions were not tested and might also be vulnerable. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-11881",
-    "descripcion": "The AppPresser – Mobile App Framework plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;myappp_verify&#39; function in all versions up to, and including, 4.5.0. This makes it possible for unauthenticated attackers to extract sensitive data including plugin and theme names and version numbers, which can be used to facilitate targeted attacks against outdated or vulnerable components. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-53883",
+    "descripcion": "A Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability allows attackers to run arbitrary javascript via a reflected XSS issue in the search fields.This issue affects Container suse/manager/5.0/x86_64/server:latest: from ? before 5.0.28-150600.3.36.8; SUSE Manager Server LTS 4.3: from ? before 4.3.88-150400.3.113.5. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-62230",
-    "descripcion": "A flaw was discovered in the X.Org X server’s X Keyboard (Xkb) extension when handling client resource cleanup. The software frees certain data structures without properly detaching related resources, leading to a use-after-free condition. This can cause memory corruption or a crash when affected clients disconnect. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-53880",
+    "descripcion": "A Path Traversal vulnerability in the tftpsync/add and tftpsync/delete scripts allows a remote attacker on an adjacent network to write or delete files on the filesystem with the privileges of the unprivileged wwwrun user. Although the endpoint is unauthenticated, access is restricted to a list of allowed IP addresses. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-62229",
-    "descripcion": "A flaw was found in the X.Org X server and Xwayland when processing X11 Present extension notifications. Improper error handling during notification creation can leave dangling pointers that lead to a use-after-free condition. This can cause memory corruption or a crash, potentially allowing an attacker to execute arbitrary code or cause a denial of service. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-39663",
+    "descripcion": "Cross-Site Scripting (XSS) vulnerability in Checkmk&#39;s distributed monitoring allows a compromised remote site to inject malicious HTML code into service outputs in the central site. Affecting Checkmk before 2.4.0p14, 2.3.0p39, 2.2.0 and 2.1.0 (eol). 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-11627",
-    "descripcion": "The Site Checkup Debug AI Troubleshooting with Wizard and Tips for Each Issue plugin for WordPress is vulnerable to log file poisoning in all versions up to, and including, 1.47. This makes it possible for unauthenticated attackers to insert arbitrary content into log files, and potentially cause denial of service via disk space exhaustion. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-62503",
+    "descripcion": "User with CREATE and no UPDATE privilege for Pools, Connections, Variables could update existing records via bulk create API with overwrite action. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-10636",
-    "descripcion": "The NS Maintenance Mode for WP WordPress plugin through 1.3.1 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup). 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-62402",
+    "descripcion": "API users via `/api/v2/dagReports` could perform Dag code execution in the context of the api-server if the api-server was deployed in the environment where Dag files were available. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-10008",
-    "descripcion": "The Translate WordPress and go Multilingual – Weglot plugin for WordPress is vulnerable to unauthorized loss of data due to a missing capability check on the &#39;clean_options&#39; function in all versions up to, and including, 5.1. This makes it possible for unauthenticated attackers to delete limited transients that contain cached plugin options. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-54941",
+    "descripcion": "An example dag `example_dag_decorator` had non-validated parameter that allowed the UI user to redirect the example to a malicious server and execute code on worker. This however required that the example dags are enabled in production (not default) or the example dag code copied to build your own similar dag. If you used the `example_dag_decorator` please review it and apply the changes implemented in Airflow 3.0.5 accordingly. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-62231",
-    "descripcion": "A flaw was identified in the X.Org X server’s X Keyboard (Xkb) extension where improper bounds checking in the XkbSetCompatMap() function can cause an unsigned short overflow. If an attacker sends specially crafted input data, the value calculation may overflow, leading to memory corruption or a crash. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-54471",
+    "descripcion": "NeuVector used a hard-coded cryptographic key embedded in the source code. At compilation time, the key value was replaced with the secret key value and used to encrypt sensitive configurations when NeuVector stores the data. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-12475",
-    "descripcion": "The Blocksy Companion plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;blocksy_newsletter_subscribe&#39; shortcode in all versions up to, and including, 2.1.14 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-54470",
+    "descripcion": "This vulnerability affects NeuVector deployments only when the Report anonymous cluster data option is enabled. When this option is enabled, NeuVector sends anonymous telemetry data to the telemetry server. In affected versions, NeuVector does not enforce TLS certificate verification when transmitting anonymous cluster data to the telemetry server. As a result, the communication channel is susceptible to man-in-the-middle (MITM) attacks, where an attacker could intercept or modify the transmitted data. Additionally, NeuVector loads the response of the telemetry server is loaded into memory without size limitation, which makes it vulnerable to a Denial of Service(DoS) attack 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-10-29",
-    "cve": "CVE-2025-9954",
-    "descripcion": "Missing Authorization vulnerability in Drupal Acquia DAM allows Forceful Browsing.This issue affects Acquia DAM: from 0.0.0 before 1.1.5. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-30",
+    "cve": "CVE-2025-54469",
+    "descripcion": "A vulnerability was identified in NeuVector, where the enforcer used environment variables CLUSTER_RPC_PORT and CLUSTER_LAN_PORT to generate a command to be executed via popen, without first sanitising their values. The entry process of the enforcer container is the monitor process. When the enforcer container stops, the monitor process checks whether the consul subprocess has exited. To perform this check, the monitor process uses the popen function to execute a shell command that determines whether the ports used by the consul subprocess are still active. The values of environment variables CLUSTER_RPC_PORT and CLUSTER_LAN_PORT are used directly to compose shell commands via popen without validation or sanitization. This behavior could allow a malicious user to inject malicious commands through these variables within the enforcer container. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
