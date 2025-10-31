@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2025-10-31",
+    "cve": "CVE-2025-40603",
+    "descripcion": "A potential exposure of sensitive information in log files in SonicWall SMA100 Series appliances may allow a remote, authenticated administrator, under certain conditions to view partial users credential data. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-11602",
+    "descripcion": "Potential information leak in bolt protocol handshake in Neo4j Enterprise and Community editions allows attacker to obtain one byte of information from previous connections. The attacker has no control over the information leaked in server responses. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:D/RE:X/U:Clear Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-40106",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: comedi: fix divide-by-zero in comedi_buf_munge() The comedi_buf_munge() function performs a modulo operation `async->munge_chan %= async->cmd.chanlist_len` without first checking if chanlist_len is zero. If a user program submits a command with chanlist_len set to zero, this causes a divide-by-zero error when the device processes data in the interrupt handler path. Add a check for zero chanlist_len at the beginning of the function, similar to the existing checks for !map and CMDF_RAWDATA flag. When chanlist_len is zero, update munge_count and return early, indicating the data was handled without munging. This prevents potential kernel panics from malformed user commands. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-12115",
+    "descripcion": "The WPC Name Your Price for WooCommerce plugin for WordPress is vulnerable to unauthorized price alteration in all versions up to, and including, 2.1.9. This is due to the plugin not disabling the ability to name a custom price when it has been specifically disabled for a product. This makes it possible for unauthenticated attackers to purchase products at prices less than they should be able to. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-12041",
+    "descripcion": "The ERI File Library plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;erifl_file&#39; AJAX action in all versions up to, and including, 1.1.0. This makes it possible for unauthenticated attackers to download files restricted to specific user roles. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-11843",
+    "descripcion": "Therefore Corporation GmbH has recently become aware that Therefore™ Online and Therefore™ On-Premises contain an account impersonation vulnerability. A malicious user may potentially be able to impersonate the web service account or the account of a service using the API when connecting to the Therefore™ Server. If the malicious user gains this impersonation user access, then it is possible for them to access the documents stored in Therefore™. This impersonation is at application level (Therefore access level), not the operating system level. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-31",
     "cve": "CVE-2025-8383",
     "descripcion": "The Depicter plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions less than, or equal to, 4.0.4. This is due to missing or incorrect nonce validation on the depicter-document-rules-store function. This makes it possible for unauthenticated attackers to modify document rules via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -18,35 +48,5 @@
     "fecha": "2025-10-31",
     "cve": "CVE-2025-30189",
     "descripcion": "When cache is enabled, some passdb/userdb drivers incorrectly cache all users with same cache key, causing wrong cached information to be used for these users. After cached login, all subsequent logins are for same user. Install fixed version or disable caching either globally or for the impacted passdb/userdb drivers. No publicly available exploits are known. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-30188",
-    "descripcion": "Malicious or unintentional API requests can be used to add significant amount of data to caches. Caches may evict information that is required to operate the web frontend, which leads to unavailability of the component. Please deploy the provided updates and patch releases. No publicly available exploits are known 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-12175",
-    "descripcion": "The The Events Calendar plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the &#39;tec_qr_code_modal&#39; AJAX endpoint in all versions up to, and including, 6.15.9. This makes it possible for authenticated attackers, with Subscriber-level access and above, to view draft event names and generate/view QR codes for them. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-12094",
-    "descripcion": "The OOPSpam Anti-Spam: Spam Protection for WordPress Forms & Comments (No CAPTCHA) plugin for WordPress is vulnerable to IP Header Spoofing in all versions up to, and including, 1.2.53. This is due to the plugin trusting client-controlled forwarded headers (such as CF-Connecting-IP, X-Forwarded-For, and others) without verifying that those headers originate from legitimate, trusted proxies. This makes it possible for unauthenticated attackers to spoof their IP address and bypass IP-based security controls, including blocked IP lists and rate limiting protections, by sending arbitrary HTTP headers with their requests. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-8385",
-    "descripcion": "The Zombify plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 1.7.5. This is due to insufficient input validation in the zf_get_file_by_url function. This makes it possible for authenticated attackers, with subscriber-level access and above, to read arbitrary files on the server, including sensitive system files like /etc/passwd, via a forged request. It&#39;s worth noting that successfully exploiting this vulnerability relies on a race condition as the file generated will be deleted immediately. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-6520",
-    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Abis Technology BAPSIS allows Blind SQL Injection.This issue affects BAPSIS: before 202510271606. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-10897",
-    "descripcion": "The WooCommerce Designer Pro theme for WordPress is vulnerable to arbitrary file read in all versions up to, and including, 1.9.28. This makes it possible for unauthenticated attackers to read arbitrary files on the server, which can expose DB credentials when the wp-config.php file is read. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
