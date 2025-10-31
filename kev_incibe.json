@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-58152",
-    "descripcion": "FutureNet MA and IP-K series provided by Century Systems Co., Ltd. put the firmware version and the garbage collection information on the internal web page. With some crafted HTTP request, they can be accessed without authentication. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-8383",
+    "descripcion": "The Depicter plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions less than, or equal to, 4.0.4. This is due to missing or incorrect nonce validation on the depicter-document-rules-store function. This makes it possible for unauthenticated attackers to modify document rules via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-54763",
-    "descripcion": "FutureNet MA and IP-K series provided by Century Systems Co., Ltd. contain an OS command Injection vulnerability. A user who logs in to the Web UI of the product may execute an arbitrary OS command. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-62232",
+    "descripcion": "Sensitive data exposure via logging in basic-auth leads to plaintext usernames and passwords written to error logs and forwarded to log sinks when log level is INFO/DEBUG. This creates a high risk of credential compromise through log access. It has been fixed in the following commit: https://github.com/apache/apisix/pull/12629 Users are recommended to upgrade to version 3.14, which fixes this issue. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-11191",
-    "descripcion": "The RealPress WordPress plugin before 1.1.0 registers the REST routes without proper permission checks, allowing the creation of pages and sending of emails from the site. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-30191",
+    "descripcion": "Malicious content from E-Mail can be used to perform a redressing attack. Users can be tricked to perform unintended actions or provide sensitive information to a third party which would enable further threats. Attribute values containing HTML fragments are now denied by the sanitization procedure. No publicly available exploits are known 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-11975",
-    "descripcion": "The FuseWP – WordPress User Sync to Email List & Marketing Automation (Mailchimp, Constant Contact, ActiveCampaign etc.) plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the save_changes() function in all versions up to, and including, 1.1.23.0. This makes it possible for unauthenticated attackers to add and edit sync rules. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-30189",
+    "descripcion": "When cache is enabled, some passdb/userdb drivers incorrectly cache all users with same cache key, causing wrong cached information to be used for these users. After cached login, all subsequent logins are for same user. Install fixed version or disable caching either globally or for the impacted passdb/userdb drivers. No publicly available exploits are known. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-11806",
-    "descripcion": "The Qzzr Shortcode Plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;qzzr&#39; shortcode in all versions up to, and including, 1.0.1. This is due to insufficient input sanitization and output escaping on the &#39;quiz&#39; attribute. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-30188",
+    "descripcion": "Malicious or unintentional API requests can be used to add significant amount of data to caches. Caches may evict information that is required to operate the web frontend, which leads to unavailability of the component. Please deploy the provided updates and patch releases. No publicly available exploits are known 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-23050",
-    "descripcion": "QLowEnergyController in Qt before 6.8.2 mishandles malformed Bluetooth ATT commands, leading to an out-of-bounds read (or division by zero). This is fixed in 5.15.19, 6.5.9, and 6.8.2. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-12175",
+    "descripcion": "The The Events Calendar plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the &#39;tec_qr_code_modal&#39; AJAX endpoint in all versions up to, and including, 6.15.9. This makes it possible for authenticated attackers, with Subscriber-level access and above, to view draft event names and generate/view QR codes for them. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-30",
-    "cve": "CVE-2025-8849",
-    "descripcion": "LibreChat version 0.7.9 is vulnerable to a Denial of Service (DoS) attack due to unbounded parameter values in the `/api/memories` endpoint. The `key` and `value` parameters accept arbitrarily large inputs without proper validation, leading to a null pointer error in the Rust-based backend when excessively large values are submitted. This results in the inability to create new memories, impacting the stability of the service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-12094",
+    "descripcion": "The OOPSpam Anti-Spam: Spam Protection for WordPress Forms & Comments (No CAPTCHA) plugin for WordPress is vulnerable to IP Header Spoofing in all versions up to, and including, 1.2.53. This is due to the plugin trusting client-controlled forwarded headers (such as CF-Connecting-IP, X-Forwarded-For, and others) without verifying that those headers originate from legitimate, trusted proxies. This makes it possible for unauthenticated attackers to spoof their IP address and bypass IP-based security controls, including blocked IP lists and rate limiting protections, by sending arbitrary HTTP headers with their requests. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-30",
-    "cve": "CVE-2025-6176",
-    "descripcion": "Scrapy versions up to 2.13.2 are vulnerable to a denial of service (DoS) attack due to a flaw in its brotli decompression implementation. The protection mechanism against decompression bombs fails to mitigate the brotli variant, allowing remote servers to crash clients with less than 80GB of available memory. This occurs because brotli can achieve extremely high compression ratios for zero-filled data, leading to excessive memory consumption during decompression. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-8385",
+    "descripcion": "The Zombify plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 1.7.5. This is due to insufficient input validation in the zf_get_file_by_url function. This makes it possible for authenticated attackers, with subscriber-level access and above, to read arbitrary files on the server, including sensitive system files like /etc/passwd, via a forged request. It&#39;s worth noting that successfully exploiting this vulnerability relies on a race condition as the file generated will be deleted immediately. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-30",
-    "cve": "CVE-2025-52665",
-    "descripcion": "A malicious actor with access to the management network could exploit a misconfiguration in UniFi’s door access application, UniFi Access, that exposed a management API without proper authentication. This vulnerability was introduced in Version 3.3.22 and was fixed in Version 4.0.21 and later. Affected Products: UniFi Access Application (Version 3.3.22 through 3.4.31). Mitigation: Update your UniFi Access Application to Version 4.0.21 or later. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-6520",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Abis Technology BAPSIS allows Blind SQL Injection.This issue affects BAPSIS: before 202510271606. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2025-10-30",
-    "cve": "CVE-2025-52664",
-    "descripcion": "SQL injection in Revive Adserver 6.0.0 causes potential disruption or information access when specifically crafted payloads are sent by logged in users 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-10897",
+    "descripcion": "The WooCommerce Designer Pro theme for WordPress is vulnerable to arbitrary file read in all versions up to, and including, 1.9.28. This makes it possible for unauthenticated attackers to read arbitrary files on the server, which can expose DB credentials when the wp-config.php file is read. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
