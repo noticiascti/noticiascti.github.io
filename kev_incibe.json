@@ -1,5 +1,20 @@
 [
   {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-11975",
+    "descripcion": "The FuseWP – WordPress User Sync to Email List & Marketing Automation (Mailchimp, Constant Contact, ActiveCampaign etc.) plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the save_changes() function in all versions up to, and including, 1.1.23.0. This makes it possible for unauthenticated attackers to add and edit sync rules. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-11806",
+    "descripcion": "The Qzzr Shortcode Plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;qzzr&#39; shortcode in all versions up to, and including, 1.0.1. This is due to insufficient input sanitization and output escaping on the &#39;quiz&#39; attribute. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-10-31",
+    "cve": "CVE-2025-23050",
+    "descripcion": "QLowEnergyController in Qt before 6.8.2 mishandles malformed Bluetooth ATT commands, leading to an out-of-bounds read (or division by zero). This is fixed in 5.15.19, 6.5.9, and 6.8.2. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
     "fecha": "2025-10-30",
     "cve": "CVE-2025-8849",
     "descripcion": "LibreChat version 0.7.9 is vulnerable to a Denial of Service (DoS) attack due to unbounded parameter values in the `/api/memories` endpoint. The `key` and `value` parameters accept arbitrarily large inputs without proper validation, leading to a null pointer error in the Rust-based backend when excessively large values are submitted. This results in the inability to create new memories, impacting the stability of the service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -33,20 +48,5 @@
     "fecha": "2025-10-30",
     "cve": "CVE-2025-48983",
     "descripcion": "A vulnerability in the Mount service of Veeam Backup & Replication, which allows for remote code execution (RCE) on the Backup infrastructure hosts by an authenticated domain user. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-10-30",
-    "cve": "CVE-2025-48982",
-    "descripcion": "This vulnerability in Veeam Agent for Microsoft Windows allows for Local Privilege Escalation if a system administrator is tricked into restoring a malicious file. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-30",
-    "cve": "CVE-2025-48980",
-    "descripcion": "In Brave Browser Desktop versions prior to 1.83.10 that have the split view feature enabled, the &#34;Open Link in Split View&#34; context menu item did not respect the SameSite cookie attribute. Therefore SameSite=Strict cookies would be sent on a cross-site navigation using this method. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-30",
-    "cve": "CVE-2025-27208",
-    "descripcion": "A reflected Cross-Site Scripting (XSS) vulnerability has been identified in Revive Adserver version 5.5.2. An attacker could trick a user with access to the user interface of a Revive Adserver instance into clicking on a specifically crafted URL and execute injected JavaScript code in the context of the victim&#39;s browser. The session cookie cannot be accessed, but a number of other operations could be performed. The vulnerability is present in the admin-search.php file and can be exploited via the compact parameter. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
