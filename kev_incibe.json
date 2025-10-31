@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-64096",
-    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prier to 1.4.2, there is a missing bounds check in Crypto_Key_update() (crypto_key_mgmt.c) which allows a remote attacker to trigger a stack-based buffer overflow by supplying a TLV packet with a spoofed length field. The function calculates the number of keys from an attacker-controlled field (pdu_len), which may exceed the static array size (kblk[98]), leading to an out-of-bounds write and potential memory corruption. This vulnerability is fixed in 1.4.2. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-62265",
+    "descripcion": "Cross-site scripting (XSS) vulnerability in the Blogs widget in Liferay Portal 7.4.0 through 7.4.3.111, and older unsupported versions, and Liferay DXP 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.8, 7.4 GA through update 92, 7.3 GA through update 36, and older unsupported versions allows remote attackers to inject arbitrary web script or HTML via a crafted injected into a blog entry&#39;s “Content” text field The Blogs widget in Liferay DXP does not add the sandbox attribute to elements, which allows remote attackers to access the parent page via scripts and links in the frame page. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-63885",
-    "descripcion": "A stored cross-site scripting (XSS) vulnerability in AIxBlock commit 04f305 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the model_desc field. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-52180",
+    "descripcion": "Cross-site scripting (XSS) vulnerability in Zucchetti Ad Hoc Infinity 4.2 and earlier allows remote unauthenticated attackers to inject arbitrary JavaScript via the pHtmlSource parameter of the /ahi/jsp/gsfr_feditorHTML.jsp?pHtmlSource endpoint. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-62795",
-    "descripcion": "JumpServer is an open source bastion host and an operation and maintenance security audit system. Prior to v3.10.21-lts and v4.10.12-lts, a low-privileged authenticated user can invoke LDAP configuration tests and start LDAP synchronization by sending crafted messages to the /ws/ldap/ WebSocket endpoint, bypassing authorization checks and potentially exposing LDAP credentials or causing unintended sync operations. This vulnerability is fixed in v3.10.21-lts and v4.10.12-lts. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-52179",
+    "descripcion": "Cross-site scripting (XSS) vulnerability in Zucchetti Ad Hoc Revolution 4.1 and earlier allows remote unauthenticated attackers to inject arbitrary JavaScript via the pHtmlSource parameter of the /ahrw/jsp/gsfr_feditorHTML.jsp endpoint. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-62726",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.113.0, a remote code execution vulnerability exists in the Git Node component available in both Cloud and Self-Hosted versions of n8n. When a malicious actor clones a remote repository containing a pre-commit hook, the subsequent use of the Commit operation in the Git Node can inadvertently trigger the hook’s execution. This allows attackers to execute arbitrary code within the n8n environment, potentially compromising the system and any connected credentials or workflows. This vulnerability is fixed in 1.113.0. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-36137",
+    "descripcion": "IBM Sterling Connect Direct for Unix 6.2.0.7 through 6.2.0.9 iFix004, 6.4.0.0 through 6.4.0.2 iFix001, and 6.3.0.2 through 6.3.0.5 iFix002 incorrectly assigns permissions for maintenance tasks to Control Center Director (CCD) users that could allow a privileged user to escalate their privileges further due to unnecessary privilege assignment for post update scripts. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-61196",
-    "descripcion": "An issue in BusinessNext CRMnext v.10.8.3.0 allows a remote attacker to execute arbitrary code via the comments unput parameter 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-62266",
+    "descripcion": "By default, Liferay Portal 7.4.0 through 7.4.3.119, and older unsupported versions, and Liferay DXP 2024.Q1.1 through 2024.Q1.5, 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.10, 7.4 GA through update 92, and older unsupported versions is vulnerable to DNS rebinding attacks, which allows remote attackers to redirect users to arbitrary external URLs. This vulnerability can be mitigated by changing the redirect URL security from IP to domain. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-61121",
-    "descripcion": "Mobile Scanner Android App version 2.12.38 (package name com.glority.everlens), developed by Glority Global Group Ltd., contains a credential leakage vulnerability. Improper handling of cloud service credentials may allow attackers to obtain them and carry out unauthorized actions, such as sensitive information disclosure and abuse of cloud resources. Successful exploitation could result in privacy breaches and misuse of the platform infrastructure. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64118",
+    "descripcion": "node-tar is a Tar for Node.js. In 7.5.1, using .t (aka .list) with { sync: true } to read tar entry contents returns uninitialized memory contents if tar file was changed on disk to a smaller size while being read. This vulnerability is fixed in 7.5.2. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:P/VC:H/VI:L/VA:L/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-61120",
-    "descripcion": "AG Life Logger Android App version v1.0.2.72 and before (package name com.donki.healthy), developed by IO FIT, K.K., contains improper access control vulnerabilities. Exposed credentials in traffic may allow attackers to misuse cloud resources, and predictable verification codes make brute-force account logins feasible. Successful exploitation could result in account compromise, privacy breaches, and abuse of cloud resources. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64116",
+    "descripcion": "Movary is a web application to track, rate and explore your movie watch history. Prior to 0.69.0, the login page accepts a redirect parameter without validation, allowing attackers to redirect authenticated users to arbitrary external sites. This vulnerability is fixed in 0.69.0. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-61119",
-    "descripcion": "Kanova Android App version 1.0.27 (package name com.karelane), developed by Karely L.L.C., contains improper access control vulnerabilities. Attackers may gain unauthorized access to user details and obtain group information, including entry codes, by manipulating API request parameters. Successful exploitation could result in privacy breaches, unauthorized group access, and misuse of the platform. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64115",
+    "descripcion": "Movary is a web application to track, rate and explore your movie watch history. Versions up to and including 0.68.0 use the HTTP Referer header value directly for redirects in multiple settings endpoints, allowing a crafted link to cause an open redirect to an attacker-controlled site and facilitate phishing. This vulnerability is fixed in 0.69.0. 30/10/2025 30/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-61114",
-    "descripcion": "2nd Line Android App version v1.2.92 and before (package name com.mysecondline.app), developed by AutoBizLine, Inc., contains an improper access control vulnerability in its authentication mechanism. The server only validates the first character of the user_token, enabling attackers to brute force tokens and perform unauthorized queries on other user accounts. Successful exploitation could result in privacy breaches and unauthorized access to user data. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64112",
+    "descripcion": "Statmatic is a Laravel and Git powered content management system (CMS). Stored XSS vulnerabilities in Collections and Taxonomies allow authenticated users with content creation permissions to inject malicious JavaScript that executes when viewed by higher-privileged users. This vulnerability is fixed in 5.22.1. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-30",
-    "cve": "CVE-2025-60950",
-    "descripcion": "An arbitrary file upload vulnerability in the Data Preparation function of AIxBlock commit f60975 allows attackers to execute arbitrary code via a crafted SVG file. 30/10/2025 30/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-56313",
+    "descripcion": "A Reflected Cross-Site Scripting (XSS) vulnerability was discovered in the /publix/run endpoint of JATOS 3.7.1 through 3.9.6 (inclusive). This allows remote attackers to execute arbitrary JavaScript in a user&#39;s web browser by including a malicious payload in the &#34;code&#34; URL parameter. When an authenticated admin user accesses the study&#39;s URL, the malicious script gets interpreted and executes within their browser, which can lead to unauthorized actions, account compromise, and privilege escalation. 30/10/2025 30/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
