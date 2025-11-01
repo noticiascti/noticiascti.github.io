@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-10-31",
+    "cve": "CVE-2025-62276",
+    "descripcion": "The Document Library and the Adaptive Media modules in Liferay Portal 7.4.0 through 7.4.3.111, and older unsupported versions, and Liferay DXP 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.10, 7.4 GA through update 92, and older unsupported versions uses an incorrect cache-control header, which allows local users to obtain access to downloaded files via the browser&#39;s cache. 01/11/2025 01/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-10-31",
     "cve": "CVE-2025-12464",
     "descripcion": "A stack-based buffer overflow was found in the QEMU e1000 network device. The code for padding short frames was dropped from individual network devices and moved to the net core code. The issue stems from the device&#39;s receive code still being able to process a short frame in loopback mode. This could lead to a buffer overrun in the e1000_receive_iov() function via the loopback code path. A malicious guest user could use this vulnerability to crash the QEMU process on the host, resulting in a denial of service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-10-31",
     "cve": "CVE-2025-63458",
     "descripcion": "Tenda AX-1803 v1.0.0.1 was discovered to contain a stack overflow via the timeZone parameter in the form_fast_setting_wifi_set function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-63454",
-    "descripcion": "Tenda AX-3 v16.03.12.10_CN was discovered to contain a stack overflow via the deviceId parameter in the get_parentControl_list_Info function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
