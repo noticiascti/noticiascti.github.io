@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-11-01",
+    "cve": "CVE-2025-36367",
+    "descripcion": "IBM i 7.6, 7.5, 7.4, 7.3, and 7.2 is vulnerable to privilege escalation caused by an invalid IBM i SQL services authorization check. A malicious actor can use the elevated privileges of another user profile to gain root access to the host operating system. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-01",
     "cve": "CVE-2025-6990",
     "descripcion": "The kallyas theme for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.24.0 via the `TH_PhpCode` pagebuilder widget. This is due to the theme not restricting access to the code editor widget for non-administrators. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-11-01",
     "cve": "CVE-2025-12180",
     "descripcion": "The Qi Blocks plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 1.4.3. This is due to the plugin storing arbitrary CSS styles submitted via the `qi-blocks/v1/update-styles` REST API endpoint without proper sanitization in the `update_global_styles_callback()` function. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary CSS, which can be used to perform actions such as hiding content, overlaying fake UI elements, or exfiltrating sensitive information via CSS injection techniques. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-01",
-    "cve": "CVE-2025-12090",
-    "descripcion": "The Employee Spotlight – Team Member Showcase & Meet the Team Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Social URLs in all versions up to, and including, 5.1.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
