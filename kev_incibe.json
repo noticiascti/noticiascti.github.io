@@ -1,5 +1,30 @@
 [
   {
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-62275",
+    "descripcion": "Blogs in Liferay Portal 7.4.0 through 7.4.3.111, and older unsupported versions, and Liferay DXP 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.10, 7.4 GA through update 92, and older unsupported versions does not check permission of images in a blog entry, which allows remote attackers to view the images in a blog entry via crafted URL. 01/11/2025 01/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-11922",
+    "descripcion": "The Inactive Logout plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;ina_redirect_page_individual_user&#39; parameter in all versions up to, and including, 3.5.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-11920",
+    "descripcion": "The WPCOM Member plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.7.14 via the action parameter in one of its shortcodes. This makes it possible for authenticated attackers, with Contributor-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-11816",
+    "descripcion": "The Privacy Policy Generator, Terms & Conditions Generator WordPress Plugin : WP Legal Pages plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the disconnect_account_request() function in all versions up to, and including, 3.5.1. This makes it possible for unauthenticated attackers to disconnect the site from its API plan. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-11174",
+    "descripcion": "The Document Library Lite plugin for WordPress is vulnerable to Improper Authorization in all versions up to, and including, 1.1.6. This is due to the plugin exposing an unauthenticated AJAX action dll_load_posts which returns a JSON table of document data without performing nonce or capability checks. The handler accepts an attacker-controlled args array where the status option explicitly allows draft, pending, future, and any. This makes it possible for unauthenticated attackers to retrieve unpublished document titles and content via the AJAX endpoint. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
     "fecha": "2025-10-31",
     "cve": "CVE-2025-62276",
     "descripcion": "The Document Library and the Adaptive Media modules in Liferay Portal 7.4.0 through 7.4.3.111, and older unsupported versions, and Liferay DXP 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.10, 7.4 GA through update 92, and older unsupported versions uses an incorrect cache-control header, which allows local users to obtain access to downloaded files via the browser&#39;s cache. 01/11/2025 01/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -23,30 +48,5 @@
     "fecha": "2025-10-31",
     "cve": "CVE-2025-63561",
     "descripcion": "Summer Pearl Group Vacation Rental Management Platform prior to 1.0.2 is susceptible to a Slowloris-style Denial-of-Service (DoS) condition in the HTTP connection handling layer, where an attacker that opens and maintains many slow or partially-completed HTTP connections can exhaust the server’s connection pool and worker capacity, preventing legitimate users and APIs from accessing the service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-60711",
-    "descripcion": "Protection mechanism failure in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-10693",
-    "descripcion": "When SmartStart Inclusion fails during the onboarding of a Z-Wave PIR sensor, the sensor will join the network as a non-secure device. This vulnerability exists in Silicon Labs&#39; Z-Wave PIR Sensor Reference design delivered as part of SiSDK v2025.6.0 and v2025.6.1. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-64349",
-    "descripcion": "ELOG allows an authenticated user to modify another user&#39;s profile. An attacker can edit a target user&#39;s email address, then request a password reset, and take control of the target account. By default, ELOG is not configured to allow self-registration. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-64348",
-    "descripcion": "ELOG allows an authenticated user to modify or overwrite the configuration file, resulting in denial of service. If the execute facility is specifically enabled with the &#34;-x&#34; command line flag, attackers could execute OS commands on the host machine. By default, ELOG is not configured to allow shell commands or self-registration. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:N/MUI:X/MVC:X/MVI:X/MVA:X/MSC:H/MSI:H/MSA:H/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-63458",
-    "descripcion": "Tenda AX-1803 v1.0.0.1 was discovered to contain a stack overflow via the timeZone parameter in the form_fast_setting_wifi_set function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
