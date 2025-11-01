@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-63459",
-    "descripcion": "Totolink A7000R v9.1.0u.6115_B20201022 was discovered to contain a stack overflow via the ssid5g parameter in the sub_421CF0 function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12464",
+    "descripcion": "A stack-based buffer overflow was found in the QEMU e1000 network device. The code for padding short frames was dropped from individual network devices and moved to the net core code. The issue stems from the device&#39;s receive code still being able to process a short frame in loopback mode. This could lead to a buffer overrun in the e1000_receive_iov() function via the loopback code path. A malicious guest user could use this vulnerability to crash the QEMU process on the host, resulting in a denial of service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-62264",
-    "descripcion": "Reflected cross-site scripting (XSS) vulnerability in Languauge Override in Liferay Portal 7.4.3.8 through 7.4.3.111, and Liferay DXP 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.10, and 7.4 update 4 through update 92 allows remote attackers to inject arbitrary web script or HTML via the `_com_liferay_portal_language_override_web_internal_portlet_PLOPortlet_selectedLanguageId` parameter. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63563",
+    "descripcion": "Summer Pearl Group Vacation Rental Management Platform prior to v1.0.2 does not properly invalidate active user sessions after a password change. This allows an attacker with a valid session token to maintain access to the account even after the legitimate user changes their password. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-6075",
-    "descripcion": "If the value passed to os.path.expandvars() is user-controlled a performance degradation is possible when expanding environment variables. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.80 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63562",
+    "descripcion": "Summer Pearl Group Vacation Rental Management Platform prior to v1.0.2 suffers from insufficient server-side authorization. Authenticated attackers can call several endpoints and perform create/update/delete actions on resources owned by arbitrary users by manipulating request parameters (e.g., owner or resource id). 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-63465",
-    "descripcion": "Totolink LR350 v9.3.5u.6369_B20220309 was discovered to contain a stack overflow via the ssid parameter in the sub_422880 function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63561",
+    "descripcion": "Summer Pearl Group Vacation Rental Management Platform prior to 1.0.2 is susceptible to a Slowloris-style Denial-of-Service (DoS) condition in the HTTP connection handling layer, where an attacker that opens and maintains many slow or partially-completed HTTP connections can exhaust the server’s connection pool and worker capacity, preventing legitimate users and APIs from accessing the service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-63464",
-    "descripcion": "Totolink LR350 v9.3.5u.6369_B20220309 was discovered to contain a stack overflow via the ssid parameter in the sub_42396C function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-60711",
+    "descripcion": "Protection mechanism failure in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-63463",
-    "descripcion": "Totolink LR350 v9.3.5u.6369_B20220309 was discovered to contain a stack overflow via the wifiOff parameter in the sub_4232EC function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-10693",
+    "descripcion": "When SmartStart Inclusion fails during the onboarding of a Z-Wave PIR sensor, the sensor will join the network as a non-secure device. This vulnerability exists in Silicon Labs&#39; Z-Wave PIR Sensor Reference design delivered as part of SiSDK v2025.6.0 and v2025.6.1. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-63462",
-    "descripcion": "Totolink A7000R v9.1.0u.6115_B20201022 was discovered to contain a stack overflow via the wifiOff parameter in the sub_421A04 function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64349",
+    "descripcion": "ELOG allows an authenticated user to modify another user&#39;s profile. An attacker can edit a target user&#39;s email address, then request a password reset, and take control of the target account. By default, ELOG is not configured to allow self-registration. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-63461",
-    "descripcion": "Totolink A7000R v9.1.0u.6115_B20201022 was discovered to contain a stack overflow via the ssid5g parameter in the urldecode function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64348",
+    "descripcion": "ELOG allows an authenticated user to modify or overwrite the configuration file, resulting in denial of service. If the execute facility is specifically enabled with the &#34;-x&#34; command line flag, attackers could execute OS commands on the host machine. By default, ELOG is not configured to allow shell commands or self-registration. 31/10/2025 31/10/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:N/MUI:X/MVC:X/MVI:X/MVA:X/MSC:H/MSI:H/MSA:H/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-63460",
-    "descripcion": "Totolink A7000R v9.1.0u.6115_B20201022 was discovered to contain a stack overflow via the ssid5g parameter in the sub_4222E0 function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63458",
+    "descripcion": "Tenda AX-1803 v1.0.0.1 was discovered to contain a stack overflow via the timeZone parameter in the form_fast_setting_wifi_set function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-10-31",
-    "cve": "CVE-2025-59501",
-    "descripcion": "Authentication bypass by spoofing in Microsoft Configuration Manager allows an authorized attacker to perform spoofing over an adjacent network. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-63454",
+    "descripcion": "Tenda AX-3 v16.03.12.10_CN was discovered to contain a stack overflow via the deviceId parameter in the get_parentControl_list_Info function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
