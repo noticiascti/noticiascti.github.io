@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-01",
-    "cve": "CVE-2025-62275",
-    "descripcion": "Blogs in Liferay Portal 7.4.0 through 7.4.3.111, and older unsupported versions, and Liferay DXP 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.10, 7.4 GA through update 92, and older unsupported versions does not check permission of images in a blog entry, which allows remote attackers to view the images in a blog entry via crafted URL. 01/11/2025 01/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12180",
+    "descripcion": "The Qi Blocks plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 1.4.3. This is due to the plugin storing arbitrary CSS styles submitted via the `qi-blocks/v1/update-styles` REST API endpoint without proper sanitization in the `update_global_styles_callback()` function. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary CSS, which can be used to perform actions such as hiding content, overlaying fake UI elements, or exfiltrating sensitive information via CSS injection techniques. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-01",
-    "cve": "CVE-2025-11922",
-    "descripcion": "The Inactive Logout plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;ina_redirect_page_individual_user&#39; parameter in all versions up to, and including, 3.5.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12090",
+    "descripcion": "The Employee Spotlight – Team Member Showcase & Meet the Team Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Social URLs in all versions up to, and including, 5.1.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-01",
-    "cve": "CVE-2025-11920",
-    "descripcion": "The WPCOM Member plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.7.14 via the action parameter in one of its shortcodes. This makes it possible for authenticated attackers, with Contributor-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-12038",
+    "descripcion": "The Folderly plugin for WordPress is vulnerable to unauthorized modification of data due to an insufficient capability check on the /wp-json/folderly/v1/config/clear-all-data REST API endpoint in all versions up to, and including, 0.3. This makes it possible for authenticated attackers, with Author-level access and above, to clear all data like terms and categories. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-01",
-    "cve": "CVE-2025-11816",
-    "descripcion": "The Privacy Policy Generator, Terms & Conditions Generator WordPress Plugin : WP Legal Pages plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the disconnect_account_request() function in all versions up to, and including, 3.5.1. This makes it possible for unauthenticated attackers to disconnect the site from its API plan. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-11983",
+    "descripcion": "The WP Discourse plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 2.5.9. This is due to the plugin unconditionally sending Discourse API credentials (Api-Key and Api-Username headers) to any host specified in a post&#39;s discourse_permalink custom field during comment synchronization. This makes it possible for authenticated attackers, with author-level access and above, to exfiltrate sensitive Discourse API credentials to attacker-controlled servers, as well as query internal services and potentially perform further attacks. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-01",
-    "cve": "CVE-2025-11174",
-    "descripcion": "The Document Library Lite plugin for WordPress is vulnerable to Improper Authorization in all versions up to, and including, 1.1.6. This is due to the plugin exposing an unauthenticated AJAX action dll_load_posts which returns a JSON table of document data without performing nonce or capability checks. The handler accepts an attacker-controlled args array where the status option explicitly allows draft, pending, future, and any. This makes it possible for unauthenticated attackers to retrieve unpublished document titles and content via the AJAX endpoint. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-11740",
+    "descripcion": "The wpForo Forum plugin for WordPress is vulnerable to SQL Injection via the Subscriptions Manager in all versions up to, and including, 2.4.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-62276",
-    "descripcion": "The Document Library and the Adaptive Media modules in Liferay Portal 7.4.0 through 7.4.3.111, and older unsupported versions, and Liferay DXP 2023.Q4.0 through 2023.Q4.10, 2023.Q3.1 through 2023.Q3.10, 7.4 GA through update 92, and older unsupported versions uses an incorrect cache-control header, which allows local users to obtain access to downloaded files via the browser&#39;s cache. 01/11/2025 01/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-11502",
+    "descripcion": "The Schema & Structured Data for WP & AMP plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;saswp_tiny_multiple_faq&#39; shortcode in all versions up to, and including, 1.51 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-12464",
-    "descripcion": "A stack-based buffer overflow was found in the QEMU e1000 network device. The code for padding short frames was dropped from individual network devices and moved to the net core code. The issue stems from the device&#39;s receive code still being able to process a short frame in loopback mode. This could lead to a buffer overrun in the e1000_receive_iov() function via the loopback code path. A malicious guest user could use this vulnerability to crash the QEMU process on the host, resulting in a denial of service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-5949",
+    "descripcion": "The Service Finder Bookings plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 6.0. This is due to the plugin not properly validating a user&#39;s identity prior to processing a password change request. This makes it possible for authenticated attackers with subscriber access or higher to reset other users&#39; passwords, including those of admins. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-63563",
-    "descripcion": "Summer Pearl Group Vacation Rental Management Platform prior to v1.0.2 does not properly invalidate active user sessions after a password change. This allows an attacker with a valid session token to maintain access to the account even after the legitimate user changes their password. 31/10/2025 31/10/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-12118",
+    "descripcion": "The Schema Scalpel plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the post title in all versions up to, and including, 1.6.1 due to insufficient input sanitization and output escaping when outputting user-supplied data into JSON-LD schema markup. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-63562",
-    "descripcion": "Summer Pearl Group Vacation Rental Management Platform prior to v1.0.2 suffers from insufficient server-side authorization. Authenticated attackers can call several endpoints and perform create/update/delete actions on resources owned by arbitrary users by manipulating request parameters (e.g., owner or resource id). 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-11995",
+    "descripcion": "The Community Events plugin for WordPress is vulnerable to Stored Cross-Site Scripting via event details parameter in all versions up to, and including, 1.5.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-10-31",
-    "cve": "CVE-2025-63561",
-    "descripcion": "Summer Pearl Group Vacation Rental Management Platform prior to 1.0.2 is susceptible to a Slowloris-style Denial-of-Service (DoS) condition in the HTTP connection handling layer, where an attacker that opens and maintains many slow or partially-completed HTTP connections can exhaust the server’s connection pool and worker capacity, preventing legitimate users and APIs from accessing the service. 31/10/2025 31/10/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-01",
+    "cve": "CVE-2025-11927",
+    "descripcion": "The Flying Images: Optimize and Lazy Load Images for Faster Page Speed plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 2.4.14 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 01/11/2025 01/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
