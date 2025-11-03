@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-40107",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: can: hi311x: fix null pointer dereference when resuming from sleep before interface was enabled This issue is similar to the vulnerability in the `mcp251x` driver, which was fixed in commit 03c427147b2d (&#34;can: mcp251x: fix resume from sleep before interface was brought up&#34;). In the `hi311x` driver, when the device resumes from sleep, the driver schedules `priv->restart_work`. However, if the network interface was not previously enabled, the `priv->wq` (workqueue) is not allocated and initialized, leading to a null pointer dereference. To fix this, we move the allocation and initialization of the workqueue from the `hi3110_open` function to the `hi3110_can_probe` function. This ensures that the workqueue is properly initialized before it is used during device resume. And added logic to destroy the workqueue in the error handling paths of `hi3110_can_probe` and in the `hi3110_can_remove` function to prevent resource leaks. 03/11/2025 03/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63453",
+    "descripcion": "Car-Booking-System-PHP v.1.0 is vulnerable to SQL Injection in /carlux/contact.php. 03/11/2025 03/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-12626",
-    "descripcion": "A security flaw has been discovered in jeecgboot jeewx-boot up to 641ab52c3e1845fec39996d7794c33fb40dad1dd. This affects the function getImgUrl of the file WxActGoldeneggsPrizesController.java. Performing manipulation of the argument imgurl results in path traversal. Remote exploitation of the attack is possible. The exploit has been released to the public and may be exploited. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The root cause was initially fixed but can be evaded with additional encoding. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-63452",
+    "descripcion": "Car-Booking-System-PHP v.1.0 is vulnerable to SQL Injection in /carlux/forgot-pass.php. 03/11/2025 03/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-0987",
-    "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in CB Project Ltd. Co. CVLand allows Parameter Injection.This issue affects CVLand: from 2.1.0 through 20251103. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-63450",
+    "descripcion": "Car-Booking-System-PHP v.1.0 is vulnerable to Cross Site Scripting (XSS) in /carlux/booking.php. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-48397",
-    "descripcion": "The privileged user could log in without sufficient credentials after enabling an application protocol. This security issue has been fixed in the latest script patch latest version of of Eaton BLSS (7.3.0.SCP004). 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-63449",
+    "descripcion": "Water Management System v1.0 is vulnerable to Cross Site Scripting (XSS) in /orders.php. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-48396",
-    "descripcion": "Arbitrary code execution is possible due to improper validation of the file upload functionality in Eaton BLSS. This security issue has been fixed in the latest script patch latest version of of Eaton BLSS (7.3.0.SCP004). 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-63448",
+    "descripcion": "Water Management System v1.0 is vulnerable to Cross Site Scripting (XSS) in /edit_product.php?id=1. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-12623",
-    "descripcion": "A vulnerability was identified in fushengqian fuint up to 41e26be8a2c609413a0feaa69bdad33a71ae8032. Affected by this issue is some unknown functionality of the file fuint-application/src/main/java/com/fuint/module/clientApi/controller/ClientSignController.java of the component Authentication Token Handler. Such manipulation leads to authorization bypass. The attack may be launched remotely. Attacks of this nature are highly complex. The exploitation is known to be difficult. The exploit is publicly available and might be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:H/Au:S/C:P/I:N/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-63447",
+    "descripcion": "Water Management System v1.0 is vulnerable to Cross Site Scripting (XSS) in /add_customer.php. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-12622",
-    "descripcion": "A vulnerability was determined in Tenda AC10 16.03.10.13. Affected by this vulnerability is the function formSysRunCmd of the file /goform/SysRunCmd. This manipulation of the argument getui causes buffer overflow. The attack may be initiated remotely. The exploit has been publicly disclosed and may be utilized. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-63446",
+    "descripcion": "Water Management System v1.0 is vulnerable to Cross Site Scripting (XSS) in /add_vendor.php. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-12619",
-    "descripcion": "A vulnerability was found in Tenda A15 15.13.07.13. Affected is the function fromSetWirelessRepeat of the file /goform/openNetworkGateway. The manipulation of the argument wpapsk_crypto2_4g results in buffer overflow. The attack can be launched remotely. The exploit has been made public and could be used. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-60785",
+    "descripcion": "A remote code execution (RCE) vulnerability in the Postgres Drivers component of iceScrum v7.54 Pro On-prem allows attackers to execute arbitrary code via a crafted HTML page. 03/11/2025 03/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-12618",
-    "descripcion": "A vulnerability has been found in Tenda AC8 16.03.34.06. This impacts an unknown function of the file /goform/DatabaseIniSet. The manipulation of the argument Time leads to buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-36093",
+    "descripcion": "IBM Cloud Pak For Business Automation 25.0.0, 24.0.1, and 24.0.0 could allow an attacker to access unauthorized content or perform unauthorized actions using man in the middle techniques due to improper access controls. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-03",
-    "cve": "CVE-2025-12503",
-    "descripcion": "EasyFlow .NET and EasyFlow AiNet developed by Digiwin has a SQL Injection vulnerability, allowing authenticated remote attackers to inject arbitrary SQL commands to read database contents. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-36092",
+    "descripcion": "IBM Cloud Pak For Business Automation 25.0.0, 24.0.1, and 24.0.0 could allow an authenticated user to cause a denial of service due to the improper validation of input length. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
