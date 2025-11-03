@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2025-11-03",
+    "cve": "CVE-2025-40107",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: can: hi311x: fix null pointer dereference when resuming from sleep before interface was enabled This issue is similar to the vulnerability in the `mcp251x` driver, which was fixed in commit 03c427147b2d (&#34;can: mcp251x: fix resume from sleep before interface was brought up&#34;). In the `hi311x` driver, when the device resumes from sleep, the driver schedules `priv->restart_work`. However, if the network interface was not previously enabled, the `priv->wq` (workqueue) is not allocated and initialized, leading to a null pointer dereference. To fix this, we move the allocation and initialization of the workqueue from the `hi3110_open` function to the `hi3110_can_probe` function. This ensures that the workqueue is properly initialized before it is used during device resume. And added logic to destroy the workqueue in the error handling paths of `hi3110_can_probe` and in the `hi3110_can_remove` function to prevent resource leaks. 03/11/2025 03/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2025-12626",
+    "descripcion": "A security flaw has been discovered in jeecgboot jeewx-boot up to 641ab52c3e1845fec39996d7794c33fb40dad1dd. This affects the function getImgUrl of the file WxActGoldeneggsPrizesController.java. Performing manipulation of the argument imgurl results in path traversal. Remote exploitation of the attack is possible. The exploit has been released to the public and may be exploited. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The root cause was initially fixed but can be evaded with additional encoding. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2025-0987",
+    "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in CB Project Ltd. Co. CVLand allows Parameter Injection.This issue affects CVLand: from 2.1.0 through 20251103. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-03",
     "cve": "CVE-2025-48397",
     "descripcion": "The privileged user could log in without sufficient credentials after enabling an application protocol. This security issue has been fixed in the latest script patch latest version of of Eaton BLSS (7.3.0.SCP004). 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2025-11-03",
     "cve": "CVE-2025-12503",
     "descripcion": "EasyFlow .NET and EasyFlow AiNet developed by Digiwin has a SQL Injection vulnerability, allowing authenticated remote attackers to inject arbitrary SQL commands to read database contents. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-12617",
-    "descripcion": "A flaw has been found in itsourcecode Billing System 1.0. This affects an unknown function of the file /admin/app/login_crud.php. Executing manipulation of the argument Password can lead to sql injection. It is possible to launch the attack remotely. The exploit has been published and may be used. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-12616",
-    "descripcion": "A vulnerability was detected in PHPGurukul News Portal 1.0. The impacted element is an unknown function of the file /onps/settings.py. Performing manipulation results in insertion of sensitive information into debugging code. It is possible to initiate the attack remotely. The attack&#39;s complexity is rated as high. The exploitability is regarded as difficult. The exploit is now public and may be used. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:N/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-12615",
-    "descripcion": "A security vulnerability has been detected in PHPGurukul News Portal 1.0. The affected element is an unknown function of the file /onps/settings.py. Such manipulation of the argument SECRET_KEY leads to use of hard-coded cryptographic key . The attack may be performed from remote. The attack requires a high level of complexity. The exploitability is described as difficult. The exploit has been disclosed publicly and may be used. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:P/A:P Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
