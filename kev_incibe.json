@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-03",
+    "cve": "CVE-2025-36172",
+    "descripcion": "IBM Cloud Pak for Business Automation 25.0.0 through 25.0.0 Interim Fix 001, 24.0.1 through 24.0.1 Interim Fix 004, 24.0.0 through 24.0.0 Interim Fix 006, and earlier unsupported releases IBM Business Automation Workflow is vulnerable to stored cross-site scripting. This vulnerability allows an authenticated user to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2025-34501",
+    "descripcion": "Deck Mate 2 is distributed with static, hard-coded credentials for the root shell and web user interface, while multiple management services (SSH, HTTP, Telnet, SMB, X11) are enabled by default. If an attacker can reach these interfaces - most often through local or near-local access such as connecting to the USB or Ethernet ports beneath the table - the built-in credentials permit administrative login and full control of the system. Once authenticated, an attacker can access firmware utilities, modify controller software, and establish persistent compromise. Remote attack paths via network, cellular, or telemetry links may exist in specific configurations but generally require additional capabilities or operator error. The vendor reports that USB access has been disabled in current firmware builds. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2025-11193",
+    "descripcion": "A potential vulnerability was reported in some Lenovo Tablets that could allow a local authenticated user or application to gain access to sensitive device specific information. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2024-13998",
+    "descripcion": "Nagios XI versions prior to 2024R1.1.3, under certain circumstances, disclose sensitive user account information (including API keys and hashed passwords) to authenticated users who should not have access to that data. Exposure of API keys or password hashes could lead to account compromise, abuse of API privileges, or offline cracking attempts. CVE-2024-13995 addresses a similar vulnerability with a potentially incomplete fix for the underlying problem in earlier versions. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2024-13997",
+    "descripcion": "Nagios XI versions prior to 2024R1.1.3 contain a privilege escalation vulnerability in which an authenticated administrator could leverage the Migrate Server feature to obtain root privileges on the underlying XI host. By abusing the migration workflow, an admin-level attacker could execute actions outside the intended security scope of the application, resulting in full control of the operating system. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2021-47698",
+    "descripcion": "Nagios XI versions prior to 5.8.7 using embedded Nagios Core are vulnerable to cross-site scripting (XSS) via the Core UI’s Views URL handling. Insufficient validation or escaping of user-supplied input may allow an attacker to inject and execute arbitrary script in the context of a victim&#39;s browser. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2016-15054",
+    "descripcion": "Nagios XI versions prior to 5.4.0 are vulnerable to cross-site scripting (XSS) via the jQuery Migrate library. Insufficient validation or escaping of user-supplied input may allow an attacker to inject and execute arbitrary script in the context of a victim&#39;s browser. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2025-63293",
+    "descripcion": "FairSketch Rise Ultimate Project Manager & CRM 3.9.4 is vulnerable to Insecure Permissions. A remote authenticated user can append comments or upload attachments to tickets for which they lack view or edit authorization, due to missing authorization checks in the ticketing/commenting API. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-03",
+    "cve": "CVE-2025-12657",
+    "descripcion": "The KMIP response parser built into mongo binaries is overly tolerant of certain malformed packets, and may parse them into invalid objects. Later reads of this object can result in read access violations. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:H Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-03",
     "cve": "CVE-2025-63593",
     "descripcion": "Grav CMS1.7.49.5 is vulnerable to Cross Site Scripting (XSS). 03/11/2025 03/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-12642",
-    "descripcion": "lighttpd1.4.80 incorrectly merged trailer fields into headers after http request parsing. This behavior can be exploited to conduct HTTP Header Smuggling attacks. Successful exploitation may allow an attacker to: * Bypass access control rules * Inject unsafe input into backend logic that trusts request headers * Execute HTTP Request Smuggling attacks under some conditions This issue affects lighttpd1.4.80 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-12531",
-    "descripcion": "IBM InfoSphere Information Server 11.7.0.0 through 11.7.1.6 is vulnerable to an XML external entity injection (XXE) attack when processing XML data. A remote attacker could exploit this vulnerability to expose sensitive information or consume memory resources. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-8558",
-    "descripcion": "Insider Threat Management (ITM) Server versions prior to 7.17.2 contain an authentication bypass vulnerability that allows unauthenticated users on an adjacent network to perform agent unregistration when the number of registered agents exceeds the licensed limit. Successful exploitation prevents the server from receiving new events from affected agents, resulting in a partial loss of integrity and availability with no impact to confidentiality. 03/11/2025 03/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-45959",
-    "descripcion": "Rejected reason: DO NOT USE THIS CVE RECORD. ConsultIDs: none. Reason: This record was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none. 03/11/2025 03/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-63441",
-    "descripcion": "Open Source Social Network (OSSN) 8.6 is vulnerable to Cross Site Scripting (XSS) via the parameter param` at endpoint u/administrator/friends. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-50363",
-    "descripcion": "Phpgurukul Maid Hiring Management System 1.0 is vulnerable to Cross Site Scripting (XSS) in /maid-hiring.php va the name field. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-12463",
-    "descripcion": "An unauthenticated SQL Injection was discovered within the Geutebruck G-Cam E-Series Cameras through the `Group` parameter in the `/uapi-cgi/viewer/Param.cgi` script. This has been confirmed on the EFD-2130 camera running firmware version 1.12.0.19. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-11953",
-    "descripcion": "The Metro Development Server, which is opened by the React Native Community CLI, binds to external interfaces by default. The server exposes an endpoint that is vulnerable to OS command injection. This allows unauthenticated network attackers to send a POST request to the server and run arbitrary executables. On Windows, the attackers can also execute arbitrary shell commands with fully controlled arguments. 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-03",
-    "cve": "CVE-2025-10280",
-    "descripcion": "IdentityIQ 8.5, IdentityIQ 8.4 and all 8.4 patch levels prior to 8.4p4, IdentityIQ 8.3 and all 8.3 patch levels prior to 8.3p6, and all prior versions allows some IdentityIQ web services that provide non-HTML content to be accessed via a URL path that will set the Content-Type to HTML allowing a requesting browser to interpret content not properly escaped to prevent Cross-Site Scripting (XSS). 03/11/2025 03/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
