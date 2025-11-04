@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12683",
-    "descripcion": "The service employed by Everything, running as SYSTEM, communicates with the lower privileged Everything GUI via a named pipe. The named pipe has a NULL DACL and thus provides all users full permission over it; leading to potential Service Denial Of Service or Privilege escalation(only if chained with other elements) for a local low privilege user. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-20749",
+    "descripcion": "In charger, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS09915493; Issue ID: MSV-3800. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12456",
-    "descripcion": "The Centangle-Team plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.0.0. This is due to missing or incorrect nonce validation on a function. This makes it possible for unauthenticated attackers to modify plugin&#39;s settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. Additionally, due to insufficient input sanitization and output escaping on cai_name_color parameter, this issue allows to inject arbitrary web scripts in pages, that will execute whenever a user accesses an injected page. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20748",
+    "descripcion": "In wlan AP driver, there is a possible out of bounds write due to an incorrect bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: WCNCR00432679; Issue ID: MSV-3950. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12452",
-    "descripcion": "The Visit Counter plugin for WordPress is vulnerable to Cross-Site Request Forgery in version 1.0. This is due to missing or incorrect nonce validation on the widgets.php page. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20747",
+    "descripcion": "In gnss service, there is a possible out of bounds write due to an incorrect bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10010443; Issue ID: MSV-3966. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12416",
-    "descripcion": "The Pagerank Tools plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Cross-Site Request Forgery in all versions up to, and including, 1.1.5. This is due to missing nonce validation on the pr_save_settings() function and insufficient input sanitization. This makes it possible for unauthenticated attackers to inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. The injected scripts will execute whenever a user accesses the plugin&#39;s settings page. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20746",
+    "descripcion": "In gnss service, there is a possible out of bounds write due to an incorrect bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10010441; Issue ID: MSV-3967. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12415",
-    "descripcion": "The MapMap plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.1. This is due to missing or incorrect nonce validation on the admin_shortcode_submit, admin_configuration_submit, and admin_shortcode_delete functions. This makes it possible for unauthenticated attackers to update the plugin&#39;s settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20745",
+    "descripcion": "In apusys, there is a possible memory corruption due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10095441; Issue ID: MSV-4294. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12413",
-    "descripcion": "The Social Media WPCF7 Stop Words plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.1.3. This is due to missing or incorrect nonce validation on the smWpCfSwOptions() function. This makes it possible for unauthenticated attackers to update the plugin&#39;s settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20744",
+    "descripcion": "In pda, there is a possible escalation of privilege due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10127160; Issue ID: MSV-4542. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12412",
-    "descripcion": "The Top Bar Notification plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.12. This is due to missing or incorrect nonce validation on th tbn_ajax_add() function. This makes it possible for unauthenticated attackers to update the plugin&#39;s settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20743",
+    "descripcion": "In clkdbg, there is a possible escalation of privilege due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10136671; Issue ID: MSV-4651. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12410",
-    "descripcion": "The SH Contextual Help plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.2.1. This is due to missing or incorrect nonce validation in the sh_contextual_help_dashboard_widget() function. This makes it possible for unauthenticated attackers to update the plugin&#39;s settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20742",
+    "descripcion": "In wlan AP driver, there is a possible out of bounds write due to an incorrect bounds check. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: WCNCR00432680; Issue ID: MSV-3949. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12403",
-    "descripcion": "The Associados Amazon Plugin plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 0.8. This is due to missing or incorrect nonce validation on the brzon_admin_panel() function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20741",
+    "descripcion": "In wlan AP driver, there is a possible out of bounds write due to an incorrect bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: WCNCR00434422; Issue ID: MSV-3958. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-04",
-    "cve": "CVE-2025-12402",
-    "descripcion": "The LinkedIn Resume plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.00. This is due to missing or incorrect nonce validation on the linkedinresume_printAdminPage() function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-20740",
+    "descripcion": "In wlan STA driver, there is a possible out of bounds read due to a race condition. This could lead to local information disclosure with User execution privileges needed. User interaction is not needed for exploitation. Patch ID: WCNCR00435337; Issue ID: MSV-4036. 04/11/2025 04/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
