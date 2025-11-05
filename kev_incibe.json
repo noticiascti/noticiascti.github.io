@@ -1,52 +1,52 @@
 [
   {
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-12735",
+    "descripcion": "The expr-eval library is a JavaScript expression parser and evaluator designed to safely evaluate mathematical expressions with user-defined variables. However, due to insufficient input validation, an attacker can pass a crafted variables object into the evaluate() function and trigger arbitrary code execution. 05/11/2025 05/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-64110",
+    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.23 and below, a logic bug allows a malicious agent to read sensitive files that should be protected via cursorignore. An attacker who has already achieved prompt injection, or a malicious model, could create a new cursorignore file which can invalidate the configuration of pre-existing ones. This could allow a malicious agent to read protected files. This issue is fixed in version 2.0. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-64109",
+    "descripcion": "Cursor is a code editor built for programming with AI. In versions and below, a vulnerability in the Cursor CLI Beta allowed an attacker to achieve remote code execution through the MCP (Model Context Protocol) server mechanism by uploading a malicious MCP configuration in .cursor/mcp.json file in a GitHub repository. Once a victim clones the project and opens it using Cursor CLI, the command to run the malicious MCP server is immediately executed without any warning, leading to potential code execution as soon as the command runs. This issue is fixed in version 2025.09.17-25b418f. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-64108",
+    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.44 and below, various NTFS path quirks allow a prompt injection attacker to circumvent sensitive file protections and overwrite files which Cursor requires human approval to overwrite. Modification of some of the protected files can lead to RCE. Must be chained with a prompt injection or malicious model attach. Only affects systems supporting NTFS. This issue is fixed in version 2.0. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-64107",
+    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.52 and below, manipulating internal settings may lead to RCE. Cursor detects path manipulation via forward slashes (./.cursor/./././././mcp.json etc.), and requires human approval to complete the operation. However, the same kind of manipulation using backslashes was not correctly detected, allowing an attacker who had already achieved prompt injection or some other level of control to overwrite sensitive editor files without approval on Windows machines. This issue is fixed in version 2.0. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-64106",
+    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.28 and below, an input validation flaw in Cursor&#39;s MCP server installation enables specially crafted deep-links to bypass the standard security warnings and conceal executed commands from users if they choose to accept the server. If an attacker is able to convince a victim to navigate to a malicious deeplink, the victim will not see the correct speedbump modal, and if they choose to accept, will execute commands specified by the attackers deeplink. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-62722",
+    "descripcion": "LinkAce is a self-hosted archive to collect website links. In versions 2.3.1 and below, the social media sharing functionality contains a Stored Cross-Site Scripting (XSS) vulnerability that allows any authenticated user to inject arbitrary JavaScript by creating a link with malicious HTML in the title field. When a user views the link details page and the shareable links are rendered, the malicious JavaScript executes in their browser. This vulnerability affects multiple sharing services and can be exploited to steal session cookies, perform actions on behalf of users, or deliver malware. This issue is fixed in version 2.4.0. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-59596",
+    "descripcion": "CVE-2025-59596 is a denial-of-service vulnerability in Secure Access Windows client versions 12.0 to 14.10 that is addressed in version 14.12. If a local networking policy is active, attackers on an adjacent network may be able to send a crafted packet and cause the client system to crash. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-04",
+    "cve": "CVE-2025-59595",
+    "descripcion": "CVE-2025-59595 is an internally discovered denial of service vulnerability in versions of Secure Access prior to 14.12. An attacker can send a specially crafted packet to a server in a non-default configuration and cause the server to crash. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
     "fecha": "2025-11-04",
     "cve": "CVE-2025-62721",
     "descripcion": "LinkAce is a self-hosted archive to collect website links. In versions 2.3.1 and below, authenticated RSS feed endpoints in the FeedController class fail to implement proper authorization checks, allowing any authenticated user to access all links, lists, and tags from all users in the system, regardless of their ownership or visibility settings. This issue is fixed in version 2.4.0. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62720",
-    "descripcion": "LinkAce is a self-hosted archive to collect website links. Versions 2.3.1 and below allow any authenticated user to export the entire database of links from all users in the system, including private links that should only be accessible to their owners. The HTML and CSV export functions in the ExportController class retrieve all links without applying any ownership or visibility filtering, effectively bypassing all access controls implemented elsewhere in the application. This issue is fixed in version 2.4.0. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62719",
-    "descripcion": "LinkAce is a self-hosted archive to collect website links. In versions 2.3.0 and below, the htmlKeywordsFromUrl function in the FetchController class accepts user-provided URLs and makes HTTP requests to them without validating that the destination is not an internal or private network resource. This Server-Side Request Forgery (SSRF) vulnerability allows authenticated attackers to use the application server to perform port scanning and service discovery on internal networks. Practical impact is very limited because the function only extracts content from HTML meta keywords tags, which prevents meaningful data exfiltration from databases, APIs, or cloud metadata endpoints. This issue is fixed in version 2.4.0. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62715",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. Versions 5.5.2-#147 and below contain a stored Cross-Site Scripting (XSS) vulnerability in ClipBucket’s Collection tags feature. An authenticated normal user can create a tag containing HTML or JavaScript, which is later rendered unescaped in collection detail and tag-list pages. As a result, arbitrary JavaScript executes in the browsers of all users who view the affected pages. This issue is fixed in version 5.5.2-#152. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62520",
-    "descripcion": "Mantis Bug Tracker (MantisBT) is an open source issue tracker. In versions 2.27.1 and below, due to insufficient access-level checks, any non-admin user with access to manage_config_columns_page.php can use the Copy From action to retrieve the columns configuration from a private project they have no access to. This issue is fixed in version 2.27.2. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62507",
-    "descripcion": "Redis is an open source, in-memory database that persists on disk. In versions 8.2.0 and above, a user can run the XACKDEL command with multiple ID&#39;s and trigger a stack buffer overflow, which may potentially lead to remote code execution. This issue is fixed in version 8.2.3. To workaround this issue without patching the redis-server executable is to prevent users from executing XACKDEL operation. This can be done using ACL to restrict XACKDEL command. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62369",
-    "descripcion": "Xibo is an open source digital signage platform with a web content management system (CMS). Versions 4.3.0 and below contain a Remote Code Execution vulnerability in the CMS Developer menu&#39;s Module Templating functionality, allowing authenticated users with &#34;System -> Add/Edit custom modules and templates&#34; permissions to manipulate Twig filters and execute arbitrary server-side functions as the web server user. This issue is fixed in version 4.3.1. To workaround this issue, use the 4.1 and 4.2 patch commits. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-56230",
-    "descripcion": "Tencent Docs Desktop 3.9.20 and earlier suffers from Missing SSL Certificate Validation in the update component. 04/11/2025 04/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-54526",
-    "descripcion": "Fuji Electric Monitouch V-SFT-6 is vulnerable to a stack-based buffer overflow while processing a specially crafted project file, which may allow an attacker to execute arbitrary code. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-54496",
-    "descripcion": "A maliciously crafted project file may cause a heap-based buffer overflow in Fuji Electric Monitouch V-SFT-6, which may allow the attacker to execute arbitrary code. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
