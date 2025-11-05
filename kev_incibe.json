@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-12735",
-    "descripcion": "The expr-eval library is a JavaScript expression parser and evaluator designed to safely evaluate mathematical expressions with user-defined variables. However, due to insufficient input validation, an attacker can pass a crafted variables object into the evaluate() function and trigger arbitrary code execution. 05/11/2025 05/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64151",
+    "descripcion": "Multiple Roboticsware products provided by Roboticsware PTE. LTD. register Windows services with unquoted file paths. A user with the write permission on the root directory of the system drive may execute arbitrary code with SYSTEM privilege. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-64110",
-    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.23 and below, a logic bug allows a malicious agent to read sensitive files that should be protected via cursorignore. An attacker who has already achieved prompt injection, or a malicious model, could create a new cursorignore file which can invalidate the configuration of pre-existing ones. This could allow a malicious agent to read protected files. This issue is fixed in version 2.0. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-62225",
+    "descripcion": "Optical Disc Archive Software provided by Sony Corporation registers a Windows service with an unquoted file path. A user with the write permission on the root directory of the system drive may execute arbitrary code with SYSTEM privilege. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-64109",
-    "descripcion": "Cursor is a code editor built for programming with AI. In versions and below, a vulnerability in the Cursor CLI Beta allowed an attacker to achieve remote code execution through the MCP (Model Context Protocol) server mechanism by uploading a malicious MCP configuration in .cursor/mcp.json file in a GitHub repository. Once a victim clones the project and opens it using Cursor CLI, the command to run the malicious MCP server is immediately executed without any warning, leading to potential code execution as soon as the command runs. This issue is fixed in version 2025.09.17-25b418f. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-12388",
+    "descripcion": "The B Carousel Block – Responsive Image and Content Carousel plugin for WordPress is vulnerable to Server-Side Request Forgery in versions up to, and including, 1.1.5. This is due to the plugin not validating user-supplied URLs before passing them to the wp_remote_request() function. This makes it possible for authenticated attackers, with subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-64108",
-    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.44 and below, various NTFS path quirks allow a prompt injection attacker to circumvent sensitive file protections and overwrite files which Cursor requires human approval to overwrite. Modification of some of the protected files can lead to RCE. Must be chained with a prompt injection or malicious model attach. Only affects systems supporting NTFS. This issue is fixed in version 2.0. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-12384",
+    "descripcion": "The Document Embedder – Embed PDFs, Word, Excel, and Other Files plugin for WordPress is vulnerable to unauthorized access/modification/loss of data in all versions up to, and including, 2.0.0. This is due to the plugin not properly verifying that a user is authorized to perform an action in the &#34;bplde_save_document_library&#34;, &#34;bplde_get_all&#34;, &#34;bplde_get_single&#34;, and &#34;bplde_delete_document_library&#34; functions. This makes it possible for unauthenticated attackers to create, read, update, and delete arbitrary document_library posts. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-64107",
-    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.52 and below, manipulating internal settings may lead to RCE. Cursor detects path manipulation via forward slashes (./.cursor/./././././mcp.json etc.), and requires human approval to complete the operation. However, the same kind of manipulation using backslashes was not correctly detected, allowing an attacker who had already achieved prompt injection or some other level of control to overwrite sensitive editor files without approval on Windows machines. This issue is fixed in version 2.0. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-12139",
+    "descripcion": "The File Manager for Google Drive – Integrate Google Drive with WordPress plugin for WordPress is vulnerable to sensitive information exposure in all versions up to, and including, 1.5.3 via the &#34;get_localize_data&#34; function. This makes it possible for unauthenticated attackers to extract sensitive data including Google OAuth credentials (client_id and client_secret) and Google account email addresses. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-64106",
-    "descripcion": "Cursor is a code editor built for programming with AI. In versions 1.7.28 and below, an input validation flaw in Cursor&#39;s MCP server installation enables specially crafted deep-links to bypass the standard security warnings and conceal executed commands from users if they choose to accept the server. If an attacker is able to convince a victim to navigate to a malicious deeplink, the victim will not see the correct speedbump modal, and if they choose to accept, will execute commands specified by the attackers deeplink. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-11917",
+    "descripcion": "The WPeMatico RSS Feed Fetcher plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 2.8.11 via the wpematico_test_feed() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62722",
-    "descripcion": "LinkAce is a self-hosted archive to collect website links. In versions 2.3.1 and below, the social media sharing functionality contains a Stored Cross-Site Scripting (XSS) vulnerability that allows any authenticated user to inject arbitrary JavaScript by creating a link with malicious HTML in the title field. When a user views the link details page and the shareable links are rendered, the malicious JavaScript executes in their browser. This vulnerability affects multiple sharing services and can be exploited to steal session cookies, perform actions on behalf of users, or deliver malware. This issue is fixed in version 2.4.0. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-11373",
+    "descripcion": "The Popup and Slider Builder by Depicter – Add Email collecting Popup, Popup Modal, Coupon Popup, Image Slider, Carousel Slider, Post Slider Carousel plugin for WordPress is vulnerable to arbitrary file uploads due to a missing capability checks in the &#34;depicter-media-upload&#34; AJAX route in all versions up to, and including, 4.0.4. This makes it possible for authenticated attackers, with Contributor-level access and above, to upload limited files on the affected site&#39;s server. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-59596",
-    "descripcion": "CVE-2025-59596 is a denial-of-service vulnerability in Secure Access Windows client versions 12.0 to 14.10 that is addressed in version 14.12. If a local networking policy is active, attackers on an adjacent network may be able to send a crafted packet and cause the client system to crash. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-6027",
+    "descripcion": "The Ace User Management WordPress plugin through 2.0.3 does not properly validate that a password reset token is associated with the user who requested it, allowing any authenticated users, such as subscriber to reset the password of arbitrary accounts, including administrators. 05/11/2025 05/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-59595",
-    "descripcion": "CVE-2025-59595 is an internally discovered denial of service vulnerability in versions of Secure Access prior to 14.12. An attacker can send a specially crafted packet to a server in a non-default configuration and cause the server to crash. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-21079",
+    "descripcion": "Improper input validation in Samsung Members prior to version 5.5.01.3 allows remote attackers to connect arbitrary URL and launch arbitrary activity with Samsung Members privilege. User interaction is required for triggering this vulnerability. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-11-04",
-    "cve": "CVE-2025-62721",
-    "descripcion": "LinkAce is a self-hosted archive to collect website links. In versions 2.3.1 and below, authenticated RSS feed endpoints in the FeedController class fail to implement proper authorization checks, allowing any authenticated user to access all links, lists, and tags from all users in the system, regardless of their ownership or visibility settings. This issue is fixed in version 2.4.0. 04/11/2025 04/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-21078",
+    "descripcion": "Use of insufficiently random value of secretKey in Smart Switch prior to version 3.7.68.6 allows adjacent attackers to access backup data from applications. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
