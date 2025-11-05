@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-64151",
-    "descripcion": "Multiple Roboticsware products provided by Roboticsware PTE. LTD. register Windows services with unquoted file paths. A user with the write permission on the root directory of the system drive may execute arbitrary code with SYSTEM privilege. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-58337",
+    "descripcion": "An attacker with a valid read-only account can bypass Doris MCP Server’s read-only mode due to improper access control, allowing modifications that should have been prevented by read-only restrictions. Impact: Bypasses read-only mode; attackers with read-only access may perform unauthorized modifications. Recommended action for operators: Upgrade to version 0.6.0 as soon as possible (this release contains the fix). 05/11/2025 05/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-62225",
-    "descripcion": "Optical Disc Archive Software provided by Sony Corporation registers a Windows service with an unquoted file path. A user with the write permission on the root directory of the system drive may execute arbitrary code with SYSTEM privilege. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12469",
+    "descripcion": "The FunnelKit Automations – Email Marketing Automation and CRM for WordPress & WooCommerce plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 3.6.4.1. This is due to the plugin not properly verifying that a user is authorized to perform administrative actions in the `bwfan_test_email` AJAX handler. The nonce used for verification is publicly exposed to all visitors (including unauthenticated users) via the frontend JavaScript localization, and the `check_nonce()` function accepts low-privilege authenticated users who possess this nonce. This makes it possible for authenticated attackers, with Subscriber-level access and above, to send arbitrary emails from the site with attacker-controlled subject and body content. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-12388",
-    "descripcion": "The B Carousel Block – Responsive Image and Content Carousel plugin for WordPress is vulnerable to Server-Side Request Forgery in versions up to, and including, 1.1.5. This is due to the plugin not validating user-supplied URLs before passing them to the wp_remote_request() function. This makes it possible for authenticated attackers, with subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12468",
+    "descripcion": "The FunnelKit Automations – Email Marketing Automation and CRM for WordPress & WooCommerce plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.6.4.1 via the &#39;/wc-coupons/&#39; REST API endpoint. This is due to the endpoint being marked as a public API (`public_api = true`), which results in the endpoint being registered with `permission_callback => &#39;__return_true&#39;`, bypassing all authentication and capability checks. This makes it possible for unauthenticated attackers to extract sensitive data including all WooCommerce coupon codes, coupon IDs, and expiration status. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-12384",
-    "descripcion": "The Document Embedder – Embed PDFs, Word, Excel, and Other Files plugin for WordPress is vulnerable to unauthorized access/modification/loss of data in all versions up to, and including, 2.0.0. This is due to the plugin not properly verifying that a user is authorized to perform an action in the &#34;bplde_save_document_library&#34;, &#34;bplde_get_all&#34;, &#34;bplde_get_single&#34;, and &#34;bplde_delete_document_library&#34; functions. This makes it possible for unauthenticated attackers to create, read, update, and delete arbitrary document_library posts. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-12192",
+    "descripcion": "The Events Calendar plugin for WordPress is vulnerable to information disclosure in versions up to, and including, 6.15.9. The sysinfo REST endpoint compares the provided key to the stored opt-in key using a loose comparison, allowing unauthenticated attackers to send a boolean value and obtain the full system report whenever &#34;Yes, automatically share my system information with The Events Calendar support team&#34; setting is enabled. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-12139",
-    "descripcion": "The File Manager for Google Drive – Integrate Google Drive with WordPress plugin for WordPress is vulnerable to sensitive information exposure in all versions up to, and including, 1.5.3 via the &#34;get_localize_data&#34; function. This makes it possible for unauthenticated attackers to extract sensitive data including Google OAuth credentials (client_id and client_secret) and Google account email addresses. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-11987",
+    "descripcion": "The Visual Link Preview plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s visual-link-preview shortcode in versions up to, and including, 2.2.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-11917",
-    "descripcion": "The WPeMatico RSS Feed Fetcher plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 2.8.11 via the wpematico_test_feed() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-11820",
+    "descripcion": "The Graphina – Elementor Charts and Graphs plugin for WordPress is vulnerable to Stored Cross-Site Scripting via multiple chart widgets in all versions up to, and including, 3.1.8 due to insufficient input sanitization and output escaping on data attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The vulnerability affects multiple chart widgets including Area Chart, Line Chart, Column Chart, Donut Chart, Heatmap Chart, Radar Chart, Polar Chart, Pie Chart, Radial Chart, and Advance Data Table widgets. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-11373",
-    "descripcion": "The Popup and Slider Builder by Depicter – Add Email collecting Popup, Popup Modal, Coupon Popup, Image Slider, Carousel Slider, Post Slider Carousel plugin for WordPress is vulnerable to arbitrary file uploads due to a missing capability checks in the &#34;depicter-media-upload&#34; AJAX route in all versions up to, and including, 4.0.4. This makes it possible for authenticated attackers, with Contributor-level access and above, to upload limited files on the affected site&#39;s server. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-55108",
+    "descripcion": "The Control-M/Agent is vulnerable to unauthenticated remote code execution, arbitrary file read and write and similar unauthorized actions when mutual SSL/TLS authentication is not enabled (i.e. in the default configuration). NOTE: The vendor believes that this vulnerability only occurs when documented security best practices are not followed. BMC has always strongly recommended to use security best practices such as configuring SSL/TLS between Control-M Server and Agent. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 9.50 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-6027",
-    "descripcion": "The Ace User Management WordPress plugin through 2.0.3 does not properly validate that a password reset token is associated with the user who requested it, allowing any authenticated users, such as subscriber to reset the password of arbitrary accounts, including administrators. 05/11/2025 05/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12677",
+    "descripcion": "The KiotViet Sync plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.8.5 via the register_api_route() function in kiotvietsync/includes/public_actions/WebHookAction.php. This makes it possible for unauthenticated attackers to extract the webhook token value when configured. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-21079",
-    "descripcion": "Improper input validation in Samsung Members prior to version 5.5.01.3 allows remote attackers to connect arbitrary URL and launch arbitrary activity with Samsung Members privilege. User interaction is required for triggering this vulnerability. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-12676",
+    "descripcion": "The KiotViet Sync plugin for WordPress is vulnerable to authorizarion bypass in all versions up to, and including, 1.8.5. This is due to the plugin using a hardcoded password for authentication in the QueryControllerAdmin::authenticated function. This makes it possible for unauthenticated attackers to create and sync products. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-05",
-    "cve": "CVE-2025-21078",
-    "descripcion": "Use of insufficiently random value of secretKey in Smart Switch prior to version 3.7.68.6 allows adjacent attackers to access backup data from applications. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-12675",
+    "descripcion": "The KiotViet Sync plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the saveConfig() function in all versions up to, and including, 1.8.5. This makes it possible for authenticated attackers, with Subscriber-level access and above, to update the plugin&#39;s config. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
