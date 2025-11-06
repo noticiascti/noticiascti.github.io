@@ -1,5 +1,40 @@
 [
   {
+    "fecha": "2025-11-06",
+    "cve": "CVE-2025-64171",
+    "descripcion": "MARIN3R is a lightweight, CRD based envoy control plane for kubernetes. In versions 0.13.3 and below, there is a cross-namespace secret access vulnerability in the project&#39;s DiscoveryServiceCertificate which allows users to bypass RBAC and access secrets in unauthorized namespaces. This issue is fixed in version 0.13.4. 06/11/2025 06/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-06",
+    "cve": "CVE-2025-64164",
+    "descripcion": "Dataease is an open source data visualization analysis tool. In versions 2.10.14 and below, DataEase did not properly filter when establishing JDBC connections to Oracle, resulting in a risk of JNDI injection (Java Naming and Directory Interface injection). This issue is fixed in version 2.10.15. 06/11/2025 06/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-64163",
+    "descripcion": "DataEase is an open source data visualization analysis tool. In versions 2.10.14 and below, the vendor added a blacklist to filter ldap:// and ldaps://. However, omission of protection for the dns:// protocol results in an SSRF vulnerability. This issue is fixed in version 2.10.15. 06/11/2025 06/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-64114",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. Versions 5.5.2 - #151 and below allow authenticated administrators with plugin management privileges to execute arbitrary SQL commands against the database through its ClipBucket Custom Fields plugin. The vulnerabilities require the Custom Fields plugin to be installed and accessible, and can only be exploited by users with administrative access to the plugin interface. This issue is fixed in version 5.5.2 - #. 06/11/2025 06/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-62596",
+    "descripcion": "Youki is a container runtime written in Rust. In versions 0.5.6 and below, youki’s apparmor handling performs insufficiently strict write-target validation, and when combined with path substitution during pathname resolution, can allow writes to unintended procfs locations. While resolving a path component-by-component, a shared-mount race can substitute intermediate components and redirect the final target. This issue is fixed in version 0.5.7. 06/11/2025 06/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-62161",
+    "descripcion": "Youki is a container runtime written in Rust. In versions 0.5.6 and below, the initial validation of the source /dev/null is insufficient, allowing container escape when youki utilizes bind mounting the container&#39;s /dev/null as a file mask. This issue is fixed in version 0.5.7. 06/11/2025 06/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-05",
+    "cve": "CVE-2025-55278",
+    "descripcion": "Improper authentication in the API authentication middleware of HCL DevOps Loop allows authentication tokens to be accepted without proper validation of their expiration and cryptographic signature. As a result, an attacker could potentially use expired or tampered tokens to gain unauthorized access to sensitive resources and perform actions with elevated privileges. 06/11/2025 06/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2025-11-05",
     "cve": "CVE-2025-12779",
     "descripcion": "Improper handling of the authentication token in the Amazon WorkSpaces client for Linux, versions 2023.0 through 2024.8, may expose the authentication token for DCV-based WorkSpaces to other local users on the same client machine. Under certain circumstances, a local user may be able to extract another local user&#39;s authentication token from the shared client machine and access their WorkSpace. To mitigate this issue, users should upgrade to the Amazon WorkSpaces client for Linux version 2025.0 or later. 05/11/2025 05/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
@@ -13,40 +48,5 @@
     "fecha": "2025-11-05",
     "cve": "CVE-2025-60784",
     "descripcion": "A vulnerability in the XiaozhangBang Voluntary Like System V8.8 allows remote attackers to manipulate the zhekou parameter in the /topfirst.php Pay module, enabling unauthorized discounts. By sending a crafted HTTP POST request with zhekou set to an abnormally low value, an attacker can purchase votes at a reduced cost. Furthermore, by modifying the zid parameter, attackers can influence purchases made by other users, amplifying the impact. This issue stems from insufficient server-side validation of these parameters, potentially leading to economic loss and unfair manipulation of vote counts. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-05",
-    "cve": "CVE-2025-63334",
-    "descripcion": "PocketVJ CP PocketVJ-CP-v3 pvj version 3.9.1 contains an unauthenticated remote code execution vulnerability in the submit_opacity.php component. The application fails to sanitize user input in the opacityValue POST parameter before passing it to a shell command, allowing remote attackers to execute arbitrary commands with root privileges on the underlying system. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-05",
-    "cve": "CVE-2025-10853",
-    "descripcion": "A reflected cross-site scripting (XSS) vulnerability exists in the management console of multiple WSO2 products due to improper output encoding. By tampering with specific parameters, a malicious actor can inject arbitrary JavaScript into the response, leading to reflected XSS. Successful exploitation could result in UI manipulation, redirection to malicious websites, or data theft from the browser. However, session-related sensitive cookies are protected with the httpOnly flag, which mitigates the risk of session hijacking. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-05",
-    "cve": "CVE-2025-63418",
-    "descripcion": "A DOM-based Cross-Site Scripting (XSS) vulnerability in the SelfBest platform 2023.3 allows attackers to execute arbitrary JavaScript in the context of a logged-in user&#39;s session by injecting payloads via the browser&#39;s developer console. The vulnerability arises from the application&#39;s client-side code being susceptible to direct DOM manipulation without adequate sanitization or a Content Security Policy (CSP), potentially leading to account takeover and data theft. 05/11/2025 05/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-05",
-    "cve": "CVE-2025-63417",
-    "descripcion": "A Stored Cross-Site Scripting (XSS) vulnerability in the chat functionality of the SelfBest platform 2023.3 allows authenticated attackers to inject arbitrary web scripts or HTML via the chat message input field. This malicious content is stored and then executed in the context of other users&#39; browsers when they view the malicious message, potentially leading to session hijacking, account takeover, or other client-side attacks. 05/11/2025 05/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-05",
-    "cve": "CVE-2025-63416",
-    "descripcion": "** exclusively-hosted-service ** A Stored Cross-Site Scripting (XSS) vulnerability in the chat functionality of the SelfBest platform 2023.3 allows authenticated low-privileged attackers to execute arbitrary JavaScript in the context of other users&#39; sessions. This can be exploited to access administrative data and functions, leading to privilege escalation and full compromise of sensitive user data, as demonstrated by the ability to fetch and exfiltrate the contents of the /admin/users endpoint. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-05",
-    "cve": "CVE-2025-55343",
-    "descripcion": "Quipux 4.0.1 through e1774ac allows authenticated users to conduct SQL injection attacks via busqueda/busqueda.php txt_depe_codi, busqueda/busqueda.php txt_usua_codi, anexos_lista.php radi_temp, Administracion/listas/formArea_ajax.php codDepe, Administracion/listas/formDepeHijo_ajax.php codDepe, Administracion/listas/formDepePadre_ajax.php codInst, asociar_documentos/asociar_borrar_referencia.php radi_nume, asociar_documentos/asociar_documento_buscar_query.php radi_nume, asociar_documentos/asociar_documento_grabar.php txt_radi_nume, asociar_documentos/asociar_documento radi_nume, radicacion/buscar_usuario.php buscar_tipo, radicacion/formArea_ajax.php codDepe, radicacion/formDepeHijo_ajax.php codDepe, radicacion/formDepePadre_ajax.php codInst, radicacion/ver_datos_usuario.php destinatorio, reportes/reporte_TraspasoDocFisico.php verrad, tx/datos_imprimir_sobre.php txt_usua_codi, tx/datos_imprimir_sobre.php nume_radi_temp, tx/revertir_firma_digital_grabar.php txt_radi_nume, tx/tx_borrar_opcion_imp.php codigo_opc, tx/tx_realizar_tx.php txt_radicados, tx/tx_seguridad_documentos.php txt_radicados, or uploadFiles/cargar_doc_digitalizado_paginador.php txt_depe_codi. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-05",
-    "cve": "CVE-2025-5770",
-    "descripcion": "A reflected cross-site scripting (XSS) vulnerability exists in the authentication endpoints of multiple WSO2 products due to a lack of output encoding. A malicious actor can inject arbitrary JavaScript payloads into the authentication endpoint, which are reflected back in the response, enabling browser-based attacks. Exploitation may result in redirection to malicious websites, UI manipulation, or unauthorized data access from the victim’s browser. However, session-related cookies are protected with the httpOnly flag, which mitigates session hijacking via this vector. 05/11/2025 05/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
