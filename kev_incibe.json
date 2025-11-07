@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63783",
-    "descripcion": "A Broken Object Level Authorization (BOLA) vulnerability was discovered in the tRPC project mutation APIs (update, delete, add/remove tag) of the Onlook web application 0.2.32. The vulnerability exists because the API fails to verify the ownership or membership of the currently authenticated user for the requested project ID. An authenticated attacker can send a malicious request containing another user&#39;s project ID to unlawfully modify, delete, or manipulate tags on that project, which can severely compromise data integrity and availability. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-9458",
+    "descripcion": "A maliciously crafted PRT file, when parsed through certain Autodesk products, can force a Memory Corruption vulnerability. A malicious actor can leverage this vulnerability to execute arbitrary code in the context of the current process. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63689",
-    "descripcion": "Multiple SQL injection vulnerabilitites in ycf1998 money-pos system before commit 11f276bd20a41f089298d804e43cb1c39d041e59 (2025-09-14) allows a remote attacker to execute arbitrary code via the orderby parameter 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-64430",
+    "descripcion": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. In versions 4.2.0 through 7.5.3, and 8.0.0 through 8.3.1-alpha.1, there is a Server-Side Request Forgery (SSRF) vulnerability in the file upload functionality when trying to upload a Parse.File with uri parameter, allowing execution of an arbitrary URI. The vulnerability stems from a file upload feature in which Parse Server retrieves the file data from a URI that is provided in the request. A request to the provided URI is executed, but the response is not stored in Parse Server&#39;s file storage as the server crashes upon receiving the response. This issue is fixed in versions 7.5.4 and 8.4.0-alpha.1. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63687",
-    "descripcion": "An issue was discovered in rymcu forest thru commit f782e85 (2025-09-04) in function doBefore in file src/main/java/com/rymcu/forest/core/service/security/AuthorshipAspect.java, allowing authorized attackers to delete arbitrary users posts. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64347",
+    "descripcion": "Apollo Router Core is a configurable Rust graph router written to run a federated supergraph using Apollo Federation 2. Versions 1.61.12-rc.0 and below and 2.8.1-rc.0 allow unauthorized access to protected data through schema elements with access control directives (@authenticated, @requiresScopes, and @policy) that were renamed via @link imports. Router did not enforce renamed access control directives on schema elements (e.g. fields and types), allowing queries to bypass those element-level access controls. This issue is fixed in versions 1.61.12 and 2.8.1. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63686",
-    "descripcion": "There is an arbitrary file download vulnerability in GuoMinJim PersonManage thru commit 5a02b1ab208feacf3a34fc123c9381162afbaa95 (2020-11-23) in the document query function under the Download Center menu in the PersonManage system. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63718",
+    "descripcion": "A SQL injection vulnerability exists in the SourceCodester PQMS (Patient Queue Management System) 1.0 in the api_patient_schedule.php endpoint. The appointmentID parameter is not properly sanitized, allowing attackers to execute arbitrary SQL commands. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-58469",
-    "descripcion": "A cross-site request forgery (CSRF) vulnerability has been reported to affect QuLog Center. The remote attackers can then exploit the vulnerability to gain privileges or hijack user identities. We have already fixed the vulnerability in the following version: QuLog Center 1.8.2.927 ( 2025/09/17 ) and later 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.20 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63716",
+    "descripcion": "The SourceCodester Leads Manager Tool v1.0 is vulnerable to Cross-Site Request Forgery (CSRF) attacks that allow unauthorized state-changing operations. The application lacks CSRF protection mechanisms such as anti-CSRF tokens or same-origin verification for critical endpoints. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-58465",
-    "descripcion": "A cross-site scripting (XSS) vulnerability has been reported to affect Download Station. If a remote attacker gains a user account, they can then exploit the vulnerability to bypass security mechanisms or read application data. We have already fixed the vulnerability in the following versions: Download Station 5.10.0.305 ( 2025/09/16 ) and later Download Station 5.10.0.304 ( 2025/09/08 ) and later 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.20 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63714",
+    "descripcion": "Cross-Site Scripting (XSS) vulnerability in SourceCodester User Account Generator 1.0 allows remote attackers to execute arbitrary JavaScript code in the context of the user&#39;s browser session via crafted input in the Username Prefix field. The vulnerability exists due to improper sanitization of user-supplied input when rendering generated account data to the DOM, allowing persistent injection of malicious HTML elements that execute when clicked by users. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-58464",
-    "descripcion": "A relative path traversal vulnerability has been reported to affect QuMagie. If a remote attacker, they can then exploit the vulnerability to read the contents of unexpected files or system data. We have already fixed the vulnerability in the following version: QuMagie 2.7.3 and later 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63713",
+    "descripcion": "Cross-Site Scripting (XSS) vulnerability in SourceCodester &#34;MatchMaster&#34; 1.0 allows remote attackers to inject arbitrary web script or HTML via crafted input in the custom test creation feature. The vulnerability exists because the application fails to properly sanitize user-supplied input in test titles and matching pair items before rendering them in the DOM during test execution. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-58463",
-    "descripcion": "A relative path traversal vulnerability has been reported to affect Download Station. If a remote attacker gains an administrator account, they can then exploit the vulnerability to read the contents of unexpected files or system data. We have already fixed the vulnerability in the following versions: Download Station 5.10.0.305 ( 2025/09/16 ) and later Download Station 5.10.0.304 ( 2025/09/08 ) and later 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-57697",
+    "descripcion": "AstrBot Project v3.5.22 has an arbitrary file read vulnerability in function _encode_image_bs64. Since the _encode_image_bs64 function defined in entities.py opens the image specified by the user in the request body and returns the image content as a base64-encoded string without checking the legitimacy of the image path, attackers can construct a series of malicious URLs to read any specified file, resulting in sensitive data leakage. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-57712",
-    "descripcion": "A path traversal vulnerability has been reported to affect Qsync Central. If a remote attacker gains a user account, they can then exploit the vulnerability to read the contents of unexpected files or system data. We have already fixed the vulnerability in the following version: Qsync Central 5.0.0.3 ( 2025/08/28 ) and later 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12873",
+    "descripcion": "A security flaw has been discovered in Campcodes School File Management 1.0. This affects an unknown part of the file /admin/update_user.php. Performing manipulation of the argument user_id results in sql injection. It is possible to initiate the attack remotely. The exploit has been released to the public and may be exploited. 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-57706",
-    "descripcion": "A cross-site scripting (XSS) vulnerability has been reported to affect File Station 5. If a remote attacker gains a user account, they can then exploit the vulnerability to bypass security mechanisms or read application data. We have already fixed the vulnerability in the following version: File Station 5 5.5.6.5018 and later 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.20 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12858",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
