@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2025-11-07",
+    "cve": "CVE-2025-46413",
+    "descripcion": "Use of password hash with insufficient computational effort issue exists in BUFFALO Wi-Fi router &#39;WSR-1800AX4 series&#39;. When WPS is enabled, PIN code and/or Wi-Fi password may be obtained by an attacker. 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-07",
+    "cve": "CVE-2025-10966",
+    "descripcion": "curl&#39;s code for managing SSH connections when SFTP was done using the wolfSSH powered backend was flawed and missed host verification mechanisms. This prevents curl from detecting MITM attackers and more. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-07",
+    "cve": "CVE-2025-64346",
+    "descripcion": "archives is a Go library for extracting archives (tar, zip, etc.). Version 1.0.0 does not prevent a malicious user to feed a specially crafted archive to the library causing RCE, modification of files or other malignancies in the context of whatever the user is running this library as, through the program that imports it. Severity depends on user permissions, environment and how arbitrary archives are passed. This issue is fixed in version 1.0.1. 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-07",
     "cve": "CVE-2025-64343",
     "descripcion": "(conda) Constructor is a tool that enables users to create installers for conda package collections. In versions 3.12.2 and below, the installation directory inherits permissions from its parent directory. Outside of restricted directories, the permissions are very permissive and often allow write access by authenticated users. Any logged in user can make modifications during the installation for both single-user and all-user installations. This constitutes a local attack vector if the installation is in a directory local users have access to. For single-user installations in a shared directory, these permissions persist after the installation. This issue is fixed in version 3.13.0. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2025-11-07",
     "cve": "CVE-2025-64329",
     "descripcion": "containerd is an open-source container runtime. Versions 1.7.28 and below, 2.0.0-beta.0 through 2.0.6, 2.1.0-beta.0 through 2.1.4, and 2.2.0-beta.0 through 2.2.0-rc.1 contain a bug in the CRI Attach implementation where a user can exhaust memory on the host due to goroutine leaks. This issue is fixed in versions 1.7.29, 2.0.7, 2.1.5 and 2.2.0. To workaround this vulnerability, users can set up an admission controller to control accesses to pods/attach resources. 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-4522",
-    "descripcion": "The IDonate – Blood Donation, Request And Donor Management System plugin for WordPress is vulnerable to Insecure Direct Object Reference via the admin_post_donor_delete() function in versions 2.0.0 to 2.1.9. By supplying an arbitrary user_id parameter value to the wp_delete_user() function, authenticated attackers, with Subscriber-level access and above could delete arbitrary user accounts, including those of administrators. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-4519",
-    "descripcion": "The IDonate – Blood Donation, Request And Donor Management System plugin for WordPress is vulnerable to Privilege Escalation due to a missing capability check on the idonate_donor_password() function in versions 2.1.5 to 2.1.9. This makes it possible for authenticated attackers, with Subscriber-level access and above, to initiate a password reset for any user (including administrators) and elevate their privileges for full site takeover. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12352",
-    "descripcion": "The Gravity Forms plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the copy_post_image() function in all versions up to, and including, 2.9.20. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. This only impacts sites that have allow_url_fopen set to `On`, the post creation form enabled along with a file upload field for the post 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
