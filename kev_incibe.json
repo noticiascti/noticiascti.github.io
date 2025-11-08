@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2025-11-08",
+    "cve": "CVE-2025-12621",
+    "descripcion": "The Flexible Refund and Return Order for WooCommerce plugin for WordPress is vulnerable to unauthorized modification of data due to a misconfigured capability check on the &#39;create_refund&#39; function in all versions up to, and including, 1.0.42. This makes it possible for authenticated attackers, with Contributor-level access and above, to update the status of refund requests, including approving and refusing refunds. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12498",
+    "descripcion": "The EventPrime – Events Calendar, Bookings and Tickets plugin for WordPress is vulnerable to unauthorized booking note creation due to a missing capability check on the &#39;booking_add_notes&#39; function in all versions up to, and including, 4.2.0.0. This makes it possible for authenticated attackers, with Subscriber-level access and above, to add a note to the backend view of any booking. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-9334",
+    "descripcion": "The Better Find and Replace – AI-Powered Suggestions plugin for WordPress is vulnerable to Limited Code Injection in all versions up to, and including, 1.7.7. This is due to insufficient input validation and restriction on the &#39;rtafar_ajax&#39; function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to call arbitrary plugin functions and execute code within those functions. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-08",
     "cve": "CVE-2025-7663",
     "descripcion": "The Ovatheme Events Manager plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on several functions in the /class-ovaem-ajax.php file in all versions up to, and including, 1.8.6. This makes it possible for unauthenticated attackers to delete ticket files, download tickets, and more. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2025-11-08",
     "cve": "CVE-2025-12125",
     "descripcion": "The HTML Forms – Simple WordPress Forms Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.5.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-08",
-    "cve": "CVE-2025-12112",
-    "descripcion": "The Insert Headers and Footers Code – HT Script plugin for WordPress is vulnerable to Stored Cross-Site Scripting via adding scripts in all versions up to, and including, 1.1.6 due to insufficient capability checks. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-08",
-    "cve": "CVE-2025-12064",
-    "descripcion": "The WP2Social Auto Publish plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via PostMessage in all versions up to, and including, 2.4.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-08",
-    "cve": "CVE-2025-12042",
-    "descripcion": "The Course Booking System plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check in the csv-export.php file in all versions up to, and including, 6.1.5. This makes it possible for unauthenticated attackers to directly access the file and obtain an export of all booking data. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
