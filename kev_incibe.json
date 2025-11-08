@@ -1,5 +1,20 @@
 [
   {
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-64491",
+    "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Versions 7.14.7 and below allow unauthenticated reflected Cross-Site Scripting (XSS). Successful exploitation could lead to full account takeover, for example by altering the login form to send credentials to an attacker-controlled server. As a reflected XSS issue, exploitation requires the victim to open a crafted malicious link, which can be delivered via phishing, social media, or other communication channels. This issue is fixed in version 7.14.8. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-64490",
+    "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Versions 7.14.7 and prior, 8.0.0-beta.1 through 8.9.0 allow a low-privileged user with a restrictive role to view and create work items through the Resource Calendar and project screens, even when the related modules (Projects, Project Tasks, Tasks, Leads, Accounts, Meetings, Calls) are explicitly set to Disabled/None in Role Management. This indicates inconsistent ACL/RBAC enforcement across modules and views, resulting in unauthorized data exposure and modification. This issue is fixed in versions 7.14.8 and 8.9.1. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-64489",
+    "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Versions 7.14.7 and prior, 8.0.0-beta.1 through 8.9.0 contain a privilege escalation vulnerability where user sessions are not invalidated upon account deactivation. An inactive user with an active session can continue to access the application and, critically, can self-reactivate their account. This undermines administrative controls and allows unauthorized persistence. This issue is fixed in versions 7.14.8 and 8.9.1. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2025-11-07",
     "cve": "CVE-2025-64488",
     "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. In versions 7.14.7 and below and 8.0.0-beta.1 through 8.9.0 8.0.0-beta.1, an attacker can craft a malicious call_id that alters the logic of the SQL query or injects arbitrary SQL. An attack can lead to unauthorized data access and data ex-filtration, complete database compromise, and other various issues. This issue is fixed in versions 7.14.8 and 8.9.1. 08/11/2025 08/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -33,20 +48,5 @@
     "fecha": "2025-11-07",
     "cve": "CVE-2025-12908",
     "descripcion": "Insufficient validation of untrusted input in Downloads in Google Chrome on Android prior to 140.0.7339.80 allowed a remote attacker to perform domain spoofing via a crafted HTML page. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12907",
-    "descripcion": "Insufficient validation of untrusted input in Devtools in Google Chrome prior to 140.0.7339.80 allowed a remote attacker to execute arbitrary code via user action in Devtools. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12906",
-    "descripcion": "Inappropriate implementation in Permissions in Google Chrome prior to 140.0.7339.80 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12905",
-    "descripcion": "Inappropriate implementation in Downloads in Google Chrome on Windows prior to 140.0.7339.80 allowed a remote attacker to bypass Mark of the Web via a crafted HTML page. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
