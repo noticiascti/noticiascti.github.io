@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-08",
-    "cve": "CVE-2025-64491",
-    "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Versions 7.14.7 and below allow unauthenticated reflected Cross-Site Scripting (XSS). Successful exploitation could lead to full account takeover, for example by altering the login form to send credentials to an attacker-controlled server. As a reflected XSS issue, exploitation requires the victim to open a crafted malicious link, which can be delivered via phishing, social media, or other communication channels. This issue is fixed in version 7.14.8. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-7663",
+    "descripcion": "The Ovatheme Events Manager plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on several functions in the /class-ovaem-ajax.php file in all versions up to, and including, 1.8.6. This makes it possible for unauthenticated attackers to delete ticket files, download tickets, and more. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-08",
-    "cve": "CVE-2025-64490",
-    "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Versions 7.14.7 and prior, 8.0.0-beta.1 through 8.9.0 allow a low-privileged user with a restrictive role to view and create work items through the Resource Calendar and project screens, even when the related modules (Projects, Project Tasks, Tasks, Leads, Accounts, Meetings, Calls) are explicitly set to Disabled/None in Role Management. This indicates inconsistent ACL/RBAC enforcement across modules and views, resulting in unauthorized data exposure and modification. This issue is fixed in versions 7.14.8 and 8.9.1. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-12353",
+    "descripcion": "The WPFunnels – The Easiest Funnel Builder For WordPress And WooCommerce To Collect Leads And Increase Sales plugin for WordPress is vulnerable to unauthorized user registration in all versions up to, and including, 3.6.2. This is due to the plugin relying on a user controlled value &#39;optin_allow_registration&#39; to determine if user registration is allowed, instead of the site-specific setting. This makes it possible for unauthenticated attackers to register new user accounts, even when user registration is disabled. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-08",
-    "cve": "CVE-2025-64489",
-    "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Versions 7.14.7 and prior, 8.0.0-beta.1 through 8.9.0 contain a privilege escalation vulnerability where user sessions are not invalidated upon account deactivation. An inactive user with an active session can continue to access the application and, critically, can self-reactivate their account. This undermines administrative controls and allows unauthorized persistence. This issue is fixed in versions 7.14.8 and 8.9.1. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-12193",
+    "descripcion": "The Mang Board WP plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;mp&#39; parameter in all versions up to, and including, 2.3.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-64488",
-    "descripcion": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. In versions 7.14.7 and below and 8.0.0-beta.1 through 8.9.0 8.0.0-beta.1, an attacker can craft a malicious call_id that alters the logic of the SQL query or injects arbitrary SQL. An attack can lead to unauthorized data access and data ex-filtration, complete database compromise, and other various issues. This issue is fixed in versions 7.14.8 and 8.9.1. 08/11/2025 08/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12177",
+    "descripcion": "The Download Manager plugin for WordPress is vulnerable to unauthorized access due to a hardcoded Cron key used in the deleteExpired() and clearTempDataCPCron() functions in all versions up to, and including, 3.3.30. This makes it possible for unauthenticated attackers to trigger these cron jobs leading to deletion of expired posts and clearing cache. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-64486",
-    "descripcion": "calibre is an e-book manager. In versions 8.13.0 and prior, calibre does not validate filenames when handling binary assets in FB2 files, allowing an attacker to write arbitrary files on the filesystem when viewing or converting a malicious FictionBook file. This can be leveraged to achieve arbitrary code execution. This issue is fixed in version 8.14.0. 08/11/2025 08/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12167",
+    "descripcion": "The Contact Form 7 AWeber Extension plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;wp_ajax_aweber_logreset&#39; AJAX endpoint in all versions up to, and including, 0.1.42. This makes it possible for authenticated attackers, with Subscriber-level access and above, to reset the AWeber logs. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-64485",
-    "descripcion": "CVAT is an open source interactive video and image annotation tool for computer vision. In versions 2.4.0 through 2.48.1, a malicious CVAT user with at least the User global role may create files in the root of the mounted file share, or overwrite existing files. If no file share is mounted, the user will be able to create files in the share directory of the import worker container, potentially filling up disk space. This issue is fixed in version 2.49.0. 08/11/2025 08/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12161",
+    "descripcion": "The Smart Auto Upload Images plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the auto-image creation functionality in all versions up to, and including, 1.2.0. This makes it possible for authenticated attackers, with Contributor-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12911",
-    "descripcion": "Inappropriate implementation in Permissions in Google Chrome prior to 140.0.7339.80 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12125",
+    "descripcion": "The HTML Forms – Simple WordPress Forms Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.5.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12910",
-    "descripcion": "Inappropriate implementation in Passkeys in Google Chrome prior to 140.0.7339.80 allowed a local attacker to obtain potentially sensitive information via debug logs. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12112",
+    "descripcion": "The Insert Headers and Footers Code – HT Script plugin for WordPress is vulnerable to Stored Cross-Site Scripting via adding scripts in all versions up to, and including, 1.1.6 due to insufficient capability checks. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12909",
-    "descripcion": "Insufficient policy enforcement in Devtools in Google Chrome prior to 140.0.7339.80 allowed a remote attacker to leak cross-origin data via Devtools. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12064",
+    "descripcion": "The WP2Social Auto Publish plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via PostMessage in all versions up to, and including, 2.4.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-07",
-    "cve": "CVE-2025-12908",
-    "descripcion": "Insufficient validation of untrusted input in Downloads in Google Chrome on Android prior to 140.0.7339.80 allowed a remote attacker to perform domain spoofing via a crafted HTML page. (Chromium security severity: Low) 08/11/2025 08/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-08",
+    "cve": "CVE-2025-12042",
+    "descripcion": "The Course Booking System plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check in the csv-export.php file in all versions up to, and including, 6.1.5. This makes it possible for unauthenticated attackers to directly access the file and obtain an export of all booking data. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
