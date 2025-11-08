@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-9458",
-    "descripcion": "A maliciously crafted PRT file, when parsed through certain Autodesk products, can force a Memory Corruption vulnerability. A malicious actor can leverage this vulnerability to execute arbitrary code in the context of the current process. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-7700",
+    "descripcion": "A flaw was found in FFmpeg’s ALS audio decoder, where it does not properly check for memory allocation failures. This can cause the application to crash when processing certain malformed audio files. While it does not lead to data theft or system control, it can be used to disrupt services and cause a denial of service. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-64430",
-    "descripcion": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. In versions 4.2.0 through 7.5.3, and 8.0.0 through 8.3.1-alpha.1, there is a Server-Side Request Forgery (SSRF) vulnerability in the file upload functionality when trying to upload a Parse.File with uri parameter, allowing execution of an arbitrary URI. The vulnerability stems from a file upload feature in which Parse Server retrieves the file data from a URI that is provided in the request. A request to the provided URI is executed, but the response is not stored in Parse Server&#39;s file storage as the server crashes upon receiving the response. This issue is fixed in versions 7.5.4 and 8.4.0-alpha.1. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-64432",
+    "descripcion": "KubeVirt is a virtual machine management add-on for Kubernetes. Versions 1.5.3 and below, and 1.6.0 contained a flawed implementation of the Kubernetes aggregation layer&#39;s authentication flow which could enable bypass of RBAC controls. It was discovered that the virt-api component fails to correctly authenticate the client when receiving API requests over mTLS. In particular, it fails to validate the CN (Common Name) field in the received client TLS certificates against the set of allowed values defined in the extension-apiserver-authentication configmap. Failre to validate certain fields in the client TLS certificate may allow an attacker to bypass existing RBAC controls by directly communicating with the aggregated API server, impersonating the Kubernetes API server and its aggregator component. This issue is fixed in versions 1.5.3 and 1.6.1. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-64347",
-    "descripcion": "Apollo Router Core is a configurable Rust graph router written to run a federated supergraph using Apollo Federation 2. Versions 1.61.12-rc.0 and below and 2.8.1-rc.0 allow unauthorized access to protected data through schema elements with access control directives (@authenticated, @requiresScopes, and @policy) that were renamed via @link imports. Router did not enforce renamed access control directives on schema elements (e.g. fields and types), allowing queries to bypass those element-level access controls. This issue is fixed in versions 1.61.12 and 2.8.1. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-64431",
+    "descripcion": "Zitadel is an open source identity management platform. Versions 4.0.0-rc.1 through 4.6.2 are vulnerable to secure Direct Object Reference (IDOR) attacks through its V2Beta API, allowing authenticated users with specific administrator roles within one organization to access and modify data belonging to other organizations. Note that this vulnerability is limited to organization-level data (name, domains, metadata). No other related data (such as users, projects, applications, etc.) is affected. This issue is fixed in version 4.6.3. 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63718",
-    "descripcion": "A SQL injection vulnerability exists in the SourceCodester PQMS (Patient Queue Management System) 1.0 in the api_patient_schedule.php endpoint. The appointmentID parameter is not properly sanitized, allowing attackers to execute arbitrary SQL commands. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63717",
+    "descripcion": "The change password functionality at /pet_grooming/admin/change_pass.php in SourceCodester Pet Grooming Management Software 1.0 is vulnerable to Cross-Site Request Forgery (CSRF) attacks. The application does not implement adequate anti-CSRF tokens or same-site cookie restrictions, allowing attackers to trick authenticated users into unknowingly changing their passwords. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63716",
-    "descripcion": "The SourceCodester Leads Manager Tool v1.0 is vulnerable to Cross-Site Request Forgery (CSRF) attacks that allow unauthorized state-changing operations. The application lacks CSRF protection mechanisms such as anti-CSRF tokens or same-origin verification for critical endpoints. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-36186",
+    "descripcion": "IBM Db2 12.1.0 through 12.1.3 for Linux, UNIX and Windows (includes Db2 Connect Server) under specific configurations could allow a local user to execute malicious code that escalate their privileges to root due to execution of unnecessary privileges operated at a higher than minimum level. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63714",
-    "descripcion": "Cross-Site Scripting (XSS) vulnerability in SourceCodester User Account Generator 1.0 allows remote attackers to execute arbitrary JavaScript code in the context of the user&#39;s browser session via crafted input in the Username Prefix field. The vulnerability exists due to improper sanitization of user-supplied input when rendering generated account data to the DOM, allowing persistent injection of malicious HTML elements that execute when clicked by users. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-36185",
+    "descripcion": "IBM Db2 12.1.0 through 12.1.2 for Linux, UNIX and Windows (includes Db2 Connect Server) could allow a local user to cause a denial of service due to improper neutralization of special elements in data query logic. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-63713",
-    "descripcion": "Cross-Site Scripting (XSS) vulnerability in SourceCodester &#34;MatchMaster&#34; 1.0 allows remote attackers to inject arbitrary web script or HTML via crafted input in the custom test creation feature. The vulnerability exists because the application fails to properly sanitize user-supplied input in test titles and matching pair items before rendering them in the DOM during test execution. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-36136",
+    "descripcion": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.3 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local user to cause a denial of service due to the database monitor script incorrectly detecting that the instance is still starting under specific conditions. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-57697",
-    "descripcion": "AstrBot Project v3.5.22 has an arbitrary file read vulnerability in function _encode_image_bs64. Since the _encode_image_bs64 function defined in entities.py opens the image specified by the user in the request body and returns the image content as a base64-encoded string without checking the legitimacy of the image path, attackers can construct a series of malicious URLs to read any specified file, resulting in sensitive data leakage. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-36135",
+    "descripcion": "IBM Sterling B2B Integrator 6.0.0.0 through 6.1.2.7_1, 6.2.0.0 through 6.2.0.5, and 6.2.1.0 and IBM Sterling File Gateway 6.0.0.0 through 6.1.2.7_1, 6.2.0.0 through 6.2.0.5, and 6.2.1.0 is vulnerable to cross-site scripting. This vulnerability allows an authenticated user to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-12873",
-    "descripcion": "A security flaw has been discovered in Campcodes School File Management 1.0. This affects an unknown part of the file /admin/update_user.php. Performing manipulation of the argument user_id results in sql injection. It is possible to initiate the attack remotely. The exploit has been released to the public and may be exploited. 07/11/2025 07/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-36131",
+    "descripcion": "IBM Db2 11.1.0 through 11.1.4.7, 11.5.0 through 11.5.9, and 12.1.0 through 12.1.3 for Linux, UNIX and Windows (includes Db2 Connect Server) clpplus command exposes user credentials to the terminal which could be obtained by a third party with physical access to the system. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-07",
-    "cve": "CVE-2025-12858",
-    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 07/11/2025 07/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-36008",
+    "descripcion": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.3 for Linux, UNIX and Windows (includes Db2 Connect Server) could allow an authenticated user to cause a denial of service due to improper allocation of resources. 07/11/2025 07/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
