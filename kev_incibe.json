@@ -1,5 +1,15 @@
 [
   {
+    "fecha": "2025-11-09",
+    "cve": "CVE-2025-40109",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: rng - Ensure set_ent is always present Ensure that set_ent is always set since only drbg provides it. 09/11/2025 09/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-09",
+    "cve": "CVE-2025-40108",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: serial: qcom-geni: Fix blocked task Revert commit 1afa70632c39 (&#34;serial: qcom-geni: Enable PM runtime for serial driver&#34;) and its dependent commit 86fa39dd6fb7 (&#34;serial: qcom-geni: Enable Serial on SA8255p Qualcomm platforms&#34;) because the first one causes regression - hang task on Qualcomm RB1 board (QRB2210) and unable to use serial at all during normal boot: INFO: task kworker/u16:0:12 blocked for more than 42 seconds. Not tainted 6.17.0-rc1-00004-g53e760d89498 #9 &#34;echo 0 > /proc/sys/kernel/hung_task_timeout_secs&#34; disables this message. task:kworker/u16:0 state:D stack:0 pid:12 tgid:12 ppid:2 task_flags:0x4208060 flags:0x00000010 Workqueue: async async_run_entry_fn Call trace: __switch_to+0xe8/0x1a0 (T) __schedule+0x290/0x7c0 schedule+0x34/0x118 rpm_resume+0x14c/0x66c rpm_resume+0x2a4/0x66c rpm_resume+0x2a4/0x66c rpm_resume+0x2a4/0x66c __pm_runtime_resume+0x50/0x9c __driver_probe_device+0x58/0x120 driver_probe_device+0x3c/0x154 __driver_attach_async_helper+0x4c/0xc0 async_run_entry_fn+0x34/0xe0 process_one_work+0x148/0x290 worker_thread+0x2c4/0x3e0 kthread+0x118/0x1c0 ret_from_fork+0x10/0x20 The issue was reported on 12th of August and was ignored by author of commits introducing issue for two weeks. Only after complaining author produced a fix which did not work, so if original commits cannot be reliably fixed for 5 weeks, they obviously are buggy and need to be dropped. 09/11/2025 09/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
     "fecha": "2025-11-08",
     "cve": "CVE-2025-12916",
     "descripcion": "A vulnerability was determined in Sangfor Operation and Maintenance Security Management System 3.0. Impacted is an unknown function of the file /fort/portal_login of the component Frontend. This manipulation of the argument loginUrl causes command injection. The attack may be initiated remotely. The exploit has been publicly disclosed and may be utilized. Upgrading to version 3.0.11 and 3.0.12 is recommended to address this issue. It is advisable to upgrade the affected component. 09/11/2025 09/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -38,15 +48,5 @@
     "fecha": "2025-11-08",
     "cve": "CVE-2025-12092",
     "descripcion": "The CYAN Backup plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the &#39;delete&#39; functionality in all versions up to, and including, 2.5.4. This makes it possible for authenticated attackers, with Administrator-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-08",
-    "cve": "CVE-2025-11980",
-    "descripcion": "The Quick Featured Images plugin for WordPress is vulnerable to SQL Injection via the &#39;delete_orphaned&#39; function in all versions up to, and including, 13.7.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Editor-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database, granted they can convince an author-level user or higher to add a malicious custom field value. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-08",
-    "cve": "CVE-2025-11967",
-    "descripcion": "The Mail Mint plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the process_contact_attribute_import function in all versions up to, and including, 1.18.10. This makes it possible for authenticated attackers, with Administrator-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 08/11/2025 08/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
