@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-11",
+    "cve": "CVE-2025-7633",
+    "descripcion": "Zohocorp ManageEngine Exchange Reporter Plus versions 5723 and below are vulnerable to the Stored XSS Vulnerability in the Custom report. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-7632",
+    "descripcion": "Zohocorp ManageEngine Exchange Reporter Plus versions 5723 and below are vulnerable to the Stored XSS Vulnerability in the Public Folders report. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-7430",
+    "descripcion": "Zohocorp ManageEngine Exchange Reporter Plus versions 5723 and below are vulnerable to the Stored XSS Vulnerability in the Folder Message Count and Size report. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-12953",
+    "descripcion": "The Classified Listing – AI-Powered Classified ads & Business Directory Plugin plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#34;rtcl_ajax_add_listing_type&#34;, &#34;rtcl_ajax_update_listing_type&#34;, and &#34;rtcl_ajax_delete_listing_type&#34; function in all versions up to, and including, 5.2.0. This makes it possible for authenticated attackers, with subscriber level access and above, to add, update, or delete listing types. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-12846",
+    "descripcion": "The Blocksy Companion plugin for WordPress is vulnerable to authenticated arbitrary file upload in all versions up to, and including, 2.1.19. This is due to insufficient file type validation detecting SVG files, allowing double extension files to bypass sanitization while being accepted as a valid SVG file. This makes it possible for authenticated attackers, with author level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-12788",
+    "descripcion": "The Hydra Booking — Appointment Scheduling & Booking Calendar plugin for WordPress is vulnerable to missing payment verification to unauthenticated payment bypass in all versions up to, and including, 1.1.27. This is due to the plugin accepting client-controlled payment confirmation data in the tfhb_meeting_paypal_payment_confirmation_callback function without server-side verification with PayPal&#39;s API. This makes it possible for unauthenticated attackers to bypass payment requirements and confirm bookings as paid without any actual payment transaction occurring. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-12787",
+    "descripcion": "The Hydra Booking — Appointment Scheduling & Booking Calendar plugin for WordPress is vulnerable to unauthorized booking cancellation in all versions up to, and including, 1.1.27. This is due to the plugin&#39;s &#34;tfhb_meeting_form_submit_callback&#34; function using insufficiently random values to generate booking cancellation tokens, combined with a globally shared nonce. This makes it possible for unauthenticated attackers to cancel arbitrary bookings via brute force attacks against the tfhb_meeting_form_cencel AJAX endpoint. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-12539",
+    "descripcion": "The TNC Toolbox: Web Performance plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.4.2. This is due to the plugin storing cPanel API credentials (hostname, username, and API key) in files within the web-accessible wp-content directory without adequate protection in the &#34;Tnc_Wp_Toolbox_Settings::save_settings&#34; function. This makes it possible for unauthenticated attackers to retrieve these credentials and use them to interact with the cPanel API, which can lead to arbitrary file uploads, remote code execution, and full compromise of the hosting environment. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-11",
+    "cve": "CVE-2017-20210",
+    "descripcion": "Photo Station 5.4.1 & 5.2.7 include the security fix for the vulnerability related to the XMR mining programs identified by internal research. 11/11/2025 11/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-11",
     "cve": "CVE-2025-9524",
     "descripcion": "The VAPIX API port.cgi did not have sufficient input validation, which may result in process crashes and impact usability. This vulnerability can only be exploited after authenticating with a viewer- operator- or administrator-privileged service account. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-9055",
-    "descripcion": "The VAPIX Edge storage API that allowed a privilege escalation, enabling a VAPIX administrator-privileged user to gain Linux Root privileges. This flaw can only be exploited after authenticating with an administrator-privileged service account. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-8998",
-    "descripcion": "It was possible to upload files with a specific name to a temporary directory, which may result in process crashes and impact usability. This flaw can only be exploited after authenticating with an operator- or administrator-privileged service account. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-7429",
-    "descripcion": "Zohocorp ManageEngine Exchange Reporter Plus versions 5723 and below are vulnerable to the Stored XSS Vulnerability in the Mails Deleted or Moved report. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-10714",
-    "descripcion": "AXIS Optimizer was vulnerable to an unquoted search path vulnerability, which could potentially lead to privilege escalation within Microsoft Windows operating system. This vulnerability can only be exploited if the attacker has access to the local Windows machine and sufficient access rights (administrator) to write data into the installation path of AXIS Optimizer. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-8108",
-    "descripcion": "An ACAP configuration file has improper permissions and lacks input validation, which could potentially lead to privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-6779",
-    "descripcion": "An ACAP configuration file has improper permissions, which could allow command injection and potentially lead to privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-6571",
-    "descripcion": "A 3rd-party component exposed its password in process arguments, allowing for low-privileged users to access it. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-6298",
-    "descripcion": "ACAP applications can gain elevated privileges due to improper input validation, potentially leading to privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-5718",
-    "descripcion": "The ACAP Application framework could allow privilege escalation through a symlink attack. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
