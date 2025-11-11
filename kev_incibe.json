@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-64529",
-    "descripcion": "SpiceDB is an open source database system for creating and managing security-critical application permissions. In versions prior to 1.45.2, users who use the exclusion operator somewhere in their authorization schema; have configured their SpiceDB server such that `--write-relationships-max-updates-per-call` is bigger than 6500; and issue calls to WriteRelationships with a large enough number of updates that cause the payload to be bigger than what their datastore allows; will receive a successful response from their `WriteRelationships` call, when in reality that call failed, and receive incorrect permission check results, if those relationships had to be read to resolve the relation involving the exclusion. Version 1.45.2 contains a patch for the issue. As a workaround, set `--write-relationships-max-updates-per-call` to `1000`. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42940",
+    "descripcion": "SAP CommonCryptoLib does not perform necessary boundary checks during pre-authentication parsing of manipulated ASN.1 data over the network. This may result in memory corruption followed by an application crash, hence leading to a high impact on availability. There is no impact on confidentiality or integrity. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-64522",
-    "descripcion": "Soft Serve is a self-hostable Git server for the command line. Versions prior to 0.11.1 have a SSRF vulnerability where webhook URLs are not validated, allowing repository administrators to create webhooks targeting internal services, private networks, and cloud metadata endpoints. Version 0.11.1 fixes the vulnerability. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42924",
+    "descripcion": "SAP S/4HANA landscape SAP E-Recruiting BSP allows an unauthenticated attacker to craft malicious links, when clicked the victim could be redirected to the page controlled by the attacker. This has low impact on confidentiality and integrity of the application with no impact on availability. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-64519",
-    "descripcion": "TorrentPier is an open source BitTorrent Public/Private tracker engine, written in php. In versions up to and including 2.8.8, an authenticated SQL injection vulnerability exists in the moderator control panel (`modcp.php`). Users with moderator permissions can exploit this vulnerability by supplying a malicious `topic_id` (`t`) parameter. This allows an authenticated moderator to execute arbitrary SQL queries, leading to the potential disclosure, modification, or deletion of any data in the database. Although it requires moderator privileges, it is still severe. A malicious or compromised moderator account can leverage this vulnerability to read, modify, or delete data. A patch is available at commit 6a0f6499d89fa5d6e2afa8ee53802a1ad11ece80. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42919",
+    "descripcion": "Due to an Information Disclosure vulnerability in SAP NetWeaver Application Server Java, internal metadata files could be accessed via manipulated URLs. An unauthenticated attacker could exploit this vulnerability by inserting arbitrary path components in the request, allowing unauthorized access to sensitive application metadata. This results in a partial compromise of the confidentiality of the information without affecting the integrity or availability of the application server. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-63678",
-    "descripcion": "An authenticated arbitrary file upload vulnerability in the /uploads/ endpoint of CMS Made Simple Foundation File Manager v2.2.22 allows attackers with Administrator privileges to execute arbitrary code via uploading a crafted PHP file. 11/11/2025 11/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42899",
+    "descripcion": "SAP S4CORE (Manage journal entries) does not perform necessary authorization checks for an authenticated user resulting in escalation of privileges. This has low impact on confidentiality of the application with no impact on integrity and availability of the application. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-12542",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 11/11/2025 11/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42897",
+    "descripcion": "Due to information disclosure vulnerability in anonymous API provided by SAP Business One (SLD), an attacker with normal user access could gain access to unauthorized information. As a result, it has a low impact on the confidentiality of the application but no impact on the integrity and availability. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-11892",
-    "descripcion": "An improper neutralization of input vulnerability was identified in GitHub Enterprise Server that allows DOM-based cross-site scripting via Issues search label filter that could lead to privilege escalation and unauthorized workflow triggers. Successful exploitation requires an attacker to have access to the target GitHub Enterprise Server instance and to entice a user, while operating in sudo mode, to click on a crafted malicious link to perform actions that require elevated privileges. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.18.1, 3.17.7, 3.16.10, 3.15.14, 3.14.19. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42895",
+    "descripcion": "Due to insufficient validation of connection property values, the SAP HANA JDBC Client allows a high-privilege locally authenticated user to supply crafted parameters that lead to unauthorized code loading, resulting in low impact on confidentiality and integrity and high impact on availability of the application. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-11578",
-    "descripcion": "A privilege escalation vulnerability was identified in GitHub Enterprise Server that allowed an authenticated Enterprise admin to gain root SSH access to the appliance by exploiting a symlink escape in pre-receive hook environments. By crafting a malicious repository and environment, an attacker could replace system binaries during hook cleanup and execute a payload that adds their own SSH key to the root user’s authorized keys—thereby granting themselves root SSH access to the server. To exploit this vulnerability, the attacker needed to have enterprise admin privileges. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.19, and was fixed in versions 3.14.19, 3.15.14, 3.16.10, 3.17.7 and 3.18.1. This vulnerability was reported via the GitHub Bug Bounty program. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42894",
+    "descripcion": "Due to a Path Traversal vulnerability in SAP Business Connector, an attacker authenticated as an administrator with adjacent access could read, write, overwrite, and delete arbitrary files on the host system. Successful exploitation could enable the attacker to execute arbitrary operating system commands on the server, resulting in a complete compromise of the confidentiality, integrity, and availability of the affected system. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2021-4462",
-    "descripcion": "Employee Records System version 1.0 contains an unrestricted file upload vulnerability that allows a remote unauthenticated attacker to upload arbitrary files via the uploadID.php endpoint; uploaded files can be executed because the application does not perform proper server-side validation. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42893",
+    "descripcion": "Due to an Open Redirect vulnerability in SAP Business Connector, an unauthenticated attacker could craft a malicious URL that, if accessed by a victim, redirects them to an attacker-controlled site displayed within an embedded frame. Successful exploitation could allow the attacker to steal sensitive information and perform unauthorized actions, impacting the confidentiality and integrity of web client data. There is no impact to system availability resulting from this vulnerability. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2018-25124",
-    "descripcion": "PacsOne Server version 6.6.2 (prior versions are likely affected) contains a directory traversal vulnerability within the web-based DICOM viewer component. Successful exploitation allows a remote unauthenticated attacker to read arbitrary files via the &#39;nocache.php&#39; endpoint with a crafted &#39;path&#39; parameter. Exploitation evidence was observed by the Shadowserver Foundation on 2025-02-07 UTC. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42892",
+    "descripcion": "Due to an OS Command Injection vulnerability in SAP Business Connector, an authenticated attacker with administrative access and adjacent network access could upload specially crafted content to the server. If processed by the application, this content enables execution of arbitrary operating system commands. Successful exploitation could lead to full compromise of the system�s confidentiality, integrity, and availability. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-64518",
-    "descripcion": "The CycloneDX core module provides a model representation of the SBOM along with utilities to assist in creating, validating, and parsing SBOMs. Starting in version 2.1.0 and prior to version 11.0.1, the XML `Validator` used by cyclonedx-core-java was not configured securely, making the library vulnerable to XML External Entity (XXE) injection. The fix for GHSA-683x-4444-jxh8 / CVE-2024-38374 was incomplete in that it only fixed parsing of XML BOMs, but not validation. The vulnerability has been fixed in cyclonedx-core-java version 11.0.1. As a workaround, applications can reject XML documents before handing them to cyclonedx-core-java for validation. This may be an option if incoming CycloneDX BOMs are known to be in JSON format. 10/11/2025 10/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-11",
+    "cve": "CVE-2025-42890",
+    "descripcion": "SQL Anywhere Monitor (Non-GUI) baked credentials into the code,exposing the resources or functionality to unintended users and providing attackers with the possibility of arbitrary code execution.This could cause high impact on confidentiality integrity and availability of the system. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
