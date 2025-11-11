@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-11-10",
+    "cve": "CVE-2025-63617",
+    "descripcion": "ktg-mes before commit a484f96 (2025-07-03) has a fastjson deserialization vulnerability. This is because it uses a vulnerable version of fastjson and deserializes unsafe input data. 10/11/2025 10/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-10",
+    "cve": "CVE-2025-63296",
+    "descripcion": "KERUI K259 5MP Wi-Fi / Tuya Smart Security Camera firmware v33.53.87 contains a code execution vulnerability in its boot/update logic: during startup /usr/sbin/anyka_service.sh scans mounted TF/SD cards and, if /mnt/update.nor.sh is present, copies it to /tmp/net.sh and executes it as root. 10/11/2025 10/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-10",
+    "cve": "CVE-2025-48878",
+    "descripcion": "Combodo iTop is a web based IT service management tool. In versions on the 3.x branch prior to 3.2.2, an insecure direct object reference allows a user (e.g. with Service desk agent profile) to create a ModuleInstallation object when they shouldn&#39;t be able to do so. Version 3.2.2 fixes the issue. 10/11/2025 10/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-10",
+    "cve": "CVE-2025-48065",
+    "descripcion": "Combodo iTop is a web based IT service management tool. Versions prior to 2.7.13 and 3.2.2 are vulnerable to cross-site scripting when a field with an error contains malicious content. Versions 2.7.13 and 3.2.2 protect rendered HTML content. 10/11/2025 10/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-10",
+    "cve": "CVE-2025-48055",
+    "descripcion": "Combodo iTop is a web based IT service management tool. In versions prior to 3.2.2, when displaying content in a browse brick in the user portal, a cross-site scripting attack can occur. This is fixed in versions 3.2.2 and 3.3.0. 10/11/2025 10/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-10",
     "cve": "CVE-2025-63384",
     "descripcion": "A vulnerability was discovered in RISC-V Rocket-Chip v1.6 and before implementation where the SRET (Supervisor-mode Exception Return) instruction fails to correctly transition the processor&#39;s privilege level. Instead of downgrading from Machine-mode (M-mode) to Supervisor-mode (S-mode) as specified by the sstatus.SPP bit, the processor incorrectly remains in M-mode, leading to a critical privilege retention vulnerability. 10/11/2025 10/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -23,30 +48,5 @@
     "fecha": "2025-11-10",
     "cve": "CVE-2025-47932",
     "descripcion": "Combodo iTop is a web based IT service management tool. Versions prior to 2.7.13 and 3.2.2 are vulnerable to cross-site scripting when a dashboard is rendered via an AJAX call. Versions 2.7.13 and 3.2.2 sanitize the var responsible for the attack. 10/11/2025 10/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-33150",
-    "descripcion": "IBM Cognos Analytics Certified Containers 12.1.0 could disclose package parameter information due to the presence of hidden pages. 10/11/2025 10/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-12729",
-    "descripcion": "Inappropriate implementation in Omnibox in Google Chrome on Android prior to 142.0.7444.137 allowed a remote attacker who convinced a user to engage in specific UI gestures to perform UI spoofing via a crafted HTML page. (Chromium security severity: Medium) 10/11/2025 10/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-12728",
-    "descripcion": "Inappropriate implementation in Omnibox in Google Chrome on Android prior to 142.0.7444.137 allowed a remote attacker who convinced a user to engage in specific UI gestures to perform UI spoofing via a crafted HTML page. (Chromium security severity: Medium) 10/11/2025 10/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-12727",
-    "descripcion": "Inappropriate implementation in V8 in Google Chrome prior to 142.0.7444.137 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High) 10/11/2025 10/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-10",
-    "cve": "CVE-2025-12726",
-    "descripcion": "Inappropriate implementation in Views in Google Chrome on Windows prior to 142.0.7444.137 allowed a remote attacker who had compromised the renderer process to perform privilege escalation via a crafted HTML page. (Chromium security severity: High) 10/11/2025 10/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
