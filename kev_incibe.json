@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2025-11-12",
+    "cve": "CVE-2025-12901",
+    "descripcion": "The Asgaros Forum plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.2.1. This is due to missing nonce validation on the set_subscription_level() function. This makes it possible for unauthenticated attackers to modify the subscription settings of authenticated users via a forged request granted they can trick a logged-in user into performing an action such as clicking on a link. 12/11/2025 12/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-12833",
+    "descripcion": "The GeoDirectory – WP Business Directory Plugin and Classified Listings Directory plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.8.139 via the &#39;post_attachment_upload&#39; function due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with author-level access and above, to attach arbitrary image files to arbitrary places. 12/11/2025 12/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-12087",
+    "descripcion": "The Wishlist and Save for later for Woocommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.1.22 via the &#39;awwlm_remove_added_wishlist_page&#39; AJAX action due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete wishlist items from other user&#39;s wishlists. 12/11/2025 12/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-54983",
+    "descripcion": "A health check port on Zscaler Client Connector on Windows, versions 4.6 12/11/2025 12/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-40111",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/vmwgfx: Fix Use-after-free in validation Nodes stored in the validation duplicates hashtable come from an arena allocator that is cleared at the end of vmw_execbuf_process. All nodes are expected to be cleared in vmw_validation_drop_ht but this node escaped because its resource was destroyed prematurely. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-40110",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/vmwgfx: Fix a null-ptr access in the cursor snooper Check that the resource which is converted to a surface exists before trying to use the cursor snooper on it. vmw_cmd_res_check allows explicit invalid (SVGA3D_INVALID_ID) identifiers because some svga commands accept SVGA3D_INVALID_ID to mean &#34;no surface&#34;, unfortunately functions that accept the actual surfaces as objects might (and in case of the cursor snooper, do not) be able to handle null objects. Make sure that we validate not only the identifier (via the vmw_cmd_res_check) but also check that the actual resource exists before trying to do something with it. Fixes unchecked null-ptr reference in the snooping code. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-12",
     "cve": "CVE-2025-43205",
     "descripcion": "An out-of-bounds access issue was addressed with improved bounds checking. This issue is fixed in watchOS 11.4, tvOS 18.4, visionOS 2.4, iOS 18.4 and iPadOS 18.4. An app may be able to bypass ASLR. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -18,35 +48,5 @@
     "fecha": "2025-11-11",
     "cve": "CVE-2025-61834",
     "descripcion": "Substance3D - Stager versions 3.1.5 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-61833",
-    "descripcion": "Substance3D - Stager versions 3.1.5 and earlier are affected by an out-of-bounds read vulnerability when parsing a crafted file, which could result in a read past the end of an allocated memory structure. An attacker could leverage this vulnerability to execute code in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 11/11/2025 11/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-41116",
-    "descripcion": "When using the Grafana Databricks Datasource Plugin, if Oauth passthrough is enabled on the datasource, and multiple users are using the same datasource at the same time on a single Grafana instance, it could result in the wrong user identifier being used, and information for which the viewer is not authorized being returned. This issue affects Grafana Databricks Datasource Plugin: from 1.12.1 before 1.12.0 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-40827",
-    "descripcion": "A vulnerability has been identified in Siemens Software Center (All versions 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-40817",
-    "descripcion": "A vulnerability has been identified in LOGO! 12/24RCE (6ED1052-1MD08-0BA2) (All versions), LOGO! 12/24RCEo (6ED1052-2MD08-0BA2) (All versions), LOGO! 230RCE (6ED1052-1FB08-0BA2) (All versions), LOGO! 230RCEo (6ED1052-2FB08-0BA2) (All versions), LOGO! 24CE (6ED1052-1CC08-0BA2) (All versions), LOGO! 24CEo (6ED1052-2CC08-0BA2) (All versions), LOGO! 24RCE (6ED1052-1HB08-0BA2) (All versions), LOGO! 24RCEo (6ED1052-2HB08-0BA2) (All versions), SIPLUS LOGO! 12/24RCE (6AG1052-1MD08-7BA2) (All versions), SIPLUS LOGO! 12/24RCEo (6AG1052-2MD08-7BA2) (All versions), SIPLUS LOGO! 230RCE (6AG1052-1FB08-7BA2) (All versions), SIPLUS LOGO! 230RCEo (6AG1052-2FB08-7BA2) (All versions), SIPLUS LOGO! 24CE (6AG1052-1CC08-7BA2) (All versions), SIPLUS LOGO! 24CEo (6AG1052-2CC08-7BA2) (All versions), SIPLUS LOGO! 24RCE (6AG1052-1HB08-7BA2) (All versions), SIPLUS LOGO! 24RCEo (6AG1052-2HB08-7BA2) (All versions). Affected devices do not conduct certain validations when interacting with them. This could allow an unauthenticated remote attacker to change time of the device, which means the device could behave differently. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-40816",
-    "descripcion": "A vulnerability has been identified in LOGO! 12/24RCE (6ED1052-1MD08-0BA2) (All versions), LOGO! 12/24RCEo (6ED1052-2MD08-0BA2) (All versions), LOGO! 230RCE (6ED1052-1FB08-0BA2) (All versions), LOGO! 230RCEo (6ED1052-2FB08-0BA2) (All versions), LOGO! 24CE (6ED1052-1CC08-0BA2) (All versions), LOGO! 24CEo (6ED1052-2CC08-0BA2) (All versions), LOGO! 24RCE (6ED1052-1HB08-0BA2) (All versions), LOGO! 24RCEo (6ED1052-2HB08-0BA2) (All versions), SIPLUS LOGO! 12/24RCE (6AG1052-1MD08-7BA2) (All versions), SIPLUS LOGO! 12/24RCEo (6AG1052-2MD08-7BA2) (All versions), SIPLUS LOGO! 230RCE (6AG1052-1FB08-7BA2) (All versions), SIPLUS LOGO! 230RCEo (6AG1052-2FB08-7BA2) (All versions), SIPLUS LOGO! 24CE (6AG1052-1CC08-7BA2) (All versions), SIPLUS LOGO! 24CEo (6AG1052-2CC08-7BA2) (All versions), SIPLUS LOGO! 24RCE (6AG1052-1HB08-7BA2) (All versions), SIPLUS LOGO! 24RCEo (6AG1052-2HB08-7BA2) (All versions). Affected devices do not conduct certain validations when interacting with them. This could allow an unauthenticated remote attacker to manipulate the devices IP address, which means the device would not be reachable. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-11",
-    "cve": "CVE-2025-40815",
-    "descripcion": "A vulnerability has been identified in LOGO! 12/24RCE (6ED1052-1MD08-0BA2) (All versions), LOGO! 12/24RCEo (6ED1052-2MD08-0BA2) (All versions), LOGO! 230RCE (6ED1052-1FB08-0BA2) (All versions), LOGO! 230RCEo (6ED1052-2FB08-0BA2) (All versions), LOGO! 24CE (6ED1052-1CC08-0BA2) (All versions), LOGO! 24CEo (6ED1052-2CC08-0BA2) (All versions), LOGO! 24RCE (6ED1052-1HB08-0BA2) (All versions), LOGO! 24RCEo (6ED1052-2HB08-0BA2) (All versions), SIPLUS LOGO! 12/24RCE (6AG1052-1MD08-7BA2) (All versions), SIPLUS LOGO! 12/24RCEo (6AG1052-2MD08-7BA2) (All versions), SIPLUS LOGO! 230RCE (6AG1052-1FB08-7BA2) (All versions), SIPLUS LOGO! 230RCEo (6AG1052-2FB08-7BA2) (All versions), SIPLUS LOGO! 24CE (6AG1052-1CC08-7BA2) (All versions), SIPLUS LOGO! 24CEo (6AG1052-2CC08-7BA2) (All versions), SIPLUS LOGO! 24RCE (6AG1052-1HB08-7BA2) (All versions), SIPLUS LOGO! 24RCEo (6AG1052-2HB08-7BA2) (All versions). Affected devices do not properly validate the structure of TCP packets in several methods. This could allow an attacker to cause buffer overflows, get control over the instruction counter and run custom code. 11/11/2025 11/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
