@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-11-12",
+    "cve": "CVE-2025-11567",
+    "descripcion": "CWE-276: Incorrect Default Permissions vulnerability exists that could cause elevated system access when the target installation folder is not properly secured. 12/11/2025 12/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-11566",
+    "descripcion": "CWE-307: Improper Restriction of Excessive Authentication Attempts vulnerability exists that would allow an attacker on the local network to gain access to the user account by performing an arbitrary number of authentication attempts with different credentials on the /REST/shutdownnow endpoint. 12/11/2025 12/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-11565",
+    "descripcion": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory (&#39;Path Traversal&#39;) vulnerability exists that could cause elevated system access when a Web Admin user on the local network tampers with the POST/REST/UpdateJRE request payload. 12/11/2025 12/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-62876",
+    "descripcion": "A Execution with Unnecessary Privileges vulnerability in lightdm-kde-greeter allows escalation from the service user to root.This issue affects lightdm-kde-greeter. before 6.0.4. 12/11/2025 12/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-12",
+    "cve": "CVE-2025-12998",
+    "descripcion": "Improper Authentication vulnerability in TYPO3 Extension &#34;Modules&#34; codingms/modules.This issue affects Extension &#34;Modules&#34;: before 4.3.11, from 5.0.0 before 5.7.4, from 6.0.0 before 6.4.2, from 7.0.0 before 7.5.5. 12/11/2025 12/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-12",
     "cve": "CVE-2025-40177",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: accel/qaic: Fix bootlog initialization ordering As soon as we queue MHI buffers to receive the bootlog from the device, we could be receiving data. Therefore all the resources needed to process that data need to be setup prior to queuing the buffers. We currently initialize some of the resources after queuing the buffers which creates a race between the probe() and any data that comes back from the device. If the uninitialized resources are accessed, we could see page faults. Fix the init ordering to close the race. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -23,30 +48,5 @@
     "fecha": "2025-11-12",
     "cve": "CVE-2025-40173",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/ip6_tunnel: Prevent perpetual tunnel growth Similarly to ipv4 tunnel, ipv6 version updates dev->needed_headroom, too. While ipv4 tunnel headroom adjustment growth was limited in commit 5ae1e9922bbd (&#34;net: ip_tunnel: prevent perpetual headroom growth&#34;), ipv6 tunnel yet increases the headroom without any ceiling. Reflect ipv4 tunnel headroom adjustment limit on ipv6 version. Credits to Francesco Ruggeri, who was originally debugging this issue and wrote local Arista-specific patch and a reproducer. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-12",
-    "cve": "CVE-2025-40172",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: accel/qaic: Treat remaining == 0 as error in find_and_map_user_pages() Currently, if find_and_map_user_pages() takes a DMA xfer request from the user with a length field set to 0, or in a rare case, the host receives QAIC_TRANS_DMA_XFER_CONT from the device where resources->xferred_dma_size is equal to the requested transaction size, the function will return 0 before allocating an sgt or setting the fields of the dma_xfer struct. In that case, encode_addr_size_pairs() will try to access the sgt which will lead to a general protection fault. Return an EINVAL in case the user provides a zero-sized ALP, or the device requests continuation after all of the bytes have been transferred. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-12",
-    "cve": "CVE-2025-40171",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: nvmet-fc: move lsop put work to nvmet_fc_ls_req_op It’s possible for more than one async command to be in flight from __nvmet_fc_send_ls_req. For each command, a tgtport reference is taken. In the current code, only one put work item is queued at a time, which results in a leaked reference. To fix this, move the work item to the nvmet_fc_ls_req_op struct, which already tracks all resources related to the command. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-12",
-    "cve": "CVE-2025-40170",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: use dst_dev_rcu() in sk_setup_caps() Use RCU to protect accesses to dst->dev from sk_setup_caps() and sk_dst_gso_max_size(). Also use dst_dev_rcu() in ip6_dst_mtu_maybe_forward(), and ip_dst_mtu_maybe_forward(). ip4_dst_hoplimit() can use dst_dev_net_rcu(). 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-12",
-    "cve": "CVE-2025-40169",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: bpf: Reject negative offsets for ALU ops When verifying BPF programs, the check_alu_op() function validates instructions with ALU operations. The &#39;offset&#39; field in these instructions is a signed 16-bit integer. The existing check &#39;insn->off > 1&#39; was intended to ensure the offset is either 0, or 1 for BPF_MOD/BPF_DIV. However, because &#39;insn->off&#39; is signed, this check incorrectly accepts all negative values (e.g., -1). This commit tightens the validation by changing the condition to &#39;(insn->off != 0 && insn->off != 1)&#39;. This ensures that any value other than the explicitly permitted 0 and 1 is rejected, hardening the verifier against malformed BPF programs. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-12",
-    "cve": "CVE-2025-40168",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: smc: Use __sk_dst_get() and dst_dev_rcu() in smc_clc_prfx_match(). smc_clc_prfx_match() is called from smc_listen_work() and not under RCU nor RTNL. Using sk_dst_get(sk)->dev could trigger UAF. Let&#39;s use __sk_dst_get() and dst_dev_rcu(). Note that the returned value of smc_clc_prfx_match() is not used in the caller. 12/11/2025 12/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
