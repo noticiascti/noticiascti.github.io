@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-12891",
+    "descripcion": "The Survey Maker plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;ays_survey_show_results&#39; AJAX endpoint in all versions up to, and including, 5.1.9.4. This makes it possible for unauthenticated attackers to view all survey submissions. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-12979",
+    "descripcion": "The Welcart e-Commerce plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;usces_export&#39; action in all versions up to, and including, 2.11.24. This makes it possible for unauthenticated attackers to access configured payment credentials (ex. PayPal api secret) , as well as business contact details, mail templates, and other operational settings tied to the store. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-12892",
+    "descripcion": "The Survey Maker plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the deactivate_plugin_option() function in all versions up to, and including, 5.1.9.4. This makes it possible for unauthenticated attackers to update the ays_survey_maker_upgrade_plugin option. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-12733",
+    "descripcion": "The Import any XML, CSV or Excel File to WordPress (WP All Import) plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.9.6. This is due to the use of eval() on unsanitized user-supplied input in the pmxi_if function within helpers/functions.php. This makes it possible for authenticated attackers, with import capabilities (typically administrators), to inject and execute arbitrary PHP code on the server via crafted import templates. This can lead to remote code execution. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-12536",
+    "descripcion": "The SureForms plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.13.1 via the &#39;_srfm_email_notification&#39; post meta registration. This is due to setting the &#39;auth_callback&#39; parameter to &#39;__return_true&#39;, which allows unauthenticated access to the metadata. This makes it possible for unauthenticated attackers to extract sensitive data including email notification configurations, which frequently contain vendor-provided CRM/help desk dropbox addresses, CC/BCC recipients, and notification templates that can be abused to inject malicious data into downstream systems. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-12366",
+    "descripcion": "The Page Builder: Pagelayer – Drag and Drop website builder plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.0.5 via the pagelayer_replace_page function due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Author-level access and above, to replace media files belonging to other users, including administrators. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-12089",
+    "descripcion": "The Data Tables Generator by Supsystic plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the cleanCache() function in all versions up to, and including, 1.10.45. This makes it possible for authenticated attackers, with Administrator-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-11923",
+    "descripcion": "The LifterLMS – WP LMS for eLearning, Online Courses, & Quizzes plugin for WordPress is vulnerable to privilege escalation. This is due to the plugin not properly validating a user&#39;s identity prior to allowing them to modify their own role via the REST API. The permission check in the update_item_permissions_check() function returns true when a user updates their own account without verifying the role changes. This makes it possible for authenticated attackers, with student-level access and above, to escalate their privileges to administrator by updating their own roles array via a crafted REST API request. Another endpoint intended for instructors also provides an attack vector. Affected version ranges are 3.5.3-3.41.2, 4.0.0-4.21.3, 5.0.0-5.10.0, 6.0.0-6.11.0, 7.0.0-7.8.7, 8.0.0-8.0.7, 9.0.0-9.0.7, 9.1.0. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-64716",
+    "descripcion": "Anubis is a Web AI Firewall Utility that challenges users&#39; connections in order to protect upstream resources from scraper bots. Prior to version 1.23.0, when using subrequest authentication, Anubis did not perform validation of the redirect URL and redirects user to any URL scheme. While most modern browsers do not allow a redirect to `javascript:` URLs, it could still trigger dangerous behavior in some cases. Anybody with a subrequest authentication may be affected. Version 1.23.0 contains a fix for the issue. 13/11/2025 13/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-13",
+    "cve": "CVE-2025-64711",
+    "descripcion": "PrivateBin is an online pastebin where the server has zero knowledge of pasted data. Starting in version 1.7.7 and prior to version 2.0.3, dragging a file whose filename contains HTML is reflected verbatim into the page via the drag-and-drop helper, so any user who drops a crafted file on PrivateBin will execute arbitrary JavaScript within their own session (self-XSS). This allows an attacker who can entice a victim to drag or otherwise attach such a file to exfiltrate plaintext, encryption keys, or stored pastes before they are encrypted or sent. Certain conditions must exist for the vulnerability to be exploitable. Only macOS or Linux users are affected, due to the way the `>` character is treated in a file name on Windows. The PrivateBin instance needs to have file upload enabled. An attacker needs to have access to the local file system or somehow convince the user to create (or download) a malicious file (name). An attacker needs to convince the user to attach that malicious file to PrivateBin. Any Mac / Linux user who can be tricked into dragging a maliciously named file into the editor is impacted; code runs in the origin of the PrivateBin instance they are using. Attackers can steal plaintext, passphrases, or manipulate the UI before data is encrypted, defeating the zero-knowledge guarantees for that victim session, assuming counter-measures like Content-Security-Policy (CSP) have been disabled. If CSP is not disabled, HTML injection attacks may be possible - like redirecting to a foreign website, phishing etc. As the whole exploit needs to be included in the file name of the attached file and only affects the local session of the user (aka it is neither persistent nor remotely executable) and that user needs to interact and actively attach that file to the paste, the impact is considered to be practically low. Version 2.0.3 patches the issue. 13/11/2025 13/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  }
+]

@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2025-11-13",
+    "cve": "CVE-2025-10230",
+    "descripcion": "A flaw was found in Samba, in the front-end WINS hook handling: NetBIOS names from registration packets are passed to a shell without proper validation or escaping. Unsanitized NetBIOS name data from WINS registration packets are inserted into a shell command and executed by the ..."
+  },
+  {
+    "fecha": "2025-11-13",
     "cve": "CVE-2025-8088",
     "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-11-13",
     "cve": "CVE-2025-61882",
     "descripcion": "Vulnerability in the Oracle Concurrent Processing product of Oracle E-Business Suite (component: BI Publisher Integration). Supported versions that are affected are 12.2.3-12.2.14. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to ..."
-  },
-  {
-    "fecha": "2025-11-13",
-    "cve": "CVE-2025-64495",
-    "descripcion": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. In versions 0.6.34 and below, the functionality that inserts custom prompts into the chat window is vulnerable to DOM XSS when 'Insert Prompt as Rich Text' is enabled, since the ..."
   }
 ]
