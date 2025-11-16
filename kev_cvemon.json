@@ -21,13 +21,13 @@
   },
   {
     "fecha": "2025-11-16",
-    "cve": "CVE-2025-61925",
-    "descripcion": "Astro is a web framework. Prior to version 5.14.2, Astro reflects the value in `X-Forwarded-Host` in output when using `Astro.url` without any validation. It is common for web servers such as nginx to route requests via the `Host` header, and forward on other request headers. As ..."
+    "cve": "CVE-2025-64525",
+    "descripcion": "Astro is a web framework. In Astro versions 2.16.0 up to but excluding 5.15.5 which utilizeon-demand rendering, request headers `x-forwarded-proto` and `x-forwarded-port` are insecurely used, without sanitization, to build the URL. This has several consequences, the most ..."
   },
   {
     "fecha": "2025-11-16",
-    "cve": "CVE-2025-64525",
-    "descripcion": "Astro is a web framework. In Astro versions 2.16.0 up to but excluding 5.15.5 which utilizeon-demand rendering, request headers `x-forwarded-proto` and `x-forwarded-port` are insecurely used, without sanitization, to build the URL. This has several consequences, the most ..."
+    "cve": "CVE-2025-61925",
+    "descripcion": "Astro is a web framework. Prior to version 5.14.2, Astro reflects the value in `X-Forwarded-Host` in output when using `Astro.url` without any validation. It is common for web servers such as nginx to route requests via the `Host` header, and forward on other request headers. As ..."
   },
   {
     "fecha": "2025-11-16",
