@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2025-11-18",
+    "cve": "CVE-2025-6670",
+    "descripcion": "A Cross-Site Request Forgery (CSRF) vulnerability exists in multiple WSO2 products due to the use of the HTTP GET method for state-changing operations within admin services, specifically in the event processor of the Carbon console. Although the SameSite=Lax cookie attribute is used as a mitigation, it is ineffective in this context because it allows cookies to be sent with cross-origin top-level navigations using GET requests. A malicious actor can exploit this vulnerability by tricking an authenticated user into visiting a crafted link, leading the browser to issue unintended state-changing requests. Successful exploitation could result in unauthorized operations such as data modification, account changes, or other administrative actions. According to WSO2 Secure Production Guidelines, exposure of Carbon console services to untrusted networks is discouraged, which may reduce the impact in properly secured deployments. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-41350",
+    "descripcion": "Stored Cross-site Scripting (XSS)vylnerability type in WinPlus v24.11.27 byInformática del Este that consist of an stored XSS of a stored XSS due to a lack of proper validation of user input by sending a POST request using the &#39;descripcion&#39; parameter in &#39;/WinplusPortal/ws/sWinplus.svc/json/savesoldoc_post&#39;. This vulnerability could allow a remote user to send a specially crafted query to an authenticated user and steal their cookie session details. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-41349",
+    "descripcion": "Stored Cross-site Scripting (XSS)vylnerability type in WinPlus v24.11.27 byInformática del Este that consist of an stored XSS of a stored XSS due to a lack of proper validation of user input by sending a POST request using the &#39;descripcion&#39; parameter in &#39;/WinplusPortal/ws/sWinplus. svc/json/savesolpla_post&#39;. This vulnerability could allow a remote user to send a specially crafted query to an authenticated user and steal their cookie session details. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-41348",
+    "descripcion": "SQL injection vulnerability in WinPlus v24.11.27 by Informática del Este. This vulnerability allows an attacker recover, create, update an delete databases by sendng a POST request using the parameters &#39;val1&#39; and &#39;cont in &#39;/WinplusPortal/ws/sWinplus.svc/json/getacumper_post&#39;. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-13345",
+    "descripcion": "A security vulnerability has been detected in SourceCodester Train Station Ticketing System 1.0. Affected by this issue is some unknown functionality of the file /ajax.php?action=save_ticket. Such manipulation leads to sql injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-13344",
+    "descripcion": "A weakness has been identified in SourceCodester Train Station Ticketing System 1.0. Affected by this vulnerability is an unknown functionality of the file /ajax.php?action=login. This manipulation of the argument Username causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be exploited. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-13343",
+    "descripcion": "A security flaw has been discovered in SourceCodester Interview Management System 1.0. Affected is an unknown function of the file /editQuestion.php. The manipulation of the argument Question results in cross site scripting. It is possible to launch the attack remotely. The exploit has been released to the public and may be exploited. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-11-18",
     "cve": "CVE-2025-41737",
     "descripcion": "Due to webserver misconfiguration an unauthenticated remote attacker is able to read the source of php modules. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2025-11-18",
     "cve": "CVE-2025-41735",
     "descripcion": "A low privileged remote attacker can upload any file to an arbitrary location due to missing file check resulting in remote code execution. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-18",
-    "cve": "CVE-2025-41734",
-    "descripcion": "An unauthenticated remote attacker can execute arbitrary php files and gain full access of the affected devices. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-18",
-    "cve": "CVE-2025-41733",
-    "descripcion": "The commissioning wizard on the affected devices does not validate if the device is already initialized. An unauthenticated remote attacker can construct POST requests to set root credentials. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-18",
-    "cve": "CVE-2025-41347",
-    "descripcion": "Unlimited upload vulnerability for dangerous file types in WinPlus v24.11.27 from Informática del Este. This vulnerability allows an attacker to upload a &#39;webshell&#39; by sending a POST request to &#39;/WinplusPortal/ws/sWinplus.svc/json/uploadfile&#39;. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-18",
-    "cve": "CVE-2025-11427",
-    "descripcion": "The WP Migrate Lite – WordPress Migration Made Easy plugin for WordPress is vulnerable to Blind Server-Side Request Forgery in all versions up to, and including, 2.7.6 via the wpmdb_flush AJAX action. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to obtain information about internal services. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-18",
-    "cve": "CVE-2025-4212",
-    "descripcion": "The Checkout Files Upload for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via file uploads in all versions up to, and including, 2.2.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in image files that will execute whenever a user accesses the injected page. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-18",
-    "cve": "CVE-2025-41346",
-    "descripcion": "Faulty authorization control in software WinPlus v24.11.27 by Informática del Este that allows another user to be impersonated simply by knowing their &#39;numerical ID&#39;, meaning that an attacker could compromise another user&#39;s account, thereby affecting the confidentiality, integrity, and availability of the data stored in the application. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-18",
-    "cve": "CVE-2025-13196",
-    "descripcion": "The Element Pack Addons for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Open Street Map widget&#39;s marker content parameter in all versions up to, and including, 8.3.4. This is due to insufficient input sanitization and output escaping on user-supplied attributes in the render function. This makes it possible for authenticated attackers, with contributor level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
