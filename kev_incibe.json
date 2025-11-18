@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2025-11-18",
+    "cve": "CVE-2025-7623",
+    "descripcion": "Stack-based buffer overflow in the SMASH-CLP shell. An authenticated attacker with SSH access to the BMC can overflow a 260-byte stack buffer via a crafted SMASH command, overwrite the return address and registers, and achieve arbitrary code execution on the BMC’s firmware operating system. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-12524",
+    "descripcion": "The Post Type Switcher plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 4.0.0 due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Author-level access and above, to modify the post type of arbitrary posts and pages they do not own, including those created by administrators, which can lead to site disruption, broken navigation, and SEO impact. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-18",
     "cve": "CVE-2025-48593",
     "descripcion": "In bta_hf_client_cb_init of bta_hf_client_main.cc, there is a possible remote code execution due to a use after free. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation. 18/11/2025 18/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -38,15 +48,5 @@
     "fecha": "2025-11-18",
     "cve": "CVE-2025-12792",
     "descripcion": "The Mac App Store distribution of the Canva for Mac desktop app before 1.117.1 was built without Hardened Runtime. A local threat actor with unprivileged access could execute arbitrary code that inherits the TCC (Transparency, Consent, and Control) permissions assigned to Canva. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2025-11-17",
-    "cve": "CVE-2025-13230",
-    "descripcion": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High) 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-17",
-    "cve": "CVE-2025-13229",
-    "descripcion": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High) 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
