@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-11-18",
+    "cve": "CVE-2025-48593",
+    "descripcion": "In bta_hf_client_cb_init of bta_hf_client_main.cc, there is a possible remote code execution due to a use after free. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation. 18/11/2025 18/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-64734",
+    "descripcion": "Missing Release of Resource after Effective Lifetime (CWE-772) in the T21 Reader allows an attacker with physical access to the Reader to perform a denial-of-service attack against that specific reader, preventing cardholders from badging for entry. This issue affects Command Centre Server: 9.30 prior to vCR9.30.251028a (distributed in 9.30.2881 (MR3)), 9.20 prior to vCR9.20.251028a (distributed in 9.20.3265 (MR5)), 9.10 prior to vCR9.10.251028a (distributed in 9.10.4135 (MR8)), all versions of 9.00 and prior. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 2.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-52578",
+    "descripcion": "Incorrect Usage of Seeds in Pseudo-Random Number Generator (CWE- 335) vulnerability in the High Sec ELM may allow a sophisticated attacker with physical access, to compromise internal device communications. This issue affects Command Centre Server: 9.30 prior to vCR9.30.251028a (distributed in 9.30.2881 (MR3)), 9.20 prior to vCR9.20.251028a (distributed in 9.20.3265 (MR5)), 9.10 prior to vCR9.10.251028a (distributed in 9.10.4135 (MR8)), all versions of 9.00 and prior. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-52457",
+    "descripcion": "Observable Timing Discrepancy (CWE-208) in HBUS devices may allow an attacker with physical access to the device to extract device-specific keys, potentially compromising further site security. This issue affects Command Centre Server: 9.30 prior to vCR9.30.251028a (distributed in 9.30.2881 (MR3)), 9.20 prior to vCR9.20.251028a (distributed in 9.20.3265 (MR5)), 9.10 prior to vCR9.10.251028a (distributed in 9.10.4135 (MR8)), all versions of 9.00 and prior. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-18",
+    "cve": "CVE-2025-12974",
+    "descripcion": "The Gravity Forms plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the legacy chunked upload mechanism in all versions up to, and including, 2.9.21.1. This is due to the extension blacklist not including .phar files, which can be uploaded through the chunked upload mechanism. This makes it possible for unauthenticated attackers to upload executable .phar files and achieve remote code execution on the server, granted they can discover or enumerate the upload path. In order for an attacker to achieve RCE, the web server needs to be set up to process .phar file as PHP via file handler mapping or similar. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-18",
     "cve": "CVE-2025-8693",
     "descripcion": "A post-authentication command injection vulnerability in the &#34;priv&#34; parameter of Zyxel DX3300-T0 firmware version 5.50(ABVY.6.3)C0 and earlier could allow an authenticated attacker to execute operating system (OS) commands on an affected device. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -22,31 +47,6 @@
   {
     "fecha": "2025-11-17",
     "cve": "CVE-2025-13229",
-    "descripcion": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High) 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-17",
-    "cve": "CVE-2025-13325",
-    "descripcion": "A vulnerability was determined in itsourcecode Student Information System 1.0. The affected element is an unknown function of the file /enrollment_edit1.php. Executing manipulation of the argument en_id can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-17",
-    "cve": "CVE-2025-13323",
-    "descripcion": "A security flaw has been discovered in code-projects Simple Pizza Ordering System 1.0. Affected is an unknown function of the file /listorder.php. Performing manipulation of the argument ID results in sql injection. The attack can be initiated remotely. The exploit has been released to the public and may be exploited. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-17",
-    "cve": "CVE-2025-13306",
-    "descripcion": "A security vulnerability has been detected in D-Link DWR-M920, DWR-M921, DIR-822K and DIR-825M 1.1.5. Impacted is the function system of the file /boafrm/formDebugDiagnosticRun. The manipulation of the argument host leads to command injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-17",
-    "cve": "CVE-2025-13228",
-    "descripcion": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High) 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-17",
-    "cve": "CVE-2025-13227",
     "descripcion": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High) 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
