@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-9977",
-    "descripcion": "Value provided in one of POST parameters sent during the process of logging in to Times Software E-Payroll is not sanitized properly, which allows an unauthenticated attacker to perform DoS attacks. SQL injection attacks might also be feasible, although so far creating a working exploit has been prevented probably by backend filtering mechanisms. Additionally, command injection attempts cause the application to return extensive error messages disclosing some information about the internal infrastructure. Patching status is unknown because the vendor has not replied to messages sent by the CNA. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63513",
+    "descripcion": "kishan0725 Hospital Management System v4 has an Insecure Direct Object Reference (IDOR) vulnerability in the appointment cancellation functionality. 18/11/2025 18/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-64996",
-    "descripcion": "In Checkmk versions prior to 2.4.0p16, 2.3.0p41, and all versions of 2.2.0 and older, the mk_inotify plugin creates world-readable and writable files, allowing any local user on the system to read the plugin&#39;s output and manipulate it, potentially leading to unauthorized access to or modification of monitoring data. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63512",
+    "descripcion": "kishan0725 Hospital Management System/ v4 is vulnerable to SQL Injection in admin-panel1.php, specifically in the deleting doctor logic. The application fails to properly sanitize or parameterize user-supplied input from the demail parameter before incorporating it directly into a dynamic SQL query. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-58122",
-    "descripcion": "Insufficient permission validation in Checkmk 2.4.0 before version 2.4.0p16 allows low-privileged users to modify notification parameters via the REST API, which could lead to unauthorized actions or information disclosure. 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63258",
+    "descripcion": "A remote command execution (RCE) vulnerability was discovered in all H3C ERG3/ERG5 series routers and XiaoBei series routers, cloud gateways, and wireless access points (versions R0162P07, UAP700-WPT330-E2265, UAP672-WPT330-R2262, UAP662E-WPT330-R2262P03, WAP611-WPT330-R1348-OASIS, WAP662-WPT330-R2262, WAP662H-WPT330-R2262, USG300V2-WPT330-R2129, MSG300-WPT330-R1350, and MSG326-WPT330-R2129). Attackers are able to exploit this vulnerability via injecting crafted commands into the sessionid parameter. 18/11/2025 18/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-58121",
-    "descripcion": "Insufficient permission validation on multiple REST API endpoints in Checkmk 2.2.0, 2.3.0, and 2.4.0 before version 2.4.0p16 allows low-privileged users to perform unauthorized actions or obtain sensitive information 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-61713",
+    "descripcion": "A Cleartext Storage of Sensitive Information in Memory vulnerability [CWE-316] in Fortinet FortiPAM 1.6.0, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions may allow an authenticated attacker with read-write admin privileges to the CLI to obtain other administrators&#39; credentials via diagnose commands. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-55074",
-    "descripcion": "Mattermost versions 10.11.x 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-59669",
+    "descripcion": "A use of hard-coded credentials vulnerability in Fortinet FortiWeb 7.6.0, FortiWeb 7.4 all versions, FortiWeb 7.2 all versions, FortiWeb 7.0 all versions may allow an authenticated attacker with shell access to the device to connect to redis service and access its data 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-12383",
-    "descripcion": "In Eclipse Jersey versions 2.45, 3.0.16, 3.1.9 a race condition can cause ignoring of critical SSL configurations - such as mutual authentication, custom key/trust stores, and other security settings. This issue may result in SSLHandshakeException under normal circumstances, but under certain conditions, it could lead to unauthorized trust in insecure servers (see PoC) 18/11/2025 18/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-58692",
+    "descripcion": "An improper neutralization of special elements used in an SQL Command (&#34;SQL Injection&#34;) vulnerability [CWE-89] in Fortinet FortiVoice 7.2.0 through 7.2.2, FortiVoice 7.0.0 through 7.0.7 allows an authenticated attacker to execute unauthorized code or commands via specifically crafted HTTP or HTTPS requests. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-9312",
-    "descripcion": "A missing authentication enforcement vulnerability exists in the mutual TLS (mTLS) implementation used by System REST APIs and SOAP services in multiple WSO2 products. Due to improper validation of client certificate–based authentication in certain default configurations, the affected components may permit unauthenticated requests even when mTLS is enabled. This condition occurs when relying on the default mTLS settings for System REST APIs or when the mTLS authenticator is enabled for SOAP services, causing these interfaces to accept requests without enforcing additional authentication. Successful exploitation allows a malicious actor with network access to the affected endpoints to gain administrative privileges and perform unauthorized operations. The vulnerability is exploitable only when the impacted mTLS flows are enabled and accessible in a given deployment. Other certificate-based authentication mechanisms such as Mutual TLS OAuth client authentication and X.509 login flows are not affected, and APIs served through the API Gateway of WSO2 API Manager remain unaffected. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-58413",
+    "descripcion": "A stack-based buffer overflow in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiOS 6.2 all versions, FortiOS 6.0 all versions, FortiSASE 25.3.b allows attacker to execute unauthorized code or commands via specially crafted packets 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-8084",
-    "descripcion": "The AI Engine plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 3.1.8 via the rest_helpers_create_images function. This makes it possible for authenticated attackers, with Editor-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. On Cloud instances, this issue allows for metadata retrieving. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-58034",
+    "descripcion": "An Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability [CWE-78] in Fortinet FortiWeb 8.0.0 through 8.0.1, FortiWeb 7.6.0 through 7.6.5, FortiWeb 7.4.0 through 7.4.10, FortiWeb 7.2.0 through 7.2.11, FortiWeb 7.0.0 through 7.0.11 may allow an authenticated attacker to execute unauthorized code on the underlying system via crafted HTTP requests or CLI commands. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-63892",
-    "descripcion": "A vulnerability was determined in SourceCodester Student Grades Management System 1.0. Affected is the function create_classroom of the file /classroom.php of the component My Classrooms Management Page. This manipulation of the argument name/description causes stored cross site scripting. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-56527",
+    "descripcion": "Plaintext password storage in Kotaemon 0.11.0 in the client&#39;s localStorage. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-18",
-    "cve": "CVE-2025-63883",
-    "descripcion": "A DOM-based cross-site scripting vulnerability exists in electic-shop v1.0 (Bhabishya-123/E-commerce). The site&#39;s client-side JavaScript reads attacker-controlled input (for example, values derived from the URL or page fragment) and inserts it into the DOM via unsafe sinks (innerHTML/insertAdjacentHTML/document.write) without proper sanitization or context-aware encoding. An attacker can craft a malicious URL that, when opened by a victim, causes arbitrary JavaScript to execute in the victim&#39;s browser under the electic-shop origin. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-56526",
+    "descripcion": "Cross site scripting (XSS) vulnerability in Kotaemon 0.11.0 allowing attackers to execute arbitrary code via a crafted PDF. 18/11/2025 18/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
