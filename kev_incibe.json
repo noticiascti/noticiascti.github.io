@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-65024",
-    "descripcion": "i-Educar is free, fully online school management software. In versions 2.10.0 and prior, an authenticated time-based SQL injection vulnerability exists in the ieducar/intranet/agenda_admin_cad.php script. An attacker with access to an authenticated session can execute arbitrary SQL commands against the application&#39;s database. This vulnerability is caused by the improper handling of the cod_agenda GET parameter, which is directly concatenated into an SQL query without proper sanitization. This issue has been patched in commit 3e9763a. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-65100",
+    "descripcion": "Isar is an integration system for automated root filesystem generation. In versions 0.11-rc1 and 0.11, defining ISAR_APT_SNAPSHOT_DATE alone does not set the correct timestamp value for security distribution, leading to missed security updates. This issue has been patched via commit 738bcbb. 19/11/2025 19/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-65023",
-    "descripcion": "i-Educar is free, fully online school management software. In versions 2.10.0 and prior, an authenticated time-based SQL injection vulnerability exists in the ieducar/intranet/funcionario_vinculo_cad.php script. An attacker with access to an authenticated session can execute arbitrary SQL commands against the application&#39;s database. This vulnerability is caused by the improper handling of the cod_funcionario_vinculo GET parameter, which is directly concatenated into an SQL query without proper sanitization. This issue has been patched in commit a00dfa3. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-65094",
+    "descripcion": "WBCE CMS is a content management system. Prior to version 1.6.4, a low-privileged user in WBCE CMS can escalate their privileges to the Administrators group by manipulating the groups[] parameter in the /admin/users/save.php request. The UI restricts users to assigning only their existing group, but server-side validation is missing, allowing attackers to overwrite their group membership and obtain full administrative access. This results in a complete compromise of the CMS. This issue has been patched in version 1.6.4. 19/11/2025 19/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-65022",
-    "descripcion": "i-Educar is free, fully online school management software. In versions 2.10.0 and prior, an authenticated time-based SQL injection vulnerability exists in the ieducar/intranet/agenda.php script. An attacker with access to an authenticated session can execute arbitrary SQL commands against the application&#39;s database. This vulnerability is caused by the improper handling of the cod_agenda request parameter, which is directly concatenated into multiple SQL queries without proper sanitization. This issue has been patched in commit b473f92. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-64759",
+    "descripcion": "Homarr is an open-source dashboard. Prior to version 1.43.3, stored XSS vulnerability exists, allowing the execution of arbitrary JavaScript in a user&#39;s browser, with minimal or no user interaction required, due to the rendering of a malicious uploaded SVG file. This could be abused to add an attacker&#39;s account to the &#34;credentials-admin&#34; group, giving them full administrative access, if a user logged in as an administrator was to view the page which renders or redirects to the SVG. This issue has been patched in version 1.43.3. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-63879",
-    "descripcion": "A reflected cross-site scripted (XSS) vulnerability in the /ecommerce/products.php component of E-commerce Project v1.0 and earlier allows attackers to execute arbitrary Javascript in the context of a user&#39;s browser via injecting a crafted payload into the id parameter. 19/11/2025 19/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63211",
+    "descripcion": "Stored cross-site scripting vulnerability in bridgetech VBC Server & Element Manager, firmware versions 6.5.0-9 thru 6.5.0-10, allows attackers to execute arbitrary code via the addName parameter to the /vbc/core/userSetupDoc/userSetupDoc endpoint. 19/11/2025 19/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-63878",
-    "descripcion": "Github Restaurant Website Restoran v1.0 was discovered to contain a SQL injection vulnerability via the Contact Form page. 19/11/2025 19/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65089",
+    "descripcion": "XWiki Remote Macros provides XWiki rendering macros that are useful when migrating content from Confluence. Prior to version 1.27.0, a user with no view rights on a page may see the content of an office attachment displayed with the view file macro. This issue has been patched in version 1.27.0. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-63224",
-    "descripcion": "The Itel DAB Encoder (IDEnc build 25aec8d) is vulnerable to Authentication Bypass due to improper JWT validation across devices. Attackers can reuse a valid JWT token obtained from one device to authenticate and gain administrative access to any other device running the same firmware, even if the passwords and networks are different. This allows full compromise of affected devices. 19/11/2025 19/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65099",
+    "descripcion": "Claude Code is an agentic coding tool. Prior to version 1.0.39, when running on a machine with Yarn 3.0 or above, Claude Code could have been tricked to execute code contained in a project via yarn plugins before the user accepted the startup trust dialog. Exploiting this would have required a user to start Claude Code in an untrusted directory and to be using Yarn 3.0 or above. This issue has been patched in version 1.0.39. 19/11/2025 19/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-63223",
-    "descripcion": "The Axel Technology StreamerMAX MK II devices (firmware versions 0.8.5 to 1.0.3) are vulnerable to Broken Access Control due to missing authentication on the /cgi-bin/gstFcgi.fcgi endpoint. Unauthenticated remote attackers can list user accounts, create new administrative users, delete users, and modify system settings, leading to full compromise of the device. 19/11/2025 19/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65095",
+    "descripcion": "Lookyloo is a web interface that allows users to capture a website page and then display a tree of domains that call each other. Prior to version 1.35.1, there is potential cross-site scripting on index and tree page. This issue has been patched in version 1.35.1. 19/11/2025 19/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-63221",
-    "descripcion": "The Axel Technology puma devices (firmware versions 0.8.5 to 1.0.3) are vulnerable to Broken Access Control due to missing authentication on the /cgi-bin/gstFcgi.fcgi endpoint. Unauthenticated remote attackers can list user accounts, create new administrative users, delete users, and modify system settings, leading to full compromise of the device. 19/11/2025 19/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65032",
+    "descripcion": "Rallly is an open-source scheduling and collaboration tool. Prior to version 4.5.4, an Insecure Direct Object Reference (IDOR) vulnerability allows any authenticated user to change the display names of other participants in polls without being an admin or the poll owner. By manipulating the participantId parameter in a rename request, an attacker can modify another user’s name, violating data integrity and potentially causing confusion or impersonation attacks. This issue has been patched in version 4.5.4. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-63220",
-    "descripcion": "The Sound4 FIRST web-based management interface is vulnerable to Remote Code Execution (RCE) via a malicious firmware update package. The update mechanism fails to validate the integrity of manual.sh, allowing an attacker to inject arbitrary commands by modifying this script and repackaging the firmware. 19/11/2025 19/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65031",
+    "descripcion": "Rallly is an open-source scheduling and collaboration tool. Prior to version 4.5.4, an improper authorization flaw in the comment creation endpoint allows authenticated users to impersonate any other user by altering the authorName field in the API request. This enables attackers to post comments under arbitrary usernames, including privileged ones such as administrators, potentially misleading other users and enabling phishing or social engineering attacks. This issue has been patched in version 4.5.4. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-19",
-    "cve": "CVE-2025-13397",
-    "descripcion": "A security vulnerability has been detected in mrubyc up to 3.4. This impacts the function mrbc_raw_realloc of the file src/alloc.c. Such manipulation of the argument ptr leads to null pointer dereference. An attack has to be approached locally. The name of the patch is 009111904807b8567262036bf45297c3da8f1c87. It is advisable to implement a patch to correct this issue. 19/11/2025 19/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-65030",
+    "descripcion": "Rallly is an open-source scheduling and collaboration tool. Prior to version 4.5.4, an authorization flaw in the comment deletion API allows any authenticated user to delete comments belonging to other users, including poll owners and administrators. The endpoint relies solely on the comment ID for deletion and does not validate whether the requesting user owns the comment or has permission to remove it. This issue has been patched in version 4.5.4. 19/11/2025 19/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
