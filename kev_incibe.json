@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-11-20",
+    "cve": "CVE-2025-55128",
+    "descripcion": "HackerOne community member Dao Hoang Anh (yoyomiski) has reported an uncontrolled resource consumption vulnerability in the “userlog-index.php”. An attacker with access to the admin interface could request an arbitrarily large number of items per page, potentially leading to a denial of service 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-55126",
+    "descripcion": "HackerOne community member Dang Hung Vi (vidang04) has reported a stored XSS vulnerability involving the navigation box at the top of advertiser-related pages, with campaign names being the vector for the stored XSS 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-10571",
+    "descripcion": "Authentication Bypass Using an Alternate Path or Channel vulnerability in ABB ABB Ability Edgenius.This issue affects ABB Ability Edgenius: 3.2.0.0, 3.2.1.1. 20/11/2025 20/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-64524",
+    "descripcion": "cups-filters contains backends, filters, and other software required to get the cups printing service working on operating systems other than macos. In versions 2.0.1 and prior, a heap-buffer-overflow vulnerability in the rastertopclx filter causes the program to crash with a segmentation fault when processing maliciously crafted input data. This issue can be exploited to trigger memory corruption, potentially leading to arbitrary code execution. This issue has been patched via commit 956283c. 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-11-20",
     "cve": "CVE-2025-64428",
     "descripcion": "Dataease is an open source data visualization analysis tool. Versions prior to 2.10.17 are vulnerable to JNDI injection. A blacklist was added in the patch for version 2.10.14. However, JNDI injection remains possible via the iiop, corbaname, and iiopname schemes. The vulnerability has been fixed in version 2.10.17. 20/11/2025 20/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-11-20",
     "cve": "CVE-2025-62709",
     "descripcion": "ClipBucket v5 is an open source video sharing platform. In ClipBucket version 5.5.2, a change to network.class.php causes the application to dynamically build the server URL from the incoming HTTP Host header when the configuration base_url is not set. Because Host is a client-controlled header, an attacker can supply an arbitrary Host value. This allows an attacker to cause password-reset links (sent by forget.php) to be generated with the attacker’s domain. If a victim follows that link and enters their activation code on the attacker-controlled domain, the attacker can capture the code and use it to reset the victim’s password and take over the account. This issue has been patched in version 5.5.2#162. 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-20",
-    "cve": "CVE-2025-52410",
-    "descripcion": "Institute-of-Current-Students v1.0 contains a time-based blind SQL injection vulnerability in the mydetailsstudent.php endpoint. The `myds` GET parameter is not adequately sanitized before being used in SQL queries. 20/11/2025 20/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-20",
-    "cve": "CVE-2025-13437",
-    "descripcion": "When zx is invoked with --prefer-local=, the CLI creates a symlink named ./node_modules pointing to /node_modules. Due to a logic error in src/cli.ts (linkNodeModules / cleanup), the function returns the target path instead of the alias (symlink path). The later cleanup routine removes what it received, which deletes the target directory itself. Result: zx can delete an external /node_modules outside the current working directory. 20/11/2025 20/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:H/VA:H/SC:N/SI:H/SA:H/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-20",
-    "cve": "CVE-2025-12121",
-    "descripcion": "Lite XL versions 2.1.8 and prior contain a vulnerability in the system.exec function, which allowed arbitrary command execution through unsanitized shell command construction. This function was used in project directory launching (core.lua), drag-and-drop file handling (rootview.lua), and the “open in system” command in the treeview plugin (treeview.lua). If an attacker could influence input to system.exec, they might execute arbitrary commands with the privileges of the Lite XL process. 20/11/2025 20/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-20",
-    "cve": "CVE-2025-12120",
-    "descripcion": "Lite XL versions 2.1.8 and prior automatically execute the .lite_project.lua file when opening a project directory, without prompting the user for confirmation. The .lite_project.lua file is intended for project-specific configuration but can contain executable Lua logic. This behavior could allow execution of untrusted Lua code if a user opens a malicious project, potentially leading to arbitrary code execution with the privileges of the Lite XL process. 20/11/2025 20/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
