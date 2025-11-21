@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2025-11-20",
+    "cve": "CVE-2025-52670",
+    "descripcion": "Missing authorization check in Revive Adserver 5.5.2 and 6.0.1 and earlier versions causes users on the system to delete banners owned by other accounts 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-52667",
+    "descripcion": "Missing JSON Content-Type header in a script in Revive Adserver 6.0.1 and 5.5.2 and earlier versions causes a stored XSS attack to be possible for a logged in manager user. 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-35029",
+    "descripcion": "Medical Informatics Engineering Enterprise Health has a stored cross site scripting vulnerability that allows an authenticated attacker to add arbitrary content in the &#39;Demographic Information&#39; page. This content will be rendered and executed when a victim accesses it. This issue is fixed as of 2025-03-14. 20/11/2025 20/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-11-20",
     "cve": "CVE-2025-55128",
     "descripcion": "HackerOne community member Dao Hoang Anh (yoyomiski) has reported an uncontrolled resource consumption vulnerability in the “userlog-index.php”. An attacker with access to the admin interface could request an arbitrarily large number of items per page, potentially leading to a denial of service 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2025-11-20",
     "cve": "CVE-2025-64027",
     "descripcion": "Snipe-IT v8.3.4 (build 20218) contains a reflected cross-site scripting (XSS) vulnerability in the CSV Import workflow. When an invalid CSV file is uploaded, the application returns a progress_message value that is rendered as raw HTML in the admin interface. An attacker can intercept and modify the POST /livewire/update request to inject arbitrary HTML or JavaScript into the progress_message. Because the server accepts the modified input without sanitization and reflects it back to the user, arbitrary JavaScript executes in the browser of any authenticated admin who views the import page. 20/11/2025 20/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-20",
-    "cve": "CVE-2025-63848",
-    "descripcion": "Stored cross site scripting (xss) vulnerability in SWISH prolog thru 2.2.0 allowing attackers to execute arbitrary code via crafted web IDE notebook. 20/11/2025 20/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-20",
-    "cve": "CVE-2025-62724",
-    "descripcion": "Open OnDemand is an open-source HPC portal. Prior to versions 4.0.8 and 3.1.16, users can craft a &#34;Time of Check to Time of Use&#34; (TOCTOU) attack when downloading zip files to access files outside of the OOD_ALLOWLIST. This vulnerability impacts sites that use the file browser allowlists in all current versions of OOD. However, files accessed are still protected by the UNIX permissions. Open OnDemand versions 4.0.8 and 3.1.16 have been patched for this vulnerability. 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-20",
-    "cve": "CVE-2025-62709",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. In ClipBucket version 5.5.2, a change to network.class.php causes the application to dynamically build the server URL from the incoming HTTP Host header when the configuration base_url is not set. Because Host is a client-controlled header, an attacker can supply an arbitrary Host value. This allows an attacker to cause password-reset links (sent by forget.php) to be generated with the attacker’s domain. If a victim follows that link and enters their activation code on the attacker-controlled domain, the attacker can capture the code and use it to reset the victim’s password and take over the account. This issue has been patched in version 5.5.2#162. 20/11/2025 20/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
