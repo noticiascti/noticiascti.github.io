@@ -1,8 +1,23 @@
 [
   {
     "fecha": "2025-11-21",
+    "cve": "CVE-2025-41115",
+    "descripcion": "SCIM provisioning was introduced in Grafana Enterprise and Grafana Cloud in April to improve how organizations manage users and teams in Grafana by introducing automated user lifecycle management. In Grafana versions 12.x where SCIM provisioning is enabled and configured, a vulnerability in user identity handling allows a malicious or compromised SCIM client to provision a user with a numeric externalId, which in turn could allow to override internal user IDs and lead to impersonation or privilege escalation. This vulnerability applies only if all of the following conditions are met: - `enableSCIM` feature flag set to true - `user_sync_enabled` config option in the `[auth.scim]` block set to true 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-13432",
+    "descripcion": "Terraform state versions can be created by a user with specific but insufficient permissions in a Terraform Enterprise workspace. This may allow for the alteration of infrastructure if a subsequent plan operation is approved by a user with approval permission or auto-applied. This vulnerability, CVE-2025-13432, is fixed in Terraform Enterprise version 1.1.1 and 1.0.3. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-13357",
+    "descripcion": "Vault’s Terraform Provider incorrectly set the default deny_null_bind parameter for the LDAP auth method to false by default, potentially resulting in an insecure configuration. If the underlying LDAP server allowed anonymous or unauthenticated binds, this could result in authentication bypass. This vulnerability, CVE-2025-13357, is fixed in Vault Terraform Provider v5.5.0. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-21",
     "cve": "CVE-2025-11127",
-    "descripcion": "The Mstoreapp Mobile App WordPress plugin through 2.08 and Mstoreapp Mobile Multivendor through 9.0.1 do not properly verify users identify when using an AJAX action, allowing unauthenticated users to retrieve a valid session for arbitrary users by knowing their email address. 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "descripcion": "The Mstoreapp Mobile App WordPress plugin through 2.08 and Mstoreapp Mobile Multivendor through 9.0.1 do not properly verify users identify when using an AJAX action, allowing unauthenticated users to retrieve a valid session for arbitrary users by knowing their email address. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2025-11-21",
@@ -33,20 +48,5 @@
     "fecha": "2025-11-21",
     "cve": "CVE-2025-66110",
     "descripcion": "Missing Authorization vulnerability in bPlugins Tiktok Feed b-tiktok-feed allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Tiktok Feed: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66109",
-    "descripcion": "Missing Authorization vulnerability in octolize Cart Weight for WooCommerce woo-cart-weight allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Cart Weight for WooCommerce: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66108",
-    "descripcion": "Missing Authorization vulnerability in Merlot Digital (by TNC) TNC Toolbox: Web Performance tnc-toolbox allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects TNC Toolbox: Web Performance: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66107",
-    "descripcion": "Missing Authorization vulnerability in Scott Paterson Subscriptions & Memberships for PayPal subscriptions-memberships-for-paypal allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Subscriptions & Memberships for PayPal: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
