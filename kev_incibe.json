@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2025-11-21",
+    "cve": "CVE-2025-64483",
+    "descripcion": "Wazuh is a security detection, visibility, and compliance open source project. From version 4.9.0 to before 4.13.0, the Wazuh API – Agent Configuration in certain configurations allows authenticated users with read-only API roles to retrieve agent enrollment credentials through the /utils/configuration endpoint. These credentials can be used to register new agents within the same Wazuh tenant without requiring elevated permissions through the UI. This issue has been patched in version 4.13.0. 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-13132",
+    "descripcion": "This vulnerability allowed a site to enter fullscreen, after a user click, without a full-screen notification (toast) appearing. Without this notification, users could potentially be misled about what site they were on if a malicious site renders a fake UI (like a fake address bar.) 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-13470",
+    "descripcion": "In RNP version 0.18.0 a refactoring regression causes the symmetric session key used for Public-Key Encrypted Session Key (PKESK) packets to be left uninitialized except for zeroing, resulting in it always being an all-zero byte array. Any data encrypted using public-key encryption in this release can be decrypted trivially by supplying an all-zero session key, fully compromising confidentiality. The vulnerability affects only public key encryption (PKESK packets). Passphrase-based encryption (SKESK packets) is not affected. Root cause: Vulnerable session key buffer used in PKESK packet generation. The defect was introduced in commit `7bd9a8dc356aae756b40755be76d36205b6b161a` where initialization logic inside `encrypted_build_skesk()` only randomized the key for the SKESK path and omitted it for the PKESK path. 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:H/U:Red Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-21",
     "cve": "CVE-2025-12973",
     "descripcion": "The S2B AI Assistant – ChatBot, ChatGPT, OpenAI, Content & Image Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the storeFile() function in all versions up to, and including, 1.7.8. This makes it possible for authenticated attackers, with Editor-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2025-11-21",
     "cve": "CVE-2025-66115",
     "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in MatrixAddons Easy Invoice easy-invoice allows PHP Local File Inclusion.This issue affects Easy Invoice: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66114",
-    "descripcion": "Missing Authorization vulnerability in theme funda Show Variations as Single Products Woocommerce woo-show-single-variations-shop-category allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Show Variations as Single Products Woocommerce: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66113",
-    "descripcion": "Missing Authorization vulnerability in ThemeAtelier Better Chat Support for Messenger better-chat-support allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Better Chat Support for Messenger: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66112",
-    "descripcion": "Missing Authorization vulnerability in WebToffee Accessibility Toolkit by WebYes accessibility-plus allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Accessibility Toolkit by WebYes: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
