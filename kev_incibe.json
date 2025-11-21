@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-64762",
+    "descripcion": "The AuthKit library for Next.js provides convenient helpers for authentication and session management using WorkOS & AuthKit with Next.js. In authkit-nextjs version 2.11.0 and below, authenticated responses do not defensively apply anti-caching headers. In environments where CDN caching is enabled, this can result in session tokens being included in cached responses and subsequently served to multiple users. Next.js applications deployed on Vercel are unaffected unless they manually enable CDN caching by setting cache headers on authenticated paths. Patched in authkit-nextjs 2.11.1, which applies anti-caching headers to all responses behind authentication. 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-64755",
+    "descripcion": "Claude Code is an agentic coding tool. Prior to version 2.0.31, due to an error in sed command parsing, it was possible to bypass the Claude Code read-only validation and write to arbitrary files on the host system. This issue has been patched in version 2.0.31. 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-64751",
+    "descripcion": "OpenFGA is a high-performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar. OpenFGA v1.4.0 to v1.11.0 ( openfga-0.1.34 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-62426",
+    "descripcion": "vLLM is an inference and serving engine for large language models (LLMs). From version 0.5.5 to before 0.11.1, the /v1/chat/completions and /tokenize endpoints allow a chat_template_kwargs request parameter that is used in the code before it is properly validated against the chat template. With the right chat_template_kwargs parameters, it is possible to block processing of the API server for long periods of time, delaying all other requests. This issue has been patched in version 0.11.1. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-62372",
+    "descripcion": "vLLM is an inference and serving engine for large language models (LLMs). From version 0.5.5 to before 0.11.1, users can crash the vLLM engine serving multimodal models by passing multimodal embedding inputs with correct ndim but incorrect shape (e.g. hidden dimension is wrong), regardless of whether the model is intended to support such inputs (as defined in the Supported Models page). This issue has been patched in version 0.11.1. 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-62164",
+    "descripcion": "vLLM is an inference and serving engine for large language models (LLMs). From versions 0.10.2 to before 0.11.1, a memory corruption vulnerability could lead to a crash (denial-of-service) and potentially remote code execution (RCE), exists in the Completions API endpoint. When processing user-supplied prompt embeddings, the endpoint loads serialized tensors using torch.load() without sufficient validation. Due to a change introduced in PyTorch 2.8.0, sparse tensor integrity checks are disabled by default. As a result, maliciously crafted tensors can bypass internal bounds checks and trigger an out-of-bounds memory write during the call to to_dense(). This memory corruption can crash vLLM and potentially lead to code execution on the server hosting vLLM. This issue has been patched in version 0.11.1. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-13485",
+    "descripcion": "A security flaw has been discovered in itsourcecode Online File Management System 1.0. This issue affects some unknown processing of the file /ajax.php?action=login. The manipulation of the argument Username results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be exploited. 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-64660",
+    "descripcion": "Improper access control in GitHub Copilot and Visual Studio Code allows an authorized attacker to bypass a security feature over a network. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-64655",
+    "descripcion": "Improper authorization in Dynamics OmniChannel SDK Storage Containers allows an unauthorized attacker to elevate privileges over a network. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-20",
+    "cve": "CVE-2025-62459",
+    "descripcion": "Microsoft Defender Portal Spoofing Vulnerability 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  }
+]
