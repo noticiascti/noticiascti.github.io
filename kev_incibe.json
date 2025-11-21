@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2025-11-21",
+    "cve": "CVE-2025-12973",
+    "descripcion": "The S2B AI Assistant – ChatBot, ChatGPT, OpenAI, Content & Image Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the storeFile() function in all versions up to, and including, 1.7.8. This makes it possible for authenticated attackers, with Editor-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-12747",
+    "descripcion": "The Tainacan plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 1.0.0 via uploaded files marked as private being exposed in wp-content without adequate protection. This makes it possible for unauthenticated attackers to extract potentially sensitive information from files that have been marked as private. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-21",
     "cve": "CVE-2025-41115",
     "descripcion": "SCIM provisioning was introduced in Grafana Enterprise and Grafana Cloud in April to improve how organizations manage users and teams in Grafana by introducing automated user lifecycle management. In Grafana versions 12.x where SCIM provisioning is enabled and configured, a vulnerability in user identity handling allows a malicious or compromised SCIM client to provision a user with a numeric externalId, which in turn could allow to override internal user IDs and lead to impersonation or privilege escalation. This vulnerability applies only if all of the following conditions are met: - `enableSCIM` feature flag set to true - `user_sync_enabled` config option in the `[auth.scim]` block set to true 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
@@ -38,15 +48,5 @@
     "fecha": "2025-11-21",
     "cve": "CVE-2025-66112",
     "descripcion": "Missing Authorization vulnerability in WebToffee Accessibility Toolkit by WebYes accessibility-plus allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Accessibility Toolkit by WebYes: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66111",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Nelio Software Nelio Popups nelio-popups allows Stored XSS.This issue affects Nelio Popups: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-66110",
-    "descripcion": "Missing Authorization vulnerability in bPlugins Tiktok Feed b-tiktok-feed allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Tiktok Feed: from n/a through 21/11/2025 21/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
