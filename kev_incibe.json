@@ -1,8 +1,18 @@
 [
   {
     "fecha": "2025-11-21",
+    "cve": "CVE-2025-11087",
+    "descripcion": "The Zegen Core plugin for WordPress is vulnerable to Cross-Site Request Forgery to Arbitrary File Upload in versions up to, and including, 2.0.1. This is due to missing nonce validation and missing file type validation in the &#39;/custom-font-code/custom-fonts-uploads.php&#39; file. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-21",
     "cve": "CVE-2025-36149",
     "descripcion": "IBM Concert Software 1.0.0 through 2.0.0 could allow a remote attacker to hijack the clicking action of the victim. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-21",
+    "cve": "CVE-2025-13524",
+    "descripcion": "Improper resource release in the call termination process in AWS Wickr before version 6.62.13 on Windows, macOS and Linux may allow a call participant to continue receiving audio input from another user after they close their call window. This issue occurs under certain conditions, which require the affected user to take a particular action within the application To mitigate this issue, users should upgrade AWS Wickr, Wickr Gov and Wickr Enterprise desktop version to version 6.62.13. 21/11/2025 21/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-21",
@@ -38,15 +48,5 @@
     "fecha": "2025-11-21",
     "cve": "CVE-2025-48502",
     "descripcion": "Improper input validation within AMD uprof can allow a local attacker to overwrite MSR registers, potentially resulting in crash or denial of service. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-30201",
-    "descripcion": "Wazuh is a free and open source platform used for threat prevention, detection, and response. Prior to version 4.13.0, a vulnerability in Wazuh Agent allows authenticated attackers to force NTLM authentication through malicious UNC paths in various agent configuration settings, potentially leading NTLM relay attacks that would result privilege escalation and remote code execution. This issue has been patched in version 4.13.0. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-29934",
-    "descripcion": "A bug within some AMD CPUs could allow a local admin-privileged attacker to run a SEV-SNP guest using stale TLB entries, potentially resulting in loss of data integrity. 21/11/2025 21/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
