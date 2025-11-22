@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2025-11-22",
+    "cve": "CVE-2025-13526",
+    "descripcion": "The OneClick Chat to Order plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.0.8 via the &#39;wa_order_thank_you_override&#39; function due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to view sensitive customer information including names, email addresses, phone numbers, billing/shipping addresses, order contents, and payment methods by simply changing the order ID in the URL. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-22",
+    "cve": "CVE-2025-13318",
+    "descripcion": "The Booking Calendar Contact Form plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 1.2.60. This is due to missing authorization checks and payment verification in the `dex_bccf_check_IPN_verification` function. This makes it possible for unauthenticated attackers to arbitrarily confirm bookings and bypass payment requirements via the &#39;dex_bccf_ipn&#39; parameter. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-22",
+    "cve": "CVE-2025-13136",
+    "descripcion": "The GSheetConnector For Ninja Forms plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;njform-google-sheet-config &#39; page in all versions up to, and including, 2.0.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve information about the system. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-22",
+    "cve": "CVE-2025-13384",
+    "descripcion": "The CP Contact Form with PayPal plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 1.3.56. This is due to the plugin exposing an unauthenticated IPN-like endpoint (via the &#39;cp_contactformpp_ipncheck&#39; query parameter) that processes payment confirmations without any authentication, nonce verification, or PayPal IPN signature validation. This makes it possible for unauthenticated attackers to mark form submissions as paid without making actual payments by sending forged payment notification requests with arbitrary POST data (payment_status, txn_id, payer_email). 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-22",
+    "cve": "CVE-2025-13317",
+    "descripcion": "The Appointment Booking Calendar plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 1.3.96. This is due to the plugin exposing an unauthenticated booking processing endpoint (cpabc_appointments_check_IPN_verification) that trusts attacker-supplied payment notifications without verifying their origin, authenticity, or requiring proper authorization checks. This makes it possible for unauthenticated attackers to arbitrarily confirm bookings and insert them into the live calendar via the &#39;cpabc_ipncheck&#39; parameter, triggering administrative and customer notification emails and disrupting operations. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-22",
+    "cve": "CVE-2025-12877",
+    "descripcion": "The IDonate – Blood Donation, Request And Donor Management System plugin for WordPress is vulnerable to unauthorized modification od data due to a missing capability check on the panding_blood_request_action() function in all versions up to, and including, 2.1.15. This makes it possible for unauthenticated attackers to delete arbitrary posts. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-22",
+    "cve": "CVE-2025-12752",
+    "descripcion": "The Subscriptions & Memberships for PayPal plugin for WordPress is vulnerable to fake payment creation in all versions up to, and including, 1.1.7. This is due to the plugin not properly verifying the authenticity of an IPN request. This makes it possible for unauthenticated attackers to create fake payment entries that have not actually occurred. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-22",
     "cve": "CVE-2025-11186",
     "descripcion": "The Cookie Notice & Compliance for GDPR / CCPA plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s cookies_accepted shortcode in all versions up to, and including, 2.5.8 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -13,40 +48,5 @@
     "fecha": "2025-11-21",
     "cve": "CVE-2025-65947",
     "descripcion": "thread-amount is a tool that gets the amount of threads in the current process. Prior to version 0.2.2, there are resource leaks when querying thread counts on Windows and Apple platforms. In Windows platforms, the thread_amount function calls CreateToolhelp32Snapshot but fails to close the returned HANDLE using CloseHandle. Repeated calls to this function will cause the handle count of the process to grow indefinitely, eventually leading to system instability or process termination when the handle limit is reached. In Apple platforms, the thread_amount function calls task_threads (via Mach kernel APIs) which allocates memory for the thread list. The function fails to deallocate this memory using vm_deallocate. Repeated calls will result in a steady memory leak, eventually causing the process to be killed by the OOM (Out of Memory) killer. This issue has been patched in version 0.2.2. 22/11/2025 22/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-65946",
-    "descripcion": "Roo Code is an AI-powered autonomous coding agent that lives in users&#39; editors. Prior to version 3.26.7, Due to an error in validation it was possible for Roo to automatically execute commands that did not match the allow list prefixes. This issue has been patched in version 3.26.7. 22/11/2025 22/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-12888",
-    "descripcion": "Vulnerability in X25519 constant-time cryptographic implementations due to timing side channels introduced by compiler optimizations and CPU architecture limitations, specifically with the Xtensa-based ESP32 chips. If targeting Xtensa it is recommended to use the low memory implementations of X25519, which is now turned on as the default for Xtensa. 22/11/2025 22/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:H/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.00 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-12678",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 22/11/2025 22/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-11936",
-    "descripcion": "Improper input validation in the TLS 1.3 KeyShareEntry parsing in wolfSSL v5.8.2 on multiple platforms allows a remote unauthenticated attacker to cause a denial-of-service by sending a crafted ClientHello message containing duplicate KeyShareEntry values for the same supported group, leading to excessive CPU and memory consumption during ClientHello processing. 22/11/2025 22/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-11934",
-    "descripcion": "Improper input validation in the TLS 1.3 CertificateVerify signature algorithm negotiation in wolfSSL 5.8.2 and earlier on multiple platforms allows for downgrading the signature algorithm used. For example when a client sends ECDSA P521 as the supported signature algorithm the server previously could respond as ECDSA P256 being the accepted signature algorithm and the connection would continue with using ECDSA P256, if the client supports ECDSA P256. 22/11/2025 22/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-11933",
-    "descripcion": "Improper Input Validation in the TLS 1.3 CKS extension parsing in wolfSSL 5.8.2 and earlier on multiple platforms allows a remote unauthenticated attacker to potentially cause a denial-of-service via a crafted ClientHello message with duplicate CKS extensions. 22/11/2025 22/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-21",
-    "cve": "CVE-2025-11932",
-    "descripcion": "The server previously verified the TLS 1.3 PSK binder using a non-constant time method which could potentially leak information about the PSK binder 22/11/2025 22/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
