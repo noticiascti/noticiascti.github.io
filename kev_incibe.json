@@ -1,6 +1,46 @@
 [
   {
     "fecha": "2025-11-24",
+    "cve": "CVE-2025-41017",
+    "descripcion": "Inadequate access control vulnerability in Davantis DDFUSION v6.177.7, which allows unauthorised actors to retrieve perspective parameters from security camera settings by accessing “/cameras//perspective”. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-41016",
+    "descripcion": "Inadequate access control vulnerability in Davantis DFUSION v6.177.7, which allows unauthorised actors to extract images and videos related to alarm events through access to “/alarms//”, where the “MEDIA” parameter can take the value of “snapshot” or “video.mp4”. These media files contain images recorded by security cameras in response to triggered alerts. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-40212",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: nfsd: fix refcount leak in nfsd_set_fh_dentry() nfsd exports a &#34;pseudo root filesystem&#34; which is used by NFSv4 to find the various exported filesystems using LOOKUP requests from a known root filehandle. NFSv3 uses the MOUNT protocol to find those exported filesystems and so is not given access to the pseudo root filesystem. If a v3 (or v2) client uses a filehandle from that filesystem, nfsd_set_fh_dentry() will report an error, but still stores the export in &#34;struct svc_fh&#34; even though it also drops the reference (exp_put()). This means that when fh_put() is called an extra reference will be dropped which can lead to use-after-free and possible denial of service. Normal NFS usage will not provide a pseudo-root filehandle to a v3 client. This bug can only be triggered by the client synthesising an incorrect filehandle. To fix this we move the assignments to the svc_fh later, after all possible error cases have been detected. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-12628",
+    "descripcion": "The WP 2FA WordPress plugin does not generate backup codes with enough entropy, which could allow attackers to bypass the second factor by brute forcing them 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-41729",
+    "descripcion": "An unauthenticated remote attacker can send a specially crafted Modbus read command to the device which leads to a denial of service. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-41087",
+    "descripcion": "Cross-Site Scripting (XSS) vulnerability stored in tha Taclia web application, where the uploaded SVG images are not properly sanitized. This allows to the attackers to embed malicious scripts in SVG files such as image profiles, which are then stored on the server and executed in the context of any user who accesses the compromised resource. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-12741",
+    "descripcion": "A Looker user with Developer role could create a database connection using Denodo driver and, by manipulating LookML, cause Looker to execute a malicious command. Looker-hosted and Self-hosted were found to be vulnerable. This issue has already been mitigated for Looker-hosted instances. No user action is required for these. Self-hosted instances must be upgraded as soon as possible. This vulnerability has been patched in all supported versions of Self-hosted. The versions below have all been updated to protect from this vulnerability. You can download these versions at the Looker download page https://download.looker.com/ : * 24.12.108+ * 24.18.200+ * 25.0.78+ * 25.6.65+ * 25.8.47+ * 25.12.10+ * 25.14+ 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-12740",
+    "descripcion": "A Looker user with a Developer role could create a database connection using IBM DB2 driver and, by manipulating LookML, cause Looker to execute a malicious command, due to inadequate filtering of the driver&#39;s parameters. Looker-hosted and Self-hosted were found to be vulnerable. This issue has already been mitigated for Looker-hosted instances. No user action is required for these. Self-hosted instances must be upgraded as soon as possible. This vulnerability has been patched in all supported versions of Self-hosted. The versions below have all been updated to protect from this vulnerability. You can download these versions at the Looker download page https://download.looker.com/ : * 25.0.93+ * 25.6.84+ * 25.12.42+ * 25.14.50+ * 25.16.44+ 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
     "cve": "CVE-2025-12739",
     "descripcion": "An attacker with viewer permissions in Looker could craft a malicious URL that, when opened by a Looker admin, would execute an attacker-supplied script. Exploitation required at least one Looker extension installed on the instance. Looker-hosted and Self-hosted were found to be vulnerable. This issue has already been mitigated for Looker-hosted instances. No user action is required for these. Self-hosted instances must be upgraded as soon as possible. This vulnerability has been patched in all supported versions of Self-hosted. The versions below have all been updated to protect from this vulnerability. You can download these versions at the Looker download page https://download.looker.com/ : * 24.18.201+ * 25.0.79+ * 25.6.66+ * 25.12.7+ * 25.16.0+ * 25.18.0+ * 25.20.0+ 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -8,45 +48,5 @@
     "fecha": "2025-11-24",
     "cve": "CVE-2025-13596",
     "descripcion": "A sensitive information disclosure vulnerability exists in the error handling component of ATISoluciones CIGES Application version 2.15.6 and earlier. When certain unexpected conditions trigger unhandled exceptions, the application returns detailed error messages and stack traces to the client. This may expose internal filesystem paths, SQL queries, database connection details, or environment configuration data to remote unauthenticated attackers. This issue allows information gathering and reconnaissance but does not enable direct system compromise. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:U/V:D/RE:X/U:Clear Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-13588",
-    "descripcion": "A vulnerability was found in lKinderBueno Streamity Xtream IPTV Player up to 2.8. The impacted element is an unknown function of the file public/proxy.php. Performing manipulation results in server-side request forgery. The attack can be initiated remotely. The exploit has been made public and could be used. Upgrading to version 2.8.1 is sufficient to resolve this issue. The patch is named c70bfb8d36b47bfd64c5ec73917e1d9ddb97af92. It is suggested to upgrade the affected component. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-13586",
-    "descripcion": "A flaw has been found in SourceCodester Online Student Clearance System 1.0. Impacted is an unknown function of the file /Admin/changepassword.php. This manipulation of the argument txtconfirm_password causes sql injection. It is possible to initiate the attack remotely. The exploit has been published and may be used. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-13585",
-    "descripcion": "A vulnerability was detected in code-projects COVID Tracking System 1.0. This issue affects some unknown processing of the file /login.php. The manipulation of the argument code results in sql injection. The attack may be performed from remote. The exploit is now public and may be used. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-12629",
-    "descripcion": "The Broken Link Manager WordPress plugin through 0.6.5 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-12569",
-    "descripcion": "The Guest posting / Frontend Posting / Front Editor WordPress plugin before 5.0.0 does not validate a parameter before redirecting the user to its value, leading to an Open Redirect issue 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-12394",
-    "descripcion": "The Backup Migration WordPress plugin before 2.0.0 does not properly generate its backup path in certain server configurations, allowing unauthenticated users to fetch a log that discloses the backup filename. The backup archive is then downloadable without authentication. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2024-14015",
-    "descripcion": "The WordPress eCommerce Plugin WordPress plugin through 2.9.0 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-7402",
-    "descripcion": "The Ads Pro Plugin - Multi-Purpose WordPress Advertising Manager plugin for WordPress is vulnerable to time-based SQL Injection via the ‘site_id’ parameter in all versions up to, and including, 4.95 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
