@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-41017",
-    "descripcion": "Inadequate access control vulnerability in Davantis DDFUSION v6.177.7, which allows unauthorised actors to retrieve perspective parameters from security camera settings by accessing “/cameras//perspective”. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63958",
+    "descripcion": "MILLENSYS Vision Tools Workspace 6.5.0.2585 exposes a sensitive configuration endpoint (/MILLENSYS/settings) that is accessible without authentication. This page leaks plaintext database credentials, file share paths, internal license server configuration, and software update parameters. An unauthenticated attacker can retrieve this information by accessing the endpoint directly, potentially leading to full system compromise. The vulnerability is due to missing access controls on a privileged administrative function. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-41016",
-    "descripcion": "Inadequate access control vulnerability in Davantis DFUSION v6.177.7, which allows unauthorised actors to extract images and videos related to alarm events through access to “/alarms//”, where the “MEDIA” parameter can take the value of “snapshot” or “video.mp4”. These media files contain images recorded by security cameras in response to triggered alerts. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63953",
+    "descripcion": "A Cross-Site Request Forgery (CSRF) in the /usapi?method=add-user component of Magewell Pro Convert v1.2.213 allows attackers to arbitrarily create accounts via a crafted GET request. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-40212",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: nfsd: fix refcount leak in nfsd_set_fh_dentry() nfsd exports a &#34;pseudo root filesystem&#34; which is used by NFSv4 to find the various exported filesystems using LOOKUP requests from a known root filehandle. NFSv3 uses the MOUNT protocol to find those exported filesystems and so is not given access to the pseudo root filesystem. If a v3 (or v2) client uses a filehandle from that filesystem, nfsd_set_fh_dentry() will report an error, but still stores the export in &#34;struct svc_fh&#34; even though it also drops the reference (exp_put()). This means that when fh_put() is called an extra reference will be dropped which can lead to use-after-free and possible denial of service. Normal NFS usage will not provide a pseudo-root filehandle to a v3 client. This bug can only be triggered by the client synthesising an incorrect filehandle. To fix this we move the assignments to the svc_fh later, after all possible error cases have been detected. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63952",
+    "descripcion": "A Cross-Site Request Forgery (CSRF) in the /mwapi?method=add-user component of Magewell Pro Convert v1.2.213 allows attackers to arbitrarily create accounts via a crafted GET request. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-12628",
-    "descripcion": "The WP 2FA WordPress plugin does not generate backup codes with enough entropy, which could allow attackers to bypass the second factor by brute forcing them 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63435",
+    "descripcion": "Xtooltech Xtool AnyScan Android Application 4.40.40 is Missing Authentication for Critical Function. The server-side endpoint responsible for serving update packages for the application does not require any authentication. This allows an unauthenticated remote attacker to freely download official update packages.. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-41729",
-    "descripcion": "An unauthenticated remote attacker can send a specially crafted Modbus read command to the device which leads to a denial of service. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-63434",
+    "descripcion": "The update mechanism in Xtooltech Xtool AnyScan Android Application 4.40.40 and prior is insecure. The application downloads and extracts update packages containing executable code without performing a cryptographic integrity or authenticity check on their contents. An attacker who can control the update metadata can serve a malicious package, which the application will accept, extract, and later execute, leading to arbitrary code execution. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-41087",
-    "descripcion": "Cross-Site Scripting (XSS) vulnerability stored in tha Taclia web application, where the uploaded SVG images are not properly sanitized. This allows to the attackers to embed malicious scripts in SVG files such as image profiles, which are then stored on the server and executed in the context of any user who accesses the compromised resource. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63433",
+    "descripcion": "Xtooltech Xtool AnyScan Android Application 4.40.40 and prior uses a hardcoded cryptographic key and IV to decrypt update metadata. The key is stored as a static value within the application&#39;s code. An attacker with the ability to intercept network traffic can use this hardcoded key to decrypt, modify, and re-encrypt the update manifest, allowing them to direct the application to download a malicious update package. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-12741",
-    "descripcion": "A Looker user with Developer role could create a database connection using Denodo driver and, by manipulating LookML, cause Looker to execute a malicious command. Looker-hosted and Self-hosted were found to be vulnerable. This issue has already been mitigated for Looker-hosted instances. No user action is required for these. Self-hosted instances must be upgraded as soon as possible. This vulnerability has been patched in all supported versions of Self-hosted. The versions below have all been updated to protect from this vulnerability. You can download these versions at the Looker download page https://download.looker.com/ : * 24.12.108+ * 24.18.200+ * 25.0.78+ * 25.6.65+ * 25.8.47+ * 25.12.10+ * 25.14+ 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63432",
+    "descripcion": "Xtooltech Xtool AnyScan Android Application 4.40.40 and prior is Missing SSL Certificate Validation. The application fails to properly validate the TLS certificate from its update server. An attacker on the same network can exploit this vulnerability by performing a Man-in-the-Middle (MITM) attack to intercept, decrypt, and modify traffic between the application and the update server. This serves as the basis for further attacks, including Remote Code Execution. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-12740",
-    "descripcion": "A Looker user with a Developer role could create a database connection using IBM DB2 driver and, by manipulating LookML, cause Looker to execute a malicious command, due to inadequate filtering of the driver&#39;s parameters. Looker-hosted and Self-hosted were found to be vulnerable. This issue has already been mitigated for Looker-hosted instances. No user action is required for these. Self-hosted instances must be upgraded as soon as possible. This vulnerability has been patched in all supported versions of Self-hosted. The versions below have all been updated to protect from this vulnerability. You can download these versions at the Looker download page https://download.looker.com/ : * 25.0.93+ * 25.6.84+ * 25.12.42+ * 25.14.50+ * 25.16.44+ 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-13594",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-12739",
-    "descripcion": "An attacker with viewer permissions in Looker could craft a malicious URL that, when opened by a Looker admin, would execute an attacker-supplied script. Exploitation required at least one Looker extension installed on the instance. Looker-hosted and Self-hosted were found to be vulnerable. This issue has already been mitigated for Looker-hosted instances. No user action is required for these. Self-hosted instances must be upgraded as soon as possible. This vulnerability has been patched in all supported versions of Self-hosted. The versions below have all been updated to protect from this vulnerability. You can download these versions at the Looker download page https://download.looker.com/ : * 24.18.201+ * 25.0.79+ * 25.6.66+ * 25.12.7+ * 25.16.0+ * 25.18.0+ * 25.20.0+ 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-13511",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-24",
-    "cve": "CVE-2025-13596",
-    "descripcion": "A sensitive information disclosure vulnerability exists in the error handling component of ATISoluciones CIGES Application version 2.15.6 and earlier. When certain unexpected conditions trigger unhandled exceptions, the application returns detailed error messages and stack traces to the client. This may expose internal filesystem paths, SQL queries, database connection details, or environment configuration data to remote unauthenticated attackers. This issue allows information gathering and reconnaissance but does not enable direct system compromise. 24/11/2025 24/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:U/V:D/RE:X/U:Clear Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-60917",
+    "descripcion": "A reflected cross-site scripting (XSS) vulnerability in the /overview/network/ endpoint of Austrian Archaeological Institute Openatlas before v8.12.0 allows attackers to execute arbitrary code in the context of a user&#39;s browser via injecting a crafted payload into the color parameter. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
