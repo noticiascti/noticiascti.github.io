@@ -1,52 +1,52 @@
 [
   {
+    "fecha": "2025-11-25",
+    "cve": "CVE-2025-9803",
+    "descripcion": "lunary-ai/lunary version 1.9.34 is vulnerable to an account takeover due to improper authentication in the Google OAuth integration. The application fails to verify the &#39;aud&#39; (audience) field in the access token issued by Google, which is crucial for ensuring the token is intended for the application. This oversight allows attackers to use tokens issued to malicious applications to gain unauthorized access to user accounts. The issue is resolved in version 1.9.35. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-25",
+    "cve": "CVE-2025-65951",
+    "descripcion": "Inside Track / Entropy Derby is a research-grade horse-racing betting engine. Prior to commit 2d38d2f, the VDF-based timelock encryption system fails to enforce sequential delay against the betting operator. Bettors pre-compute the entire Wesolowski VDF and include vdfOutputHex in their encrypted bet ticket, allowing the house to decrypt immediately using fast proof verification instead of expensive VDF evaluation. This issue has been patched via commit 2d38d2f. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-25",
+    "cve": "CVE-2025-65944",
+    "descripcion": "Sentry-Javascript is an official Sentry SDKs for JavaScript. From version 10.11.0 to before 10.27.0, when a Node.js application using the Sentry SDK has sendDefaultPii: true it is possible to inadvertently send certain sensitive HTTP headers, including the Cookie header, to Sentry. Those headers would be stored within a Sentry organization as part of the associated trace. A person with access to the Sentry organization could then view and use these sensitive values to impersonate or escalate their privileges within the application. This issue has been patched in version 10.27.0. 25/11/2025 25/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-25",
+    "cve": "CVE-2025-64761",
+    "descripcion": "OpenBao is an open source identity-based secrets management system. Prior to version 2.4.4, a privileged operator could use the identity group subsystem to add a root policy to a group identity group, escalating their or another user&#39;s permissions in the system. Specifically this is an issue when: an operator in the root namespace has access to identity/groups endpoints and an operator does not have policy access. Otherwise, an operator with policy access could create or modify an existing policy to grant root-equivalent permissions through the sudo capability. This issue has been patched in version 2.4.4. 25/11/2025 25/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-65018",
+    "descripcion": "LIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. From version 1.6.0 to before 1.6.51, there is a heap buffer overflow vulnerability in the libpng simplified API function png_image_finish_read when processing 16-bit interlaced PNGs with 8-bit output format. Attacker-crafted interlaced PNG files cause heap writes beyond allocated buffer bounds. This issue has been patched in version 1.6.51. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-64720",
+    "descripcion": "LIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. From version 1.6.0 to before 1.6.51, an out-of-bounds read vulnerability exists in png_image_read_composite when processing palette images with PNG_FLAG_OPTIMIZE_ALPHA enabled. The palette compositing code in png_init_read_transformations incorrectly applies background compositing during premultiplication, violating the invariant component ≤ alpha × 257 required by the simplified PNG API. This issue has been patched in version 1.6.51. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-64506",
+    "descripcion": "LIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. From version 1.6.0 to before 1.6.51, a heap buffer over-read vulnerability exists in libpng&#39;s png_write_image_8bit function when processing 8-bit images through the simplified write API with convert_to_8bit enabled. The vulnerability affects 8-bit grayscale+alpha, RGB/RGBA, and images with incomplete row data. A conditional guard incorrectly allows 8-bit input to enter code expecting 16-bit input, causing reads up to 2 bytes beyond allocated buffer boundaries. This issue has been patched in version 1.6.51. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-64505",
+    "descripcion": "LIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. Prior to version 1.6.51, a heap buffer over-read vulnerability exists in libpng&#39;s png_do_quantize function when processing PNG files with malformed palette indices. The vulnerability occurs when palette_lookup array bounds are not validated against externally-supplied image data, allowing an attacker to craft a PNG file with out-of-range palette indices that trigger out-of-bounds memory access. This issue has been patched in version 1.6.51. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-62155",
+    "descripcion": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to version 0.9.6, a recently patched SSRF vulnerability contains a bypass method that can bypass the existing security fix and still allow SSRF to occur. Because the existing fix only applies security restrictions to the first URL request, a 302 redirect can bypass existing security measures and successfully access the intranet. This issue has been patched in version 0.9.6. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2025-11-24",
     "cve": "CVE-2025-10144",
     "descripcion": "The Perfect Brands for WooCommerce plugin for WordPress is vulnerable to time-based SQL Injection via the `brands` attribute of the `products` shortcode in all versions up to, and including, 3.6.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Contributor-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-63674",
-    "descripcion": "An issue in Blurams Lumi Security Camera (A31C) v23.1227.472.2926 allows local physical attackers to execute arbitrary code via overriding the bootloader on the SD card. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-54563",
-    "descripcion": "An Incorrect Access Control vulnerability was found in the Application Server of Desktop Alert PingAlert version 6.1.0.11 to 6.1.1.2 which allows Incorrect Access Control, leading to Remote Information Disclosure. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-54347",
-    "descripcion": "A Directory Traversal vulnerability was found in the Application Server of Desktop Alert PingAlert version 6.1.0.11 to 6.1.1.2 which allows an attacker to write arbitrary files under certain conditions. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-54341",
-    "descripcion": "A vulnerability was found in the Application Server of Desktop Alert PingAlert version 6.1.0.11 to 6.1.1.2. There are Hard-coded configuration values. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-54338",
-    "descripcion": "An Incorrect Access Control vulnerability was found in the Application Server of Desktop Alert PingAlert version 6.1.0.11 to 6.1.1.2 which allows an attacker to disclose user hashes. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2024-47856",
-    "descripcion": "In RSA Authentication Agent before 7.4.7, service paths and shortcut paths may be vulnerable to path interception if the path has one or more spaces and is not surrounded by quotation marks. An adversary can place an executable in a higher-level directory of the path, and Windows will resolve that executable instead of the intended executable. 24/11/2025 24/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-63498",
-    "descripcion": "alinto SOGo 5.12.3 is vulnerable to Cross Site Scripting (XSS) via the &#34;userName&#34; parameter. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-52538",
-    "descripcion": "Improper input validation within the XOCL driver may allow a local attacker to generate an integer overflow condition, potentially resulting in loss of confidentiality or availability. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-48511",
-    "descripcion": "Improper input validation within AMD uprof can allow a local attacker to write to an arbitrary physical address, potentially resulting in crash or denial of service. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
