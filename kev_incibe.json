@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-11-24",
+    "cve": "CVE-2025-64048",
+    "descripcion": "YCCMS 3.4 contains a stored cross-site scripting (XSS) vulnerability in the article management functionality. The vulnerability exists in the add() and getPost() functions within the ArticleAction.class.php file due to improper neutralization of user input in the article title field. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-64047",
+    "descripcion": "OpenRapid RapidCMS 1.3.1 is vulnerable to Cross Site Scripting (XSS) in /user/user-move.php. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-63914",
+    "descripcion": "An issue was discovered in Cinnamon kotaemon 0.11.0. The _may_extract_zip function in the \\libs\\ktem\\ktem\\index\\file\\ui.py file does not check the contents of uploaded ZIP files. Although the contents are extracted into a temporary folder that is cleared before each extraction, successfully uploading a ZIP bomb could still cause the server to consume excessive resources during decompression. Moreover, if no further files are uploaded afterward, the extracted data could occupy disk space and potentially render the system unavailable. Anyone with permission to upload files can carry out this attack. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-52539",
+    "descripcion": "A buffer overflow with Xilinx Run Time Environment may allow a local attacker to read or corrupt data from the advanced extensible interface (AXI), potentially resulting in loss of confidentiality, integrity, and/or availability. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-24",
+    "cve": "CVE-2025-0005",
+    "descripcion": "Improper input validation within the XOCL driver may allow a local attacker to generate an integer overflow condition, potentially resulting in crash or denial of service. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-24",
     "cve": "CVE-2025-36112",
     "descripcion": "IBM Sterling B2B Integrator and IBM Sterling File Gateway 6.0.0.0 through 6.1.2.7 and 6.2.0.0 through 6.2.0.5 and 6.2.1.1 could reveal sensitive server IP configuration information to an unauthorized user. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -23,30 +48,5 @@
     "fecha": "2025-11-24",
     "cve": "CVE-2025-63953",
     "descripcion": "A Cross-Site Request Forgery (CSRF) in the /usapi?method=add-user component of Magewell Pro Convert v1.2.213 allows attackers to arbitrarily create accounts via a crafted GET request. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-63952",
-    "descripcion": "A Cross-Site Request Forgery (CSRF) in the /mwapi?method=add-user component of Magewell Pro Convert v1.2.213 allows attackers to arbitrarily create accounts via a crafted GET request. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-63435",
-    "descripcion": "Xtooltech Xtool AnyScan Android Application 4.40.40 is Missing Authentication for Critical Function. The server-side endpoint responsible for serving update packages for the application does not require any authentication. This allows an unauthenticated remote attacker to freely download official update packages.. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-63434",
-    "descripcion": "The update mechanism in Xtooltech Xtool AnyScan Android Application 4.40.40 and prior is insecure. The application downloads and extracts update packages containing executable code without performing a cryptographic integrity or authenticity check on their contents. An attacker who can control the update metadata can serve a malicious package, which the application will accept, extract, and later execute, leading to arbitrary code execution. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-63433",
-    "descripcion": "Xtooltech Xtool AnyScan Android Application 4.40.40 and prior uses a hardcoded cryptographic key and IV to decrypt update metadata. The key is stored as a static value within the application&#39;s code. An attacker with the ability to intercept network traffic can use this hardcoded key to decrypt, modify, and re-encrypt the update manifest, allowing them to direct the application to download a malicious update package. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-63432",
-    "descripcion": "Xtooltech Xtool AnyScan Android Application 4.40.40 and prior is Missing SSL Certificate Validation. The application fails to properly validate the TLS certificate from its update server. An attacker on the same network can exploit this vulnerability by performing a Man-in-the-Middle (MITM) attack to intercept, decrypt, and modify traffic between the application and the update server. This serves as the basis for further attacks, including Remote Code Execution. 24/11/2025 24/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
