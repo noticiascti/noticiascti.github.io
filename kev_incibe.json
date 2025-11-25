@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-11-25",
+    "cve": "CVE-2025-59373",
+    "descripcion": "A local privilege escalation vulnerability exists in the restore mechanism of ASUS System Control Interface. It can be triggered when an unprivileged actor copies files without proper validation into protected system paths, potentially leading to arbitrary files being executed as SYSTEM. For more information, please refer to section Security Update for MyAsus in the ASUS Security Advisory. 25/11/2025 25/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-25",
     "cve": "CVE-2025-9803",
     "descripcion": "lunary-ai/lunary version 1.9.34 is vulnerable to an account takeover due to improper authentication in the Google OAuth integration. The application fails to verify the &#39;aud&#39; (audience) field in the access token issued by Google, which is crucial for ensuring the token is intended for the application. This oversight allows attackers to use tokens issued to malicious applications to gain unauthorized access to user accounts. The issue is resolved in version 1.9.35. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-11-24",
     "cve": "CVE-2025-62155",
     "descripcion": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to version 0.9.6, a recently patched SSRF vulnerability contains a bypass method that can bypass the existing security fix and still allow SSRF to occur. Because the existing fix only applies security restrictions to the first URL request, a 302 redirect can bypass existing security measures and successfully access the intranet. This issue has been patched in version 0.9.6. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-24",
-    "cve": "CVE-2025-10144",
-    "descripcion": "The Perfect Brands for WooCommerce plugin for WordPress is vulnerable to time-based SQL Injection via the `brands` attribute of the `products` shortcode in all versions up to, and including, 3.6.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Contributor-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 25/11/2025 25/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
