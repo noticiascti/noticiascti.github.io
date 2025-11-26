@@ -21,6 +21,11 @@
   },
   {
     "fecha": "2025-11-26",
+    "cve": "CVE-2025-12972",
+    "descripcion": "Fluent Bit out_file plugin does not properly sanitize tag values when deriving output file names. When the File option is omitted, the plugin uses untrusted tag input to construct file paths. This allows attackers with network access to craft tags containing path traversal ..."
+  },
+  {
+    "fecha": "2025-11-26",
     "cve": "CVE-2025-59501",
     "descripcion": "Authentication bypass by spoofing in Microsoft Configuration Manager allows an authorized attacker to perform spoofing over an adjacent network."
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-11-26",
     "cve": "CVE-2025-49752",
     "descripcion": "Azure Bastion Elevation of Privilege Vulnerability"
-  },
-  {
-    "fecha": "2025-11-26",
-    "cve": "CVE-2025-61757",
-    "descripcion": "Vulnerability in the Identity Manager product of Oracle Fusion Middleware (component: REST WebServices). Supported versions that are affected are 12.2.1.4.0 and 14.1.2.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to ..."
   }
 ]
