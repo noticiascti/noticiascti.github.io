@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-11-27",
+    "cve": "CVE-2025-12559",
+    "descripcion": "Mattermost versions 11.0.x 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13765",
+    "descripcion": "Exposure of email service credentials to users without administrative rights in Devolutions Server.This issue affects Devolutions Server: before 2025.2.21, before 2025.3.9. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13758",
+    "descripcion": "Exposure of credentials in unintended requests in Devolutions Server.This issue affects Server: through 2025.2.20, through 2025.3.8. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13757",
+    "descripcion": "SQL Injection vulnerability in last usage logs in Devolutions Server.This issue affects Devolutions Server: through 2025.2.20, through 2025.3.8. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
     "cve": "CVE-2025-8890",
     "descripcion": "Firmware in SDMC NE6037 routers prior to version 7.1.12.2.44 has a network diagnostics tool vulnerable to a shell command injection attacks. In order to exploit this vulnerability, an attacker has to log in to the router&#39;s administrative portal, which by default is reachable only via LAN ports. 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-11-27",
     "cve": "CVE-2025-59302",
     "descripcion": "In Apache CloudStack improper control of generation of code (&#39;Code Injection&#39;) vulnerability is found in the following APIs which are accessible only to admins. * quotaTariffCreate * quotaTariffUpdate * createSecondaryStorageSelector * updateSecondaryStorageSelector * updateHost * updateStorage This issue affects Apache CloudStack: from 4.18.0 before 4.20.2, from 4.21.0 before 4.22.0. Users are recommended to upgrade to versions 4.20.2 or 4.22.0, which contain the fix. The fix introduces a new global configuration flag, js.interpretation.enabled, allowing administrators to control the interpretation of JavaScript expressions in these APIs, thereby mitigating the code injection risk. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-54057",
-    "descripcion": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Apache SkyWalking. This issue affects Apache SkyWalking: 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-59890",
-    "descripcion": "Improper input sanitization in the file archives upload functionality of Eaton Galileo software allows traversing paths which could lead into an attacker with local access to execute unauthorized code or commands. This security issue has been fixed in the latest version of Galileo which is available on the Eaton download center. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-13742",
-    "descripcion": "Emails sent by pretix can utilize placeholders that will be filled with customer data. For example, when {name} is used in an email template, it will be replaced with the buyer&#39;s name for the final email. If the name of the attendee contained HTML or Markdown formatting, this was rendered as HTML in the resulting email. This way, a user could inject links or other formatted text through a maliciously formatted name. Since pretix applies a strict allow list approach to allowed HTML tags, this could not be abused for XSS or similarly dangerous attack chains. However, it can be used to manipulate emails in a way that makes user-provided content appear in a trustworthy and credible way, which can be abused for phishing. 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:L/VA:L/SC:N/SI:L/SA:L/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-10476",
-    "descripcion": "The WP Fastest Cache plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the wpfc_db_fix_callback() function in all versions up to, and including, 1.4.0. This makes it possible for authenticated attackers, with Subscriber-level access and above, to initiate several database fix actions. This only affects sites with premium activated. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
