@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2025-11-27",
+    "cve": "CVE-2025-8890",
+    "descripcion": "Firmware in SDMC NE6037 routers prior to version 7.1.12.2.44 has a network diagnostics tool vulnerable to a shell command injection attacks. In order to exploit this vulnerability, an attacker has to log in to the router&#39;s administrative portal, which by default is reachable only via LAN ports. 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13692",
+    "descripcion": "The Unlimited Elements For Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 2.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file. A form with a file upload field must be created with the premium version of the plugin in order to exploit the vulnerability. However, once the form exists, the vulnerability is exploitable even if the premium version is deactivated and/or uninstalled. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-12140",
+    "descripcion": "The application contains an insecure &#39;redirectToUrl&#39; mechanism that incorrectly processes the value of the &#39;redirectUrlParameter&#39; parameter. The application interprets the entered string of characters as a Java expression, allowing an unauthenticated attacer to perform arbitrary code execution. This issue was fixed in version wu#2016.1.5513#0#20251014_113353 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-12971",
+    "descripcion": "The Folders – Unlimited Folders to Organize Media Library Folder, Pages, Posts, File Manager plugin for WordPress is vulnerable to unauthorized modification of data due to a misconfigured capability check on the &#39;wcp_change_post_folder&#39; function in all versions up to, and including, 3.1.5. This makes it possible for authenticated attackers, with Contributor-level access and above, to move arbitrary folder contents to arbitrary folders. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-59454",
+    "descripcion": "In Apache CloudStack, a gap in access control checks affected the APIs - createNetworkACL - listNetworkACLs - listResourceDetails - listVirtualMachinesUsageHistory - listVolumesUsageHistory While these APIs were accessible only to authorized users, insufficient permission validation meant that users could occasionally access information beyond their intended scope. Users are recommended to upgrade to Apache CloudStack 4.20.2.0 or 4.22.0.0, which fixes the issue. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-59302",
+    "descripcion": "In Apache CloudStack improper control of generation of code (&#39;Code Injection&#39;) vulnerability is found in the following APIs which are accessible only to admins. * quotaTariffCreate * quotaTariffUpdate * createSecondaryStorageSelector * updateSecondaryStorageSelector * updateHost * updateStorage This issue affects Apache CloudStack: from 4.18.0 before 4.20.2, from 4.21.0 before 4.22.0. Users are recommended to upgrade to versions 4.20.2 or 4.22.0, which contain the fix. The fix introduces a new global configuration flag, js.interpretation.enabled, allowing administrators to control the interpretation of JavaScript expressions in these APIs, thereby mitigating the code injection risk. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-54057",
+    "descripcion": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Apache SkyWalking. This issue affects Apache SkyWalking: 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
     "cve": "CVE-2025-59890",
     "descripcion": "Improper input sanitization in the file archives upload functionality of Eaton Galileo software allows traversing paths which could lead into an attacker with local access to execute unauthorized code or commands. This security issue has been fixed in the latest version of Galileo which is available on the Eaton download center. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2025-11-27",
     "cve": "CVE-2025-10476",
     "descripcion": "The WP Fastest Cache plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the wpfc_db_fix_callback() function in all versions up to, and including, 1.4.0. This makes it possible for authenticated attackers, with Subscriber-level access and above, to initiate several database fix actions. This only affects sites with premium activated. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-59026",
-    "descripcion": "Malicious content uploaded as file can be used to execute script code when following attacker-controlled links. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Please deploy the provided updates and patch releases. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-59025",
-    "descripcion": "Malicious e-mail content can be used to execute script code. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Sanitization has been updated to avoid such bypasses. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-30190",
-    "descripcion": "Malicious content at office documents can be used to inject script code when editing a document. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Please deploy the provided updates and patch releases. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-30186",
-    "descripcion": "Malicious content uploaded as file can be used to execute script code when following attacker-controlled links. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Please deploy the provided updates and patch releases. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-13381",
-    "descripcion": "The AI ChatBot with ChatGPT and Content Generator by AYS plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the &#39;ays_chatgpt_save_wp_media&#39; function in all versions up to, and including, 2.7.0. This makes it possible for unauthenticated attackers to upload media files. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-13378",
-    "descripcion": "The AI ChatBot with ChatGPT and Content Generator by AYS plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 2.7.0 via the ays_chatgpt_pinecone_upsert function. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-12584",
-    "descripcion": "The Quick View for WooCommerce plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 2.2.17 via the &#39;wqv_popup_content&#39; AJAX endpoint due to insufficient restrictions on which products can be included. This makes it possible for unauthenticated attackers to extract data from private products that they should not have access to. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
