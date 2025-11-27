@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-13441",
-    "descripcion": "The Hide Category by User Role for WooCommerce plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 2.3.1. This is due to a missing capability check on the admin_init hook that executes wp_cache_flush(). This makes it possible for unauthenticated attackers to flush the site&#39;s object cache via forged requests, potentially degrading site performance. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-59890",
+    "descripcion": "Improper input sanitization in the file archives upload functionality of Eaton Galileo software allows traversing paths which could lead into an attacker with local access to execute unauthorized code or commands. This security issue has been fixed in the latest version of Galileo which is available on the Eaton download center. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-13157",
-    "descripcion": "The QODE Wishlist for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.2.7 via the &#39;qode_wishlist_for_woocommerce_wishlist_table_item_callback&#39; function due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to update the public view of arbitrary wishlists. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-13742",
+    "descripcion": "Emails sent by pretix can utilize placeholders that will be filled with customer data. For example, when {name} is used in an email template, it will be replaced with the buyer&#39;s name for the final email. If the name of the attendee contained HTML or Markdown formatting, this was rendered as HTML in the resulting email. This way, a user could inject links or other formatted text through a maliciously formatted name. Since pretix applies a strict allow list approach to allowed HTML tags, this could not be abused for XSS or similarly dangerous attack chains. However, it can be used to manipulate emails in a way that makes user-provided content appear in a trustworthy and credible way, which can be abused for phishing. 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:L/VA:L/SC:N/SI:L/SA:L/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-13525",
-    "descripcion": "The WP Directory Kit plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;order_by&#39; parameter in all versions up to, and including, 1.4.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-10476",
+    "descripcion": "The WP Fastest Cache plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the wpfc_db_fix_callback() function in all versions up to, and including, 1.4.0. This makes it possible for authenticated attackers, with Subscriber-level access and above, to initiate several database fix actions. This only affects sites with premium activated. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-13143",
-    "descripcion": "The Poll, Survey & Quiz Maker Plugin by Opinion Stage plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 19.12.0. This is due to missing or insufficient nonce validation on the disconnect_account_action function. This makes it possible for unauthenticated attackers to disconnect the site from the Opinion Stage platform integration via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-59026",
+    "descripcion": "Malicious content uploaded as file can be used to execute script code when following attacker-controlled links. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Please deploy the provided updates and patch releases. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-12185",
-    "descripcion": "The StaffList plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 3.2.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-59025",
+    "descripcion": "Malicious e-mail content can be used to execute script code. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Sanitization has been updated to avoid such bypasses. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-12123",
-    "descripcion": "The Customer Reviews Collector for WooCommerce plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;email-text&#39; parameter in all versions up to, and including, 4.6.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-30190",
+    "descripcion": "Malicious content at office documents can be used to inject script code when editing a document. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Please deploy the provided updates and patch releases. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-7820",
-    "descripcion": "The SKT PayPal for WooCommerce plugin for WordPress is vulnerable to Payment Bypass in all versions up to, and including, 1.4. This is due to the plugin only enforcing client side controls instead of server-side controls when processing payments. This makes it possible for unauthenticated attackers to make confirmed purchases without actually paying for them. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-30186",
+    "descripcion": "Malicious content uploaded as file can be used to execute script code when following attacker-controlled links. Unintended actions can be executed in the context of the users account, including exfiltration of sensitive information. Please deploy the provided updates and patch releases. No publicly available exploits are known 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-3784",
-    "descripcion": "Cleartext Storage of Sensitive Information Vulnerability in GX Works2 all versions allows an attacker to disclose credential information stored in plaintext from project files. As a result, the attacker may be able to open project files protected by user authentication using disclosed credential information, and obtain or modify project information. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-13381",
+    "descripcion": "The AI ChatBot with ChatGPT and Content Generator by AYS plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the &#39;ays_chatgpt_save_wp_media&#39; function in all versions up to, and including, 2.7.0. This makes it possible for unauthenticated attackers to upload media files. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-13680",
-    "descripcion": "The Tiger theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 101.2.1. This is due to the plugin allowing a user to update the user role through the $user->set_role() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to that of an administrator. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-13378",
+    "descripcion": "The AI ChatBot with ChatGPT and Content Generator by AYS plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 2.7.0 via the ays_chatgpt_pinecone_upsert function. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-11-27",
-    "cve": "CVE-2025-13675",
-    "descripcion": "The Tiger theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 101.2.1. This is due to the &#39;paypal-submit.php&#39; file not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;administrator&#39; role during registration and gain administrator access to the site. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-12584",
+    "descripcion": "The Quick View for WooCommerce plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 2.2.17 via the &#39;wqv_popup_content&#39; AJAX endpoint due to insufficient restrictions on which products can be included. This makes it possible for unauthenticated attackers to extract data from private products that they should not have access to. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
