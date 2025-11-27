@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-7820",
+    "descripcion": "The SKT PayPal for WooCommerce plugin for WordPress is vulnerable to Payment Bypass in all versions up to, and including, 1.4. This is due to the plugin only enforcing client side controls instead of server-side controls when processing payments. This makes it possible for unauthenticated attackers to make confirmed purchases without actually paying for them. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-3784",
+    "descripcion": "Cleartext Storage of Sensitive Information Vulnerability in GX Works2 all versions allows an attacker to disclose credential information stored in plaintext from project files. As a result, the attacker may be able to open project files protected by user authentication using disclosed credential information, and obtain or modify project information. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13680",
+    "descripcion": "The Tiger theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 101.2.1. This is due to the plugin allowing a user to update the user role through the $user->set_role() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to that of an administrator. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13675",
+    "descripcion": "The Tiger theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 101.2.1. This is due to the &#39;paypal-submit.php&#39; file not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;administrator&#39; role during registration and gain administrator access to the site. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13540",
+    "descripcion": "The Tiare Membership plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.2. This is due to the &#39;tiare_membership_init_rest_api_register&#39; function not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;administrator&#39; role during registration and gain administrator access to the site. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13539",
+    "descripcion": "The FindAll Membership plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.0.4. This is due to the plugin not properly logging in a user with the data that was previously verified through the &#39;findall_membership_check_facebook_user&#39; and the &#39;findall_membership_check_google_user&#39; functions. This makes it possible for unauthenticated attackers to log in as administrative users, as long as they have an existing account on the site which can easily be created by default through the temp user functionality, and access to the administrative user&#39;s email. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-13538",
+    "descripcion": "The FindAll Listing plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.0.5. This is due to the &#39;findall_listing_user_registration_additional_params&#39; function not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;administrator&#39; role during registration and gain administrator access to the site. Note: The vulnerability can only be exploited if the FindAll Membership plugin is also activated, because user registration is in that plugin. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-12758",
+    "descripcion": "Versions of the package validator before 13.15.22 are vulnerable to Incomplete Filtering of One or More Instances of Special Elements in the isLength() function that does not take into account Unicode variation selectors (\\uFE0F, \\uFE0E) appearing in a sequence which lead to improper string length calculation. This can lead to an application using isLength for input validation accepting strings significantly longer than intended, resulting in issues like data truncation in databases, buffer overflows in other system components, or denial-of-service. 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-12151",
+    "descripcion": "The Simple Folio plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;portfolio_name&#39; parameter in all versions up to, and including, 1.1.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-27",
+    "cve": "CVE-2025-66314",
+    "descripcion": "Improper Privilege Management vulnerability in ZTE ElasticNet UME R32 on Linux allows Accessing Functionality Not Properly Constrained by ACLs.This issue affects ElasticNet UME R32: ElasticNet_UME_R32_V16.23.20.04. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  }
+]
