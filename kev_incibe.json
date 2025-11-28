@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-13683",
+    "descripcion": "Exposure of credentials in unintended requests in Devolutions Server, Remote Desktop Manager on Windows.This issue affects Devolutions Server: through 2025.3.8.0; Remote Desktop Manager: through 2025.3.23.0. 28/11/2025 28/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-12183",
+    "descripcion": "Out-of-bounds memory operations in org.lz4:lz4-java 1.8.0 and earlier allow remote attackers to cause denial of service and read adjacent memory via untrusted compressed input. 28/11/2025 28/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-59792",
+    "descripcion": "Reveals plaintext credentials in the MONITOR command vulnerability in Apache Kvrocks. This issue affects Apache Kvrocks: from 1.0.0 through 2.13.0. Users are recommended to upgrade to version 2.14.0, which fixes the issue. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-59790",
+    "descripcion": "Improper Privilege Management vulnerability in Apache Kvrocks. This issue affects Apache Kvrocks: from v2.9.0 through v2.13.0. Users are recommended to upgrade to version 2.14.0, which fixes the issue. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-51736",
+    "descripcion": "File upload vulnerability in HCL Technologies Ltd. Unica 12.0.0. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-51735",
+    "descripcion": "CSV formula injection vulnerability in HCL Technologies Ltd. Unica 12.0.0. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-51734",
+    "descripcion": "Cross-site scripting (XSS) vulnerability in HCL Technologies Ltd. Unica 12.0.0. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-51733",
+    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in HCL Technologies Ltd. Unica 12.0.0. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-12638",
+    "descripcion": "Keras version 3.11.3 is affected by a path traversal vulnerability in the keras.utils.get_file() function when extracting tar archives. The vulnerability arises because the function uses Python&#39;s tarfile.extractall() method without the security-critical filter=&#39;data&#39; parameter. Although Keras attempts to filter unsafe paths using filter_safe_paths(), this filtering occurs before extraction, and a PATH_MAX symlink resolution bug triggers during extraction. This bug causes symlink resolution to fail due to path length limits, resulting in a security bypass that allows files to be written outside the intended extraction directory. This can lead to arbitrary file writes outside the cache directory, enabling potential system compromise or malicious code execution. The vulnerability affects Keras installations that process tar archives with get_file() and does not affect versions where this extraction method is secured with the appropriate filter parameter. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-11156",
+    "descripcion": "Netskope was notified about a potential gap in its agent (NS Client) on Windows systems. If this gap is successfully exploited, a local, authenticated user with Administrator privileges can improperly load the driver as a generic kernel service. This triggers the flaw, causing a system crash (Blue-Screen-of-Death) and resulting in a Denial of Service (DoS) for the affected machine. 28/11/2025 28/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  }
+]
