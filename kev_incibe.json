@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-66361",
-    "descripcion": "An issue was discovered in Logpoint before 7.7.0. Sensitive information is exposed in System Processes for an extended period during high CPU load. 28/11/2025 28/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-66372",
+    "descripcion": "Mustang before 2.16.3 allows exfiltrating files via XXE attacks. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-66360",
-    "descripcion": "An issue was discovered in Logpoint before 7.7.0. An improperly configured access control policy exposes sensitive Logpoint internal service (Redis) information to li-admin users. This can lead to privilege escalation. 28/11/2025 28/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-66371",
+    "descripcion": "Peppol-py before 1.1.1 allows XXE attacks because of the Saxon configuration. When validating XML-based invoices, the XML parser could read files from the filesystem and expose their content to a remote host. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-66359",
-    "descripcion": "An issue was discovered in Logpoint before 7.7.0. Insufficient input validation and a lack of output escaping in multiple components leads to a cross-site scripting (XSS) vulnerability. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-66370",
+    "descripcion": "Kivitendo before 3.9.2 allows XXE injection. By uploading an electronic invoice in the ZUGFeRD format, it is possible to read and exfiltrate files from the server&#39;s filesystem. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-13338",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 28/11/2025 28/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-64312",
+    "descripcion": "Permission control vulnerability in the file management module. Impact: Successful exploitation of this vulnerability may affect service confidentiality. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-3261",
-    "descripcion": "ThingsBoard in versions prior to v4.2.1 allows an authenticated user to upload malicious SVG images via the &#34;Image Gallery&#34;, leading to a Stored Cross-Site Scripting (XSS) vulnerability. The exploit can be triggered when any user accesses the public API endpoint of the malicious SVG images, or if the malicious images are embedded in an `iframe` element, during a widget creation, deployed to any page of the platform (e.g., dashboards), and accessed during normal operations. The vulnerability resides in the `ImageController`, which fails to restrict the execution of JavaScript code when an image is loaded by the user&#39;s browser. This vulnerability can lead to the execution of malicious code in the context of other users&#39; sessions, potentially compromising their accounts and allowing unauthorized actions. 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.20 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-58311",
+    "descripcion": "UAF vulnerability in the USB driver module. Impact: Successful exploitation of this vulnerability will affect availability and confidentiality. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-12421",
-    "descripcion": "Mattermost versions 11.0.x 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-58308",
+    "descripcion": "Vulnerability of improper criterion security check in the call module. Impact: Successful exploitation of this vulnerability may cause features to perform abnormally. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-12559",
-    "descripcion": "Mattermost versions 11.0.x 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-58305",
+    "descripcion": "Identity authentication bypass vulnerability in the Gallery app. Impact: Successful exploitation of this vulnerability may affect service confidentiality. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-13765",
-    "descripcion": "Exposure of email service credentials to users without administrative rights in Devolutions Server.This issue affects Devolutions Server: before 2025.2.21, before 2025.3.9. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-58304",
+    "descripcion": "Permission control vulnerability in the file management module. Impact: Successful exploitation of this vulnerability may affect service confidentiality. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-13758",
-    "descripcion": "Exposure of credentials in unintended requests in Devolutions Server.This issue affects Server: through 2025.2.20, through 2025.3.8. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-58302",
+    "descripcion": "Permission control vulnerability in the Settings module. Impact: Successful exploitation of this vulnerability may affect service confidentiality. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-13757",
-    "descripcion": "SQL Injection vulnerability in last usage logs in Devolutions Server.This issue affects Devolutions Server: through 2025.2.20, through 2025.3.8. 27/11/2025 27/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-11-28",
+    "cve": "CVE-2025-13737",
+    "descripcion": "The Nextend Social Login and Register plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.1.21. This is due to missing or incorrect nonce validation on the &#39;unlinkUser&#39; function. This makes it possible for unauthenticated attackers to unlink the user&#39;s social login via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 28/11/2025 28/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
