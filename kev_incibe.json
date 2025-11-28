@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-11-27",
+    "cve": "CVE-2025-13338",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 28/11/2025 28/11/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-11-27",
     "cve": "CVE-2025-3261",
     "descripcion": "ThingsBoard in versions prior to v4.2.1 allows an authenticated user to upload malicious SVG images via the &#34;Image Gallery&#34;, leading to a Stored Cross-Site Scripting (XSS) vulnerability. The exploit can be triggered when any user accesses the public API endpoint of the malicious SVG images, or if the malicious images are embedded in an `iframe` element, during a widget creation, deployed to any page of the platform (e.g., dashboards), and accessed during normal operations. The vulnerability resides in the `ImageController`, which fails to restrict the execution of JavaScript code when an image is loaded by the user&#39;s browser. This vulnerability can lead to the execution of malicious code in the context of other users&#39; sessions, potentially compromising their accounts and allowing unauthorized actions. 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.20 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-11-27",
     "cve": "CVE-2025-13692",
     "descripcion": "The Unlimited Elements For Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 2.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file. A form with a file upload field must be created with the premium version of the plugin in order to exploit the vulnerability. However, once the form exists, the vulnerability is exploitable even if the premium version is deactivated and/or uninstalled. 27/11/2025 27/11/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-11-27",
-    "cve": "CVE-2025-12140",
-    "descripcion": "The application contains an insecure &#39;redirectToUrl&#39; mechanism that incorrectly processes the value of the &#39;redirectUrlParameter&#39; parameter. The application interprets the entered string of characters as a Java expression, allowing an unauthenticated attacer to perform arbitrary code execution. This issue was fixed in version wu#2016.1.5513#0#20251014_113353 27/11/2025 27/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
