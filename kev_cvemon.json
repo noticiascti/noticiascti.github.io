@@ -36,13 +36,13 @@
   },
   {
     "fecha": "2025-11-29",
-    "cve": "CVE-2025-12972",
-    "descripcion": "Fluent Bit out_file plugin does not properly sanitize tag values when deriving output file names. When the File option is omitted, the plugin uses untrusted tag input to construct file paths. This allows attackers with network access to craft tags containing path traversal ..."
+    "cve": "CVE-2025-12978",
+    "descripcion": "Fluent Bit in_http, in_splunk, and in_elasticsearch input plugins contain a flaw in the tag_key validation logic that fails to enforce exact key-length matching. This allows crafted inputs where a tag prefix is incorrectly treated as a full match. A remote attacker with ..."
   },
   {
     "fecha": "2025-11-29",
-    "cve": "CVE-2025-21479",
-    "descripcion": "Memory corruption due to unauthorized command execution in GPU micronode while executing specific sequence of commands."
+    "cve": "CVE-2025-12972",
+    "descripcion": "Fluent Bit out_file plugin does not properly sanitize tag values when deriving output file names. When the File option is omitted, the plugin uses untrusted tag input to construct file paths. This allows attackers with network access to craft tags containing path traversal ..."
   },
   {
     "fecha": "2025-11-29",
