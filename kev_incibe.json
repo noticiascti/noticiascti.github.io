@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-11-29",
+    "cve": "CVE-2025-6666",
+    "descripcion": "A vulnerability was determined in motogadget mo.lock Ignition Lock up to 20251125. Affected by this vulnerability is an unknown functionality of the component NFC Handler. Executing manipulation can lead to use of hard-coded cryptographic key . The physical device can be targeted for the attack. A high complexity level is associated with this attack. The exploitation appears to be difficult. The vendor was contacted early about this disclosure but did not respond in any way. 29/11/2025 29/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:L/AC:H/Au:N/C:P/I:N/A:N Gravedad 4.0 1.00 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 2.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-11-29",
     "cve": "CVE-2025-66291",
     "descripcion": "OrangeHRM is a comprehensive human resource management (HRM) system. From version 5.0 to 5.7, the interview attachment retrieval endpoint in the Recruitment module serves files based solely on an authenticated session and user-supplied identifiers, without verifying whether the requester has permission to access the associated interview record. Because the server does not perform any recruitment-level authorization checks, an ESS-level user with no access to recruitment workflows can directly request interview attachment URLs and receive the corresponding files. This exposes confidential interview documents—including candidate CVs, evaluations, and supporting files—to unauthorized users. The issue arises from relying on predictable object identifiers and session presence rather than validating the user’s association with the relevant recruitment process. This issue has been patched in version 5.8. 29/11/2025 29/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-11-29",
     "cve": "CVE-2025-66221",
     "descripcion": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.4, Werkzeug&#39;s safe_join function allows path segments with Windows device names. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been patched in version 3.1.4. 29/11/2025 29/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-11-29",
-    "cve": "CVE-2025-66217",
-    "descripcion": "AIS-catcher is a multi-platform AIS receiver. Prior to version 0.64, an integer underflow vulnerability exists in the MQTT parsing logic of AIS-catcher. This vulnerability allows an attacker to trigger a massive Heap Buffer Overflow by sending a malformed MQTT packet with a manipulated Topic Length field. This leads to an immediate Denial of Service (DoS) and, when used as a library, severe Memory Corruption that can be leveraged for Remote Code Execution (RCE). This issue has been patched in version 0.64. 29/11/2025 29/11/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
