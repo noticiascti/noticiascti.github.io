@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-41012",
-    "descripcion": "Unauthorized access vulnerability in TCMAN GIM v11 version 20250304. This vulnerability allows an unauthenticated attacker to determine whether a user exists on the system by using the &#39;pda:userId&#39; and &#39;pda:newPassword&#39; parameters with &#39;soapaction UnlockUser’ in &#39;/WS/PDAWebService.asmx&#39;. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-13372",
+    "descripcion": "An issue was discovered in 5.2 before 5.2.9, 5.1 before 5.1.15, and 4.2 before 4.2.27. `FilteredRelation` is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the `**kwargs` passed to `QuerySet.annotate()` or `QuerySet.alias()` on PostgreSQL. Earlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected. Django would like to thank Stackered for reporting this issue. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-40700",
-    "descripcion": "Reflected Cross-Site Scripting (XSS) in IDI Eikon&#39;s Governalia. The vulnerability allows an attacker to execute JavaScript code in the victim&#39;s browser when a malicious URL with the &#39;q&#39; parameter in &#39;/search&#39; is sent to them. This vulnerability can be exploited to steal sensitive information such as session cookies or to perform actions on behalf of the victim. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12630",
+    "descripcion": "The Upload.am WordPress plugin before 1.0.1 is vulnerable to arbitrary option disclosure due to a missing capability check on its AJAX request handler, allowing users such as contributor to view site options. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-13879",
-    "descripcion": "Directory traversal vulnerability in SOLIDserver IPAM v8.2.3. This vulnerability allows an authenticated user with administrator privileges to list directories other than those to which the have authorized access using the &#39;directory&#39; parameter in &#39;/mod/ajax.php?action=sections/list/list&#39;.For examplem setting the &#39;directory&#39; parameter to &#39;/&#39; displays files outside the &#39;LOCAL:///&#39; folder. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59705",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a Physically Proximate Attacker to Escalate Privileges by enabling the USB interface through chassis probe insertion during system boot, aka &#34;Unauthorized Reactivation of the USB interface&#34; or F01. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-12465",
-    "descripcion": "A Blind SQL injection vulnerability has been identified in QuickCMS. Improper neutralization of input provided by a high-privileged user into aFilesDelete allows for Blind SQL Injection attacks. The vendor was notified early about this vulnerability, but didn&#39;t respond with the details of vulnerability or vulnerable version range. Only version 6.8 was tested and confirmed as vulnerable, other versions were not tested and might also be vulnerable. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59702",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker with elevated privileges to falsify tamper events by accessing internal components. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-11789",
-    "descripcion": "Out-of-bounds read vulnerability in Circutor SGE-PLC1000/SGE-PLC50 v9.0.2. The &#39;DownloadFile&#39; function converts a parameter to an integer using &#39;atoi()&#39; and then uses it as an index in the &#39;FilesDownload&#39; array with &#39;(&FilesDownload)[iVar2]&#39;. If the parameter is too large, it will access memory beyond the limits. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59701",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker (with elevated privileges) to read and modify the Appliance SSD contents (because they are unencrypted). 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-11788",
-    "descripcion": "Heap-based buffer overflow vulnerability in Circutor SGE-PLC1000/SGE-PLC50 v9.0.2. In the &#39;ShowSupervisorParameters()&#39; function, there is an unlimited user input that is copied to a fixed-size buffer via &#39;sprintf()&#39;. The &#39;GetParameter(meter)&#39; function retrieves the user input, which is directly incorporated into a buffer without size validation. An attacker can provide an excessively large input for the &#39;meter&#39; parameter. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:H/SC:H/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59700",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker with root access to modify the Recovery Partition (because of a lack of integrity protection). 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-11787",
-    "descripcion": "Command injection vulnerability in the operating system in Circutor SGE-PLC1000/SGE-PLC50 v9.0.2 through the &#39;GetDNS()&#39;, &#39;CheckPing()&#39; and &#39;TraceRoute()&#39; functions. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59699",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker to escalate privileges by booting from a USB device with a valid root filesystem. This occurs because of insecure default settings in the Legacy GRUB Bootloader. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-11786",
-    "descripcion": "Stack-based buffer overflow vulnerability in Circutor SGE-PLC1000/SGE-PLC50 v9.0.2. In the &#39;SetUserPassword()&#39; function, the &#39;newPassword&#39; parameter is directly embedded in a shell command string using &#39;sprintf()&#39; without any sanitisation or validation, and then executed using &#39;system()&#39;. This allows an attacker to inject arbitrary shell commands that will be executed with the same privileges as the application. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:H/SC:H/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59698",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, might allow a physically proximate attacker to gain access to the EOL legacy bootloader. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-11785",
-    "descripcion": "Stack-based buffer overflow vulnerability in Circutor SGE-PLC1000/SGE-PLC50 v9.0.2. In the &#39;ShowMeterPasswords()&#39; function, there is an unlimited user input that is copied to a fixed-size buffer via &#39;sprintf()&#39;. The &#39;GetParameter(meter)&#39; function retrieves the user input, which is directly incorporated into a buffer without size validation. An attacker can provide an excessively large input for the &#39;meter&#39; parameter. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:H/SC:H/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59697",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker to escalate privileges by editing the Legacy GRUB bootloader configuration to start a root shell upon boot of the host OS. This is called F06. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-11784",
-    "descripcion": "Stack-based buffer overflow vulnerability in Circutor SGE-PLC1000/SGE-PLC50 v9.0.2. In the &#39;ShowMeterDatabase()&#39; function, there is an unlimited user input that is copied to a fixed-size buffer via &#39;sprintf()&#39;. The &#39;GetParameter(meter)&#39; function retrieves the user input, which is directly incorporated into a buffer without size validation. An attacker can provide an excessively large input for the &#39;meter&#39; parameter. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:H/SC:H/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59696",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker to modify or erase tamper events via the Chassis management board. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
