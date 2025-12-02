@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2025-12-01",
+    "cve": "CVE-2025-34297",
+    "descripcion": "KissFFT versions prior to the fix commit 1b083165 contain an integer overflow in kiss_fft_alloc() in kiss_fft.c on platforms where size_t is 32-bit. The nfft parameter is not validated before being used in a size calculation (sizeof(kiss_fft_cpx) * (nfft - 1)), which can wrap to a small value when nfft is large. As a result, malloc() allocates an undersized buffer and the subsequent twiddle-factor initialization loop writes nfft elements, causing a heap buffer overflow. This vulnerability only affects 32-bit architectures. 01/12/2025 01/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-01",
+    "cve": "CVE-2025-11772",
+    "descripcion": "A carefully crafted DLL, copied to C:\\ProgramData\\Synaptics folder, allows a local user to execute arbitrary code with elevated privileges during driver installation. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-01",
+    "cve": "CVE-2025-13837",
+    "descripcion": "When loading a plist file, the plistlib module reads data in size specified by the file itself, meaning a malicious file can cause OOM and DoS issues 01/12/2025 01/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-01",
+    "cve": "CVE-2025-13836",
+    "descripcion": "When reading an HTTP response from a server, if no read amount is specified, the default behavior will be to use Content-Length. This allows a malicious server to cause the client to read large amounts of data into memory, potentially causing OOM or other DoS. 01/12/2025 01/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-01",
+    "cve": "CVE-2025-13835",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Tyche Softwares Arconix Shortcodes allows Stored XSS.This issue affects Arconix Shortcodes: from n/a through 2.1.19. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-01",
+    "cve": "CVE-2025-13653",
+    "descripcion": "In Search Guard FLX versions from 3.1.0 up to 4.0.0 with enterprise modules being disabled, there exists an issue which allows authenticated users to use specially crafted requests to read documents from data streams without having the respective privileges. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-01",
     "cve": "CVE-2025-7007",
     "descripcion": "NULL Pointer Dereference vulnerability in Avast Antivirus on MacOS, Avast Anitvirus on Linux when scanning a malformed Windows PE file causes the antivirus process to crash.This issue affects Antivirus: 16.0.0; Anitvirus: 3.0.3. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -18,35 +48,5 @@
     "fecha": "2025-12-01",
     "cve": "CVE-2025-8351",
     "descripcion": "Heap-based Buffer Overflow, Out-of-bounds Read vulnerability in Avast Antivirus on MacOS when scanning a malformed file may allow Local Execution of Code or Denial-of-Service of the anitvirus engine process.This issue affects Antivirus: from 8.3.70.94 before 8.3.70.98. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-12-01",
-    "cve": "CVE-2025-63535",
-    "descripcion": "A SQL injection vulnerability exists in the Blood Bank Management System 1.0 within the abs.php component. The application fails to properly sanitize usersupplied input in SQL queries, allowing an attacker to inject arbitrary SQL code. By manipulating the search field, an attacker can bypass authentication and gain unauthorized access to the system. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-12-01",
-    "cve": "CVE-2025-63534",
-    "descripcion": "A cross-site scripting (XSS) vulnerability exists in the Blood Bank Management System 1.0 within the login.php component. The application fails to properly sanitize or encode user-supplied input before rendering it in response. An attacker can inject malicious JavaScript payloads into the msg and error parameters, which are then executed in the victim&#39;s browser when the page is viewed. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-01",
-    "cve": "CVE-2025-61229",
-    "descripcion": "An issue in Shirt Pocket&#39;s SuperDuper! 3.10 and earlier allow a local attacker to modify the default task template to execute an arbitrary preflight script with root privileges and Full Disk Access, thus bypassing macOS privacy controls. 01/12/2025 01/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-01",
-    "cve": "CVE-2025-55222",
-    "descripcion": "A denial of service vulnerability exists in the Modbus TCP and Modbus RTU over TCP USB Function functionality of Socomec DIRIS Digiware M-70 1.6.9. A specially crafted network packet can lead to a denial of service. An attacker can send an unauthenticated packet to trigger this vulnerability.This vulnerability is specific to the malicious message sent via Modbus RTU over TCP on port 503. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-01",
-    "cve": "CVE-2025-55221",
-    "descripcion": "A denial of service vulnerability exists in the Modbus TCP and Modbus RTU over TCP USB Function functionality of Socomec DIRIS Digiware M-70 1.6.9. A specially crafted network packet can lead to a denial of service. An attacker can send an unauthenticated packet to trigger this vulnerability.This vulnerability is specific to the malicious message sent via Modbus TCP over port 502. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-01",
-    "cve": "CVE-2025-54851",
-    "descripcion": "A denial of service vulnerability exists in the Modbus TCP and Modbus RTU over TCP functionality of Socomec DIRIS Digiware M-70 1.6.9. A specially crafted series of network requests can lead to a denial of service. An attacker can send a sequence of unauthenticated packets to trigger this vulnerability.An attacker can trigger this denial-of-service condition by sending a single Modbus TCP message to port 503 using the Write Single Register function code (6) to write the value 1 to register 4352. This action changes the Modbus address to 15. After this message is sent, the device will be in a denial-of-service state. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
