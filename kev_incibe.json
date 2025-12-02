@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-34297",
-    "descripcion": "KissFFT versions prior to the fix commit 1b083165 contain an integer overflow in kiss_fft_alloc() in kiss_fft.c on platforms where size_t is 32-bit. The nfft parameter is not validated before being used in a size calculation (sizeof(kiss_fft_cpx) * (nfft - 1)), which can wrap to a small value when nfft is large. As a result, malloc() allocates an undersized buffer and the subsequent twiddle-factor initialization loop writes nfft elements, causing a heap buffer overflow. This vulnerability only affects 32-bit architectures. 01/12/2025 01/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66448",
+    "descripcion": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.11.1, vllm has a critical remote code execution vector in a config class named Nemotron_Nano_VL_Config. When vllm loads a model config that contains an auto_map entry, the config class resolves that mapping with get_class_from_dynamic_module(...) and immediately instantiates the returned class. This fetches and executes Python from the remote repository referenced in the auto_map string. Crucially, this happens even when the caller explicitly sets trust_remote_code=False in vllm.transformers_utils.config.get_config. In practice, an attacker can publish a benign-looking frontend repo whose config.json points via auto_map to a separate malicious backend repo; loading the frontend will silently run the backend’s code on the victim host. This vulnerability is fixed in 0.11.1. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-11772",
-    "descripcion": "A carefully crafted DLL, copied to C:\\ProgramData\\Synaptics folder, allows a local user to execute arbitrary code with elevated privileges during driver installation. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66415",
+    "descripcion": "fastify-reply-from is a Fastify plugin to forward the current HTTP request to another server. Prior to 12.5.0, by crafting a malicious URL, an attacker could access routes that are not allowed, even though the reply.from is defined for specific routes in @fastify/reply-from. This vulnerability is fixed in 12.5.0. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-13837",
-    "descripcion": "When loading a plist file, the plistlib module reads data in size specified by the file itself, meaning a malicious file can cause OOM and DoS issues 01/12/2025 01/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66412",
+    "descripcion": "Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. Prior to 21.0.2, 20.3.15, and 19.2.17, A Stored Cross-Site Scripting (XSS) vulnerability has been identified in the Angular Template Compiler. It occurs because the compiler&#39;s internal security schema is incomplete, allowing attackers to bypass Angular&#39;s built-in security sanitization. Specifically, the schema fails to classify certain URL-holding attributes (e.g., those that could contain javascript: URLs) as requiring strict URL security, enabling the injection of malicious scripts. This vulnerability is fixed in 21.0.2, 20.3.15, and 19.2.17. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-13836",
-    "descripcion": "When reading an HTTP response from a server, if no read amount is specified, the default behavior will be to use Content-Length. This allows a malicious server to cause the client to read large amounts of data into memory, potentially causing OOM or other DoS. 01/12/2025 01/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66410",
+    "descripcion": "Gin-vue-admin is a backstage management system based on vue and gin. In 2.8.6 and earlier, attackers can delete any file on the server at will, causing damage or unavailability of server resources. Attackers can control the &#39;FileMd5&#39; parameter to delete any file and folder. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-13835",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Tyche Softwares Arconix Shortcodes allows Stored XSS.This issue affects Arconix Shortcodes: from n/a through 2.1.19. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66405",
+    "descripcion": "Portkey.ai Gateway is a blazing fast AI Gateway with integrated guardrails. Prior to 1.14.0, the gateway determined the destination baseURL by prioritizing the value in the x-portkey-custom-host request header. The proxy route then appends the client-specified path to perform an external fetch. This can be maliciously used by users for SSRF attacks. This vulnerability is fixed in 1.14.0. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-13653",
-    "descripcion": "In Search Guard FLX versions from 3.1.0 up to 4.0.0 with enterprise modules being disabled, there exists an issue which allows authenticated users to use specially crafted requests to read documents from data streams without having the respective privileges. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66403",
+    "descripcion": "FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. Prior to 2.2.3, a stored cross-site scripting (XSS) vulnerability exists in the Filerise application due to improper handling of uploaded SVG files. The application accepts user-supplied SVG uploads without sanitizing or restricting embedded script content. When a malicious SVG containing inline JavaScript or event-based payloads is uploaded, it is later rendered directly in the browser whenever viewed within the application. Because SVGs are XML-based and allow scripting, they execute in the origin context of the application, enabling full stored XSS. This vulnerability is fixed in 2.2.3. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-7007",
-    "descripcion": "NULL Pointer Dereference vulnerability in Avast Antivirus on MacOS, Avast Anitvirus on Linux when scanning a malformed Windows PE file causes the antivirus process to crash.This issue affects Antivirus: 16.0.0; Anitvirus: 3.0.3. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-66401",
+    "descripcion": "MCP Watch is a comprehensive security scanner for Model Context Protocol (MCP) servers. In 0.1.2 and earlier, the MCPScanner class contains a critical Command Injection vulnerability in the cloneRepo method. The application passes the user-supplied githubUrl argument directly to a system shell via execSync without sanitization. This allows an attacker to execute arbitrary commands on the host machine by appending shell metacharacters to the URL. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-65794",
-    "descripcion": "Rejected reason: DO NOT USE THIS CVE RECORD. ConsultIDs: none. Reason: This record was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none. 01/12/2025 01/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66400",
+    "descripcion": "mdast-util-to-hast is an mdast utility to transform to hast. From 13.0.0 to before 13.2.1, multiple (unprefixed) classnames could be added in markdown source by using character references. This could make rendered user supplied markdown code elements appear like the rest of the page. This vulnerability is fixed in 13.2.1. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-65793",
-    "descripcion": "Rejected reason: DO NOT USE THIS CVE RECORD. ConsultIDs: none. Reason: This record was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none. 01/12/2025 01/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66313",
+    "descripcion": "ChurchCRM is an open-source church management system. In ChurchCRM 6.2.0 and earlier, there is a time-based blind SQL injection in the handling of the 1FieldSec parameter. Injecting SLEEP() causes deterministic server-side delays, proving the value is incorporated into a SQL query without proper parameterization. The issue allows data exfiltration and modification via blind techniques. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-01",
-    "cve": "CVE-2025-8351",
-    "descripcion": "Heap-based Buffer Overflow, Out-of-bounds Read vulnerability in Avast Antivirus on MacOS when scanning a malformed file may allow Local Execution of Code or Denial-of-Service of the anitvirus engine process.This issue affects Antivirus: from 8.3.70.94 before 8.3.70.98. 01/12/2025 01/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-66312",
+    "descripcion": "This admin plugin for Grav is an HTML user interface that provides a convenient way to configure Grav and easily create and modify pages. Prior to 1.11.0-beta.1, a Stored Cross-Site Scripting (XSS) vulnerability was identified in the /admin/accounts/groups/Grupo endpoint of the Grav application. This vulnerability allows attackers to inject malicious scripts into the data[readableName] parameter. The injected scripts are stored on the server and executed automatically whenever the affected page is accessed by users, posing a significant security risk. This vulnerability is fixed in 1.11.0-beta.1. 01/12/2025 01/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:A/VC:L/VI:L/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.20 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
