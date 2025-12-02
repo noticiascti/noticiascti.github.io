@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-13372",
-    "descripcion": "An issue was discovered in 5.2 before 5.2.9, 5.1 before 5.1.15, and 4.2 before 4.2.27. `FilteredRelation` is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the `**kwargs` passed to `QuerySet.annotate()` or `QuerySet.alias()` on PostgreSQL. Earlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected. Django would like to thank Stackered for reporting this issue. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65656",
+    "descripcion": "dcat-admin v2.2.3-beta and before is vulnerable to file inclusion in admin/src/Extend/VersionManager.php. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-12630",
-    "descripcion": "The Upload.am WordPress plugin before 1.0.1 is vulnerable to arbitrary option disclosure due to a missing capability check on its AJAX request handler, allowing users such as contributor to view site options. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65358",
+    "descripcion": "Edoc-doctor-appointment-system v1.0.1 was discovered to contain SQl injection vulnerability via the &#39;docid&#39; parameter at /admin/appointment.php. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59705",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a Physically Proximate Attacker to Escalate Privileges by enabling the USB interface through chassis probe insertion during system boot, aka &#34;Unauthorized Reactivation of the USB interface&#34; or F01. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65186",
+    "descripcion": "Grav CMS 1.7.49 is vulnerable to Cross Site Scripting (XSS). The page editor allows authenticated users to edit page content via a Markdown editor. The editor fails to properly sanitize tags, allowing stored XSS payloads to execute when pages are viewed in the admin interface. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59702",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker with elevated privileges to falsify tamper events by accessing internal components. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64070",
+    "descripcion": "Sourcecodester Student Grades Management System v1.0 is vulnerable to Cross Site Scripting (XSS) in the Add New Subject Description field. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59701",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker (with elevated privileges) to read and modify the Appliance SSD contents (because they are unencrypted). 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-13828",
+    "descripcion": "SummaryA non privileged user can install and remove arbitrary packages via composer for a composer based installed, even if the flag in update settings for enable composer based update is unticked. ImpactA low-privileged user of the platform can install malicious code to obtain higher privileges. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59700",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker with root access to modify the Recovery Partition (because of a lack of integrity protection). 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-13827",
+    "descripcion": "Summary Arbitrary files can be uploaded via the GrapesJS Builder, as the types of files that can be uploaded are not restricted. ImpactIf the media folder is not restricted from running files this can lead to a remote code execution. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59699",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker to escalate privileges by booting from a USB device with a valid root filesystem. This occurs because of insecure default settings in the Legacy GRUB Bootloader. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65187",
+    "descripcion": "A Stored Cross Site Scripting vulnerability exists in CiviCRM before v6.7 in the Accounting Batches field. An authenticated user can inject malicious JavaScript into this field and it executes whenever the page is viewed. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59698",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, might allow a physically proximate attacker to gain access to the EOL legacy bootloader. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64460",
+    "descripcion": "An issue was discovered in 5.2 before 5.2.9, 5.1 before 5.1.15, and 4.2 before 4.2.27. Algorithmic complexity in `django.core.serializers.xml_serializer.getInnerText()` allows a remote attacker to cause a potential denial-of-service attack triggering CPU and memory exhaustion via specially crafted XML input processed by the XML `Deserializer`. Earlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected. Django would like to thank Seokchan Yoon for reporting this issue. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59697",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker to escalate privileges by editing the Legacy GRUB bootloader configuration to start a root shell upon boot of the host OS. This is called F06. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63872",
+    "descripcion": "DeepSeek V3.2 has a Cross Site Scripting (XSS) vulnerability, which allows JavaScript execution through model-generated SVG content. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-02",
-    "cve": "CVE-2025-59696",
-    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow a physically proximate attacker to modify or erase tamper events via the Chassis management board. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-59704",
+    "descripcion": "Entrust nShield Connect XC, nShield 5c, and nShield HSMi through 13.6.11, or 13.7, allow an attacker to gain access the the BIOS menu because is has no password. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
