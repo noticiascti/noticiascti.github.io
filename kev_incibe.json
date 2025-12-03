@@ -6,6 +6,16 @@
   },
   {
     "fecha": "2025-12-02",
+    "cve": "CVE-2025-66476",
+    "descripcion": "Vim is an open source, command line text editor. Prior to version 9.1.1947, an uncontrolled search path vulnerability on Windows allows Vim to execute malicious executables placed in the current working directory for the current edited file. On Windows, when using cmd.exe as a shell, Vim resolves external commands by searching the current working directory before system paths. When Vim invokes tools such as findstr for :grep, external commands or filters via :!, or compiler/:make commands, it may inadvertently run a malicious executable present in the same directory as the file being edited. The issue affects Vim for Windows prior to version 9.1.1947. 03/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-55181",
+    "descripcion": "Sending an HTTP request/response body with greater than 2^31 bytes triggers an infinite loop in proxygen::coro::HTTPQuicCoroSession which blocks the backing event loop and unconditionally appends data to a std::vector per-loop iteration. This issue leads to unbounded memory growth and eventually causes the process to run out of memory. 03/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-02",
     "cve": "CVE-2025-65657",
     "descripcion": "FeehiCMS version 2.1.1 has a Remote Code Execution via Unrestricted File Upload in Ad Management. FeehiCMS version 2.1.1 allows authenticated remote attackers to upload files that the server later executes (or stores in an executable location) without sufficient validation, sanitization, or execution restrictions. An authenticated remote attacker can upload a crafted PHP file and cause the application or web server to execute it, resulting in remote code execution (RCE). 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2025-12-02",
     "cve": "CVE-2025-61940",
     "descripcion": "NMIS/BioDose V22.02 and previous versions rely on a common SQL Server user account to access data in the database. User access in the client application is restricted by a password authentication check in the client software but the underlying database connection always has access. The latest version of NMIS/BioDose introduces an option to use Windows user authentication with the database, which would restrict this database connection. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-65877",
-    "descripcion": "Lvzhou CMS before commit c4ea0eb9cab5f6739b2c87e77d9ef304017ed615 (2025-09-22) is vulnerable to SQL injection via the &#39;title&#39; parameter in com.wanli.lvzhoucms.service.ContentService#findPage. The parameter is concatenated directly into a dynamic SQL query without sanitization or prepared statements, enabling attackers to read sensitive data from the database. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-65379",
-    "descripcion": "PHPGurukul Billing System 1.0 is vulnerable to SQL Injection in the /admin/password-recovery.php endpoint. Specifically, the username and mobileno parameters accepts unvalidated user input, which is then concatenated directly into a backend SQL query. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
