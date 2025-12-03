@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-12-03",
+    "cve": "CVE-2025-13354",
+    "descripcion": "The Tag, Category, and Taxonomy Manager – AI Autotagger with OpenAI plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.40.1. This is due to the plugin not properly verifying that a user is authorized to perform an action in the &#34;taxopress_merge_terms_batch&#34; function. This makes it possible for authenticated attackers, with subscriber level access and above, to merge or delete arbitrary taxonomy terms. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-13342",
+    "descripcion": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to unauthorized modification of arbitrary WordPress options in all versions up to, and including, 3.28.20. This is due to insufficient capability checks and input validation in the ActionOptions::run() save handler. This makes it possible for unauthenticated attackers to modify critical WordPress options such as users_can_register, default_role, and admin_email via submitting crafted form data to public frontend forms. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-13109",
+    "descripcion": "The HUSKY – Products Filter Professional for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.3.7.2 via the &#34;woof_add_query&#34; and &#34;woof_remove_query&#34; functions due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber level access and above, to insert or remove arbitrary saved search queries into any user&#39;s profile, including administrators. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-12887",
+    "descripcion": "The Post SMTP plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.6.1. This is due to the plugin not properly verifying that a user is authorized to update OAuth tokens on the &#39;handle_gmail_oauth_redirect&#39; function. This makes it possible for authenticated attackers, with subscriber level access and above, to inject invalid or attacker-controlled OAuth credentials. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-12358",
+    "descripcion": "The ShopEngine Elementor WooCommerce Builder Addon plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.8.5. This is due to missing nonce validation on the &#34;post_add_to_list&#34; function as well as an incorrect permissions callback in the &#34;Api/init&#34; function. This makes it possible for unauthenticated attackers to add or remove products from a user&#39;s wishlist via a forged request granted they can trick a site&#39;s user into performing an action such as clicking on a link. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
     "cve": "CVE-2025-39665",
     "descripcion": "User enumeration in Nagvis&#39; Checkmk MultisiteAuth before version 1.9.48 allows an unauthenticated attacker to enumerate Checkmk usernames. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -23,30 +48,5 @@
     "fecha": "2025-12-03",
     "cve": "CVE-2025-12744",
     "descripcion": "A flaw was found in the ABRT daemon’s handling of user-supplied mount information.ABRT copies up to 12 characters from an untrusted input and places them directly into a shell command (docker inspect %s) without proper validation. An unprivileged local user can craft a payload that injects shell metacharacters, causing the root-running ABRT process to execute attacker-controlled commands and ultimately gain full root privileges. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-13946",
-    "descripcion": "MEGACO dissector infinite loop in Wireshark 4.6.0 to 4.6.1 and 4.4.0 to 4.4.11 allows denial of service 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-13945",
-    "descripcion": "HTTP3 dissector crash in Wireshark 4.6.0 and 4.6.1 allows denial of service 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-13486",
-    "descripcion": "The Advanced Custom Fields: Extended plugin for WordPress is vulnerable to Remote Code Execution in versions 0.9.0.5 through 0.9.1.1 via the prepare_form() function. This is due to the function accepting user input and then passing that through call_user_func_array(). This makes it possible for unauthenticated attackers to execute arbitrary code on the server, which can be leveraged to inject backdoors or create new administrative user accounts. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-12954",
-    "descripcion": "The Timetable and Event Schedule by MotoPress WordPress plugin before 2.4.16 does not verify a user has access to a specific event when duplicating, leading to arbitrary event disclosure when to users with a role as low as Contributor. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-13495",
-    "descripcion": "The FluentCart plugin for WordPress is vulnerable to SQL Injection via the &#39;groupKey&#39; parameter in all versions up to, and including, 1.3.1. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
