@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-02",
+    "cve": "CVE-2025-65955",
+    "descripcion": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to 7.1.2-9 and 6.9.13-34, there is a vulnerability in ImageMagick’s Magick++ layer that manifests when Options::fontFamily is invoked with an empty string. Clearing a font family calls RelinquishMagickMemory on _drawInfo->font, freeing the font string but leaving _drawInfo->font pointing to freed memory while _drawInfo->family is set to that (now-invalid) pointer. Any later cleanup or reuse of _drawInfo->font re-frees or dereferences dangling memory. DestroyDrawInfo and other setters (Options::font, Image::font) assume _drawInfo->font remains valid, so destruction or subsequent updates trigger crashes or heap corruption. This vulnerability is fixed in 7.1.2-9 and 6.9.13-34. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-65657",
+    "descripcion": "FeehiCMS version 2.1.1 has a Remote Code Execution via Unrestricted File Upload in Ad Management. FeehiCMS version 2.1.1 allows authenticated remote attackers to upload files that the server later executes (or stores in an executable location) without sufficient validation, sanitization, or execution restrictions. An authenticated remote attacker can upload a crafted PHP file and cause the application or web server to execute it, resulting in remote code execution (RCE). 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-65380",
+    "descripcion": "PHPGurukul Billing System 1.0 is vulnerable to SQL Injection in the admin/index.php endpoint. Specifically, the username parameter accepts unvalidated user input, which is then concatenated directly into a backend SQL query. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-64778",
+    "descripcion": "NMIS/BioDose software V22.02 and previous versions contain executable binaries with plain text hard-coded passwords. These hard-coded passwords could allow unauthorized access to both the application and database. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-64642",
+    "descripcion": "NMIS/BioDose V22.02 and previous versions&#39; installation directory paths by default have insecure file permissions, which in certain deployment scenarios can enable users on client workstations to modify the program executables and libraries. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-64298",
+    "descripcion": "NMIS/BioDose V22.02 and previous version installations where the embedded Microsoft SQLServer Express is used are exposed in the Windows share accessed by clients in networked installs. By default, this directory has insecure directory paths that allow access to the SQL Server database and configuration files, which can contain sensitive data. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-62575",
+    "descripcion": "NMIS/BioDose V22.02 and previous versions rely on a Microsoft SQL Server database. The SQL user account &#39;nmdbuser&#39; and other created accounts by default have the sysadmin role. This can lead to remote code execution through the use of certain built-in stored procedures. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-02",
+    "cve": "CVE-2025-61940",
+    "descripcion": "NMIS/BioDose V22.02 and previous versions rely on a common SQL Server user account to access data in the database. User access in the client application is restricted by a password authentication check in the client software but the underlying database connection always has access. The latest version of NMIS/BioDose introduces an option to use Windows user authentication with the database, which would restrict this database connection. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-02",
     "cve": "CVE-2025-65877",
-    "descripcion": "Lvzhou CMS before commit c4ea0eb9cab5f6739b2c87e77d9ef304017ed615 (2025-09-22) is vulnerable to SQL injection via the &#39;title&#39; parameter in com.wanli.lvzhoucms.service.ContentService#findPage. The parameter is concatenated directly into a dynamic SQL query without sanitization or prepared statements, enabling attackers to read sensitive data from the database. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "descripcion": "Lvzhou CMS before commit c4ea0eb9cab5f6739b2c87e77d9ef304017ed615 (2025-09-22) is vulnerable to SQL injection via the &#39;title&#39; parameter in com.wanli.lvzhoucms.service.ContentService#findPage. The parameter is concatenated directly into a dynamic SQL query without sanitization or prepared statements, enabling attackers to read sensitive data from the database. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-02",
     "cve": "CVE-2025-65379",
-    "descripcion": "PHPGurukul Billing System 1.0 is vulnerable to SQL Injection in the /admin/password-recovery.php endpoint. Specifically, the username and mobileno parameters accepts unvalidated user input, which is then concatenated directly into a backend SQL query. 02/12/2025 02/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-13658",
-    "descripcion": "A vulnerability in Longwatch devices allows unauthenticated HTTP GET requests to execute arbitrary code via an exposed endpoint, due to the absence of code signing and execution controls. Exploitation results in SYSTEM-level privileges. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-13542",
-    "descripcion": "The DesignThemes LMS plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.0.4. This is due to the &#39;dtlms_register_user_front_end&#39; function not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;administrator&#39; role during registration and gain administrator access to the site. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-13510",
-    "descripcion": "The Iskra iHUB and iHUB Lite smart metering gateway exposes its web management interface without requiring authentication, allowing unauthenticated users to access and modify critical device settings. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-66468",
-    "descripcion": "The Aimeos GrapesJS CMS extension provides page editor for creating content pages based on extensible components. Prior to 2021.10.8, 2022.10.8, 2023.10.8, 2024.10.8, and 2025.10.8, Javascript code can be injected by malicious editors for a stored XSS attack if the standard Content Security Policy is disabled. This vulnerability is fixed in 2021.10.8, 2022.10.8, 2023.10.8, 2024.10.8, and 2025.10.8. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-66460",
-    "descripcion": "Lookyloo is a web interface that allows users to capture a website page and then display a tree of domains that call each other. Prior to 1.35.3, Lookyloo passed improperly escaped values to cells rendered in datatables using the orthogonal-data feature. It is definitely exploitable from the popup view, but it is most probably also exploitable in many other places. This vulnerability is fixed in 1.35.3. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-66459",
-    "descripcion": "Lookyloo is a web interface that allows users to capture a website page and then display a tree of domains that call each other. Prior to 1.35.3, a XSS vulnerability can be triggered when a user submits a list of URLs to capture, one of them contains a HTML element, and the capture fails. Then, the error field is populated with an error message that contains the bad URL they tried to capture, triggering the XSS. This vulnerability is fixed in 1.35.3. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-66458",
-    "descripcion": "Lookyloo is a web interface that allows users to capture a website page and then display a tree of domains that call each other. Prior to 1.35.3, there are multiple XSS due to unsafe use of f-strings in Markup. The issue requires a malicious 3rd party server responding with a JSON document containing JS code in a script element. This vulnerability is fixed in 1.35.3. 02/12/2025 02/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-66454",
-    "descripcion": "Arcade MCP allows you to to create, deploy, and share MCP Servers. Prior to 1.5.4, the arcade-mcp HTTP server uses a hardcoded default worker secret (&#34;dev&#34;) that is never validated or overridden during normal server startup. As a result, any unauthenticated attacker who knows this default key can forge valid JWTs and fully bypass the FastAPI authentication layer. This grants remote access to all worker endpoints—including tool enumeration and tool invocation—without credentials. This vulnerability is fixed in 1.5.4. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "descripcion": "PHPGurukul Billing System 1.0 is vulnerable to SQL Injection in the /admin/password-recovery.php endpoint. Specifically, the username and mobileno parameters accepts unvalidated user input, which is then concatenated directly into a backend SQL query. 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
