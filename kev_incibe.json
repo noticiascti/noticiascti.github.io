@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-12-03",
+    "cve": "CVE-2025-13946",
+    "descripcion": "MEGACO dissector infinite loop in Wireshark 4.6.0 to 4.6.1 and 4.4.0 to 4.4.11 allows denial of service 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-13945",
+    "descripcion": "HTTP3 dissector crash in Wireshark 4.6.0 and 4.6.1 allows denial of service 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-13486",
+    "descripcion": "The Advanced Custom Fields: Extended plugin for WordPress is vulnerable to Remote Code Execution in versions 0.9.0.5 through 0.9.1.1 via the prepare_form() function. This is due to the function accepting user input and then passing that through call_user_func_array(). This makes it possible for unauthenticated attackers to execute arbitrary code on the server, which can be leveraged to inject backdoors or create new administrative user accounts. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-12954",
+    "descripcion": "The Timetable and Event Schedule by MotoPress WordPress plugin before 2.4.16 does not verify a user has access to a specific event when duplicating, leading to arbitrary event disclosure when to users with a role as low as Contributor. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-03",
     "cve": "CVE-2025-13495",
     "descripcion": "The FluentCart plugin for WordPress is vulnerable to SQL Injection via the &#39;groupKey&#39; parameter in all versions up to, and including, 1.3.1. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-12-03",
     "cve": "CVE-2025-13448",
     "descripcion": "The CSSIgniter Shortcodes plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;element&#39; shortcode attribute in all versions up to, and including, 2.4.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-65955",
-    "descripcion": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to 7.1.2-9 and 6.9.13-34, there is a vulnerability in ImageMagick’s Magick++ layer that manifests when Options::fontFamily is invoked with an empty string. Clearing a font family calls RelinquishMagickMemory on _drawInfo->font, freeing the font string but leaving _drawInfo->font pointing to freed memory while _drawInfo->family is set to that (now-invalid) pointer. Any later cleanup or reuse of _drawInfo->font re-frees or dereferences dangling memory. DestroyDrawInfo and other setters (Options::font, Image::font) assume _drawInfo->font remains valid, so destruction or subsequent updates trigger crashes or heap corruption. This vulnerability is fixed in 7.1.2-9 and 6.9.13-34. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-66476",
-    "descripcion": "Vim is an open source, command line text editor. Prior to version 9.1.1947, an uncontrolled search path vulnerability on Windows allows Vim to execute malicious executables placed in the current working directory for the current edited file. On Windows, when using cmd.exe as a shell, Vim resolves external commands by searching the current working directory before system paths. When Vim invokes tools such as findstr for :grep, external commands or filters via :!, or compiler/:make commands, it may inadvertently run a malicious executable present in the same directory as the file being edited. The issue affects Vim for Windows prior to version 9.1.1947. 03/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-55181",
-    "descripcion": "Sending an HTTP request/response body with greater than 2^31 bytes triggers an infinite loop in proxygen::coro::HTTPQuicCoroSession which blocks the backing event loop and unconditionally appends data to a std::vector per-loop iteration. This issue leads to unbounded memory growth and eventually causes the process to run out of memory. 03/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-02",
-    "cve": "CVE-2025-65657",
-    "descripcion": "FeehiCMS version 2.1.1 has a Remote Code Execution via Unrestricted File Upload in Ad Management. FeehiCMS version 2.1.1 allows authenticated remote attackers to upload files that the server later executes (or stores in an executable location) without sufficient validation, sanitization, or execution restrictions. An authenticated remote attacker can upload a crafted PHP file and cause the application or web server to execute it, resulting in remote code execution (RCE). 02/12/2025 02/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
