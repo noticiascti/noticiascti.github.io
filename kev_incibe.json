@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-13756",
-    "descripcion": "The Fluent Booking plugin for WordPress is vulnerable to unauthorized calendar import and management due to a missing capability check on the &#34;importCalendar&#34; function in all versions up to, and including, 1.9.11. This makes it possible for authenticated attackers, with subscriber level access and above, to import arbitrary calendars and manage them. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66431",
+    "descripcion": "WebPros Plesk before 18.0.73.5 and 18.0.74 before 18.0.74.2 on Linux allows remote authenticated users to execute arbitrary code as root via domain creation. The attacker needs &#34;Create and manage sites&#34; with &#34;Domains management&#34; and &#34;Subdomains management.&#34; 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-13401",
-    "descripcion": "The Autoptimize plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the LCP Image to preload metabox in all versions up to, and including, 3.1.13 due to insufficient input sanitization and output escaping on user-supplied image attributes in the &#34;create_img_preload_tag&#34; function. This makes it possible for authenticated attackers, with contributor level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65843",
+    "descripcion": "Aquarius Desktop 3.0.069 for macOS contains an insecure file handling vulnerability in its support data archive generation feature. The application follows symbolic links placed inside the ~/Library/Logs/Aquarius directory and treats them as regular files. When building the support ZIP, Aquarius recursively enumerates logs using a JUCE directory iterator configured to follow symlinks, and later writes file data without validating whether the target is a symbolic link. A local attacker can exploit this behavior by planting symlinks to arbitrary filesystem locations, resulting in unauthorized disclosure or modification of arbitrary files. When chained with the associated HelperTool privilege escalation issue, root-owned files may also be exposed. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-13390",
-    "descripcion": "The WP Directory Kit plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.4.4 due to incorrect implementation of the authentication algorithm in the &#34;wdk_generate_auto_login_link&#34; function. This is due to the feature using a cryptographically weak token generation mechanism. This makes it possible for unauthenticated attackers to gain administrative access and achieve full site takeover via the auto-login endpoint with a predictable token. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-65842",
+    "descripcion": "The Aquarius HelperTool (1.0.003) privileged XPC service on macOS contains multiple flaws that allow local privilege escalation. The service accepts XPC connections from any local process without validating the client&#39;s identity, and its authorization logic incorrectly calls AuthorizationCopyRights with a NULL reference, causing all authorization checks to succeed. The executeCommand:authorization:withReply: method then interpolates attacker-controlled input into NSTask and executes it with root privileges. A local attacker can exploit these weaknesses to run arbitrary commands as root, create persistent backdoors, or obtain a fully interactive root shell. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-13359",
-    "descripcion": "The Tag, Category, and Taxonomy Manager – AI Autotagger with OpenAI plugin for WordPress is vulnerable to time-based SQL Injection via the &#34;getTermsForAjax&#34; function in all versions up to, and including, 3.40.1. This is due to insufficient escaping on the user supplied parameters and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with contributor level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database granted they have metabox access for the taxonomy (enabled by default for contributors). 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65841",
+    "descripcion": "Aquarius Desktop 3.0.069 for macOS stores user authentication credentials in the local file ~/Library/Application Support/Aquarius/aquarius.settings using a weak obfuscation scheme. The password is &#34;encrypted&#34; through predictable byte-substitution that can be trivially reversed, allowing immediate recovery of the plaintext value. Any attacker who can read this settings file can fully compromise the victim&#39;s Aquarius account by importing the stolen configuration into their own client or login through the vendor website. This results in complete account takeover, unauthorized access to cloud-synchronized data, and the ability to perform authenticated actions as the user. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-13354",
-    "descripcion": "The Tag, Category, and Taxonomy Manager – AI Autotagger with OpenAI plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.40.1. This is due to the plugin not properly verifying that a user is authorized to perform an action in the &#34;taxopress_merge_terms_batch&#34; function. This makes it possible for authenticated attackers, with subscriber level access and above, to merge or delete arbitrary taxonomy terms. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-62686",
+    "descripcion": "A local privilege escalation vulnerability exists in the Plugin Alliance InstallationHelper service included with Plugin Alliance Installation Manager v1.4.0 on macOS. Due to the absence of a hardened runtime and a __RESTRICT segment, a local user may exploit the DYLD_INSERT_LIBRARIES environment variable to inject a dynamic library, potentially resulting in code execution with elevated privileges. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-13342",
-    "descripcion": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to unauthorized modification of arbitrary WordPress options in all versions up to, and including, 3.28.20. This is due to insufficient capability checks and input validation in the ActionOptions::run() save handler. This makes it possible for unauthenticated attackers to modify critical WordPress options such as users_can_register, default_role, and admin_email via submitting crafted form data to public frontend forms. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-55076",
+    "descripcion": "A local privilege escalation vulnerability exists in the InstallationHelper service included with Plugin Alliance Installation Manager v1.4.0 for macOS. The service accepts unauthenticated XPC connections and executes input via system(), which may allow a local user to execute arbitrary commands with root privileges. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-13109",
-    "descripcion": "The HUSKY – Products Filter Professional for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.3.7.2 via the &#34;woof_add_query&#34; and &#34;woof_remove_query&#34; functions due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber level access and above, to insert or remove arbitrary saved search queries into any user&#39;s profile, including administrators. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-54326",
+    "descripcion": "An issue was discovered in Camera in Samsung Mobile Processor Exynos 1280 and 2200. Unnecessary registration of a hardware IP address in the Camera device driver can lead to a NULL pointer dereference, resulting in a denial of service. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-12887",
-    "descripcion": "The Post SMTP plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.6.1. This is due to the plugin not properly verifying that a user is authorized to update OAuth tokens on the &#39;handle_gmail_oauth_redirect&#39; function. This makes it possible for authenticated attackers, with subscriber level access and above, to inject invalid or attacker-controlled OAuth credentials. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-54065",
+    "descripcion": "GZDoom is a feature centric port for all Doom engine games. GZDoom is an open source Doom engine. In versions 4.14.2 and earlier, ZScript actor state handling allows scripts to read arbitrary addresses, write constants into the JIT-compiled code section, and redirect control flow through crafted FState and VMFunction structures. A script can copy FState structures into a writable buffer, modify function pointers and state transitions, and cause execution of attacker-controlled bytecode, leading to arbitrary code execution. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-12358",
-    "descripcion": "The ShopEngine Elementor WooCommerce Builder Addon plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.8.5. This is due to missing nonce validation on the &#34;post_add_to_list&#34; function as well as an incorrect permissions callback in the &#34;Api/init&#34; function. This makes it possible for unauthenticated attackers to add or remove products from a user&#39;s wishlist via a forged request granted they can trick a site&#39;s user into performing an action such as clicking on a link. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-53965",
+    "descripcion": "An issue was discovered in Samsung Mobile Processor, Wearable Processor, and Modem Exynos 980, 990, 850, 2100, 1280, 2200, 1330, 1380, 1480, 2400, 1580, 2500, W920, W930, W1000, Modem 5123, Modem 5300, and Modem 5400. The function used to decode the SOR transparent container lacks bounds checking, which can cause a fatal error. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-39665",
-    "descripcion": "User enumeration in Nagvis&#39; Checkmk MultisiteAuth before version 1.9.48 allows an unauthenticated attacker to enumerate Checkmk usernames. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-34319",
+    "descripcion": "TOTOLINK N300RT wireless router firmware versions prior to V3.4.0-B20250430 (discovered in V2.1.8-B20201030.1539) contain an OS command injection vulnerability in the Boa formWsc handling functionality. An unauthenticated attacker can send specially crafted requests to trigger command execution via the targetAPSsid request parameter. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
