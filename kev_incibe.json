@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-12-03",
+    "cve": "CVE-2025-13756",
+    "descripcion": "The Fluent Booking plugin for WordPress is vulnerable to unauthorized calendar import and management due to a missing capability check on the &#34;importCalendar&#34; function in all versions up to, and including, 1.9.11. This makes it possible for authenticated attackers, with subscriber level access and above, to import arbitrary calendars and manage them. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-13401",
+    "descripcion": "The Autoptimize plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the LCP Image to preload metabox in all versions up to, and including, 3.1.13 due to insufficient input sanitization and output escaping on user-supplied image attributes in the &#34;create_img_preload_tag&#34; function. This makes it possible for authenticated attackers, with contributor level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-13390",
+    "descripcion": "The WP Directory Kit plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.4.4 due to incorrect implementation of the authentication algorithm in the &#34;wdk_generate_auto_login_link&#34; function. This is due to the feature using a cryptographically weak token generation mechanism. This makes it possible for unauthenticated attackers to gain administrative access and achieve full site takeover via the auto-login endpoint with a predictable token. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-13359",
+    "descripcion": "The Tag, Category, and Taxonomy Manager – AI Autotagger with OpenAI plugin for WordPress is vulnerable to time-based SQL Injection via the &#34;getTermsForAjax&#34; function in all versions up to, and including, 3.40.1. This is due to insufficient escaping on the user supplied parameters and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with contributor level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database granted they have metabox access for the taxonomy (enabled by default for contributors). 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
     "cve": "CVE-2025-13354",
     "descripcion": "The Tag, Category, and Taxonomy Manager – AI Autotagger with OpenAI plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.40.1. This is due to the plugin not properly verifying that a user is authorized to perform an action in the &#34;taxopress_merge_terms_batch&#34; function. This makes it possible for authenticated attackers, with subscriber level access and above, to merge or delete arbitrary taxonomy terms. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-12-03",
     "cve": "CVE-2025-39665",
     "descripcion": "User enumeration in Nagvis&#39; Checkmk MultisiteAuth before version 1.9.48 allows an unauthenticated attacker to enumerate Checkmk usernames. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-13947",
-    "descripcion": "A flaw was found in WebKitGTK. This vulnerability allows remote, user-assisted information disclosure that can reveal any file the user is permitted to read via abusing the file drag-and-drop mechanism where WebKitGTK does not verify that drag operations originate from outside the browser. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-29864",
-    "descripcion": "Protection Mechanism Failure vulnerability in ESTsoft ALZip on Windows allows SmartScreen bypass.This issue affects ALZip: from 12.01 before 12.29. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.20 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-13472",
-    "descripcion": "A fix was made in BlazeMeter Jenkins Plugin version 4.27 to allow users only with certain permissions to see the list of available resources like credential IDs, bzm workspaces and bzm project Ids. Prior to this fix, anyone could see this list as a dropdown on the Jenkins UI. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-12744",
-    "descripcion": "A flaw was found in the ABRT daemon’s handling of user-supplied mount information.ABRT copies up to 12 characters from an untrusted input and places them directly into a shell command (docker inspect %s) without proper validation. An unprivileged local user can craft a payload that injects shell metacharacters, causing the root-running ABRT process to execute attacker-controlled commands and ultimately gain full root privileges. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
