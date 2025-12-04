@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-66222",
-    "descripcion": "DeepChat is a smart assistant uses artificial intelligence. In 0.5.0 and earlier, there is a Stored Cross-Site Scripting (XSS) vulnerability in the Mermaid diagram renderer allows an attacker to execute arbitrary JavaScript within the application context. By leveraging the exposed Electron IPC bridge, this XSS can be escalated to Remote Code Execution (RCE) by registering and starting a malicious MCP (Model Context Protocol) server. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-66489",
+    "descripcion": "Cal.com is open-source scheduling software. Prior to 5.9.8, A flaw in the login credentials provider allows an attacker to bypass password verification when a TOTP code is provided, potentially gaining unauthorized access to user accounts. This issue exists due to problematic conditional logic in the authentication flow. This vulnerability is fixed in 5.9.8. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.90 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-66220",
-    "descripcion": "Envoy is a high-performance edge/middle/service proxy. In 1.33.12, 1.34.10, 1.35.6, 1.36.2, and earlier, Envoy’s mTLS certificate matcher for match_typed_subject_alt_names may incorrectly treat certificates containing an embedded null byte (\\0) inside an OTHERNAME SAN value as valid matches. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66453",
+    "descripcion": "Rhino is an open-source implementation of JavaScript written entirely in Java. Prior to 1.8.1, 1.7.15.1, and 1.7.14.1, when an application passed an attacker controlled float poing number into the toFixed() function, it might lead to high CPU consumption and a potential Denial of Service. Small numbers go through this call stack: NativeNumber.numTo > DToA.JS_dtostr > DToA.JS_dtoa > DToA.pow5mult where pow5mult attempts to raise 5 to a ridiculous power. This vulnerability is fixed in 1.8.1, 1.7.15.1, and 1.7.14.1. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-66208",
-    "descripcion": "Collabora Online - Built-in CODE Server (richdocumentscode) provides a built-in server with all of the document editing features of Collabora Online. In versions prior to 25.04.702, Collabora Online has a Configuration-Dependent RCE (OS Command Injection) in richdocumentscode proxy. Users of Nextcloud with Collabora Online - Built-in CODE Server app can be vulnerable to attack via proxy.php and an intermediate reverse proxy. This vulnerability is fixed in 25.04.702. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66411",
+    "descripcion": "Coder allows organizations to provision remote development environments via Terraform. Prior to 2.26.5, 2.27.7, and 2.28.4, Workspace Agent manifests containing sensitive values were logged in plaintext unsanitized. An attacker with limited local access to the Coder Workspace (VM, K8s Pod etc.) or a third-party system (SIEM, logging stack) could access those logs. This vulnerability is fixed in 2.26.5, 2.27.7, and 2.28.4. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-66032",
-    "descripcion": "Claude Code is an agentic coding tool. Prior to 1.0.93, Due to errors in parsing shell commands related to $IFS and short CLI flags, it was possible to bypass the Claude Code read-only validation and trigger arbitrary code execution. Reliably exploiting this requires the ability to add untrusted content into a Claude Code context window. This vulnerability is fixed in 1.0.93. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66406",
+    "descripcion": "Step CA is an online certificate authority for secure, automated certificate management for DevOps. Prior to 0.29.0, there is an improper authorization check for SSH certificate revocation. This affects deployments configured with the SSHPOP provisioner. This vulnerability is fixed in 0.29.0. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-63402",
-    "descripcion": "An issue in HCL Technologies Limited HCLTech GRAGON before v.7.6.0 allows a remote attacker to execute arbitrary code via APIs do not enforcing limits on the number or size of requests 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65345",
+    "descripcion": "alexusmai laravel-file-manager 3.3.1 and below is vulnerable to Directory Traversal. The zip/archiving functionality allows an attacker to create archives containing files and directories outside the intended scope due to improper path validation. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-63401",
-    "descripcion": "Cross Site Scripting vulnerability in HCL Technologies Limited HCLTech DRAGON before v.7.6.0 allows a remote attacker to execute arbitrary code via missing directives 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65097",
+    "descripcion": "RomM (ROM Manager) allows users to scan, enrich, browse and play their game collections with a clean and responsive interface. Prior to 4.4.1 and 4.4.1-beta.2, an Authenticated User can delete collections belonging to other users by directly sending a DELETE request to the collection endpoint. No ownership verification is performed before deleting collections. This vulnerability is fixed in 4.4.1 and 4.4.1-beta.2. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-33211",
-    "descripcion": "NVIDIA Triton Server for Linux contains a vulnerability where an attacker may cause an improper validation of specified quantity in input. A successful exploit of this vulnerability may lead to denial of service. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-65096",
+    "descripcion": "RomM (ROM Manager) allows users to scan, enrich, browse and play their game collections with a clean and responsive interface. Prior to 4.4.1 and 4.4.1-beta.2, users can read private collections / smart collections belonging to other users by directly accessing their IDs via API. No ownership verification or checking if the collection is public/private before returning collection data. This vulnerability is fixed in 4.4.1 and 4.4.1-beta.2. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-33208",
-    "descripcion": "NVIDIA TAO contains a vulnerability where an attacker may cause a resource to be loaded via an uncontrolled search path. A successful exploit of this vulnerability may lead to escalation of privileges, data tampering, denial of service, information disclosure. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-65027",
+    "descripcion": "RomM (ROM Manager) allows users to scan, enrich, browse and play their game collections with a clean and responsive interface. RomM contains multiple unrestricted file upload vulnerabilities that allow authenticated users to upload malicious SVG or HTML files. When these files are accessed the browser executes embedded JavaScript, leading to stored Cross-Site Scripting (XSS) which when combined with a CSRF misconfiguration they lead to achieve full administrative account takeover, creating a rogue admin account, escalating the attacker account role to admin, and much more. This vulnerability is fixed in 4.4.1 and 4.4.1-beta.2. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-33201",
-    "descripcion": "NVIDIA Triton Inference Server contains a vulnerability where an attacker may cause an improper check for unusual or exceptional conditions issue by sending extra large payloads. A successful exploit of this vulnerability may lead to denial of service. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-50361",
+    "descripcion": "Buffer Overflow was found in SmallBASIC community SmallBASIC with SDL Before v12_28, and commit sha:298a1d495355959db36451e90a0ac74bcc5593fe in the function main.cpp, which can lead to potential information leakage and crash. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-03",
-    "cve": "CVE-2025-12819",
-    "descripcion": "Untrusted search path in auth_query connection handler in PgBouncer before 1.25.0 allows an unauthenticated attacker to execute arbitrary SQL during authentication via a malicious search_path parameter in the StartupMessage. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-13086",
+    "descripcion": "Improper validation of source IP addresses in OpenVPN version 2.6.0 through 2.7_rc1 allows an attacker to open a session from a different IP address which did not initiate the connection resulting in a denial of service for the originating client 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
