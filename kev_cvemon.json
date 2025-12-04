@@ -11,13 +11,13 @@
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-61727",
-    "descripcion": "An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com."
+    "cve": "CVE-2025-61729",
+    "descripcion": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a ..."
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-61729",
-    "descripcion": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a ..."
+    "cve": "CVE-2025-61727",
+    "descripcion": "An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com."
   },
   {
     "fecha": "2025-12-04",
@@ -41,12 +41,12 @@
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-11001",
-    "descripcion": "7-Zip ZIP File Parsing Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of 7-Zip. Interaction with this product is required to exploit this vulnerability but attack vectors may ..."
+    "cve": "CVE-2025-38001",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net_sched: hfsc: Address reentrant enqueue adding class to eltree twice Savino says: \"We are writing to report that this recent patch (141d34391abbb315d68556b7c67ad97885407547) [1] can be bypassed, ..."
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-60709",
-    "descripcion": "Out-of-bounds read in Windows Common Log File System Driver allows an authorized attacker to elevate privileges locally."
+    "cve": "CVE-2025-11001",
+    "descripcion": "7-Zip ZIP File Parsing Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of 7-Zip. Interaction with this product is required to exploit this vulnerability but attack vectors may ..."
   }
 ]

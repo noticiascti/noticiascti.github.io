@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-12-04",
+    "cve": "CVE-2025-14010",
+    "descripcion": "A flaw was found in ansible-collection-community-general. This vulnerability allows for information exposure (IE) of sensitive credentials, specifically plaintext passwords, via verbose output when running Ansible with debug modes. Attackers with access to logs could retrieve these secrets and potentially compromise Keycloak accounts or administrative access. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-04",
     "cve": "CVE-2025-12826",
     "descripcion": "The Custom Post Type UI plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.18.0. This is due to the plugin not verifying that a user has the required capability to perform actions in the &#34;cptui_process_post_type&#34; function. This makes it possible for authenticated attackers, with subscriber level access and above, to add, edit, or delete custom post types in limited situations. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-12-03",
     "cve": "CVE-2025-65868",
     "descripcion": "XML external entity (XXE) injection in eyoucms v1.7.1 allows remote attackers to cause a denial of service via crafted body of a POST request. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-64055",
-    "descripcion": "An issue was discovered in Fanvil x210 V2 2.12.20 allowing unauthenticated attackers on the local network to access administrative functions of the device (e.g. file upload, firmware update, reboot...) via a crafted authentication bypass. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
