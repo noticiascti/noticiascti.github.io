@@ -21,18 +21,23 @@
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-61729",
-    "descripcion": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a ..."
-  },
-  {
-    "fecha": "2025-12-04",
     "cve": "CVE-2025-61727",
     "descripcion": "An excluded subdomain constraint in a certificate chain does not restrict the usage of wildcard SANs in the leaf certificate. For example a constraint that excludes the subdomain test.example.com does not prevent a leaf certificate from claiming the SAN *.example.com."
   },
   {
     "fecha": "2025-12-04",
+    "cve": "CVE-2025-61729",
+    "descripcion": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a ..."
+  },
+  {
+    "fecha": "2025-12-04",
     "cve": "CVE-2025-48593",
     "descripcion": "In bta_hf_client_cb_init of bta_hf_client_main.cc, there is a possible remote code execution due to a use after free. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation."
+  },
+  {
+    "fecha": "2025-12-04",
+    "cve": "CVE-2025-13486",
+    "descripcion": "The Advanced Custom Fields: Extended plugin for WordPress is vulnerable to Remote Code Execution in versions 0.9.0.5 through 0.9.1.1 via the prepare_form() function. This is due to the function accepting user input and then passing that through call_user_func_array(). This makes ..."
   },
   {
     "fecha": "2025-12-04",
@@ -43,10 +48,5 @@
     "fecha": "2025-12-04",
     "cve": "CVE-2024-50629",
     "descripcion": "Improper encoding or escaping of output vulnerability in the webapi component in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.1.1-42962-7, 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allow remote attackers to read limited files ..."
-  },
-  {
-    "fecha": "2025-12-04",
-    "cve": "CVE-2024-21413",
-    "descripcion": "Microsoft Outlook Remote Code Execution Vulnerability"
   }
 ]
