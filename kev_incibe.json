@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-12-03",
+    "cve": "CVE-2025-66404",
+    "descripcion": "MCP Server Kubernetes is an MCP Server that can connect to a Kubernetes cluster and manage it. Prior to 2.9.8, there is a security issue exists in the exec_in_pod tool of the mcp-server-kubernetes MCP Server. The tool accepts user-provided commands in both array and string formats. When a string format is provided, it is passed directly to shell interpretation (sh -c) without input validation, allowing shell metacharacters to be interpreted. This vulnerability can be exploited through direct command injection or indirect prompt injection attacks, where AI agents may execute commands without explicit user intent. This vulnerability is fixed in 2.9.8. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-66293",
+    "descripcion": "LIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. Prior to 1.6.52, an out-of-bounds read vulnerability in libpng&#39;s simplified API allows reading up to 1012 bytes beyond the png_sRGB_base[512] array when processing valid palette PNG images with partial transparency and gamma correction. The PNG files that trigger this vulnerability are valid per the PNG specification; the bug is in libpng&#39;s internal state management. Upgrade to libpng 1.6.52 or later. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-65868",
+    "descripcion": "XML external entity (XXE) injection in eyoucms v1.7.1 allows remote attackers to cause a denial of service via crafted body of a POST request. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-03",
+    "cve": "CVE-2025-64055",
+    "descripcion": "An issue was discovered in Fanvil x210 V2 2.12.20 allowing unauthenticated attackers on the local network to access administrative functions of the device (e.g. file upload, firmware update, reboot...) via a crafted authentication bypass. 03/12/2025 03/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-03",
     "cve": "CVE-2025-66489",
     "descripcion": "Cal.com is open-source scheduling software. Prior to 5.9.8, A flaw in the login credentials provider allows an attacker to bypass password verification when a TOTP code is provided, potentially gaining unauthorized access to user accounts. This issue exists due to problematic conditional logic in the authentication flow. This vulnerability is fixed in 5.9.8. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.90 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-12-03",
     "cve": "CVE-2025-65097",
     "descripcion": "RomM (ROM Manager) allows users to scan, enrich, browse and play their game collections with a clean and responsive interface. Prior to 4.4.1 and 4.4.1-beta.2, an Authenticated User can delete collections belonging to other users by directly sending a DELETE request to the collection endpoint. No ownership verification is performed before deleting collections. This vulnerability is fixed in 4.4.1 and 4.4.1-beta.2. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-65096",
-    "descripcion": "RomM (ROM Manager) allows users to scan, enrich, browse and play their game collections with a clean and responsive interface. Prior to 4.4.1 and 4.4.1-beta.2, users can read private collections / smart collections belonging to other users by directly accessing their IDs via API. No ownership verification or checking if the collection is public/private before returning collection data. This vulnerability is fixed in 4.4.1 and 4.4.1-beta.2. 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-65027",
-    "descripcion": "RomM (ROM Manager) allows users to scan, enrich, browse and play their game collections with a clean and responsive interface. RomM contains multiple unrestricted file upload vulnerabilities that allow authenticated users to upload malicious SVG or HTML files. When these files are accessed the browser executes embedded JavaScript, leading to stored Cross-Site Scripting (XSS) which when combined with a CSRF misconfiguration they lead to achieve full administrative account takeover, creating a rogue admin account, escalating the attacker account role to admin, and much more. This vulnerability is fixed in 4.4.1 and 4.4.1-beta.2. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-50361",
-    "descripcion": "Buffer Overflow was found in SmallBASIC community SmallBASIC with SDL Before v12_28, and commit sha:298a1d495355959db36451e90a0ac74bcc5593fe in the function main.cpp, which can lead to potential information leakage and crash. 03/12/2025 03/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-03",
-    "cve": "CVE-2025-13086",
-    "descripcion": "Improper validation of source IP addresses in OpenVPN version 2.6.0 through 2.7_rc1 allows an attacker to open a session from a different IP address which did not initiate the connection resulting in a denial of service for the originating client 03/12/2025 03/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
