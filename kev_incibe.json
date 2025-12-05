@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-32899",
-    "descripcion": "In KDE Connect before 1.33.0 on Android, a packet can be crafted that causes two paired devices to unpair. Specifically, it is an invalid discovery packet sent over broadcast UDP. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-13515",
+    "descripcion": "The Nouri.sh Newsletter plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the `$_SERVER[&#39;PHP_SELF&#39;]` parameter in all versions up to, and including, 1.0.1.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-32898",
-    "descripcion": "The KDE Connect verification-code protocol before 2025-04-18 uses only 8 characters and therefore allows brute-force attacks. This affects KDE Connect before 1.33.0 on Android, KDE Connect before 25.04 on desktop, KDE Connect before 0.5 on iOS, Valent before 1.0.0.alpha.47, and GSConnect before 59. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12850",
+    "descripcion": "The My auctions allegro plugin for WordPress is vulnerable to SQL Injection via the ‘auction_id’ parameter in all versions up to, and including, 3.6.32 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-13494",
-    "descripcion": "The SSP Debug plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.0.0. This is due to the plugin storing PHP error logs in a predictable, web-accessible location (wp-content/uploads/ssp-debug/ssp-debug.log) without any access controls. This makes it possible for unauthenticated attackers to view sensitive debugging information including full URLs, client IP addresses, User-Agent strings, WordPress user IDs, and internal filesystem paths. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12374",
+    "descripcion": "The Email Verification, Email OTP, Block Spam Email, Passwordless login, Hide Login, Magic Login – User Verification plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 2.0.39. This is due to the plugin not properly validating that an OTP was generated before comparing it to user input in the &#34;user_verification_form_wrap_process_otpLogin&#34; function. This makes it possible for unauthenticated attackers to log in as any user with a verified email address, such as an administrator, by submitting an empty OTP value. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-13362",
-    "descripcion": "The Norby AI plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.0.3. This is due to missing nonce validation on the settings update functionality. This makes it possible for unauthenticated attackers to update the plugin&#39;s settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12373",
+    "descripcion": "The Torod – The smart shipping and delivery portal for e-shops and retailers plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.9. This is due to missing or incorrect nonce validation on the save_settings function. This makes it possible for unauthenticated attackers to modify plugin&#39;s settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-13313",
-    "descripcion": "The CRM Memberships plugin for WordPress is vulnerable to privilege escalation via password reset in all versions up to, and including, 2.5. This is due to missing authorization and authentication checks on the `ntzcrm_changepassword` AJAX action. This makes it possible for unauthenticated attackers to reset arbitrary user passwords and gain unauthorized access to user accounts via the `ntzcrm_changepassword` endpoint, granted they can obtain or enumerate a target user&#39;s email address. The plugin also exposes the `ntzcrm_get_users` endpoint without authentication, allowing attackers to enumerate subscriber email addresses, facilitating the exploitation of the password reset vulnerability. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-12355",
+    "descripcion": "The Payaza plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;wp_ajax_nopriv_update_order_status&#39; AJAX endpoint in all versions up to, and including, 0.3.8. This makes it possible for unauthenticated attackers to update order statuses. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-13312",
-    "descripcion": "The CRM Memberships plugin for WordPress is vulnerable to unauthorized membership tag creation due to a missing capability check on the &#39;ntzcrm_add_new_tag&#39; function in all versions up to, and including, 2.5. This makes it possible for unauthenticated attackers to create arbitrary membership tags and modify CRM configuration that should be restricted to administrators. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12354",
+    "descripcion": "The Live CSS Preview plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;wp_ajax_frontend_save&#39; AJAX endpoint in all versions up to, and including, 2.0.0. This makes it possible for authenticated attackers, with Subscriber-level access and above, to update the plugin&#39;s css setting. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-13006",
-    "descripcion": "The SurveyFunnel – Survey Plugin for WordPress plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.1.5 via several unprotected /wp-json/surveyfunnel/v2/ REST API endpoints. This makes it possible for unauthenticated attackers to extract sensitive data from survey responses. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12186",
+    "descripcion": "The Weekly Planner plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-12417",
-    "descripcion": "The SurveyFunnel – Survey Plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;surveyfunnel_lite_survey&#39; shortcode in all versions up to, and including, 1.1.5 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12093",
+    "descripcion": "The Voidek Employee Portal plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on several AJAX actions in all versions up to, and including, 1.0.6. This makes it possible for unauthenticated attackers to perform several actions like registering an account, deleting users, and modifying details within the employee portal. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-66544",
-    "descripcion": "Rejected reason: Not used 05/12/2025 05/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66270",
+    "descripcion": "The KDE Connect protocol 8 before 2025-11-28 does not correlate device IDs across two packets. This affects KDE Connect before 25.12 on desktop, KDE Connect before 0.5.4 on iOS, KDE Connect before 1.34.4 on Android, GSConnect before 68, and Valent before 1.0.0.alpha.49. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-05",
-    "cve": "CVE-2025-66543",
-    "descripcion": "Rejected reason: Not used 05/12/2025 05/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-32900",
+    "descripcion": "In the KDE Connect information-exchange protocol before 2025-04-18, a packet can be crafted to temporarily change the displayed information about a device, because broadcast UDP is used. This affects KDE Connect before 1.33.0 on Android, KDE Connect before 25.04 on desktop, KDE Connect before 0.5 on iOS, Valent before 1.0.0.alpha.47, and GSConnect before 59. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
