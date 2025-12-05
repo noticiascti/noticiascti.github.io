@@ -1,5 +1,15 @@
 [
   {
+    "fecha": "2025-12-05",
+    "cve": "CVE-2025-62223",
+    "descripcion": "User interface (ui) misrepresentation of critical information in Microsoft Edge for iOS allows an unauthorized attacker to perform spoofing over a network. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-04",
+    "cve": "CVE-2025-14052",
+    "descripcion": "A vulnerability has been found in youlaitech youlai-mall 1.0.0/2.0.0. Affected by this vulnerability is the function getMemberById of the file /mall-ums/app-api/v1/members/. The manipulation of the argument memberId leads to improper access controls. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 05/12/2025 05/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
     "fecha": "2025-12-04",
     "cve": "CVE-2025-66564",
     "descripcion": "Sigstore Timestamp Authority is a service for issuing RFC 3161 timestamps. Prior to 2.0.3, Function api.ParseJSONRequest currently splits (via a call to strings.Split) an optionally-provided OID (which is untrusted data) on periods. Similarly, function api.getContentType splits the Content-Type header (which is also untrusted data) on an application string. As a result, in the face of a malicious request with either an excessively long OID in the payload containing many period characters or a malformed Content-Type header, a call to api.ParseJSONRequest or api.getContentType incurs allocations of O(n) bytes (where n stands for the length of the function&#39;s argument). This vulnerability is fixed in 2.0.3. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
@@ -38,15 +48,5 @@
     "fecha": "2025-12-04",
     "cve": "CVE-2025-66509",
     "descripcion": "LaraDashboard is an all-In-one solution to start a Laravel Application. In 2.3.0 and earlier, the password reset flow trusts the Host header, allowing attackers to redirect the administrator’s reset token to an attacker-controlled server. This can be combined with the module installation process to automatically execute the ServiceProvider::boot() method, enabling arbitrary PHP code execution. 04/12/2025 04/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-04",
-    "cve": "CVE-2025-66506",
-    "descripcion": "Fulcio is a free-to-use certificate authority for issuing code signing certificates for an OpenID Connect (OIDC) identity. Prior to 1.8.3, function identity.extractIssuerURL splits (via a call to strings.Split) its argument (which is untrusted data) on periods. As a result, in the face of a malicious request with an (invalid) OIDC identity token in the payload containing many period characters, a call to extractIssuerURL incurs allocations to the tune of O(n) bytes (where n stands for the length of the function&#39;s argument), with a constant factor of about 16. This vulnerability is fixed in 1.8.3. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-04",
-    "cve": "CVE-2025-66238",
-    "descripcion": "DCIM dcTrack allows an attacker to misuse certain remote access features. An authenticated user with access to the appliance&#39;s virtual console could exploit these features to redirect network traffic, potentially accessing restricted services or data on the host machine. 04/12/2025 04/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
