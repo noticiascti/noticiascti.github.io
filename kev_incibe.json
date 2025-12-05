@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-66516",
-    "descripcion": "Critical XXE in Apache Tika tika-core (1.13-3.2.1), tika-pdf-module (2.0.0-3.2.1) and tika-parsers (1.13-1.28.5) modules on all platforms allows an attacker to carry out XML External Entity injection via a crafted XFA file inside of a PDF. This CVE covers the same vulnerability as in CVE-2025-54988. However, this CVE expands the scope of affected packages in two ways. First, while the entrypoint for the vulnerability was the tika-parser-pdf-module as reported in CVE-2025-54988, the vulnerability and its fix were in tika-core. Users who upgraded the tika-parser-pdf-module but did not upgrade tika-core to >= 3.2.2 would still be vulnerable. Second, the original report failed to mention that in the 1.x Tika releases, the PDFParser was in the &#34;org.apache.tika:tika-parsers&#34; module. 04/12/2025 04/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65958",
+    "descripcion": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.37, a Server-Side Request Forgery (SSRF) vulnerability in Open WebUI allows any authenticated user to force the server to make HTTP requests to arbitrary URLs. This can be exploited to access cloud metadata endpoints (AWS/GCP/Azure), scan internal networks, access internal services behind firewalls, and exfiltrate sensitive information. No special permissions beyond basic authentication are required. This vulnerability is fixed in 0.6.37. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-66373",
-    "descripcion": "Akamai Ghost on Akamai CDN edge servers before 2025-11-17 has a chunked request body processing error that can result in HTTP request smuggling. When Akamai Ghost receives an invalid chunked body that includes a chunk size different from the actual size of the following chunk data, under certain circumstances, Akamai Ghost erroneously forwards the invalid request and subsequent superfluous bytes to the origin server. An attacker could hide a smuggled request in these superfluous bytes. Whether this is exploitable depends on the origin server&#39;s behavior and how it processes the invalid request it receives from Akamai Ghost. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65883",
+    "descripcion": "A vulnerability has been identified in Genexis Platinum P4410 router (Firmware P4410-V2–1.41) that allows a local network attacker to achieve Remote Code Execution (RCE) with root privileges. The issue occurs due to improper session invalidation after administrator logout. When an administrator logs out, the session token remains valid. An attacker on the local network can reuse this stale token to send crafted requests via the router’s diagnostic endpoint, resulting in command execution as root. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-66287",
-    "descripcion": "A flaw was found in WebKitGTK. Processing malicious web content can cause an unexpected process crash due to improper memory handling. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-65806",
+    "descripcion": "The E-POINT CMS eagle.gsam-1169.1 file upload feature improperly handles nested archive files. An attacker can upload a nested ZIP (a ZIP containing another ZIP) where the inner archive contains an executable file (e.g. webshell.php). When the application extracts the uploaded archives, the executable may be extracted into a web-accessible directory. This can lead to remote code execution (RCE), data disclosure, account compromise, or further system compromise depending on the web server/process privileges. The issue arises from insufficient validation of archive contents and inadequate restrictions on extraction targets. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-63364",
-    "descripcion": "Waveshare RS232/485 TO WIFI ETH (B) Serial to Ethernet/Wi-Fi Gateway Firmware V3.1.1.0: HW 4.3.2.1: Webpage V7.04T.07.002880.0301 was discovered to transmit Administrator credentials in plaintext. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-63499",
+    "descripcion": "Alinto Sogo 5.12.3 is vulnerable to Cross Site Scripting (XSS) via the theme parameter. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-8074",
-    "descripcion": "Origin validation error vulnerability in BeeDrive in Synology BeeDrive for desktop before 1.4.3-13973 allows local users to write arbitrary files with non-sensitive information via unspecified vectors. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-29269",
+    "descripcion": "ALLNET ALL-RUT22GW v3.3.8 was discovered to contain an OS command injection vulnerability via the command parameter in the popen.cgi endpoint. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-65516",
-    "descripcion": "A stored cross-site scripting (XSS) vulnerability was discovered in Seafile Community Edition prior to version 13.0.12. When Seafile is configured with the Golang file server, an attacker can upload a crafted SVG file containing malicious JavaScript and share it using a public link. Opening the link triggers script execution in the victim&#39;s browser. This issue has been fixed in Seafile Community Edition 13.0.12. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-29268",
+    "descripcion": "ALLNET ALL-RUT22GW v3.3.8 was discovered to store hardcoded credentials in the libicos.so library. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-63681",
-    "descripcion": "open-webui v0.6.33 is vulnerable to Incorrect Access Control. The API /api/tasks/stop/ directly accesses and cancels tasks without verifying user ownership, enabling attackers (a normal user) to stop arbitrary LLM response tasks. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12997",
+    "descripcion": "Insecure Direct Object Reference vulnerability in Medtronic CareLink Network which allows an authenticated attacker with access to specific device and user information to submit web requests to an API endpoint that would expose sensitive user information. This issue affects CareLink Network: before December 4, 2025. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-61148",
-    "descripcion": "An Insecure Direct Object Reference (IDOR) vulnerability in the EduplusCampus 3.0.1 Student Payment API allows authenticated users to access other students personal and financial records by modifying the &#39;rec_no&#39; parameter in the /student/get-receipt endpoint. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12996",
+    "descripcion": "Medtronic CareLink Network allows a local attacker with access to log files on an internal API server to view plaintext passwords from errors logged under certain circumstances. This issue affects CareLink Network: before December 4, 2025. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-57213",
-    "descripcion": "Incorrect access control in the component orderService.queryObject of platform v1.0.0 allows attackers to access sensitive information via a crafted request. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12995",
+    "descripcion": "Medtronic CareLink Network allows an unauthenticated remote attacker to perform a brute force attack on an API endpoint that could be used to determine a valid password under certain circumstances. This issue affects CareLink Network: before December 4, 2025. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-04",
-    "cve": "CVE-2025-57212",
-    "descripcion": "Incorrect access control in the component ApiOrderService.java of platform v1.0.0 allows attackers to access sensitive information via a crafted request. 04/12/2025 04/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12994",
+    "descripcion": "Medtronic CareLink Network allows an unauthenticated remote attacker to initiate a request for security questions to an API endpoint that could be used to determine a valid user account. This issue affects CareLink Network: before December 4, 2025. 04/12/2025 04/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
