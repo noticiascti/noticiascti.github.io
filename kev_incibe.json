@@ -1,5 +1,15 @@
 [
   {
+    "fecha": "2025-12-06",
+    "cve": "CVE-2025-12510",
+    "descripcion": "The Widgets for Google Reviews plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 13.2.4 due to insufficient input sanitization and output escaping on Google Reviews data imported by the plugin. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that will execute in the admin panel (and potentially on the frontend) whenever a user accesses imported reviews, granted they can add a malicious review to a Google Place that is connected to the vulnerable site. 06/12/2025 06/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-06",
+    "cve": "CVE-2025-11263",
+    "descripcion": "The Link Whisper Free plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the type parameter in all versions up to, and including, 0.8.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 06/12/2025 06/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
     "fecha": "2025-12-05",
     "cve": "CVE-2025-66629",
     "descripcion": "HedgeDoc is an open source, real-time, collaborative, markdown notes application. Prior to 1.10.4, some of HedgeDoc&#39;s OAuth2 endpoints for social login providers such as Google, GitHub, GitLab, Facebook or Dropbox lack CSRF protection, since they don&#39;t send a state parameter and verify the response using this parameter. This vulnerability is fixed in 1.10.4. 06/12/2025 06/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
@@ -38,15 +48,5 @@
     "fecha": "2025-12-05",
     "cve": "CVE-2025-13426",
     "descripcion": "A vulnerability exists in Google Apigee&#39;s JavaCallout policy https://docs.apigee.com/api-platform/reference/policies/java-callout-policy that allows for remote code execution. It is possible for a user to write a JavaCallout that injected a malicious object into the MessageContext to execute arbitrary Java code and system commands at runtime, leading to unauthorized access to data, lateral movement within the network, and access to backend systems. The Apigee hybrid versions below have all been updated to protect from this vulnerability: * Hybrid_1.11.2+ * Hybrid_1.12.4+ * Hybrid_1.13.3+ * Hybrid_1.14.1+ * OPDK_5202+ * OPDK_5300+ 05/12/2025 05/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Clear Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-05",
-    "cve": "CVE-2025-8148",
-    "descripcion": "An Improper Access Control in the SFTP service in Fortra&#39;s GoAnywhere MFT prior to version 7.9.0 allows Web Users with an Authentication Alias and a valid SSH key but limited to Password authentication for SFTP to still login using their SSH key. 05/12/2025 05/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-05",
-    "cve": "CVE-2025-14105",
-    "descripcion": "A vulnerability was determined in TOZED ZLT M30S and ZLT M30S PRO 1.47/3.09.06. This impacts an unknown function of the file /reqproc/proc_post of the component Web Interface. Executing manipulation of the argument goformId with the input REBOOT_DEVICE can lead to denial of service. The attack can only be done within the local network. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way. 05/12/2025 05/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:A/AC:L/Au:N/C:N/I:N/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
