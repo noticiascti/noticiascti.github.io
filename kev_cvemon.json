@@ -36,6 +36,11 @@
   },
   {
     "fecha": "2025-12-08",
+    "cve": "CVE-2024-1874",
+    "descripcion": "In PHP versions 8.1.* before 8.1.28, 8.2.* before 8.2.18, 8.3.* before 8.3.5, when using proc_open() command with array syntax, due to insufficient escaping, if the arguments of the executed command are controlled by a malicious user, the user can supply arguments that would ..."
+  },
+  {
+    "fecha": "2025-12-08",
     "cve": "CVE-2025-8088",
     "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-12-08",
     "cve": "CVE-2025-6218",
     "descripcion": "RARLAB WinRAR Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of RARLAB WinRAR. User interaction is required to exploit this vulnerability in that the target must visit a ..."
-  },
-  {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-66624",
-    "descripcion": "BACnet Protocol Stack library provides a BACnet application layer, network layer and media access (MAC) layer communications services. Prior to 1.5.0.rc2, The npdu_is_expected_reply function in src/bacnet/npdu.c indexes request_pdu[offset+2/3/5] and reply_pdu[offset+1/2/4] ..."
   }
 ]
