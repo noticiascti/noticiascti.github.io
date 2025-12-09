@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-64760",
-    "descripcion": "Tuleap is a free and open source suite for management of software development and collaboration. Versions of Tuleap Community Edition prior to 17.0.99.1763126988 and Tuleap Enterprise Edition prior to 17.0-3 and 16.13-8 have missing CSRF protections which allow attackers to create or remove tracker triggers. This issue is fixed in Tuleap Community Edition version 17.0.99.1763126988 and Tuleap Enterprise Edition versions 17.0-3 and 16.13-8. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2025-66491",
+    "descripcion": "Traefik is an HTTP reverse proxy and load balancer. Versions 3.5.0 through 3.6.2 have inverted TLS verification logic in the nginx.ingress.kubernetes.io/proxy-ssl-verify annotation. Setting the annotation to &#34;on&#34; (intending to enable backend TLS certificate verification) actually disables verification, allowing man-in-the-middle attacks against HTTPS backends when operators believe they are protected. This issue is fixed in version 3.6.3. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-64499",
-    "descripcion": "Tuleap is a free and open source suite for management of software development and collaboration. Tuleap Community Editon versions prior to 17.0.99.1762456922 and Tuleap Enterprise Edition versions prior to 17.0-2, 16.13-7 and 16.12-10 are vulnerable to CSRF attacks through planning management API. Attackers have access to create, edit or remove plans. This issue is fixed in Tuleap Community Edition version 17.0.99.1762456922 and Tuleap Enterprise Edtion versions 17.0-2, 16.13-7 and 16.12-10. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2025-66490",
+    "descripcion": "Traefik is an HTTP reverse proxy and load balancer. For versions prior to 2.11.32 and 2.11.31 through 3.6.2, requests using PathPrefix, Path or PathRegex matchers can bypass path normalization. When Traefik uses path-based routing, requests containing URL-encoded restricted characters (/, \\, Null, ;, ?, #) can bypass the middleware chain and reach unintended backends. For example, a request to http://mydomain.example.com/admin%2F could reach service-a without triggering my-security-middleware, bypassing security controls for the /admin/ path. This issue is fixed in versions 2.11.32 and 3.6.3. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-64498",
-    "descripcion": "Tuleap is an Open Source Suite for management of software development and collaboration. Tuleap Community Edition versions below 17.0.99.1762444754 and Tuleap Enterprise Edition versions prior to 17.0-2, 16.13-7 and 16.12-10 allow attackers trick victims into changing tracker general settings. This issue is fixed in version Tuleap Community Edition version 17.0.99.1762444754 and Tuleap Enterprise Edition versions 17.0-2, 16.13-7 and 16.12-10. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2025-66481",
+    "descripcion": "DeepChat is an open-source AI chat platform that supports cloud models and LLMs. Versions 0.5.1 and below are vulnerable to XSS attacks through improperly sanitized Mermaid content. The recent security patch for MermaidArtifact.vue is insufficient and can be bypassed using unquoted HTML attributes combined with HTML entity encoding. Remote Code Execution is possible on the victim&#39;s machine via the electron.ipcRenderer interface, bypassing the regex filter intended to strip dangerous attributes. There is no fix at time of publication. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-64497",
-    "descripcion": "Tuleap is an Open Source Suite for management of software development and collaboration. Versions below 17.0.99.1762431347 of Tuleap Community Edition and Tuleap Enterprise Edition below 17.0-2, 16.13-7 and 16.12-10 allow attackers to access file release system information in projects they do not have access to. This issue is fixed in version 17.0.99.1762431347 of the Tuleap Community Edition and versions 17.0-2, 16.13-7 and 16.12-10 of Tuleap Enterprise Edition. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2025-66470",
+    "descripcion": "NiceGUI is a Python-based UI framework. Versions 3.3.1 and below are subject to a XSS vulnerability through the ui.interactive_image component of NiceGUI. The component renders SVG content using Vue&#39;s v-html directive without any sanitization. This allows attackers to inject malicious HTML or JavaScript via the SVG tag whenever the image component is rendered or updated. This is particularly dangerous for dashboards or multi-user applications displaying user-generated content or annotations. This issue is fixed in version 3.4.0. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-36140",
-    "descripcion": "IBM watsonx.data 2.2 through 2.2.1 could allow an authenticated user to cause a denial of service through ingestion pods due to improper allocation of resources without limits. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2025-14285",
+    "descripcion": "A vulnerability was found in code-projects Employee Profile Management System 1.0. Affected is an unknown function of the file edit_personnel.php. The manipulation of the argument per_id results in sql injection. The attack can be launched remotely. The exploit has been made public and could be used. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-64650",
-    "descripcion": "IBM Storage Defender - Resiliency Service 2.0.0 through 2.0.18 could disclose sensitive user credentials in log files. 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2023-53819",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: amdgpu: validate offset_in_bo of drm_amdgpu_gem_va This is motivated by OOB access in amdgpu_vm_update_range when offset_in_bo+map_size overflows. v2: keep the validations in amdgpu_vm_bo_map v3: add the validations to amdgpu_vm_bo_map/amdgpu_vm_bo_replace_map rather than to amdgpu_gem_va_ioctl 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-62408",
-    "descripcion": "c-ares is an asynchronous resolver library. Versions 1.32.3 through 1.34.5 terminate a query after maximum attempts when using read_answer() and process_answer(), which can cause a Denial of Service. This issue is fixed in version 1.34.6. 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2023-53818",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ARM: zynq: Fix refcount leak in zynq_early_slcr_init of_find_compatible_node() returns a node pointer with refcount incremented, we should use of_node_put() on error path. Add missing of_node_put() to avoid refcount leak. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-36102",
-    "descripcion": "IBM Controller 11.1.0 through 11.1.1 and IBM Cognos Controller 11.0.0 through 11.0.1 FP6 could allow a privileged user to bypass validation, passing user input into the application as trusted data, due to client-side enforcement of server-side security. 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2023-53817",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: lib/mpi - avoid null pointer deref in mpi_cmp_ui() During NVMeTCP Authentication a controller can trigger a kernel oops by specifying the 8192 bit Diffie Hellman group and passing a correctly sized, but zeroed Diffie Hellamn value. mpi_cmp_ui() was detecting this if the second parameter was 0, but 1 is passed from dh_is_pubkey_valid(). This causes the null pointer u->d to be dereferenced towards the end of mpi_cmp_ui() 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-36017",
-    "descripcion": "IBM Controller 11.1.0 through 11.1.1 and IBM Cognos Controller 11.0.0 through 11.0.1 FP6 stores unencrypted sensitive information in environmental variables files which can be obtained by an authenticated user. 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2023-53816",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/amdkfd: fix potential kgd_mem UAFs kgd_mem pointers returned by kfd_process_device_translate_handle are only guaranteed to be valid while p->mutex is held. As soon as the mutex is unlocked, another thread can free the BO. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-36015",
-    "descripcion": "IBM Controller 11.1.0 through 11.1.1 and IBM Cognos Controller 11.0.0 through 11.0.1 FP6 could allow an authenticated user to cause a denial of service due to improper validation of a specified quantity size input. 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-09",
+    "cve": "CVE-2023-53815",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-timers: Prevent RT livelock in itimer_delete() itimer_delete() has a retry loop when the timer is concurrently expired. On non-RT kernels this just spin-waits until the timer callback has completed, except for posix CPU timers which have HAVE_POSIX_CPU_TIMERS_TASK_WORK enabled. In that case and on RT kernels the existing task could live lock when preempting the task which does the timer delivery. Replace spin_unlock() with an invocation of timer_wait_running() to handle it the same way as the other retry loops in the posix timer code. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
