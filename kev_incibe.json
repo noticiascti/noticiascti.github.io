@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-12-08",
+    "cve": "CVE-2025-65849",
+    "descripcion": "A cryptanalytic break in Altcha Proof-of-Work obfuscation mode version 0.8.0 and later allows for remote visitors to recover the Proof-of-Work nonce in constant time via mathematical deduction. 08/12/2025 08/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-08",
+    "cve": "CVE-2025-65548",
+    "descripcion": "NUT-14 allows cashu tokens to be created with a preimage hash. However, nutshell (cashubtc/nuts) before 0.18.0 do not validate the size of preimage when the token is spent. The preimage is stored by the mint and attacker can exploit this vulnerability to fill the mint&#39;s db nd disk with arbitrary data. 08/12/2025 08/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-08",
+    "cve": "CVE-2025-65271",
+    "descripcion": "Client-side template injection (CSTI) in Azuriom CMS admin dashboard allows a low-privilege user to execute arbitrary template code in the context of an administrator&#39;s session. This can occur via plugins or dashboard components that render untrusted user input, potentially enabling privilege escalation to an administrative account. Fixed in Azuriom 1.2.7. 08/12/2025 08/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-08",
+    "cve": "CVE-2025-65231",
+    "descripcion": "Barix Instreamer v04.06 and earlier is vulnerable to Cross Site Scripting (XSS) in the Web UI I/O & Serial configuration page, specifically the CTS close command user-input field which is stored and later rendered on the Status page. 08/12/2025 08/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-08",
+    "cve": "CVE-2025-14261",
+    "descripcion": "The Litmus platform uses JWT for authentication and authorization, but the secret being used for signing the JWT is only 6 bytes long at its core, which makes it extremely easy to crack. 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-08",
     "cve": "CVE-2025-65804",
     "descripcion": "Tenda AX3 v16.03.12.11 contains a stack overflow in formSetIptv via the iptvType parameter, which can cause memory corruption and enable remote code execution (RCE). 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -23,30 +48,5 @@
     "fecha": "2025-12-08",
     "cve": "CVE-2025-48606",
     "descripcion": "In preparePackage of InstallPackageHelper.java, there is a possible way for an app to appear hidden upon installation without a mechanism to uninstall it due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. 08/12/2025 08/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-48569",
-    "descripcion": "In multiple locations, there is a possible permanent denial of service due to resource exhaustion. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation. 08/12/2025 08/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-14259",
-    "descripcion": "A vulnerability was found in Jihai Jshop MiniProgram Mall System 2.9.0. Affected by this issue is some unknown functionality of the file /index.php/api.html. The manipulation of the argument cat_id results in sql injection. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. 08/12/2025 08/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-14258",
-    "descripcion": "A vulnerability has been found in itsourcecode Student Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /newsubject.php. The manipulation of the argument sub leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. 08/12/2025 08/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-65799",
-    "descripcion": "A lack of file name validation or verification in the Attachment service of usememos memos v0.25.2 allows attackers to execute a path traversal. 08/12/2025 08/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-08",
-    "cve": "CVE-2025-65797",
-    "descripcion": "Incorrect access control in the Identity Provider service of usememos memos v0.25.2 allows attackers with low-level privileges to arbitrarily modify or delete registered identity providers, leading to an account takeover or Denial of Service (DoS). 08/12/2025 08/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
