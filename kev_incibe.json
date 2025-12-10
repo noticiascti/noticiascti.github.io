@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-12952",
-    "descripcion": "A privilege escalation vulnerability exists in Google Cloud&#39;s Dialogflow CX. Dialogflow agent developers with Webhook editor permission are able to configure Webhooks using Dialogflow service agent access token authentication. This allows the attacker to escalate their privileges from agent-level to project-level, granting them unauthorized access to manage resources in services associated with the project, leading to unexpected costs and resource depletion for the producer project. A fix was applied on the server side to protect from this vulnerability in February 2025. No customer action is required. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Clear Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-41732",
+    "descripcion": "An unauthenticated remote attacker can abuse unsafe sscanf calls within the check_cookie() function to write arbitrary data into fixed-size stack buffers which leads to full device compromise. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-9571",
-    "descripcion": "A remote code execution (RCE) vulnerability exists in Google Cloud Data Fusion. A user with permissions to upload artifacts to a Data Fusion instance can execute arbitrary code within the core AppFabric component. This could allow the attacker to gain control over the Data Fusion instance, potentially leading to unauthorized access to sensitive data, modification of data pipelines, and exploration of the underlying infrastructure. The following CDAP versions include the necessary update to protect against this vulnerability: * 6.10.6+ * 6.11.1+ Users must immediately upgrade to them, or greater ones, available at: https://github.com/cdapio/cdap-build/releases . 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-41730",
+    "descripcion": "An unauthenticated remote attacker can abuse unsafe sscanf calls within the check_account() function to write arbitrary data into fixed-size stack buffers which leads to full device compromise. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-13073",
-    "descripcion": "The HandL UTM Grabber / Tracker WordPress plugin before 2.8.1 does not sanitize and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-7073",
+    "descripcion": "A local privilege escalation vulnerability in Bitdefender Total Security 27.0.46.231 allows low-privileged attackers to elevate privileges. The issue arises from bdservicehost.exe deleting files from a user-writable directory (C:\\ProgramData\\Atc\\Feedback) without proper symbolic link validation, enabling arbitrary file deletion. This issue is chained with a file copy operation during network events and a filter driver bypass via DLL injection to achieve arbitrary file copy and code execution as elevated user. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-13072",
-    "descripcion": "The HandL UTM Grabber / Tracker WordPress plugin before 2.8.1 does not sanitize and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin. 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66675",
+    "descripcion": "Denial of Service vulnerability in Apache Struts, file leak in multipart request processing causes disk exhaustion. This issue affects Apache Struts: from 2.0.0 through 6.7.4, from 7.0.0 through 7.0.3. Users are recommended to upgrade to version 6.8.0 or 7.1.1, which fixes the issue. It&#39;s related to https://cve.org/CVERecord?id=CVE-2025-64775 - this CVE addresses missing affected version 6.7.4 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-13339",
-    "descripcion": "The Hippoo Mobile App for WooCommerce plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 1.7.1 via the template_redirect() function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-14390",
+    "descripcion": "The Video Merchant plugin for WordPress is vulnerable to Cross-Site Request Forgery in version 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-9056",
-    "descripcion": "Unprotected service in the AudioLink component allows a local attacker to overwrite system files via unauthorized service invocation. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-9315",
+    "descripcion": "An unauthenticated device registration vulnerability, caused by Improperly Controlled Modification of Dynamically-Determined Object Attributes, has been identified in the MXsecurity Series. An unauthenticated remote attacker can exploit this vulnerability by sending a specially crafted JSON payload to the device&#39;s registration endpoint /api/v1/devices/register, allowing the attacker to register unauthorized devices without authentication. Although exploiting this vulnerability has limited modification of data, there is no impact to the confidentiality and availability of the affected device, as well as no loss of confidentiality, integrity, and availability within any subsequent systems. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67613",
-    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66004",
+    "descripcion": "A Path Traversal vulnerability in usbmuxd allows local users to escalate to the service user.This issue affects usbmuxd: before 3ded00c9985a5108cfc7591a309f9a23d57a8cba. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67612",
-    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-1161",
+    "descripcion": "Incorrect Use of Privileged APIs vulnerability in NomySost Information Technology Training and Consulting Inc. Nomysem allows Privilege Escalation.This issue affects Nomysem: through May 2025. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67611",
-    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-14087",
+    "descripcion": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67610",
-    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-14082",
+    "descripcion": "A flaw was found in Keycloak Admin REST (Representational State Transfer) API. This vulnerability allows information disclosure of sensitive role metadata via insufficient authorization checks on the /admin/realms/{realm}/roles endpoint. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   }
 ]
