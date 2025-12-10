@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2025-66649",
-    "descripcion": "Rejected reason: Further research determined the issue is not a vulnerability. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65882",
+    "descripcion": "An issue was discovered in openmptcprouter thru 0.64 in file common/package/utils/sys-upgrade-helper/src/tools/sysupgrade.c in function create_xor_ipad_opad allowing attackers to potentially write arbitrary files or execute arbitrary commands. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2023-53835",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65573",
+    "descripcion": "Cross Site Request Forgery (CSRF) vulnerability in AllskyTeam AllSky v2024.12.06_06 allows remote attackers to cause a denial of service via function handle_interface_POST_and_status. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2025-66491",
-    "descripcion": "Traefik is an HTTP reverse proxy and load balancer. Versions 3.5.0 through 3.6.2 have inverted TLS verification logic in the nginx.ingress.kubernetes.io/proxy-ssl-verify annotation. Setting the annotation to &#34;on&#34; (intending to enable backend TLS certificate verification) actually disables verification, allowing man-in-the-middle attacks against HTTPS backends when operators believe they are protected. This issue is fixed in version 3.6.3. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65572",
+    "descripcion": "Cross Site Scripting (XSS) vulnerability in AllskyTeam AllSky v2024.12.06_06 allows remote attackers to execute arbitrary code via the (1) config, (2) filename, or (3) extratext parameter to allskySettings.php. When the page is reloaded or when user visits allskySettings.php, the showMessages() function in status_messages.php will print out the error messages and execute the script injected by the attacker. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2025-66490",
-    "descripcion": "Traefik is an HTTP reverse proxy and load balancer. For versions prior to 2.11.32 and 2.11.31 through 3.6.2, requests using PathPrefix, Path or PathRegex matchers can bypass path normalization. When Traefik uses path-based routing, requests containing URL-encoded restricted characters (/, \\, Null, ;, ?, #) can bypass the middleware chain and reach unintended backends. For example, a request to http://mydomain.example.com/admin%2F could reach service-a without triggering my-security-middleware, bypassing security controls for the /admin/ path. This issue is fixed in versions 2.11.32 and 3.6.3. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65300",
+    "descripcion": "A stored Cross-Site Scripting (XSS) vulnerability exists in the Coohom SaaS Platform feVersion=1760060603897 (2025-10-28) in the Account Settings module, where unsanitized user input in Address fields (City, State, Country/Region) is rendered back to the page. Attackers can inject arbitrary JavaScript code, which executes when the affected profile page is viewed. This can lead to session hijacking, cookie theft, or arbitrary script execution in the victim&#39;s browser. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2025-66481",
-    "descripcion": "DeepChat is an open-source AI chat platform that supports cloud models and LLMs. Versions 0.5.1 and below are vulnerable to XSS attacks through improperly sanitized Mermaid content. The recent security patch for MermaidArtifact.vue is insufficient and can be bypassed using unquoted HTML attributes combined with HTML entity encoding. Remote Code Execution is possible on the victim&#39;s machine via the electron.ipcRenderer interface, bypassing the regex filter intended to strip dangerous attributes. There is no fix at time of publication. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-14336",
+    "descripcion": "A vulnerability was found in itsourcecode Student Management System 1.0. Affected by this issue is some unknown functionality of the file /promote.php. The manipulation of the argument sy results in sql injection. It is possible to launch the attack remotely. The exploit has been made public and could be used. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2025-66470",
-    "descripcion": "NiceGUI is a Python-based UI framework. Versions 3.3.1 and below are subject to a XSS vulnerability through the ui.interactive_image component of NiceGUI. The component renders SVG content using Vue&#39;s v-html directive without any sanitization. This allows attackers to inject malicious HTML or JavaScript via the SVG tag whenever the image component is rendered or updated. This is particularly dangerous for dashboards or multi-user applications displaying user-generated content or annotations. This issue is fixed in version 3.4.0. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-14335",
+    "descripcion": "A vulnerability has been found in itsourcecode Student Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /new_school_year.php. The manipulation of the argument sy leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2025-14285",
-    "descripcion": "A vulnerability was found in code-projects Employee Profile Management System 1.0. Affected is an unknown function of the file edit_personnel.php. The manipulation of the argument per_id results in sql injection. The attack can be launched remotely. The exploit has been made public and could be used. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-14334",
+    "descripcion": "A flaw has been found in itsourcecode Student Management System 1.0. Affected is an unknown function of the file /new_adviser.php. Executing manipulation of the argument Name can lead to sql injection. The attack may be performed from remote. The exploit has been published and may be used. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2023-53819",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: amdgpu: validate offset_in_bo of drm_amdgpu_gem_va This is motivated by OOB access in amdgpu_vm_update_range when offset_in_bo+map_size overflows. v2: keep the validations in amdgpu_vm_bo_map v3: add the validations to amdgpu_vm_bo_map/amdgpu_vm_bo_replace_map rather than to amdgpu_gem_va_ioctl 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-11531",
+    "descripcion": "HP System Event Utility and Omen Gaming Hub might allow execution of certain files outside of their restricted paths. This potential vulnerability was remediated with HP System Event Utility version 3.2.12 and Omen Gaming Hub version 1101.2511.101.0. 09/12/2025 09/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2023-53818",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ARM: zynq: Fix refcount leak in zynq_early_slcr_init of_find_compatible_node() returns a node pointer with refcount incremented, we should use of_node_put() on error path. Add missing of_node_put() to avoid refcount leak. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65594",
+    "descripcion": "OpenSIS 9.2 and below is vulnerable to Incorrect Access Control in Student.php, which allows an authenticated low-privilege user to perform unauthorized database write operations relating to the data of other users. 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-09",
-    "cve": "CVE-2023-53817",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: lib/mpi - avoid null pointer deref in mpi_cmp_ui() During NVMeTCP Authentication a controller can trigger a kernel oops by specifying the 8192 bit Diffie Hellman group and passing a correctly sized, but zeroed Diffie Hellamn value. mpi_cmp_ui() was detecting this if the second parameter was 0, but 1 is passed from dh_is_pubkey_valid(). This causes the null pointer u->d to be dereferenced towards the end of mpi_cmp_ui() 09/12/2025 09/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64894",
+    "descripcion": "DNG SDK versions 1.7.0 and earlier are affected by an Integer Overflow or Wraparound vulnerability that could lead to application denial-of-service. An attacker could exploit this issue to cause the application to crash or become unresponsive. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 09/12/2025 09/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
