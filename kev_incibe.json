@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67507",
-    "descripcion": "Filament is a collection of full-stack components for accelerated Laravel development. Versions 4.0.0 through 4.3.0 contain a flaw in the handling of recovery codes for app-based multi-factor authentication, allowing the same recovery code to be reused indefinitely. This issue does not affect email-based MFA. It also only applies when recovery codes are enabled. This issue is fixed in version 4.3.1. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-9056",
+    "descripcion": "Unprotected service in the AudioLink component allows a local attacker to overwrite system files via unauthorized service invocation. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67506",
-    "descripcion": "PipesHub is a fully extensible workplace AI platform for enterprise search and workflow automation. Versions prior to 0.1.0-beta expose POST /api/v1/record/buffer/convert through missing authentication. The endpoint accepts a file upload and converts it to PDF via LibreOffice by uploading payload to os.path.join(tmpdir, file.filename) without normalizing the filename. An attacker can submit a crafted filename containing ../ sequences to write arbitrary files anywhere the service account has permission, enabling remote file overwrite or planting malicious code. This issue is fixed in version 0.1.0-beta. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-67613",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67485",
-    "descripcion": "mad-proxy is a Python-based HTTP/HTTPS proxy server for detection and blocking of malicious web activity using custom security policies. Versions 0.3 and below allow attackers to bypass HTTP/HTTPS traffic interception rules, potentially exposing sensitive traffic. This issue does not have a fix at the time of publication. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-67612",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-09",
-    "cve": "CVE-2025-67503",
-    "descripcion": "Rejected reason: This CVE is a duplicate of another CVE. 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-67611",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-09",
-    "cve": "CVE-2025-67502",
-    "descripcion": "Taguette is an open source qualitative research tool. In versions 1.5.1 and below, attackers can craft malicious URLs that redirect users to arbitrary external websites after authentication. The application accepts a user-controlled next parameter and uses it directly in HTTP redirects without any validation. This can be exploited for phishing attacks where victims believe they are interacting with a trusted Taguette instance but are redirected to a malicious site designed to steal credentials or deliver malware. This issue is fixed in version 1.5.2. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-67610",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-09",
-    "cve": "CVE-2025-67501",
-    "descripcion": "WeGIA is an open source Web Manager for Institutions with a focus on Portuguese language users. Versions 3.5.4 and below contain an SQL Injection vulnerability in the /html/matPat/editar_categoria.php endpoint. The application fails to properly validate and sanitize user inputs in the id_categoria parameter, which allows attackers to inject malicious SQL payloads for direct execution. This issue is fixed in version 3.5.5. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-67609",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-09",
-    "cve": "CVE-2025-67500",
-    "descripcion": "Mastodon is a free, open-source social network server based on ActivityPub. Versions 4.2.27 and prior, 4.3.0-beta.1 through 4.3.14, 4.4.0-beta.1 through 4.4.9, 4.5.0-beta.1 through 4.5.2 have discrepancies in error handling which allow checking whether a given status exists by sending a request with a non-English Accept-Language header. Using this behavior, an attacker who knows the identifier of a particular status they are not allowed to see can confirm whether this status exists or not. This cannot be used to learn the contents of the status or any other property besides its existence. This issue is fixed in versions 4.2.28, 4.3.15, 4.4.10 and 4.5.3. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-67608",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-09",
-    "cve": "CVE-2025-67499",
-    "descripcion": "The CNI portmap plugin allows containers to emulate opening a host port, forwarding that traffic to the container. Versions 1.6.0 through 1.8.0 inadvertently forward all traffic with the same destination port as the host port when the portmap plugin is configured with the nftables backend, thus ignoring the destination IP. This includes traffic not intended for the node itself, i.e. traffic to containers hosted on the node. Containers that request HostPort forwarding can intercept all traffic destined for that port. This requires that the portmap plugin be explicitly configured to use the nftables backend. This issue is fixed in version 1.9.0. To workaround, configure the portmap plugin to use the iptables backend. It does not have this vulnerability. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-67607",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-09",
-    "cve": "CVE-2025-64898",
-    "descripcion": "ColdFusion versions 2025.4, 2023.16, 2021.22 and earlier are affected by an Insufficiently Protected Credentials vulnerability that could result in limited unauthorized write access. An attacker could leverage this vulnerability to gain unauthorized access by exploiting improperly stored or transmitted credentials. Exploitation of this issue does not require user interaction. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-67606",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-09",
-    "cve": "CVE-2025-64897",
-    "descripcion": "ColdFusion versions 2025.4, 2023.16, 2021.22 and earlier are affected by an Improper Access Control vulnerability. A low privileged attacker could leverage this vulnerability to bypass security measures and gain limited unauthorized write access potentially resulting in denial of service. Exploitation of this issue requires user interaction. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-67605",
+    "descripcion": "Rejected reason: Not used 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
