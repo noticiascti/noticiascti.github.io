@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2025-12-10",
+    "cve": "CVE-2025-8110",
+    "descripcion": "Improper Symbolic link handling in the PutContents API in Gogs allows Local Execution of Code. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:C/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-13127",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in TAC Information Services Internal and External Trade Inc. GoldenHorn allows Cross-Site Scripting (XSS).This issue affects GoldenHorn: before 4.25.1121.1. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-12-10",
+    "cve": "CVE-2024-2105",
+    "descripcion": "An unauthorised attacker within bluetooth range may use an improper validation during the BLE connection request to deadlock the affected devices. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-10",
+    "cve": "CVE-2024-2104",
+    "descripcion": "Due to improper BLE security configurations on the device&#39;s GATT server, an adjacent unauthenticated attacker can read and write device control commands through the mobile app service wich could render the device unusable. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-41358",
+    "descripcion": "Direct Object Reference Vulnerability (IDOR) in i2A&#39;s CronosWeb, in versions prior to 25.00.00.12, inclusive. This vulnerability could allow an authenticated attacker to access other users&#39; documents by manipulating the ‘documentCode’ parameter in &#39;/CronosWeb/Modulos/Personas/DocumentosPersonales/AdjuntarDocumentosPersonas&#39;. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-10",
+    "cve": "CVE-2025-13953",
+    "descripcion": "Bypass vulnerability in the authentication method in the GTT Tax Information System application, related to the Active Directory (LDAP) login method. Authentication is performed through a local WebSocket, but the web application does not properly validate the authenticity or origin of the data received, allowing an attacker with access to the local machine or internal network to impersonate the legitimate WebSocket and inject manipulated information. Exploiting this vulnerability could allow an attacker to authenticate as any user in the domain, without the need for valid credentials, compromising the confidentiality, integrity, and availability of the application and its data. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-10",
     "cve": "CVE-2025-41732",
     "descripcion": "An unauthenticated remote attacker can abuse unsafe sscanf calls within the check_cookie() function to write arbitrary data into fixed-size stack buffers which leads to full device compromise. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -18,35 +48,5 @@
     "fecha": "2025-12-10",
     "cve": "CVE-2025-66675",
     "descripcion": "Denial of Service vulnerability in Apache Struts, file leak in multipart request processing causes disk exhaustion. This issue affects Apache Struts: from 2.0.0 through 6.7.4, from 7.0.0 through 7.0.3. Users are recommended to upgrade to version 6.8.0 or 7.1.1, which fixes the issue. It&#39;s related to https://cve.org/CVERecord?id=CVE-2025-64775 - this CVE addresses missing affected version 6.7.4 10/12/2025 10/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-14390",
-    "descripcion": "The Video Merchant plugin for WordPress is vulnerable to Cross-Site Request Forgery in version 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-9315",
-    "descripcion": "An unauthenticated device registration vulnerability, caused by Improperly Controlled Modification of Dynamically-Determined Object Attributes, has been identified in the MXsecurity Series. An unauthenticated remote attacker can exploit this vulnerability by sending a specially crafted JSON payload to the device&#39;s registration endpoint /api/v1/devices/register, allowing the attacker to register unauthorized devices without authentication. Although exploiting this vulnerability has limited modification of data, there is no impact to the confidentiality and availability of the affected device, as well as no loss of confidentiality, integrity, and availability within any subsequent systems. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-66004",
-    "descripcion": "A Path Traversal vulnerability in usbmuxd allows local users to escalate to the service user.This issue affects usbmuxd: before 3ded00c9985a5108cfc7591a309f9a23d57a8cba. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-1161",
-    "descripcion": "Incorrect Use of Privileged APIs vulnerability in NomySost Information Technology Training and Consulting Inc. Nomysem allows Privilege Escalation.This issue affects Nomysem: through May 2025. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-14087",
-    "descripcion": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-14082",
-    "descripcion": "A flaw was found in Keycloak Admin REST (Representational State Transfer) API. This vulnerability allows information disclosure of sensitive role metadata via insufficient authorization checks on the /admin/realms/{realm}/roles endpoint. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   }
 ]
