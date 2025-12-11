@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-67513",
-    "descripcion": "FreePBX Endpoint Manager is a module for managing telephony endpoints in FreePBX systems. Versions prior to 16.0.96 and 17.0.1 through 17.0.9 have a weak default password. By default, this is a 6 digit numeric value which can be brute forced. (This is the app_password parameter). Depending on local configuration, this password could be the extension, voicemail, user manager, DPMA or EPM phone admin password. This issue is fixed in versions 16.0.96 and 17.0.10. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67718",
+    "descripcion": "Form.io is a combined Form and API platform for Serverless applications. Versions 3.5.6 and below and 4.0.0-rc.1 through 4.4.2 contain a flaw in path handling which could allow an attacker to access protected API endpoints by sending a crafted request path. An unauthenticated or unauthorized request could retrieve data from endpoints that should be protected. This issue is fixed in versions 3.5.7 and 4.4.3. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67717",
+    "descripcion": "ZITADEL is an open-source identity infrastructure tool. Versions 2.44.0 through 3.4.4 and 4.0.0-rc.1 through 4.7.1 disclose the total number of instance users to authenticated users, regardless of their specific permissions. While this does not leak individual user data or PII, disclosing the total user count via the totalResult field constitutes an information disclosure vulnerability that may be sensitive in certain contexts. This issue is fixed in versions 3.4.5 and 4.7.2. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67716",
+    "descripcion": "The Auth0 Next.js SDK is a library for implementing user authentication in Next.js applications. Versions 4.9.0 through 4.12.1 contain an input-validation flaw in the returnTo parameter, which could allow attackers to inject unintended OAuth query parameters into the Auth0 authorization request. Successful exploitation may result in tokens being issued with unintended parameters. This issue is fixed in version 4.13.0. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67713",
+    "descripcion": "Miniflux 2 is an open source feed reader. Versions 2.2.14 and below treat redirect_url as safe when url.Parse(...).IsAbs() is false, enabling phishing flows after login. Protocol-relative URLs like //ikotaslabs.com have an empty scheme and pass that check, allowing post-login redirects to attacker-controlled sites. This issue is fixed in version 2.2.15. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67510",
-    "descripcion": "Neuron is a PHP framework for creating and orchestrating AI Agents. In versions 2.8.11 and below, the MySQLWriteTool executes arbitrary SQL provided by the caller using PDO::prepare() + execute() without semantic restrictions. This is consistent with the name (“write tool”), but in an LLM/agent context it becomes a high-risk capability: prompt injection or indirect prompt manipulation can cause execution of destructive queries such as DROP TABLE, TRUNCATE, DELETE, ALTER, or privilege-related statements (subject to DB permissions). Deployments that expose an agent with MySQLWriteTool enabled to untrusted input and/or run the tool with a DB user that has broad privileges are impacted. This issue is fixed in version 2.8.12. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-67648",
+    "descripcion": "Shopware is an open commerce platform. Versions 6.4.6.0 through 6.6.10.9 and 6.7.0.0 through 6.7.5.0 have a Reflected XSS vulnerability in AuthController.php. A request parameter from the login page URL is directly rendered within the Twig template of the Storefront login page without further processing or input validation. This allows direct code injection into the template via the URL parameter, waitTime, which lacks proper input validation. This issue is fixed in versions 6.6.10.10 and 6.7.5.1. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67509",
-    "descripcion": "Neuron is a PHP framework for creating and orchestrating AI Agents. Versions 2.8.11 and below use MySQLSelectTool, which is vulnerable to Read-Only Bypass. MySQLSelectTool is intended to be a read-only SQL tool (e.g., for LLM agent querying, however, validation based on the first keyword (e.g., SELECT) and a forbidden-keyword list does not block file-writing constructs such as INTO OUTFILE / INTO DUMPFILE. As a result, an attacker who can influence the tool input (e.g., via prompt injection through a public agent endpoint) may write arbitrary files to the DB server if the MySQL/MariaDB account has the FILE privilege and server configuration permits writes to a useful location (e.g., a web-accessible directory). This issue is fixed in version 2.8.12. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-67646",
+    "descripcion": "TableProgressTracking is a MediaWiki extension to track progress against specific criterion. Versions 1.2.0 and below do not enforce CSRF token validation in the REST API. As a result, an attacker could craft a malicious webpage that, when visited by an authenticated user on a wiki with the extension enabled, would trigger unintended authenticated actions through the victim&#39;s browser. Due to the lack of token validation, an attacker can delete or track progress against tables. This issue is patched in version 1.2.1 of the extension. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67505",
-    "descripcion": "Okta Java Management SDK facilitates interactions with the Okta management API. In versions 11.0.0 through 20.0.0, race conditions may arise from concurrent requests using the ApiClient class. This could cause a status code or response header from one request’s response to influence another request’s response. This issue is fixed in version 20.0.1. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-67644",
+    "descripcion": "LangGraph SQLite Checkpoint is an implementation of LangGraph CheckpointSaver that uses SQLite DB (both sync and async, via aiosqlite). Versions 3.0.0 and below are vulnerable to SQL injection through the checkpoint implementation. Checkpoint allows attackers to manipulate SQL queries through metadata filter keys, affecting applications that accept untrusted metadata filter keys (not just filter values) in checkpoint search operations. The _metadata_predicate() function constructs SQL queries by interpolating filter keys directly into f-strings without validation. This issue is fixed in version 3.0.1. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-67490",
-    "descripcion": "The Auth0 Next.js SDK is a library for implementing user authentication in Next.js applications. When using versions 4.11.0 through 4.11.2 and 4.12.0, simultaneous requests on the same client may result in improper lookups in the TokenRequestCache for the request results. This issue is fixed in versions 4.11.2 and 4.12.1. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-67514",
+    "descripcion": "Rejected reason: Vulnerability is dependency-based. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-13923",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67512",
+    "descripcion": "Rejected reason: The vulnerability is dependency-based. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-10",
-    "cve": "CVE-2025-12731",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-66628",
-    "descripcion": "ImageMagick is a software suite to create, edit, compose, or convert bitmap images. In versions 7.1.2-9 and prior, the TIM (PSX TIM) image parser contains a critical integer overflow vulnerability in its ReadTIMImage function (coders/tim.c). The code reads width and height (16-bit values) from the file header and calculates image_size = 2 * width * height without checking for overflow. On 32-bit systems (or where size_t is 32-bit), this calculation can overflow if width and height are large (e.g., 65535), wrapping around to a small value. This results in a small heap allocation via AcquireQuantumMemory and later operations relying on the dimensions can trigger an out of bounds read. This issue is fixed in version 7.1.2-10. 10/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-66474",
-    "descripcion": "XWiki Rendering is a generic rendering system that converts textual input in a given syntax (wiki syntax, HTML, etc) into another syntax (XHTML, etc). Versions 16.10.9 and below, 17.0.0-rc-1 through 17.4.2 and 17.5.0-rc-1 through 17.5.0 have insufficient protection against {{/html}} injection, which attackers can exploit through RCE. Any user who can edit their own profile or any other document can execute arbitrary script macros, including Groovy and Python macros, which enable remote code execution as well as unrestricted read and write access to all wiki contents. This issue is fixed in versions 16.10.10, 17.4.3 and 17.6.0-rc-1. 10/12/2025 10/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-66033",
-    "descripcion": "Okta Java Management SDK facilitates interactions with the Okta management API. In versions 21.0.0 through 24.0.0, specific multithreaded implementations may encounter memory issues as threads are not properly cleaned up after requests are completed. Over time, this can degrade performance and availability in long-running applications and may result in a denial-of-service condition under sustained load. In addition to using the affected versions, users may be at risk if they are implementing a long-running application using the ApiClient in a multi-threaded manner. This issue is fixed in version 24.0.1. 11/12/2025 10/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-67511",
+    "descripcion": "Cybersecurity AI (CAI) is an open-source framework for building and deploying AI-powered offensive and defensive automation. Versions 0.5.9 and below are vulnerable to Command Injection through the run_ssh_command_with_credentials() function, which is available to AI agents. Only password and command inputs are escaped in run_ssh_command_with_credentials to prevent shell injection; while username, host and port values are injectable. This issue does not have a fix at the time of publication. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
