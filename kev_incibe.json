@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-67718",
-    "descripcion": "Form.io is a combined Form and API platform for Serverless applications. Versions 3.5.6 and below and 4.0.0-rc.1 through 4.4.2 contain a flaw in path handling which could allow an attacker to access protected API endpoints by sending a crafted request path. An unauthenticated or unauthorized request could retrieve data from endpoints that should be protected. This issue is fixed in versions 3.5.7 and 4.4.3. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-8405",
+    "descripcion": "GitLab has remediated a security issue in GitLab CE/EE affecting all versions from 17.1 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2 that could have allowed an authenticated user to perform unauthorized actions on behalf of other users by injecting malicious HTML into vulnerability code flow displays. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-67717",
-    "descripcion": "ZITADEL is an open-source identity infrastructure tool. Versions 2.44.0 through 3.4.4 and 4.0.0-rc.1 through 4.7.1 disclose the total number of instance users to authenticated users, regardless of their specific permissions. While this does not leak individual user data or PII, disclosing the total user count via the totalResult field constitutes an information disclosure vulnerability that may be sensitive in certain contexts. This issue is fixed in versions 3.4.5 and 4.7.2. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-4097",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.10 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2 that could have allowed an authenticated user to cause a denial of service condition by uploading specially crafted images. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-67716",
-    "descripcion": "The Auth0 Next.js SDK is a library for implementing user authentication in Next.js applications. Versions 4.9.0 through 4.12.1 contain an input-validation flaw in the returnTo parameter, which could allow attackers to inject unintended OAuth query parameters into the Auth0 authorization request. Successful exploitation may result in tokens being issued with unintended parameters. This issue is fixed in version 4.13.0. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-11984",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.1 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2 that could have allowed an authenticated user to bypass WebAuthn two-factor authentication by manipulating the session state under certain conditions. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-67713",
-    "descripcion": "Miniflux 2 is an open source feed reader. Versions 2.2.14 and below treat redirect_url as safe when url.Parse(...).IsAbs() is false, enabling phishing flows after login. Protocol-relative URLs like //ikotaslabs.com have an empty scheme and pass that check, allowing post-login redirects to attacker-controlled sites. This issue is fixed in version 2.2.15. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-11247",
+    "descripcion": "GitLab has remediated an issue in GitLab EE affecting all versions from 13.2 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2 that could have allowed an authenticated user to disclose sensitive information from private projects by executing specifically crafted GraphQL queries. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-67648",
-    "descripcion": "Shopware is an open commerce platform. Versions 6.4.6.0 through 6.6.10.9 and 6.7.0.0 through 6.7.5.0 have a Reflected XSS vulnerability in AuthController.php. A request parameter from the login page URL is directly rendered within the Twig template of the Storefront login page without further processing or input validation. This allows direct code injection into the template via the URL parameter, waitTime, which lacks proper input validation. This issue is fixed in versions 6.6.10.10 and 6.7.5.1. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-9436",
+    "descripcion": "The Widgets for Google Reviews plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s `trustindex` shortcode in all versions up to, and including, 13.2.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-67646",
-    "descripcion": "TableProgressTracking is a MediaWiki extension to track progress against specific criterion. Versions 1.2.0 and below do not enforce CSRF token validation in the REST API. As a result, an attacker could craft a malicious webpage that, when visited by an authenticated user on a wiki with the extension enabled, would trigger unintended authenticated actions through the victim&#39;s browser. Due to the lack of token validation, an attacker can delete or track progress against tables. This issue is patched in version 1.2.1 of the extension. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67694",
+    "descripcion": "Rejected reason: Not used 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-67644",
-    "descripcion": "LangGraph SQLite Checkpoint is an implementation of LangGraph CheckpointSaver that uses SQLite DB (both sync and async, via aiosqlite). Versions 3.0.0 and below are vulnerable to SQL injection through the checkpoint implementation. Checkpoint allows attackers to manipulate SQL queries through metadata filter keys, affecting applications that accept untrusted metadata filter keys (not just filter values) in checkpoint search operations. The _metadata_predicate() function constructs SQL queries by interpolating filter keys directly into f-strings without validation. This issue is fixed in version 3.0.1. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67693",
+    "descripcion": "Rejected reason: Not used 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-67514",
-    "descripcion": "Rejected reason: Vulnerability is dependency-based. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67692",
+    "descripcion": "Rejected reason: Not used 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-67512",
-    "descripcion": "Rejected reason: The vulnerability is dependency-based. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67691",
+    "descripcion": "Rejected reason: Not used 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-10",
-    "cve": "CVE-2025-67511",
-    "descripcion": "Cybersecurity AI (CAI) is an open-source framework for building and deploying AI-powered offensive and defensive automation. Versions 0.5.9 and below are vulnerable to Command Injection through the run_ssh_command_with_credentials() function, which is available to AI agents. Only password and command inputs are escaped in run_ssh_command_with_credentials to prevent shell injection; while username, host and port values are injectable. This issue does not have a fix at the time of publication. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2025-12-11",
+    "cve": "CVE-2025-67690",
+    "descripcion": "Rejected reason: Not used 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
