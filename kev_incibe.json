@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-58770",
-    "descripcion": "APTIOV contains a vulnerability in BIOS where a user may cause “Improper Handling of Insufficient Permissions or Privileges” by local access. Successful exploitation of this vulnerability can lead to escalation of authorization and potentially impact Integrity and Availability. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67819",
+    "descripcion": "An issue was discovered in Weaviate OSS before 1.33.4. Due to a lack of validation of the fileName field in the transfer logic, an attacker who can call the GetFile method while a shard is in the &#34;Pause file activity&#34; state and the FileReplicationService is reachable can read arbitrary files accessible to the service process. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-36755",
-    "descripcion": "The CleverDisplay BlueOne hardware player is designed with its USB interfaces physically enclosed and inaccessible under normal operating conditions. Researchers demonstrated that, after cicumventing the device’s protective enclosure, it was possible to connect a USB keyboard and press ESC during boot to access the BIOS setup interface. BIOS settings could be viewed but not modified. This behavior slightly increases the attack surface by exposing internal system information (CWE-1244) once the enclosure is removed, but does not allow integrity or availability compromise under standard or tested configurations. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:X/V:D/RE:L/U:Green Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67818",
+    "descripcion": "An issue was discovered in Weaviate OSS before 1.33.4. An attacker with access to insert data into the database can craft an entry name with an absolute path (e.g., /etc/...) or use parent directory traversal (../../..) to escape the restore root when a backup is restored, potentially creating or overwriting files in arbitrary locations within the application&#39;s privilege scope. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-36746",
-    "descripcion": "SolarEdge monitoring platform contains a Cross‑Site Scripting (XSS) flaw that allows an authenticated user to inject payloads into report names, which may execute in a victim’s browser during a deletion attempt. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:X/V:D/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67342",
+    "descripcion": "RuoYi versions 4.8.1 and earlier is affected by a stored XSS vulnerability in the /system/menu/edit endpoint. While the endpoint is protected by an XSS filter, the protection can be bypassed. Additionally, because the menu is shared across all users, any user with menu modification permissions can impact all users by exploiting this stored XSS vulnerability. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-36745",
-    "descripcion": "SolarEdge SE3680H ships with an outdated Linux kernel containing unpatched vulnerabilities in core subsystems. An attacker with network or local access can exploit these flaws to achieve remote code execution, privilege escalation, or disclosure of sensitive information. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:X/R:X/V:D/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2023-29144",
+    "descripcion": "Malwarebytes 1.0.14 for Linux doesn&#39;t properly compute signatures in some scenarios. This allows a bypass of detection. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-36744",
-    "descripcion": "SolarEdge SE3680H has unauthenticated disclosure of sensitive information during the bootloader loop. While the device repeatedly initializes and waits for boot instructions, the bootloader emits diagnostic output this behavior can leak operating system information. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67344",
+    "descripcion": "jshERP v3.5 and earlier is affected by a stored Cross Site Scripting (XSS) vulnerability via the /msg/add endpoint. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-36743",
-    "descripcion": "SolarEdge SE3680H has an exposed debug/test interface accessible to unauthenticated actors, allowing disclosure of system internals and execution of debug commands. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67341",
+    "descripcion": "jshERP versions 3.5 and earlier are affected by a stored XSS vulnerability. This vulnerability allows attackers to upload PDF files containing XSS payloads. Additionally, these PDF files can be accessed via static URLs, making them accessible to all users. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-13506",
-    "descripcion": "Execution with Unnecessary Privileges vulnerability in Nebim Neyir Computer Industry and Services Inc. Nebim V3 ERP allows Expanding Control over the Operating System from the Database.This issue affects Nebim V3 ERP: from 2.0.59 before 3.0.1. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-65530",
+    "descripcion": "An eval injection in the malware de-obfuscation routines of CloudLinux ai-bolit before v32.7.4 allows attackers to overwrite arbitrary files as root via scanning a crafted file. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-14442",
-    "descripcion": "The Secure Copy Content Protection and Content Locking plugin for WordPress is vulnerable to sensitive information exposure due to storage of exported CSV files in a publicly accessible directory with predictable filenames in all versions up to, and including, 4.9.2. This makes it possible for unauthenticated attackers to access sensitive user data including emails, IP addresses, usernames, roles, and location data by directly accessing the exported CSV file. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66430",
+    "descripcion": "Plesk 18.0 has Incorrect Access Control. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-14159",
-    "descripcion": "The Secure Copy Content Protection and Content Locking plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.9.2. This is due to missing nonce validation on the &#39;ays_sccp_results_export_file&#39; AJAX action. This makes it possible for unauthenticated attackers to export sensitive plugin data including email addresses, IP addresses, physical addresses, user IDs, and other user information via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. The exported data is stored in a publicly accessible file, allowing attackers to receive the sensitive information even though they are not authenticated. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65854",
+    "descripcion": "Insecure permissions in the scheduled tasks feature of MineAdmin v3.x allows attackers to execute arbitrary commands and execute a full account takeover. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-14065",
-    "descripcion": "The Simple Bike Rental plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;simpbire_carica_prenotazioni&#39; AJAX action in all versions up to, and including, 1.0.6. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve all booking records containing customers&#39; personally identifiable information (PII), including names, email addresses, and phone numbers. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-14567",
+    "descripcion": "A weakness has been identified in haxxorsid Stock-Management-System up to fbbbf213e9c93b87183a3891f77e3cc7095f22b0. This affects an unknown function of the file /api/employees. Executing manipulation can lead to missing authentication. It is possible to launch the attack remotely. The exploit has been made available to the public and could be exploited. This product takes the approach of rolling releases to provide continious delivery. Therefore, version details for affected and updated releases are not available. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:N/A:N Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
