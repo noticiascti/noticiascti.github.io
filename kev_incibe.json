@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66590",
-    "descripcion": "In AzeoTech DAQFactory release 20.7 (Build 2555), an Out-of-bounds Write vulnerability can be exploited by an attacker to cause the program to write data past the end of an allocated memory buffer. This can lead to arbitrary code execution or a system crash. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66452",
+    "descripcion": "LibreChat is a ChatGPT clone with additional features. In versions 0.8.0 and below, there is no handler for JSON parsing errors; SyntaxError from express.json() includes user input in the error message, which gets reflected in responses. User input (including HTML/JavaScript) can be exposed in error responses, creating an XSS risk if Content-Type isn&#39;t strictly enforced. This issue does not have a fix at the time of publication. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66589",
-    "descripcion": "In AzeoTech DAQFactory release 20.7 (Build 2555), an Out-of-bounds Read vulnerability can be exploited by an attacker to cause the program to read data past the end of an allocated buffer. This could allow an attacker to disclose information or cause a system crash. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66451",
+    "descripcion": "LibreChat is a ChatGPT clone with additional features. In versions 0.8.0 and below, when creating prompts, JSON requests are sent to define and modify the prompts via PATCH endpoint for prompt groups (/api/prompts/groups/:groupId). However, the request bodies are not sufficiently validated for proper input, enabling users to modify prompts in a way that was not intended as part of the front end system. The patchPromptGroup function passes req.body directly to updatePromptGroup() without filtering sensitive fields. This issue is fixed in version 0.8.1. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66588",
-    "descripcion": "In AzeoTech DAQFactory release 20.7 (Build 2555), an Access of Uninitialized Pointer vulnerability can be exploited by an attacker which can lead to arbitrary code execution. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66450",
+    "descripcion": "LibreChat is a ChatGPT clone with additional features. In versions 0.8.0 and below, when a user posts a question, the iconURL parameter of the POST request can be modified by an attacker. The malicious code is then stored in the chat which can then be shared to other users. When sharing chats with a potentially malicious “tracker”, resources loaded can lead to loss of privacy for users who view the chat link that is sent to them. This issue is fixed in version 0.8.1. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66587",
-    "descripcion": "In AzeoTech DAQFactory release 20.7 (Build 2555), the affected application is vulnerable to memory corruption while parsing specially crafted .ctl files. This could allow an attacker to execute code in the context of the current process. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66446",
+    "descripcion": "MaxKB is an open-source AI assistant for enterprise. Versions 2.3.1 and below have improper file permissions which allow attackers to overwrite the built-in dynamic linker and other critical files, potentially resulting in privilege escalation. This issue is fixed in version 2.4.0. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66586",
-    "descripcion": "In AzeoTech DAQFactory release 20.7 (Build 2555), an Access of Resource Using Incompatible Type vulnerability can be exploited to cause memory corruption while parsing specially crafted .ctl files. This could allow an attacker to execute code in the context of the current process. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66419",
+    "descripcion": "MaxKB is an open-source AI assistant for enterprise. In versions 2.3.1 and below, the tool module allows an attacker to escape the sandbox environment and escalate privileges under certain concurrent conditions. This issue is fixed in version 2.4.0. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66585",
-    "descripcion": "In AzeoTech DAQFactory release 20.7 (Build 2555), a Use After Free vulnerability can be exploited to cause memory corruption while parsing specially crafted .ctl files. This could allow an attacker to execute code in the context of the current process. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64721",
+    "descripcion": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems. In versions 1.16.6 and below, the SYSTEM-level service SbieSvc.exe exposes SbieIniServer::RC4Crypt to sandboxed processes. The handler adds a fixed header size to a caller-controlled value_len without overflow checking. A large value_len (e.g., 0xFFFFFFF0) wraps the allocation size, causing a heap overflow when attacker data is copied into the undersized buffer. This allows sandboxed processes to execute arbitrary code as SYSTEM, fully compromising the host. This issue is fixed in version 1.16.7. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.90 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66584",
-    "descripcion": "In AzeoTech DAQFactory release 20.7 (Build 2555), a Stack-Based Buffer Overflow vulnerability can be exploited to cause memory corruption while parsing specially crafted .ctl files. This could allow an attacker to execute code in the context of the current process. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-34506",
+    "descripcion": "WBCE CMS version 1.6.3 and prior contains an authenticated remote code execution vulnerability that allows administrators to upload malicious modules. Attackers can craft a specially designed ZIP module with embedded PHP reverse shell code to gain remote system access when the module is installed. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-66429",
-    "descripcion": "An issue was discovered in cPanel 110 through 132. A directory traversal vulnerability within the Team Manager API allows for overwrite of an arbitrary file. This can allow for privilege escalation to the root user. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-34504",
+    "descripcion": "KodExplorer 4.52 contains an open redirect vulnerability in the user login page that allows attackers to manipulate the &#39;link&#39; parameter. Attackers can craft malicious URLs in the link parameter to redirect users to arbitrary external websites after authentication. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-64702",
-    "descripcion": "quic-go is an implementation of the QUIC protocol in Go. Versions 0.56.0 and below are vulnerable to excessive memory allocation through quic-go&#39;s HTTP/3 client and server implementations by sending a QPACK-encoded HEADERS frame that decodes into a large header field section (many unique header names and/or large values). The implementation builds an http.Header (used on the http.Request and http.Response, respectively), while only enforcing limits on the size of the (QPACK-compressed) HEADERS frame, but not on the decoded header, leading to memory exhaustion. This issue is fixed in version 0.57.0. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-34499",
+    "descripcion": "AnyDesk 7.0.15 and 9.0.1 contains an unquoted service path vulnerability that allows local non-privileged users to potentially execute code with elevated SYSTEM privileges. Attackers can exploit the unquoted service path configuration to inject malicious executables that will be run with high-level system permissions. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-11",
-    "cve": "CVE-2025-55816",
-    "descripcion": "HotelDruid v3.0.7 and before is vulnerable to Cross Site Scripting (XSS) in the /modifica_app.php file. 11/12/2025 11/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-13668",
+    "descripcion": "A potential security vulnerability in Quartus® Prime Pro Edition Design Software may allow escalation of privilege. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 5.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
