@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-12",
-    "cve": "CVE-2025-10451",
-    "descripcion": "Unchecked output buffer may allowed arbitrary code execution in SMM and potentially result in SMM memory corruption. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-66492",
+    "descripcion": "Masa CMS is an open source Enterprise Content Management platform. Versions 7.2.8 and below, 7.3.1 through 7.3.13, 7.4.0-alpha.1 through 7.4.8 and 7.5.0 through 7.5.1 are vulnerable to XSS when an unsanitized value of the ajax URL query parameter is directly included within the section of the HTML page. An attacker can execute arbitrary scripts in the context of the user&#39;s session, potentially leading to Session Hijacking, Data Theft, Defacement and Malware Distribution. This issue is fixed in versions 7.5.2, 7.4.9, 7.3.14, and 7.2.9. To work around this issue, configure a Web Application Firewall (WAF) rule (e.g., ModSecurity) to block requests containing common XSS payload characters in the ajax query parameter. Alternatively, implement server-side sanitization using middleware to strip or escape dangerous characters from the ajax parameter before it reaches the vulnerable rendering logic. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-67779",
-    "descripcion": "It was found that the fix addressing CVE-2025-55184 in React Server Components was incomplete and does not prevent a denial of service attack in a specific case. React Server Components versions 19.0.2, 19.1.3 and 19.2.2 are affected, allowing unsafe deserialization of payloads from HTTP requests to Server Function endpoints. This can cause an infinite loop that hangs the server process and may prevent future HTTP requests from being served. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-66284",
+    "descripcion": "Stored cross-site scripting vulnerabilities exist in GroupSession Free edition prior to ver5.7.1, GroupSession byCloud prior to ver5.7.1, and GroupSession ZION prior to ver5.7.1. A logged-in user can prepare a malicious page or URL, and an arbitrary script may be executed on the web browser when another user accesses it. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-67780",
-    "descripcion": "SpaceX Starlink Dish devices with firmware 2024.12.04.mr46620 (e.g., on Mini1_prod2) allow administrative actions via unauthenticated LAN gRPC requests, aka MARMALADE 2. The cross-origin policy can be bypassed by omitting a Referer header. In some cases, an attacker&#39;s ability to read tilt, rotation, and elevation data via gRPC can make it easier to infer the geographical location of the dish. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-65120",
+    "descripcion": "Reflected cross-site scripting vulnerability exists in GroupSession Free edition prior to ver5.7.1, GroupSession byCloud prior to ver5.7.1, and GroupSession ZION prior to ver5.7.1. If a user accesses a crafted page or URL, an arbitrary script may be executed on the web browser of the user. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-66452",
-    "descripcion": "LibreChat is a ChatGPT clone with additional features. In versions 0.8.0 and below, there is no handler for JSON parsing errors; SyntaxError from express.json() includes user input in the error message, which gets reflected in responses. User input (including HTML/JavaScript) can be exposed in error responses, creating an XSS risk if Content-Type isn&#39;t strictly enforced. This issue does not have a fix at the time of publication. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-64781",
+    "descripcion": "In GroupSession Free edition prior to ver5.7.1, GroupSession byCloud prior to ver5.7.1, and GroupSession ZION prior to ver5.7.1, &#34;External page display restriction&#34; is set to &#34;Do not limit&#34; in the initial configuration. With this configuration, the user may be redirected to an arbitrary website when accessing a specially crafted URL. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-66451",
-    "descripcion": "LibreChat is a ChatGPT clone with additional features. In versions 0.8.0 and below, when creating prompts, JSON requests are sent to define and modify the prompts via PATCH endpoint for prompt groups (/api/prompts/groups/:groupId). However, the request bodies are not sufficiently validated for proper input, enabling users to modify prompts in a way that was not intended as part of the front end system. The patchPromptGroup function passes req.body directly to updatePromptGroup() without filtering sensitive fields. This issue is fixed in version 0.8.1. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-62192",
+    "descripcion": "SQL Injection vulnerability exists in GroupSession Free edition prior to ver5.3.0, GroupSession byCloud prior to ver5.3.3, and GroupSession ZION prior to ver5.3.2. If exploited, information stored in the database may be obtained or altered by an authenticated user. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-66450",
-    "descripcion": "LibreChat is a ChatGPT clone with additional features. In versions 0.8.0 and below, when a user posts a question, the iconURL parameter of the POST request can be modified by an attacker. The malicious code is then stored in the chat which can then be shared to other users. When sharing chats with a potentially malicious “tracker”, resources loaded can lead to loss of privacy for users who view the chat link that is sent to them. This issue is fixed in version 0.8.1. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-61987",
+    "descripcion": "GroupSession Free edition prior to ver5.3.0, GroupSession byCloud prior to ver5.3.3, and GroupSession ZION prior to ver5.3.2. do not validate origins in WebSockets. If a user accesses a crafted page, Chat information sent to the user may be exposed. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-66446",
-    "descripcion": "MaxKB is an open-source AI assistant for enterprise. Versions 2.3.1 and below have improper file permissions which allow attackers to overwrite the built-in dynamic linker and other critical files, potentially resulting in privilege escalation. This issue is fixed in version 2.4.0. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-61950",
+    "descripcion": "In GroupSession, a Circular notice can be created with its memo field non-editable, but the authorization check is improperly implemented. With some crafted request, a logged-in user may alter the memo field. The affected products and versions are GroupSession Free edition prior to ver5.3.0, GroupSession byCloud prior to ver5.3.3, and GroupSession ZION prior to ver5.3.2. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-66419",
-    "descripcion": "MaxKB is an open-source AI assistant for enterprise. In versions 2.3.1 and below, the tool module allows an attacker to escape the sandbox environment and escalate privileges under certain concurrent conditions. This issue is fixed in version 2.4.0. 11/12/2025 11/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-58576",
+    "descripcion": "Cross-site request forgery vulnerability exists in GroupSession Free edition prior to ver5.3.0, GroupSession byCloud prior to ver5.3.3, and GroupSession ZION prior to ver5.3.2. If a user accesses a malicious page while logged in, unintended operations may be performed. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-64721",
-    "descripcion": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems. In versions 1.16.6 and below, the SYSTEM-level service SbieSvc.exe exposes SbieIniServer::RC4Crypt to sandboxed processes. The handler adds a fixed header size to a caller-controlled value_len without overflow checking. A large value_len (e.g., 0xFFFFFFF0) wraps the allocation size, causing a heap overflow when attacker data is copied into the undersized buffer. This allows sandboxed processes to execute arbitrary code as SYSTEM, fully compromising the host. This issue is fixed in version 1.16.7. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.90 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-57883",
+    "descripcion": "Reflected cross-site scripting vulnerability exists in GroupSession Free edition prior to ver5.3.0, GroupSession byCloud prior to ver5.3.3, and GroupSession ZION prior to ver5.3.2. If a user accesses a crafted page or URL, an arbitrary script may be executed on the web browser of the user. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-11",
-    "cve": "CVE-2025-34506",
-    "descripcion": "WBCE CMS version 1.6.3 and prior contains an authenticated remote code execution vulnerability that allows administrators to upload malicious modules. Attackers can craft a specially designed ZIP module with embedded PHP reverse shell code to gain remote system access when the module is installed. 11/12/2025 11/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-54407",
+    "descripcion": "Stored cross-site scripting vulnerability exists in GroupSession Free edition prior to ver5.3.0, GroupSession byCloud prior to ver5.3.3, and GroupSession ZION prior to ver5.3.2. If a user accesses a crafted page or URL, an arbitrary script may be executed on the web browser of the user. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
