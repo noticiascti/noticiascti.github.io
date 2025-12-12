@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2025-12-12",
+    "cve": "CVE-2025-58770",
+    "descripcion": "APTIOV contains a vulnerability in BIOS where a user may cause “Improper Handling of Insufficient Permissions or Privileges” by local access. Successful exploitation of this vulnerability can lead to escalation of authorization and potentially impact Integrity and Availability. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-36755",
+    "descripcion": "The CleverDisplay BlueOne hardware player is designed with its USB interfaces physically enclosed and inaccessible under normal operating conditions. Researchers demonstrated that, after cicumventing the device’s protective enclosure, it was possible to connect a USB keyboard and press ESC during boot to access the BIOS setup interface. BIOS settings could be viewed but not modified. This behavior slightly increases the attack surface by exposing internal system information (CWE-1244) once the enclosure is removed, but does not allow integrity or availability compromise under standard or tested configurations. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:X/V:D/RE:L/U:Green Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-36746",
+    "descripcion": "SolarEdge monitoring platform contains a Cross‑Site Scripting (XSS) flaw that allows an authenticated user to inject payloads into report names, which may execute in a victim’s browser during a deletion attempt. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:X/V:D/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-36745",
+    "descripcion": "SolarEdge SE3680H ships with an outdated Linux kernel containing unpatched vulnerabilities in core subsystems. An attacker with network or local access can exploit these flaws to achieve remote code execution, privilege escalation, or disclosure of sensitive information. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:X/R:X/V:D/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-36744",
+    "descripcion": "SolarEdge SE3680H has unauthenticated disclosure of sensitive information during the bootloader loop. While the device repeatedly initializes and waits for boot instructions, the bootloader emits diagnostic output this behavior can leak operating system information. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-12",
+    "cve": "CVE-2025-36743",
+    "descripcion": "SolarEdge SE3680H has an exposed debug/test interface accessible to unauthenticated actors, allowing disclosure of system internals and execution of debug commands. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-12",
     "cve": "CVE-2025-13506",
     "descripcion": "Execution with Unnecessary Privileges vulnerability in Nebim Neyir Computer Industry and Services Inc. Nebim V3 ERP allows Expanding Control over the Operating System from the Database.This issue affects Nebim V3 ERP: from 2.0.59 before 3.0.1. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -18,35 +48,5 @@
     "fecha": "2025-12-12",
     "cve": "CVE-2025-14065",
     "descripcion": "The Simple Bike Rental plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;simpbire_carica_prenotazioni&#39; AJAX action in all versions up to, and including, 1.0.6. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve all booking records containing customers&#39; personally identifiable information (PII), including names, email addresses, and phone numbers. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-14030",
-    "descripcion": "The AI Feeds plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;aife_post_meta&#39; shortcode in all versions up to, and including, 1.0.22 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-12965",
-    "descripcion": "The Magical Posts Display plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;mpac_title_tag&#39; parameter in the Magical Posts Accordion widget in all versions up to, and including, 1.2.54 due to insufficient input sanitization and output escaping on user-supplied HTML tag names. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-12408",
-    "descripcion": "The Events Manager – Calendar, Bookings, Tickets, and more! plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 7.2.2.2 via the &#39;get_location&#39; action due to insufficient restrictions on which locations can be included. This makes it possible for unauthenticated attackers to extract data from password protected, private, or draft event locations that they should not have access to. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-12407",
-    "descripcion": "The Events Manager – Calendar, Bookings, Tickets, and more! plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 7.2.2.2. This is due to missing or incorrect nonce validation on the &#39;location_delete&#39; action. This makes it possible for unauthenticated attackers to delete locations via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-12841",
-    "descripcion": "The Bookit WordPress plugin before 2.5.1 has a publicly accessible REST endpoint that allows unauthenticated update of the plugins Stripe payment options. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-12835",
-    "descripcion": "The WooMulti WordPress plugin through 17 does not validate a file parameter when deleting files, which could allow any authenticated users, such as subscriber to delete arbitrary files on the server. 12/12/2025 12/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
