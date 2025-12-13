@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-13",
-    "cve": "CVE-2025-13970",
-    "descripcion": "OpenPLC_V3 is vulnerable to a cross-site request forgery (CSRF) attack due to the absence of proper CSRF validation. This issue allows an unauthenticated attacker to trick a logged-in administrator into visiting a maliciously crafted link, potentially enabling unauthorized modification of PLC settings or the upload of malicious programs which could lead to significant disruption or damage to connected systems. 13/12/2025 13/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:A/VC:N/VI:H/VA:H/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:H Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-14621",
+    "descripcion": "A vulnerability was identified in code-projects Student File Management System 1.0. This affects an unknown part of the file /admin/update_user.php. The manipulation of the argument user_id leads to sql injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. 13/12/2025 13/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-67749",
-    "descripcion": "PCSX2 is a free and open-source PlayStation 2 (PS2) emulator. In versions 2.5.377 and below, an unchecked offset and size used in a memcpy operation inside PCSX2&#39;s CDVD SCMD 0x91 and SCMD 0x8F handlers allow a specially crafted disc image or ELF to cause an out-of-bounds read from emulator memory. Because the offset and size is controlled through MG header fields, a specially crafted ELF can read data beyond the bounds of mg_buffer and have it reflected back into emulated memory. This issue is fixed in version 2.5.378. 13/12/2025 13/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-9873",
+    "descripcion": "The a3 Lazy Load plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 2.7.5 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-67721",
-    "descripcion": "Aircompressor is a library with ports of the Snappy, LZO, LZ4, and Zstandard compression algorithms to Java. In versions 3.3 and below, incorrect handling of malformed data in Java-based decompressor implementations for Snappy and LZ4 allow remote attackers to read previous buffer contents via crafted compressed input. With certain crafted compressed inputs, elements from the output buffer can end up in the uncompressed output, potentially leaking sensitive data. This is relevant for applications that reuse the same output buffer to uncompress multiple inputs. This can be the case of a web server that allocates a fix-sized buffer for performance purposes. There is similar vulnerability in GHSA-cmp6-m4wj-q63q. This issue is fixed in version 3.4. 13/12/2025 13/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-9856",
+    "descripcion": "The Popup Builder – Create highly converting, mobile friendly marketing popups. plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;sg_popup&#39; shortcode in all versions up to, and including, 4.4.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-14585",
-    "descripcion": "A vulnerability was found in itsourcecode COVID Tracking System 1.0. Affected by this vulnerability is an unknown functionality of the file /admin/?page=zone. The manipulation of the argument ID results in sql injection. The attack may be launched remotely. The exploit has been made public and could be used. 13/12/2025 13/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-9488",
+    "descripcion": "The Redux Framework plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘data’ parameter in all versions up to, and including, 4.5.8 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-14584",
-    "descripcion": "A vulnerability has been found in itsourcecode COVID Tracking System 1.0. Affected is an unknown function of the file /admin/login.php of the component Admin Login. The manipulation of the argument Username leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. 13/12/2025 13/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-9218",
+    "descripcion": "The rtMedia for WordPress, BuddyPress and bbPress plugin for WordPress is vulnerable to to Information Disclosure due to missing authorization in the handle_rest_pre_dispatch() function when the Godam plugin is active, in versions 4.7.0 to 4.7.3. This makes it possible for unauthenticated attackers to retrieve media items associated with draft or private posts. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-14066",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 13/12/2025 13/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-9207",
+    "descripcion": "The TI WooCommerce Wishlist plugin for WordPress is vulnerable to HTML Injection in all versions up to, and including, 2.10.0. This is due to the plugin accepting hidden fields and not limiting the values or data that can input and is later output. This makes it possible for unauthenticated attackers to inject arbitrary HTML into wishlist items. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-14583",
-    "descripcion": "A flaw has been found in campcodes Online Student Enrollment System 1.0. This impacts an unknown function of the file /admin/register.php. Executing manipulation of the argument photo can lead to unrestricted upload. The attack can be launched remotely. The exploit has been published and may be used. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-9116",
+    "descripcion": "The WPS Visitor Counter Plugin WordPress plugin through 1.4.8 does not escape the $_SERVER[&#39;REQUEST_URI&#39;] parameter before outputting it back in an attribute, which could lead to Reflected Cross-Site Scripting in old web browsers. 13/12/2025 13/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-14582",
-    "descripcion": "A vulnerability was detected in campcodes Online Student Enrollment System 1.0. This affects an unknown function of the file /admin/index.php?page=user-profile. Performing manipulation of the argument userphoto results in unrestricted upload. The attack can be initiated remotely. The exploit is now public and may be used. 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-8780",
+    "descripcion": "The Livemesh SiteOrigin Widgets plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s Hero Header and Pricing Table widgets in all versions up to, and including, 3.9.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-67750",
-    "descripcion": "Lightning Flow Scanner provides a A CLI plugin, VS Code Extension and GitHub Action for analysis and optimization of Salesforce Flows. Versions 6.10.5 and below allow a maliciously crafted flow metadata file to cause arbitrary JavaScript execution during scanning. The APIVersion rule uses new Function() to evaluate expression strings, enabling an attacker to supply a malicious expression within rule configuration or crafted flow metadata. This could compromise developer machines, CI runners, or editor environments. This issue is fixed in version 6.10.6. 12/12/2025 12/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-8779",
+    "descripcion": "The All-in-One Addons for Elementor – WidgetKit plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s Team and Countdown widgets in all versions up to, and including, 2.5.6 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2025-12-12",
-    "cve": "CVE-2025-67634",
-    "descripcion": "The CISA Software Acquisition Guide Supplier Response Web Tool before 2025-12-11 was vulnerable to cross-site scripting via text fields. If an attacker could convince a user to import a specially-crafted JSON file, the Tool would load JavaScript from the file into the page. The JavaScript would execute in the context of the user&#39;s browser when the user submits the page (clicks &#39;Next&#39;). 12/12/2025 12/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2025-12-13",
+    "cve": "CVE-2025-8687",
+    "descripcion": "The Enter Addons plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s Countdown and Image Comparison widgets in all versions up to, and including, 2.2.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/12/2025 13/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
