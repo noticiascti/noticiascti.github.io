@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-34412",
-    "descripcion": "The Convercent Whistleblowing Platform operated by EQS Group contains a protection mechanism failure in its browser and session handling. By default, affected deployments omit HTTP security headers such as Content-Security-Policy, Referrer-Policy, Permissions-Policy, Cross-Origin-Embedder-Policy, Cross-Origin-Opener-Policy, and Cross-Origin-Resource-Policy, and implement incomplete clickjacking protections. The application also issues session cookies with insecure or inconsistent attributes by default, including duplicate ASP.NET_SessionId values, an affinity cookie missing the Secure attribute, and mixed or absent SameSite settings. These deficiencies weaken browser-side isolation and session integrity, increasing exposure to client-side attacks, session fixation, and cross-site session leakage. 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66435",
+    "descripcion": "An SSTI (Server-Side Template Injection) vulnerability exists in the get_contract_template method of Frappe ERPNext through 15.89.0. The function renders attacker-controlled Jinja2 templates (contract_terms) using frappe.render_template() with a user-supplied context (doc). Although Frappe uses a custom SandboxedEnvironment, several dangerous globals such as frappe.db.sql are still available in the execution context via get_safe_globals(). An authenticated attacker with access to create or modify a Contract Template can inject arbitrary Jinja expressions into the contract_terms field, resulting in server-side code execution within a restricted but still unsafe context. This vulnerability can be used to leak database information. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-34411",
-    "descripcion": "The Convercent Whistleblowing Platform operated by EQS Group exposes an unauthenticated API endpoint at /GetLegalEntity that returns internal customer legal-entity names based on a supplied searchText fragment. A remote unauthenticated attacker can query the endpoint using common legal-suffix terms to enumerate Convercent tenants, identifying organizations using the platform. This disclosure can facilitate targeted phishing, extortion, or other attacks against whistleblowing programs and reveals sensitive business relationships and compliance infrastructure. 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66434",
+    "descripcion": "An SSTI (Server-Side Template Injection) vulnerability exists in the get_dunning_letter_text method of Frappe ERPNext through 15.89.0. The function renders attacker-controlled Jinja2 templates (body_text) using frappe.render_template() with a user-supplied context (doc). Although Frappe uses a custom SandboxedEnvironment, several dangerous globals such as frappe.db.sql are still available in the execution context via get_safe_globals(). An authenticated attacker with access to configure Dunning Type and its child table Dunning Letter Text can inject arbitrary Jinja expressions, resulting in server-side code execution within a restricted but still unsafe context. This can leak database information. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-34181",
-    "descripcion": "NetSupport Manager 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65742",
+    "descripcion": "An unauthenticated Broken Function Level Authorization (BFLA) vulnerability in Newgen OmniDocs v11.0 allows attackers to obtain sensitive information and execute a full account takeover via a crafted API request. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-34180",
-    "descripcion": "NetSupport Manager 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-55901",
+    "descripcion": "TOTOLINK A3300R V17.0.0cu.596_B20250515 is vulnerable to command injection in the function NTPSyncWithHost via the host_time parameter. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-34179",
-    "descripcion": "NetSupport Manager 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-55893",
+    "descripcion": "TOTOLINK N200RE V9.3.5u.6437_B20230519 is vulnerable to command Injection in setOpModeCfg via hostName. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-14383",
-    "descripcion": "The Booking Calendar plugin for WordPress is vulnerable to time-based blind SQL Injection via the &#39;dates_to_check&#39; parameter in all versions up to, and including, 10.14.8 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-11393",
+    "descripcion": "A flaw was found in runtimes-inventory-rhel8-operator. An internal proxy component is incorrectly configured. Because of this flaw, the proxy attaches the cluster&#39;s main administrative credentials to any command it receives, instead of only the specific reports it is supposed to handle. This allows a standard user within the cluster to send unauthorized commands to the management platform, effectively acting with the full permissions of the cluster administrator. This could lead to unauthorized changes to the cluster&#39;s configuration or status on the Red Hat platform. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-14156",
-    "descripcion": "The Fox LMS – WordPress LMS Plugin plugin for WordPress is vulnerable to privilege escalation in all versions up to, and including, 1.0.5.1. This is due to the plugin not properly validating the &#39;role&#39; parameter when creating new users via the `/fox-lms/v1/payments/create-order` REST API endpoint. This makes it possible for unauthenticated attackers to create new user accounts with arbitrary roles, including administrator, leading to complete site compromise. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-66963",
+    "descripcion": "An issue in Hitron HI3120 v.7.2.4.5.2b1 allows a local attacker to obtain sensitive information via the Logout option in the index.html 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-14003",
-    "descripcion": "The Image Gallery – Photo Grid & Video Gallery plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `add_images_to_gallery_callback()` function in all versions up to, and including, 2.13.3. This makes it possible for authenticated attackers, with Author-level access and above, to add images to arbitrary Modula galleries owned by other users. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66844",
+    "descripcion": "In grav 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-13950",
-    "descripcion": "The OneSignal – Web Push Notifications plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the settings handling functionality in all versions up to, and including, 3.6.1. This is due to the plugin processing POST requests without verifying user capabilities or nonces. This makes it possible for unauthenticated attackers to overwrite the OneSignal App ID, REST API key, and notification behavior via direct POST requests. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66843",
+    "descripcion": "grav before v1.7.49.5 has a Stored Cross-Site Scripting (Stored XSS) vulnerability in the page editing functionality. An authenticated low-privileged user with permission to edit content can inject malicious JavaScript payloads into editable fields. The payload is stored on the server and later executed when any other user views or edits the affected page. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-15",
-    "cve": "CVE-2025-13728",
-    "descripcion": "The FluentAuth – The Ultimate Authorization & Security Plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s `fluent_auth_reset_password` shortcode in all versions up to, and including, 2.0.3 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-60786",
+    "descripcion": "A Zip Slip vulnerability in the import a Project component of iceScrum v7.54 Pro On-prem allows attackers to execute arbitrary code via uploading a crafted Zip file. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
