@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-12-15",
+    "cve": "CVE-2025-37732",
+    "descripcion": "Improper neutralization of input during web page generation (&#39;Cross-site Scripting&#39;) (CWE-79) allows an authenticated user to render HTML tags within a user’s browser via the integration package upload functionality. This issue is related to ESA-2025-17 (CVE-2025-25018) bypassing that fix to achieve HTML injection. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-37731",
+    "descripcion": "Improper Authentication in Elasticsearch PKI realm can lead to user impersonation via specially crafted client certificates. A malicious actor would need to have such a crafted client certificate signed by a legitimate, trusted Certificate Authority. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-14714",
+    "descripcion": "An Authentication Bypass vulnerability existed where the application bundled an interpreter (Python) that inherits the Transparency, Consent, and Control (TCC) permissions granted by the user to the main application bundle By executing the bundled interpreter directly the attacker&#39;s scripts run with the application&#39;s TCC privileges In fixed versions parent-constraints are used to allow only the main application to launch interpreter with those permissions This issue affects LibreOffice on macOS: from 25.2 before 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.90 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-11670",
+    "descripcion": "Zohocorp ManageEngine ADManager Plus versions before 8025 are vulnerable to NTLM Hash Exposure. This vulnerability is exploitable only by technicians who have the “Impersonate as Admin” option enabled. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-15",
     "cve": "CVE-2025-14711",
     "descripcion": "A flaw has been found in FantasticLBP Hotels Server up to 67b44df162fab26df209bd5d5d542875fcbec1d0. This vulnerability affects unknown code of the file /controller/api/hotelList.php. This manipulation of the argument pickedHotelName/type causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used. This product adopts a rolling release strategy to maintain continuous delivery The vendor was contacted early about this disclosure but did not respond in any way. 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-12-15",
     "cve": "CVE-2025-14022",
     "descripcion": "LINE client for iOS prior to 15.4 allows man-in-the-middle attacks due to improper SSL/TLS certificate validation in an integrated financial SDK. The SDK interfered with the application&#39;s network processing, causing server certificate verification to be disabled for a significant portion of network traffic, which could allow a network-adjacent attacker to intercept or modify encrypted communications. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-14021",
-    "descripcion": "The in-app browser in LINE client for iOS versions prior to 14.14 is vulnerable to address bar spoofing, which could allow attackers to execute malicious JavaScript within iframes while displaying trusted URLs, enabling phishing attacks through overlaid malicious content. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-14020",
-    "descripcion": "LINE client for Android versions prior to 14.20 contains a UI spoofing vulnerability in the in-app browser where the full-screen security Toast notification is not properly re-displayed when users return from another application, potentially allowing attackers to conduct phishing attacks by impersonating legitimate interfaces. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-14019",
-    "descripcion": "LINE client for Android versions from 13.8 to 15.5 is vulnerable to UI spoofing in the in-app browser where a specific layout could obscure the full-screen warning prompt, potentially allowing attackers to conduct phishing attacks. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-14712",
-    "descripcion": "Student Learning Assessment and Support System developed by JHENG GAO has a Exposure of Sensitive Information vulnerability, allowing unauthenticated remote attackers to view a specific page and obtain test accounts and password. 15/12/2025 15/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
