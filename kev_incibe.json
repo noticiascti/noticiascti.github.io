@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-13439",
-    "descripcion": "The Fancy Product Designer plugin for WordPress is vulnerable to Information Disclosure in all versions up to, and including, 6.4.8. This is due to insufficient validation of user-supplied input in the &#39;url&#39; parameter of the fpd_custom_uplod_file AJAX action, which flows directly into the getimagesize() function without sanitization. While direct exploitation via PHP filter chains is blocked on PHP 8+ due to a separate code bug in the plugin, the vulnerability can be exploited via a TOCTOU race condition (CVE-2025-13231) also present in the same plugin, or may be directly exploitable on PHP 7.x installations. This makes it possible for unauthenticated attackers to read arbitrary sensitive files from the server, including wp-config.php. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-14002",
+    "descripcion": "The WPCOM Member plugin for WordPress is vulnerable to authentication bypass via brute force in all versions up to, and including, 1.7.16. This is due to weak OTP (One-Time Password) generation using only 6 numeric digits combined with a 10-minute validity window and no rate limiting on verification attempts. This makes it possible for unauthenticated attackers to brute-force the verification code and authenticate as any user, including administrators, if they know the target&#39;s phone number, and the target does not notice or ignores the SMS notification with the OTP. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-11991",
-    "descripcion": "The JetFormBuilder — Dynamic Blocks Form Builder plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the run_callback function in all versions up to, and including, 3.5.3. This makes it possible for unauthenticated attackers to generate forms using AI, consuming site&#39;s AI usage limits. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68088",
+    "descripcion": "Missing Authorization vulnerability in merkulove Huger for Elementor huger-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Huger for Elementor: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-66635",
-    "descripcion": "Stack-based buffer overflow vulnerability exists in SEIKO EPSON Web Config. Specially crafted data input by a logged-in user may execute arbitrary code. As for the details of the affected products and versions, see the information provided by the vendor under [References]. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-68087",
+    "descripcion": "Missing Authorization vulnerability in merkulove Modalier for Elementor modalier-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Modalier for Elementor: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-62330",
-    "descripcion": "HCL DevOps Deploy is susceptible to a cleartext transmission of sensitive information because the HTTP port remains accessible and does not redirect to HTTPS as intended. As a result, an attacker with network access could intercept or modify user credentials and session-related data via passive monitoring or man-in-the-middle attacks. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68086",
+    "descripcion": "Missing Authorization vulnerability in merkulove Reformer for Elementor reformer-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Reformer for Elementor: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-14252",
-    "descripcion": "An Improper Access Control vulnerability in Advantech SUSI driver (susi.sys) allows attackers to read/write arbitrary memory, I/O ports, and MSRs, resulting in privilege escalation, arbitrary code execution, and information disclosure. This issue affects Advantech SUSI: 5.0.24335 and prior. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-68085",
+    "descripcion": "Missing Authorization vulnerability in merkulove Buttoner for Elementor buttoner-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Buttoner for Elementor: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-13794",
-    "descripcion": "The Auto Featured Image (Auto Post Thumbnail) plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the bulk_action_generate_handler function in all versions up to, and including, 4.2.1. This makes it possible for authenticated attackers, with Contributor-level access and above, to delete or generate featured images on posts they do not own. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68084",
+    "descripcion": "Missing Authorization vulnerability in Nitesh Ultimate Auction ultimate-auction allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Ultimate Auction : from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-12809",
-    "descripcion": "The Dokan Pro plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the `/dokan/v1/wholesale/register` REST API endpoint in all versions up to, and including, 4.1.3. This makes it possible for unauthenticated attackers to enumerate users and retrieve their email addresses via the REST API by providing a user ID, along with other information such as usernames, display names, user roles, and registration dates. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68083",
+    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in Meks Meks Quick Plugin Disabler meks-quick-plugin-disabler allows Cross Site Request Forgery.This issue affects Meks Quick Plugin Disabler: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-66357",
-    "descripcion": "CHOCO TEI WATCHER mini (IB-MCT001) contains an issue with improper check for unusual or exceptional conditions. When the Video Download feature is in a specific communication state, the product&#39;s resources may be consumed abnormally. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68082",
+    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in SEMrush CY LTD Semrush Content Toolkit semrush-contentshake allows Cross Site Request Forgery.This issue affects Semrush Content Toolkit: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-61976",
-    "descripcion": "CHOCO TEI WATCHER mini (IB-MCT001) contains an issue with improper check for unusual or exceptional conditions. If a remote attacker sends a specially crafted request to the Video Download interface, the system may become unresponsive. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-68080",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Saad Iqbal User Avatar - Reloaded user-avatar-reloaded allows Stored XSS.This issue affects User Avatar - Reloaded: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-16",
-    "cve": "CVE-2025-59479",
-    "descripcion": "CHOCO TEI WATCHER mini (IB-MCT001) contains an issue with improper restriction of rendered UI layers or frames. If a user clicks on content on a malicious web page while logged into the product, unintended operations may be performed on the product. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68079",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in ThemeNectar Salient Shortcodes salient-shortcodes allows Stored XSS.This issue affects Salient Shortcodes: from n/a through 16/12/2025 16/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
