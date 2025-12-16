@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2025-12-15",
+    "cve": "CVE-2025-66440",
+    "descripcion": "An issue was discovered in Frappe ERPNext through 15.89.0. Function get_outstanding_reference_documents() at erpnext/accounts/doctype/payment_entry/payment_entry.py is vulnerable to SQL Injection. It allows an attacker to extract arbitrary data from the database by injecting SQL payloads via the to_posting_date parameter, which is directly interpolated into the query without proper sanitization or parameter binding. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-66439",
+    "descripcion": "An issue was discovered in Frappe ERPNext through 15.89.0. Function get_outstanding_reference_documents() at erpnext.accounts.doctype.payment_entry.payment_entry.py is vulnerable to SQL Injection. It allows an attacker to extract arbitrary data from the database by injecting SQL payloads via the from_posting_date parameter, which is directly interpolated into the query without proper sanitization or parameter binding. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-66438",
+    "descripcion": "A Server-Side Template Injection (SSTI) vulnerability exists in the Frappe ERPNext through 15.89.0 Print Format rendering mechanism. Specifically, the API frappe.www.printview.get_html_and_style() triggers the rendering of the html field inside a Print Format document using frappe.render_template(template, doc) via the get_rendered_template() call chain. Although ERPNext wraps Jinja2 in a SandboxedEnvironment, it exposes sensitive functions such as frappe.db.sql through get_safe_globals(). An authenticated attacker with permission to create or modify a Print Format can inject arbitrary Jinja expressions into the html field. Once the malicious Print Format is saved, the attacker can call get_html_and_style() with a target document (e.g., Supplier or Sales Invoice) to trigger the render process. This leads to information disclosure from the database, such as database version, schema details, or sensitive values, depending on the injected payload. Exploitation flow: Create a Print Format with SSTI payload in the html field; call the get_html_and_style() API; triggers frappe.render_template(template, doc) inside get_rendered_template(); leaks database information via frappe.db.sql or other exposed globals. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-66437",
+    "descripcion": "An SSTI (Server-Side Template Injection) vulnerability exists in the get_address_display method of Frappe ERPNext through 15.89.0. This function renders address templates using frappe.render_template() with a context derived from the address_dict parameter, which can be either a dictionary or a string referencing an Address document. Although ERPNext uses a custom Jinja2 SandboxedEnvironment, dangerous functions like frappe.db.sql remain accessible via get_safe_globals(). An authenticated attacker with permission to create or modify an Address Template can inject arbitrary Jinja expressions into the template field. By creating an Address document with a matching country, and then calling the get_address_display API with address_dict=&#34;address_name&#34;, the system will render the malicious template using attacker-controlled data. This leads to server-side code execution or database information disclosure. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-66436",
+    "descripcion": "An SSTI (Server-Side Template Injection) vulnerability exists in the get_terms_and_conditions method of Frappe ERPNext through 15.89.0. The function renders attacker-controlled Jinja2 templates (terms) using frappe.render_template() with a user-supplied context (doc). Although Frappe uses a custom SandboxedEnvironment, several dangerous globals such as frappe.db.sql are still available in the execution context via get_safe_globals(). An authenticated attacker with access to create or modify a Terms and Conditions document can inject arbitrary Jinja expressions into the terms field, resulting in server-side code execution within a restricted but still unsafe context. This vulnerability can be used to leak database information. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-15",
+    "cve": "CVE-2025-14038",
+    "descripcion": "EDB Hybrid Manager contains a flaw that allows an unauthenticated attacker to directly access certain gRPC endpoints. This could allow an attacker to read potentially sensitive data or possibly cause a denial-of-service by writing malformed data to certain gRPC endpoints. This flaw has been remediated in EDB Hybrid Manager 1.3.3, and customers should consider upgrading to 1.3.3 as soon as possible. The flaw is due to a misconfiguration in the Istio Gateway, which manages authentication and authorization for the affected endpoints. The security policy relies on an explicit definition of required permissions in the Istio Gateway configuration, and the affected endpoints were not defined in the configuration. This allowed requests to bypass both authentication and authorization within a Hybrid Manager service. All versions of Hybrid Manager - LTS should be upgraded to 1.3.3, and all versions of Hybrid Manager - Innovation should be upgraded to 2025.12. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-15",
     "cve": "CVE-2025-66435",
     "descripcion": "An SSTI (Server-Side Template Injection) vulnerability exists in the get_contract_template method of Frappe ERPNext through 15.89.0. The function renders attacker-controlled Jinja2 templates (contract_terms) using frappe.render_template() with a user-supplied context (doc). Although Frappe uses a custom SandboxedEnvironment, several dangerous globals such as frappe.db.sql are still available in the execution context via get_safe_globals(). An authenticated attacker with access to create or modify a Contract Template can inject arbitrary Jinja expressions into the contract_terms field, resulting in server-side code execution within a restricted but still unsafe context. This vulnerability can be used to leak database information. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -17,36 +47,6 @@
   {
     "fecha": "2025-12-15",
     "cve": "CVE-2025-55901",
-    "descripcion": "TOTOLINK A3300R V17.0.0cu.596_B20250515 is vulnerable to command injection in the function NTPSyncWithHost via the host_time parameter. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-55893",
-    "descripcion": "TOTOLINK N200RE V9.3.5u.6437_B20230519 is vulnerable to command Injection in setOpModeCfg via hostName. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-11393",
-    "descripcion": "A flaw was found in runtimes-inventory-rhel8-operator. An internal proxy component is incorrectly configured. Because of this flaw, the proxy attaches the cluster&#39;s main administrative credentials to any command it receives, instead of only the specific reports it is supposed to handle. This allows a standard user within the cluster to send unauthorized commands to the management platform, effectively acting with the full permissions of the cluster administrator. This could lead to unauthorized changes to the cluster&#39;s configuration or status on the Red Hat platform. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-66963",
-    "descripcion": "An issue in Hitron HI3120 v.7.2.4.5.2b1 allows a local attacker to obtain sensitive information via the Logout option in the index.html 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-66844",
-    "descripcion": "In grav 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-66843",
-    "descripcion": "grav before v1.7.49.5 has a Stored Cross-Site Scripting (Stored XSS) vulnerability in the page editing functionality. An authenticated low-privileged user with permission to edit content can inject malicious JavaScript payloads into editable fields. The payload is stored on the server and later executed when any other user views or edits the affected page. 15/12/2025 15/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-15",
-    "cve": "CVE-2025-60786",
-    "descripcion": "A Zip Slip vulnerability in the import a Project component of iceScrum v7.54 Pro On-prem allows attackers to execute arbitrary code via uploading a crafted Zip file. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "descripcion": "TOTOLINK A3300R V17.0.0cu.596_B20250515 is vulnerable to command injection in the function NTPSyncWithHost via the host_time parameter. 15/12/2025 15/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
