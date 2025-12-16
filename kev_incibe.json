@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2025-12-16",
+    "cve": "CVE-2025-13439",
+    "descripcion": "The Fancy Product Designer plugin for WordPress is vulnerable to Information Disclosure in all versions up to, and including, 6.4.8. This is due to insufficient validation of user-supplied input in the &#39;url&#39; parameter of the fpd_custom_uplod_file AJAX action, which flows directly into the getimagesize() function without sanitization. While direct exploitation via PHP filter chains is blocked on PHP 8+ due to a separate code bug in the plugin, the vulnerability can be exploited via a TOCTOU race condition (CVE-2025-13231) also present in the same plugin, or may be directly exploitable on PHP 7.x installations. This makes it possible for unauthenticated attackers to read arbitrary sensitive files from the server, including wp-config.php. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-16",
+    "cve": "CVE-2025-11991",
+    "descripcion": "The JetFormBuilder — Dynamic Blocks Form Builder plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the run_callback function in all versions up to, and including, 3.5.3. This makes it possible for unauthenticated attackers to generate forms using AI, consuming site&#39;s AI usage limits. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-16",
+    "cve": "CVE-2025-66635",
+    "descripcion": "Stack-based buffer overflow vulnerability exists in SEIKO EPSON Web Config. Specially crafted data input by a logged-in user may execute arbitrary code. As for the details of the affected products and versions, see the information provided by the vendor under [References]. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-16",
+    "cve": "CVE-2025-62330",
+    "descripcion": "HCL DevOps Deploy is susceptible to a cleartext transmission of sensitive information because the HTTP port remains accessible and does not redirect to HTTPS as intended. As a result, an attacker with network access could intercept or modify user credentials and session-related data via passive monitoring or man-in-the-middle attacks. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-16",
+    "cve": "CVE-2025-14252",
+    "descripcion": "An Improper Access Control vulnerability in Advantech SUSI driver (susi.sys) allows attackers to read/write arbitrary memory, I/O ports, and MSRs, resulting in privilege escalation, arbitrary code execution, and information disclosure. This issue affects Advantech SUSI: 5.0.24335 and prior. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-16",
+    "cve": "CVE-2025-13794",
+    "descripcion": "The Auto Featured Image (Auto Post Thumbnail) plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the bulk_action_generate_handler function in all versions up to, and including, 4.2.1. This makes it possible for authenticated attackers, with Contributor-level access and above, to delete or generate featured images on posts they do not own. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-16",
+    "cve": "CVE-2025-12809",
+    "descripcion": "The Dokan Pro plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the `/dokan/v1/wholesale/register` REST API endpoint in all versions up to, and including, 4.1.3. This makes it possible for unauthenticated attackers to enumerate users and retrieve their email addresses via the REST API by providing a user ID, along with other information such as usernames, display names, user roles, and registration dates. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-16",
     "cve": "CVE-2025-66357",
     "descripcion": "CHOCO TEI WATCHER mini (IB-MCT001) contains an issue with improper check for unusual or exceptional conditions. When the Video Download feature is in a specific communication state, the product&#39;s resources may be consumed abnormally. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -13,40 +48,5 @@
     "fecha": "2025-12-16",
     "cve": "CVE-2025-59479",
     "descripcion": "CHOCO TEI WATCHER mini (IB-MCT001) contains an issue with improper restriction of rendered UI layers or frames. If a user clicks on content on a malicious web page while logged into the product, unintended operations may be performed on the product. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-16",
-    "cve": "CVE-2025-14777",
-    "descripcion": "A flaw was found in Keycloak. An IDOR (Broken Access Control) vulnerability exists in the admin API endpoints for authorization resource management, specifically in ResourceSetService and PermissionTicketService. The system checks authorization against the resourceServer (client) ID provided in the API request, but the backend database lookup and modification operations (findById, delete) only use the resourceId. This mismatch allows an authenticated attacker with fine-grained admin permissions for one client (e.g., Client A) to delete or update resources belonging to another client (Client B) within the same realm by supplying a valid resource ID. 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-16",
-    "cve": "CVE-2025-13956",
-    "descripcion": "The LearnPress – WordPress LMS Plugin plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the statistic function in all versions up to, and including, 4.3.1. This makes it possible for unauthenticated attackers to view the plugin&#39;s orders statistics, including total revenue summaries and order status counts 16/12/2025 16/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-16",
-    "cve": "CVE-2025-62849",
-    "descripcion": "An SQL injection vulnerability has been reported to affect several QNAP operating system versions. The remote attackers can then exploit the vulnerability to execute unauthorized code or commands. We have already fixed the vulnerability in the following versions: QTS 5.2.7.3297 build 20251024 and later QuTS hero h5.2.7.3297 build 20251024 and later QuTS hero h5.3.1.3292 build 20251024 and later 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.20 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-16",
-    "cve": "CVE-2025-62848",
-    "descripcion": "A NULL pointer dereference vulnerability has been reported to affect several QNAP operating system versions. The remote attackers can then exploit the vulnerability to launch a denial-of-service (DoS) attack. We have already fixed the vulnerability in the following versions: QTS 5.2.7.3297 build 20251024 and later QuTS hero h5.2.7.3297 build 20251024 and later QuTS hero h5.3.1.3292 build 20251024 and later 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-16",
-    "cve": "CVE-2025-62847",
-    "descripcion": "An improper neutralization of argument delimiters in a command vulnerability has been reported to affect several QNAP operating system versions. The remote attackers can then exploit the vulnerability to alter execution logic. We have already fixed the vulnerability in the following versions: QTS 5.2.7.3297 build 20251024 and later QuTS hero h5.2.7.3297 build 20251024 and later QuTS hero h5.3.1.3292 build 20251024 and later 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-16",
-    "cve": "CVE-2025-59385",
-    "descripcion": "An authentication bypass by spoofing vulnerability has been reported to affect several QNAP operating system versions. The remote attackers can then exploit the vulnerability to access resources which are not otherwise accessible without proper authentication. We have already fixed the vulnerability in the following versions: QTS 5.2.7.3297 build 20251024 and later QuTS hero h5.2.7.3297 build 20251024 and later QuTS hero h5.3.1.3292 build 20251024 and later 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-16",
-    "cve": "CVE-2025-14749",
-    "descripcion": "A vulnerability was identified in Ningyuanda TC155 57.0.2.0. This impacts an unknown function of the file /onvif/device_service of the component ONVIF PTZ Control Interface. The manipulation leads to improper access controls. The attack requires being on the local network. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way. 16/12/2025 16/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:A/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
