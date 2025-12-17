@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2025-12-17",
+    "cve": "CVE-2025-62690",
+    "descripcion": "Mattermost versions 10.11.x 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-62190",
+    "descripcion": "Mattermost versions 11.0.x 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-61736",
+    "descripcion": "Successful exploitation of this vulnerability could result in the product failing to re-establish communication once the certificate expires. 17/12/2025 17/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-14097",
+    "descripcion": "A vulnerability in the application software of multiple Radiometer products may allow remote code execution and unauthorized device management when specific internal conditions are met. Exploitation requires that a remote connection is established with additional information obtained through other means. The issue is caused by a weakness in the analyzer’s application software. Other related CVE&#39;s are CVE-2025-14095 & CVE-2025-14096. Affected customers have been informed about this vulnerability. This CVE is being published to provide transparency. Required Configuration for Exposure: Affected application software version is in use and remote support feature is enabled in the analyzer. Temporary work Around: If the network is not considered secure, please remove the analyzer from the network. Permanent solution: Customers should ensure the following: • The network is secure, and access follows best practices. Local Radiometer representatives will contact all affected customers to discuss a permanent solution. Exploit Status: Researchers have provided working proof-of-concept (PoC). Radiometer is not aware of any publicly available exploits at the time of this publication. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-14096",
+    "descripcion": "A vulnerability exists in multiple Radiometer products that allow an attacker with physical access to the analyzer possibility to extract credential information. The vulnerability is due to a weakness in the design and insufficient credential protection in operating system. Other related CVE&#39;s are CVE-2025-14095 & CVE-2025-14097. Affected customers have been informed about this vulnerability. This CVE is being published to provide transparency. Required Configuration for Exposure: Attacker requires physical access to the analyzer. Temporary work Around: Only authorized people can physically access the analyzer. Permanent solution: Local Radiometer representatives will contact all affected customers to discuss a permanent solution. Exploit Status: Researchers have provided a working proof-of-concept (PoC). Radiometer is not aware of any public exploit code at the time of this publication. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-13352",
+    "descripcion": "Mattermost versions 10.11.x 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-67895",
+    "descripcion": "Edge3 Worker RPC RCE on Airflow 2. This issue affects Apache Airflow Providers Edge3: before 2.0.0 - and only if you installed and configured it on Airflow 2. The Edge3 provider support in Airflow 2 has been always development-only and not officially released, however if you installed and configured Edge3 provider in Airflow 2, it implicitly enabled non-public (normally) API which was used to test Edge Provider in Airflow 2 during the development. This API allowed Dag author to perform Remote Code Execution in the webserver context, which Dag Author was not supposed to be able to do. If you installed and configured Edge3 provider for Airflow 2, you should uninstall it and migrate to Airflow 3. The new Edge3 provider versions (>=2.0.0) has minimum version of Airflow set to 3 and the RCE-prone Airflow 2 code is removed, so it should no longer be possible to use the Edge3 provider 2.0.0+ on Airflow 2. If you used Edge Provider in Airflow 3, you are not affected. 17/12/2025 17/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-17",
     "cve": "CVE-2025-14101",
     "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in GG Soft Software Services Inc. PaperWork allows Exploitation of Trusted Identifiers.This issue affects PaperWork: from 5.2.0.9427 before 6.0. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2025-12-17",
     "cve": "CVE-2025-14399",
     "descripcion": "The Download Plugins and Themes in ZIP from Dashboard plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.9.6. This is due to missing or incorrect nonce validation on the download_plugin_bulk and download_theme_bulk functions. This makes it possible for unauthenticated attackers to archive all the sites plugins and themes and place them in the `wp-content/uploads/` directory via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-12496",
-    "descripcion": "The Zephyr Project Manager plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 3.3.203 via the `file` parameter. This makes it possible for authenticated attackers, with Custom-level access and above, to read the contents of arbitrary files on the server, which can contain sensitive information. On a servers that have `allow_url_fopen` enabled, this issue allows for Server-Side Request Forgery 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-14817",
-    "descripcion": "The component com.transsion.tranfacmode.entrance.main.MainActivity in com.transsion.tranfacmode has no permission control and can be accessed by third-party apps which can construct intents to directly open adb debugging functionality without user interaction. 17/12/2025 17/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-14061",
-    "descripcion": "The Cookie Banner, Cookie Consent, Consent Log, Cookie Scanner, Script Blocker (for GDPR, CCPA & ePrivacy) : WP Cookie Consent plugin for WordPress is vulnerable to unauthorized data modification due to a missing capability check on the gdpr_delete_policy_data function in all versions up to, and including, 4.0.7. This makes it possible for unauthenticated attackers to permanently delete arbitrary posts, pages, attachments, and other post types by ID. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-13750",
-    "descripcion": "The Converter for Media – Optimize images | Convert WebP & AVIF plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `/webp-converter/v1/regenerate-attachment` REST endpoint in all versions up to, and including, 6.3.2. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete optimized WebP/AVIF variants for arbitrary attachments. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-11924",
-    "descripcion": "The Ninja Forms – The Contact Form Builder That Grows With You plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 3.13.2. This is due to the plugin not properly verifying that a user is authorized before the `ninja-forms-views` REST endpoints return form metadata and submission content. This makes it possible for unauthenticated attackers to read arbitrary form definitions and submission records via a leaked bearer token granted they can load any page containing the Submissions Table block. NOTE: The developer released a patch for this issue in 3.13.1, but inadvertently introduced a REST API endpoint in which a valid bearer token could be minted for arbitrary form IDs, making this patch ineffective. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-14154",
-    "descripcion": "The Better Messages – Live Chat for WordPress, BuddyPress, PeepSo, Ultimate Member, BuddyBoss plugin for WordPress is vulnerable to Stored Cross-Site Scripting via guest display name in all versions up to, and including, 2.10.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-64700",
-    "descripcion": "Cross-site request forgery vulnerability exists in GROWI v7.3.3 and earlier. If a user views a malicious page while logged in, the user may be tricked to do unintended operations. 17/12/2025 17/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
