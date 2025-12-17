@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2025-12-17",
+    "cve": "CVE-2025-14817",
+    "descripcion": "The component com.transsion.tranfacmode.entrance.main.MainActivity in com.transsion.tranfacmode has no permission control and can be accessed by third-party apps which can construct intents to directly open adb debugging functionality without user interaction. 17/12/2025 17/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-14061",
+    "descripcion": "The Cookie Banner, Cookie Consent, Consent Log, Cookie Scanner, Script Blocker (for GDPR, CCPA & ePrivacy) : WP Cookie Consent plugin for WordPress is vulnerable to unauthorized data modification due to a missing capability check on the gdpr_delete_policy_data function in all versions up to, and including, 4.0.7. This makes it possible for unauthenticated attackers to permanently delete arbitrary posts, pages, attachments, and other post types by ID. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-13750",
+    "descripcion": "The Converter for Media – Optimize images | Convert WebP & AVIF plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `/webp-converter/v1/regenerate-attachment` REST endpoint in all versions up to, and including, 6.3.2. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete optimized WebP/AVIF variants for arbitrary attachments. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-11924",
+    "descripcion": "The Ninja Forms – The Contact Form Builder That Grows With You plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 3.13.2. This is due to the plugin not properly verifying that a user is authorized before the `ninja-forms-views` REST endpoints return form metadata and submission content. This makes it possible for unauthenticated attackers to read arbitrary form definitions and submission records via a leaked bearer token granted they can load any page containing the Submissions Table block. NOTE: The developer released a patch for this issue in 3.13.1, but inadvertently introduced a REST API endpoint in which a valid bearer token could be minted for arbitrary form IDs, making this patch ineffective. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-17",
+    "cve": "CVE-2025-14154",
+    "descripcion": "The Better Messages – Live Chat for WordPress, BuddyPress, PeepSo, Ultimate Member, BuddyBoss plugin for WordPress is vulnerable to Stored Cross-Site Scripting via guest display name in all versions up to, and including, 2.10.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-17",
     "cve": "CVE-2025-64700",
     "descripcion": "Cross-site request forgery vulnerability exists in GROWI v7.3.3 and earlier. If a user views a malicious page while logged in, the user may be tricked to do unintended operations. 17/12/2025 17/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -23,30 +48,5 @@
     "fecha": "2025-12-17",
     "cve": "CVE-2025-13861",
     "descripcion": "The HTML Forms – Simple WordPress Forms Plugin for WordPress is vulnerable to Unauthenticated Stored Cross-Site Scripting in all versions up to and including 1.6.0 due to insufficient sanitization of fabricated file upload field metadata before displaying it in the WordPress admin dashboard. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute whenever an administrator accesses the form submissions page. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-11901",
-    "descripcion": "An uncontrolled resource consumption vulnerability affects certain ASUS motherboards using Intel B460, B560, B660, B760, H410, H510, H610, H470, Z590, Z690, Z790, W480, W680 series chipsets. Exploitation requires physical access to internal expansion slots to install a specially crafted device and supporting software utility, and may lead to uncontrolled resource consumption that increases the risk of unauthorized direct memory access (DMA). Refer to the &#39;Security Update for UEFI firmware&#39; section on the ASUS Security Advisory for more information. 17/12/2025 17/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-11775",
-    "descripcion": "An out-of-bounds read vulnerability has been identified in the asComSvc service. This vulnerability can be triggered by sending specially crafted requests, which may lead to a service crash or partial loss of functionality. This vulnerability only affects ASUS motherboard series products. Refer to the &#39;Security Update for Armoury Crate App&#39; section on the ASUS Security Advisory for more information. 17/12/2025 17/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-14305",
-    "descripcion": "ListCheck.exe developed by Acer has a Local Privilege Escalation vulnerability. Authenticated local attackers can replace ListCheck.exe with a malicious executable of the same name, which will be executed by the system and result in privilege escalation. 17/12/2025 17/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-14304",
-    "descripcion": "Certain motherboard models developed by ASRock and its subsidiaries, ASRockRack and ASRockInd. has a Protection Mechanism Failure vulnerability. Because IOMMU was not properly enabled, unauthenticated physical attackers can use a DMA-capable PCIe device to read and write arbitrary physical memory before the OS kernel and its security features are loaded. 17/12/2025 17/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-13977",
-    "descripcion": "The Essential Addons for Elementor – Popular Elementor Templates & Widgets plugin for WordPress is vulnerable to Stored Cross-Site Scripting via multiple attack vectors in all versions up to, and including, 6.5.3. This is due to insufficient input sanitization and output escaping in the Event Calendar widget&#39;s custom attributes handling and the Image Masking module&#39;s element ID rendering. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 17/12/2025 17/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
