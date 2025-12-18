@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2025-12-18",
+    "cve": "CVE-2025-68461",
+    "descripcion": "Roundcube Webmail before 1.5.12 and 1.6 before 1.6.12 is prone to a Cross-Site-Scripting (XSS) vulnerability via the animate tag in an SVG document. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-18",
+    "cve": "CVE-2025-68460",
+    "descripcion": "Roundcube Webmail before 1.5.12 and 1.6 before 1.6.12 is prone to a information disclosure vulnerability in the HTML style sanitizer. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-18",
+    "cve": "CVE-2025-12885",
+    "descripcion": "The Embed Any Document – Embed PDF, Word, PowerPoint and Excel Files plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the sanitize_pdf_src function regex bypass in all versions up to, and including, 2.7.10 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-18",
     "cve": "CVE-2025-14856",
     "descripcion": "A security vulnerability has been detected in y_project RuoYi up to 4.8.1. The affected element is an unknown function of the file /monitor/cache/getnames. Such manipulation of the argument fragment leads to code injection. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2025-12-17",
     "cve": "CVE-2025-68433",
     "descripcion": "Zed, a code editor, has an aribtrary code execution vulnerability in versions prior to 0.218.2-pre. The Zed IDE loads Model Context Protocol (MCP) configurations from the `settings.json` file located within a project’s `.zed` subdirectory. A malicious MCP configuration can contain arbitrary shell commands that run on the host system with the privileges of the user running the IDE. This can be triggered automatically without any user interaction besides opening the project in the IDE. Version 0.218.2-pre fixes the issue by implementing worktree trust mechanism. As a workaround, users should carefully review the contents of project settings files (`./zed/settings.json`) before opening new projects in Zed. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-68432",
-    "descripcion": "Zed, a code editor, has an aribtrary code execution vulnerability in versions prior to 0.218.2-pre. The Zed IDE loads Language Server Protocol (LSP) configurations from the `settings.json` file located within a project’s `.zed` subdirectory. A malicious LSP configuration can contain arbitrary shell commands that run on the host system with the privileges of the user running the IDE. This can be triggered when a user opens project file for which there is an LSP entry. A concerted effort by an attacker to seed a project settings file (`./zed/settings.json`) with malicious language server configurations could result in arbitrary code execution with the user&#39;s privileges if the user opens the project in Zed without reviewing the contents. Version 0.218.2-pre fixes the issue by implementing worktree trust mechanism. As a workaround, users should carefully review the contents of project settings files (`./zed/settings.json`) before opening new projects in Zed. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-68429",
-    "descripcion": "Storybook is a frontend workshop for building user interface components and pages in isolation. A vulnerability present starting in versions 7.0.0 and prior to versions 7.6.21, 8.6.15, 9.1.17, and 10.1.10 relates to Storybook’s handling of environment variables defined in a `.env` file, which could, in specific circumstances, lead to those variables being unexpectedly bundled into the artifacts created by the `storybook build` command. When a built Storybook is published to the web, the bundle’s source is viewable, thus potentially exposing those variables to anyone with access. For a project to potentially be vulnerable to this issue, it must build the Storybook (i.e. run `storybook build` directly or indirectly) in a directory that contains a `.env` file (including variants like `.env.local`) and publish the built Storybook to the web. Storybooks built without a `.env` file at build time are not affected, including common CI-based builds where secrets are provided via platform environment variables rather than `.env` files. Storybook runtime environments (i.e. `storybook dev`) are not affected. Deployed applications that share a repo with your Storybook are not affected. Users should upgrade their Storybook—on both their local machines and CI environment—to version .6.21, 8.6.15, 9.1.17, or 10.1.10 as soon as possible. Maintainers additionally recommend that users audit for any sensitive secrets provided via `.env` files and rotate those keys. Some projects may have been relying on the undocumented behavior at the heart of this issue and will need to change how they reference environment variables after this update. If a project can no longer read necessary environmental variable values, either prefix the variables with `STORYBOOK_` or use the `env` property in Storybook’s configuration to manually specify values. In either case, do not include sensitive secrets as they will be included in the built bundle. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-17",
-    "cve": "CVE-2025-68147",
-    "descripcion": "Open Source Point of Sale (opensourcepos) is a web based point of sale application written in PHP using CodeIgniter framework. Starting in version 3.4.0 and prior to version 3.4.2, a Stored Cross-Site Scripting (XSS) vulnerability exists in the &#34;Return Policy&#34; configuration field. The application does not properly sanitize user input before saving it to the database or displaying it on receipts. An attacker with access to the &#34;Store Configuration&#34; (such as a rogue administrator or an account compromised via the separate CSRF vulnerability) can inject malicious JavaScript payloads into this field. These payloads are executed in the browser of any user (including other administrators and sales staff) whenever they view a receipt or complete a transaction. This can lead to session hijacking, theft of sensitive data, or unauthorized actions performed on behalf of the victim. The vulnerability has been patched in version 3.4.2 by ensuring the output is escaped using the `esc()` function in the receipt template. As a temporary mitigation, administrators should ensure the &#34;Return Policy&#34; field contains only plain text and strictly avoid entering any HTML tags. There is no code-based workaround other than applying the patch. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
