@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-68469",
-    "descripcion": "ImageMagick is free and open-source software used for editing and manipulating digital images. Prior to version 7.1.1-14, ImageMagick crashes when processing a crafted TIFF file. Version 7.1.1-14 fixes the issue. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.00 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67163",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability in Simple Machines Forum v2.1.6 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the Forum Name parameter. 18/12/2025 18/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-68278",
-    "descripcion": "Tina is a headless content management system. In tinacms prior to version 3.1.1, tinacms uses the gray-matter package in an insecure way allowing attackers that can control the content of the processed markdown files, e.g., blog posts, to execute arbitrary code. tinacms version 3.1.1, @tinacms/cli version 2.0.4, and @tinacms/graphql version 2.0.3 contain a fix for the issue. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65566",
+    "descripcion": "A denial-of-service vulnerability exists in the omec-project UPF (pfcpiface component) in version upf-epc-pfcpiface:2.1.3-dev. When the UPF receives a PFCP Session Report Response that is missing the mandatory Cause Information Element, the session report handler dereferences a nil pointer instead of rejecting the malformed message. This triggers a panic and terminates the UPF process. An attacker who can send PFCP Session Report Response messages to the UPF&#39;s N4/PFCP endpoint can exploit this flaw to repeatedly crash the UPF and disrupt user-plane services. 18/12/2025 18/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-64724",
-    "descripcion": "Arduino IDE is an integrated development environment. Prior to version 2.3.7, Arduino IDE for macOS is installed with world-writable file permissions on sensitive application components, allowing any local user to replace legitimate files with malicious code. When another user launches the application, the malicious code executes with that user&#39;s privileges, enabling privilege escalation and unauthorized access to sensitive data. The fix is included starting from the `2.3.7` release. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-64400",
+    "descripcion": "Control Panel provides an API for pre-registering into an enrollment and organization prior to a user&#39;s first login. The API for creating users checks that the account requesting a user creation has `edit` on the enrollment-level user directory, but is missing a separate check that the enrollment editor has access (or belongs to) the organization that they are adding a user to. 18/12/2025 18/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-64723",
-    "descripcion": "Arduino IDE is an integrated development environment. Prior to version 2.3.7, Arduino IDE for macOS was configured with overly permissive security entitlements that could bypass macOS Hardened Runtime protections. This configuration allows attackers to inject malicious dynamic libraries into the application process, gaining access to all TCC (Transparency, Consent, and Control) permissions granted to the application. The fix is included starting from the `2.3.7 ` release. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-14889",
+    "descripcion": "A security flaw has been discovered in Campcodes Advanced Voting Management System 1.0. The impacted element is an unknown function of the file /admin/voters_edit.php of the component Password Handler. Performing manipulation of the argument ID results in improper authorization. The attack is possible to be carried out remotely. The exploit has been released to the public and may be exploited. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-63391",
-    "descripcion": "An authentication bypass vulnerability exists in Open-WebUI 18/12/2025 18/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-58323",
+    "descripcion": "A stored cross-site scripting vulnerability in Kentico Xperience allows attackers to inject malicious scripts via the Checkbox form component. This allows malicious scripts to execute in users&#39; browsers by exploiting HTML support in the form builder. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-63390",
-    "descripcion": "An authentication bypass vulnerability exists in AnythingLLM v1.8.5 in via the /api/workspaces endpoint. The endpoint fails to implement proper authentication checks, allowing unauthenticated remote attackers to enumerate and retrieve detailed information about all configured workspaces. Exposed data includes: workspace identifiers (id, name, slug), AI model configurations (chatProvider, chatModel, agentProvider), system prompts (openAiPrompt), operational parameters (temperature, history length, similarity thresholds), vector search settings, chat modes, and timestamps. 18/12/2025 18/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-58322",
+    "descripcion": "A stored cross-site scripting vulnerability in Kentico Xperience allows attackers to inject malicious code into shipping options configuration. This could lead to potential theft of sensitive data by executing malicious scripts in users&#39; browsers. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-63389",
-    "descripcion": "A critical authentication bypass vulnerability exists in Ollama platform&#39;s API endpoints in versions prior to and including v0.12.3. The platform exposes multiple API endpoints without requiring authentication, enabling remote attackers to perform unauthorized model management operations. 18/12/2025 18/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-58321",
+    "descripcion": "A stored cross-site scripting vulnerability in Kentico Xperience allows attackers to inject malicious scripts via form validation rule configuration. Attackers can exploit this vulnerability to execute malicious scripts that will run in users&#39; browsers. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-63388",
-    "descripcion": "A Cross-Origin Resource Sharing (CORS) misconfiguration vulnerability exists in Dify v1.9.1 in the /console/api/system-features endpoint. The endpoint implements an overly permissive CORS policy that reflects arbitrary Origin headers and sets Access-Control-Allow-Credentials: true, allowing any external domain to make authenticated cross-origin requests. 18/12/2025 18/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-58320",
+    "descripcion": "An information disclosure vulnerability in Kentico Xperience allows public users to access sensitive administration interface hostname details during authentication. Attackers can retrieve confidential hostname configuration information through a public endpoint, potentially exposing internal network details. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-63386",
-    "descripcion": "A Cross-Origin Resource Sharing (CORS) misconfiguration vulnerability exists in Dify v1.9.1 in the /console/api/setup endpoint. The endpoint implements an insecure CORS policy that reflects any Origin header and enables Access-Control-Allow-Credentials: true, permitting arbitrary external domains to make authenticated requests. 18/12/2025 18/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-58319",
+    "descripcion": "A reflected cross-site scripting vulnerability in Kentico Xperience allows attackers to inject malicious scripts via the Pages dashboard widget configuration dialog. Attackers can exploit this vulnerability to execute malicious scripts in administrative users&#39; browsers. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-18",
-    "cve": "CVE-2025-14878",
-    "descripcion": "A security flaw has been discovered in Tenda WH450 1.0.0.18. This impacts an unknown function of the file /goform/wirelessRestart of the component HTTP Request Handler. The manipulation of the argument GO results in stack-based buffer overflow. The attack may be performed from remote. The exploit has been released to the public and may be exploited. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2024-58318",
+    "descripcion": "A stored cross-site scripting vulnerability in Kentico Xperience allows attackers to inject malicious scripts via the rich text editor component for page and form builders. Attackers can exploit this vulnerability by entering malicious URIs, potentially allowing malicious scripts to execute in users&#39; browsers. 18/12/2025 18/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
