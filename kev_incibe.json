@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-14546",
-    "descripcion": "Versions of the package fastapi-sso before 0.19.0 are vulnerable to Cross-site Request Forgery (CSRF) due to the improper validation of the OAuth state parameter during the authentication callback. While the get_login_url method allows for state generation, it does not persist the state or bind it to the user&#39;s session. Consequently, the verify_and_process method accepts the state received in the query parameters without verifying it against a trusted local value. This allows a remote attacker to trick a victim into visiting a malicious callback URL, which can result in the attacker&#39;s account being linked to the victim&#39;s internal account. 19/12/2025 19/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66522",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability exists in the Digital IDs functionality of the Foxit PDF Editor Cloud (pdfonline.foxit.com). The application does not properly sanitize or encode the Common Name field of Digital IDs before inserting user-supplied content into the DOM. As a result, embedded HTML or JavaScript may execute whenever the Digital IDs dialog is accessed or when the affected PDF is loaded. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68491",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66521",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability exists in pdfonline.foxit.com within the Trusted Certificates feature. A crafted payload can be injected as the certificate name, which is later rendered into the DOM without proper sanitization. As a result, the injected script executes each time the Trusted Certificates view is loaded. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68490",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66520",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability exists in the Portfolio feature of the Foxit PDF Editor cloud (pdfonline.foxit.com). User-supplied SVG files are not properly sanitized or validated before being inserted into the HTML structure. As a result, embedded HTML or JavaScript within a crafted SVG may execute whenever the Portfolio file list is rendered. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68489",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66519",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability exists in pdfonline.foxit.com within the Layer Import functionality. A crafted payload can be injected into the “Create new Layer” field during layer import and is later rendered into the DOM without proper sanitization. As a result, the injected script executes when the Layers panel is accessed. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68488",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66502",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability exists in pdfonline.foxit.com within the Page Templates feature. A crafted payload can be stored as the template name, which is later rendered into the DOM without proper sanitization. As a result, the injected script executes each time the affected PDF is loaded. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68487",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66501",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability exists in pdfonline.foxit.com within the Predefined Text feature of the Foxit eSign section. A crafted payload can be stored via the Identity “First Name” field, which is later rendered into the DOM without proper sanitization. As a result, the injected script may execute when predefined text is used or when viewing document properties. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68486",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66500",
+    "descripcion": "A stored cross-site scripting (XSS) vulnerability exists in webplugins.foxit.com. A postMessage handler fails to validate the message origin and directly assigns externalPath to a script source, allowing an attacker to execute arbitrary JavaScript when a crafted postMessage is received. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68485",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66499",
+    "descripcion": "A heap-based buffer overflow vulnerability exists in the PDF parsing of Foxit PDF Reader when processing specially crafted JBIG2 data. An integer overflow in the calculation of the image buffer size may occur, potentially allowing a remote attacker to execute arbitrary code. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68484",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66498",
+    "descripcion": "A memory corruption vulnerability exists in the 3D annotation handling of Foxit PDF Reader due to insufficient bounds checking when parsing U3D data. When opening a PDF file containing malformed or specially crafted PRC content, out-of-bounds memory access may occur, resulting in memory corruption. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-19",
-    "cve": "CVE-2025-68483",
-    "descripcion": "Rejected reason: Not used 19/12/2025 19/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66497",
+    "descripcion": "A memory corruption vulnerability exists in the 3D annotation handling of Foxit PDF Reader due to insufficient bounds checking when parsing PRC data. When opening a PDF file containing malformed or specially crafted PRC content, out-of-bounds memory access may occur, resulting in memory corruption. 19/12/2025 19/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
