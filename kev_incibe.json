@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2025-12-20",
+    "cve": "CVE-2025-13619",
+    "descripcion": "The Flex Store Users plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.1.0. This is due to the &#39;fsUserHandle::signup&#39; and the &#39;fsSellerRole::add_role_seller&#39; functions not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;administrator&#39; role during registration and gain administrator access to the site. Note: The vulnerability can be exploited with the &#39;fs_type&#39; parameter if the Flex Store Seller plugin is also activated. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-12-20",
+    "cve": "CVE-2025-12820",
+    "descripcion": "The Pure WC Variation Swatches WordPress plugin through 1.1.7 does not have an authorization check when updating its settings, which could allow any authenticated users to update them. 20/12/2025 20/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-20",
     "cve": "CVE-2025-14735",
     "descripcion": "The &#34;Amazon affiliate lite Plugin&#34; plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.0.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2025-12-20",
     "cve": "CVE-2025-13624",
     "descripcion": "The Overstock Affiliate Links plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the `$_SERVER[&#39;PHP_SELF&#39;]` parameter in all versions up to, and including, 1.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-20",
-    "cve": "CVE-2025-13365",
-    "descripcion": "The WP Hallo Welt plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.4. This is due to missing or incorrect nonce validation on the &#39;hallo_welt_seite&#39; function. This makes it possible for unauthenticated attackers to update plugin settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. Due to the insufficient input sanitization and output escaping, this can lead to Stored Cross-Site Scripting. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-20",
-    "cve": "CVE-2025-13329",
-    "descripcion": "The File Uploader for WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the callback function for the &#39;add-image-data&#39; REST API endpoint in all versions up to, and including, 1.0.3. This makes it possible for unauthenticated attackers to upload arbitrary files to the Uploadcare service and subsequently download them on the affected site&#39;s server which may make remote code execution possible. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
