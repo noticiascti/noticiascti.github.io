@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-12-20",
+    "cve": "CVE-2025-34290",
+    "descripcion": "Versa SASE Client for Windows versions released between 7.8.7 and 7.9.4 contain a local privilege escalation vulnerability in the audit log export functionality. The client communicates user-controlled file paths to a privileged service, which performs file system operations without impersonating the requesting user. Due to improper privilege handling and a time-of-check time-of-use race condition combined with symbolic link and mount point manipulation, a local authenticated attacker can coerce the service into deleting arbitrary directories with SYSTEM privileges. This can be exploited to delete protected system folders such as C:\\\\Config.msi and subsequently achieve execution as NT AUTHORITY\\\\SYSTEM via MSI rollback techniques. 20/12/2025 20/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-20",
     "cve": "CVE-2025-7782",
     "descripcion": "The WP JobHunt plugin for WordPress, used by the JobCareer theme, is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;cs_update_application_status_callback&#39; function in all versions up to, and including, 7.7. This makes it possible for authenticated attackers, with Candidate-level access and above, to inject cross-site scripting into the &#39;status&#39; parameter of applied jobs for any user. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-12-20",
     "cve": "CVE-2025-14721",
     "descripcion": "The Responsive and Swipe slider plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s rsSlider shortcode in all versions up to, and including, 1.0.2 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-20",
-    "cve": "CVE-2025-14633",
-    "descripcion": "The F70 Lead Document Download plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;file_download&#39; function in all versions up to, and including, 1.4.4. This makes it possible for unauthenticated attackers to download any file from the WordPress media library by guessing or enumerating WordPress attachment IDs. 20/12/2025 20/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
