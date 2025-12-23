@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2025-12-23",
+    "cve": "CVE-2025-68655",
+    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68654",
+    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68653",
+    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68652",
+    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68651",
+    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68650",
+    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
     "cve": "CVE-2025-67743",
     "descripcion": "Local Deep Research is an AI-powered research assistant for deep, iterative research. In versions from 1.3.0 to before 1.3.9, the download service (download_service.py) makes HTTP requests using raw requests.get() without utilizing the application&#39;s SSRF protection (safe_requests.py). This can allow attackers to access internal services and attempt to reach cloud provider metadata endpoints (AWS/GCP/Azure), as well as perform internal network reconnaissance, by submitting malicious URLs through the API, depending on the deployment and surrounding controls. This issue has been patched in version 1.3.9. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -18,35 +48,5 @@
     "fecha": "2025-12-22",
     "cve": "CVE-2025-68614",
     "descripcion": "LibreNMS is an auto-discovering PHP/MySQL/SNMP based network monitoring tool. Prior to version 25.12.0, the Alert Rule API is vulnerable to stored cross-site scripting. Alert rules can be created or updated via LibreNMS API. The alert rule name is not properly sanitized, and can be used to inject HTML code. This issue has been patched in version 25.12.0. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-22",
-    "cve": "CVE-2025-68480",
-    "descripcion": "Marshmallow is a lightweight library for converting complex objects to and from simple Python datatypes. In versions from 3.0.0rc1 to before 3.26.2 and from 4.0.0 to before 4.1.2, Schema.load(data, many=True) is vulnerable to denial of service attacks. A moderately sized request can consume a disproportionate amount of CPU time. This issue has been patched in version 3.26.2 and 4.1.2. 22/12/2025 22/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-22",
-    "cve": "CVE-2025-68476",
-    "descripcion": "KEDA is a Kubernetes-based Event Driven Autoscaling component. Prior to versions 2.17.3 and 2.18.3, an Arbitrary File Read vulnerability has been identified in KEDA, potentially affecting any KEDA resource that uses TriggerAuthentication to configure HashiCorp Vault authentication. The vulnerability stems from an incorrect or insufficient path validation when loading the Service Account Token specified in spec.hashiCorpVault.credential.serviceAccount. An attacker with permissions to create or modify a TriggerAuthentication resource can exfiltrate the content of any file from the node&#39;s filesystem (where the KEDA pod resides) by directing the file&#39;s content to a server under their control, as part of the Vault authentication request. The potential impact includes the exfiltration of sensitive system information, such as secrets, keys, or the content of files like /etc/passwd. This issue has been patched in versions 2.17.3 and 2.18.3. 22/12/2025 22/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-22",
-    "cve": "CVE-2025-68475",
-    "descripcion": "Fedify is a TypeScript library for building federated server apps powered by ActivityPub. Prior to versions 1.6.13, 1.7.14, 1.8.15, and 1.9.2, a Regular Expression Denial of Service (ReDoS) vulnerability exists in Fedify&#39;s document loader. The HTML parsing regex at packages/fedify/src/runtime/docloader.ts:259 contains nested quantifiers that cause catastrophic backtracking when processing maliciously crafted HTML responses. This issue has been patched in versions 1.6.13, 1.7.14, 1.8.15, and 1.9.2. 22/12/2025 22/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-22",
-    "cve": "CVE-2025-67436",
-    "descripcion": "Authenticated Remote Code Execution (RCE) in PluXml CMS 5.8.22 allows an attacker with administrator panel access to inject a malicious PHP webshell into a theme file (e.g., home.php). 22/12/2025 22/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-22",
-    "cve": "CVE-2025-65857",
-    "descripcion": "An issue was discovered in Xiongmai XM530 IP cameras on firmware V5.00.R02.000807D8.10010.346624.S.ONVIF 21.06. The GetStreamUri exposes RTSP URIs containing hardcoded credentials enabling direct unauthorized video stream access. 22/12/2025 22/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-22",
-    "cve": "CVE-2025-65856",
-    "descripcion": "Authentication bypass vulnerability in Xiongmai XM530 IP cameras on Firmware V5.00.R02.000807D8.10010.346624.S.ONVIF 21.06 allows unauthenticated remote attackers to access sensitive device information and live video streams. The ONVIF implementation fails to enforce authentication on 31 critical endpoints, enabling direct unauthorized video stream access. 22/12/2025 22/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
