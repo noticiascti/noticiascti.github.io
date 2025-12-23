@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-14548",
-    "descripcion": "The Calendar plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;event_desc&#39; parameter in all versions up to, and including, 1.3.16 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page, granted they can convince an administrator to enable lower privilege users to manage calendar events via the plugin settings. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-13183",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Hotech Software Inc. Otello allows Stored XSS.This issue affects Otello: from 2.4.0 before 2.4.4. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-14388",
-    "descripcion": "The PhastPress plugin for WordPress is vulnerable to Unauthenticated Arbitrary File Read via null byte injection in all versions up to, and including, 3.7. This is due to a discrepancy between the extension validation in `getExtensionForURL()` which operates on URL-decoded paths, and `appendNormalized()` which strips everything after a null byte before constructing the filesystem path. This makes it possible for unauthenticated attackers to read arbitrary files from the webroot, including wp-config.php, by appending a double URL-encoded null byte (%2500) followed by an allowed extension (.txt) to the file path. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-68561",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Ruben Garcia AutomatorWP allows SQL Injection.This issue affects AutomatorWP: from n/a through 5.2.4. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-14163",
-    "descripcion": "The Premium Addons for Elementor plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.11.53. This is due to missing nonce validation in the &#39;insert_inner_template&#39; function. This makes it possible for unauthenticated attackers to create arbitrary Elementor templates via a forged request granted they can trick a site administrator or other user with the edit_posts capability into performing an action such as clicking on a link. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68560",
+    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in CodexThemes TheGem Theme Elements (for Elementor).This issue affects TheGem Theme Elements (for Elementor): from n/a through 5.10.5.1. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-14155",
-    "descripcion": "The Premium Addons for Elementor – Powerful Elementor Templates & Widgets plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;get_template_content&#39; function in all versions up to, and including, 4.11.53. This makes it possible for unauthenticated attackers to view the content of private, draft, and pending templates. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68559",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in CodexThemes TheGem Theme Elements (for Elementor).This issue affects TheGem Theme Elements (for Elementor): from n/a through 5.10.5.1. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-12934",
-    "descripcion": "The Beaver Builder – WordPress Page Builder plugin for WordPress is vulnerable to unauthorized access and modification of data due to a missing capability check on the &#39;duplicate_wpml_layout&#39; function in all versions up to, and including, 2.9.4.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to update arbitrary posts with the content of other existing posts, potentially exposing private and password-protected content and deleting any content that is not saved in revisions or backups. Posts must have been created with Beaver Builder to be copied or updated. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-68557",
+    "descripcion": "Missing Authorization vulnerability in Vikas Ratudi Chakra test allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Chakra test: from n/a through 1.0.1. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-68655",
-    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68556",
+    "descripcion": "Missing Authorization vulnerability in VillaTheme HAPPY allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects HAPPY: from n/a through 1.0.9. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-68654",
-    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68551",
+    "descripcion": "Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in Vikas Ratudi VPSUForm allows Retrieve Embedded Sensitive Data.This issue affects VPSUForm: from n/a through 3.2.24. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-68653",
-    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68550",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in VillaTheme WPBulky allows Blind SQL Injection.This issue affects WPBulky: from n/a through 1.1.13. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-68652",
-    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68548",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in WebCodingPlace Responsive Posts Carousel Pro allows Stored XSS.This issue affects Responsive Posts Carousel Pro: from n/a through 15.2. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-23",
-    "cve": "CVE-2025-68651",
-    "descripcion": "Rejected reason: Not used 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68546",
+    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in Thembay Nika allows PHP Local File Inclusion.This issue affects Nika: from n/a through 1.2.14. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
