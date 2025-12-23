@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-23",
+    "cve": "CVE-2025-68343",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: can: gs_usb: gs_usb_receive_bulk_callback(): check actual_length before accessing header The driver expects to receive a struct gs_host_frame in gs_usb_receive_bulk_callback(). Use struct_group to describe the header of the struct gs_host_frame and check that we have at least received the header before accessing any members of it. To resubmit the URB, do not dereference the pointer chain &#34;dev->parent->hf_size_rx&#34; but use &#34;parent->hf_size_rx&#34; instead. Since &#34;urb->context&#34; contains &#34;parent&#34;, it is always defined, while &#34;dev&#34; is not defined if the URB it too short. 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68342",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: can: gs_usb: gs_usb_receive_bulk_callback(): check actual_length before accessing data The URB received in gs_usb_receive_bulk_callback() contains a struct gs_host_frame. The length of the data after the header depends on the gs_host_frame hf::flags and the active device features (e.g. time stamping). Introduce a new function gs_usb_get_minimum_length() and check that we have at least received the required amount of data before accessing it. Only copy the data to that skb that has actually been received. [mkl: rename gs_usb_get_minimum_length() -> +gs_usb_get_minimum_rx_length()] 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68341",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: veth: reduce XDP no_direct return section to fix race As explain in commit fa349e396e48 (&#34;veth: Fix race with AF_XDP exposing old or uninitialized descriptors&#34;) for veth there is a chance after napi_complete_done() that another CPU can manage start another NAPI instance running veth_pool(). For NAPI this is correctly handled as the napi_schedule_prep() check will prevent multiple instances from getting scheduled, but for the remaining code in veth_pool() this can run concurrent with the newly started NAPI instance. The problem/race is that xdp_clear_return_frame_no_direct() isn&#39;t designed to be nested. Prior to commit 401cb7dae813 (&#34;net: Reference bpf_redirect_info via task_struct on PREEMPT_RT.&#34;) the temporary BPF net context bpf_redirect_info was stored per CPU, where this wasn&#39;t an issue. Since this commit the BPF context is stored in &#39;current&#39; task_struct. When running veth in threaded-NAPI mode, then the kthread becomes the storage area. Now a race exists between two concurrent veth_pool() function calls one exiting NAPI and one running new NAPI, both using the same BPF net context. Race is when another CPU gets within the xdp_set_return_frame_no_direct() section before exiting veth_pool() calls the clear-function xdp_clear_return_frame_no_direct(). 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68340",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: team: Move team device type change at the end of team_port_add Attempting to add a port device that is already up will expectedly fail, but not before modifying the team device header_ops. In the case of the syzbot reproducer the gre0 device is already in state UP when it attempts to add it as a port device of team0, this fails but before that header_ops->create of team0 is changed from eth_header to ipgre_header in the call to team_dev_type_check_change. Later when we end up in ipgre_header() struct ip_tunnel* points to nonsense as the private data of the device still holds a struct team. Example sequence of iproute2 commands to reproduce the hang/BUG(): ip link add dev team0 type team ip link add dev gre0 type gre ip link set dev gre0 up ip link set dev gre0 master team0 ip link set dev team0 up ping -I team0 1.1.1.1 Move team_dev_type_check_change down where all other checks have passed as it changes the dev type with no way to restore it in case one of the checks that follow it fail. Also make sure to preserve the origial mtu assignment: - If port_dev is not the same type as dev, dev takes mtu from port_dev - If port_dev is the same type as dev, port_dev takes mtu from dev This is done by adding a conditional before the call to dev_set_mtu to prevent it from assigning port_dev->mtu = dev->mtu and instead letting team_dev_type_check_change assign dev->mtu = port_dev->mtu. The conditional is needed because the patch moves the call to team_dev_type_check_change past dev_set_mtu. Testing: - team device driver in-tree selftests - Add/remove various devices as slaves of team device - syzbot 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68339",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: atm/fore200e: Fix possible data race in fore200e_open() Protect access to fore200e->available_cell_rate with rate_mtx lock in the error handling path of fore200e_open() to prevent a data race. The field fore200e->available_cell_rate is a shared resource used to track available bandwidth. It is concurrently accessed by fore200e_open(), fore200e_close(), and fore200e_change_qos(). In fore200e_open(), the lock rate_mtx is correctly held when subtracting vcc->qos.txtp.max_pcr from available_cell_rate to reserve bandwidth. However, if the subsequent call to fore200e_activate_vcin() fails, the function restores the reserved bandwidth by adding back to available_cell_rate without holding the lock. This introduces a race condition because available_cell_rate is a global device resource shared across all VCCs. If the error path in fore200e_open() executes concurrently with operations like fore200e_close() or fore200e_change_qos() on other VCCs, a read-modify-write race occurs. Specifically, the error path reads the rate without the lock. If another CPU acquires the lock and modifies the rate (e.g., releasing bandwidth in fore200e_close()) between this read and the subsequent write, the error path will overwrite the concurrent update with a stale value. This results in incorrect bandwidth accounting. 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2025-68338",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: dsa: microchip: Don&#39;t free uninitialized ksz_irq If something goes wrong at setup, ksz_irq_free() can be called on uninitialized ksz_irq (for example when ksz_ptp_irq_setup() fails). It leads to freeing uninitialized IRQ numbers and/or domains. Use dsa_switch_for_each_user_port_continue_reverse() in the error path to iterate only over the fully initialized ports. 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2023-5094",
+    "descripcion": "Rejected reason: This CVE id was assigned to an issue which was later deemed not security relevant. 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2023-5093",
+    "descripcion": "Rejected reason: This CVE id was assigned to an issue which was later deemed not security relevant. 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
+    "cve": "CVE-2023-5092",
+    "descripcion": "Rejected reason: This CVE id was assigned to an issue which was later deemed not security relevant. 23/12/2025 23/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-23",
     "cve": "CVE-2025-13183",
     "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Hotech Software Inc. Otello allows Stored XSS.This issue affects Otello: from 2.4.0 before 2.4.4. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68561",
-    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Ruben Garcia AutomatorWP allows SQL Injection.This issue affects AutomatorWP: from n/a through 5.2.4. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68560",
-    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in CodexThemes TheGem Theme Elements (for Elementor).This issue affects TheGem Theme Elements (for Elementor): from n/a through 5.10.5.1. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68559",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in CodexThemes TheGem Theme Elements (for Elementor).This issue affects TheGem Theme Elements (for Elementor): from n/a through 5.10.5.1. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68557",
-    "descripcion": "Missing Authorization vulnerability in Vikas Ratudi Chakra test allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Chakra test: from n/a through 1.0.1. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68556",
-    "descripcion": "Missing Authorization vulnerability in VillaTheme HAPPY allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects HAPPY: from n/a through 1.0.9. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68551",
-    "descripcion": "Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in Vikas Ratudi VPSUForm allows Retrieve Embedded Sensitive Data.This issue affects VPSUForm: from n/a through 3.2.24. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68550",
-    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in VillaTheme WPBulky allows Blind SQL Injection.This issue affects WPBulky: from n/a through 1.1.13. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68548",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in WebCodingPlace Responsive Posts Carousel Pro allows Stored XSS.This issue affects Responsive Posts Carousel Pro: from n/a through 15.2. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-23",
-    "cve": "CVE-2025-68546",
-    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in Thembay Nika allows PHP Local File Inclusion.This issue affects Nika: from n/a through 1.2.14. 23/12/2025 23/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
