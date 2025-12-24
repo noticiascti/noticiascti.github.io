@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-5448",
-    "descripcion": "Rejected reason: This CVE id was assigned but later discarded. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-2515",
+    "descripcion": "A vulnerability was found in BlueChi, a multi-node systemd service controller used in RHIVOS. This flaw allows a user with root privileges on a managed node (qm) to create or override systemd service unit files that affect the host node. This issue can lead to privilege escalation, unauthorized service execution, and potential system compromise. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68749",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: accel/ivpu: Fix race condition when unbinding BOs Fix &#39;Memory manager not clean during takedown&#39; warning that occurs when ivpu_gem_bo_free() removes the BO from the BOs list before it gets unmapped. Then file_priv_unbind() triggers a warning in drm_mm_takedown() during context teardown. Protect the unmapping sequence with bo_list_lock to ensure the BO is always fully unmapped when removed from the list. This ensures the BO is either fully unmapped at context teardown time or present on the list and unmapped by file_priv_unbind(). 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68750",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: usb: potential integer overflow in usbg_make_tpg() The variable tpgt in usbg_make_tpg() is defined as unsigned long and is assigned to tpgt->tport_tpgt, which is defined as u16. This may cause an integer overflow when tpgt is greater than USHRT_MAX (65535). I haven&#39;t tried to trigger it myself, but it is possible to trigger it by calling usbg_make_tpg() with a large value for tpgt. I modified the type of tpgt to match tpgt->tport_tpgt and adjusted the relevant code accordingly. This patch is similar to commit 59c816c1f24d (&#34;vhost/scsi: potential memory corruption&#34;). 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68748",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Fix UAF race between device unplug and FW event processing The function panthor_fw_unplug() will free the FW memory sections. The problem is that there could still be pending FW events which are yet not handled at this point. process_fw_events_work() can in this case try to access said freed memory. Simply call disable_work_sync() to both drain and prevent future invocation of process_fw_events_work(). 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-43876",
+    "descripcion": "Under certain circumstances a successful exploitation could result in access to the device. 24/12/2025 24/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68747",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Fix UAF on kernel BO VA nodes If the MMU is down, panthor_vm_unmap_range() might return an error. We expect the page table to be updated still, and if the MMU is blocked, the rest of the GPU should be blocked too, so no risk of accessing physical memory returned to the system (which the current code doesn&#39;t cover for anyway). Proceed with the rest of the cleanup instead of bailing out and leaving the va_node inserted in the drm_mm, which leads to UAF when other adjacent nodes are removed from the drm_mm tree. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-43875",
+    "descripcion": "Under certain circumstances a successful exploitation could result in access to the device. 24/12/2025 24/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68746",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: spi: tegra210-quad: Fix timeout handling When the CPU that the QSPI interrupt handler runs on (typically CPU 0) is excessively busy, it can lead to rare cases of the IRQ thread not running before the transfer timeout is reached. While handling the timeouts, any pending transfers are cleaned up and the message that they correspond to is marked as failed, which leaves the curr_xfer field pointing at stale memory. To avoid this, clear curr_xfer to NULL upon timeout and check for this condition when the IRQ thread is finally run. While at it, also make sure to clear interrupts on failure so that new interrupts can be run. A better, more involved, fix would move the interrupt clearing into a hard IRQ handler. Ideally we would also want to signal that the IRQ thread no longer needs to be run after the timeout is hit to avoid the extra check for a valid transfer. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-40317",
+    "descripcion": "A reflected cross-site scripting (XSS) vulnerability in MyNET up to v26.08 allows attackers to execute arbitrary code in the context of a user&#39;s browser via injecting a crafted payload into the parameter HTTP. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68745",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: scsi: qla2xxx: Clear cmds after chip reset Commit aefed3e5548f (&#34;scsi: qla2xxx: target: Fix offline port handling and host reset handling&#34;) caused two problems: 1. Commands sent to FW, after chip reset got stuck and never freed as FW is not going to respond to them anymore. 2. BUG_ON(cmd->sg_mapped) in qlt_free_cmd(). Commit 26f9ce53817a (&#34;scsi: qla2xxx: Fix missed DMA unmap for aborted commands&#34;) attempted to fix this, but introduced another bug under different circumstances when two different CPUs were racing to call qlt_unmap_sg() at the same time: BUG_ON(!valid_dma_direction(dir)) in dma_unmap_sg_attrs(). So revert &#34;scsi: qla2xxx: Fix missed DMA unmap for aborted commands&#34; and partially revert &#34;scsi: qla2xxx: target: Fix offline port handling and host reset handling&#34; at __qla2x00_abort_all_cmds. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-39037",
+    "descripcion": "MyNET up to v26.08.316 was discovered to contain an Unauthenticated SQL Injection vulnerability via the intmenu parameter. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68744",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: bpf: Free special fields when update [lru_,]percpu_hash maps As [lru_,]percpu_hash maps support BPF_KPTR_{REF,PERCPU}, missing calls to &#39;bpf_obj_free_fields()&#39; in &#39;pcpu_copy_value()&#39; could cause the memory referenced by BPF_KPTR_{REF,PERCPU} fields to be held until the map gets freed. Fix this by calling &#39;bpf_obj_free_fields()&#39; after &#39;copy_map_value[,_long]()&#39; in &#39;pcpu_copy_value()&#39;. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-35322",
+    "descripcion": "MyNET up to v26.08 was discovered to contain a reflected cross-site scripting (XSS) vulnerability via the ficheiro parameter. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68743",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: mshv: Fix create memory region overlap check The current check is incorrect; it only checks if the beginning or end of a region is within an existing region. This doesn&#39;t account for userspace specifying a region that begins before and ends after an existing region. Change the logic to a range intersection check against gfns and uaddrs for each region. Remove mshv_partition_region_by_uaddr() as it is no longer used. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-60935",
+    "descripcion": "An open redirect vulnerability in the login endpoint of Blitz Panel v1.17.0 allows attackers to redirect users to malicious domains via a crafted URL. This issue affects the next_url parameter in the login endpoint and could lead to phishing or token theft after successful authentication. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68742",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: bpf: Fix invalid prog->stats access when update_effective_progs fails Syzkaller triggers an invalid memory access issue following fault injection in update_effective_progs. The issue can be described as follows: __cgroup_bpf_detach update_effective_progs compute_effective_progs bpf_prog_array_alloc items[index] = &dummy_bpf_prog.prog ---softirq start--- __do_softirq ... __cgroup_bpf_run_filter_skb __bpf_prog_run_save_cb bpf_prog_run stats = this_cpu_ptr(prog->stats) /* invalid memory access */ flags = u64_stats_update_begin_irqsave(&stats->syncp) ---softirq end--- static_branch_dec(&cgroup_bpf_enabled_key[atype]) The reason is that fault injection caused update_effective_progs to fail and then changed the original prog into dummy_bpf_prog.prog in purge_effective_progs. Then a softirq came, and accessing the members of dummy_bpf_prog.prog in the softirq triggers invalid mem access. To fix it, skip updating stats when stats is NULL. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-2155",
+    "descripcion": "Unrestricted Upload of File with Dangerous Type vulnerability in Echo Call Center Services Trade and Industry Inc. Specto CM allows Remote Code Inclusion.This issue affects Specto CM: before 17032025. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68741",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: scsi: qla2xxx: Fix improper freeing of purex item In qla2xxx_process_purls_iocb(), an item is allocated via qla27xx_copy_multiple_pkt(), which internally calls qla24xx_alloc_purex_item(). The qla24xx_alloc_purex_item() function may return a pre-allocated item from a per-adapter pool for small allocations, instead of dynamically allocating memory with kzalloc(). An error handling path in qla2xxx_process_purls_iocb() incorrectly uses kfree() to release the item. If the item was from the pre-allocated pool, calling kfree() on it is a bug that can lead to memory corruption. Fix this by using the correct deallocation function, qla24xx_free_purex_item(), which properly handles both dynamically allocated and pre-allocated items. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-2154",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Echo Call Center Services Trade and Industry Inc. Specto CM allows Stored XSS.This issue affects Specto CM: before 17032025. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
