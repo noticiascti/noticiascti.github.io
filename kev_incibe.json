@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-64641",
-    "descripcion": "Mattermost versions 11.1.x 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68348",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: block: fix memory leak in __blkdev_issue_zero_pages Move the fatal signal check before bio_alloc() to prevent a memory leak when BLKDEV_ZERO_KILLABLE is set and a fatal signal is pending. Previously, the bio was allocated before checking for a fatal signal. If a signal was pending, the code would break out of the loop without freeing or chaining the just-allocated bio, causing a memory leak. This matches the pattern already used in __blkdev_issue_write_zeroes() where the signal check precedes the allocation. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-13767",
-    "descripcion": "Mattermost versions 11.1.x 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68347",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ALSA: firewire-motu: fix buffer overflow in hwdep read for DSP events The DSP event handling code in hwdep_read() could write more bytes to the user buffer than requested, when a user provides a buffer smaller than the event header size (8 bytes). Fix by using min_t() to clamp the copy size, This ensures we never copy more than the user requested. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-57840",
-    "descripcion": "ADB(Android Debug Bridge) is affected by type privilege bypass, successful exploitation of this vulnerability may affect service availability. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-68346",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ALSA: dice: fix buffer overflow in detect_stream_formats() The function detect_stream_formats() reads the stream_count value directly from a FireWire device without validating it. This can lead to out-of-bounds writes when a malicious device provides a stream_count value greater than MAX_STREAMS. Fix by applying the same validation to both TX and RX stream counts in detect_stream_formats(). 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-13407",
-    "descripcion": "The Gravity Forms WordPress plugin before 2.9.23.1 does not properly prevent users from uploading dangerous files through its chunked upload functionality, allowing attackers to upload PHP files to affected sites and achieve Remote Code Execution, granted they can discover or enumerate the upload path. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68345",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ALSA: hda: cs35l41: Fix NULL pointer dereference in cs35l41_hda_read_acpi() The acpi_get_first_physical_node() function can return NULL, in which case the get_device() function also returns NULL, but this value is then dereferenced without checking,so add a check to prevent a crash. Found by Linux Verification Center (linuxtesting.org) with SVACE. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2024-58335",
-    "descripcion": "OpenXRechnungToolbox through 2024-10-05-3.0.0 before 6c50e89 allows XXE because the disallow-doctype-decl feature is not enabled in visualization/VisualizerImpl.java. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68344",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ALSA: wavefront: Fix integer overflow in sample size validation The wavefront_send_sample() function has an integer overflow issue when validating sample size. The header->size field is u32 but gets cast to int for comparison with dev->freemem Fix by using unsigned comparison to avoid integer overflow. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-66445",
-    "descripcion": "Authorization bypass vulnerability in Hitachi Infrastructure Analytics Advisor (Data Center Analytics component) and Hitachi Ops Center Analyzer (Hitachi Ops Center Analyzer detail view component).This issue affects Hitachi Infrastructure Analytics Advisor:; Hitachi Ops Center Analyzer: from 10.0.0-00 before 11.0.5-00. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2023-54042",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: powerpc/64s: Fix VAS mm use after free The refcount on mm is dropped before the coprocessor is detached. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-66444",
-    "descripcion": "Cross-site Scripting vulnerability in Hitachi Infrastructure Analytics Advisor (Data Center Analytics component) and Hitachi Ops Center Analyzer (Hitachi Ops Center Analyzer detail view component).This issue affects Hitachi Infrastructure Analytics Advisor:; Hitachi Ops Center Analyzer: from 10.0.0-00 before 11.0.5-00. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2023-54041",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: io_uring: fix memory leak when removing provided buffers When removing provided buffers, io_buffer structs are not being disposed of, leading to a memory leak. They can&#39;t be freed individually, because they are allocated in page-sized groups. They need to be added to some free list instead, such as io_buffers_cache. All callers already hold the lock protecting it, apart from when destroying buffers, so had to extend the lock there. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-13773",
-    "descripcion": "The Print Invoice & Delivery Notes for WooCommerce plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 5.8.0 via the &#39;WooCommerce_Delivery_Notes::update&#39; function. This is due to missing capability check in the &#39;WooCommerce_Delivery_Notes::update&#39; function, PHP enabled in Dompdf, and missing escape in the &#39;template.php&#39; file. This makes it possible for unauthenticated attackers to execute code on the server. 24/12/2025 24/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2023-54040",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ice: fix wrong fallback logic for FDIR When adding a FDIR filter, if ice_vc_fdir_set_irq_ctx returns failure, the inserted fdir entry will not be removed and if ice_vc_fdir_write_fltr returns failure, the fdir context info for irq handler will not be cleared which may lead to inconsistent or memory leak issue. This patch refines failure cases to resolve this issue. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68695",
-    "descripcion": "Rejected reason: Not used 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2023-54039",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: can: j1939: j1939_tp_tx_dat_new(): fix out-of-bounds memory access In the j1939_tp_tx_dat_new() function, an out-of-bounds memory access could occur during the memcpy() operation if the size of skb->cb is larger than the size of struct j1939_sk_buff_cb. This is because the memcpy() operation uses the size of skb->cb, leading to a read beyond the struct j1939_sk_buff_cb. Updated the memcpy() operation to use the size of struct j1939_sk_buff_cb instead of the size of skb->cb. This ensures that the memcpy() operation only reads the memory within the bounds of struct j1939_sk_buff_cb, preventing out-of-bounds memory access. Additionally, add a BUILD_BUG_ON() to check that the size of skb->cb is greater than or equal to the size of struct j1939_sk_buff_cb. This ensures that the skb->cb buffer is large enough to hold the j1939_sk_buff_cb structure. [mkl: rephrase commit message] 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2025-12-24",
-    "cve": "CVE-2025-68694",
-    "descripcion": "Rejected reason: Not used 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2023-54038",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: hci_conn: return ERR_PTR instead of NULL when there is no link hci_connect_sco currently returns NULL when there is no link (i.e. when hci_conn_link() returns NULL). sco_connect() expects an ERR_PTR in case of any error (see line 266 in sco.c). Thus, hcon set as NULL passes through to sco_conn_add(), which tries to get hcon->hdev, resulting in dereferencing a NULL pointer as reported by syzkaller. The same issue exists for iso_connect_cis() calling hci_connect_cis(). Thus, make hci_connect_sco() and hci_connect_cis() return ERR_PTR instead of NULL. 24/12/2025 24/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
