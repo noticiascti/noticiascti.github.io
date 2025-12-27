@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2025-12-26",
+    "cve": "CVE-2025-68697",
+    "descripcion": "n8n is an open source workflow automation platform. Prior to version 2.0.0, in self-hosted n8n instances where the Code node runs in legacy (non-task-runner) JavaScript execution mode, authenticated users with workflow editing access can invoke internal helper functions from within the Code node. This allows a workflow editor to perform actions on the n8n host with the same privileges as the n8n process, including: reading files from the host filesystem (subject to any file-access restrictions configured on the instance and OS/container permissions), and writing files to the host filesystem (subject to the same restrictions). This issue has been patched in version 2.0.0. Workarounds for this issue involve limiting file operations by setting N8N_RESTRICT_FILE_ACCESS_TO to a dedicated directory (e.g., ~/.n8n-files) and ensure it contains no sensitive data, keeping N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES=true (default) to block access to .n8n and user-defined config files, and disabling high-risk nodes (including the Code node) using NODES_EXCLUDE if workflow editors are not fully trusted. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-68668",
+    "descripcion": "n8n is an open source workflow automation platform. From version 1.0.0 to before 2.0.0, a sandbox bypass vulnerability exists in the Python Code Node that uses Pyodide. An authenticated user with permission to create or modify workflows can exploit this vulnerability to execute arbitrary commands on the host system running n8n, using the same privileges as the n8n process. This issue has been patched in version 2.0.0. Workarounds for this issue involve disabling the Code Node by setting the environment variable NODES_EXCLUDE: &#34;[\\&#34;n8n-nodes-base.code\\&#34;]&#34;, disabling Python support in the Code node by setting the environment variable N8N_PYTHON_ENABLED=false, which was introduced in n8n version 1.104.0, and configuring n8n to use the task runner based Python sandbox via the N8N_RUNNERS_ENABLED and N8N_NATIVE_PYTHON_RUNNER environment variables. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-67729",
+    "descripcion": "LMDeploy is a toolkit for compressing, deploying, and serving LLMs. Prior to version 0.11.1, an insecure deserialization vulnerability exists in lmdeploy where torch.load() is called without the weights_only=True parameter when loading model checkpoint files. This allows an attacker to execute arbitrary code on the victim&#39;s machine when they load a malicious .bin or .pt model file. This issue has been patched in version 0.11.1. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-61914",
+    "descripcion": "n8n is an open source workflow automation platform. Prior to version 1.114.0, a stored Cross-Site Scripting (XSS) vulnerability may occur in n8n when using the “Respond to Webhook” node. When this node responds with HTML content containing executable scripts, the payload may execute directly in the top-level window, rather than within the expected sandbox introduced in version 1.103.0. This behavior can enable a malicious actor with workflow creation permissions to execute arbitrary JavaScript in the context of the n8n editor interface. This issue has been patched in version 1.114.0. Workarounds for this issue involve restricting workflow creation and modification privileges to trusted users only, avoiding use of untrusted HTML responses in the “Respond to Webhook” node, and using an external reverse proxy or HTML sanitizer to filter responses that include executable scripts. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-26",
     "cve": "CVE-2025-66737",
     "descripcion": "Yealink T21P_E2 Phone 52.84.0.15 is vulnerable to Directory Traversal. A remote normal privileged attacker can read arbitrary files via a crafted request result read function of the diagnostic component. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -28,25 +48,5 @@
     "fecha": "2025-12-26",
     "cve": "CVE-2025-67013",
     "descripcion": "The web management interface in ETL Systems Ltd DEXTRA Series &#39; Digital L-Band Distribution System v1.8 does not implement Cross-Site Request Forgery (CSRF) protection mechanisms (no tokens, no Origin/Referer validation) on critical configuration endpoints. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-66738",
-    "descripcion": "An issue in Yealink T21P_E2 Phone 52.84.0.15 allows a remote normal privileged attacker to execute arbitrary code via a crafted request the ping function of the diagnostic component. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-57403",
-    "descripcion": "Cola Dnslog v1.3.2 is vulnerable to Directory Traversal. When a DNS query for a TXT record is processed, the application concatenates the requested URL (or a portion of it) directly with a base path using os.path.join. This bypass allows directory traversal or absolute path injection, leading to the potential exposure of sensitive information. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-13158",
-    "descripcion": "Prototype pollution vulnerability in apidoc-core versions 0.2.0 and all subsequent versions allows remote attackers to modify JavaScript object prototypes via malformed data structures, including the “define” property processed by the application, potentially leading to denial of service or unintended behavior in applications relying on the integrity of prototype chains. This affects the preProcess() function in api_group.js, api_param_title.js, api_use.js, and api_permission.js worker modules. 26/12/2025 26/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2024-29720",
-    "descripcion": "An issue in Terra Informatica Software, Inc Sciter v.4.4.7.0 allows a local attacker to obtain sensitive information via the adopt component of the Sciter video rendering function. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
