@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2025-12-27",
+    "cve": "CVE-2025-15108",
+    "descripcion": "A vulnerability was detected in PandaXGO PandaX up to fb8ff40f7ce5dfebdf66306c6d85625061faf7e5. This affects an unknown function of the file config.yml of the component JWT Secret Handler. The manipulation of the argument key results in use of hard-coded cryptographic key . The attack may be performed from remote. This attack is characterized by high complexity. The exploitability is reported as difficult. The exploit is now public and may be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:N/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-12-27",
+    "cve": "CVE-2025-54322",
+    "descripcion": "Xspeeder SXZOS through 2025-12-26 allows root remote code execution via base64-encoded Python code in the chkid parameter to vLogin.py. The title and oIP parameters are also used. 27/12/2025 27/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2025-12-27",
     "cve": "CVE-2025-15107",
     "descripcion": "A security vulnerability has been detected in actiontech sqle up to 4.2511.0. The impacted element is an unknown function of the file sqle/utils/jwt.go of the component JWT Secret Handler. The manipulation of the argument JWTSecretKey leads to use of hard-coded cryptographic key . The attack is possible to be carried out remotely. The attack&#39;s complexity is rated as high. The exploitability is regarded as difficult. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report and is planning to fix this flaw in an upcoming release. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:N/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
@@ -38,15 +48,5 @@
     "fecha": "2025-12-26",
     "cve": "CVE-2025-68932",
     "descripcion": "FreshRSS is a free, self-hostable RSS aggregator. Prior to version 1.28.0, FreshRSS uses cryptographically weak random number generators (mt_rand() and uniqid()) to generate remember-me authentication tokens and challenge-response nonces. This allows attackers to predict valid session tokens, leading to account takeover through persistent session hijacking. The remember-me tokens provide permanent authentication and are the sole credential for &#34;keep me logged in&#34; functionality. This issue has been patched in version 1.28.0. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.90 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-68474",
-    "descripcion": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.1, 5.4.3, 5.3.4, 5.2.6, 5.1.6, and earlier, in the avrc_vendor_msg() function of the ESP-IDF BlueDroid AVRCP stack, the allocated buffer size was validated using AVRC_MIN_CMD_LEN (20 bytes). However, the actual fixed header data written before the vendor payload exceeds this value. This totals 29 bytes written before p_msg->p_vendor_data is copied. Using the old AVRC_MIN_CMD_LEN could allow an out-of-bounds write if vendor_len approaches the buffer limit. For commands where vendor_len is large, the original buffer allocation may be insufficient, causing writes beyond the allocated memory. This can lead to memory corruption, crashes, or other undefined behavior. The overflow could be larger when assertions are disabled. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-68473",
-    "descripcion": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.1, 5.4.3, 5.3.4, 5.2.6, 5.1.6, and earlier, in the ESP-IDF Bluetooth host stack (BlueDroid), the function bta_dm_sdp_result() used a fixed-size array uuid_list[32][MAX_UUID_SIZE] to store discovered service UUIDs during the SDP (Service Discovery Protocol) process. On modern Bluetooth devices, it is possible for the number of available services to exceed this fixed limit (32). In such cases, if more than 32 services are discovered, subsequent writes to uuid_list could exceed the bounds of the array, resulting in a potential out-of-bounds write condition. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.00 Gravedad 4.0 txt NONE Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
