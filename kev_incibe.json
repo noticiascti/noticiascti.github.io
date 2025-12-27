@@ -1,52 +1,52 @@
 [
   {
+    "fecha": "2025-12-27",
+    "cve": "CVE-2025-68952",
+    "descripcion": "Eigent is a multi-agent Workforce. In version 0.0.60, a 1-click Remote Code Execution (RCE) vulnerability has been identified in Eigent. This vulnerability allows an attacker to execute arbitrary code on the victim&#39;s machine or server through a specific interaction (1-click). This issue has been patched in version 0.0.61. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-27",
+    "cve": "CVE-2025-68948",
+    "descripcion": "SiYuan is self-hosted, open source personal knowledge management software. In versions 3.5.1 and prior, the SiYuan Note application utilizes a hardcoded cryptographic secret for its session store. This unsafe practice renders the session encryption ineffective. Since the sensitive AccessAuthCode is stored within the session cookie, an attacker who intercepts or obtains a user&#39;s encrypted session cookie (e.g., via session hijacking) can locally decrypt it using the public key. Once decrypted, the attacker can retrieve the AccessAuthCode in plain text and use it to authenticate or take over the session. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-27",
+    "cve": "CVE-2025-68927",
+    "descripcion": "Libredesk is a self-hosted customer support desk. Prior to version 0.8.6-beta, LibreDesk is vulnerable to stored HTML injection in the contact notes feature. When adding notes via POST /api/v1/contacts/{id}/notes, the backend automatically wraps user input in tags. However, by intercepting the request and removing the tag, an attacker can inject arbitrary HTML elements such as forms and images, which are then stored and rendered without proper sanitization. This can lead to phishing, CSRF-style forced actions, and UI redress attacks. This issue has been patched in version 0.8.6-beta. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-27",
+    "cve": "CVE-2025-59946",
+    "descripcion": "NanoMQ MQTT Broker (NanoMQ) is an Edge Messaging Platform. Prior to version 0.24.2, there is a classical data racing issue about sub info list which could result in heap use after free crash. This issue has been patched in version 0.24.2. 27/12/2025 27/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-68932",
+    "descripcion": "FreshRSS is a free, self-hostable RSS aggregator. Prior to version 1.28.0, FreshRSS uses cryptographically weak random number generators (mt_rand() and uniqid()) to generate remember-me authentication tokens and challenge-response nonces. This allows attackers to predict valid session tokens, leading to account takeover through persistent session hijacking. The remember-me tokens provide permanent authentication and are the sole credential for &#34;keep me logged in&#34; functionality. This issue has been patched in version 1.28.0. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.90 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-68474",
+    "descripcion": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.1, 5.4.3, 5.3.4, 5.2.6, 5.1.6, and earlier, in the avrc_vendor_msg() function of the ESP-IDF BlueDroid AVRCP stack, the allocated buffer size was validated using AVRC_MIN_CMD_LEN (20 bytes). However, the actual fixed header data written before the vendor payload exceeds this value. This totals 29 bytes written before p_msg->p_vendor_data is copied. Using the old AVRC_MIN_CMD_LEN could allow an out-of-bounds write if vendor_len approaches the buffer limit. For commands where vendor_len is large, the original buffer allocation may be insufficient, causing writes beyond the allocated memory. This can lead to memory corruption, crashes, or other undefined behavior. The overflow could be larger when assertions are disabled. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-68473",
+    "descripcion": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.1, 5.4.3, 5.3.4, 5.2.6, 5.1.6, and earlier, in the ESP-IDF Bluetooth host stack (BlueDroid), the function bta_dm_sdp_result() used a fixed-size array uuid_list[32][MAX_UUID_SIZE] to store discovered service UUIDs during the SDP (Service Discovery Protocol) process. On modern Bluetooth devices, it is possible for the number of available services to exceed this fixed limit (32). In such cases, if more than 32 services are discovered, subsequent writes to uuid_list could exceed the bounds of the array, resulting in a potential out-of-bounds write condition. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.00 Gravedad 4.0 txt NONE Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-68148",
+    "descripcion": "FreshRSS is a free, self-hostable RSS aggregator. From version 1.27.0 to before 1.28.0, An attacker could globally deny access to feeds via proxy modifying to 429 Retry-After for a large list of feeds on given instance, making it unusable for majority of users. This issue has been patched in version 1.28.0. 27/12/2025 27/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2025-12-26",
+    "cve": "CVE-2025-66203",
+    "descripcion": "StreamVault is a video download integration solution. Prior to version 251126, a Remote Code Execution (RCE) vulnerability exists in the stream-vault application (SpiritApplication). The application allows administrators to configure yt-dlp arguments via the /admin/api/saveConfig endpoint without sufficient validation. These arguments are stored globally and subsequently used in YtDlpUtil.java when constructing the command line to execute yt-dlp. This issue has been patched in version 251126. 27/12/2025 27/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
     "fecha": "2025-12-26",
     "cve": "CVE-2025-68697",
     "descripcion": "n8n is an open source workflow automation platform. Prior to version 2.0.0, in self-hosted n8n instances where the Code node runs in legacy (non-task-runner) JavaScript execution mode, authenticated users with workflow editing access can invoke internal helper functions from within the Code node. This allows a workflow editor to perform actions on the n8n host with the same privileges as the n8n process, including: reading files from the host filesystem (subject to any file-access restrictions configured on the instance and OS/container permissions), and writing files to the host filesystem (subject to the same restrictions). This issue has been patched in version 2.0.0. Workarounds for this issue involve limiting file operations by setting N8N_RESTRICT_FILE_ACCESS_TO to a dedicated directory (e.g., ~/.n8n-files) and ensure it contains no sensitive data, keeping N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES=true (default) to block access to .n8n and user-defined config files, and disabling high-risk nodes (including the Code node) using NODES_EXCLUDE if workflow editors are not fully trusted. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-68668",
-    "descripcion": "n8n is an open source workflow automation platform. From version 1.0.0 to before 2.0.0, a sandbox bypass vulnerability exists in the Python Code Node that uses Pyodide. An authenticated user with permission to create or modify workflows can exploit this vulnerability to execute arbitrary commands on the host system running n8n, using the same privileges as the n8n process. This issue has been patched in version 2.0.0. Workarounds for this issue involve disabling the Code Node by setting the environment variable NODES_EXCLUDE: &#34;[\\&#34;n8n-nodes-base.code\\&#34;]&#34;, disabling Python support in the Code node by setting the environment variable N8N_PYTHON_ENABLED=false, which was introduced in n8n version 1.104.0, and configuring n8n to use the task runner based Python sandbox via the N8N_RUNNERS_ENABLED and N8N_NATIVE_PYTHON_RUNNER environment variables. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-67729",
-    "descripcion": "LMDeploy is a toolkit for compressing, deploying, and serving LLMs. Prior to version 0.11.1, an insecure deserialization vulnerability exists in lmdeploy where torch.load() is called without the weights_only=True parameter when loading model checkpoint files. This allows an attacker to execute arbitrary code on the victim&#39;s machine when they load a malicious .bin or .pt model file. This issue has been patched in version 0.11.1. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-61914",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to version 1.114.0, a stored Cross-Site Scripting (XSS) vulnerability may occur in n8n when using the “Respond to Webhook” node. When this node responds with HTML content containing executable scripts, the payload may execute directly in the top-level window, rather than within the expected sandbox introduced in version 1.103.0. This behavior can enable a malicious actor with workflow creation permissions to execute arbitrary JavaScript in the context of the n8n editor interface. This issue has been patched in version 1.114.0. Workarounds for this issue involve restricting workflow creation and modification privileges to trusted users only, avoiding use of untrusted HTML responses in the “Respond to Webhook” node, and using an external reverse proxy or HTML sanitizer to filter responses that include executable scripts. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-66737",
-    "descripcion": "Yealink T21P_E2 Phone 52.84.0.15 is vulnerable to Directory Traversal. A remote normal privileged attacker can read arbitrary files via a crafted request result read function of the diagnostic component. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2024-44065",
-    "descripcion": "Time-based blind SQL Injection vulnerability in Cloudlog v2.6.15 at the endpoint /index.php/logbookadvanced/search in the qsoresults parameter. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2024-42718",
-    "descripcion": "A path traversal vulnerability in Croogo CMS 4.0.7 allows remote attackers to read arbitrary files via a specially crafted path in the &#39;edit-file&#39; parameter. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-67015",
-    "descripcion": "Incorrect access control in Comtech EF Data CDM-625 / CDM-625A Advanced Satellite Modem with firmware v2.5.1 allows attackers to change the Administrator password and escalate privileges via sending a crafted POST request to /Forms/admin_access_1. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-67014",
-    "descripcion": "Incorrect access control in DEV Systemtechnik GmbH DEV 7113 RF over Fiber Distribution System 32-0078 H.01 allows unauthenticated attackers to access an administrative endpoint. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-67013",
-    "descripcion": "The web management interface in ETL Systems Ltd DEXTRA Series &#39; Digital L-Band Distribution System v1.8 does not implement Cross-Site Request Forgery (CSRF) protection mechanisms (no tokens, no Origin/Referer validation) on critical configuration endpoints. 26/12/2025 26/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
