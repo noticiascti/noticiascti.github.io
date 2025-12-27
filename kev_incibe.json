@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2025-12-27",
+    "cve": "CVE-2025-15107",
+    "descripcion": "A security vulnerability has been detected in actiontech sqle up to 4.2511.0. The impacted element is an unknown function of the file sqle/utils/jwt.go of the component JWT Secret Handler. The manipulation of the argument JWTSecretKey leads to use of hard-coded cryptographic key . The attack is possible to be carried out remotely. The attack&#39;s complexity is rated as high. The exploitability is regarded as difficult. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report and is planning to fix this flaw in an upcoming release. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:N/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2025-12-27",
     "cve": "CVE-2025-15106",
     "descripcion": "A weakness has been identified in getmaxun maxun up to 0.0.28. The affected element is the function router.get of the file server/src/routes/auth.ts of the component Authentication Endpoint. Executing manipulation can lead to improper authorization. The attack can be executed remotely. The exploit has been made available to the public and could be exploited. The vendor was contacted early about this disclosure but did not respond in any way. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2025-12-26",
     "cve": "CVE-2025-68473",
     "descripcion": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.1, 5.4.3, 5.3.4, 5.2.6, 5.1.6, and earlier, in the ESP-IDF Bluetooth host stack (BlueDroid), the function bta_dm_sdp_result() used a fixed-size array uuid_list[32][MAX_UUID_SIZE] to store discovered service UUIDs during the SDP (Service Discovery Protocol) process. On modern Bluetooth devices, it is possible for the number of available services to exceed this fixed limit (32). In such cases, if more than 32 services are discovered, subsequent writes to uuid_list could exceed the bounds of the array, resulting in a potential out-of-bounds write condition. 27/12/2025 27/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.00 Gravedad 4.0 txt NONE Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2025-12-26",
-    "cve": "CVE-2025-68148",
-    "descripcion": "FreshRSS is a free, self-hostable RSS aggregator. From version 1.27.0 to before 1.28.0, An attacker could globally deny access to feeds via proxy modifying to 429 Retry-After for a large list of feeds on given instance, making it unusable for majority of users. This issue has been patched in version 1.28.0. 27/12/2025 27/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
