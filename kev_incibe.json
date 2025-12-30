@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-68706",
-    "descripcion": "A stack-based buffer overflow exists in the GoAhead-Webs HTTP daemon on KuWFi 4G LTE AC900 devices with firmware 1.0.13. The /goform/formMultiApnSetting handler uses sprintf() to copy the user-supplied pincode parameter into a fixed 132-byte stack buffer with no bounds checks. This allows an attacker to corrupt adjacent stack memory, crash the web server, and (under certain conditions) may enable arbitrary code execution. 29/12/2025 29/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15284",
+    "descripcion": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.This issue affects qs: 30/12/2025 30/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-68431",
-    "descripcion": "libheif is an HEIF and AVIF file format decoder and encoder. Prior to version 1.21.0, a crafted HEIF that exercises the overlay image item path triggers a heap buffer over-read in `HeifPixelImage::overlay()`. The function computes a negative row length (likely from an unclipped overlay rectangle or invalid offsets), which then underflows when converted to `size_t` and is passed to `memcpy`, causing a very large read past the end of the source plane and a crash. Version 1.21.0 contains a patch. As a workaround, avoid decoding images using `iovl` overlay boxes. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-15209",
+    "descripcion": "A weakness has been identified in code-projects Refugee Food Management System 1.0. This affects an unknown part of the file /home/editfood.php. This manipulation of the argument a/b/c/d causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be exploited. 30/12/2025 30/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-67255",
-    "descripcion": "In NagiosXI 2026R1.0.1 build 1762361101, Dashboard parameters lack proper filtering, allowing any authenticated user to exploit a SQL Injection vulnerability. 29/12/2025 29/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15208",
+    "descripcion": "A security flaw has been discovered in code-projects Refugee Food Management System 1.0. Affected by this issue is some unknown functionality of the file /home/editrefugee.php. The manipulation of the argument rfid results in sql injection. The attack can be launched remotely. The exploit has been released to the public and may be exploited. 30/12/2025 30/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-67254",
-    "descripcion": "NagiosXI 2026R1.0.1 build 1762361101 is vulnerable to Directory Traversal in /admin/coreconfigsnapshots.php. 29/12/2025 29/12/2025 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68860",
+    "descripcion": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Mobile Builder Mobile builder allows Authentication Abuse.This issue affects Mobile builder: from n/a through 1.4.2. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-15201",
-    "descripcion": "A flaw has been found in SohuTV CacheCloud up to 3.2.0. The impacted element is the function redirectNoPower of the file src/main/java/com/sohu/cache/web/controller/WebResourceController.java. This manipulation causes cross site scripting. The attack is possible to be carried out remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet. 29/12/2025 29/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-68607",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Hiroaki Miyashita Custom Field Template allows Stored XSS.This issue affects Custom Field Template: from n/a through 2.7.5. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-15200",
-    "descripcion": "A vulnerability was detected in SohuTV CacheCloud up to 3.2.0. The affected element is the function getExceptionStatisticsByClient/getCommandStatisticsByClient/doIndex of the file src/main/java/com/sohu/cache/web/controller/AppClientDataShowController.java. The manipulation results in cross site scripting. The attack can be executed remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet. 29/12/2025 29/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:M/C:N/I:P/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 2.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-68562",
+    "descripcion": "Unrestricted Upload of File with Dangerous Type vulnerability in RomanCode MapSVG allows Upload a Web Shell to a Web Server.This issue affects MapSVG: from n/a through 8.7.3. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-15199",
-    "descripcion": "A security vulnerability has been detected in code-projects College Notes Uploading System 1.0. Impacted is an unknown function of the file /dashboard/userprofile.php. The manipulation of the argument image leads to unrestricted upload. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. 29/12/2025 29/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68504",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Crocoblock JetSearch allows DOM-Based XSS.This issue affects JetSearch: from n/a through 3.5.16. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-14728",
-    "descripcion": "Rapid7 Velociraptor versions before 0.75.6 contain a directory traversal issue on Linux servers that allows a rogue client to upload a file which is written outside the datastore directory. Velociraptor is normally only allowed to write in the datastore directory. The issue occurs due to insufficient sanitization of directory names which end with a &#34;.&#34;, only encoding the final &#34;.&#34; AS &#34;%2E&#34;. Although files can be written to incorrect locations, the containing directory must end with &#34;%2E&#34;. This limits the impact of this vulnerability, and prevents it from overwriting critical files. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68503",
+    "descripcion": "Missing Authorization vulnerability in Crocoblock JetBlog allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects JetBlog: from n/a through 2.4.7. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-14280",
-    "descripcion": "The PixelYourSite plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 11.1.5 through publicly exposed log files. This makes it possible for unauthenticated attackers to view potentially sensitive information contained in the exposed log files, when the &#34;Meta API logs&#34; setting is enabled (disabled by default). The vulnerability was partially patched in version 11.1.5 and fully patched in version 11.1.5.1. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68502",
+    "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in Crocoblock JetPopup allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects JetPopup: from n/a through 2.0.20.1. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2025-12-29",
-    "cve": "CVE-2025-13592",
-    "descripcion": "The Advanced Ads plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 2.0.14 via the &#39;change-ad__content&#39; shortcode parameter. This allows authenticated attackers with editor-level permissions or above, to execute code on the server. 29/12/2025 29/12/2025 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-15207",
+    "descripcion": "A vulnerability has been found in Campcodes Supplier Management System 1.0. Affected is an unknown function of the file /admin/view_products.php. The manipulation of the argument chkId[] leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. 29/12/2025 29/12/2025 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
