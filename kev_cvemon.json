@@ -11,6 +11,11 @@
   },
   {
     "fecha": "2026-01-03",
+    "cve": "CVE-2025-38352",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
+  },
+  {
+    "fecha": "2026-01-03",
     "cve": "CVE-2025-57819",
     "descripcion": "FreePBX is an open-source web-based graphical user interface. FreePBX 15, 16, and 17 endpoints are vulnerable due to insufficiently sanitized user-supplied data allowing unauthenticated access to FreePBX Administrator leading to arbitrary database manipulation and remote code ..."
   },
@@ -21,18 +26,18 @@
   },
   {
     "fecha": "2026-01-03",
+    "cve": "CVE-2025-26529",
+    "descripcion": "Description information displayed in the site administration live log required additional sanitizing to prevent a stored XSS risk."
+  },
+  {
+    "fecha": "2026-01-03",
     "cve": "CVE-2023-20869",
     "descripcion": "VMware Workstation (17.x) and VMware Fusion (13.x) contain a stack-based buffer-overflow vulnerability that exists in the functionality for sharing host Bluetooth devices with the virtual machine."
   },
   {
     "fecha": "2026-01-03",
-    "cve": "CVE-2025-38352",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
-  },
-  {
-    "fecha": "2026-01-03",
-    "cve": "CVE-2023-20870",
-    "descripcion": "VMware Workstation and Fusion contain an out-of-bounds read vulnerability that exists in the functionality for sharing host Bluetooth devices with the virtual machine."
+    "cve": "CVE-2025-46285",
+    "descripcion": "An integer overflow was addressed by adopting 64-bit timestamps. This issue is fixed in watchOS 26.2, macOS Sonoma 14.8.3, iOS 18.7.3 and iPadOS 18.7.3, iOS 26.2 and iPadOS 26.2, macOS Tahoe 26.2, macOS Sequoia 15.7.3, visionOS 26.2, tvOS 26.2. An app may be able to gain root ..."
   },
   {
     "fecha": "2026-01-03",
@@ -41,12 +46,7 @@
   },
   {
     "fecha": "2026-01-03",
-    "cve": "CVE-2025-26529",
-    "descripcion": "Description information displayed in the site administration live log required additional sanitizing to prevent a stored XSS risk."
-  },
-  {
-    "fecha": "2026-01-03",
-    "cve": "CVE-2025-14847",
-    "descripcion": "Mismatched length fields in Zlib compressed protocol headers may allow a read of uninitialized heap memory by an unauthenticated client. This issue affects all MongoDB Server v7.0 prior to 7.0.28 versions, MongoDB Server v8.0 versions prior to 8.0.17, MongoDB Server v8.2 ..."
+    "cve": "CVE-2023-20870",
+    "descripcion": "VMware Workstation and Fusion contain an out-of-bounds read vulnerability that exists in the functionality for sharing host Bluetooth devices with the virtual machine."
   }
 ]
