@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2026-21675",
-    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Versions 2.3.1 and below contain a Use After Free vulnerability in the CIccXform::Create() function, where it deletes the hint. This issue is fixed in version 2.3.1.1. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-15001",
+    "descripcion": "The FS Registration Password plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.0.1. This is due to the plugin not properly validating a user&#39;s identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user&#39;s passwords, including administrators, and leverage that to gain access to their account. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2026-21674",
-    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Versions 2.3.1 and below contain a memory leak vulnerability in its XML MPE Parsing Path (iccFromXml). This issue is fixed in version 2.3.1.1. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-14997",
+    "descripcion": "The BuddyPress Xprofile Custom Field Types plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the &#39;delete_field&#39; function in all versions up to, and including, 1.2.8. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2026-21673",
-    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Versions 2.3.1 and below have overflows and underflows in CIccXmlArrayType::ParseTextCountNum(). This vulnerability affects users of the iccDEV library who process ICC color profiles. This issue is fixed in version 2.3.1.1. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-14996",
+    "descripcion": "The AS Password Field In Default Registration Form plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 2.0.0. This is due to the plugin not properly validating a user&#39;s identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user&#39;s passwords, including administrators, and leverage that to gain access to their account. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2025-20807",
-    "descripcion": "In dpe, there is a possible out of bounds write due to an integer overflow. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10114841; Issue ID: MSV-4451. 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-14441",
+    "descripcion": "The Popupkit plugin for WordPress is vulnerable to arbitrary subscriber data deletion due to missing authorization on the DELETE `/subscribers` REST API endpoint in all versions up to, and including, 2.2.0. This is due to the `permission_callback` only validating wp_rest nonce without checking user capabilities. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary subscriber records. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2025-20806",
-    "descripcion": "In dpe, there is a possible memory corruption due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10114835; Issue ID: MSV-4479. 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-14438",
+    "descripcion": "The Xagio SEO – AI Powered SEO plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 7.1.0.30 via the &#39;pixabayDownloadImage&#39; function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2025-20805",
-    "descripcion": "In dpe, there is a possible memory corruption due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10114696; Issue ID: MSV-4480. 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-14120",
+    "descripcion": "The URL Image Importer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 1.0.7 due to insufficient sanitization of SVG files. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2025-20804",
-    "descripcion": "In dpe, there is a possible memory corruption due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is needed for exploitation. Patch ID: ALPS10198951; Issue ID: MSV-4503. 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21750",
+    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2025-20803",
-    "descripcion": "In dpe, there is a possible memory corruption due to an integer overflow. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is needed for exploitation. Patch ID: ALPS10199779; Issue ID: MSV-4504. 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21749",
+    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2025-20802",
-    "descripcion": "In geniezone, there is a possible memory corruption due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10238968; Issue ID: MSV-4914. 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21748",
+    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-06",
-    "cve": "CVE-2025-20801",
-    "descripcion": "In seninf, there is a possible memory corruption due to a race condition. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10251210; Issue ID: MSV-4926. 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21747",
+    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
