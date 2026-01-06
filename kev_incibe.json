@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-01-06",
+    "cve": "CVE-2025-14371",
+    "descripcion": "The Tag, Category, and Taxonomy Manager – AI Autotagger with OpenAI plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the taxopress_ai_add_post_term function in all versions up to, and including, 3.41.0. This makes it possible for authenticated attackers, with Contributor-level access and above, to add or remove taxonomy terms (tags, categories) on any post, including ones they do not own. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-06",
+    "cve": "CVE-2025-13812",
+    "descripcion": "The GamiPress – Gamification plugin to reward points, achievements, badges & ranks in WordPress plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the gamipress_ajax_get_posts and gamipress_ajax_get_users functions in all versions up to, and including, 7.6.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to enumerate users, including their email addresses and to retrieve titles of private posts. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-06",
+    "cve": "CVE-2025-12067",
+    "descripcion": "The Table Field Add-on for ACF and SCF plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Table Cell Content in all versions up to, and including, 1.3.30 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-06",
+    "cve": "CVE-2026-21411",
+    "descripcion": "Authentication bypass issue exists in OpenBlocks series versions prior to FW5.0.8, which may allow an attacker to bypass administrator authentication and change the password. 06/01/2026 06/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-06",
+    "cve": "CVE-2025-4776",
+    "descripcion": "The Phlox theme for WordPress is vulnerable to Stored Cross-Site Scripting via the `data-caption` HTML attribute in all versions up to, and including, 2.17.7 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-06",
+    "cve": "CVE-2025-13215",
+    "descripcion": "The Shortcodes and extra features for Phlox theme plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 2.17.13 via the auxels_ajax_search due to insufficient restrictions on which posts can be included. This makes it possible for unauthenticated attackers to extract titles of draft posts that they should not have access to. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-06",
     "cve": "CVE-2025-15001",
     "descripcion": "The FS Registration Password plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.0.1. This is due to the plugin not properly validating a user&#39;s identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user&#39;s passwords, including administrators, and leverage that to gain access to their account. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-01-06",
     "cve": "CVE-2025-14441",
     "descripcion": "The Popupkit plugin for WordPress is vulnerable to arbitrary subscriber data deletion due to missing authorization on the DELETE `/subscribers` REST API endpoint in all versions up to, and including, 2.2.0. This is due to the `permission_callback` only validating wp_rest nonce without checking user capabilities. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary subscriber records. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-06",
-    "cve": "CVE-2025-14438",
-    "descripcion": "The Xagio SEO – AI Powered SEO plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 7.1.0.30 via the &#39;pixabayDownloadImage&#39; function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-06",
-    "cve": "CVE-2025-14120",
-    "descripcion": "The URL Image Importer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 1.0.7 due to insufficient sanitization of SVG files. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file. 06/01/2026 06/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-06",
-    "cve": "CVE-2026-21750",
-    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-06",
-    "cve": "CVE-2026-21749",
-    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-06",
-    "cve": "CVE-2026-21748",
-    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-06",
-    "cve": "CVE-2026-21747",
-    "descripcion": "Rejected reason: Not used 06/01/2026 06/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
