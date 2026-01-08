@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-0701",
-    "descripcion": "A vulnerability was identified in code-projects Intern Membership Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /intern/admin/add_admin.php. The manipulation of the argument Username leads to sql injection. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-66001",
+    "descripcion": "NeuVector supports login authentication through OpenID Connect. However, the TLS verification (which verifies the remote server&#39;s authenticity and integrity) for OpenID Connect is not enforced by default. As a result this may expose the system to man-in-the-middle (MITM) attacks. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-0700",
-    "descripcion": "A vulnerability was determined in code-projects Intern Membership Management System 1.0. Affected is an unknown function of the file /intern/admin/check_admin.php. Executing a manipulation of the argument Username can lead to sql injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-22242",
+    "descripcion": "CoreShop is a Pimcore enhanced eCommerce solution. Prior to version 4.1.8, a blind SQL injection vulnerability exists in the application that allows an authenticated administrator-level user to extract database contents using boolean-based or time-based techniques. The database account used by the application is read-only and non-DBA, limiting impact to confidential data disclosure only. No data modification or service disruption is possible. This issue has been patched in version 4.1.8. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-0699",
-    "descripcion": "A vulnerability was found in code-projects Intern Membership Management System 1.0. This impacts an unknown function of the file /intern/admin/edit_activity.php. Performing a manipulation of the argument activity_id results in sql injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-21894",
+    "descripcion": "n8n is an open source workflow automation platform. In versions from 0.150.0 to before 2.2.2, an authentication bypass vulnerability in the Stripe Trigger node allows unauthenticated parties to trigger workflows by sending forged Stripe webhook events. The Stripe Trigger creates and stores a Stripe webhook signing secret when registering the webhook endpoint, but incoming webhook requests were not verified against this secret. As a result, any HTTP client that knows the webhook URL could send a POST request containing a matching event type, causing the workflow to execute as if a legitimate Stripe event had been received. This issue affects n8n users who have active workflows using the Stripe Trigger node. An attacker could potentially fake payment or subscription events and influence downstream workflow behavior. The practical risk is reduced by the fact that the webhook URL contains a high-entropy UUID; however, authenticated n8n users with access to the workflow can view this webhook ID. This issue has been patched in version 2.2.2. A temporary workaround for this issue involves users deactivating affected workflows or restricting access to workflows containing Stripe Trigger nodes to trusted users only. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-13679",
-    "descripcion": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the get_order_by_id() function in all versions up to, and including, 3.9.3. This makes it possible for authenticated attackers, with Subscriber-level access and above, to enumerate order IDs and exfiltrate sensitive data (PII), such as student name, email address, phone number, and billing address. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-21874",
+    "descripcion": "NiceGUI is a Python-based UI framework. From versions v2.10.0 to 3.4.1, an unauthenticated attacker can exhaust Redis connections by repeatedly opening and closing browser tabs on any NiceGUI application using Redis-backed storage. Connections are never released, leading to service degradation when Redis hits its connection limit. NiceGUI continues accepting new connections - errors are logged but the app stays up with broken storage functionality. This issue has been patched in version 3.5.0. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-0698",
-    "descripcion": "A vulnerability has been found in code-projects Intern Membership Management System 1.0. This affects an unknown function of the file /intern/admin/edit_students.php. Such manipulation of the argument admin_id leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-21873",
+    "descripcion": "NiceGUI is a Python-based UI framework. From versions 2.22.0 to 3.4.1, an unsafe implementation in the pushstate event listener used by ui.sub_pages allows an attacker to manipulate the fragment identifier of the URL, which they can do despite being cross-site, using an iframe. This issue has been patched in version 3.5.0. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-0697",
-    "descripcion": "A flaw has been found in code-projects Intern Membership Management System 1.0. The impacted element is an unknown function of the file /intern/admin/edit_admin.php. This manipulation of the argument admin_id causes sql injection. The attack may be initiated remotely. The exploit has been published and may be used. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-21872",
+    "descripcion": "NiceGUI is a Python-based UI framework. From versions 2.22.0 to 3.4.1, an unsafe implementation in the click event listener used by ui.sub_pages, combined with attacker-controlled link rendering on the page, causes XSS when the user actively clicks on the link. This issue has been patched in version 3.5.0. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22581",
-    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21871",
+    "descripcion": "NiceGUI is a Python-based UI framework. From versions 2.13.0 to 3.4.1, there is a XSS risk in NiceGUI when developers pass attacker-controlled strings into ui.navigate.history.push() or ui.navigate.history.replace(). These helpers are documented as History API wrappers for updating the browser URL without page reload. However, if the URL argument is embedded into generated JavaScript without proper escaping, a crafted payload can break out of the intended string context and execute arbitrary JavaScript in the victim’s browser. Applications that do not pass untrusted input into ui.navigate.history.push/replace are not affected. This issue has been patched in version 3.5.0. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22580",
-    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0676",
+    "descripcion": "Missing Authorization vulnerability in G5Theme Zorka zorka allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Zorka: from n/a through 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22579",
-    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0675",
+    "descripcion": "Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in webaware NextGEN Download Gallery nextgen-download-gallery allows Retrieve Embedded Sensitive Data.This issue affects NextGEN Download Gallery: from n/a through 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22578",
-    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0674",
+    "descripcion": "Missing Authorization vulnerability in Campaign Monitor Campaign Monitor for WordPress forms-for-campaign-monitor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Campaign Monitor for WordPress: from n/a through 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
