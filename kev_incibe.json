@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21883",
-    "descripcion": "Bokeh is an interactive visualization library written in Python. In versions 3.8.1 and below, if a server is configured with an allowlist (e.g., dashboard.corp), an attacker can register a domain like dashboard.corp.attacker.com (or use a subdomain if applicable) and lure a victim to visit it. The malicious site can then initiate a WebSocket connection to the vulnerable Bokeh server. Since the Origin header (e.g., http://dashboard.corp.attacker.com/) matches the allowlist according to the flawed logic, the connection is accepted. Once connected, the attacker can interact with the Bokeh server on behalf of the victim, potentially accessing sensitive data, or modifying visualizations. This issue is fixed in version 3.8.2. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0697",
+    "descripcion": "A flaw has been found in code-projects Intern Membership Management System 1.0. The impacted element is an unknown function of the file /intern/admin/edit_admin.php. This manipulation of the argument admin_id causes sql injection. The attack may be initiated remotely. The exploit has been published and may be used. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21881",
-    "descripcion": "Kanboard is project management software focused on Kanban methodology. Versions 1.2.48 and below is vulnerable to a critical authentication bypass when REVERSE_PROXY_AUTH is enabled. The application blindly trusts HTTP headers for user authentication without verifying the request originated from a trusted reverse proxy. An attacker can impersonate any user, including administrators, by simply sending a spoofed HTTP header. This issue is fixed in version 1.2.49. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-22581",
+    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21880",
-    "descripcion": "Kanboard is project management software focused on Kanban methodology. Versions 1.2.48 and below have an LDAP Injection vulnerability in the LDAP authentication mechanism. User-supplied input is directly substituted into LDAP search filters without proper sanitization, allowing attackers to enumerate all LDAP users, discover sensitive user attributes, and perform targeted attacks against specific accounts. This issue is fixed in version 1.2.49. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-22580",
+    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21879",
-    "descripcion": "Kanboard is project management software focused on Kanban methodology. Versions 1.2.48 and below are vulnerable to an Open Redirect attack that allows malicious actors to redirect authenticated users to attacker-controlled websites. By crafting URLs such as //evil.com, attackers can bypass the filter_var($url, FILTER_VALIDATE_URL) validation check. This vulnerability could be exploited to conduct phishing attacks, steal user credentials, or distribute malware. The issue is fixed in version 1.2.49. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-22579",
+    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2019-25295",
-    "descripcion": "The WP Cost Estimation plugin for WordPress is vulnerable to Upload Directory Traversal in versions before 9.660 via the uploadFormFiles function. This allows attackers to overwrite any file with a whitelisted type on an affected site. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-22578",
+    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22035",
-    "descripcion": "Greenshot is an open source Windows screenshot utility. Versions 1.3.310 and below arvulnerable to OS Command Injection through unsanitized filename processing. The FormatArguments method in ExternalCommandDestination.cs:269 uses string.Format() to insert user-controlled filenames directly into shell commands without sanitization, allowing attackers to execute arbitrary commands by crafting malicious filenames containing shell metacharacters. This issue is fixed in version 1.3.311. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-22577",
+    "descripcion": "Rejected reason: Not used 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21877",
-    "descripcion": "n8n is an open source workflow automation platform. In versions 0.121.2 and below, an authenticated attacker may be able to execute malicious code using the n8n service. This could result in full compromise and can impact both self-hosted and n8n Cloud instances. This issue is fixed in version 1.121.3. Administrators can reduce exposure by disabling the Git node and limiting access for untrusted users, but upgrading to the latest version is recommended. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-21427",
+    "descripcion": "The installers for multiple products provided by PIONEER CORPORATION contain an issue with the DLL search path, which may lead to insecurely loading Dynamic Link Libraries. As a result, arbitrary code may be executed with the privileges of the running installer. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21868",
-    "descripcion": "Flag Forge is a Capture The Flag (CTF) platform. Versions 2.3.2 and below have a Regular Expression Denial of Service (ReDoS) vulnerability in the user profile API endpoint (/api/user/[username]). The application constructs a regular expression dynamically using unescaped user input (the username parameter). An attacker can exploit this by sending a specially crafted username containing regex meta-characters (e.g., deeply nested groups or quantifiers), causing the MongoDB regex engine to consume excessive CPU resources. This can lead to Denial of Service for other users. The issue is fixed in version 2.3.3. To workaround this issue, implement a Web Application Firewall (WAF) rule to block requests containing regex meta-characters in the URL path. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-0707",
+    "descripcion": "A flaw was found in Keycloak. The Keycloak Authorization header parser is overly permissive regarding the formatting of the &#34;Bearer&#34; authentication scheme. It accepts non-standard characters (such as tabs) as separators and tolerates case variations that deviate from RFC 6750 specifications. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-01-07",
-    "cve": "CVE-2026-21875",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. Versions 5.5.2-#187 and below allow an attacker to perform Blind SQL Injection through the add comment section within a channel. When adding a comment within a channel, there is a POST request to the /actions/ajax.php endpoint. The obj_id parameter within the POST request to /actions/ajax.php is then used within the user_exists function of the upload/includes/classes/user.class. php file as the $id parameter. It is then used within the count function of the upload/includes/classes/db.class. php file. The $id parameter is concatenated into the query without validation or sanitization, and a user-supplied input like 1&#39; or 1=1-- - can be used to trigger the injection. This issue does not have a fix at the time of publication. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-01-08",
+    "cve": "CVE-2025-14275",
+    "descripcion": "The Jeg Elementor Kit plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 3.0.1 due to insufficient input sanitization in the countdown widget&#39;s redirect functionality. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary JavaScript that will execute when an administrator or other user views the page containing the malicious countdown element. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-01-07",
-    "cve": "CVE-2026-21869",
-    "descripcion": "llama.cpp is an inference of several LLM models in C/C++. In commits 55d4206c8 and prior, the n_discard parameter is parsed directly from JSON input in the llama.cpp server&#39;s completion endpoints without validation to ensure it&#39;s non-negative. When a negative value is supplied and the context fills up, llama_memory_seq_rm/add receives a reversed range and negative offset, causing out-of-bounds memory writes in the token evaluation loop. This deterministic memory corruption can crash the process or enable remote code execution (RCE). There is no fix at the time of publication. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-01-08",
+    "cve": "CVE-2025-12640",
+    "descripcion": "The Folders – Unlimited Folders to Organize Media Library Folder, Pages, Posts, File Manager plugin for WordPress is vulnerable to Unauthorized Arbitrary Media Replacement in all versions up to, and including, 3.1.5. This is due to missing object-level authorization checks in the handle_folders_file_upload() function. This makes it possible for authenticated attackers, with Author-level access and above, to replace arbitrary media files from the WordPress Media Library. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
