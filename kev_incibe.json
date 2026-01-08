@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21895",
-    "descripcion": "The `rsa` crate is an RSA implementation written in rust. Prior to version 0.9.10, when creating a RSA private key from its components, the construction panics instead of returning an error when one of the primes is `1`. Version 0.9.10 fixes the issue. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22255",
+    "descripcion": "iccDEV provides a set of libraries and tools that allow for the interaction, manipulation, and application of International Color Consortium (ICC) color management profiles. Versions prior to 2.3.1.2 have a heap-buffer-overflow vulnerability in `CIccCLUT::Init()` at `IccProfLib/IccTagLut.cpp`. This vulnerability affects users of the iccDEV library who process ICC color profiles. Version 2.3.1.2 contains a patch. No known workarounds are available. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-21876",
-    "descripcion": "The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 4.22.0 and 3.3.8, the current rule 922110 has a bug when processing multipart requests with multiple parts. When the first rule in a chain iterates over a collection (like `MULTIPART_PART_HEADERS`), the capture variables (`TX:0`, `TX:1`) get overwritten with each iteration. Only the last captured value is available to the chained rule, which means malicious charsets in earlier parts can be missed if a later part has a legitimate charset. Versions 4.22.0 and 3.3.8 patch the issue. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-22246",
+    "descripcion": "Mastodon is a free, open-source social network server based on ActivityPub. Mastodon 4.3 added notifications of severed relationships, allowing end-users to inspect the relationships they lost as the result of a moderation action. The code allowing users to download lists of severed relationships for a particular event fails to check the owner of the list before returning the lost relationships. Any registered local user can access the list of lost followers and followed users caused by any severance event, and go through all severance events this way. The leaked information does not include the name of the account which has lost follows and followers. This has been fixed in Mastodon v4.3.17, v4.4.11 and v4.5.4. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-8307",
-    "descripcion": "Asseco InfoMedica is a comprehensive solution used to manage both administrative and medical tasks in the healthcare sector. Passwords of all users are stored in a database in an encoded format. An attacker in possession of these encoded passwords is able to decode them by using an algorithm embedded in the client-side part of the software. This vulnerability has been fixed in versions 4.50.1 and 5.38.0 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22245",
+    "descripcion": "Mastodon is a free, open-source social network server based on ActivityPub. By nature, Mastodon performs a lot of outbound requests to user-provided domains. Mastodon, however, has some protection mechanism to disallow requests to local IP addresses (unless specified in `ALLOWED_PRIVATE_ADDRESSES`) to avoid the &#34;confused deputy&#34; problem. The list of disallowed IP address ranges was lacking some IP address ranges that can be used to reach local IP addresses. An attacker can use an IP address in the affected ranges to make Mastodon perform HTTP requests against loopback or local network hosts, potentially allowing access to otherwise private resources and services. This is fixed in Mastodon v4.5.4, v4.4.11, v4.3.17 and v4.2.29. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-8306",
-    "descripcion": "Asseco InfoMedica is a comprehensive solution used to manage both administrative and medical tasks in the healthcare sector. A low privileged user is able to obtain encoded passwords of all other accounts (including main administrator) due to lack of granularity in access control. Chained exploitation of this vulnerability and CVE-2025-8307 allows an attacker to escalate privileges. This vulnerability has been fixed in versions 4.50.1 and 5.38.0 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22244",
+    "descripcion": "OpenMetadata is a unified metadata platform. Versions prior to 1.11.4 are vulnerable to remote code execution via Server-Side Template Injection (SSTI) in FreeMarker email templates. An attacker must have administrative privileges to exploit the vulnerability. Version 1.11.4 contains a patch. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-0719",
-    "descripcion": "A flaw was found in libsoup&#39;s NTLM (NT LAN Manager) authentication module. When NTLM authentication is enabled, a local attacker can exploit a stack-based buffer overflow vulnerability in the md4sum() function. This allows the attacker to overwrite adjacent memory, which may result in arbitrary code execution with the privileges of the affected application. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-68151",
+    "descripcion": "CoreDNS is a DNS server that chains plugins. Prior to version 1.14.0, multiple CoreDNS server implementations (gRPC, HTTPS, and HTTP/3) lack critical resource-limiting controls. An unauthenticated remote attacker can exhaust memory and degrade or crash the server by opening many concurrent connections, streams, or sending oversized request bodies. The issue is similar in nature to CVE-2025-47950 (QUIC DoS) but affects additional server types that do not enforce connection limits, stream limits, or message size constraints. Version 1.14.0 contains a patch. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-69260",
-    "descripcion": "A message out-of-bounds read vulnerability in Trend Micro Apex Central could allow a remote attacker to create a denial-of-service condition on affected installations. Please note: authentication is not required in order to exploit this vulnerability. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-67858",
+    "descripcion": "A Improper Neutralization of Argument Delimiters vulnerability in Foomuuri can lead to integrity loss of the firewall configuration or further unspecified impact by manipulating the JSON configuration passed to `nft`. This issue affects Foomuuri: from ? before 0.31. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-69259",
-    "descripcion": "A message unchecked NULL return value vulnerability in Trend Micro Apex Central could allow a remote attacker to create a denial-of-service condition on affected installations. Please note: authentication is not required in order to exploit this vulnerability.. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-67091",
+    "descripcion": "An issue in GL Inet GL.Inet AX1800 Version 4.6.4 & 4.6.8 are vulnerable. GL.Inet AX1800 Version 4.6.4 & 4.6.8 in the GL.iNet custom opkg wrapper script located at /usr/libexec/opkg-call. The script is executed with root privileges when triggered via the LuCI web interface or authenticated API calls to manage packages. The vulnerable code uses shell redirection to create a lock file in the world-writable /tmp directory. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-69258",
-    "descripcion": "A LoadLibraryEX vulnerability in Trend Micro Apex Central could allow an unauthenticated remote attacker to load an attacker-controlled DLL into a key executable, leading to execution of attacker-supplied code under the context of SYSTEM on affected installations. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-67090",
+    "descripcion": "The LuCI web interface on Gl Inet GL.Inet AX1800 Version 4.6.4 & 4.6.8 are vulnerable. Fix available in version 4.8.2 GL.Inet AX1800 Version 4.6.4 & 4.6.8 lacks rate limiting or account lockout mechanisms on the authentication endpoint (`/cgi-bin/luci`). An unauthenticated attacker on the local network can perform unlimited password attempts against the admin interface. 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-62877",
-    "descripcion": "Projects using the SUSE Virtualization (Harvester) environment may expose the OS default ssh login password if they are using the 1.5.x or 1.6.x interactive installer to either create a new cluster or add new hosts to an existing cluster. The environment is not affected if the PXE boot mechanism is utilized along with the Harvester configuration setup. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-67089",
+    "descripcion": "A command injection vulnerability exists in the GL-iNet GL-AXT1800 router firmware v4.6.8. The vulnerability is present in the `plugins.install_package` RPC method, which fails to properly sanitize user input in package names. Authenticated attackers can exploit this to execute arbitrary commands with root privileges 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-66001",
-    "descripcion": "NeuVector supports login authentication through OpenID Connect. However, the TLS verification (which verifies the remote server&#39;s authenticity and integrity) for OpenID Connect is not enforced by default. As a result this may expose the system to man-in-the-middle (MITM) attacks. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-63611",
+    "descripcion": "Cross-Site Scripting in phpgurukul Hostel Management System v2.1 user-provided complaint fields (Explain the Complaint) submitted via /register-complaint.php are stored and rendered unescaped in the admin viewer (/admin/complaint-details.php?cid=). When an administrator opens the complaint, injected HTML/JavaScript executes in the admin&#39;s browser. 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
