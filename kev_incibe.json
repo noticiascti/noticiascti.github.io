@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22255",
-    "descripcion": "iccDEV provides a set of libraries and tools that allow for the interaction, manipulation, and application of International Color Consortium (ICC) color management profiles. Versions prior to 2.3.1.2 have a heap-buffer-overflow vulnerability in `CIccCLUT::Init()` at `IccProfLib/IccTagLut.cpp`. This vulnerability affects users of the iccDEV library who process ICC color profiles. Version 2.3.1.2 contains a patch. No known workarounds are available. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-22257",
+    "descripcion": "Salvo is a Rust web backend framework. Prior to version 0.88.1, the function list_html generates a file view of a folder without sanitizing the files or folders names, this may potentially lead to XSS in cases where a website allow the access to public files using this feature and anyone can upload a file. This issue has been patched in version 0.88.1. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22246",
-    "descripcion": "Mastodon is a free, open-source social network server based on ActivityPub. Mastodon 4.3 added notifications of severed relationships, allowing end-users to inspect the relationships they lost as the result of a moderation action. The code allowing users to download lists of severed relationships for a particular event fails to check the owner of the list before returning the lost relationships. Any registered local user can access the list of lost followers and followed users caused by any severance event, and go through all severance events this way. The leaked information does not include the name of the account which has lost follows and followers. This has been fixed in Mastodon v4.3.17, v4.4.11 and v4.5.4. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-22256",
+    "descripcion": "Salvo is a Rust web backend framework. Prior to version 0.88.1, the function list_html generate an file view of a folder which include a render of the current path, in which its inserted in the HTML without proper sanitation, this leads to reflected XSS using the fact that request path is decoded and normalized in the matching stage but not is inserted raw in the html view (current.path), the only constraint here is for the root path (eg. /files in the PoC example) to have a sub directory (e.g common ones styles/scripts/etc…) so that the matching return the list HTML page instead of the Not Found page. This issue has been patched in version 0.88.1. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22245",
-    "descripcion": "Mastodon is a free, open-source social network server based on ActivityPub. By nature, Mastodon performs a lot of outbound requests to user-provided domains. Mastodon, however, has some protection mechanism to disallow requests to local IP addresses (unless specified in `ALLOWED_PRIVATE_ADDRESSES`) to avoid the &#34;confused deputy&#34; problem. The list of disallowed IP address ranges was lacking some IP address ranges that can be used to reach local IP addresses. An attacker can use an IP address in the affected ranges to make Mastodon perform HTTP requests against loopback or local network hosts, potentially allowing access to otherwise private resources and services. This is fixed in Mastodon v4.5.4, v4.4.11, v4.3.17 and v4.2.29. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22253",
+    "descripcion": "Soft Serve is a self-hostable Git server for the command line. Prior to version 0.11.2, an authorization bypass in the LFS lock deletion endpoint allows any authenticated user with repository write access to delete locks owned by other users by setting the force flag. The vulnerable code path processes force deletions before retrieving user context, bypassing ownership validation entirely. This issue has been patched in version 0.11.2. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2026-22244",
-    "descripcion": "OpenMetadata is a unified metadata platform. Versions prior to 1.11.4 are vulnerable to remote code execution via Server-Side Template Injection (SSTI) in FreeMarker email templates. An attacker must have administrative privileges to exploit the vulnerability. Version 1.11.4 contains a patch. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21860",
+    "descripcion": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.5, Werkzeug&#39;s safe_join function allows path segments with Windows device names that have file extensions or trailing spaces. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. Windows still accepts them with any file extension, such as CON.txt, or trailing spaces such as CON. This issue has been patched in version 3.1.5. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-68151",
-    "descripcion": "CoreDNS is a DNS server that chains plugins. Prior to version 1.14.0, multiple CoreDNS server implementations (gRPC, HTTPS, and HTTP/3) lack critical resource-limiting controls. An unauthenticated remote attacker can exhaust memory and degrade or crash the server by opening many concurrent connections, streams, or sending oversized request bodies. The issue is similar in nature to CVE-2025-47950 (QUIC DoS) but affects additional server types that do not enforce connection limits, stream limits, or message size constraints. Version 1.14.0 contains a patch. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-67325",
+    "descripcion": "Unrestricted file upload in the hotel review feature in QloApps versions 1.7.0 and earlier allows remote unauthenticated attackers to achieve remote code execution. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-67858",
-    "descripcion": "A Improper Neutralization of Argument Delimiters vulnerability in Foomuuri can lead to integrity loss of the firewall configuration or further unspecified impact by manipulating the JSON configuration passed to `nft`. This issue affects Foomuuri: from ? before 0.31. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-65731",
+    "descripcion": "An issue was discovered in D-Link Router DIR-605L (Hardware version F1; Firmware version: V6.02CN02) allowing an attacker with physical access to the UART pins to execute arbitrary commands due to presence of root terminal access on a serial interface without proper access control. 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-67091",
-    "descripcion": "An issue in GL Inet GL.Inet AX1800 Version 4.6.4 & 4.6.8 are vulnerable. GL.Inet AX1800 Version 4.6.4 & 4.6.8 in the GL.iNet custom opkg wrapper script located at /usr/libexec/opkg-call. The script is executed with root privileges when triggered via the LuCI web interface or authenticated API calls to manage packages. The vulnerable code uses shell redirection to create a lock file in the world-writable /tmp directory. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-65518",
+    "descripcion": "Plesk Obsidian versions 8.0.1 through 18.0.73 are vulnerable to a Denial of Service (DoS) condition. The vulnerability exists in the get_password.php endpoint, where a crafted request containing a malicious payload can cause the affected web interface to continuously reload, rendering the service unavailable to legitimate users. An attacker can exploit this issue remotely without authentication, resulting in a persistent availability impact on the affected Plesk Obsidian instance. 08/01/2026 08/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-67090",
-    "descripcion": "The LuCI web interface on Gl Inet GL.Inet AX1800 Version 4.6.4 & 4.6.8 are vulnerable. Fix available in version 4.8.2 GL.Inet AX1800 Version 4.6.4 & 4.6.8 lacks rate limiting or account lockout mechanisms on the authentication endpoint (`/cgi-bin/luci`). An unauthenticated attacker on the local network can perform unlimited password attempts against the admin interface. 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22587",
+    "descripcion": "Ideagen DevonWay contains a stored cross site scripting vulnerability. A remote, authenticated attacker could craft a payload in the &#39;Reports&#39; page that executes when another user views the report. Fixed in 2.62.4 and 2.62 LTS. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-67089",
-    "descripcion": "A command injection vulnerability exists in the GL-iNet GL-AXT1800 router firmware v4.6.8. The vulnerability is present in the `plugins.install_package` RPC method, which fails to properly sanitize user input in package names. Authenticated attackers can exploit this to execute arbitrary commands with root privileges 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22235",
+    "descripcion": "OPEXUS eComplaint before version 9.0.45.0 allows an attacker to visit the the &#39;DocumentOpen.aspx&#39; endpoint, iterate through predictable values of &#39;chargeNumber&#39;, and download any uploaded files. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-08",
-    "cve": "CVE-2025-63611",
-    "descripcion": "Cross-Site Scripting in phpgurukul Hostel Management System v2.1 user-provided complaint fields (Explain the Complaint) submitted via /register-complaint.php are stored and rendered unescaped in the admin viewer (/admin/complaint-details.php?cid=). When an administrator opens the complaint, injected HTML/JavaScript executes in the admin&#39;s browser. 08/01/2026 08/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22234",
+    "descripcion": "OPEXUS eCasePortal before version 9.0.45.0 allows an unauthenticated attacker to navigate to the &#39;Attachments.aspx&#39; endpoint, iterate through predictable values of &#39;formid&#39;, and download or delete all user-uploaded files, or upload new files. 08/01/2026 08/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
