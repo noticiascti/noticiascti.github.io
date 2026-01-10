@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-01-10",
+    "cve": "CVE-2026-0831",
+    "descripcion": "The Templately plugin for WordPress is vulnerable to Arbitrary File Write in all versions up to, and including, 3.4.8. This is due to inadequate input validation in the `save_template_to_file()` function where user-controlled parameters like `session_id`, `content_id`, and `ai_page_ids` are used to construct file paths without proper sanitization. This makes it possible for unauthenticated attackers to write arbitrary `.ai.json` files to locations within the uploads directory. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-62235",
+    "descripcion": "Authentication Bypass by Spoofing vulnerability in Apache NimBLE. Receiving specially crafted Security Request could lead to removal of original bond and re-bond with impostor. This issue affects Apache NimBLE: through 1.8.0. Users are recommended to upgrade to version 1.9.0, which fixes the issue. 10/01/2026 10/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-53477",
+    "descripcion": "NULL Pointer Dereference vulnerability in Apache Nimble. Missing validation of HCI connection complete or HCI command TX buffer could lead to NULL pointer dereference. This issue requires disabled asserts and broken or bogus Bluetooth controller and thus severity is considered low. This issue affects Apache NimBLE: through 1.8.0. Users are recommended to upgrade to version 1.9.0, which fixes the issue. 10/01/2026 10/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-53470",
+    "descripcion": "Out-of-bounds Read vulnerability in Apache NimBLE HCI H4 driver. Specially crafted HCI event could lead to invalid memory read in H4 driver. This issue affects Apache NimBLE: through 1.8. This issue requires a broken or bogus Bluetooth controller and thus severity is considered low. Users are recommended to upgrade to version 1.9, which fixes the issue. 10/01/2026 10/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-52435",
+    "descripcion": "J2EE Misconfiguration: Data Transmission Without Encryption vulnerability in Apache NimBLE. Improper handling of Pause Encryption procedure on Link Layer results in a previously encrypted connection being left in un-encrypted state allowing an eavesdropper to observe the remainder of the exchange. This issue affects Apache NimBLE: through 10/01/2026 10/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-15503",
+    "descripcion": "A security flaw has been discovered in Sangfor Operation and Maintenance Management System up to 3.0.8. The impacted element is an unknown function of the file /fort/trust/version/common/common.jsp. Performing a manipulation of the argument File results in unrestricted upload. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-14976",
+    "descripcion": "The User Registration & Membership – Custom Registration Form Builder, Custom Login Form, User Profile, Content Restriction & Membership Plugin plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.4.8. This is due to missing or incorrect nonce validation on the &#39;process_row_actions&#39; function with the &#39;delete&#39; action. This makes it possible for unauthenticated attackers to delete arbitrary post via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
     "cve": "CVE-2025-15502",
     "descripcion": "A vulnerability was identified in Sangfor Operation and Maintenance Management System up to 3.0.8. The affected element is the function SessionController of the file /isomp-protocol/protocol/session. Such manipulation of the argument Hostname leads to os command injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-01-10",
     "cve": "CVE-2026-22773",
     "descripcion": "vLLM is an inference and serving engine for large language models (LLMs). In versions from 0.6.4 to before 0.12.0, users can crash the vLLM engine serving multimodal models that use the Idefics3 vision model implementation by sending a specially crafted 1x1 pixel image. This causes a tensor dimension mismatch that results in an unhandled runtime error, leading to complete server termination. This issue has been patched in version 0.12.0. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2026-22705",
-    "descripcion": "RustCrypto: Signatures offers support for digital signatures, which provide authentication of data using public-key cryptography. Prior to version 0.1.0-rc.2, a timing side-channel was discovered in the Decompose algorithm which is used during ML-DSA signing to generate hints for the signature. This issue has been patched in version 0.1.0-rc.2. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2026-22704",
-    "descripcion": "HAX CMS helps manage microsite universe with PHP or NodeJs backends. In versions 11.0.6 to before 25.0.0, HAX CMS is vulnerable to stored XSS, which could lead to account takeover. This issue has been patched in version 25.0.0. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2026-22703",
-    "descripcion": "Cosign provides code signing and transparency for containers and binaries. Prior to versions 2.6.2 and 3.0.4, Cosign bundle can be crafted to successfully verify an artifact even if the embedded Rekor entry does not reference the artifact&#39;s digest, signature or public key. When verifying a Rekor entry, Cosign verifies the Rekor entry signature, and also compares the artifact&#39;s digest, the user&#39;s public key from either a Fulcio certificate or provided by the user, and the artifact signature to the Rekor entry contents. Without these comparisons, Cosign would accept any response from Rekor as valid. A malicious actor that has compromised a user&#39;s identity or signing key could construct a valid Cosign bundle by including any arbitrary Rekor entry, thus preventing the user from being able to audit the signing event. This issue has been patched in versions 2.6.2 and 3.0.4. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2026-22702",
-    "descripcion": "virtualenv is a tool for creating isolated virtual python environments. Prior to version 20.36.1, TOCTOU (Time-of-Check-Time-of-Use) vulnerabilities in virtualenv allow local attackers to perform symlink-based attacks on directory creation operations. An attacker with local access can exploit a race condition between directory existence checks and creation to redirect virtualenv&#39;s app_data and lock file operations to attacker-controlled locations. This issue has been patched in version 20.36.1. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2025-14948",
-    "descripcion": "The miniOrange OTP Verification and SMS Notification for WooCommerce plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `enable_wc_sms_notification` AJAX action in all versions up to, and including, 4.3.8. This makes it possible for unauthenticated attackers to enable or disable SMS notification settings for WooCommerce orders. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2025-14943",
-    "descripcion": "The Blog2Social: Social Media Auto Post & Scheduler plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 8.7.2. This is due to a misconfigured authorization check on the &#39;getShipItemFullText&#39; function which only verifies that a user has the &#39;read&#39; capability (Subscriber-level) and a valid nonce, but fails to verify whether the user has permission to access the specific post being requested. This makes it possible for authenticated attackers, with Subscriber-level access and above, to extract data from password-protected, private, or draft posts. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2026-22701",
-    "descripcion": "filelock is a platform-independent file lock for Python. Prior to version 3.20.3, a TOCTOU race condition vulnerability exists in the SoftFileLock implementation of the filelock package. An attacker with local filesystem access and permission to create symlinks can exploit a race condition between the permission validation and file creation to cause lock operations to fail or behave unexpectedly. The vulnerability occurs in the _acquire() method between raise_on_not_writable_file() (permission check) and os.open() (file creation). During this race window, an attacker can create a symlink at the lock file path, potentially causing the lock to operate on an unintended target file or leading to denial of service. This issue has been patched in version 3.20.3. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
