@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-01-10",
+    "cve": "CVE-2026-0822",
+    "descripcion": "A vulnerability was identified in quickjs-ng quickjs up to 0.11.0. This issue affects the function js_typed_array_sort of the file quickjs.c. The manipulation leads to heap-based buffer overflow. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The identifier of the patch is 53eefbcd695165a3bd8c584813b472cb4a69fbf5. To fix this issue, it is recommended to deploy a patch. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-13393",
+    "descripcion": "The Featured Image from URL (FIFU) plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 5.3.1. This is due to insufficient validation of user-supplied URLs before passing them to the getimagesize() function in the Elementor widget integration. This makes it possible for authenticated attackers, with Contributor-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services via the fifu_input_url parameter in the FIFU Elementor widget granted they have permissions to use Elementor. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-12379",
+    "descripcion": "The Shortcodes and extra features for Phlox theme plugin for WordPress is vulnerable to Stored Cross-Site Scripting via a combination of the &#39;tag&#39; and ‘title_tag’ parameters in all versions up to, and including, 2.17.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-0821",
+    "descripcion": "A vulnerability was determined in quickjs-ng quickjs up to 0.11.0. This vulnerability affects the function js_typed_array_constructor of the file quickjs.c. Executing a manipulation can lead to heap-based buffer overflow. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. This patch is called c5d80831e51e48a83eab16ea867be87f091783c5. A patch should be applied to remediate this issue. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-14555",
+    "descripcion": "The Countdown Timer – Widget Countdown plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;wpdevart_countdown&#39; shortcode in all versions up to, and including, 2.7.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-15504",
+    "descripcion": "A security flaw has been discovered in lief-project LIEF up to 0.17.1. Affected by this issue is the function Parser::parse_binary of the file src/ELF/Parser.tcc of the component ELF Binary Parser. The manipulation results in null pointer dereference. The attack must be initiated from a local position. The exploit has been released to the public and may be used for attacks. Upgrading to version 0.17.2 can resolve this issue. The patch is identified as 81bd5d7ea0c390563f1c4c017c9019d154802978. It is recommended to upgrade the affected component. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2025-14506",
+    "descripcion": "The ConvertForce Popup Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Gutenberg block&#39;s `entrance_animation` attribute in all versions up to, and including, 0.0.7. This is due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
     "cve": "CVE-2026-0831",
     "descripcion": "The Templately plugin for WordPress is vulnerable to Arbitrary File Write in all versions up to, and including, 3.4.8. This is due to inadequate input validation in the `save_template_to_file()` function where user-controlled parameters like `session_id`, `content_id`, and `ai_page_ids` are used to construct file paths without proper sanitization. This makes it possible for unauthenticated attackers to write arbitrary `.ai.json` files to locations within the uploads directory. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-01-10",
     "cve": "CVE-2025-53477",
     "descripcion": "NULL Pointer Dereference vulnerability in Apache Nimble. Missing validation of HCI connection complete or HCI command TX buffer could lead to NULL pointer dereference. This issue requires disabled asserts and broken or bogus Bluetooth controller and thus severity is considered low. This issue affects Apache NimBLE: through 1.8.0. Users are recommended to upgrade to version 1.9.0, which fixes the issue. 10/01/2026 10/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2025-53470",
-    "descripcion": "Out-of-bounds Read vulnerability in Apache NimBLE HCI H4 driver. Specially crafted HCI event could lead to invalid memory read in H4 driver. This issue affects Apache NimBLE: through 1.8. This issue requires a broken or bogus Bluetooth controller and thus severity is considered low. Users are recommended to upgrade to version 1.9, which fixes the issue. 10/01/2026 10/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2025-52435",
-    "descripcion": "J2EE Misconfiguration: Data Transmission Without Encryption vulnerability in Apache NimBLE. Improper handling of Pause Encryption procedure on Link Layer results in a previously encrypted connection being left in un-encrypted state allowing an eavesdropper to observe the remainder of the exchange. This issue affects Apache NimBLE: through 10/01/2026 10/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2025-15503",
-    "descripcion": "A security flaw has been discovered in Sangfor Operation and Maintenance Management System up to 3.0.8. The impacted element is an unknown function of the file /fort/trust/version/common/common.jsp. Performing a manipulation of the argument File results in unrestricted upload. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2025-14976",
-    "descripcion": "The User Registration & Membership – Custom Registration Form Builder, Custom Login Form, User Profile, Content Restriction & Membership Plugin plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.4.8. This is due to missing or incorrect nonce validation on the &#39;process_row_actions&#39; function with the &#39;delete&#39; action. This makes it possible for unauthenticated attackers to delete arbitrary post via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2025-15502",
-    "descripcion": "A vulnerability was identified in Sangfor Operation and Maintenance Management System up to 3.0.8. The affected element is the function SessionController of the file /isomp-protocol/protocol/session. Such manipulation of the argument Hostname leads to os command injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2026-22777",
-    "descripcion": "ComfyUI-Manager is an extension designed to enhance the usability of ComfyUI. Prior to versions 3.39.2 and 4.0.5, an attacker can inject special characters into HTTP query parameters to add arbitrary configuration values to the config.ini file. This can lead to security setting tampering or modification of application behavior. This issue has been patched in versions 3.39.2 and 4.0.5. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-10",
-    "cve": "CVE-2026-22773",
-    "descripcion": "vLLM is an inference and serving engine for large language models (LLMs). In versions from 0.6.4 to before 0.12.0, users can crash the vLLM engine serving multimodal models that use the Idefics3 vision model implementation by sending a specially crafted 1x1 pixel image. This causes a tensor dimension mismatch that results in an unhandled runtime error, leading to complete server termination. This issue has been patched in version 0.12.0. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
