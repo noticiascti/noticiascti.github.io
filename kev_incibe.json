@@ -1,5 +1,45 @@
 [
   {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-22026",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, the libcurl write_callback function in the KMC crypto service client allows unbounded memory growth by reallocating response buffers without any size limit or overflow check. A malicious KMC server can return arbitrarily large HTTP responses, forcing the client to allocate excessive memory until the process is terminated by the OS. This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-22025",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, when the KMC server returns a non-200 HTTP status code, cryptography_encrypt() and cryptography_decrypt() return immediately without freeing previously allocated buffers. Each failed request leaks approximately 467 bytes. Repeated failures (from a malicious server or network issues) can gradually exhaust memory. This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-22024",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, the cryptography_encrypt() function allocates multiple buffers for HTTP requests and JSON parsing that are never freed on any code path. Each call leaks approximately 400 bytes of memory. Sustained traffic can gradually exhaust available memory. This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-22023",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, there is an out-of-bounds heap read vulnerability in cryptography_aead_encrypt(). This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-21900",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, an out-of-bounds heap read vulnerability in cryptography_encrypt() occurs when parsing JSON metadata from KMC server responses. The flawed strtok iteration pattern uses ptr + strlen(ptr) + 1 which reads one byte past allocated buffer boundaries when processing short or malformed metadata strings. This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-21899",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, in base64urlDecode, padding-stripping dereferences input[inputLen - 1] before checking that inputLen > 0 or that input != NULL. For inputLen == 0, this becomes an OOB read at input[-1], potentially crashing the process. If input == NULL and inputLen == 0, it dereferences NULL - 1. This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-21898",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, the Crypto_AOS_ProcessSecurity function reads memory without valid bounds checking when parsing AOS frame hashes. This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-10",
+    "cve": "CVE-2026-21897",
+    "descripcion": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. Prior to version 1.4.3, the Crypto_Config_Add_Gvcid_Managed_Parameters function only checks whether gvcid_counter > GVCID_MAN_PARAM_SIZE. As a result, it allows up to the 251st entry, which causes a write past the end of the array, overwriting gvcid_counter located immediately after gvcid_managed_parameters_array[250]. This leads to an out-of-bounds write, and the overwritten gvcid_counter may become an arbitrary value, potentially affecting the parameter lookup/registration logic that relies on it. This issue has been patched in version 1.4.3. 10/01/2026 10/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2026-01-09",
     "cve": "CVE-2025-15501",
     "descripcion": "A vulnerability was determined in Sangfor Operation and Maintenance Management System up to 3.0.8. Impacted is the function WriterHandle.getCmd of the file /isomp-protocol/protocol/getCmd. This manipulation of the argument sessionPath causes os command injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way. 10/01/2026 10/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
@@ -8,45 +48,5 @@
     "fecha": "2026-01-09",
     "cve": "CVE-2026-22584",
     "descripcion": "Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in Salesforce Uni2TS on MacOS, Windows, Linux allows Leverage Executable Code in Non-Executable Files.This issue affects Uni2TS: through 1.2.0. 09/01/2026 09/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2025-62487",
-    "descripcion": "### Details On October 1, 2025, Palantir discovered that images uploaded through the Dossier front-end app were not being marked correctly with the proper security levels. The regression was traced back to a change in May 2025, which was meant to allow file uploads to be shared among different artifacts (e.g. other dossiers and presentations). On deployments configured with CBAC, the front-end would present a security picker dialog to set the security level on the uploads, thereby mitigating the issue. On deployments without a CBAC configuration, no security picker dialog appears, leading to a security level of CUSTOM with no markings or datasets selected. The resulting markings and groups for the file uploads thus will be only those added by the “Default authorization rules” defined in the Auth Chooser configuration. On most environments, it is expected that the “Default authorization rules&#34; only add the Everyone group. 09/01/2026 09/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2025-46299",
-    "descripcion": "A memory initialization issue was addressed with improved memory handling. This issue is fixed in tvOS 26.2, Safari 26.2, watchOS 26.2, visionOS 26.2, iOS 26.2 and iPadOS 26.2, macOS Tahoe 26.2. Processing maliciously crafted web content may disclose internal states of the app. 09/01/2026 09/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2025-46298",
-    "descripcion": "The issue was addressed with improved memory handling. This issue is fixed in tvOS 26.2, Safari 26.2, watchOS 26.2, visionOS 26.2, iOS 26.2 and iPadOS 26.2, macOS Tahoe 26.2. Processing maliciously crafted web content may lead to an unexpected process crash. 09/01/2026 09/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2025-46297",
-    "descripcion": "A permissions issue was addressed with additional restrictions. This issue is fixed in macOS Tahoe 26.2. An app may be able to access protected files within an App Sandbox container. 09/01/2026 09/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2025-46286",
-    "descripcion": "A logic issue was addressed with improved validation. This issue is fixed in iOS 26.2 and iPadOS 26.2. Restoring from a backup may prevent passcode from being required immediately after Face ID enrollment. 09/01/2026 09/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2025-15500",
-    "descripcion": "A vulnerability was found in Sangfor Operation and Maintenance Management System up to 3.0.8. This issue affects some unknown processing of the file /isomp-protocol/protocol/getHis of the component HTTP POST Request Handler. The manipulation of the argument sessionPath results in os command injection. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. 09/01/2026 09/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2025-15499",
-    "descripcion": "A vulnerability has been found in Sangfor Operation and Maintenance Management System up to 3.0.8. This vulnerability affects the function uploadCN of the file VersionController.java. The manipulation of the argument filename leads to os command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 09/01/2026 09/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-09",
-    "cve": "CVE-2026-0830",
-    "descripcion": "Processing specially crafted workspace folder names could allow for arbitrary command injection in the Kiro GitLab Merge-Request helper in Kiro IDE before version 0.6.18 when opening maliciously crafted workspaces. To mitigate, users should update to the latest version. 09/01/2026 09/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
