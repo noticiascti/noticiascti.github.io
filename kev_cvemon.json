@@ -6,6 +6,11 @@
   },
   {
     "fecha": "2026-01-12",
+    "cve": "CVE-2025-66032",
+    "descripcion": "Claude Code is an agentic coding tool. Prior to 1.0.93, Due to errors in parsing shell commands related to $IFS and short CLI flags, it was possible to bypass the Claude Code read-only validation and trigger arbitrary code execution. Reliably exploiting this requires the ability ..."
+  },
+  {
+    "fecha": "2026-01-12",
     "cve": "CVE-2025-31324",
     "descripcion": "SAP NetWeaver Visual Composer Metadata Uploader is not protected with a proper authorization, allowing unauthenticated agent to upload potentially malicious executable binaries that could severely harm the host system. This could significantly affect the confidentiality, ..."
   },
@@ -26,13 +31,13 @@
   },
   {
     "fecha": "2026-01-12",
-    "cve": "CVE-2025-2884",
-    "descripcion": "TCG TPM2.0 Reference implementation's CryptHmacSign helper function is vulnerable to Out-of-Bounds read due to the lack of validation the signature scheme with the signature key's algorithm. See Errata 1.83 and advisory VRT0009 of TCG standard TPM2.0"
+    "cve": "CVE-2025-46285",
+    "descripcion": "An integer overflow was addressed by adopting 64-bit timestamps. This issue is fixed in watchOS 26.2, macOS Sonoma 14.8.3, iOS 18.7.3 and iPadOS 18.7.3, iOS 26.2 and iPadOS 26.2, macOS Tahoe 26.2, macOS Sequoia 15.7.3, visionOS 26.2, tvOS 26.2. An app may be able to gain root ..."
   },
   {
     "fecha": "2026-01-12",
-    "cve": "CVE-2025-46285",
-    "descripcion": "An integer overflow was addressed by adopting 64-bit timestamps. This issue is fixed in watchOS 26.2, macOS Sonoma 14.8.3, iOS 18.7.3 and iPadOS 18.7.3, iOS 26.2 and iPadOS 26.2, macOS Tahoe 26.2, macOS Sequoia 15.7.3, visionOS 26.2, tvOS 26.2. An app may be able to gain root ..."
+    "cve": "CVE-2025-2884",
+    "descripcion": "TCG TPM2.0 Reference implementation's CryptHmacSign helper function is vulnerable to Out-of-Bounds read due to the lack of validation the signature scheme with the signature key's algorithm. See Errata 1.83 and advisory VRT0009 of TCG standard TPM2.0"
   },
   {
     "fecha": "2026-01-12",
@@ -43,10 +48,5 @@
     "fecha": "2026-01-12",
     "cve": "CVE-2025-68615",
     "descripcion": "net-snmp is a SNMP application library, tools and daemon. Prior to versions 5.9.5 and 5.10.pre2, a specially crafted packet to an net-snmp snmptrapd daemon can cause a buffer overflow and the daemon to crash. This issue has been patched in versions 5.9.5 and 5.10.pre2."
-  },
-  {
-    "fecha": "2026-01-12",
-    "cve": "CVE-2025-29927",
-    "descripcion": "Next.js is a React framework for building full-stack web applications. Starting in version 1.11.4 and prior to versions 12.3.5, 13.5.9, 14.2.25, and 15.2.3, it is possible to bypass authorization checks within a Next.js application, if the authorization check occurs in ..."
   }
 ]
