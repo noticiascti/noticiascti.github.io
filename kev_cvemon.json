@@ -11,8 +11,18 @@
   },
   {
     "fecha": "2026-01-12",
-    "cve": "CVE-2025-69258",
-    "descripcion": "A LoadLibraryEX vulnerability in Trend Micro Apex Central could allow an unauthenticated remote attacker to load an attacker-controlled DLL into a key executable, leading to execution of attacker-supplied code under the context of SYSTEM on affected installations."
+    "cve": "CVE-2025-32433",
+    "descripcion": "Erlang/OTP is a set of libraries for the Erlang programming language. Prior to versions OTP-27.3.3, OTP-26.2.5.11, and OTP-25.3.2.20, a SSH server may allow an attacker to perform unauthenticated remote code execution (RCE). By exploiting a flaw in SSH protocol message handling, ..."
+  },
+  {
+    "fecha": "2026-01-12",
+    "cve": "CVE-2025-20188",
+    "descripcion": "A vulnerability in the Out-of-Band Access Point (AP) Image Download, the Clean Air Spectral Recording, and the client debug bundles features of Cisco IOS XE Software for Wireless LAN Controllers (WLCs) could allow an unauthenticated, remote attacker to upload arbitrary files to ..."
+  },
+  {
+    "fecha": "2026-01-12",
+    "cve": "CVE-2025-0108",
+    "descripcion": "An authentication bypass in the Palo Alto Networks PAN-OS software enables an unauthenticated attacker with network access to the management web interface to bypass the authentication otherwise required by the PAN-OS management web interface and invoke certain PHP scripts. While ..."
   },
   {
     "fecha": "2026-01-12",
@@ -31,22 +41,12 @@
   },
   {
     "fecha": "2026-01-12",
-    "cve": "CVE-2025-22224",
-    "descripcion": "VMware ESXi, and Workstation contain a TOCTOU (Time-of-Check Time-of-Use) vulnerability that leads to an out-of-bounds write. A malicious actor with local administrative privileges on a virtual machine may exploit this issue to execute code as the virtual machine's VMX process ..."
-  },
-  {
-    "fecha": "2026-01-12",
-    "cve": "CVE-2025-22225",
-    "descripcion": "VMware ESXi contains an arbitrary write vulnerability. A malicious actor with privileges within the VMX process may trigger an arbitrary kernel write leading to an escape of the sandbox."
+    "cve": "CVE-2025-69258",
+    "descripcion": "A LoadLibraryEX vulnerability in Trend Micro Apex Central could allow an unauthenticated remote attacker to load an attacker-controlled DLL into a key executable, leading to execution of attacker-supplied code under the context of SYSTEM on affected installations."
   },
   {
     "fecha": "2026-01-12",
     "cve": "CVE-2025-38352",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
-  },
-  {
-    "fecha": "2026-01-12",
-    "cve": "CVE-2025-22226",
-    "descripcion": "VMware ESXi, Workstation, and Fusion contain an information disclosure vulnerability due to an out-of-bounds read in HGFS. A malicious actor with administrative privileges to a virtual machine may be able to exploit this issue to leak memory from the vmx process."
   }
 ]
