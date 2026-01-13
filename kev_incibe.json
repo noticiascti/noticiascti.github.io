@@ -1,18 +1,28 @@
 [
   {
     "fecha": "2026-01-12",
+    "cve": "CVE-2026-22772",
+    "descripcion": "Fulcio is a certificate authority for issuing code signing certificates for an OpenID Connect (OIDC) identity. Prior to 1.8.5, Fulcio&#39;s metaRegex() function uses unanchored regex, allowing attackers to bypass MetaIssuer URL validation and trigger SSRF to arbitrary internal services. Since the SSRF only can trigger GET requests, the request cannot mutate state. The response from the GET request is not returned to the caller so data exfiltration is not possible. A malicious actor could attempt to probe an internal network through Blind SSRF. This vulnerability is fixed in 1.8.5. 12/01/2026 12/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-12",
+    "cve": "CVE-2021-41074",
+    "descripcion": "A CSRF issue in index.php in QloApps hotel eCommerce 1.5.1 allows an attacker to change the admin&#39;s email address via a crafted HTML document. 12/01/2026 12/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-12",
     "cve": "CVE-2025-66802",
     "descripcion": "Sourcecodester Covid-19 Contact Tracing System 1.0 is vulnerable to RCE (Remote Code Execution). The application receives a reverse shell (php) into imagem of the user enabling RCE. 12/01/2026 12/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-01-12",
     "cve": "CVE-2025-51567",
-    "descripcion": "A SQL Injection was found in the /exam/user/profile.php page of kashipara Online Exam System V1.0, which allows remote attackers to execute arbitrary SQL command to get unauthorized database access via the rname, rcollage, rnumber, rgender and rpassword parameters in a POST HTTP request. 12/01/2026 12/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "descripcion": "A SQL Injection was found in the /exam/user/profile.php page of kashipara Online Exam System V1.0, which allows remote attackers to execute arbitrary SQL command to get unauthorized database access via the rname, rcollage, rnumber, rgender and rpassword parameters in a POST HTTP request. 12/01/2026 12/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-01-12",
     "cve": "CVE-2023-36331",
-    "descripcion": "Incorrect access control in the /member/orderList API of xmall v1.1 allows attackers to arbitrarily access other users&#39; order details via manipulation of the query parameter userId. 12/01/2026 12/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "descripcion": "Incorrect access control in the /member/orderList API of xmall v1.1 allows attackers to arbitrarily access other users&#39; order details via manipulation of the query parameter userId. 12/01/2026 12/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-12",
@@ -38,15 +48,5 @@
     "fecha": "2026-01-12",
     "cve": "CVE-2026-22776",
     "descripcion": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to version 0.30.1, a Denial of Service (DoS) vulnerability exists in cpp-httplib due to the unsafe handling of compressed HTTP request bodies (Content-Encoding: gzip, br, etc.). The library validates the payload_max_length against the compressed data size received from the network, but does not limit the size of the decompressed data stored in memory. 12/01/2026 12/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-12",
-    "cve": "CVE-2026-22771",
-    "descripcion": "Envoy Gateway is an open source project for managing Envoy Proxy as a standalone or Kubernetes-based application gateway. Prior to 1.5.7 and 1.6.2, EnvoyExtensionPolicy Lua scripts executed by Envoy proxy can be used to leak the proxy&#39;s credentials. These credentials can then be used to communicate with the control plane and gain access to all secrets that are used by Envoy proxy, e.g. TLS private keys and credentials used for downstream and upstream communication. This vulnerability is fixed in 1.5.7 and 1.6.2. 12/01/2026 12/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-12",
-    "cve": "CVE-2026-22252",
-    "descripcion": "LibreChat is a ChatGPT clone with additional features. Prior to v0.8.2-rc2, LibreChat&#39;s MCP stdio transport accepts arbitrary commands without validation, allowing any authenticated user to execute shell commands as root inside the container through a single API request. This vulnerability is fixed in v0.8.2-rc2. 12/01/2026 12/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
