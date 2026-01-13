@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-01-13",
+    "cve": "CVE-2025-13774",
+    "descripcion": "A vulnerability exists in Progress Flowmon ADS versions prior to 12.5.4 and 13.0.1 where an SQL injection vulnerability allows authenticated users to execute unintended SQL queries and commands. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-13",
+    "cve": "CVE-2026-0859",
+    "descripcion": "TYPO3&#39;s mail‑file spool deserialization flaw lets local users with write access to the spool directory craft a malicious file that is deserialized during the mailer:spool:send command, enabling arbitrary PHP code execution on the web server. This issue affects TYPO3 CMS versions 10.0.0-10.4.54, 11.0.0-11.5.48, 12.0.0-12.4.40, 13.0.0-13.4.22 and 14.0.0-14.0.1. 13/01/2026 13/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.20 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-13",
+    "cve": "CVE-2025-59022",
+    "descripcion": "Backend users who had access to the recycler module could delete arbitrary data from any database table defined in the TCA - regardless of whether they had permission to that particular table. This allowed attackers to purge and destroy critical site data, effectively rendering the website unavailable. This issue affects TYPO3 CMS versions 10.0.0-10.4.54, 11.0.0-11.5.48, 12.0.0-12.4.40, 13.0.0-13.4.22 and 14.0.0-14.0.1. 13/01/2026 13/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-13",
+    "cve": "CVE-2025-59021",
+    "descripcion": "Backend users with access to the redirects module and write permission on the sys_redirect table were able to read, create, and modify any redirect record without restriction to the user’s own file-mounts or web-mounts. This allowed attackers to insert or alter redirects pointing to arbitrary URLs – facilitating phishing or other malicious redirect attacks. This issue affects TYPO3 CMS versions 10.0.0-10.4.54, 11.0.0-11.5.48, 12.0.0-12.4.40, 13.0.0-13.4.22 and 14.0.0-14.0.1. 13/01/2026 13/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-13",
+    "cve": "CVE-2025-59020",
+    "descripcion": "By exploiting the defVals parameter, attackers could bypass field‑level access checks during record creation in the TYPO3 backend. This gave them the ability to insert arbitrary data into prohibited exclude fields of a database table for which the user already has write permission for a reduced set of fields. This issue affects TYPO3 CMS versions 10.0.0-10.4.54, 11.0.0-11.5.48, 12.0.0-12.4.40, 13.0.0-13.4.22 and 14.0.0-14.0.1. 13/01/2026 13/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-13",
+    "cve": "CVE-2025-14001",
+    "descripcion": "The WP Duplicate Page plugin for WordPress is vulnerable to unauthorized modification of data due to missing capability checks on the &#39;duplicateBulkHandle&#39; and &#39;duplicateBulkHandleHPOS&#39; functions in all versions up to, and including, 1.8. This makes it possible for authenticated attackers, with Contributor-level access and above, to duplicate arbitrary posts, pages, and WooCommerce HPOS orders even when their role is explicitly excluded from the plugin&#39;s &#34;Allowed User Roles&#34; setting, potentially exposing sensitive information and allowing duplicate fulfillment of WooCommerce orders. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-13",
     "cve": "CVE-2025-40944",
     "descripcion": "A vulnerability has been identified in SIMATIC ET 200AL IM 157-1 PN (6ES7157-1AB00-0AB0) (All versions), SIMATIC ET 200MP IM 155-5 PN HF (6ES7155-5AA00-0AC0) (All versions >= V4.2.0), SIMATIC ET 200SP IM 155-6 MF HF (6ES7155-6MU00-0CN0) (All versions), SIMATIC ET 200SP IM 155-6 PN HA (incl. SIPLUS variants) (All versions = V4.2.0), SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-2CN0) (All versions >= V4.2.0), SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-7CN0) (All versions >= V4.2.0), SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU01-1CN0) (All versions >= V4.2.0), SIPLUS ET 200SP IM 155-6 PN HF TX RAIL (6AG2155-6AU01-4CN0) (All versions >= V4.2.0), SIPLUS NET PN/PN Coupler (6AG2158-3AD10-4XA0) (All versions 13/01/2026 13/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-01-13",
     "cve": "CVE-2025-41717",
     "descripcion": "An unauthenticated remote attacker can trick a high privileged user into uploading a malicious payload via the config-upload endpoint, leading to code injection as root. This results in a total loss of confidentiality, availability and integrity due to improper control of code generation (&#39;Code Injection’). 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-13",
-    "cve": "CVE-2025-14829",
-    "descripcion": "The E-xact | Hosted Payment | WordPress plugin through 2.0 is vulnerable to arbitrary file deletion due to insufficient file path validation. This makes it possible for unauthenticated attackers to delete arbitrary files on the server. 13/01/2026 13/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-13",
-    "cve": "CVE-2025-10915",
-    "descripcion": "The Dreamer Blog WordPress theme through 1.2 is vulnerable to arbitrary installations due to a missing capability check. 13/01/2026 13/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-13",
-    "cve": "CVE-2026-22837",
-    "descripcion": "Rejected reason: Not used 13/01/2026 13/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-13",
-    "cve": "CVE-2026-22836",
-    "descripcion": "Rejected reason: Not used 13/01/2026 13/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-13",
-    "cve": "CVE-2026-22835",
-    "descripcion": "Rejected reason: Not used 13/01/2026 13/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-13",
-    "cve": "CVE-2026-22834",
-    "descripcion": "Rejected reason: Not used 13/01/2026 13/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
