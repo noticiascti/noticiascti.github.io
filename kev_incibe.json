@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-01-14",
+    "cve": "CVE-2026-0532",
+    "descripcion": "External Control of File Name or Path (CWE-73) combined with Server-Side Request Forgery (CWE-918) can allow an attacker to cause arbitrary file disclosure through a specially crafted credentials JSON payload in the Google Gemini connector configuration. This requires an attacker to have authenticated access with privileges sufficient to create or modify connectors (Alerts & Connectors: All). The server processes a configuration without proper validation, allowing for arbitrary network requests and for arbitrary file reads. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-14",
+    "cve": "CVE-2025-0647",
+    "descripcion": "In certain Arm CPUs, a CPP RCTX instruction executed on one Processing Element (PE) may inhibit TLB invalidation when a TLBI is issued to the PE, either by the same PE or another PE in the shareability domain. In this case, the PE may retain stale TLB entries which should have been invalidated by the TLBI. 14/01/2026 14/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-14",
+    "cve": "CVE-2026-0529",
+    "descripcion": "Improper Validation of Array Index (CWE-129) in Packetbeat’s MongoDB protocol parser can allow an attacker to cause Overflow Buffers (CAPEC-100) through specially crafted network traffic. This requires an attacker to send a malformed payload to a monitored network interface where MongoDB protocol parsing is enabled. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-14",
+    "cve": "CVE-2026-23550",
+    "descripcion": "Incorrect Privilege Assignment vulnerability in Modular DS allows Privilege Escalation.This issue affects Modular DS: from n/a through 2.5.1. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-01-14",
     "cve": "CVE-2026-0813",
     "descripcion": "The Short Link plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;short_link_post_title&#39; and &#39;short_link_page_title&#39; parameters in all versions up to, and including, 1.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the injected page. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-01-14",
     "cve": "CVE-2025-68492",
     "descripcion": "Chainlit versions prior to 2.8.5 contain an authorization bypass through user-controlled key vulnerability. If this vulnerability is exploited, threads may be viewed or thread ownership may be obtained by an attacker who can log in to the product. 14/01/2026 14/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-14",
-    "cve": "CVE-2025-15513",
-    "descripcion": "The Float Payment Gateway plugin for WordPress is vulnerable to unauthorized modification of data due to improper error handling in the verifyFloatResponse() function in all versions up to, and including, 1.1.9. This makes it possible for unauthenticated attackers to mark any WooCommerce order as failed. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-14",
-    "cve": "CVE-2025-15512",
-    "descripcion": "The Aplazo Payment Gateway plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the check_success_response() function in all versions up to, and including, 1.4.2. This makes it possible for unauthenticated attackers to set any WooCommerce order to `pending payment` status. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-14",
-    "cve": "CVE-2025-15475",
-    "descripcion": "The PayHere Payment Gateway Plugin for WooCommerce plugin for WordPress is vulnerable to unauthorized modification of data due to an improper validation logic in the check_payhere_response function in all versions up to, and including, 2.3.9. This makes it possible for unauthenticated attackers to change the status of pending WooCommerce orders to paid/completed/on hold. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-14",
-    "cve": "CVE-2025-15376",
-    "descripcion": "The Stopwords for comments plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.1. This is due to missing nonce validation on the &#39;set_stopwords_for_comments&#39; and &#39;delete_stopwords_for_comments&#39; functions. This makes it possible for unauthenticated attackers to add or delete stopwords via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
