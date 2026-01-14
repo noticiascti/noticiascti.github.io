@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21281",
-    "descripcion": "InCopy versions 21.0, 19.5.5 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-22818",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.11.4, there is a flaw in Hono’s JWK/JWKS JWT verification middleware allowed the algorithm specified in the JWT header to influence signature verification when the selected JWK did not explicitly define an algorithm. This could enable JWT algorithm confusion and, in certain configurations, allow forged tokens to be accepted. The JWK/JWKS JWT verification middleware has been updated to require an explicit allowlist of asymmetric algorithms when verifying tokens. The middleware no longer derives the verification algorithm from untrusted JWT header values. This vulnerability is fixed in 4.11.4. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21280",
-    "descripcion": "Illustrator versions 29.8.3, 30.0 and earlier are affected by an Untrusted Search Path vulnerability that could result in arbitrary code execution in the context of the current user. If the application uses a search path to locate critical resources such as programs, an attacker could modify that search path to point to a malicious program, which the targeted application would then execute. Exploitation of this issue requires user interaction in that a victim must open a malicious file and scope is changed. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-22817",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.11.4, there is a flaw in Hono’s JWK/JWKS JWT verification middleware allowed the JWT header’s alg value to influence signature verification when the selected JWK did not explicitly specify an algorithm. This could enable JWT algorithm confusion and, in certain configurations, allow forged tokens to be accepted. As part of this fix, the JWT middleware now requires the alg option to be explicitly specified. This prevents algorithm confusion by ensuring that the verification algorithm is not derived from untrusted JWT header values. This vulnerability is fixed in 4.11.4. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21278",
-    "descripcion": "InDesign Desktop versions 21.0, 19.5.5 and earlier are affected by an Out-of-bounds Read vulnerability that could lead to memory exposure. An attacker could leverage this vulnerability to access sensitive information stored in memory. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-22814",
+    "descripcion": "@adonisjs/lucid is an SQL ORM for AdonisJS built on top of Knex. Prior to 21.8.2 and 22.0.0-next.6, there is a Mass Assignment vulnerability in AdonisJS Lucid which may allow a remote attacker who can influence data that is passed into Lucid model assignments to overwrite the internal ORM state. This may lead to logic bypasses and unauthorized record modification within a table or model. This affects @adonisjs/lucid through version 21.8.1 and 22.x pre-release versions prior to 22.0.0-next.6. This has been patched in @adonisjs/lucid versions 21.8.2 and 22.0.0-next.6. 13/01/2026 13/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21277",
-    "descripcion": "InDesign Desktop versions 21.0, 19.5.5 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-22809",
+    "descripcion": "tarteaucitron.js is a compliant and accessible cookie banner. Prior to 1.29.0, a Regular Expression Denial of Service (ReDoS) vulnerability was identified in tarteaucitron.js in the handling of the issuu_id parameter. This vulnerability is fixed in 1.29.0. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21276",
-    "descripcion": "InDesign Desktop versions 21.0, 19.5.5 and earlier are affected by an Access of Uninitialized Pointer vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-21308",
+    "descripcion": "Substance3D - Designer versions 15.0.3 and earlier are affected by an Out-of-bounds Read vulnerability that could lead to memory exposure. An attacker could leverage this vulnerability to disclose sensitive information stored in memory. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21275",
-    "descripcion": "InDesign Desktop versions 21.0, 19.5.5 and earlier are affected by an Access of Uninitialized Pointer vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-21307",
+    "descripcion": "Substance3D - Designer versions 15.0.3 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21274",
-    "descripcion": "Dreamweaver Desktop versions 21.6 and earlier are affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could leverage this vulnerability to bypass security measures and execute unauthorized code. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-21306",
+    "descripcion": "Substance3D - Sampler versions 5.1.0 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21272",
-    "descripcion": "Dreamweaver Desktop versions 21.6 and earlier are affected by an Improper Input Validation vulnerability that could lead to arbitrary file system write. An attacker could leverage this vulnerability to manipulate or inject malicious data into files on the system. Exploitation of this issue requires user interaction in that a victim must open a malicious file and scope is changed. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-21305",
+    "descripcion": "Substance3D - Painter versions 11.0.3 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21271",
-    "descripcion": "Dreamweaver Desktop versions 21.6 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file and scope is changed. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-21287",
+    "descripcion": "Substance3D - Stager versions 3.1.5 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-13",
-    "cve": "CVE-2026-21268",
-    "descripcion": "Dreamweaver Desktop versions 21.6 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file and scope is changed. 13/01/2026 13/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-68931",
+    "descripcion": "Jervis is a library for Job DSL plugin scripts and shared Jenkins pipeline libraries. Prior to 2.2, AES/CBC/PKCS5Padding lacks authentication, making it vulnerable to padding oracle attacks and ciphertext manipulation. This vulnerability is fixed in 2.2. 13/01/2026 13/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
