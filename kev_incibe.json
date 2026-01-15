@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2026-23498",
-    "descripcion": "Shopware is an open commerce platform. From 6.7.0.0 to before 6.7.6.1, a regression of CVE-2023-2017 leads to an array and array crafted PHP Closure not checked being against allow list for the map(...) override. This vulnerability is fixed in 6.7.6.1. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-13154",
+    "descripcion": "An improper link following vulnerability was reported in the SmartPerformanceAddin for Lenovo Vantage that could allow an authenticated local user to perform an arbitrary file deletion with elevated privileges. 15/01/2026 15/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2026-23497",
-    "descripcion": "Frappe Learning Management System (LMS) is a learning system that helps users structure their content. In 2.44.0 and earlier, there is a stored XSS vulnerability where a specially crafted image filename could execute malicious JavaScript when rendered on course or jobs pages. 14/01/2026 14/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-12533",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 15/01/2026 15/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2026-23492",
-    "descripcion": "Pimcore is an Open Source Data & Experience Management Platform. Prior to 12.3.1 and 11.5.14, an incomplete SQL injection patch in the Admin Search Find API allows an authenticated attacker to perform blind SQL injection. Although CVE-2023-30848 attempted to mitigate SQL injection by removing SQL comments (--) and catching syntax errors, the fix is insufficient. Attackers can still inject SQL payloads that do not rely on comments and infer database information via blind techniques. This vulnerability affects the admin interface and can lead to database information disclosure. This vulnerability is fixed in 12.3.1 and 11.5.14. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-12166",
+    "descripcion": "The Appointment Booking Calendar — Simply Schedule Appointments Booking Plugin plugin for WordPress is vulnerable to blind SQL Injection via the `order` and `append_where_sql` parameters in all versions up to, and including, 1.6.9.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 15/01/2026 15/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2026-23477",
-    "descripcion": "Rocket.Chat is an open-source, secure, fully customizable communications platform. In Rocket.Chat versions up to 6.12.0, the API endpoint GET /api/v1/oauth-apps.get is exposed to any authenticated user, regardless of their role or permissions. This endpoint returns an OAuth application, as long as the user knows its ID, including potentially sensitive fields such as client_id and client_secret. This vulnerability is fixed in 6.12.0. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-0601",
+    "descripcion": "A reflected cross-site scripting vulnerability exists in Nexus Repository 3 that allows unauthenticated attackers to execute arbitrary JavaScript in a victim&#39;s browser through a specially crafted request requiring user interaction. 14/01/2026 14/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2026-22036",
-    "descripcion": "Undici is an HTTP/1.1 client for Node.js. Prior to 7.18.0 and 6.23.0, the number of links in the decompression chain is unbounded and the default maxHeaderSize allows a malicious server to insert thousands compression steps leading to high CPU usage and excessive memory allocation. This vulnerability is fixed in 7.18.0 and 6.23.0. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-23512",
+    "descripcion": "SumatraPDF is a multi-format reader for Windows. In 3.5.2 and earlier, there is a Untrusted Search Path vulnerability when Advanced Options setting is trigger. The application executes notepad.exe without specifying an absolute path when using the Advanced Options setting. On Windows, this allows execution of a malicious notepad.exe placed in the application&#39;s installation directory, leading to arbitrary code execution. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2025-71166",
-    "descripcion": "Typesetter CMS versions up to and including 5.1 contain a reflected cross-site scripting (XSS) vulnerability in the administrative interface within the Tools Status move message handling. The path parameter is reflected into the HTML output without proper output encoding in include/admin/Tools/Status.php. An authenticated attacker can supply crafted input containing HTML or JavaScript, resulting in arbitrary script execution in the context of an authenticated user&#39;s browser session. 14/01/2026 14/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0962",
+    "descripcion": "SOME/IP-SD protocol dissector crash in Wireshark 4.6.0 to 4.6.2 and 4.4.0 to 4.4.12 allows denial of service 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2025-71165",
-    "descripcion": "Typesetter CMS versions up to and including 5.1 contain a reflected cross-site scripting (XSS) vulnerability in the administrative interface within the Tools Status functionality. The path parameter is reflected into the HTML response without proper output encoding in include/admin/Tools/Status.php. An authenticated attacker can supply crafted input containing HTML or JavaScript, resulting in arbitrary script execution in the context of an authenticated user&#39;s browser session. 14/01/2026 14/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0961",
+    "descripcion": "BLF file parser crash in Wireshark 4.6.0 to 4.6.2 and 4.4.0 to 4.4.12 allows denial of service 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2025-71164",
-    "descripcion": "Typesetter CMS versions up to and including 5.1 contain a reflected cross-site scripting (XSS) vulnerability in the Editing component. The images parameter (submitted as images[] in a POST request) is reflected into an HTML href attribute without proper context-aware output encoding in include/tool/Editing.php. An authenticated attacker with editing privileges can supply a JavaScript pseudo-protocol (e.g., javascript:) to trigger arbitrary JavaScript execution in the context of the victim&#39;s browser session. 14/01/2026 14/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0861",
+    "descripcion": "Passing too large an alignment to the memalign suite of functions (memalign, posix_memalign, aligned_alloc, valloc, pvalloc) in the GNU C Library version 2.30 to 2.42 may result in an integer overflow, which could consequently result in a heap corruption. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2025-33206",
-    "descripcion": "NVIDIA NSIGHT Graphics for Linux contains a vulnerability where an attacker could cause command injection. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, data tampering, and denial of service. 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-0960",
+    "descripcion": "HTTP3 protocol dissector infinite loop in Wireshark 4.6.0 to 4.6.2 allows denial of service 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-14",
-    "cve": "CVE-2025-14557",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Drupal Facebook Pixel facebook_pixel allows Stored XSS.This issue affects Facebook Pixel: from 7.X-1.0 through 7.X-1.1. 14/01/2026 14/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0959",
+    "descripcion": "IEEE 802.11 protocol dissector crash in Wireshark 4.6.0 to 4.6.2 and 4.4.0 to 4.4.12 allows denial of service 14/01/2026 14/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
