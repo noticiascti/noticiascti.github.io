@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-01-21",
+    "cve": "CVE-2025-68133",
+    "descripcion": "EVerest is an EV charging software stack. In versions 2025.9.0 and below, an attacker can exhaust the operating system&#39;s memory and cause the module to terminate by initiating an unlimited number of TCP connections that never proceed to ISO 15118-2 communication. This is possible because a new thread is started for each incoming plain TCP or TLS socket connection before any verification occurs, and the verification performed is too permissive. The EVerest processes and all its modules shut down, affecting all EVSE functionality. This issue is fixed in version 2025.10.0. 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-21",
     "cve": "CVE-2025-15521",
     "descripcion": "The Academy LMS – WordPress LMS Plugin for Complete eLearning Solution plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 3.5.0. This is due to the plugin not properly validating a user&#39;s identity prior to updating their password and relying solely on a publicly-exposed nonce for authorization. This makes it possible for unauthenticated attackers to change arbitrary user&#39;s password, including administrators, and gain access to their account. 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
@@ -42,11 +47,6 @@
   {
     "fecha": "2026-01-20",
     "cve": "CVE-2026-21984",
-    "descripcion": "Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core). Supported versions that are affected are 7.1.14 and 7.2.4. Difficult to exploit vulnerability allows high privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox. While the vulnerability is in Oracle VM VirtualBox, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in takeover of Oracle VM VirtualBox. CVSS 3.1 Base Score 7.5 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H). 20/01/2026 20/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-20",
-    "cve": "CVE-2026-21983",
     "descripcion": "Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core). Supported versions that are affected are 7.1.14 and 7.2.4. Difficult to exploit vulnerability allows high privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox. While the vulnerability is in Oracle VM VirtualBox, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in takeover of Oracle VM VirtualBox. CVSS 3.1 Base Score 7.5 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H). 20/01/2026 20/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
