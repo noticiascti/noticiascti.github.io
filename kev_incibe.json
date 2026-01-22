@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-01-22",
+    "cve": "CVE-2026-24332",
+    "descripcion": "Discord through 2026-01-16 allows gathering information about whether a user&#39;s client state is Invisible (and not actually offline) because the response to a WebSocket API request includes the user in the presences array (with &#34;status&#34;: &#34;offline&#34;), whereas offline users are omitted from the presences array. This is arguably inconsistent with the UI description of Invisible as &#34;You will appear offline.&#34; 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-22",
+    "cve": "CVE-2020-8451",
+    "descripcion": "Rejected reason: The reserved CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-22",
+    "cve": "CVE-2026-0920",
+    "descripcion": "The LA-Studio Element Kit for Elementor plugin for WordPress is vulnerable to Administrative User Creation in all versions up to, and including, 1.5.6.3. This is due to the &#39;ajax_register_handle&#39; function not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;lakit_bkrole&#39; parameter during registration and gain administrator access to the site. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-01-22",
     "cve": "CVE-2026-24049",
     "descripcion": "wheel is a command line tool for manipulating Python wheel files, as defined in PEP 427. In versions 0.46.1 and below, the unpack function is vulnerable to file permission modification through mishandling of file permissions after extraction. The logic blindly trusts the filename from the archive header for the chmod operation, even though the extraction process itself might have sanitized the path. Attackers can craft a malicious wheel file that, when unpacked, changes the permissions of critical system files (e.g., /etc/passwd, SSH keys, config files), allowing for Privilege Escalation or arbitrary code execution by modifying now-writable scripts. This issue has been fixed in version 0.46.2. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-01-22",
     "cve": "CVE-2026-24037",
     "descripcion": "Horilla is a free and open source Human Resource Management System (HRMS). In version 1.4.0, the has_xss() function attempts to block XSS by matching input against a set of regex patterns. However, the regexes are incomplete and context-agnostic, making them easy to bypass. Attackers are able to redirect users to malicious domains, run external JavaScript, and steal CSRF tokens that can be used to craft CSRF attacks against admins. This issue has been fixed in version 1.5.0. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24036",
-    "descripcion": "Horilla is a free and open source Human Resource Management System (HRMS). Versions 1.4.0 and above expose unpublished job postings through the /recruitment/recruitment-details// endpoint without authentication. The response includes draft job titles, descriptions and application link allowing unauthenticated users to view unpublished roles and access the application workflow for unpublished jobs. Unauthorized access to unpublished job posts can leak sensitive internal hiring information and cause confusion among candidates. This issue has been fixed in version 1.5.0. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24035",
-    "descripcion": "Horilla is a free and open source Human Resource Management System (HRMS). An Improper Access Control vulnerability exists in Horilla HR Software starting in version 1.4.0 and prior to version 1.5.0, allowing any authenticated employee to upload documents on behalf of another employee without proper authorization. This occurs due to insufficient server-side validation of the employee_id parameter during file upload operations, allowing any authenticated employee to upload document in behalf of any employee. Version 1.5.0 fixes the issue. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24034",
-    "descripcion": "Horilla is a free and open source Human Resource Management System (HRMS). In versions prior to 1.5.0, a cross-site scripting vulnerability can be triggered because the extension and content-type are not checked during the profile photo update step. Version 1.5.0 fixes the issue. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
