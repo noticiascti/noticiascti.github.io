@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2026-20109",
-    "descripcion": "Multiple vulnerabilities in the web-based management interface of Cisco Packaged Contact Center Enterprise (Packaged CCE) and Cisco Unified Contact Center Enterprise (Unified CCE) could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device.&nbsp; These vulnerabilities exist because the web-based management interface does not properly validate user-supplied input. An attacker could exploit these vulnerabilities by injecting malicious code into specific pages of the interface. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information. To exploit these vulnerabilities, the attacker must have valid administrative credentials. 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68132",
+    "descripcion": "EVerest is an EV charging software stack. Prior to version 2025.12.0, `is_message_crc_correct` in the DZG_GSH01 powermeter SLIP parser reads `vec[vec.size()-1]` and `vec[vec.size()-2]` without checking that at least two bytes are present. Malformed SLIP frames on the serial link can reach `is_message_crc_correct` with `vec.size() 21/01/2026 21/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2026-20092",
-    "descripcion": "A vulnerability in the read-only maintenance shell of Cisco Intersight Virtual Appliance could allow an authenticated, local attacker with administrative privileges to elevate privileges to root on the virtual appliance. This vulnerability is due to improper file permissions on configuration files for system accounts within the maintenance shell of the virtual appliance. An attacker could exploit this vulnerability by accessing the maintenance shell as a read-only administrator and manipulating system files to grant root privileges. A successful exploit could allow the attacker to elevate their privileges to&nbsp;root on the virtual appliance and gain full control of the appliance, giving them the ability to access sensitive information, modify workloads and configurations on the host system, and cause a denial of service (DoS). 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23755",
+    "descripcion": "D-Link D-View 8 versions 2.0.1.107 and below contain an uncontrolled search path vulnerability in the installer. When executed with elevated privileges via UAC, the installer attempts to load version.dll from its execution directory, allowing DLL preloading. An attacker can supply a malicious version.dll alongside the legitimate installer so that, when a victim runs the installer and approves the UAC prompt, attacker-controlled code executes with administrator privileges. This can lead to full system compromise. 21/01/2026 21/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2026-20080",
-    "descripcion": "A vulnerability in the SSH service of Cisco IEC6400 Wireless Backhaul Edge Compute Software could allow an unauthenticated, remote attacker to cause the SSH service to stop responding. This vulnerability exists because the SSH service lacks effective flood protection. An attacker could exploit this vulnerability by initiating a denial of service (DoS) attack against the SSH port. A successful exploit could allow the attacker to cause the SSH service to be unresponsive during the period of the DoS attack. All other operations remain stable during the attack. 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23754",
+    "descripcion": "D-Link D-View 8 versions 2.0.1.107 and below contain an improper access control vulnerability in backend API endpoints. Any authenticated user can supply an arbitrary user_id value to retrieve sensitive credential data belonging to other users, including super administrators. The exposed credential material can be reused directly as a valid authentication secret, allowing full impersonation of the targeted account. This results in complete account takeover and full administrative control over the D-View system. 21/01/2026 21/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2026-20055",
-    "descripcion": "Multiple vulnerabilities in the web-based management interface of Cisco Packaged Contact Center Enterprise (Packaged CCE) and Cisco Unified Contact Center Enterprise (Unified CCE) could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device.&nbsp; These vulnerabilities exist because the web-based management interface does not properly validate user-supplied input. An attacker could exploit these vulnerabilities by injecting malicious code into specific pages of the interface. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information. To exploit these vulnerabilities, the attacker must have valid administrative credentials. 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-69766",
+    "descripcion": "Tenda AX3 firmware v16.03.12.11 contains a stack-based buffer overflow in the formGetIptv function due to improper handling of the citytag stack buffer, which may result in memory corruption and remote code execution. 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2026-20045",
-    "descripcion": "A vulnerability in Cisco Unified Communications Manager (Unified CM), Cisco Unified Communications Manager Session Management Edition (Unified CM SME), Cisco Unified Communications Manager IM &amp; Presence Service (Unified CM IM&amp;P), Cisco Unity Connection, and Cisco Webex Calling Dedicated Instance could allow an unauthenticated, remote attacker&nbsp;to execute arbitrary commands on the underlying operating system of an affected device.&nbsp; This vulnerability is due to improper validation of user-supplied input in HTTP requests. An attacker could exploit this vulnerability by sending a sequence of crafted HTTP requests to the web-based management interface of an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root. Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root. 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-69763",
+    "descripcion": "Tenda AX3 firmware v16.03.12.11 contains a stack overflow in formSetIptv via the vlanId parameter, which can cause memory corruption and enable remote code execution. 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2025-70648",
-    "descripcion": "Tenda AX1803 v1.0.0.1 was discovered to contain a stack overflow in the security_5g parameter of the sub_727F4 function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-69762",
+    "descripcion": "Tenda AX3 firmware v16.03.12.11 contains a stack overflow in formSetIptv via the list parameter, which can cause memory corruption and enable remote code execution. 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2025-70646",
-    "descripcion": "Tenda AX1803 v1.0.0.1 was discovered to contain a stack overflow in the security parameter of the sub_72290 function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66960",
+    "descripcion": "An issue in ollama v.0.12.10 allows a remote attacker to cause a denial of service via the fs/ggml/gguf.go, function readGGUFV1String reads a string length from untrusted GGUF metadata 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2025-70644",
-    "descripcion": "Tenda AX-1806 v1.0.0.1 was discovered to contain a stack overflow in the time parameter of the sub_60CFC function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted request. 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-66959",
+    "descripcion": "An issue in ollama v.0.12.10 allows a remote attacker to cause a denial of service via the GGUF decoder 21/01/2026 21/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2025-57681",
-    "descripcion": "The WorklogPRO - Timesheets for Jira plugin in Jira Data Center before version 4.23.6-jira10 and before version 4.23.5-jira9 allows users and attackers to inject arbitrary HTML or JavaScript via a Cross-Site Scripting (XSS) vulnerability. The vulnerability is exploited via a specially crafted payload placed in an issue&#39;s summary field 21/01/2026 21/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2021-47887",
+    "descripcion": "OKI Print Job Accounting 4.4.10 contains an unquoted service path vulnerability in the OkiJaSvc service that allows local attackers to potentially execute arbitrary code. Attackers can exploit the unquoted path in &#39;C:\\Program Files\\Okidata\\Print Job Accounting\\&#39; to inject malicious executables and escalate privileges. 21/01/2026 21/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-21",
-    "cve": "CVE-2026-1290",
-    "descripcion": "Authentication Bypass by Primary Weakness vulnerability in Jamf Jamf Pro allows unspecified impact.This issue affects Jamf Pro: from 11.20 through 11.24. 21/01/2026 21/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2021-47886",
+    "descripcion": "Pingzapper 2.3.1 contains an unquoted service path vulnerability in the PingzapperSvc service that allows local attackers to potentially execute arbitrary code. Attackers can exploit the unquoted path in &#39;C:\\Program Files (x86)\\Pingzapper\\PZService.exe&#39; to inject malicious executables and escalate privileges. 21/01/2026 21/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
