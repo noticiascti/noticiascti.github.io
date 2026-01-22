@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24332",
-    "descripcion": "Discord through 2026-01-16 allows gathering information about whether a user&#39;s client state is Invisible (and not actually offline) because the response to a WebSocket API request includes the user in the presences array (with &#34;status&#34;: &#34;offline&#34;), whereas offline users are omitted from the presences array. This is arguably inconsistent with the UI description of Invisible as &#34;You will appear offline.&#34; 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-1332",
+    "descripcion": "MeetingHub developed by HAMASTAR Technology has a Missing Authentication vulnerability, allowing unauthenticated remote attackers to access specific API functions and obtain meeting-related information. 22/01/2026 22/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2020-8451",
-    "descripcion": "Rejected reason: The reserved CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1225",
+    "descripcion": "ACE vulnerability in configuration file processing by QOS.CH logback-core up to and including version 1.5.24 in Java applications, allows an attacker to instantiate classes already present on the class path by compromising an existing logback configuration file. The instantiation of a potentially malicious Java class requires that said class is present on the user&#39;s class-path. In addition, the attacker must have write access to a configuration file. However, after successful instantiation, the instance is very likely to be discarded with no further ado. 22/01/2026 22/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:X/V:X/RE:M/U:Green Gravedad 4.0 1.80 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-0920",
-    "descripcion": "The LA-Studio Element Kit for Elementor plugin for WordPress is vulnerable to Administrative User Creation in all versions up to, and including, 1.5.6.3. This is due to the &#39;ajax_register_handle&#39; function not restricting what user roles a user can register with. This makes it possible for unauthenticated attackers to supply the &#39;lakit_bkrole&#39; parameter during registration and gain administrator access to the site. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-4764",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Aida Computer Information Technology Inc. Hotel Guest Hotspot allows SQL Injection.This issue affects Hotel Guest Hotspot: through 22012026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24049",
-    "descripcion": "wheel is a command line tool for manipulating Python wheel files, as defined in PEP 427. In versions 0.46.1 and below, the unpack function is vulnerable to file permission modification through mishandling of file permissions after extraction. The logic blindly trusts the filename from the archive header for the chmod operation, even though the extraction process itself might have sanitized the path. Attackers can craft a malicious wheel file that, when unpacked, changes the permissions of critical system files (e.g., /etc/passwd, SSH keys, config files), allowing for Privilege Escalation or arbitrary code execution by modifying now-writable scripts. This issue has been fixed in version 0.46.2. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-13335",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.1 before 18.6.4, 18.7 before 18.7.2, and 18.8 before 18.8.2 that under certain circumstances could have allowed an authenticated user to create a denial of service condition by configuring malformed Wiki documents that bypass cycle detection. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2025-71176",
-    "descripcion": "pytest through 9.0.2 on UNIX relies on directories with the /tmp/pytest-of-{user} name pattern, which allows local users to cause a denial of service or possibly gain privileges. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2024-53252",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24055",
-    "descripcion": "Langfuse is an open source large language model engineering platform. In versions 3.146.0 and below, the /api/public/slack/install endpoint initiates Slack OAuth using a projectId provided by the client without authentication or authorization. The projectId is preserved throughout the OAuth flow, and the callback stores installations based on this untrusted metadata. This allows an attacker to bind their Slack workspace to any project and potentially receive changes to prompts stored in Langfuse Prompt Management. An attacker can replace existing Prompt Slack Automation integrations or pre-register a malicious one, though the latter requires an authenticated user to unknowingly configure it despite visible workspace and channel indicators in the UI. This issue has been fixed in version 3.147.0. 22/01/2026 22/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-53251",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24042",
-    "descripcion": "Appsmith is a platform to build admin panels, internal tools, and dashboards. In versions 1.94 and below, publicly accessible apps allow unauthenticated users to execute unpublished (edit-mode) actions by sending viewMode=false (or omitting it) to POST /api/v1/actions/execute. This bypasses the expected publish boundary where public viewers should only execute published actions, not edit-mode versions. An attack can result in sensitive data exposure, execution of edit‑mode queries and APIs, development data access, and the ability to trigger side effect behavior. This issue does not have a released fix at the time of publication. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2024-53250",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24039",
-    "descripcion": "Horilla is a free and open source Human Resource Management System (HRMS). Version 1.4.0 has Improper Access Control, allowing low-privileged employees to self-approve documents they have uploaded. The document-approval UI is intended to be restricted to administrator or high-privilege roles only; however, an insufficient server-side authorization check on the approval endpoint lets a standard employee modify the approval status of their own uploaded document. A successful exploitation allows users with only employee-level permissions to alter application state reserved for administrators. This undermines the integrity of HR processes (for example, acceptance of credentials, certifications, or supporting materials), and may enable submission of unvetted documents. This issue is fixed in version 1.5.0. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2024-53249",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24038",
-    "descripcion": "Horilla is a free and open source Human Resource Management System (HRMS). In version 1.4.0, the OTP handling logic has a flawed equality check that can be bypassed. When an OTP expires, the server returns None, and if an attacker omits the otp field from their POST request, the user-supplied OTP is also None, causing the comparison user_otp == otp to pass. This allows an attacker to bypass two-factor authentication entirely without ever providing a valid OTP. If administrative accounts are targeted, it could lead to compromise of sensitive HR data, manipulation of employee records, and further system-wide abuse. This issue has been fixed in version 1.5.0. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2024-53248",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24037",
-    "descripcion": "Horilla is a free and open source Human Resource Management System (HRMS). In version 1.4.0, the has_xss() function attempts to block XSS by matching input against a set of regex patterns. However, the regexes are incomplete and context-agnostic, making them easy to bypass. Attackers are able to redirect users to malicious domains, run external JavaScript, and steal CSRF tokens that can be used to craft CSRF attacks against admins. This issue has been fixed in version 1.5.0. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2024-45743",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. The CVE was never used. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
