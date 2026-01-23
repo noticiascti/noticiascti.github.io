@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2025-71145",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: usb: phy: isp1301: fix non-OF device reference imbalance A recent change fixing a device reference leak in a UDC driver introduced a potential use-after-free in the non-OF case as the isp1301_get_client() helper only increases the reference count for the returned I2C device in the OF case. Increment the reference count also for non-OF so that the caller can decrement it unconditionally. Note that this is inherently racy just as using the returned I2C device is since nothing is preventing the PHY driver from being unbound while in use. 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24635",
+    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in DevsBlink EduBlink Core edublink-core allows PHP Local File Inclusion.This issue affects EduBlink Core: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2025-13921",
-    "descripcion": "The weDocs: AI Powered Knowledge Base, Docs, Documentation, Wiki & AI Chatbot plugin for WordPress is vulnerable to unauthorized modification or loss of data due to a missing capability check on the &#39;wedocs_user_documentation_handling_capabilities&#39; function in all versions up to, and including, 2.1.16. This makes it possible for authenticated attackers, with Subscriber-level access and above, to edit any documentation post. The vulnerability was partially patched in version 2.1.16. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24634",
+    "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in Rustaurius Ultimate Reviews ultimate-reviews allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Ultimate Reviews: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2026-0914",
-    "descripcion": "The WP DSGVO Tools (GDPR) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;lw_content_block&#39; shortcode in all versions up to, and including, 3.1.36 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24633",
+    "descripcion": "Missing Authorization vulnerability in Passionate Brains Add Expires Headers & Optimized Minify add-expires-headers allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Add Expires Headers & Optimized Minify: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2025-4320",
-    "descripcion": "Authentication Bypass by Primary Weakness, Weak Password Recovery Mechanism for Forgotten Password vulnerability in Birebirsoft Software and Technology Solutions Sufirmam allows Authentication Bypass, Password Recovery Exploitation.This issue affects Sufirmam: through 23012026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-24632",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in jagdish1o1 Delay Redirects delay-redirects allows DOM-Based XSS.This issue affects Delay Redirects: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2025-4319",
-    "descripcion": "Improper Restriction of Excessive Authentication Attempts, Weak Password Recovery Mechanism for Forgotten Password vulnerability in Birebirsoft Software and Technology Solutions Sufirmam allows Brute Force, Password Recovery Exploitation.This issue affects Sufirmam: through 23012026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-24631",
+    "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in Mikado-Themes Rosebud rosebud allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Rosebud: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2025-14866",
-    "descripcion": "The Melapress Role Editor plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.1.1. This is due to a misconfigured capability check on the &#39;save_secondary_roles_field&#39; function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to assign themselves additional roles including Administrator. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24630",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Design Stylish Cost Calculator stylish-cost-calculator allows Stored XSS.This issue affects Stylish Cost Calculator: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2025-2204",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Tapandsign Technologies Software Inc. Tap&Sign allows Cross-Site Scripting (XSS).This issue affects Tap&Sign: through 23012026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24629",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Ability, Inc Web Accessibility with Max Access accessibility-toolbar allows Stored XSS.This issue affects Web Accessibility with Max Access: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2026-22276",
-    "descripcion": "Dell ECS, versions 3.8.1.0 through 3.8.1.7, and Dell ObjectScale versions prior to 4.2.0.0, contains a Cleartext Storage of Sensitive Information vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information disclosure. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24627",
+    "descripcion": "Missing Authorization vulnerability in Trusona Trusona for WordPress trusona allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Trusona for WordPress: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2026-22275",
-    "descripcion": "Dell ECS, versions 3.8.1.0 through 3.8.1.7, and Dell ObjectScale versions prior to 4.2.0.0, contains an Inclusion of Sensitive Information in Source Code vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information exposure. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24626",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in LogicHunt Logo Slider logo-slider-wp allows Stored XSS.This issue affects Logo Slider: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2026-22274",
-    "descripcion": "Dell ECS, versions 3.8.1.0 through 3.8.1.7, and Dell ObjectScale versions prior to 4.2.0.0, contains a Cleartext Transmission of Sensitive Information vulnerability in the Fabric Syslog. An unauthenticated attacker with remote access could potentially exploit this vulnerability to intercept and modify information in transit. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24625",
+    "descripcion": "Missing Authorization vulnerability in Imaginate Solutions File Uploads Addon for WooCommerce woo-addon-uploads allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects File Uploads Addon for WooCommerce: from n/a through 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
