@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2026-24304",
-    "descripcion": "Improper access control in Azure Resource Manager allows an authorized attacker to elevate privileges over a network. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-24342",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-23",
-    "cve": "CVE-2026-24138",
-    "descripcion": "FOG is a free open-source cloning/imaging/rescue suite/inventory management system. Versions 1.5.10.1754 and below contain an unauthenticated SSRF vulnerability in getversion.php which can be triggered by providing a user-controlled url parameter. It can be used to fetch both internal websites and files on the machine running FOG. This appears to be reachable without an authenticated web session when the request includes newService=1. The issue does not have a fixed release version at the time of publication. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24341",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24137",
-    "descripcion": "sigstore framework is a common go library shared across sigstore services and clients. In versions 1.10.3 and below, the legacy TUF client (pkg/tuf/client.go) supports caching target files to disk. It constructs a filesystem path by joining a cache base directory with a target name sourced from signed target metadata; however, it does not validate that the resulting path stays within the cache base directory. A malicious TUF repository can trigger arbitrary file overwriting, limited to the permissions that the calling process has. Note that this should only affect clients that are directly using the TUF client in sigstore/sigstore or are using an older version of Cosign. Public Sigstore deployment users are unaffected, as TUF metadata is validated by a quorum of trusted collaborators. This issue has been fixed in version 1.10.4. As a workaround, users can disable disk caching for the legacy client by setting SIGSTORE_NO_CACHE=true in the environment, migrate to https://github.com/sigstore/sigstore-go/tree/main/pkg/tuf, or upgrade to the latest sigstore/sigstore release. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-24340",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24132",
-    "descripcion": "Orval generates type-safe JS clients (TypeScript) from any valid OpenAPI v3 or Swagger v2 specification. Versions 7.19.0 and below and 8.0.0-rc.0 through 8.0.2 allow untrusted OpenAPI specifications to inject arbitrary TypeScript/JavaScript into generated mock files via the const keyword on schema properties. These const values are interpolated into the mock scalar generator (getMockScalar in packages/mock/src/faker/getters/scalar.ts) without proper escaping or type-safe serialization, which results in attacker-controlled code being emitted into both interface definitions and faker/MSW handlers. The vulnerability is similar in impact to the previously reported enum x-enumDescriptions (GHSA-h526-wf6g-67jv), but it affects a different code path in the faker-based mock generator rather than @orval/core. The issue has been fixed in versions 7.20.0 and 8.0.3. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-24339",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-20613",
-    "descripcion": "The ArchiveReader.extractContents() function used by cctl image load and container image load performs no pathname validation before extracting an archive member. This means that a carelessly or maliciously constructed archive can extract a file into any user-writable location on the system using relative pathnames. This issue is addressed in container 0.8.0 and containerization 0.21.0. 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-24338",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2025-9290",
-    "descripcion": "An authentication weakness was identified in Omada Controllers, Gateways and Access Points, controller-device adoption due to improper handling of random values. Exploitation requires advanced network positioning and allows an attacker to intercept adoption traffic and forge valid authentication through offline precomputation, potentially exposing sensitive information and compromising confidentiality. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-24337",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24307",
-    "descripcion": "Improper validation of specified type of input in M365 Copilot allows an unauthorized attacker to disclose information over a network. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-24336",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24306",
-    "descripcion": "Improper access control in Azure Front Door (AFD) allows an unauthorized attacker to elevate privileges over a network. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-24335",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24305",
-    "descripcion": "Azure Entra ID Elevation of Privilege Vulnerability 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-24334",
+    "descripcion": "Rejected reason: Not used 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-01-22",
-    "cve": "CVE-2026-24130",
-    "descripcion": "Moonraker is a Python web server providing API access to Klipper 3D printing firmware. In versions 0.9.3 and below, instances configured with the &#34;ldap&#34; component enabled are vulnerable to LDAP search filter injection techniques via the login endpoint. The 401 error response message can be used to determine whether or not a search was successful, allowing for brute force methods to discover LDAP entries on the server such as user IDs and user attributes. This issue has been fixed in version 0.10.0. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-67847",
+    "descripcion": "A flaw was found in Moodle. An attacker with access to the restore interface could trigger server-side execution of arbitrary code. This is due to insufficient validation of restore input, which leads to unintended interpretation by core restore routines. Successful exploitation could result in a full compromise of the Moodle application. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
