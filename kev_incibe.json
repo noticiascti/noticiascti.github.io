@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-01-23",
+    "cve": "CVE-2025-71145",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: usb: phy: isp1301: fix non-OF device reference imbalance A recent change fixing a device reference leak in a UDC driver introduced a potential use-after-free in the non-OF case as the isp1301_get_client() helper only increases the reference count for the returned I2C device in the OF case. Increment the reference count also for non-OF so that the caller can decrement it unconditionally. Note that this is inherently racy just as using the returned I2C device is since nothing is preventing the PHY driver from being unbound while in use. 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-13921",
+    "descripcion": "The weDocs: AI Powered Knowledge Base, Docs, Documentation, Wiki & AI Chatbot plugin for WordPress is vulnerable to unauthorized modification or loss of data due to a missing capability check on the &#39;wedocs_user_documentation_handling_capabilities&#39; function in all versions up to, and including, 2.1.16. This makes it possible for authenticated attackers, with Subscriber-level access and above, to edit any documentation post. The vulnerability was partially patched in version 2.1.16. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2026-0914",
+    "descripcion": "The WP DSGVO Tools (GDPR) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;lw_content_block&#39; shortcode in all versions up to, and including, 3.1.36 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-4320",
+    "descripcion": "Authentication Bypass by Primary Weakness, Weak Password Recovery Mechanism for Forgotten Password vulnerability in Birebirsoft Software and Technology Solutions Sufirmam allows Authentication Bypass, Password Recovery Exploitation.This issue affects Sufirmam: through 23012026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-4319",
+    "descripcion": "Improper Restriction of Excessive Authentication Attempts, Weak Password Recovery Mechanism for Forgotten Password vulnerability in Birebirsoft Software and Technology Solutions Sufirmam allows Brute Force, Password Recovery Exploitation.This issue affects Sufirmam: through 23012026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-14866",
+    "descripcion": "The Melapress Role Editor plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.1.1. This is due to a misconfigured capability check on the &#39;save_secondary_roles_field&#39; function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to assign themselves additional roles including Administrator. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-2204",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Tapandsign Technologies Software Inc. Tap&Sign allows Cross-Site Scripting (XSS).This issue affects Tap&Sign: through 23012026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-23",
     "cve": "CVE-2026-22276",
     "descripcion": "Dell ECS, versions 3.8.1.0 through 3.8.1.7, and Dell ObjectScale versions prior to 4.2.0.0, contains a Cleartext Storage of Sensitive Information vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information disclosure. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-01-23",
     "cve": "CVE-2026-22274",
     "descripcion": "Dell ECS, versions 3.8.1.0 through 3.8.1.7, and Dell ObjectScale versions prior to 4.2.0.0, contains a Cleartext Transmission of Sensitive Information vulnerability in the Fabric Syslog. An unauthenticated attacker with remote access could potentially exploit this vulnerability to intercept and modify information in transit. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2026-22273",
-    "descripcion": "Dell ECS, versions 3.8.1.0 through 3.8.1.7, and Dell ObjectScale versions prior to 4.2.0.0, contains an Use of Default Credentials vulnerability in the OS. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2025-46699",
-    "descripcion": "Dell Data Protection Advisor, versions prior to 19.12, contains an Improper Neutralization of Special Elements Used in a Template Engine vulnerability in the Server. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information exposure. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2026-22271",
-    "descripcion": "Dell ECS, versions 3.8.1.0 through 3.8.1.7, and Dell ObjectScale versions prior to 4.2.0.0, contains a Cleartext Transmission of Sensitive Information vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2026-1364",
-    "descripcion": "IAQS and I6 developed by JNC has a Missing Authentication vulnerability, allowing unauthenticated remote attackers to directly operate system administrative functionalities. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2026-1363",
-    "descripcion": "IAQS and I6 developed by JNC has a Client-Side Enforcement of Server-Side Security vulnerability, allowing unauthenticated remote attackers to gain administrator privileges by manipulating the web front-end. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2026-24515",
-    "descripcion": "In libexpat before 2.7.4, XML_ExternalEntityParserCreate does not copy unknown encoding handler user data. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 2.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2026-0603",
-    "descripcion": "A flaw was found in Hibernate. A remote attacker with low privileges could exploit a second-order SQL injection vulnerability by providing specially crafted, unsanitized non-alphanumeric characters in the ID column when the InlineIdsOrClauseBuilder is used. This could lead to sensitive information disclosure, such as reading system files, and allow for data manipulation or deletion within the application&#39;s database, resulting in an application level denial of service. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
