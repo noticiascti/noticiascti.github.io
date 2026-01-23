@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-22281",
-    "descripcion": "Dell PowerScale OneFS, versions 9.5.0.0 through 9.5.1.5, versions 9.6.0.0 through 9.7.1.10, versions 9.8.0.0 through 9.10.1.3, versions starting from 9.11.0.0 and prior to 9.13.0.0, contains a Time-of-check Time-of-use (TOCTOU) race condition vulnerability. A low privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to denial of service. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-24117",
+    "descripcion": "Rekor is a software supply chain transparency log. In versions 1.4.3 and below, attackers can trigger SSRF to arbitrary internal services because /api/v1/index/retrieve supports retrieving a public key via user-provided URL. Since the SSRF only can trigger GET requests, the request cannot mutate state. The response from the GET request is not returned to the caller so data exfiltration is not possible. A malicious actor could attempt to probe an internal network through Blind SSRF. The issue has been fixed in version 1.5.0. To workaround this issue, disable the search endpoint with --enable_retrieve_api=false. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-22280",
-    "descripcion": "Dell PowerScale OneFS, versions 9.5.0.0 through 9.5.1.5, versions 9.6.0.0 through 9.7.1.10, versions 9.8.0.0 through 9.10.1.3, versions starting from 9.11.0.0 and prior to 9.13.0.0, contains an incorrect permission assignment for critical resource vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to denial of service. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24058",
+    "descripcion": "Soft Serve is a self-hostable Git server for the command line. Versions 0.11.2 and below have a critical authentication bypass vulnerability that allows an attacker to impersonate any user (including admin) by &#34;offering&#34; the victim&#39;s public key during the SSH handshake before authenticating with their own valid key. This occurs because the user identity is stored in the session context during the &#34;offer&#34; phase and is not cleared if that specific authentication attempt fails. This issue has been fixed in version 0.11.3. 22/01/2026 22/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-22279",
-    "descripcion": "Dell PowerScale OneFS, versions prior 9.13.0.0, contains an insufficient logging vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information tampering. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23988",
+    "descripcion": "Rufus is a utility that helps format and create bootable USB flash drives. Versions 4.11 and below contain a race condition (TOCTOU) in src/net.c during the creation, validation, and execution of the Fido PowerShell script. Since Rufus runs with elevated privileges (Administrator) but writes the script to the %TEMP% directory (writeable by standard users) without locking the file, a local attacker can replace the legitimate script with a malicious one between the file write operation and the execution step. This allows arbitrary code execution with Administrator privileges. This issue has been fixed in version 4.12_BETA. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2025-68609",
-    "descripcion": "A vulnerability in Palantir&#39;s Aries service allowed unauthenticated access to log viewing and management functionality on Apollo instances using default configuration. The defect resulted in both authentication and authorization checks being bypassed, potentially allowing any network-accessible client to view system logs and perform operations without valid credentials. No evidence of exploitation was identified during the vulnerability window. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23954",
+    "descripcion": "Incus is a system container and virtual machine manager. Versions 6.21.0 and below allow a user with the ability to launch a container with a custom image (e.g a member of the ‘incus’ group) to use directory traversal or symbolic links in the templating functionality to achieve host arbitrary file read, and host arbitrary file write. This ultimately results in arbitrary command execution on the host. When using an image with a metadata.yaml containing templates, both the source and target paths are not checked for symbolic links or directory traversal. This can also be exploited in IncusOS. A fix is planned for versions 6.0.6 and 6.21.0, but they have not been released at the time of publication. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2025-66428",
-    "descripcion": "An issue with WordPress directory names in WebPros WordPress Toolkit before 6.9.1 allows privilege escalation. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-23953",
+    "descripcion": "Incus is a system container and virtual machine manager. In versions 6.20.0 and below, a user with the ability to launch a container with a custom YAML configuration (e.g a member of the ‘incus’ group) can create an environment variable containing newlines, which can be used to add additional configuration items in the container’s lxc.conf due to newline injection. This can allow adding arbitrary lifecycle hooks, ultimately resulting in arbitrary command execution on the host. Exploiting this issue on IncusOS requires a slight modification of the payload to change to a different writable directory for the validation step (e.g /tmp). This can be confirmed with a second container with /tmp mounted from the host (A privileged action for validation only). A fix is planned for versions 6.0.6 and 6.21.0, but they have not been released at the time of publication. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2025-56590",
-    "descripcion": "An issue was discovered in the InsertFromURL() function of the Apryse HTML2PDF SDK thru 11.10. This vulnerability could allow an attacker to execute arbitrary operating system commands on the local server. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-23831",
+    "descripcion": "Rekor is a software supply chain transparency log. In versions 1.4.3 and below, the entry implementation can panic on attacker-controlled input when canonicalizing a proposed entry with an empty spec.message, causing nil Pointer Dereference. Function validate() returns nil (success) when message is empty, leaving sign1Msg uninitialized, and Canonicalize() later dereferences v.sign1Msg.Payload. A malformed proposed entry of the cose/v0.0.1 type can cause a panic on a thread within the Rekor process. The thread is recovered so the client receives a 500 error message and service still continues, so the availability impact of this is minimal. This issue has been fixed in version 1.5.0. 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24390",
-    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in QantumThemes Kentha Elementor Widgets kentha-elementor allows PHP Local File Inclusion.This issue affects Kentha Elementor Widgets: from n/a through 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-20912",
+    "descripcion": "Gitea does not properly validate repository ownership when linking attachments to releases. An attachment uploaded to a private repository could potentially be linked to a release in a different public repository, making it accessible to unauthorized users. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24389",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in WP Chill Gallery PhotoBlocks photoblocks-grid-gallery allows DOM-Based XSS.This issue affects Gallery PhotoBlocks: from n/a through 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-20904",
+    "descripcion": "Gitea does not properly validate ownership when toggling OpenID URI visibility. An authenticated user may be able to change the visibility settings of other users&#39; OpenID identities. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24388",
-    "descripcion": "Missing Authorization vulnerability in Ludwig You WPMasterToolKit wpmastertoolkit allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WPMasterToolKit: from n/a through 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-20897",
+    "descripcion": "Gitea does not properly validate repository ownership when deleting Git LFS locks. A user with write access to one repository may be able to delete LFS locks belonging to other repositories. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-22",
-    "cve": "CVE-2026-24387",
-    "descripcion": "Missing Authorization vulnerability in Arul Prasad J WP Quick Post Duplicator wp-quick-post-duplicator allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP Quick Post Duplicator: from n/a through 22/01/2026 22/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-20888",
+    "descripcion": "Gitea does not properly verify authorization when canceling scheduled auto-merges via the web interface. A user with read access to pull requests may be able to cancel auto-merges scheduled by other users. 22/01/2026 22/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
