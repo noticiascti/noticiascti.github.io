@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-01-24",
+    "cve": "CVE-2026-0911",
+    "descripcion": "The Hustle – Email Marketing, Lead Generation, Optins, Popups plugin for WordPress is vulnerable to arbitrary file uploads due to incorrect file type validation in the action_import_module() function in all versions up to, and including, 7.8.9.2. This makes it possible for authenticated attackers, with a lower-privileged role (e.g., Subscriber-level access and above), to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. Successful exploitation requires an admin to grant Hustle module permissions (or module edit access) to the low-privileged user so they can access the Hustle admin page and obtain the required nonce. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-24",
+    "cve": "CVE-2025-13920",
+    "descripcion": "The WP Directory Kit plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.4.9 via the wdk_public_action AJAX handler. This makes it possible for unauthenticated attackers to extract email addresses for users with Directory Kit-specific user roles. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-24",
     "cve": "CVE-2026-1302",
     "descripcion": "The Meta-box GalleryMeta plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 3.0.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with editor-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-01-24",
     "cve": "CVE-2026-1098",
     "descripcion": "The CM CSS Columns plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;tag&#39; shortcode attribute in all versions up to, and including, 1.2.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-24",
-    "cve": "CVE-2026-0800",
-    "descripcion": "The User Submitted Posts – Enable Users to Submit Posts from the Front End plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the custom fields in all versions up to, and including, 20251210 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-24",
-    "cve": "CVE-2026-0687",
-    "descripcion": "The Meta-box GalleryMeta plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;mb_gallery&#39; custom post type in all versions up to, and including, 3.0.1. This makes it possible for authenticated attackers, with Author-level access and above, to create and publish galleries. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
