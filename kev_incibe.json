@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-01-23",
+    "cve": "CVE-2026-21867",
+    "descripcion": "Rejected reason: Reason: This candidate was issued in error. 23/01/2026 23/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-14947",
+    "descripcion": "The All-in-One Video Gallery plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `ajax_callback_create_bunny_stream_video`, `ajax_callback_get_bunny_stream_video`, and `ajax_callback_delete_bunny_stream_video` functions in all versions up to, and including, 4.6.4. This makes it possible for unauthenticated attackers to create and delete videos on the Bunny Stream CDN associated with the victim&#39;s account, provided they can obtain a valid nonce which is exposed in public player templates. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-23",
     "cve": "CVE-2026-24423",
     "descripcion": "SmarterTools SmarterMail versions prior to build 9511 contain an unauthenticated remote code execution vulnerability in the ConnectToHub API method. The attacker could point the SmarterMail to the malicious HTTP server, which serves the malicious OS command. This command will be executed by the vulnerable application. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -11,8 +21,18 @@
   },
   {
     "fecha": "2026-01-23",
+    "cve": "CVE-2025-67231",
+    "descripcion": "A reflected cross-site scripting (XSS) vulnerability in ToDesktop Builder v0.33.1 allows attackers to execute arbitrary code in the context of a user&#39;s browser via a crafted payload. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-23",
     "cve": "CVE-2025-71177",
     "descripcion": "LavaLite CMS versions up to and including 10.1.0 contain a stored cross-site scripting vulnerability in the package creation and search functionality. Authenticated users can supply crafted HTML or JavaScript in the package Name or Description fields that is stored and later rendered without proper output encoding in package search results. When other users view search results that include the malicious package, the injected script executes in their browsers, potentially enabling session hijacking, credential theft, and unauthorized actions in the context of the victim. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-23",
+    "cve": "CVE-2025-67229",
+    "descripcion": "An improper certificate validation vulnerability exists in ToDesktop Builder v0.32.1 This vulnerability allows an unauthenticated, on-path attacker to spoof backend responses by exploiting insufficient certificate validation. 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-01-23",
@@ -21,32 +41,12 @@
   },
   {
     "fecha": "2026-01-23",
+    "cve": "CVE-2022-25369",
+    "descripcion": "An issue was discovered in Dynamicweb before 9.12.8. An attacker can add a new administrator user without authentication. This flaw exists due to a logic issue when determining if the setup phases of the product can be run again. Once an attacker is authenticated as the new admin user they have added, it is possible to upload an executable file and achieve command execution. This is fixed in 9.5.9, 9.6.16, 9.7.8, 9.8.11, 9.9.8, 9.10.18, 9.12.8, and 9.13.0 (and later). 23/01/2026 23/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-01-23",
     "cve": "CVE-2021-47906",
     "descripcion": "BloofoxCMS 0.5.2.1 contains a stored cross-site scripting vulnerability in the articles text parameter that allows authenticated attackers to inject malicious scripts. Attackers can insert malicious javascript payloads in the text field to execute scripts and potentially steal authenticated users&#39; cookies. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2021-47905",
-    "descripcion": "MyBB Delete Account Plugin 1.4 contains a cross-site scripting vulnerability in the account deletion reason input field. Attackers can inject malicious scripts that will execute in the admin interface when viewing delete account reasons. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2021-47904",
-    "descripcion": "PhreeBooks 5.2.3 contains an authenticated file upload vulnerability in the Image Manager that allows remote code execution. Attackers can upload a malicious PHP web shell by exploiting unrestricted file type uploads to gain command execution on the server. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2021-47903",
-    "descripcion": "LiteSpeed Web Server Enterprise 5.4.11 contains an authenticated command injection vulnerability in the external app configuration interface. Authenticated administrators can inject shell commands through the &#39;Command&#39; parameter in the server configuration, allowing remote code execution via path traversal and bash command injection. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2021-47899",
-    "descripcion": "YetiShare File Hosting Script 5.1.0 contains a server-side request forgery vulnerability that allows attackers to read local system files through the remote file upload feature. Attackers can exploit the url parameter in the url_upload_handler endpoint to access sensitive files like /etc/passwd by using file:/// protocol. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-23",
-    "cve": "CVE-2021-47898",
-    "descripcion": "Epson USB Display 1.6.0.0 contains an unquoted service path vulnerability in the EMP_UDSA service running with LocalSystem privileges. Attackers can exploit the unquoted path by placing malicious executables in intermediate directories to gain elevated system access. 23/01/2026 23/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
