@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-01-24",
+    "cve": "CVE-2026-0593",
+    "descripcion": "The WP Go Maps (formerly WP Google Maps) plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the processBackgroundAction() function in all versions up to, and including, 10.0.04. This makes it possible for authenticated attackers, with Subscriber-level access and above, to modify global map engine settings. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-24",
+    "cve": "CVE-2026-0862",
+    "descripcion": "The Save as PDF Plugin by PDFCrowd plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘options’ parameter in all versions up to, and including, 4.5.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. NOTE: Successful exploitation of this vulnerability requires that the PDFCrowd API key is blank (also known as &#34;demo mode&#34;, which is the default configuration when the plugin is installed) or known. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-24",
     "cve": "CVE-2026-0911",
     "descripcion": "The Hustle – Email Marketing, Lead Generation, Optins, Popups plugin for WordPress is vulnerable to arbitrary file uploads due to incorrect file type validation in the action_import_module() function in all versions up to, and including, 7.8.9.2. This makes it possible for authenticated attackers, with a lower-privileged role (e.g., Subscriber-level access and above), to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. Successful exploitation requires an admin to grant Hustle module permissions (or module edit access) to the low-privileged user so they can access the Hustle admin page and obtain the required nonce. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-01-24",
     "cve": "CVE-2026-1189",
     "descripcion": "The LeadBI Plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;form_id&#39; parameter of the &#39;leadbi_form&#39; shortcode in all versions up to, and including, 1.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-24",
-    "cve": "CVE-2026-1127",
-    "descripcion": "The Timeline Event History plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the `id` parameter in all versions up to, and including, 3.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-24",
-    "cve": "CVE-2026-1098",
-    "descripcion": "The CM CSS Columns plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;tag&#39; shortcode attribute in all versions up to, and including, 1.2.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 24/01/2026 24/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
