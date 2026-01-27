@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-01-27",
+    "cve": "CVE-2026-1361",
+    "descripcion": "ASDA-Soft Stack-based Buffer Overflow Vulnerability 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-27",
     "cve": "CVE-2026-24686",
     "descripcion": "go-tuf is a Go implementation of The Update Framework (TUF). go-tuf&#39;s TAP 4 Multirepo Client uses the map file repository name string (`repoName`) as a filesystem path component when selecting the local metadata cache directory. Starting in version 2.0.0 and prior to version 2.4.1, if an application accepts a map file from an untrusted source, an attacker can supply a `repoName` containing traversal (e.g., `../escaped-repo`) and cause go-tuf to create directories and write the root metadata file outside the intended `LocalMetadataDir` cache base, within the running process&#39;s filesystem permissions. Version 2.4.1 contains a patch. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-01-26",
     "cve": "CVE-2026-24477",
     "descripcion": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. If AnythingLLM prior to version 1.10.0 is configured to use Qdrant as the vector database with an API key, this QdrantApiKey could be exposed in plain text to unauthenticated users via the `/api/setup-complete` endpoint. Leakage of QdrantApiKey allows an unauthenticated attacker full read/write access to the Qdrant vector database instance used by AnythingLLM. Since Qdrant often stores the core knowledge base for RAG in AnythingLLM, this can lead to complete compromise of the semantic search / retrieval functionality and indirect leakage of confidential uploaded documents. Version 1.10.0 patches the issue. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-26",
-    "cve": "CVE-2026-1449",
-    "descripcion": "A flaw has been found in Hisense TransTech Smart Bus Management System up to 20260113. Affected is the function Page_Load of the file YZSoft/Forms/XForm/BM/BusComManagement/TireMng.aspx. Executing a manipulation of the argument key can lead to sql injection. It is possible to launch the attack remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
