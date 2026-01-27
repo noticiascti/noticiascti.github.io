@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2025-14971",
-    "descripcion": "The Link Invoice Payment for WooCommerce plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the createPartialPayment and cancelPartialPayment functions in all versions up to, and including, 2.8.0. This makes it possible for unauthenticated attackers to create partial payments on any order or cancel any existing partial payment via ID enumeration. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24830",
+    "descripcion": "Integer Overflow or Wraparound vulnerability in Ralim IronOS.This issue affects IronOS: before v2.23-rc2. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-21408",
-    "descripcion": "beat-access for Windows version 3.0.3 and prior contains an issue with the DLL search path, which may lead to insecurely loading Dynamic Link Libraries. As a result, arbitrary code may be executed with SYSTEM privileges. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 5.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24829",
+    "descripcion": "Out-of-bounds Write, Heap-based Buffer Overflow vulnerability in Is-Daouda is-Engine.This issue affects is-Engine: before 3.3.4. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-1361",
-    "descripcion": "ASDA-Soft Stack-based Buffer Overflow Vulnerability 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24828",
+    "descripcion": "Missing Release of Memory after Effective Lifetime vulnerability in Is-Daouda is-Engine.This issue affects is-Engine: before 3.3.4. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-24686",
-    "descripcion": "go-tuf is a Go implementation of The Update Framework (TUF). go-tuf&#39;s TAP 4 Multirepo Client uses the map file repository name string (`repoName`) as a filesystem path component when selecting the local metadata cache directory. Starting in version 2.0.0 and prior to version 2.4.1, if an application accepts a map file from an untrusted source, an attacker can supply a `repoName` containing traversal (e.g., `../escaped-repo`) and cause go-tuf to create directories and write the root metadata file outside the intended `LocalMetadataDir` cache base, within the running process&#39;s filesystem permissions. Version 2.4.1 contains a patch. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24827",
+    "descripcion": "Out-of-bounds Write vulnerability in gerstrong Commander-Genius.This issue affects Commander-Genius: before Release refs/pull/358/merge. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-24490",
-    "descripcion": "MobSF is a mobile application security testing tool used. Prior to version 4.4.5, a Stored Cross-site Scripting (XSS) vulnerability in MobSF&#39;s Android manifest analysis allows an attacker to execute arbitrary JavaScript in the context of a victim&#39;s browser session by uploading a malicious APK. The `android:host` attribute from `` elements is rendered in HTML reports without sanitization, enabling session hijacking and account takeover. Version 4.4.5 fixes the issue. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24826",
+    "descripcion": "Out-of-bounds Write, Divide By Zero, NULL Pointer Dereference, Use of Uninitialized Resource, Out-of-bounds Read, Reachable Assertion vulnerability in cadaver turso3d.This issue affects . 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-24489",
-    "descripcion": "Gakido is a Python HTTP client focused on browser impersonation and anti-bot evasion. A vulnerability was discovered in Gakido prior to version 0.1.1 that allowed HTTP header injection through CRLF (Carriage Return Line Feed) sequences in user-supplied header values and names. When making HTTP requests with user-controlled header values containing `\\r\\n` (CRLF), `\\n` (LF), or `\\x00` (null byte) characters, an attacker could inject arbitrary HTTP headers into the request. The fix in version 0.1.1 adds a `_sanitize_header()` function that strips `\\r`, `\\n`, and `\\x00` characters from both header names and values before they are included in HTTP requests. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24348",
+    "descripcion": "Multiple cross-site scripting vulnerabilities in Admin UI of EZCast Pro II version 1.17478.146 allow attackers to execute arbitrary JavaScript code in the browser of other Admin UI users. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:X/RE:X/U:X Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-24486",
-    "descripcion": "Python-Multipart is a streaming multipart parser for Python. Prior to version 0.0.22, a Path Traversal vulnerability exists when using non-default configuration options `UPLOAD_DIR` and `UPLOAD_KEEP_FILENAME=True`. An attacker can write uploaded files to arbitrary locations on the filesystem by crafting a malicious filename. Users should upgrade to version 0.0.22 to receive a patch or, as a workaround, avoid using `UPLOAD_KEEP_FILENAME=True` in project configurations. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24347",
+    "descripcion": "Improper input validation in Admin UI of EZCast Pro II version 1.17478.146 allows attackers to manipulate files in the /tmp directory 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:X/RE:X/U:X Gravedad 4.0 5.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-24480",
-    "descripcion": "QGIS is a free, open source, cross platform geographical information system (GIS) The repository contains a GitHub Actions workflow called &#34;pre-commit checks&#34; that, before commit 76a693cd91650f9b4e83edac525e5e4f90d954e9, was vulnerable to remote code execution and repository compromise because it used the `pull_request_target` trigger and then checked out and executed untrusted pull request code in a privileged context. Workflows triggered by `pull_request_target` ran with the base repository&#39;s credentials and access to secrets. If these workflows then checked out and executed code from the head of an external pull request (which could have been attacker controlled), the attacker could have executed arbitrary commands with elevated privileges. This insecure pattern has been documented as a security risk by GitHub and security researchers. Commit 76a693cd91650f9b4e83edac525e5e4f90d954e9 removed the vulnerable code. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24346",
+    "descripcion": "Use of well-known default credentials in Admin UI of EZCast Pro II version 1.17478.146 allows attackers to access protected areas in the web application 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:X/RE:X/U:X Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-24479",
-    "descripcion": "HUSTOF is an open source online judge based on PHP/C++/MySQL/Linux for ACM/ICPC and NOIP training. Prior to version 26.01.24, the problem_import_qduoj.php and problem_import_hoj.php modules fail to properly sanitize filenames within uploaded ZIP archives. Attackers can craft a malicious ZIP file containing files with path traversal sequences (e.g., ../../shell.php). When extracted by the server, this allows writing files to arbitrary locations in the web root, leading to Remote Code Execution (RCE). Version 26.01.24 contains a fix for the issue. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24345",
+    "descripcion": "Cross-Site Request Forgery in Admin UI of EZCast Pro II version 1.17478.146 allows attackers to bypass authorization checks and gain full access to the admin UI 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:L/U:X Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2026-23683",
-    "descripcion": "SAP Fiori App Intercompany Balance Reconciliation does not perform necessary authorization checks for an authenticated user, resulting in escalation of privileges. This has low impact on confidentiality, integrity and availability are not impacted. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-21417",
+    "descripcion": "Dell CloudBoost Virtual Appliance, versions prior to 19.14.0.0, contains a Plaintext Storage of Password vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
