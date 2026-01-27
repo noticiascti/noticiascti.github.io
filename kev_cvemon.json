@@ -6,11 +6,6 @@
   },
   {
     "fecha": "2026-01-27",
-    "cve": "CVE-2025-51683",
-    "descripcion": "A blind SQL Injection (SQLi) vulnerability in mJobtime v15.7.2 allows unauthenticated attackers to execute arbitrary SQL statements via a crafted POST request to the /Default.aspx/update_profile_Server endpoint ."
-  },
-  {
-    "fecha": "2026-01-27",
     "cve": "CVE-2024-37079",
     "descripcion": "vCenter Server contains a heap-overflow vulnerability in the implementation of the DCERPC protocol. A malicious actor with network access to vCenter Server may trigger this vulnerability by sending a specially crafted network packet potentially leading to remote code execution."
   },
@@ -18,6 +13,16 @@
     "fecha": "2026-01-27",
     "cve": "CVE-2025-27237",
     "descripcion": "In Zabbix Agent and Agent 2 on Windows, the OpenSSL configuration file is loaded from a path writable by low-privileged users, allowing malicious modification and potential local privilege escalation by injecting a DLL."
+  },
+  {
+    "fecha": "2026-01-27",
+    "cve": "CVE-2025-52691",
+    "descripcion": "Successful exploitation of the vulnerability could allow an unauthenticated attacker to upload arbitrary files to any location on the mail server, potentially enabling remote code execution."
+  },
+  {
+    "fecha": "2026-01-27",
+    "cve": "CVE-2026-23760",
+    "descripcion": "SmarterTools SmarterMail versions prior to build 9511 contain an authentication bypass vulnerability in the password reset API. The force-reset-password endpoint permits anonymous requests and fails to verify the existing password or a reset token when resetting system ..."
   },
   {
     "fecha": "2026-01-27",
@@ -43,10 +48,5 @@
     "fecha": "2026-01-27",
     "cve": "CVE-2025-56005",
     "descripcion": "An undocumented and unsafe feature in the PLY (Python Lex-Yacc) library 3.11 allows Remote Code Execution (RCE) via the `picklefile` parameter in the `yacc()` function. This parameter accepts a `.pkl` file that is deserialized with `pickle.load()` without validation. Because ..."
-  },
-  {
-    "fecha": "2026-01-27",
-    "cve": "CVE-2025-13223",
-    "descripcion": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.175 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)"
   }
 ]
