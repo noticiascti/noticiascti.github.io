@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-01-27",
+    "cve": "CVE-2025-14971",
+    "descripcion": "The Link Invoice Payment for WooCommerce plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the createPartialPayment and cancelPartialPayment functions in all versions up to, and including, 2.8.0. This makes it possible for unauthenticated attackers to create partial payments on any order or cancel any existing partial payment via ID enumeration. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-27",
+    "cve": "CVE-2026-21408",
+    "descripcion": "beat-access for Windows version 3.0.3 and prior contains an issue with the DLL search path, which may lead to insecurely loading Dynamic Link Libraries. As a result, arbitrary code may be executed with SYSTEM privileges. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 5.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-01-27",
     "cve": "CVE-2026-1361",
     "descripcion": "ASDA-Soft Stack-based Buffer Overflow Vulnerability 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-01-27",
     "cve": "CVE-2026-23683",
     "descripcion": "SAP Fiori App Intercompany Balance Reconciliation does not perform necessary authorization checks for an authenticated user, resulting in escalation of privileges. This has low impact on confidentiality, integrity and availability are not impacted. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-01-26",
-    "cve": "CVE-2026-24478",
-    "descripcion": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. Prior to version 1.10.0, a critical Path Traversal vulnerability in the DrupalWiki integration allows a malicious admin (or an attacker who can convince an admin to configure a malicious DrupalWiki URL) to write arbitrary files to the server. This can lead to Remote Code Execution (RCE) by overwriting configuration files or writing executable scripts. Version 1.10.0 fixes the issue. 27/01/2026 27/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-26",
-    "cve": "CVE-2026-24477",
-    "descripcion": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. If AnythingLLM prior to version 1.10.0 is configured to use Qdrant as the vector database with an API key, this QdrantApiKey could be exposed in plain text to unauthenticated users via the `/api/setup-complete` endpoint. Leakage of QdrantApiKey allows an unauthenticated attacker full read/write access to the Qdrant vector database instance used by AnythingLLM. Since Qdrant often stores the core knowledge base for RAG in AnythingLLM, this can lead to complete compromise of the semantic search / retrieval functionality and indirect leakage of confidential uploaded documents. Version 1.10.0 patches the issue. 27/01/2026 27/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
