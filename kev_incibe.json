@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-01-30",
+    "cve": "CVE-2026-1683",
+    "descripcion": "A vulnerability has been found in Free5GC SMF up to 4.1.0. Affected by this vulnerability is the function HandlePfcpSessionReportRequest of the file internal/pfcp/handler/handler.go of the component PFCP. The manipulation leads to denial of service. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. To fix this issue, it is recommended to deploy a patch. 30/01/2026 30/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:N/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-30",
+    "cve": "CVE-2026-1682",
+    "descripcion": "A flaw has been found in Free5GC SMF up to 4.1.0. Affected is the function HandlePfcpAssociationReleaseRequest of the file internal/pfcp/handler/handler.go of the component PFCP UDP Endpoint. Executing a manipulation can lead to null pointer dereference. The attack may be launched remotely. The exploit has been published and may be used. A patch should be applied to remediate this issue. 30/01/2026 30/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:N/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-30",
+    "cve": "CVE-2025-9226",
+    "descripcion": "Zohocorp ManageEngine OpManager, NetFlow Analyzer, and OpUtils versions prior to 128582 are affected by a stored cross-site scripting vulnerability in the Subnet Details. 30/01/2026 30/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-30",
+    "cve": "CVE-2025-6723",
+    "descripcion": "Chef InSpec up to version 5.23 creates named pipes with overly permissive default Windows access controls. A local attacker may interfere with the pipe connection process and exploit the insufficient access restrictions to assume the InSpec execution context, potentially resulting in elevated privileges or operational disruption. This issue affects Chef Inspec: through 5.23. 30/01/2026 30/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-30",
     "cve": "CVE-2026-1498",
     "descripcion": "An LDAP Injection vulnerability in WatchGuard Fireware OS may allow a remote unauthenticated attacker to retrieve sensitive information from a connected LDAP authentication server through an exposed authentication or management web interface. This vulnerability may also allow a remote attacker to authenticate as an LDAP user with a partial identifier if they additionally have that user&#39;s valid passphrase.This issue affects Fireware OS: from 12.0 through 12.11.6, from 12.5 through 12.5.15, from 2025.1 through 2026.0. 30/01/2026 30/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-01-30",
     "cve": "CVE-2026-22623",
     "descripcion": "Due to insufficient input parameter validation on the interface, authenticated users of certain HIKSEMI NAS products can execute arbitrary commands on the device by crafting specific messages. 30/01/2026 30/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2026-0709",
-    "descripcion": "Some Hikvision Wireless Access Points are vulnerable to authenticated command execution due to insufficient input validation. Attackers with valid credentials can exploit this flaw by sending crafted packets containing malicious commands to affected devices, leading to arbitrary command execution. 30/01/2026 30/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2025-26385",
-    "descripcion": "Johnson Controls Metasys component listed below have Improper Neutralization of Special Elements used in a Command (Command Injection) Vulnerability . Successful exploitation of this vulnerability could allow remote SQL execution This issue affects * Metasys: Application and Data Server (ADS) installed with SQL Express deployed as part of the Metasys 14.1 and prior installation, * Extended Application and Data Server (ADX) installed with SQL Express deployed as part of the Metasys 14.1 installation, * LCS8500 or NAE8500 installed with SQL Express deployed as part of the Metasys installation Releases 12.0 through 14.1, * System Configuration Tool (SCT) installed with SQL Express deployed as part of the SCT installation 17.1 and prior, * Controller Configuration Tool (CCT) installed with SQL Express deployed as part of the CCT installation 17.0 and prior. 30/01/2026 30/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.50 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2026-1699",
-    "descripcion": "In the Eclipse Theia Website repository, the GitHub Actions workflow .github/workflows/preview.yml used pull_request_target trigger while checking out and executing untrusted pull request code. This allowed any GitHub user to execute arbitrary code in the repository&#39;s CI environment with access to repository secrets and a GITHUB_TOKEN with extensive write permissions (contents:write, packages:write, pages:write, actions:write). An attacker could exfiltrate secrets, publish malicious packages to the eclipse-theia organization, modify the official Theia website, and push malicious code to the repository. 30/01/2026 30/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2026-22277",
-    "descripcion": "Dell UnityVSA, version(s) 5.4 and prior, contain(s) an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to arbitrary command execution with root privileges. 30/01/2026 30/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
