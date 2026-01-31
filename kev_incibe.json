@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-01-31",
+    "cve": "CVE-2026-1251",
+    "descripcion": "The SupportCandy – Helpdesk & Customer Support Ticket System plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 3.4.4 via the &#39;add_reply&#39; function due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber-level access and above, to steal file attachments uploaded by other users by specifying arbitrary attachment IDs in the &#39;description_attachments&#39; parameter, re-associating those files to their own tickets and removing access from the original owners. 31/01/2026 31/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-31",
+    "cve": "CVE-2026-0683",
+    "descripcion": "The SupportCandy – Helpdesk & Customer Support Ticket System plugin for WordPress is vulnerable to SQL Injection via the Number-type custom field filter in all versions up to, and including, 3.4.4. This is due to insufficient escaping on the user-supplied operand value when using the equals operator and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Subscriber-level access and above (customers), to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 31/01/2026 31/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-31",
     "cve": "CVE-2026-1431",
     "descripcion": "The Booking Calendar plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the wpbc_ajax_WPBC_FLEXTIMELINE_NAV() function in all versions up to, and including, 10.14.13. This makes it possible for unauthenticated attackers to retrieve booking information including customer names, phones and emails. 31/01/2026 31/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-01-30",
     "cve": "CVE-2020-37053",
     "descripcion": "Navigate CMS 2.8.7 contains an authenticated SQL injection vulnerability that allows attackers to leak database information by manipulating the &#39;sidx&#39; parameter in comments. Attackers can exploit the vulnerability to extract user activation keys by using time-based blind SQL injection techniques, potentially enabling password reset for administrative accounts. 31/01/2026 31/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2020-37052",
-    "descripcion": "AirControl 1.4.2 contains a pre-authentication remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary system commands through malicious Java expression injection. Attackers can exploit the /.seam endpoint by crafting a specially constructed URL with embedded Java expressions to run commands with the application&#39;s system privileges. 31/01/2026 31/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2020-37051",
-    "descripcion": "Online-Exam-System 2015 contains a time-based blind SQL injection vulnerability in the feedback form that allows attackers to extract database password hashes. Attackers can exploit the &#39;feed.php&#39; endpoint by crafting malicious payload requests that use time delays to systematically enumerate user password characters. 31/01/2026 31/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
