@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-01-31",
+    "cve": "CVE-2026-1431",
+    "descripcion": "The Booking Calendar plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the wpbc_ajax_WPBC_FLEXTIMELINE_NAV() function in all versions up to, and including, 10.14.13. This makes it possible for unauthenticated attackers to retrieve booking information including customer names, phones and emails. 31/01/2026 31/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-31",
+    "cve": "CVE-2025-15525",
+    "descripcion": "The Ajax Load More – Infinite Scroll, Load More, & Lazy Load plugin for WordPress is vulnerable to unauthorized access of data due to incorrect authorization on the parse_custom_args() function in all versions up to, and including, 7.8.1. This makes it possible for unauthenticated attackers to expose the titles and excerpts of private, draft, pending, scheduled, and trashed posts. 31/01/2026 31/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-01-31",
     "cve": "CVE-2025-15510",
     "descripcion": "The NEX-Forms – Ultimate Forms Plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the NF5_Export_Forms class constructor in all versions up to, and including, 9.1.8. This makes it possible for unauthenticated attackers to export form configurations, that may include sensitive data, such as email addresses, PayPal API credentials, and third-party integration keys by enumerating the nex_forms_Id parameter. 31/01/2026 31/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-01-30",
     "cve": "CVE-2020-37051",
     "descripcion": "Online-Exam-System 2015 contains a time-based blind SQL injection vulnerability in the feedback form that allows attackers to extract database password hashes. Attackers can exploit the &#39;feed.php&#39; endpoint by crafting malicious payload requests that use time delays to systematically enumerate user password characters. 31/01/2026 31/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2020-37050",
-    "descripcion": "Quick Player 1.3 contains a buffer overflow vulnerability that allows attackers to execute arbitrary code by crafting a malicious .m3l file with carefully constructed payload. Attackers can trigger the vulnerability by loading a specially crafted file through the application&#39;s file loading mechanism, potentially enabling remote code execution. 31/01/2026 31/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-01-30",
-    "cve": "CVE-2020-37049",
-    "descripcion": "Frigate 3.36.0.9 contains a local buffer overflow vulnerability in the Command Line input field that allows attackers to execute arbitrary code. Attackers can craft a malicious payload to overflow the buffer, bypass DEP, and execute commands like launching calc.exe through a specially crafted input sequence. 31/01/2026 31/01/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
