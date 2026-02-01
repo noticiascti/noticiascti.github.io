@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-01-31",
+    "cve": "CVE-2026-25069",
+    "descripcion": "SunFounder Pironman Dashboard (pm_dashboard) version 1.3.13 and prior contain a path traversal vulnerability in the log file API endpoints. An unauthenticated remote attacker can supply traversal sequences via the filename parameter to read and delete arbitrary files. Successful exploitation can disclose sensitive information and delete critical system files, resulting in data loss and potential system compromise or denial of service. 01/02/2026 01/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-01-31",
     "cve": "CVE-2026-1165",
     "descripcion": "The Popup Box plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 6.1.1. This is due to a flawed nonce implementation in the &#39;publish_unpublish_popupbox&#39; function that verifies a self-created nonce rather than one submitted in the request. This makes it possible for unauthenticated attackers to change the publish status of popups via a forged request, granted they can trick a site administrator into performing an action such as clicking a link. 31/01/2026 31/01/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-01-31",
     "cve": "CVE-2026-23033",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: dmaengine: omap-dma: fix dma_pool resource leak in error paths The dma_pool created by dma_pool_create() is not destroyed when dma_async_device_register() or of_dma_controller_register() fails, causing a resource leak in the probe error paths. Add dma_pool_destroy() in both error paths to properly release the allocated dma_pool resource. 31/01/2026 31/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-01-31",
-    "cve": "CVE-2026-23032",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: null_blk: fix kmemleak by releasing references to fault configfs items When CONFIG_BLK_DEV_NULL_BLK_FAULT_INJECTION is enabled, the null-blk driver sets up fault injection support by creating the timeout_inject, requeue_inject, and init_hctx_fault_inject configfs items as children of the top-level nullbX configfs group. However, when the nullbX device is removed, the references taken to these fault-config configfs items are not released. As a result, kmemleak reports a memory leak, for example: unreferenced object 0xc00000021ff25c40 (size 32): comm &#34;mkdir&#34;, pid 10665, jiffies 4322121578 hex dump (first 32 bytes): 69 6e 69 74 5f 68 63 74 78 5f 66 61 75 6c 74 5f init_hctx_fault_ 69 6e 6a 65 63 74 00 88 00 00 00 00 00 00 00 00 inject.......... backtrace (crc 1a018c86): __kmalloc_node_track_caller_noprof+0x494/0xbd8 kvasprintf+0x74/0xf4 config_item_set_name+0xf0/0x104 config_group_init_type_name+0x48/0xfc fault_config_init+0x48/0xf0 0xc0080000180559e4 configfs_mkdir+0x304/0x814 vfs_mkdir+0x49c/0x604 do_mkdirat+0x314/0x3d0 sys_mkdir+0xa0/0xd8 system_call_exception+0x1b0/0x4f0 system_call_vectored_common+0x15c/0x2ec Fix this by explicitly releasing the references to the fault-config configfs items when dropping the reference to the top-level nullbX configfs group. 31/01/2026 31/01/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
