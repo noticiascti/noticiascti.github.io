@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-02-02",
+    "cve": "CVE-2026-24071",
+    "descripcion": "It was found that the XPC service offered by the privileged helper of Native Access uses the PID of the connecting client to verify its code signature. This is considered insecure and can be exploited by PID reuse attacks. The connection handler function uses _xpc_connection_get_pid(arg2) as argument for the hasValidSignature function. This value can not be trusted since it is vulnerable to PID reuse attacks. 02/02/2026 02/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-02",
+    "cve": "CVE-2026-24070",
+    "descripcion": "During the installation of the Native Access application, a privileged helper `com.native-instruments.NativeAccess.Helper2`, which is used by Native Access to trigger functions via XPC communication like copy-file, remove or set-permissions, is deployed as well. The communication with the XPC service of the privileged helper is only allowed if the client process is signed with the corresponding certificate and fulfills the following code signing requirement: &#34;anchor trusted and certificate leaf[subject.CN] = \\&#34;Developer ID Application: Native Instruments GmbH (83K5EG6Z9V)\\&#34;&#34; The Native Access application was found to be signed with the `com.apple.security.cs.allow-dyld-environment-variables` and `com.apple.security.cs.disable-library-validation` entitlements leading to DYLIB injection and therefore command execution in the context of this application. A low privileged user can exploit the DYLIB injection to trigger functions of the privileged helper XPC service resulting in privilege escalation by first deleting the /etc/sudoers file and then copying a malicious version of that file to /etc/sudoers. 02/02/2026 02/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-02",
+    "cve": "CVE-2026-1761",
+    "descripcion": "A flaw was found in libsoup. This stack-based buffer overflow vulnerability occurs during the parsing of multipart HTTP responses due to an incorrect length calculation. A remote attacker can exploit this by sending a specially crafted multipart HTTP response, which can lead to memory corruption. This issue may result in application crashes or arbitrary code execution in applications that process untrusted server responses, and it does not require authentication or user interaction. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-02",
+    "cve": "CVE-2026-1760",
+    "descripcion": "A flaw was found in SoupServer. This HTTP request smuggling vulnerability occurs because SoupServer improperly handles requests that combine Transfer-Encoding: chunked and Connection: keep-alive headers. A remote, unauthenticated client can exploit this by sending specially crafted requests, causing SoupServer to fail to close the connection as required by RFC 9112. This allows the attacker to smuggle additional requests over the persistent connection, leading to unintended request processing and potential denial-of-service (DoS) conditions. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-02",
+    "cve": "CVE-2026-1186",
+    "descripcion": "EAP Legislator is vulnerable to Path Traversal in file extraction functionality. Attacker can prepare zipx archive (default file type used by the Legislator application) and choose arbitrary path outside the intended directory (e.x. system startup) where files will be extracted by the victim upon opening the file. This issue was fixed in version 2.25a. 02/02/2026 02/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:L/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-02",
+    "cve": "CVE-2026-1757",
+    "descripcion": "A flaw was identified in the interactive shell of the xmllint utility, part of the libxml2 project, where memory allocated for user input is not properly released under certain conditions. When a user submits input consisting only of whitespace, the program skips command execution but fails to free the allocated buffer. Repeating this action causes memory to continuously accumulate. Over time, this can exhaust system memory and terminate the xmllint process, creating a denial-of-service condition on the local system. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-02",
+    "cve": "CVE-2025-8587",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in AKCE Software Technology R&D Industry and Trade Inc. SKSPro allows SQL Injection.This issue affects SKSPro: through 07012026. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-02",
     "cve": "CVE-2026-0599",
     "descripcion": "A vulnerability in huggingface/text-generation-inference version 3.3.6 allows unauthenticated remote attackers to exploit unbounded external image fetching during input validation in VLM mode. The issue arises when the router scans inputs for Markdown image links and performs a blocking HTTP GET request, reading the entire response body into memory and cloning it before decoding. This behavior can lead to resource exhaustion, including network bandwidth saturation, memory inflation, and CPU overutilization. The vulnerability is triggered even if the request is later rejected for exceeding token limits. The default deployment configuration, which lacks memory usage limits and authentication, exacerbates the impact, potentially crashing the host machine. The issue is resolved in version 3.3.7. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-02-02",
     "cve": "CVE-2025-6208",
     "descripcion": "The `SimpleDirectoryReader` component in `llama_index.core` version 0.12.23 suffers from uncontrolled memory consumption due to a resource management flaw. The vulnerability arises because the user-specified file limit (`num_files_limit`) is applied after all files in a directory are loaded into memory. This can lead to memory exhaustion and degraded performance, particularly in environments with limited resources. The issue is resolved in version 0.12.41. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2025-10279",
-    "descripcion": "In mlflow version 2.20.3, the temporary directory used for creating Python virtual environments is assigned insecure world-writable permissions (0o777). This vulnerability allows an attacker with write access to the `/tmp` directory to exploit a race condition and overwrite `.py` files in the virtual environment, leading to arbitrary code execution. The issue is resolved in version 3.4.0. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2024-5986",
-    "descripcion": "A vulnerability in h2oai/h2o-3 version 3.46.0.1 allows remote attackers to write arbitrary data to any file on the server. This is achieved by exploiting the `/3/Parse` endpoint to inject attacker-controlled data as the header of an empty file, which is then exported using the `/3/Frames/framename/export` endpoint. The impact of this vulnerability includes the potential for remote code execution and complete access to the system running h2o-3, as attackers can overwrite critical files such as private SSH keys or script files. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2024-5386",
-    "descripcion": "In lunary-ai/lunary version 1.2.2, an account hijacking vulnerability exists due to a password reset token leak. A user with a &#39;viewer&#39; role can exploit this vulnerability to hijack another user&#39;s account by obtaining the password reset token. The vulnerability is triggered when the &#39;viewer&#39; role user sends a specific request to the server, which responds with a password reset token in the &#39;recoveryToken&#39; parameter. This token can then be used to reset the password of another user&#39;s account without authorization. The issue results from an excessive attack surface, allowing lower-privileged users to escalate their privileges and take over accounts. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2024-4147",
-    "descripcion": "In lunary-ai/lunary version 1.2.13, an insufficient granularity of access control vulnerability allows users to delete prompts created in other organizations through ID manipulation. The vulnerability stems from the application&#39;s failure to validate the ownership of the prompt before deletion, only checking if the user has permissions to delete such resources without verifying if it belongs to the user&#39;s project or organization. As a result, users can remove prompts not owned by their organization or project, leading to legitimate users being unable to access the removed prompts and causing information inconsistencies. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2024-2356",
-    "descripcion": "A Local File Inclusion (LFI) vulnerability exists in the &#39;/reinstall_extension&#39; endpoint of the parisneo/lollms-webui application, specifically within the `name` parameter of the `@router.post(&#34;/reinstall_extension&#34;)` route. This vulnerability allows attackers to inject a malicious `name` parameter, leading to the server loading and executing arbitrary Python files from the upload directory for discussions. This issue arises due to the concatenation of `data.name` directly with `lollmsElfServer.lollms_paths.extensions_zoo_path` and its use as an argument for `ExtensionBuilder().build_extension()`. The server&#39;s handling of the `__init__.py` file in arbitrary locations, facilitated by `importlib.machinery.SourceFileLoader`, enables the execution of arbitrary code, such as command execution or creating a reverse-shell connection. This vulnerability affects the latest version of parisneo/lollms-webui and can lead to Remote Code Execution (RCE) when the application is exposed to an external endpoint or the UI, especially when bound to `0.0.0.0` or in `headless mode`. No user interaction is required for exploitation. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2026-1751",
-    "descripcion": "A vulnerability has been discovered in GitLab CE/EE affecting all versions starting with 16.8 before 18.5.0 that could have allowed unauthorized edits to merge request approval rules under certain conditions. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2026-1117",
-    "descripcion": "A vulnerability in the `lollms_generation_events.py` component of parisneo/lollms version 5.9.0 allows unauthenticated access to sensitive Socket.IO events. The `add_events` function registers event handlers such as `generate_text`, `cancel_generation`, `generate_msg`, and `generate_msg_from` without implementing authentication or authorization checks. This allows unauthenticated clients to execute resource-intensive or state-altering operations, leading to potential denial of service, state corruption, and race conditions. Additionally, the use of global flags (`lollmsElfServer.busy`, `lollmsElfServer.cancel_gen`) for state management in a multi-client environment introduces further vulnerabilities, enabling one client&#39;s actions to affect the server&#39;s state and other clients&#39; operations. The lack of proper access control and reliance on insecure global state management significantly impacts the availability and integrity of the service. 02/02/2026 02/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
