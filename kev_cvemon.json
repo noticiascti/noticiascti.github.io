@@ -36,6 +36,11 @@
   },
   {
     "fecha": "2026-02-02",
+    "cve": "CVE-2024-12084",
+    "descripcion": "A heap-based buffer overflow flaw was found in the rsync daemon. This issue is due to improper handling of attacker-controlled checksum lengths (s2length) in the code. When MAX_DIGEST_LEN exceeds the fixed SUM_LENGTH (16 bytes), an attacker can write out of bounds in the sum2 ..."
+  },
+  {
+    "fecha": "2026-02-02",
     "cve": "CVE-2025-40536",
     "descripcion": "SolarWinds Web Help Desk was found to be susceptible to a security control bypass vulnerability that if exploited, could allow an unauthenticated attacker to gain access to certain restricted functionality."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-02-02",
     "cve": "CVE-2024-28397",
     "descripcion": "An issue in the component js2py.disable_pyimport() of js2py up to v0.74 allows attackers to execute arbitrary code via a crafted API call."
-  },
-  {
-    "fecha": "2026-02-02",
-    "cve": "CVE-2025-13881",
-    "descripcion": "A flaw was found in Keycloak Admin API. This vulnerability allows an administrator with limited privileges to retrieve sensitive custom attributes via the /unmanagedAttributes endpoint, bypassing User Profile visibility settings."
   }
 ]
