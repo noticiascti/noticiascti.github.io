@@ -26,13 +26,18 @@
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-68613",
-    "descripcion": "n8n is an open source workflow automation platform. Versions starting with 0.211.0 and prior to 1.120.4, 1.121.1, and 1.122.0 contain a critical Remote Code Execution (RCE) vulnerability in their workflow expression evaluation system. Under certain conditions, expressions ..."
+    "cve": "CVE-2025-69662",
+    "descripcion": "SQL injection vulnerability in geopandas before v.1.1.2 allows an attacker to obtain sensitive information via the to_postgis()` function being used to write GeoDataFrames to a PostgreSQL database."
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-69662",
-    "descripcion": "SQL injection vulnerability in geopandas before v.1.1.2 allows an attacker to obtain sensitive information via the to_postgis()` function being used to write GeoDataFrames to a PostgreSQL database."
+    "cve": "CVE-2025-37947",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ksmbd: prevent out-of-bounds stream writes by validating *pos ksmbd_vfs_stream_write() did not validate whether the write offset (*pos) was within the bounds of the existing stream data length (v_len). If *pos ..."
+  },
+  {
+    "fecha": "2026-02-03",
+    "cve": "CVE-2025-14554",
+    "descripcion": "The Sell BTC - Cryptocurrency Selling Calculator plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'orderform_data' AJAX action in all versions up to, and including, 1.5 due to insufficient input sanitization and output escaping. This makes it possible ..."
   },
   {
     "fecha": "2026-02-03",
@@ -43,10 +48,5 @@
     "fecha": "2026-02-03",
     "cve": "CVE-2025-61984",
     "descripcion": "ssh in OpenSSH before 10.1 allows control characters in usernames that originate from certain possibly untrusted sources, potentially leading to code execution when a ProxyCommand is used. The untrusted sources are the command line and %-sequence expansion of a configuration ..."
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2025-71180",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: counter: interrupt-cnt: Drop IRQF_NO_THREAD flag An IRQ handler can either be IRQF_NO_THREAD or acquire spinlock_t, as CONFIG_PROVE_RAW_LOCK_NESTING warns: ============================= [ BUG: Invalid wait ..."
   }
 ]
