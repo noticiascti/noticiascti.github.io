@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-7760",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Ofisimo Web-Based Software Technologies Association Web Package Flora allows XSS Through HTTP Headers.This issue affects Association Web Package Flora: from v3.0 through 03022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-1568",
+    "descripcion": "Rapid7 InsightVM versions before 8.34.0 contain a signature verification issue on the Assertion Consumer Service (ACS) cloud endpoint that could allow an attacker to gain unauthorized access to InsightVM accounts setup via &#34;Security Console&#34; installations, resulting in full account takeover. The issue occurs due to the application processing these unsigned assertions and issuing session cookies that granted access to the targeted user accounts. This has been fixed in version 8.34.0 of InsightVM. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-6397",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Ankara Hosting Website Design Website Software allows Reflected XSS.This issue affects Website Software: through 03022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24762",
+    "descripcion": "RustFS is a distributed object storage system built in Rust. From versions alpha.13 to alpha.81, RustFS logs sensitive credential material (access key, secret key, session token) to application logs at INFO level. This results in credentials being recorded in plaintext in log output, which may be accessible to internal or external log consumers and could lead to compromise of sensitive credentials. This issue has been patched in version alpha.82. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-1664",
-    "descripcion": "Summary An Insecure Direct Object Reference has been found to exist in `createHeaderBasedEmailResolver()` function within the Cloudflare Agents SDK. The issue occurs because the `Message-ID` and `References` headers are parsed to derive the target agentName and agentId without proper validation or origin checks, allowing an external attacker with control of these headers to route inbound mail to arbitrary Durable Object instances and namespaces . Root cause The `createHeaderBasedEmailResolver()` function lacks cryptographic verification or origin validation for the headers used in the routing logic, effectively allowing external input to dictate internal object routing. Impact Insecure Direct Object Reference (IDOR) in email routing lets an attacker steer inbound mail to arbitrary Agent instances via spoofed Message-ID. Mitigation: * PR: https://github.com/cloudflare/agents/blob/main/docs/email.md ] provides the necessary architectural context for coding agents to mitigate the issue by refactoring the resolver to enforce strict identity boundaries. * Agents-sdk users should upgrade to agents@0.3.7 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-23795",
+    "descripcion": "Improper Restriction of XML External Entity Reference vulnerability in Apache Syncope Console. An administrator with adequate entitlements to create or edit Keymaster parameters via Console can construct malicious XML text to launch an XXE attack, thereby causing sensitive data leakage occurs. This issue affects Apache Syncope: from 3.0 through 3.0.15, from 4.0 through 4.0.3. Users are recommended to upgrade to version 3.0.16 / 4.0.4, which fix this issue. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-1432",
-    "descripcion": "SQL injection vulnerability in the Buroweb platform version 2505.0.12, specifically in the &#39;tablon&#39; component. This vulnerability is present in several parameters that do not correctly sanitize user input in the endpoint &#39;/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=TABLON&#39;. Exploiting this vulnerability could allow an attacker to execute queries on the database and gain access to confidential information. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:L/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-23794",
+    "descripcion": "Reflected XSS in Apache Syncope&#39;s Enduser Login page. An attacker that tricks a legitimate user into clicking a malicious link and logging in to Syncope Enduser could steal that user&#39;s credentials. This issue affects Apache Syncope: from 3.0 through 3.0.15, from 4.0 through 4.0.3. Users are recommended to upgrade to version 3.0.16 / 4.0.4, which fix this issue. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-11598",
-    "descripcion": "In mObywatel iOS application an unauthorized user can use the App Switcher to view the account owner&#39;s personal information in the minimized app window, even after the login session has ended (reopening the app would require the user to log in). The data exposed depends on the last application view displayed before the application was minimized This issue was fixed in version 4.71.0 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.00 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21862",
+    "descripcion": "RustFS is a distributed object storage system built in Rust. Prior to version alpha.78, IP-based access control can be bypassed: get_condition_values trusts client-supplied X-Forwarded-For/X-Real-Ip without verifying a trusted proxy, so any reachable client can spoof aws:SourceIp and satisfy IP-allowlist policies. This issue has been patched in version alpha.78. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-67857",
-    "descripcion": "A flaw was found in moodle. During anonymous assignment submissions, user identifiers were inadvertently exposed in URLs. This data exposure allows unauthorized viewers to see internal user IDs, compromising the intended anonymity and potentially leading to information disclosure. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-25036",
+    "descripcion": "Missing Authorization vulnerability in WP Chill Passster content-protector allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Passster: from n/a through 03/02/2026 03/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-67856",
-    "descripcion": "A flaw was found in Moodle. An authorization logic flaw, specifically due to incomplete role checks during the badge awarding process, allowed badges to be granted without proper verification. This could enable unauthorized users to obtain badges they are not entitled to, potentially leading to privilege escalation or unauthorized access to certain features. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-25028",
+    "descripcion": "Missing Authorization vulnerability in Element Invader ElementInvader Addons for Elementor elementinvader-addons-for-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects ElementInvader Addons for Elementor: from n/a through 03/02/2026 03/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-67855",
-    "descripcion": "A flaw was found in mooodle. A remote attacker could exploit a reflected Cross-Site Scripting (XSS) vulnerability in the policy tool return URL. This vulnerability arises from insufficient sanitization of URL parameters, allowing attackers to inject malicious scripts through specially crafted links. Successful exploitation could lead to information disclosure or arbitrary client-side script execution within the user&#39;s browser. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-25027",
+    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in ThemeMove Unicamp unicamp allows PHP Local File Inclusion.This issue affects Unicamp: from n/a through 03/02/2026 03/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-67853",
-    "descripcion": "A flaw was found in Moodle. A remote attacker could exploit a lack of proper rate limiting in the confirmation email service. This vulnerability allows attackers to more easily enumerate or guess user credentials, facilitating brute-force attacks against user accounts. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-25023",
+    "descripcion": "Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in mdedev Run Contests, Raffles, and Giveaways with ContestsWP contest-code-checker allows Retrieve Embedded Sensitive Data.This issue affects Run Contests, Raffles, and Giveaways with ContestsWP: from n/a through 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-67852",
-    "descripcion": "A flaw was found in Moodle. An open redirect vulnerability in the OAuth login flow allows a remote attacker to redirect users to attacker-controlled pages after they have successfully authenticated. This occurs due to insufficient validation of redirect parameters, which could lead to phishing attacks or information disclosure. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-25021",
+    "descripcion": "Missing Authorization vulnerability in Mizan Themes Mizan Demo Importer mizan-demo-importer allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Mizan Demo Importer: from n/a through 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
