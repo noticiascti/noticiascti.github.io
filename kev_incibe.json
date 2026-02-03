@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-58380",
-    "descripcion": "A vulnerability in Brocade Fabric OS before 9.2.1 could allow an authenticated attacker with admin privileges using the shell command “grep” to modify the path variables and move upwards in the directory structure or to traverse to different directories. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1730",
+    "descripcion": "The OS DataHub Maps plugin for WordPress is vulnerable to arbitrary file uploads due to incorrect file type validation in the &#39;OS_DataHub_Maps_Admin::add_file_and_ext&#39; function in all versions up to, and including, 1.8.3. This makes it possible for authenticated attackers, with Author-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-24936",
-    "descripcion": "When a specific function is enabled while joining a AD Domain from ADM, an improper input parameters validation vulnerability in a specific CGI program allowing an unauthenticated remote attacker to write arbitrary data to any file on the system. By exploiting this vulnerability, attackers can overwrite critical system files, leading to a complete system compromise. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.ROF1 as well as from ADM 5.0.0 through ADM 5.1.1.RCI1. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.50 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1375",
+    "descripcion": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to Insecure Direct Object References (IDOR) in all versions up to, and including, 3.9.5. This is due to missing object-level authorization checks in the `course_list_bulk_action()`, `bulk_delete_course()`, and `update_course_status()` functions. This makes it possible for authenticated attackers, with Tutor Instructor-level access and above, to modify or delete arbitrary courses they do not own by manipulating course IDs in bulk action requests. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-1788",
-    "descripcion": ": Out-of-bounds Write vulnerability in Xquic Project Xquic Server xquic on Linux (QUIC protocol implementation, packet processing module modules) allows : Buffer Manipulation.This issue affects Xquic Server: through 1.8.3. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:X/RE:M/U:Amber Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1371",
+    "descripcion": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.9.5. This is due to missing authorization checks in the `ajax_coupon_details()` function, which only validates nonces but does not verify user capabilities. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve sensitive coupon information including coupon codes, discount amounts, usage statistics, and course/bundle applications. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-0909",
-    "descripcion": "The WP ULike plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 4.8.3.1. This is due to the `wp_ulike_delete_history_api` AJAX action not verifying that the log entry being deleted belongs to the current user. This makes it possible for authenticated attackers, with Subscriber-level access and above (granted the &#39;stats&#39; capability is assigned to their role), to delete arbitrary log entries belonging to other users via the &#39;id&#39; parameter. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-8590",
+    "descripcion": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in AKCE Software Technology R&D Industry and Trade Inc. SKSPro allows Directory Indexing.This issue affects SKSPro: through 07012026. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-0383",
-    "descripcion": "A vulnerability in Brocade Fabric OS could allow an authenticated, local attacker with privileges to access the Bash shell to access insecurely stored file contents including the history command. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-8589",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in AKCE Software Technology R&D Industry and Trade Inc. SKSPro allows Reflected XSS.This issue affects SKSPro: through 07012026. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-24935",
-    "descripcion": "A third-party NAT traversal module fails to validate SSL/TLS certificates when connecting to the signaling server. While subsequent access to device services requires additional authentication, a Man-in-the-Middle (MitM) attacker can intercept or redirect the NAT tunnel establishment. This could allow an attacker to disrupt service availability or facilitate further targeted attacks by acting as a proxy between the user and the device services. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.ROF1 as well as from ADM 5.0.0 through ADM 5.1.1.RCI1. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24465",
+    "descripcion": "Stack-based buffer overflow vulnerability exists in ELECOM wireless LAN access point devices. A crafted packet may lead to arbitrary code execution. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-24934",
-    "descripcion": "The DDNS function uses an insecure HTTP connection or fails to validate the SSL/TLS certificate when querying an external server for the device&#39;s WAN IP address. An unauthenticated remote attacker can perform a Man-in-the-Middle (MitM) attack to spoof the response, leading the device to update its DDNS record with an incorrect IP address. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.ROF1 as well as from ADM 5.0.0 through ADM 5.1.1.RCI1. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24449",
+    "descripcion": "For WRC-X1500GS-B and WRC-X1500GSA-B, the initial passwords can be calculated easily from the system information. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-24933",
-    "descripcion": "The API communication component fails to validate the SSL/TLS certificate when sending HTTPS requests to the server. An improper certificates validation vulnerability allows an unauthenticated remote attacker can perform a Man-in-the-Middle (MitM) attack to intercept the cleartext communication, potentially leading to the exposure of sensitive user information, including account emails, MD5 hashed passwords, and device serial numbers. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.ROF1 as well as from ADM 5.0.0 through ADM 5.1.1.RCI1. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22550",
+    "descripcion": "OS command injection vulnerability exists in WRC-X1500GS-B and WRC-X1500GSA-B. A crafted request from a logged-in user may lead to an arbitrary OS command execution. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-24932",
-    "descripcion": "The DDNS update function in ADM fails to properly validate the hostname of the DDNS server&#39;s TLS/SSL certificate. Although the connection uses HTTPS, an improper validated TLS/SSL certificates allows a remote attacker can intercept the communication to perform a Man-in-the-Middle (MitM) attack, which may obtain the sensitive information of DDNS updating process, including the user&#39;s account email, MD5 hashed password, and device serial number.This issue affects ADM: from 4.1.0 through 4.3.3.ROF1, from 5.0.0 through 5.1.1.RCI1. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-20704",
+    "descripcion": "Cross-site request forgery vulnerability exists in WRC-X1500GS-B and WRC-X1500GSA-B. If a user accesses a malicious page while logged-in to the affected product, unintended operations may be performed. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2025-67484",
-    "descripcion": "Vulnerability in Wikimedia Foundation MediaWiki. This vulnerability is associated with program files includes/Api/ApiFormatXml.Php. This issue affects MediaWiki: from * before 1.39.16, 1.43.6, 1.44.3, 1.45.1. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.00 Gravedad 4.0 txt NONE Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1447",
+    "descripcion": "The Mail Mint plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.19.2. This is due to missing nonce validation on the create_or_update_note function. This makes it possible for unauthenticated attackers to create or update contact notes via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. Due to missing sanitization and escaping this can lead to stored Cross-Site Scripting. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
