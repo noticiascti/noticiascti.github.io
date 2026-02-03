@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-02-03",
+    "cve": "CVE-2025-7760",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Ofisimo Web-Based Software Technologies Association Web Package Flora allows XSS Through HTTP Headers.This issue affects Association Web Package Flora: from v3.0 through 03022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-03",
+    "cve": "CVE-2025-6397",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Ankara Hosting Website Design Website Software allows Reflected XSS.This issue affects Website Software: through 03022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-03",
+    "cve": "CVE-2026-1664",
+    "descripcion": "Summary An Insecure Direct Object Reference has been found to exist in `createHeaderBasedEmailResolver()` function within the Cloudflare Agents SDK. The issue occurs because the `Message-ID` and `References` headers are parsed to derive the target agentName and agentId without proper validation or origin checks, allowing an external attacker with control of these headers to route inbound mail to arbitrary Durable Object instances and namespaces . Root cause The `createHeaderBasedEmailResolver()` function lacks cryptographic verification or origin validation for the headers used in the routing logic, effectively allowing external input to dictate internal object routing. Impact Insecure Direct Object Reference (IDOR) in email routing lets an attacker steer inbound mail to arbitrary Agent instances via spoofed Message-ID. Mitigation: * PR: https://github.com/cloudflare/agents/blob/main/docs/email.md ] provides the necessary architectural context for coding agents to mitigate the issue by refactoring the resolver to enforce strict identity boundaries. * Agents-sdk users should upgrade to agents@0.3.7 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-03",
+    "cve": "CVE-2026-1432",
+    "descripcion": "SQL injection vulnerability in the Buroweb platform version 2505.0.12, specifically in the &#39;tablon&#39; component. This vulnerability is present in several parameters that do not correctly sanitize user input in the endpoint &#39;/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=TABLON&#39;. Exploiting this vulnerability could allow an attacker to execute queries on the database and gain access to confidential information. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:L/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-03",
+    "cve": "CVE-2025-11598",
+    "descripcion": "In mObywatel iOS application an unauthorized user can use the App Switcher to view the account owner&#39;s personal information in the minimized app window, even after the login session has ended (reopening the app would require the user to log in). The data exposed depends on the last application view displayed before the application was minimized This issue was fixed in version 4.71.0 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.00 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-03",
     "cve": "CVE-2025-67857",
     "descripcion": "A flaw was found in moodle. During anonymous assignment submissions, user identifiers were inadvertently exposed in URLs. This data exposure allows unauthorized viewers to see internal user IDs, compromising the intended anonymity and potentially leading to information disclosure. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-02-03",
     "cve": "CVE-2025-67852",
     "descripcion": "A flaw was found in Moodle. An open redirect vulnerability in the OAuth login flow allows a remote attacker to redirect users to attacker-controlled pages after they have successfully authenticated. This occurs due to insufficient validation of redirect parameters, which could lead to phishing attacks or information disclosure. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2025-67851",
-    "descripcion": "A flaw was found in moodle. This formula injection vulnerability occurs when data fields are exported without proper escaping. A remote attacker could exploit this by providing malicious data that, when exported and opened in a spreadsheet, allows arbitrary formulas to execute. This can lead to compromised data integrity and unintended operations within the spreadsheet. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2025-67850",
-    "descripcion": "A flaw was found in moodle. This vulnerability, known as Cross-Site Scripting (XSS), occurs due to insufficient checks on user-provided data in the formula editor&#39;s arithmetic expression fields. A remote attacker could inject malicious code into these fields. When other users view these expressions, the malicious code would execute in their web browsers, potentially compromising their data or leading to unauthorized actions. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2025-67849",
-    "descripcion": "A flaw was found in Moodle. This cross-site scripting (XSS) vulnerability, caused by improper sanitization of AI prompt responses, allows attackers to inject malicious HTML or script into web pages. When other users view these compromised pages, their sessions could be stolen, or the user interface could be manipulated. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2025-67848",
-    "descripcion": "A flaw was found in Moodle. This authentication bypass vulnerability allows suspended users to authenticate through the Learning Tools Interoperability (LTI) Provider. The issue arises from the LTI authentication handlers failing to enforce the user&#39;s suspension status, enabling unauthorized access to the system. This can lead to information disclosure or other unauthorized actions by users who should be restricted. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2025-59902",
-    "descripcion": "HTML injection vulnerability in NICE Chat. This vulnerability allows an attacker to inject and render arbitrary HTML content in email transcripts by modifying the &#39;firstName&#39; and &#39;lastName&#39; parameters during a chat session. The injected HTML is included in the body of the email sent by the system, which could enable phishing attacks, impersonation, or credential theft. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
