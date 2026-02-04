@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-1819",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Karel Electronics Industry and Trade Inc. ViPort allows Stored XSS.This issue affects ViPort: through 23012026. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-1622",
+    "descripcion": "Neo4j Enterprise and Community editions versions prior to 2026.01.3 and 5.26.21 are vulnerable to a potential information disclosure by a user who has ability to access the local log files. The &#34;obfuscate_literals&#34; option in the query logs does not redact error information, exposing unredacted data in the query log when a customer writes a query that fails. It can allow a user with legitimate access to the local log files to obtain information they are not authorised to see. If this user is also in a position to run queries and trigger errors, this vulnerability can potentially help them to infer information they are not authorised to see through their intended database access. We recommend upgrading to versions 2026.01.3 (or 5.26.21) where the issue is fixed, and reviewing query log files permissions to ensure restricted access. If your configuration had db.logs.query.obfuscate_literal enabled, and you wish the obfuscation to cover the error messages as well, you need to enable the new configuration setting db.logs.query.obfuscate_errors once you have upgraded Neo4j. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-24447",
-    "descripcion": "If a malformed data is input to the affected product, a CSV file downloaded from the affected product may contain such malformed data. When a victim user download and open such a CSV file, the embedded code may be executed in the user&#39;s environment. Note that Movable Type 7 series and 8.4 series, which are End-of-Life (EOL), are affected by the vulnerability as well. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-41085",
+    "descripcion": "Stored Cross-Site Scripting (XSS) vulnerability type in Apidog in the version 2.7.15, where SVG image uploads are not properly sanitized. This allows attackers to embed malicious scripts in SVG files by sending a POST request to &#39;/api/v1/user-avatar&#39;, which are then stored on the server and executed in the context of any user accessing the compromised resource. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-23704",
-    "descripcion": "A non-administrative user can upload malicious files. When an administrator or the product accesses that file, an arbitrary script may be executed on the administrator&#39;s browser. Note that Movable Type 7 series and 8.4 series, which are End-of-Life (EOL), are affected by the vulnerability as well. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-1370",
+    "descripcion": "The SIBS woocommerce payment gateway plugin for WordPress is vulnerable to time-based SQL Injection via the ‘referencedId’ parameter in all versions up to, and including, 2.2.0 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-22875",
-    "descripcion": "Movable Type contains a stored cross-site scripting vulnerability in Export Sites. If crafted input is stored by an attacker, arbitrary script may be executed on a logged-in user&#39;s web browser. Note that Movable Type 7 series and 8.4 series, which are End-of-Life (EOL), are affected by the vulnerability as well. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-0816",
+    "descripcion": "The All push notification for WP plugin for WordPress is vulnerable to time-based SQL Injection via the &#39;delete_id&#39; parameter in all versions up to, and including, 1.5.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-21393",
-    "descripcion": "Movable Type contains a stored cross-site scripting vulnerability in Edit Comment. If crafted input is stored by an attacker, arbitrary script may be executed on a logged-in user&#39;s web browser. Note that Movable Type 7 series and 8.4 series, which are End-of-Life (EOL), are affected by the vulnerability as well. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-0743",
+    "descripcion": "The WP Content Permission plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;ohmem-message&#39; parameter in all versions up to, and including, 1.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-20987",
-    "descripcion": "Improper input validation in GalaxyDiagnostics prior to version 3.5.050 allows local privileged attackers to execute privileged commands. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0742",
+    "descripcion": "The Smart Appointment & Booking plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the saab_save_form_data AJAX action in all versions up to, and including, 1.0.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-20986",
-    "descripcion": "Path traversal in Samsung Members prior to Chinese version 15.5.05.4 allows local attackers to overwrite data within Samsung Members. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0681",
+    "descripcion": "The Extended Random Number Generator plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin settings in all versions up to, and including, 1.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level access, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-20985",
-    "descripcion": "Improper input validation in Samsung Members prior to version 5.6.00.11 allows remote attackers to connect arbitrary URL and launch arbitrary activity with Samsung Members privilege. User interaction is required for triggering this vulnerability. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0679",
+    "descripcion": "The Fortis for WooCommerce plugin for WordPress is vulnerable to authorization bypass due to an inverted nonce check in the &#39;check_fortis_notify_response&#39; function in all versions up to, and including, 1.2.0. This makes it possible for unauthenticated attackers to update arbitrary WooCommerce order statuses to paid/processing/completed, effectively allowing them to mark orders as paid without payment. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-20984",
-    "descripcion": "Improper handling of insufficient permission in Galaxy Wearable installed on non-Samsung Device prior to version 2.2.68 allows local attackers to access sensitive information. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0572",
+    "descripcion": "The WebPurify Profanity Filter plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;webpurify_save_options&#39; function in all versions up to, and including, 4.0.2. This makes it possible for unauthenticated attackers to change plugin settings. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-04",
-    "cve": "CVE-2026-20983",
-    "descripcion": "Improper export of android application components in Samsung Dialer prior to SMR Feb-2026 Release 1 allows local attackers to launch arbitrary activity with Samsung Dialer privilege. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15508",
+    "descripcion": "The Magic Import Document Extractor plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.0.4 via the get_frontend_settings() function. This makes it possible for unauthenticated attackers to extract the site&#39;s magicimport.ai license key from the page source on any page containing the plugin&#39;s shortcode. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
