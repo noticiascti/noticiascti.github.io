@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2026-25510",
-    "descripcion": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.28.5.0, an authenticated user with file editor permissions can achieve Remote Code Execution (RCE) by leveraging the file creation and save endpoints, an attacker can upload and execute arbitrary PHP code on the server. This issue has been patched in version 0.28.5.0. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-02-04",
+    "cve": "CVE-2025-69621",
+    "descripcion": "An arbitrary file overwrite vulnerability in the file import process of Comic Book Reader v1.0.95 allows attackers to overwrite critical internal files, potentially leading to arbitrary code execution or exposure of sensitive information. 04/02/2026 04/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-04",
+    "cve": "CVE-2025-69620",
+    "descripcion": "A path traversal in Moo Chan Song v4.5.7 allows attackers to cause a Denial of Service (DoS) via writing files to the internal storage. 04/02/2026 04/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-04",
+    "cve": "CVE-2026-1835",
+    "descripcion": "A vulnerability was identified in lcg0124 BootDo up to e93dd428ef6f5c881aa74d49a2099ab0cf1e0fcb. This affects an unknown part. The manipulation leads to cross-site request forgery. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25509",
-    "descripcion": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.28.5.0, the authentication implementation in CI4MS is vulnerable to email enumeration. An unauthenticated attacker can determine whether an email address is registered in the system by analyzing the application&#39;s response during the password reset process. This issue has been patched in version 0.28.5.0. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-1813",
+    "descripcion": "A vulnerability was found in bolo-blog bolo-solo up to 2.6.4. Affected is an unknown function of the file src/main/java/org/b3log/solo/bolo/pic/PicUploadProcessor.java of the component FreeMarker Template Handler. The manipulation of the argument File results in unrestricted upload. It is possible to launch the attack remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25224",
-    "descripcion": "Fastify is a fast and low overhead web framework, for Node.js. Prior to version 5.7.3, a denial-of-service vulnerability in Fastify’s Web Streams response handling can allow a remote client to exhaust server memory. Applications that return a ReadableStream (or Response with a Web Stream body) via reply.send() are impacted. A slow or non-reading client can trigger unbounded buffering when backpressure is ignored, leading to process crashes or severe degradation. This issue has been patched in version 5.7.3. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-1633",
+    "descripcion": "The Synectix LAN 232 TRIO 3-Port serial to ethernet adapter exposes its web management interface without requiring authentication, allowing unauthenticated users to modify critical device settings or factory reset the device. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25223",
-    "descripcion": "Fastify is a fast and low overhead web framework, for Node.js. Prior to version 5.7.2, a validation bypass vulnerability exists in Fastify where request body validation schemas specified by Content-Type can be completely circumvented. By appending a tab character (\\t) followed by arbitrary content to the Content-Type header, attackers can bypass body validation while the server still processes the body as the original content type. This issue has been patched in version 5.7.2. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24514",
+    "descripcion": "A security issue was discovered in ingress-nginx where the validating admission controller feature is subject to a denial of service condition. By sending large requests to the validating admission controller, an attacker can cause memory consumption, which may result in the ingress-nginx controller pod being killed or the node running out of memory. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25155",
-    "descripcion": "Qwik is a performance focused javascript framework. Prior to version 1.12.0, a typo in the regular expression within isContentType causes incorrect parsing of certain Content-Type headers. This issue has been patched in version 1.12.0. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24513",
+    "descripcion": "A security issue was discovered in ingress-nginx where the protection afforded by the `auth-url` Ingress annotation may not be effective in the presence of a specific misconfiguration. If the ingress-nginx controller is configured with a default custom-errors configuration that includes HTTP errors 401 or 403, and if the configured default custom-errors backend is defective and fails to respect the X-Code HTTP header, then an Ingress with the `auth-url` annotation may be accessed even when authentication fails. Note that the built-in custom-errors backend works correctly. To trigger this issue requires an administrator to specifically configure ingress-nginx with a broken external component. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25151",
-    "descripcion": "Qwik is a performance focused javascript framework. Prior to version 1.19.0, Qwik City’s server-side request handler inconsistently interprets HTTP request headers, which can be abused by a remote attacker to circumvent form submission CSRF protections using specially crafted or multi-valued Content-Type headers. This issue has been patched in version 1.19.0. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24512",
+    "descripcion": "A security issue was discovered in ingress-nginx cthe `rules.http.paths.path` Ingress field can be used to inject configuration into nginx. This can lead to arbitrary code execution in the context of the ingress-nginx controller, and disclosure of Secrets accessible to the controller. (Note that in the default installation, the controller can access all Secrets cluster-wide.) 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25150",
-    "descripcion": "Qwik is a performance focused javascript framework. Prior to version 1.19.0, a prototype pollution vulnerability exists in the formToObj() function within @builder.io/qwik-city middleware. The function processes form field names with dot notation (e.g., user.name) to create nested objects, but fails to sanitize dangerous property names like __proto__, constructor, and prototype. This allows unauthenticated attackers to pollute Object.prototype by sending crafted HTTP POST requests, potentially leading to privilege escalation, authentication bypass, or denial of service. This issue has been patched in version 1.19.0. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-1812",
+    "descripcion": "A vulnerability has been found in bolo-blog bolo-solo up to 2.6.4. This impacts the function importFromCnblogs of the file src/main/java/org/b3log/solo/bolo/prop/BackupService.java of the component Filename Handler. The manipulation of the argument File leads to path traversal. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25149",
-    "descripcion": "Qwik is a performance focused javascript framework. Prior to version 1.19.0, an Open Redirect vulnerability in Qwik City&#39;s default request handler middleware allows a remote attacker to redirect users to arbitrary protocol-relative URLs. Successful exploitation permits attackers to craft convincing phishing links that appear to originate from the trusted domain but redirect the victim to an attacker-controlled site. This issue has been patched in version 1.19.0. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:L/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2026-25148",
-    "descripcion": "Qwik is a performance focused javascript framework. Prior to version 1.19.0, a Cross-Site Scripting vulnerability in Qwik.js&#39; server-side rendering virtual attribute serialization allows a remote attacker to inject arbitrary web scripts into server-rendered pages via virtual attributes. Successful exploitation permits script execution in a victim&#39;s browser in the context of the affected origin. This issue has been patched in version 1.19.0. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-03",
-    "cve": "CVE-2026-1811",
-    "descripcion": "A flaw has been found in bolo-blog bolo-solo up to 2.6.4. This affects the function importFromMarkdown of the file src/main/java/org/b3log/solo/bolo/prop/BackupService.java of the component Filename Handler. Executing a manipulation of the argument File can lead to path traversal. The attack may be performed from remote. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-1755",
+    "descripcion": "The Menu Icons by ThemeIsle plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘_wp_attachment_image_alt’ post meta in all versions up to, and including, 0.13.20 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
