@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-1568",
-    "descripcion": "Rapid7 InsightVM versions before 8.34.0 contain a signature verification issue on the Assertion Consumer Service (ACS) cloud endpoint that could allow an attacker to gain unauthorized access to InsightVM accounts setup via &#34;Security Console&#34; installations, resulting in full account takeover. The issue occurs due to the application processing these unsigned assertions and issuing session cookies that granted access to the targeted user accounts. This has been fixed in version 8.34.0 of InsightVM. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-25616",
+    "descripcion": "Blesta 3.x through 5.x before 5.13.3 mishandles input validation, aka CORE-5665. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-24762",
-    "descripcion": "RustFS is a distributed object storage system built in Rust. From versions alpha.13 to alpha.81, RustFS logs sensitive credential material (access key, secret key, session token) to application logs at INFO level. This results in credentials being recorded in plaintext in log output, which may be accessible to internal or external log consumers and could lead to compromise of sensitive credentials. This issue has been patched in version alpha.82. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-25615",
+    "descripcion": "Blesta 3.x through 5.x before 5.13.3 allows object injection, aka CORE-5668. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-23795",
-    "descripcion": "Improper Restriction of XML External Entity Reference vulnerability in Apache Syncope Console. An administrator with adequate entitlements to create or edit Keymaster parameters via Console can construct malicious XML text to launch an XXE attack, thereby causing sensitive data leakage occurs. This issue affects Apache Syncope: from 3.0 through 3.0.15, from 4.0 through 4.0.3. Users are recommended to upgrade to version 3.0.16 / 4.0.4, which fix this issue. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-25614",
+    "descripcion": "Blesta 3.x through 5.x before 5.13.3 allows object injection, aka CORE-5680. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-23794",
-    "descripcion": "Reflected XSS in Apache Syncope&#39;s Enduser Login page. An attacker that tricks a legitimate user into clicking a malicious link and logging in to Syncope Enduser could steal that user&#39;s credentials. This issue affects Apache Syncope: from 3.0 through 3.0.15, from 4.0 through 4.0.3. Users are recommended to upgrade to version 3.0.16 / 4.0.4, which fix this issue. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24441",
+    "descripcion": "Shenzhen Tenda AC7 firmware version V03.03.03.01_cn and prior expose account credentials in plaintext within HTTP responses, allowing an on-path attacker to obtain sensitive authentication material. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-21862",
-    "descripcion": "RustFS is a distributed object storage system built in Rust. Prior to version alpha.78, IP-based access control can be bypassed: get_condition_values trusts client-supplied X-Forwarded-For/X-Real-Ip without verifying a trusted proxy, so any reachable client can spoof aws:SourceIp and satisfy IP-allowlist policies. This issue has been patched in version alpha.78. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24434",
+    "descripcion": "Shenzhen Tenda AC7 firmware version V03.03.03.01_cn and prior does not implement CSRF protections for administrative functions in the web management interface. The interface does not enforce anti-CSRF tokens or robust origin validation, which can allow an attacker to induce a logged-in administrator to perform unintended state-changing requests and modify router settings. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25036",
-    "descripcion": "Missing Authorization vulnerability in WP Chill Passster content-protector allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Passster: from n/a through 03/02/2026 03/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24149",
+    "descripcion": "NVIDIA Megatron-LM for all platforms contains a vulnerability in a script, where malicious data created by an attacker may cause a code injection issue. A successful exploit of this vulnerability may lead to code execution, escalation of privileges, information disclosure, data tampering. 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25028",
-    "descripcion": "Missing Authorization vulnerability in Element Invader ElementInvader Addons for Elementor elementinvader-addons-for-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects ElementInvader Addons for Elementor: from n/a through 03/02/2026 03/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1846",
+    "descripcion": "Rejected reason: loading template... 03/02/2026 03/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25027",
-    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in ThemeMove Unicamp unicamp allows PHP Local File Inclusion.This issue affects Unicamp: from n/a through 03/02/2026 03/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1803",
+    "descripcion": "A weakness has been identified in Ziroom ZHOME A0101 1.0.1.0. Impacted is an unknown function of the component Dropbear SSH Service. This manipulation causes use of default credentials. Remote exploitation of the attack is possible. The complexity of an attack is rather high. The exploitability is considered difficult. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:H/Au:N/C:C/I:C/A:C Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25023",
-    "descripcion": "Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in mdedev Run Contests, Raffles, and Giveaways with ContestsWP contest-code-checker allows Retrieve Embedded Sensitive Data.This issue affects Run Contests, Raffles, and Giveaways with ContestsWP: from n/a through 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-64438",
+    "descripcion": "Fast DDS is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group ). Prior to versions 3.4.1, 3.3.1, and 2.6.11, a remotely triggerable Out-of-Memory (OOM) denial-of-service exists in Fast -DDS when processing RTPS GAP submessages under RELIABLE QoS. By sending a tiny GAP packet with a huge gap range (`gapList .base - gapStart`), an attacker drives `StatefulReader::processGapMsg()` into an unbounded loop that inserts millions of s equence numbers into `WriterProxy::changes_received_` (`std::set`), causing multi-GB heap growth and process termination. No authentication is required beyond network reachability to the reader on the DDS domain. In environments without an RSS limit (non-ASan / unlimited), memory consumption was observed to rise to ~64 GB. Versions 3.4.1, 3.3.1, and 2.6.11 patch t he issue. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-03",
-    "cve": "CVE-2026-25021",
-    "descripcion": "Missing Authorization vulnerability in Mizan Themes Mizan Demo Importer mizan-demo-importer allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Mizan Demo Importer: from n/a through 03/02/2026 03/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-64098",
+    "descripcion": "Fast DDS is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group ). Prior to versions 3.4.1, 3.3.1, and 2.6.11, when the security mode is enabled, modifying the DATA Submessage within an SPDP packet sent by a publisher causes an Out-Of-Memory (OOM) condition, resulting in remote termination of Fast-DDS. If t he fields of `PID_IDENTITY_TOKEN` or `PID_PERMISSIONS_TOKEN` in the DATA Submessage are tampered with — specifically by ta mpering with the the `vecsize` value read by `readOctetVector` — a 32-bit integer overflow can occur, causing `std::vector ::resize` to request an attacker-controlled size and quickly trigger OOM and remote process termination. Versions 3.4.1, 3 .3.1, and 2.6.11 patch the issue. 03/02/2026 03/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
