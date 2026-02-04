@@ -1,8 +1,23 @@
 [
   {
     "fecha": "2026-02-04",
+    "cve": "CVE-2026-24735",
+    "descripcion": "Exposure of Private Personal Information to an Unauthorized Actor vulnerability in Apache Answer. This issue affects Apache Answer: through 1.7.1. An unauthenticated API endpoint incorrectly exposes full revision history for deleted content. This allows unauthorized user to retrieve restricted or sensitive information. Users are recommended to upgrade to version 2.0.0, which fixes the issue. 04/02/2026 04/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-04",
+    "cve": "CVE-2026-0873",
+    "descripcion": "On a Cryptobox platform where administrator segregation based on entities is used, some vulnerabilities in Ercom Cryptobox administration console allows an authenticated entity administrator with knowledge to elevate his account to global administrator. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-04",
+    "cve": "CVE-2025-59818",
+    "descripcion": "This vulnerability allows authenticated attackers to execute arbitrary commands on the underlying system using the file name of an uploaded file. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-02-04",
     "cve": "CVE-2026-1622",
-    "descripcion": "Neo4j Enterprise and Community editions versions prior to 2026.01.3 and 5.26.21 are vulnerable to a potential information disclosure by a user who has ability to access the local log files. The &#34;obfuscate_literals&#34; option in the query logs does not redact error information, exposing unredacted data in the query log when a customer writes a query that fails. It can allow a user with legitimate access to the local log files to obtain information they are not authorised to see. If this user is also in a position to run queries and trigger errors, this vulnerability can potentially help them to infer information they are not authorised to see through their intended database access. We recommend upgrading to versions 2026.01.3 (or 5.26.21) where the issue is fixed, and reviewing query log files permissions to ensure restricted access. If your configuration had db.logs.query.obfuscate_literal enabled, and you wish the obfuscation to cover the error messages as well, you need to enable the new configuration setting db.logs.query.obfuscate_errors once you have upgraded Neo4j. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "descripcion": "Neo4j Enterprise and Community editions versions prior to 2026.01.3 and 5.26.21 are vulnerable to a potential information disclosure by a user who has ability to access the local log files. The &#34;obfuscate_literals&#34; option in the query logs does not redact error information, exposing unredacted data in the query log when a customer writes a query that fails. It can allow a user with legitimate access to the local log files to obtain information they are not authorised to see. If this user is also in a position to run queries and trigger errors, this vulnerability can potentially help them to infer information they are not authorised to see through their intended database access. We recommend upgrading to versions 2026.01.3 (or 5.26.21) where the issue is fixed, and reviewing query log files permissions to ensure restricted access. If your configuration had db.logs.query.obfuscate_literals enabled, and you wish the obfuscation to cover the error messages as well, you need to enable the new configuration setting db.logs.query.obfuscate_errors once you have upgraded Neo4j. 04/02/2026 04/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-04",
@@ -33,20 +48,5 @@
     "fecha": "2026-02-04",
     "cve": "CVE-2026-0681",
     "descripcion": "The Extended Random Number Generator plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin settings in all versions up to, and including, 1.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level access, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2026-0679",
-    "descripcion": "The Fortis for WooCommerce plugin for WordPress is vulnerable to authorization bypass due to an inverted nonce check in the &#39;check_fortis_notify_response&#39; function in all versions up to, and including, 1.2.0. This makes it possible for unauthenticated attackers to update arbitrary WooCommerce order statuses to paid/processing/completed, effectively allowing them to mark orders as paid without payment. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2026-0572",
-    "descripcion": "The WebPurify Profanity Filter plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the &#39;webpurify_save_options&#39; function in all versions up to, and including, 4.0.2. This makes it possible for unauthenticated attackers to change plugin settings. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2025-15508",
-    "descripcion": "The Magic Import Document Extractor plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.0.4 via the get_frontend_settings() function. This makes it possible for unauthenticated attackers to extract the site&#39;s magicimport.ai license key from the page source on any page containing the plugin&#39;s shortcode. 04/02/2026 04/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
