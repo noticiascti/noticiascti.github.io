@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-02-05",
+    "cve": "CVE-2026-1953",
+    "descripcion": "Nukegraphic CMS v3.1.2 contains a stored cross-site scripting (XSS) vulnerability in the user profile edit functionality at /ngc-cms/user-edit-profile.php. The application fails to properly sanitize user input in the name field before storing it in the database and rendering it across multiple CMS pages. An authenticated attacker with low privileges can inject malicious JavaScript payloads through the profile edit request, which are then executed site-wide whenever the affected user&#39;s name is displayed. This allows the attacker to execute arbitrary JavaScript in the context of other users&#39; sessions, potentially leading to session hijacking, credential theft, or unauthorized actions performed on behalf of victims. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-05",
+    "cve": "CVE-2026-1268",
+    "descripcion": "The Dynamic Widget Content plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the widget content field in the Gutenberg editor sidebar in all versions up to, and including, 1.3.6 due to insufficient input sanitization and output escaping on user-supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-05",
+    "cve": "CVE-2026-1246",
+    "descripcion": "The ShortPixel Image Optimizer plugin for WordPress is vulnerable to Arbitrary File Read via path traversal in the &#39;loadFile&#39; parameter in all versions up to, and including, 6.4.2 due to insufficient path validation and sanitization in the &#39;loadLogFile&#39; AJAX action. This makes it possible for authenticated attackers, with Editor-level access and above, to read the contents of arbitrary files on the server, which can contain sensitive information such as database credentials and authentication keys. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-05",
+    "cve": "CVE-2026-0867",
+    "descripcion": "The Essential Widgets plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s ew-author, ew-archive, ew-category, ew-page, and ew-menu shortcodes in all versions up to, and including, 3.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. NOTE: This vulnerability was partially fixed in version 3.0. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-05",
+    "cve": "CVE-2025-15080",
+    "descripcion": "Improper Validation of Specified Quantity in Input vulnerability in Mitsubishi Electric MELSEC iQ-R Series R08PCPU, R16PCPU, R32PCPU, and R120PCPU allows an unauthenticated attacker to read device data or part of a control program from the affected product, write device data in the affected product, or cause a denial of service (DoS) condition on the affected product by sending a specially crafted packet containing a specific command to the affected product. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-05",
     "cve": "CVE-2025-61732",
     "descripcion": "A discrepancy between how Go and C/C++ comments were parsed allowed for code smuggling into the resulting cgo binary. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-02-05",
     "cve": "CVE-2026-1897",
     "descripcion": "A vulnerability was found in WeKan up to 8.20. Affected by this issue is some unknown functionality of the file server/methods/positionHistory.js of the component Position-History Tracking. The manipulation results in missing authorization. The attack may be performed from remote. Upgrading to version 8.21 can resolve this issue. The patch is identified as 55576ec17722db094835470b386162c9a662fb60. It is advisable to upgrade the affected component. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2026-1896",
-    "descripcion": "A vulnerability has been found in WeKan up to 8.20. Affected by this vulnerability is the function ComprehensiveBoardMigration of the file server/migrations/comprehensiveBoardMigration.js of the component Migration Operation Handler. The manipulation of the argument boardId leads to improper access controls. The attack is possible to be carried out remotely. Upgrading to version 8.21 addresses this issue. The identifier of the patch is cc35dafef57ef6e44a514a523f9a8d891e74ad8f. Upgrading the affected component is advised. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2025-13192",
-    "descripcion": "The Popup builder with Gamification, Multi-Step Popups, Page-Level Targeting, and WooCommerce Triggers plugin for WordPress is vulnerable to generic SQL Injection via the multiple REST API endpoints in all versions up to, and including, 2.2.0 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Vulnerability was patched in version 2.2.1 for unauthenticated users, and fully patched in version 2.2.3 for Administrator+ level users. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2019-25288",
-    "descripcion": "Wacom WTabletService 6.6.7-3 contains an unquoted service path vulnerability that allows local attackers to execute malicious code with elevated privileges. Attackers can insert an executable file in the service path to run unauthorized code when the service restarts or the system reboots. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2019-25287",
-    "descripcion": "Adaware Web Companion version 4.8.2078.3950 contains an unquoted service path vulnerability in the WCAssistantService that allows local users to potentially execute code with elevated privileges. Attackers can exploit the unquoted path in C:\\Program Files (x86)\\Lavasoft\\Web Companion\\Application\\ to inject malicious code that would execute with LocalSystem privileges during service startup. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-04",
-    "cve": "CVE-2019-25286",
-    "descripcion": "GCafé 3.0 contains an unquoted service path vulnerability in the gbClientService that allows local attackers to potentially execute arbitrary code with elevated privileges. Attackers can exploit the unquoted path in the service configuration to inject malicious executables that will be run with LocalSystem permissions. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
