@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-1927",
-    "descripcion": "The Greenshift – animation and page builder blocks plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the greenshift_app_pass_validation() function in all versions up to, and including, 12.5.7. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve global plugin settings including stored AI API keys. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-0715",
+    "descripcion": "Moxa Arm-based industrial computers running Moxa Industrial Linux Secure use a device-unique bootloader password provided on the device. An attacker with physical access to the device could use this information to access the bootloader menu via a serial interface. Access to the bootloader menu does not allow full system takeover or privilege escalation. The bootloader enforces digital signature verification and only permits flashing of Moxa-signed images. As a result, an attacker cannot install malicious firmware or execute arbitrary code. The primary impact is limited to a potential temporary denial-of-service condition if a valid image is reflashed. Remote exploitation is not possible. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-1523",
-    "descripcion": "Path Traversal vulnerability in Digitek ADT1100 and Digitek DT950 from PRIMION DIGITEK, S.L.U (Azkoyen Group). This vulnerability allows an attacker to access arbitrary files in the server&#39;s file system, thet is, &#39;http:///..%2F..% 2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&#39;. By manipulating the input to include URL encoded directory traversal sequences (e.g., %2F representing /), an attacker can bypass the input validation mechanisms ans retrieve sensitive files outside the intended directory, which could lead to information disclosure or further system compromise. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0714",
+    "descripcion": "A physical attack vulnerability exists in certain Moxa industrial computers using TPM-backed LUKS full-disk encryption on Moxa Industrial Linux 3, where the discrete TPM is connected to the CPU via an SPI bus. Exploitation requires invasive physical access, including opening the device and attaching external equipment to the SPI bus to capture TPM communications. If successful, the captured data may allow offline decryption of eMMC contents. This attack cannot be performed through brief or opportunistic physical access and requires extended physical access, possession of the device, appropriate equipment, and sufficient time for signal capture and analysis. Remote exploitation is not possible. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-14150",
-    "descripcion": "IBM webMethods Integration (on prem) - Integration Server 10.15 through IS_10.15_Core_Fix2411.1 to IS_11.1_Core_Fix8 IBM webMethods Integration could disclose sensitive user information in server responses. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-70792",
+    "descripcion": "Cross Site Scripting vulnerability in the &#34;/admin/category/create&#34; endpoint of Microweber 2.0.19. An attacker can manipulate the &#34;rel_id&#34; parameter in a crafted URL and lure a user with admin privileges into visiting it, achieving JavaScript code execution in the victim&#39;s browser. The issue was reported to the developers and fixed in version 2.0.20. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-13491",
-    "descripcion": "IBM App Connect Enterprise Certified Container up to 12.19.0 (Continuous Delivery) and 12.0 LTS (Long Term Support) could allow an attacker to access sensitive files or modify configurations due to an untrusted search path. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-70791",
+    "descripcion": "Cross Site Scripting vulnerability in the &#34;/admin/order/abandoned&#34; endpoint of Microweber 2.0.19. An attacker can manipulate the &#34;orderDirection&#34; parameter in a crafted URL and lure a user with admin privileges into visiting it, achieving JavaScript code execution in the victim&#39;s browser. The issue was reported to the developers and fixed in version 2.0.20. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-13379",
-    "descripcion": "IBM Aspera Console 3.4.0 through 3.4.8 is vulnerable to SQL injection. A remote attacker could send specially crafted SQL statements, which could allow the attacker to view, add, modify, or delete information in the back-end database. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-69906",
+    "descripcion": "Monstra CMS v3.0.4 contains an arbitrary file upload vulnerability in the Files Manager plugin. The application relies on blacklist-based file extension validation and stores uploaded files directly in a web-accessible directory. Under typical server configurations, this can allow an attacker to upload files that are interpreted as executable code, resulting in remote code execution. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-23797",
-    "descripcion": "In Quick.Cart user passwords are stored in plaintext form. An attacker with high privileges can display users&#39; password in user editing page. The vendor was notified early about this vulnerability, but didn&#39;t respond with the details of vulnerability or vulnerable version range. Only version 6.7 was tested and confirmed as vulnerable, other versions were not tested and might also be vulnerable. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-69619",
+    "descripcion": "A path traversal in My Text Editor v1.6.2 allows attackers to cause a Denial of Service (DoS) via writing files to the internal storage. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-23796",
-    "descripcion": "Quick.Cart allows a user&#39;s session identifier to be set before authentication. The value of this session ID stays the same after authentication. This behaviour enables an attacker to fix a session ID for a victim and later hijack the authenticated session. The vendor was notified early about this vulnerability, but didn&#39;t respond with the details of vulnerability or vulnerable version range. Only version 6.7 was tested and confirmed as vulnerable, other versions were not tested and might also be vulnerable. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-68723",
+    "descripcion": "Axigen Mail Server before 10.5.57 contains multiple stored Cross-Site Scripting (XSS) vulnerabilities in the WebAdmin interface. Three instances exist: (1) the log file name parameter in the Local Services Log page, (2) certificate file content in the SSL Certificates View Usage feature, and (3) the Certificate File name parameter in the WebMail Listeners SSL settings. Attackers can inject malicious JavaScript payloads that execute in administrators&#39; browsers when they access affected pages or features, enabling privilege escalation attacks where low-privileged admins can force high-privileged admins to perform unauthorized actions. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-23572",
-    "descripcion": "Improper access control in the TeamViewer Full and Host clients (Windows, macOS, Linux) prior version 15.74.5 allows an authenticated user to bypass additional access controls with “Allow after confirmation” configuration in a remote session. An exploit could result in unauthorized access prior to local confirmation. The user needs to be authenticated for the remote session via ID/password, Session Link, or Easy Access as a prerequisite to exploit this vulnerability. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-68643",
+    "descripcion": "Axigen Mail Server before 10.5.57 allows stored Cross-Site Scripting (XSS) in the handling of the timeFormat account preference parameter. Attackers can exploit this by deploying a multi-stage attack. In the first stage, a malicious JavaScript payload is injected into the timeFormat preference by exploiting a separate vulnerability or using compromised credentials. In the second stage, when the victim logs into the WebMail interface, the unsanitized timeFormat value is loaded from storage and inserted into the DOM, causing the injected script to execute. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-1966",
-    "descripcion": "YugabyteDB Anywhere displays LDAP bind passwords configured via gflags in cleartext within the web UI. An authenticated user with access to the configuration view could obtain LDAP credentials, potentially enabling unauthorized access to external directory services. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:H/AT:P/PR:H/UI:A/VC:L/VI:L/VA:L/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.40 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2020-37152",
+    "descripcion": "PHP-Fusion 9.03.50 panels.php is vulnerable to cross-site scripting (XSS) via the &#39;panel_content&#39; POST parameter. The application fails to properly sanitize user input before rendering it in the browser, allowing attackers to inject arbitrary JavaScript. This can be exploited by submitting crafted input to the &#39;panel_content&#39; field in panels.php, resulting in execution of malicious scripts in the context of the affected site. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-1654",
-    "descripcion": "The Peter&#39;s Date Countdown plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the `$_SERVER[&#39;PHP_SELF&#39;]` parameter in all versions up to, and including, 2.0.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2020-37150",
+    "descripcion": "Edimax EW-7438RPn-v3 Mini 1.27 allows unauthenticated attackers to access the /wizard_reboot.asp page in unsetup mode, which discloses the Wi-Fi SSID and security key. Attackers can retrieve the wireless password by sending a GET request to this endpoint, exposing sensitive information without authentication. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
