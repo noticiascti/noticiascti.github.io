@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-0715",
-    "descripcion": "Moxa Arm-based industrial computers running Moxa Industrial Linux Secure use a device-unique bootloader password provided on the device. An attacker with physical access to the device could use this information to access the bootloader menu via a serial interface. Access to the bootloader menu does not allow full system takeover or privilege escalation. The bootloader enforces digital signature verification and only permits flashing of Moxa-signed images. As a result, an attacker cannot install malicious firmware or execute arbitrary code. The primary impact is limited to a potential temporary denial-of-service condition if a valid image is reflashed. Remote exploitation is not possible. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-25630",
+    "descripcion": "Rejected reason: Reason: This candidate was issued in error. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2026-0714",
-    "descripcion": "A physical attack vulnerability exists in certain Moxa industrial computers using TPM-backed LUKS full-disk encryption on Moxa Industrial Linux 3, where the discrete TPM is connected to the CPU via an SPI bus. Exploitation requires invasive physical access, including opening the device and attaching external equipment to the SPI bus to capture TPM communications. If successful, the captured data may allow offline decryption of eMMC contents. This attack cannot be performed through brief or opportunistic physical access and requires extended physical access, possession of the device, appropriate equipment, and sufficient time for signal capture and analysis. Remote exploitation is not possible. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1301",
+    "descripcion": "In builds with PubSub and JSON enabled, a crafted JSON message can cause the decoder to write beyond a heap-allocated array before authentication, reliably crashing the process and corrupting memory. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-70792",
-    "descripcion": "Cross Site Scripting vulnerability in the &#34;/admin/category/create&#34; endpoint of Microweber 2.0.19. An attacker can manipulate the &#34;rel_id&#34; parameter in a crafted URL and lure a user with admin privileges into visiting it, achieving JavaScript code execution in the victim&#39;s browser. The issue was reported to the developers and fixed in version 2.0.20. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15343",
+    "descripcion": "Tanium addressed an incorrect default permissions vulnerability in Enforce. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-70791",
-    "descripcion": "Cross Site Scripting vulnerability in the &#34;/admin/order/abandoned&#34; endpoint of Microweber 2.0.19. An attacker can manipulate the &#34;orderDirection&#34; parameter in a crafted URL and lure a user with admin privileges into visiting it, achieving JavaScript code execution in the victim&#39;s browser. The issue was reported to the developers and fixed in version 2.0.20. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15342",
+    "descripcion": "Tanium addressed an improper access controls vulnerability in Reputation. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-69906",
-    "descripcion": "Monstra CMS v3.0.4 contains an arbitrary file upload vulnerability in the Files Manager plugin. The application relies on blacklist-based file extension validation and stores uploaded files directly in a web-accessible directory. Under typical server configurations, this can allow an attacker to upload files that are interpreted as executable code, resulting in remote code execution. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15341",
+    "descripcion": "Tanium addressed an incorrect default permissions vulnerability in Benchmark. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-69619",
-    "descripcion": "A path traversal in My Text Editor v1.6.2 allows attackers to cause a Denial of Service (DoS) via writing files to the internal storage. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15340",
+    "descripcion": "Tanium addressed an incorrect default permissions vulnerability in Comply. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-68723",
-    "descripcion": "Axigen Mail Server before 10.5.57 contains multiple stored Cross-Site Scripting (XSS) vulnerabilities in the WebAdmin interface. Three instances exist: (1) the log file name parameter in the Local Services Log page, (2) certificate file content in the SSL Certificates View Usage feature, and (3) the Certificate File name parameter in the WebMail Listeners SSL settings. Attackers can inject malicious JavaScript payloads that execute in administrators&#39; browsers when they access affected pages or features, enabling privilege escalation attacks where low-privileged admins can force high-privileged admins to perform unauthorized actions. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15339",
+    "descripcion": "Tanium addressed an incorrect default permissions vulnerability in Discover. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2025-68643",
-    "descripcion": "Axigen Mail Server before 10.5.57 allows stored Cross-Site Scripting (XSS) in the handling of the timeFormat account preference parameter. Attackers can exploit this by deploying a multi-stage attack. In the first stage, a malicious JavaScript payload is injected into the timeFormat preference by exploiting a separate vulnerability or using compromised credentials. In the second stage, when the victim logs into the WebMail interface, the unsanitized timeFormat value is loaded from storage and inserted into the DOM, causing the injected script to execute. 05/02/2026 05/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15338",
+    "descripcion": "Tanium addressed an incorrect default permissions vulnerability in Partner Integration. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2020-37152",
-    "descripcion": "PHP-Fusion 9.03.50 panels.php is vulnerable to cross-site scripting (XSS) via the &#39;panel_content&#39; POST parameter. The application fails to properly sanitize user input before rendering it in the browser, allowing attackers to inject arbitrary JavaScript. This can be exploited by submitting crafted input to the &#39;panel_content&#39; field in panels.php, resulting in execution of malicious scripts in the context of the affected site. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-15337",
+    "descripcion": "Tanium addressed an incorrect default permissions vulnerability in Patch. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-05",
-    "cve": "CVE-2020-37150",
-    "descripcion": "Edimax EW-7438RPn-v3 Mini 1.27 allows unauthenticated attackers to access the /wizard_reboot.asp page in unsetup mode, which discloses the Wi-Fi SSID and security key. Attackers can retrieve the wireless password by sending a GET request to this endpoint, exposing sensitive information without authentication. 05/02/2026 05/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-15336",
+    "descripcion": "Tanium addressed an incorrect default permissions vulnerability in Performance. 05/02/2026 05/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
