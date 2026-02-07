@@ -21,8 +21,18 @@
   },
   {
     "fecha": "2026-02-07",
+    "cve": "CVE-2025-20393",
+    "descripcion": "A vulnerability in the Spam Quarantine feature of Cisco AsyncOS Software for Cisco Secure Email Gateway and Cisco Secure Email and Web Manager could allow an unauthenticated, remote attacker to execute arbitrary system commands on an affected device with root privileges. This ..."
+  },
+  {
+    "fecha": "2026-02-07",
     "cve": "CVE-2026-24423",
     "descripcion": "SmarterTools SmarterMail versions prior to build 9511 contain an unauthenticated remote code execution vulnerability in the ConnectToHub API method. The attacker could point the SmarterMail to the malicious HTTP server, which serves the malicious OS command. This command will be ..."
+  },
+  {
+    "fecha": "2026-02-07",
+    "cve": "CVE-2025-68947",
+    "descripcion": "NSecsoft 'NSecKrnl' is a Windows driver that allows a local, authenticated attacker to terminate processes owned by other users, including SYSTEM and Protected Processes by issuing crafted IOCTL requests to the driver."
   },
   {
     "fecha": "2026-02-07",
@@ -38,15 +48,5 @@
     "fecha": "2026-02-07",
     "cve": "CVE-2025-22225",
     "descripcion": "VMware ESXi contains an arbitrary write vulnerability. A malicious actor with privileges within the VMX process may trigger an arbitrary kernel write leading to an escape of the sandbox."
-  },
-  {
-    "fecha": "2026-02-07",
-    "cve": "CVE-2025-61732",
-    "descripcion": "A discrepancy between how Go and C/C++ comments were parsed allowed for code smuggling into the resulting cgo binary."
-  },
-  {
-    "fecha": "2026-02-07",
-    "cve": "CVE-2025-68121",
-    "descripcion": "During session resumption in crypto/tls, if the underlying Config has its ClientCAs or RootCAs fields mutated between the initial handshake and the resumed handshake, the resumed handshake may succeed when it should have failed. This may happen when a user calls Config.Clone and ..."
   }
 ]
