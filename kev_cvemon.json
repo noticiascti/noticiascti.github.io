@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-02-08",
+    "cve": "CVE-2025-30208",
+    "descripcion": "Vite, a provider of frontend development tooling, has a vulnerability in versions prior to 6.2.3, 6.1.2, 6.0.12, 5.4.15, and 4.5.10. `@fs` denies access to files outside of Vite serving allow list. Adding `?raw??` or `?import&raw??` to the URL bypasses this limitation and ..."
+  },
+  {
+    "fecha": "2026-02-08",
     "cve": "CVE-2025-15566",
     "descripcion": "A security issue was discovered in ingress-nginx where the `nginx.ingress.kubernetes.io/auth-proxy-set-headers` Ingress annotation can be used to inject configuration into nginx. This can lead to arbitrary code execution in the context of the ingress-nginx controller, and ..."
   },
@@ -8,11 +13,6 @@
     "fecha": "2026-02-08",
     "cve": "CVE-2025-3052",
     "descripcion": "An arbitrary write vulnerability in Microsoft signed UEFI firmware allows for code execution of untrusted software. This allows an attacker to control its value, leading to arbitrary memory writes, including modification of critical firmware settings stored in NVRAM. Exploiting ..."
-  },
-  {
-    "fecha": "2026-02-08",
-    "cve": "CVE-2025-30208",
-    "descripcion": "Vite, a provider of frontend development tooling, has a vulnerability in versions prior to 6.2.3, 6.1.2, 6.0.12, 5.4.15, and 4.5.10. `@fs` denies access to files outside of Vite serving allow list. Adding `?raw??` or `?import&raw??` to the URL bypasses this limitation and ..."
   },
   {
     "fecha": "2026-02-08",
@@ -26,18 +26,18 @@
   },
   {
     "fecha": "2026-02-08",
-    "cve": "CVE-2025-11953",
-    "descripcion": "The Metro Development Server, which is opened by the React Native Community CLI, binds to external interfaces by default. The server exposes an endpoint that is vulnerable to OS command injection. This allows unauthenticated network attackers to send a POST request to the server ..."
-  },
-  {
-    "fecha": "2026-02-08",
-    "cve": "CVE-2025-15469",
-    "descripcion": "Issue summary: The 'openssl dgst' command-line tool silently truncates input data to 16MB when using one-shot signing algorithms and reports success instead of an error. Impact summary: A user signing or verifying files larger than 16MB with one-shot algorithms (such as ..."
+    "cve": "CVE-2025-59473",
+    "descripcion": "SQL Injection vulnerability in the Structure for Admin authenticated user"
   },
   {
     "fecha": "2026-02-08",
     "cve": "CVE-2025-40551",
     "descripcion": "SolarWinds Web Help Desk was found to be susceptible to an untrusted data deserialization vulnerability that could lead to remote code execution, which would allow an attacker to run commands on the host machine. This could be exploited without authentication."
+  },
+  {
+    "fecha": "2026-02-08",
+    "cve": "CVE-2025-11953",
+    "descripcion": "The Metro Development Server, which is opened by the React Native Community CLI, binds to external interfaces by default. The server exposes an endpoint that is vulnerable to OS command injection. This allows unauthenticated network attackers to send a POST request to the server ..."
   },
   {
     "fecha": "2026-02-08",
