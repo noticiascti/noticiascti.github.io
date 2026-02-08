@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-02-08",
+    "cve": "CVE-2025-15469",
+    "descripcion": "Issue summary: The 'openssl dgst' command-line tool silently truncates input data to 16MB when using one-shot signing algorithms and reports success instead of an error. Impact summary: A user signing or verifying files larger than 16MB with one-shot algorithms (such as ..."
+  },
+  {
+    "fecha": "2026-02-08",
     "cve": "CVE-2026-24423",
     "descripcion": "SmarterTools SmarterMail versions prior to build 9511 contain an unauthenticated remote code execution vulnerability in the ConnectToHub API method. The attacker could point the SmarterMail to the malicious HTTP server, which serves the malicious OS command. This command will be ..."
   },
@@ -38,11 +43,6 @@
     "fecha": "2026-02-08",
     "cve": "CVE-2025-40551",
     "descripcion": "SolarWinds Web Help Desk was found to be susceptible to an untrusted data deserialization vulnerability that could lead to remote code execution, which would allow an attacker to run commands on the host machine. This could be exploited without authentication."
-  },
-  {
-    "fecha": "2026-02-08",
-    "cve": "CVE-2025-22225",
-    "descripcion": "VMware ESXi contains an arbitrary write vulnerability. A malicious actor with privileges within the VMX process may trigger an arbitrary kernel write leading to an escape of the sandbox."
   },
   {
     "fecha": "2026-02-08",
