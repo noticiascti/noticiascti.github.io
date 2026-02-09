@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-02-09",
+    "cve": "CVE-2026-2240",
+    "descripcion": "A vulnerability has been found in janet-lang janet up to 1.40.1. The impacted element is the function janetc_pop_funcdef of the file src/core/compile.c. Such manipulation leads to out-of-bounds read. The attack must be carried out locally. The exploit has been disclosed to the public and may be used. The name of the patch is 4dd08a4cdef5b1c42d9a2c19fc24412e97ef51d5. A patch should be applied to remediate this issue. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2026-24095",
+    "descripcion": "Improper permission enforcement in Checkmk versions 2.4.0 before 2.4.0p21, 2.3.0 before 2.3.0p43, and 2.2.0 (EOL) allows users with the &#34;Use WATO&#34; permission to access the &#34;Analyze configuration&#34; page by directly navigating to its URL, bypassing the intended &#34;Access analyze configuration&#34; permission check. If these users also have the &#34;Make changes, perform actions&#34; permission, they can perform unauthorized actions such as disabling checks or acknowledging results. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2026-0398",
+    "descripcion": "Crafted zones can lead to increased resource usage and crafted CNAME chains can lead to cache poisoning in Recursor. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2026-24027",
+    "descripcion": "Crafted zones can lead to increased incoming network traffic. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-59024",
+    "descripcion": "Crafted delegations or IP fragments can poison cached delegations in Recursor. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-59023",
+    "descripcion": "Crafted delegations or IP fragments can poison cached delegations in Recursor. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-14831",
+    "descripcion": "A flaw was found in GnuTLS. This vulnerability allows a denial of service (DoS) by excessive CPU (Central Processing Unit) and memory consumption via specially crafted malicious certificates containing a large number of name constraints and subject alternative names (SANs). 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-09",
     "cve": "CVE-2025-10465",
     "descripcion": "Unrestricted Upload of File with Dangerous Type vulnerability in Birtech Information Technologies Industry and Trade Ltd. Co. Sensaway allows Upload a Web Shell to a Web Server.This issue affects Sensaway: through 09022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-02-09",
     "cve": "CVE-2026-1960",
     "descripcion": "Stored Cross-Site Scripting (XSS) vulnerability in Loggro Pymes, via the &#39;Facebook&#39; parameter in &#39;/loggrodemo/jbrain/ConsultaTerceros&#39; endpoint. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-1959",
-    "descripcion": "Stored Cross-Site Scripting (XSS) vulnerability in Loggro Pymes, via the &#39;descripción&#39; parameter in the &#39;/loggrodemo/jbrain/MaestraCuentasBancarias&#39; endpoint. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-0632",
-    "descripcion": "The Fluent Forms Pro Add On Pack plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 6.1.12 via the &#39;saveDataSource&#39; function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2025-7708",
-    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in Atlas Educational Software Industry Ltd. Co. K12net allows Communication Channel Manipulation.This issue affects k12net: through 09022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2025-6830",
-    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Xpoda Türkiye Information Technology Inc. Xpoda Studio allows SQL Injection.This issue affects Xpoda Studio: through 09022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2025-10463",
-    "descripcion": "Improper Authentication vulnerability in Birtech Information Technologies Industry and Trade Ltd. Co. Senseway allows Authentication Abuse.This issue affects Senseway: through 09022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25848",
-    "descripcion": "In JetBrains Hub before 2025.3.119807 authentication bypass allowing administrative actions was possible 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25847",
-    "descripcion": "In JetBrains PyCharm before 2025.3.2 a DOM-based XSS on Jupyter viewer page was possible 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
