@@ -16,8 +16,8 @@
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-34165",
-    "descripcion": "A stack-based buffer overflow vulnerability in NetSupport Manager 14.x versions prior to 14.12.0000 allows a remote, unauthenticated attacker to cause a denial of service (DoS) or potentially leak a limited amount of memory."
+    "cve": "CVE-2025-43300",
+    "descripcion": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 15.8.5 and iPadOS 15.8.5, iOS 16.7.12 and iPadOS 16.7.12. Processing a malicious image file may result in memory corruption. Apple is aware of a report that this issue may have ..."
   },
   {
     "fecha": "2026-02-09",
@@ -26,13 +26,8 @@
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-3052",
-    "descripcion": "An arbitrary write vulnerability in Microsoft signed UEFI firmware allows for code execution of untrusted software. This allows an attacker to control its value, leading to arbitrary memory writes, including modification of critical firmware settings stored in NVRAM. Exploiting ..."
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2025-43300",
-    "descripcion": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 15.8.5 and iPadOS 15.8.5, iOS 16.7.12 and iPadOS 16.7.12. Processing a malicious image file may result in memory corruption. Apple is aware of a report that this issue may have ..."
+    "cve": "CVE-2025-34165",
+    "descripcion": "A stack-based buffer overflow vulnerability in NetSupport Manager 14.x versions prior to 14.12.0000 allows a remote, unauthenticated attacker to cause a denial of service (DoS) or potentially leak a limited amount of memory."
   },
   {
     "fecha": "2026-02-09",
@@ -41,12 +36,17 @@
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-66959",
-    "descripcion": "An issue in ollama v.0.12.10 allows a remote attacker to cause a denial of service via the GGUF decoder"
+    "cve": "CVE-2026-1731",
+    "descripcion": "BeyondTrust Remote Support (RS) and certain older versions of Privileged Remote Access (PRA) contain a critical pre-authentication remote code execution vulnerability. By sending specially crafted requests, an unauthenticated remote attacker may be able to execute operating ..."
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-66960",
-    "descripcion": "An issue in ollama v.0.12.10 allows a remote attacker to cause a denial of service via the fs/ggml/gguf.go, function readGGUFV1String reads a string length from untrusted GGUF metadata"
+    "cve": "CVE-2024-12356",
+    "descripcion": "A critical vulnerability has been discovered in Privileged Remote Access (PRA) and Remote Support (RS) products which can allow an unauthenticated attacker to inject commands that are run as a site user."
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-66959",
+    "descripcion": "An issue in ollama v.0.12.10 allows a remote attacker to cause a denial of service via the GGUF decoder"
   }
 ]
