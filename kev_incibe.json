@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-02-09",
+    "cve": "CVE-2026-2258",
+    "descripcion": "A flaw has been found in aardappel lobster up to 2025.4. Affected by this vulnerability is the function WaveFunctionCollapse in the library dev/src/lobster/wfc.h. Executing a manipulation can lead to memory corruption. The attack can only be executed locally. The exploit has been published and may be used. This patch is called c2047a33e1ac2c42ab7e8704b33f7ea518a11ffd. It is advisable to implement a patch to correct this issue. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2026-0845",
+    "descripcion": "The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription Listings Compatible plugin for WordPress is vulnerable to unauthorized modification of data that can lead to privilege escalation due to a missing capability check on the &#39;WCFM_Settings_Controller::processing&#39; function in all versions up to, and including, 6.7.24. This makes it possible for authenticated attackers, with Shop Manager-level access and above, to update arbitrary options on the WordPress site. This can be leveraged to update the default role for registration to administrator and enable user registration for attackers to gain administrative user access to a vulnerable site. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-15314",
+    "descripcion": "Tanium addressed an arbitrary file deletion vulnerability in end-user-cx. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-15313",
+    "descripcion": "Tanium addressed an arbitrary file deletion vulnerability in Tanium EUSS. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-15310",
+    "descripcion": "Tanium addressed a local privilege escalation vulnerability in Patch Endpoint Tools. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-09",
+    "cve": "CVE-2025-15147",
+    "descripcion": "The WCFM Membership – WooCommerce Memberships for Multivendor Marketplace plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.11.8 via the &#39;WCFMvm_Memberships_Payment_Controller::processing&#39; due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Subscriber-level access and above, to modify other users&#39; membership payments. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-09",
     "cve": "CVE-2026-25958",
     "descripcion": "Cube is a semantic layer for building data applications. From 0.27.19 to before 1.5.13, 1.4.2, and 1.0.14, it is possible to make a specially crafted request with a valid API token that leads to privilege escalation. This vulnerability is fixed in 1.5.13, 1.4.2, and 1.0.14. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-02-09",
     "cve": "CVE-2026-25939",
     "descripcion": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. From 1.2.8 through version 1.2.10, an authorization bypass vulnerability in the FUXA allows an unauthenticated, remote attacker to create and modify arbitrary schedulers, exposing connected ICS/SCADA environments to follow-on actions. This has been patched in FUXA version 1.2.11. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25938",
-    "descripcion": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. From 1.2.8 through 1.2.10, an authentication bypass vulnerability in FUXA allows an unauthenticated, remote attacker to execute arbitrary code on the server when the Node-RED plugin is enabled. This has been patched in FUXA version 1.2.11. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.50 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25934",
-    "descripcion": "go-git is a highly extensible git implementation library written in pure Go. Prior to 5.16.5, a vulnerability was discovered in go-git whereby data integrity values for .pack and .idx files were not properly verified. This resulted in go-git potentially consuming corrupted files, which would likely result in unexpected errors such as object not found. For context, clients fetch packfiles from upstream Git servers. Those files contain a checksum of their contents, so that clients can perform integrity checks before consuming it. The pack indexes (.idx) are generated locally by go-git, or the git cli, when new .pack files are received and processed. The integrity checks for both files were not being verified correctly. This vulnerability is fixed in 5.16.5. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25931",
-    "descripcion": "vscode-spell-checker is a basic spell checker that works well with code and documents. Prior to v4.5.4, DocumentSettings._determineIsTrusted treats the configuration value cSpell.trustedWorkspace as the authoritative trust flag. The value defaults to true (package.json) and is read from workspace configuration each time settings are fetched. The code coerces any truthy value to true and forwards it to ConfigLoader.setIsTrusted , which in turn allows JavaScript/TypeScript configuration files ( .cspell.config.js/.mjs/.ts , etc.) to be located and executed. Because no VS Code workspace-trust state is consulted, an untrusted workspace can keep the flag true and place a malicious .cspell.config.js ; opening the workspace causes the extension host to execute attacker-controlled Node.js code with the user’s privileges. This vulnerability is fixed in v4.5.4. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25895",
-    "descripcion": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. A path traversal vulnerability in FUXA allows an unauthenticated, remote attacker to write arbitrary files to arbitrary locations on the server filesystem. This affects FUXA through version 1.2.9. This issue has been patched in FUXA version 1.2.10. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.50 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25894",
-    "descripcion": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. An insecure default configuration in FUXA allows an unauthenticated, remote attacker to gain administrative access and execute arbitrary code on the server. This affects FUXA through version 1.2.9 when authentication is enabled, but the administrator JWT secret is not configured. This issue has been patched in FUXA version 1.2.10. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.50 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-09",
-    "cve": "CVE-2026-25893",
-    "descripcion": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. Prior to 1.2.10, an authentication bypass vulnerability in FUXA allows an unauthenticated, remote attacker to gain administrative access via the heartbeat refresh API and execute arbitrary code on the server. This issue has been patched in FUXA version 1.2.10. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
