@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2026-2240",
-    "descripcion": "A vulnerability has been found in janet-lang janet up to 1.40.1. The impacted element is the function janetc_pop_funcdef of the file src/core/compile.c. Such manipulation leads to out-of-bounds read. The attack must be carried out locally. The exploit has been disclosed to the public and may be used. The name of the patch is 4dd08a4cdef5b1c42d9a2c19fc24412e97ef51d5. A patch should be applied to remediate this issue. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-24777",
+    "descripcion": "OpenProject is an open-source, web-based project management software. Prior to 17.0.2, users with the Manage Users permission can lock and unlock users. This functionality should only be possible for users of the application, but they were not supposed to be able to lock application administrators. Due to a missing permission check this logic was not enforced. The problem was fixed in OpenProject 17.0.2The problem was fixed in OpenProject 17.0.2. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2026-24095",
-    "descripcion": "Improper permission enforcement in Checkmk versions 2.4.0 before 2.4.0p21, 2.3.0 before 2.3.0p43, and 2.2.0 (EOL) allows users with the &#34;Use WATO&#34; permission to access the &#34;Analyze configuration&#34; page by directly navigating to its URL, bypassing the intended &#34;Access analyze configuration&#34; permission check. If these users also have the &#34;Make changes, perform actions&#34; permission, they can perform unauthorized actions such as disabling checks or acknowledging results. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24684",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, the RDPSND async playback thread can process queued PDUs after the channel is closed and internal state is freed, leading to a use after free in rdpsnd_treat_wave. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2026-0398",
-    "descripcion": "Crafted zones can lead to increased resource usage and crafted CNAME chains can lead to cache poisoning in Recursor. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24683",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. ainput_send_input_event caches channel_callback in a local variable and later uses it without synchronization; a concurrent channel close can free or reinitialize the callback, leading to a use after free. Prior to 3.22.0, This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2026-24027",
-    "descripcion": "Crafted zones can lead to increased incoming network traffic. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24682",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, audin_server_recv_formats frees an incorrect number of audio formats on parse failure (i + i), leading to out-of-bounds access in audio_formats_free. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-59024",
-    "descripcion": "Crafted delegations or IP fragments can poison cached delegations in Recursor. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24681",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, aAsynchronous bulk transfer completions can use a freed channel callback after URBDRC channel close, leading to a use after free in urb_write_completion. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-59023",
-    "descripcion": "Crafted delegations or IP fragments can poison cached delegations in Recursor. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24680",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, sdl_Pointer_New frees data on failure, then pointer_free calls sdl_Pointer_Free and frees it again, triggering ASan UAF. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-14831",
-    "descripcion": "A flaw was found in GnuTLS. This vulnerability allows a denial of service (DoS) by excessive CPU (Central Processing Unit) and memory consumption via specially crafted malicious certificates containing a large number of name constraints and subject alternative names (SANs). 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24679",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, The URBDRC client uses server-supplied interface numbers as array indices without bounds checks, causing an out-of-bounds read in libusb_udev_select_interface. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-10465",
-    "descripcion": "Unrestricted Upload of File with Dangerous Type vulnerability in Birtech Information Technologies Industry and Trade Ltd. Co. Sensaway allows Upload a Web Shell to a Web Server.This issue affects Sensaway: through 09022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-24678",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, A capture thread sends sample responses using a freed channel callback after a device channel close, leading to a use after free in ecam_channel_write. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2025-10464",
-    "descripcion": "Insecure Storage of Sensitive Information vulnerability in Birtech Information Technologies Industry and Trade Ltd. Co. Senseway allows Retrieve Embedded Sensitive Data.This issue affects Senseway: through 09022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 09/02/2026 09/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24677",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, ecam_encoder_compress_h264 trusts server-controlled dimensions and does not validate the source buffer size, leading to an out-of-bounds read in sws_scale. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-09",
-    "cve": "CVE-2026-1960",
-    "descripcion": "Stored Cross-Site Scripting (XSS) vulnerability in Loggro Pymes, via the &#39;Facebook&#39; parameter in &#39;/loggrodemo/jbrain/ConsultaTerceros&#39; endpoint. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24676",
+    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.22.0, AUDIN format renegotiation frees the active format list while the capture thread continues using audin->format, leading to a use after free in audio_format_compatible. This vulnerability is fixed in 3.22.0. 09/02/2026 09/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
