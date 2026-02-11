@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-02-10",
+    "cve": "CVE-2026-25872",
+    "descripcion": "JUNG Smart Panel KNX firmware version L1.12.22 and prior contain an unauthenticated path traversal vulnerability in the embedded web interface. The application fails to properly validate file path input, allowing remote, unauthenticated attackers to access arbitrary files on the underlying filesystem within the context of the web server. This may result in disclosure of system configuration files and other sensitive information. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-10",
+    "cve": "CVE-2026-25870",
+    "descripcion": "DoraCMS version 3.1 and prior contains a server-side request forgery (SSRF) vulnerability in its UEditor remote image fetch functionality. The application accepts user-supplied URLs and performs server-side HTTP or HTTPS requests without sufficient validation or destination restrictions. The implementation does not enforce allowlists, block internal or private IP address ranges, or apply request timeouts or response size limits. An attacker can abuse this behavior to induce the server to issue outbound requests to arbitrary hosts, including internal network resources, potentially enabling internal network scanning and denial of service through resource exhaustion. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-10",
+    "cve": "CVE-2026-25251",
+    "descripcion": "Rejected reason: This has been moved to the REJECTED state because the information source is under review. If circumstances change, it is possible that this will be moved to the PUBLISHED state at a later date. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-10",
+    "cve": "CVE-2026-26013",
+    "descripcion": "LangChain is a framework for building agents and LLM-powered applications. Prior to 1.2.11, the ChatOpenAI.get_num_tokens_from_messages() method fetches arbitrary image_url values without validation when computing token counts for vision-enabled models. This allows attackers to trigger Server-Side Request Forgery (SSRF) attacks by providing malicious image URLs in user input. This vulnerability is fixed in 1.2.11. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-02-10",
+    "cve": "CVE-2026-26006",
+    "descripcion": "AutoGPT is a platform that allows users to create, deploy, and manage continuous artificial intelligence agents that automate complex workflows. The autogpt before 0.6.32 is vulnerable to Regular Expression Denial of Service due to the use of regex at Code Extraction Block. The two Regex are used containing the corresponding dangerous patterns \\s+[\\s\\S]*? and \\s+(.*?). They share a common characteristic — the combination of two adjacent quantifiers that can match the same space character (\\s). As a result, an attacker can supply a long sequence of space characters to trigger excessive regex backtracking, potentially leading to a Denial of Service (DoS). This vulnerability is fixed in 0.6.32. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-10",
     "cve": "CVE-2026-1507",
     "descripcion": "The affected products are vulnerable to an uncaught exception that could allow an unauthenticated attacker to remotely crash core PI services resulting in a denial-of-service. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-02-10",
     "cve": "CVE-2026-21349",
     "descripcion": "Lightroom Desktop versions 15.1 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-21348",
-    "descripcion": "Substance3D - Modeler versions 1.22.5 and earlier are affected by an out-of-bounds read vulnerability that could lead to memory exposure. An attacker could leverage this vulnerability to disclose sensitive information stored in memory. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-1763",
-    "descripcion": "Vulnerability in GE Vernova Enervista UR Setup on Windows.This issue affects Enervista: 8.6 and previous versions. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-1762",
-    "descripcion": "A vulnerability in GE Vernova Enervista UR Setup on Windows allows File Manipulation.This issue affects Enervista: 8.6 and prior versions. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 2.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2025-54514",
-    "descripcion": "Improper isolation of shared resources on a system on a chip by a malicious local attacker with high privileges could potentially lead to a partial loss of integrity. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2025-52536",
-    "descripcion": "Improper Prevention of Lock Bit Modification in SEV firmware could allow a privileged attacker to downgrade firmware potentially resulting in a loss of integrity. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
