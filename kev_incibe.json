@@ -1,5 +1,30 @@
 [
   {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2026-1231",
+    "descripcion": "The Beaver Builder Page Builder – Drag and Drop Website Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `js` Global Settings parameter in all versions up to, and including, 2.10.0.5 due to missing capability checks on save_global_settings() function and insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Custom-level access and above who have been granted beaver builder access, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2025-15524",
+    "descripcion": "The Gallery by FooGallery plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the ajax_get_gallery_info() function in all versions up to, and including, 3.1.9. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve metadata (name, image count, thumbnail URL) of private, draft, and password-protected galleries by enumerating gallery IDs. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2025-14541",
+    "descripcion": "The Lucky Wheel Giveaway plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.0.22 via the conditional_tags parameter. This is due to the plugin using PHP&#39;s eval() function on user-controlled input without proper validation or sanitization. This makes it possible for authenticated attackers, with Administrator-level access and above, to execute code on the server. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2025-13431",
+    "descripcion": "The SlimStat Analytics plugin for WordPress is vulnerable to time-based SQL Injection via the ‘args’ parameter in all versions up to, and including, 5.3.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2026-1571",
+    "descripcion": "User-controlled input is reflected into the HTML output without proper encoding on TP-Link Archer C60 v3, allowing arbitrary JavaScript execution via a crafted URL. An attacker could run script in the device web UI context, potentially enabling credential theft, session hijacking, or unintended actions if a privileged user is targeted. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
     "fecha": "2026-02-10",
     "cve": "CVE-2026-25872",
     "descripcion": "JUNG Smart Panel KNX firmware version L1.12.22 and prior contain an unauthenticated path traversal vulnerability in the embedded web interface. The application fails to properly validate file path input, allowing remote, unauthenticated attackers to access arbitrary files on the underlying filesystem within the context of the web server. This may result in disclosure of system configuration files and other sensitive information. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -16,37 +41,12 @@
   },
   {
     "fecha": "2026-02-10",
+    "cve": "CVE-2026-26007",
+    "descripcion": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to 46.0.5, the public_key_from_numbers (or EllipticCurvePublicNumbers.public_key()), EllipticCurvePublicNumbers.public_key(), load_der_public_key() and load_pem_public_key() functions do not verify that the point belongs to the expected prime-order subgroup of the curve. This missing validation allows an attacker to provide a public key point P from a small-order subgroup. This can lead to security issues in various situations, such as the most commonly used signature verification (ECDSA) and shared key negotiation (ECDH). When the victim computes the shared secret as S = [victim_private_key]P via ECDH, this leaks information about victim_private_key mod (small_subgroup_order). For curves with cofactor > 1, this reveals the least significant bits of the private key. When these weak public keys are used in ECDSA , it&#39;s easy to forge signatures on the small subgroup. Only SECT curves are impacted by this. This vulnerability is fixed in 46.0.5. 11/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-10",
     "cve": "CVE-2026-26013",
     "descripcion": "LangChain is a framework for building agents and LLM-powered applications. Prior to 1.2.11, the ChatOpenAI.get_num_tokens_from_messages() method fetches arbitrary image_url values without validation when computing token counts for vision-enabled models. This allows attackers to trigger Server-Side Request Forgery (SSRF) attacks by providing malicious image URLs in user input. This vulnerability is fixed in 1.2.11. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-26006",
-    "descripcion": "AutoGPT is a platform that allows users to create, deploy, and manage continuous artificial intelligence agents that automate complex workflows. The autogpt before 0.6.32 is vulnerable to Regular Expression Denial of Service due to the use of regex at Code Extraction Block. The two Regex are used containing the corresponding dangerous patterns \\s+[\\s\\S]*? and \\s+(.*?). They share a common characteristic — the combination of two adjacent quantifiers that can match the same space character (\\s). As a result, an attacker can supply a long sequence of space characters to trigger excessive regex backtracking, potentially leading to a Denial of Service (DoS). This vulnerability is fixed in 0.6.32. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-1507",
-    "descripcion": "The affected products are vulnerable to an uncaught exception that could allow an unauthenticated attacker to remotely crash core PI services resulting in a denial-of-service. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-1495",
-    "descripcion": "The vulnerability, if exploited, could allow an attacker with Event Log Reader (S-1-5-32-573) privileges to obtain proxy details, including URL and proxy credentials, from the PI to CONNECT event log files. This could enable unauthorized access to the proxy server. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 4.0 5.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2025-12699",
-    "descripcion": "The ZOLL ePCR IOS application reflects unsanitized user input into a WebView. Attacker-controlled strings placed into PCR fields (run number, incident, call sign, notes) are interpreted as HTML/JS when the app prints or renders that content. In the proof of concept (POC), injected scripts return local file content, which would allow arbitrary local file reads from the app&#39;s runtime context. These local files contain device and user data within the ePCR medical application, and if exposed, would allow an attacker to access protected health information (PHI) or device telemetry. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 4.0 6.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-2303",
-    "descripcion": "The mongo-go-driver repository contains CGo bindings for GSSAPI (Kerberos) authentication on Linux and macOS. The C wrapper implementation contains a heap out-of-bounds read vulnerability due to incorrect assumptions about string termination in the GSSAPI standard. Since GSSAPI buffers are not guaranteed to be null-terminated or have extra padding, this results in reading one byte past the allocated heap buffer. 10/02/2026 10/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-10",
-    "cve": "CVE-2026-21349",
-    "descripcion": "Lightroom Desktop versions 15.1 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/02/2026 10/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
