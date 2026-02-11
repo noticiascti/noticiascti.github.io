@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-10913",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Saastech Cleaning and Internet Services Inc. TemizlikYolda allows Cross-Site Scripting (XSS).This issue affects TemizlikYolda: through 11022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-2295",
+    "descripcion": "The WPZOOM Addons for Elementor – Starter Templates & Widgets plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;ajax_post_grid_load_more&#39; function in all versions up to, and including, 1.3.2. This makes it possible for unauthenticated attackers to retrieve protected (draft, future, pending) post titles and excerpts that should not be accessible to unauthenticated users. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-10912",
-    "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in Saastech Cleaning and Internet Services Inc. TemizlikYolda allows Manipulating User-Controlled Variables.This issue affects TemizlikYolda: through 11022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-15096",
+    "descripcion": "The &#39;Videospirecore Theme Plugin&#39; plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.0.6. This is due to the plugin not properly validating a user&#39;s identity prior to updating their details like email. This makes it possible for authenticated attackers, with Subscriber-level access and above, to change arbitrary user&#39;s email addresses, including administrators, and leverage that to reset the user&#39;s password and gain access to their account. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-1357",
-    "descripcion": "The Migration, Backup, Staging – WPvivid Backup & Migration plugin for WordPress is vulnerable to Unauthenticated Arbitrary File Upload in versions up to and including 0.9.123. This is due to improper error handling in the RSA decryption process combined with a lack of path sanitization when writing uploaded files. When the plugin fails to decrypt a session key using openssl_private_decrypt(), it does not terminate execution and instead passes the boolean false value to the phpseclib library&#39;s AES cipher initialization. The library treats this false value as a string of null bytes, allowing an attacker to encrypt a malicious payload using a predictable null-byte key. Additionally, the plugin accepts filenames from the decrypted payload without sanitization, enabling directory traversal to escape the protected backup directory. This makes it possible for unauthenticated attackers to upload arbitrary PHP files to publicly accessible directories and achieve Remote Code Execution via the wpvivid_action=send_to_site parameter. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-1885",
+    "descripcion": "The Slideshow Wp plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;sswpid&#39; attribute of the &#39;sswp-slide&#39; shortcode in all versions up to, and including, 1.1. This is due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-1235",
-    "descripcion": "The WP eCommerce WordPress plugin through 3.15.1 unserializes user input via ajax actions, which could allow unauthenticated users to perform PHP Object Injection when a suitable gadget is present on the blog. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1853",
+    "descripcion": "The BuddyHolis ListSearch plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;listsearch&#39; shortcode in all versions up to, and including, 1.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-15400",
-    "descripcion": "The Pix para Woocommerce WordPress plugin through 2.13.3 allows any authenticated user to trigger AJAX actions that reset payment gateway configuration options without capability or nonce checks. This permits any authenticated users, such as subscribers to clear API credentials and webhook status, causing persistent disruption of OpenPix payment functionality. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1833",
+    "descripcion": "The WaMate Confirm – Order Confirmation plugin for WordPress is vulnerable to unauthorized access in all versions up to, and including, 2.0.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to block and unblock phone numbers, which should be restricted to administrators. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-26079",
-    "descripcion": "Roundcube Webmail before 1.5.13 and 1.6 before 1.6.13 allows Cascading Style Sheets (CSS) injection, e.g., because comments are mishandled. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-1827",
+    "descripcion": "The Flask Micro code-editor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s codeflask shortcode in all versions up to, and including, 1.0.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-26044",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1826",
+    "descripcion": "The OpenPOS Lite – Point of Sale for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;width&#39; parameter of the order_qrcode shortcode in all versions up to, and including, 3.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-26043",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1821",
+    "descripcion": "The Microtango plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;restkey&#39; parameter of the mt_reservation shortcode in all versions up to, and including, 0.9.29 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-26042",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1809",
+    "descripcion": "The HTML Tag Shortcodes plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s shortcodes in all versions up to, and including, 1.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-26041",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-1804",
+    "descripcion": "The WDES Responsive Popup plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;wdes-popup-title&#39; shortcode in all versions up to, and including, 1.3.6 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
