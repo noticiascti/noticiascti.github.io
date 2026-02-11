@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-02-11",
+    "cve": "CVE-2025-10913",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Saastech Cleaning and Internet Services Inc. TemizlikYolda allows Cross-Site Scripting (XSS).This issue affects TemizlikYolda: through 11022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2025-10912",
+    "descripcion": "Authorization Bypass Through User-Controlled Key vulnerability in Saastech Cleaning and Internet Services Inc. TemizlikYolda allows Manipulating User-Controlled Variables.This issue affects TemizlikYolda: through 11022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2026-1357",
+    "descripcion": "The Migration, Backup, Staging – WPvivid Backup & Migration plugin for WordPress is vulnerable to Unauthenticated Arbitrary File Upload in versions up to and including 0.9.123. This is due to improper error handling in the RSA decryption process combined with a lack of path sanitization when writing uploaded files. When the plugin fails to decrypt a session key using openssl_private_decrypt(), it does not terminate execution and instead passes the boolean false value to the phpseclib library&#39;s AES cipher initialization. The library treats this false value as a string of null bytes, allowing an attacker to encrypt a malicious payload using a predictable null-byte key. Additionally, the plugin accepts filenames from the decrypted payload without sanitization, enabling directory traversal to escape the protected backup directory. This makes it possible for unauthenticated attackers to upload arbitrary PHP files to publicly accessible directories and achieve Remote Code Execution via the wpvivid_action=send_to_site parameter. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2026-1235",
+    "descripcion": "The WP eCommerce WordPress plugin through 3.15.1 unserializes user input via ajax actions, which could allow unauthenticated users to perform PHP Object Injection when a suitable gadget is present on the blog. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-11",
+    "cve": "CVE-2025-15400",
+    "descripcion": "The Pix para Woocommerce WordPress plugin through 2.13.3 allows any authenticated user to trigger AJAX actions that reset payment gateway configuration options without capability or nonce checks. This permits any authenticated users, such as subscribers to clear API credentials and webhook status, causing persistent disruption of OpenPix payment functionality. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-11",
     "cve": "CVE-2026-26079",
     "descripcion": "Roundcube Webmail before 1.5.13 and 1.6 before 1.6.13 allows Cascading Style Sheets (CSS) injection, e.g., because comments are mishandled. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -22,31 +47,6 @@
   {
     "fecha": "2026-02-11",
     "cve": "CVE-2026-26041",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-11",
-    "cve": "CVE-2026-26040",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-11",
-    "cve": "CVE-2026-26039",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-11",
-    "cve": "CVE-2026-26038",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-11",
-    "cve": "CVE-2026-26037",
-    "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-11",
-    "cve": "CVE-2026-26036",
     "descripcion": "Rejected reason: Not used 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
