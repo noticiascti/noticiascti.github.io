@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-25084",
-    "descripcion": "Authentication for ZLAN5143D can be bypassed by directly accessing internal URLs. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-2361",
+    "descripcion": "PostgreSQL Anonymizer contains a vulnerability that allows a user to gain superuser privileges by creating a temporary view based on a function containing malicious code. When the anon.get_tablesample_ratio function is then called, the malicious code is executed with superuser privileges. This privilege elevation can be exploited by users having the CREATE privilege in PostgreSQL 15 and later. The risk is higher with PostgreSQL 14 or with instances upgraded from PostgreSQL 14 or a prior version because the creation permission on the public schema is granted by default. The problem is resolved in PostgreSQL Anonymizer 3.0.1 and further versions 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-24789",
-    "descripcion": "An unprotected API endpoint allows an attacker to remotely change the device password without providing authentication. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-2360",
+    "descripcion": "PostgreSQL Anonymizer contains a vulnerability that allows a user to gain superuser privileges by creating a custom operator in the public schema and place malicious code in that operator. This operator will later be executed with superuser privileges when the extension is created. The risk is higher with PostgreSQL 14 or with instances upgraded from PostgreSQL 14 or a prior version. With PostgreSQL 15 and later, the creation permission on the public schema is revoked by default and this exploit can only be achieved if a superuser adds a new schema in her/his own search_path and grants the CREATE privilege on that schema to untrusted users, both actions being clearly discouraged by the PostgreSQL documentation. The problem is resolved in PostgreSQL Anonymizer 3.0.1 and further versions 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-65127",
-    "descripcion": "A lack of session validation in the web API component of Shenzhen Zhibotong Electronics ZBT WE2001 23.09.27 allows remote unauthenticated attackers to access administrative information-retrieval functions intended for authenticated users. By invoking &#34;get_*&#34; operations, attackers can obtain device configuration data, including plaintext credentials, without authentication or an existing session. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0229",
+    "descripcion": "A denial-of-service (DoS) vulnerability in the Advanced DNS Security (ADNS) feature of Palo Alto Networks PAN-OS® software enables an unauthenticated attacker to initiate system reboots using a maliciously crafted packet. Repeated attempts to initiate a reboot causes the firewall to enter maintenance mode. Cloud NGFW and Prisma Access® are not impacted by this vulnerability. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:D/RE:M/U:Amber Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-13391",
-    "descripcion": "The Product Options and Price Calculation Formulas for WooCommerce – Uni CPO (Premium) plugin for WordPress is vulnerable to unauthorized loss of data due to a missing capability check on the &#39;uni_cpo_remove_file&#39; function in all versions up to, and including, 4.9.60. This makes it possible for unauthenticated attackers to delete arbitrary attachments or files stored in Dropbox if the file path is known. The vulnerability was partially patched in version 4.9.60. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-0228",
+    "descripcion": "An improper certificate validation vulnerability in PAN-OS allows users to connect Terminal Server Agents on Windows to PAN-OS using expired certificates even if the PAN-OS configuration would not normally permit them to do so. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:L/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Amber Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-25869",
-    "descripcion": "MiniGal Nano versions 0.3.5 and prior contain a path traversal vulnerability in index.php via the dir parameter. The application appends user-controlled input to the photos directory and attempts to prevent traversal by removing dot-dot sequences, but this protection can be bypassed using crafted directory patterns. An attacker can exploit this behavior to cause the application to enumerate and display image files from unintended filesystem locations that are readable by the web server, resulting in unintended information disclosure. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-70085",
+    "descripcion": "An issue was discovered in OpenSatKit 2.2.1. The EventErrStr buffer has a fixed size of 256 bytes. The code uses sprintf to format two filenames (Source1Filename and the string returned by FileUtil_FileStateStr) into this buffer without any length checking and without using bounded format specifiers such as %.*s. If the filename length approaches OS_MAX_PATH_LEN (commonly 64-256 bytes), the combined formatted string together with constant text can exceed 256 bytes, resulting in a stack buffer overflow. Such unsafe sprintf calls are scattered across multiple functions in file.c, including FILE_ConcatenateCmd() and ConcatenateFiles(), all of which fail to validate the output length. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-25868",
-    "descripcion": "MiniGal Nano version 0.3.5 and prior contain a reflected cross-site scripting (XSS) vulnerability in index.php via the dir parameter. The application constructs $currentdir from user-controlled input and embeds it into an error message without output encoding, allowing an attacker to supply HTML/JavaScript that is reflected in the response. Successful exploitation can lead to execution of arbitrary script in a victim&#39;s browser in the context of the vulnerable application. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-70084",
+    "descripcion": "Directory traversal vulnerability in OpenSatKit 2.2.1 allows attackers to gain access to sensitive information or delete arbitrary files via crafted value to the FileUtil_GetFileInfo function. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-1837",
-    "descripcion": "A specially-crafted file can cause libjxl&#39;s decoder to write pixel data to uninitialized unallocated memory. Soon after that data from another uninitialized unallocated region is copied to pixel data. This can be done by requesting color transformation of grayscale images to another grayscale color space. Buffers allocated for 1-float-per-pixel are used as if they are allocated for 3-float-per-pixel. That happens only if LCMS2 is used as CMS engine. There is another CMS engine available (selected by build flags). 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-70083",
+    "descripcion": "An issue was discovered in OpenSatKit 2.2.1. The DirName field in the telecommand is provided by the ground segment and must be treated as untrusted input. The program copies DirName into the local buffer DirWithSep using strcpy. The size of this buffer is OS_MAX_PATH_LEN. If the length of DirName is greater than or equal to OS_MAX_PATH_LEN, a stack buffer overflow occurs, overwriting adjacent stack memory. The path length check (FileUtil_AppendPathSep) is performed after the strcpy operation, meaning the validation occurs too late and cannot prevent the overflow. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-64075",
-    "descripcion": "A path traversal vulnerability in the check_token function of Shenzhen Zhibotong Electronics ZBT WE2001 23.09.27 allows remote attackers to bypass authentication and perform administrative actions by supplying a crafted session cookie value. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-70029",
+    "descripcion": "An issue in Sunbird-Ed SunbirdEd-portal v1.13.4 allows attackers to obtain sensitive information. The application disables TLS/SSL certificate validation by setting &#39;rejectUnauthorized&#39;: false in HTTP request options 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-12474",
-    "descripcion": "A specially-crafted file can cause libjxl&#39;s decoder to read pixel data from uninitialized (but allocated) memory. This can be done by causing the decoder to reference an outside-image-bound area in a subsequent patches. An incorrect optimization causes the decoder to omit populating those areas. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-69874",
+    "descripcion": "nanotar through 0.2.0 has a path traversal vulnerability in parseTar() and parseTarGzip() that allows remote attackers to write arbitrary files outside the intended extraction directory via a crafted tar archive containing path traversal sequence. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-2345",
-    "descripcion": "Proctorio Chrome Extension is a browser extension used for online proctoring. The extension contains multiple window.addEventListener(&#39;message&#39;, ...) handlers that do not properly validate the origin of incoming messages. Specifically, an internal messaging bridge processes messages based solely on the presence of a fromWebsite property without verifying the event.origin attribute. 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-65480",
+    "descripcion": "An issue was discovered in Pacom Unison Client 5.13.1. Authenticated users can inject malicious scripts in the Report Templates which are executed when certain script conditions are fulfilled, leading to Remote Code Execution. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
