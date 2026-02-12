@@ -11,23 +11,13 @@
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-21722",
-    "descripcion": "Public dashboards with annotations enabled did not limit their annotation timerange to the locked timerange of the public dashboard. This means one could read the entire history of annotations visible on the specific dashboard, even those outside the locked timerange. This did ..."
-  },
-  {
-    "fecha": "2026-02-12",
     "cve": "CVE-2025-41117",
     "descripcion": "Stack traces in Grafana's Explore Traces view can be rendered as raw HTML, and thus inject malicious JavaScript in the browser. This would require malicious JavaScript to be entered into the stack trace field. Only datasources with the Jaeger HTTP API appear to be affected; ..."
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-1731",
-    "descripcion": "BeyondTrust Remote Support (RS) and certain older versions of Privileged Remote Access (PRA) contain a critical pre-authentication remote code execution vulnerability. By sending specially crafted requests, an unauthenticated remote attacker may be able to execute operating ..."
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2024-12356",
-    "descripcion": "A critical vulnerability has been discovered in Privileged Remote Access (PRA) and Remote Support (RS) products which can allow an unauthenticated attacker to inject commands that are run as a site user."
+    "cve": "CVE-2026-21722",
+    "descripcion": "Public dashboards with annotations enabled did not limit their annotation timerange to the locked timerange of the public dashboard. This means one could read the entire history of annotations visible on the specific dashboard, even those outside the locked timerange. This did ..."
   },
   {
     "fecha": "2026-02-12",
@@ -38,6 +28,16 @@
     "fecha": "2026-02-12",
     "cve": "CVE-2025-64111",
     "descripcion": "Gogs is an open source self-hosted Git service. In version 0.13.3 and prior, due to the insufficient patch for CVE-2024-56731, it's still possible to update files in the .git directory and achieve remote command execution. This issue has been patched in versions 0.13.4 and ..."
+  },
+  {
+    "fecha": "2026-02-12",
+    "cve": "CVE-2025-64175",
+    "descripcion": "Gogs is an open source self-hosted Git service. In version 0.13.3 and prior, Gogs’ 2FA recovery code validation does not scope codes by user, enabling cross-account bypass. If an attacker knows a victim’s username and password, they can use any unused recovery code (e.g., from ..."
+  },
+  {
+    "fecha": "2026-02-12",
+    "cve": "CVE-2026-24135",
+    "descripcion": "Gogs is an open source self-hosted Git service. In version 0.13.3 and prior, a path traversal vulnerability exists in the updateWikiPage function of Gogs. The vulnerability allows an authenticated user with write access to a repository's wiki to delete arbitrary files on the ..."
   },
   {
     "fecha": "2026-02-12",
