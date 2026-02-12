@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-2361",
-    "descripcion": "PostgreSQL Anonymizer contains a vulnerability that allows a user to gain superuser privileges by creating a temporary view based on a function containing malicious code. When the anon.get_tablesample_ratio function is then called, the malicious code is executed with superuser privileges. This privilege elevation can be exploited by users having the CREATE privilege in PostgreSQL 15 and later. The risk is higher with PostgreSQL 14 or with instances upgraded from PostgreSQL 14 or a prior version because the creation permission on the public schema is granted by default. The problem is resolved in PostgreSQL Anonymizer 3.0.1 and further versions 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2024-50618",
+    "descripcion": "A Use of Single-factor Authentication vulnerability in the Authentication component of CIPPlanner CIPAce before 9.17 allows attackers to bypass a protection mechanism. When the system is configured to allow login with internal accounts, an attacker can possibly obtain full authentication if the secret in a single-factor authentication scheme gets compromised. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-2360",
-    "descripcion": "PostgreSQL Anonymizer contains a vulnerability that allows a user to gain superuser privileges by creating a custom operator in the public schema and place malicious code in that operator. This operator will later be executed with superuser privileges when the extension is created. The risk is higher with PostgreSQL 14 or with instances upgraded from PostgreSQL 14 or a prior version. With PostgreSQL 15 and later, the creation permission on the public schema is revoked by default and this exploit can only be achieved if a superuser adds a new schema in her/his own search_path and grants the CREATE privilege on that schema to untrusted users, both actions being clearly discouraged by the PostgreSQL documentation. The problem is resolved in PostgreSQL Anonymizer 3.0.1 and further versions 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2024-26480",
+    "descripcion": "An issue in Statping-ng v.0.91.0 allows an attacker to obtain sensitive information via a crafted request to the admin parameter. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-0229",
-    "descripcion": "A denial-of-service (DoS) vulnerability in the Advanced DNS Security (ADNS) feature of Palo Alto Networks PAN-OS® software enables an unauthenticated attacker to initiate system reboots using a maliciously crafted packet. Repeated attempts to initiate a reboot causes the firewall to enter maintenance mode. Cloud NGFW and Prisma Access® are not impacted by this vulnerability. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:D/RE:M/U:Amber Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-26479",
+    "descripcion": "An issue in Statping-ng v.0.91.0 allows an attacker to obtain sensitive information via a crafted request to the Command execution function. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2026-0228",
-    "descripcion": "An improper certificate validation vulnerability in PAN-OS allows users to connect Terminal Server Agents on Windows to PAN-OS using expired certificates even if the PAN-OS configuration would not normally permit them to do so. 11/02/2026 11/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:L/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Amber Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-26478",
+    "descripcion": "An issue in Statping-ng v.0.91.0 allows an attacker to obtain sensitive information via a crafted request to the /api/users endpoint. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-70085",
-    "descripcion": "An issue was discovered in OpenSatKit 2.2.1. The EventErrStr buffer has a fixed size of 256 bytes. The code uses sprintf to format two filenames (Source1Filename and the string returned by FileUtil_FileStateStr) into this buffer without any length checking and without using bounded format specifiers such as %.*s. If the filename length approaches OS_MAX_PATH_LEN (commonly 64-256 bytes), the combined formatted string together with constant text can exceed 256 bytes, resulting in a stack buffer overflow. Such unsafe sprintf calls are scattered across multiple functions in file.c, including FILE_ConcatenateCmd() and ConcatenateFiles(), all of which fail to validate the output length. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2024-26477",
+    "descripcion": "An issue in Statping-ng v.0.91.0 allows an attacker to obtain sensitive information via a crafted request to the api parameter of the oauth, amazon_sns, export endpoints. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-70084",
-    "descripcion": "Directory traversal vulnerability in OpenSatKit 2.2.1 allows attackers to gain access to sensitive information or delete arbitrary files via crafted value to the FileUtil_GetFileInfo function. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-2319",
+    "descripcion": "Race in DevTools in Google Chrome prior to 145.0.7632.45 allowed a remote attacker who convinced a user to engage in specific UI gestures and install a malicious extension to potentially exploit object corruption via a malicious file. (Chromium security severity: Medium) 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-70083",
-    "descripcion": "An issue was discovered in OpenSatKit 2.2.1. The DirName field in the telecommand is provided by the ground segment and must be treated as untrusted input. The program copies DirName into the local buffer DirWithSep using strcpy. The size of this buffer is OS_MAX_PATH_LEN. If the length of DirName is greater than or equal to OS_MAX_PATH_LEN, a stack buffer overflow occurs, overwriting adjacent stack memory. The path length check (FileUtil_AppendPathSep) is performed after the strcpy operation, meaning the validation occurs too late and cannot prevent the overflow. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-2321",
+    "descripcion": "Use after free in Ozone in Google Chrome prior to 145.0.7632.45 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Medium) 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-70029",
-    "descripcion": "An issue in Sunbird-Ed SunbirdEd-portal v1.13.4 allows attackers to obtain sensitive information. The application disables TLS/SSL certificate validation by setting &#39;rejectUnauthorized&#39;: false in HTTP request options 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-2320",
+    "descripcion": "Inappropriate implementation in File input in Google Chrome prior to 145.0.7632.45 allowed a remote attacker who convinced a user to engage in specific UI gestures to perform UI spoofing via a crafted HTML page. (Chromium security severity: Medium) 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-69874",
-    "descripcion": "nanotar through 0.2.0 has a path traversal vulnerability in parseTar() and parseTarGzip() that allows remote attackers to write arbitrary files outside the intended extraction directory via a crafted tar archive containing path traversal sequence. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-2315",
+    "descripcion": "Inappropriate implementation in WebGPU in Google Chrome prior to 145.0.7632.45 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High) 11/02/2026 11/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-11",
-    "cve": "CVE-2025-65480",
-    "descripcion": "An issue was discovered in Pacom Unison Client 5.13.1. Authenticated users can inject malicious scripts in the Report Templates which are executed when certain script conditions are fulfilled, leading to Remote Code Execution. 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-2318",
+    "descripcion": "Inappropriate implementation in PictureInPicture in Google Chrome prior to 145.0.7632.45 allowed a remote attacker who convinced a user to engage in specific UI gestures to perform UI spoofing via a crafted HTML page. (Chromium security severity: Medium) 11/02/2026 11/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
