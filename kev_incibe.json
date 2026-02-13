@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-26225",
-    "descripcion": "Intego Personal Backup, a macOS backup utility that allows users to create scheduled backups and bootable system clones, contains a local privilege escalation vulnerability. Backup task definitions are stored in a location writable by non-privileged users while being processed with elevated privileges. By crafting a malicious serialized task file, a local attacker can trigger arbitrary file writes to sensitive system locations, leading to privilege escalation to root. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-02-13",
+    "cve": "CVE-2025-9293",
+    "descripcion": "A vulnerability in the certificate validation logic may allow applications to accept untrusted or improperly validated server identities during TLS communication. An attacker in a privileged network position may be able to intercept or modify traffic if they can position themselves within the communication channel. Successful exploitation may compromise confidentiality, integrity, and availability of application data. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-13",
+    "cve": "CVE-2025-9292",
+    "descripcion": "A permissive web security configuration may allow cross-origin restrictions enforced by modern browsers to be bypassed under specific circumstances. Exploitation requires the presence of an existing client-side injection vulnerability and user access to the affected web interface. Successful exploitation could allow unauthorized disclosure of sensitive information. Fixed in updated Omada Cloud Controller service versions deployed automatically by TP‑Link. No user action is required. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.00 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26224",
-    "descripcion": "Intego Log Reporter, a macOS diagnostic utility bundled with Intego security products that collects system and application logs for support analysis, contains a local privilege escalation vulnerability. A root-executed diagnostic script creates and writes files in /tmp without enforcing secure directory handling, introducing a time-of-check to time-of-use (TOCTOU) race condition. A local unprivileged user can exploit a symlink-based race condition to cause arbitrary file writes to privileged system locations, resulting in privilege escalation to root. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-40905",
+    "descripcion": "WWW::OAuth 1.000 and earlier for Perl uses the rand() function as the default source of entropy, which is not cryptographically secure, for cryptographic functions. 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26185",
-    "descripcion": "Directus is a real-time API and App dashboard for managing SQL database content. Before 11.14.1, a timing-based user enumeration vulnerability exists in the password reset functionality. When an invalid reset_url parameter is provided, the response time differs by approximately 500ms between existing and non-existing users, enabling reliable user enumeration. This vulnerability is fixed in 11.14.1. 12/02/2026 12/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2024-21961",
+    "descripcion": "Improper restriction of operations within the bounds of a memory buffer in PCIe® Link could allow an attacker with access to a guest virtual machine to potentially perform a denial of service attack against the host resulting in loss of availability. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26076",
-    "descripcion": "ntpd-rs is a full-featured implementation of the Network Time Protocol. Prior to 1.7.1, an attacker can remotely induce moderate increases (2-4 times above normal) in cpu usage. When having NTS enabled on an ntpd-rs server, an attacker can create malformed NTS packets that take significantly more effort for the server to respond to by requesting a large number of cookies. This can lead to degraded server performance even when a server could otherwise handle the load. This vulnerability is fixed in 1.7.1. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26188",
+    "descripcion": "Solspace Freeform plugin for Craft CMS 5.x is a super flexible form-building tool. An authenticated, low-privilege user (able to create/edit forms) can inject arbitrary HTML/JS into the Craft Control Panel (CP) builder and integrations views. User-controlled form labels and integration metadata are rendered with dangerouslySetInnerHTML without sanitization, leading to stored XSS that executes when any admin views the builder/integration screens. This vulnerability is fixed in 5.14.7. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26075",
-    "descripcion": "FastGPT is an AI Agent building platform. Due to the fact that FastGPT&#39;s web page acquisition nodes, HTTP nodes, etc. need to initiate data acquisition requests from the server, there are certain security issues. In addition to implementing internal network isolation in the deployment environment, this optimization has added stricter internal network address detection. This vulnerability is fixed in 4.14.7. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-70092",
+    "descripcion": "A cross-site scripting (XSS) vulnerability in the Item Kits function of OpenSourcePOS v3.4.1 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the Item Name parameter. 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26069",
-    "descripcion": "Scraparr is a Prometheus Exporter for various components of the *arr Suite. From 3.0.0-beta to before 3.0.2, when the Readarr integration was enabled, the exporter exposed the configured Readarr API key as the alias metric label value. Users were affected only if all of the following conditions are met, Readarr scraping feature was enabled and no alias configured, the exporter’s /metrics endpoint was accessible to external or unauthorized users, and the Readarr instance is externally accessible. If the /metrics endpoint was publicly accessible, the Readarr API key could have been disclosed via exported metrics data. This vulnerability is fixed in 3.0.2. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.10 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2020-37167",
+    "descripcion": "ClamAV ClamBC bytecode interpreter contains a vulnerability in function name processing that allows attackers to manipulate bytecode function names. Attackers can exploit the weak input validation in function name encoding to potentially execute malicious bytecode or cause unexpected behavior in the ClamAV engine. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26068",
-    "descripcion": "emp3r0r is a stealth-focused C2 designed by Linux users for Linux environments. Prior to 3.21.1, untrusted agent metadata (Transport, Hostname) is accepted during check-in and later interpolated into tmux shell command strings executed via /bin/sh -c. This enables command injection and remote code execution on the operator host. This vulnerability is fixed in 3.21.1. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2019-25342",
+    "descripcion": "Centova Cast 3.2.12 contains a denial of service vulnerability that allows attackers to overwhelm the system by repeatedly calling the database export API endpoint. Attackers can trigger 100% CPU load by sending multiple concurrent requests to the /api.php endpoint with crafted parameters. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26056",
-    "descripcion": "Yoke is a Helm-inspired infrastructure-as-code (IaC) package deployer. In 0.19.0 and earlier, a vulnerability exists in the Air Traffic Controller (ATC) component of Yoke. It allows users with CR create/update permissions to execute arbitrary WASM code in the ATC controller context by injecting a malicious URL through the overrides.yoke.cd/flight annotation. The ATC controller downloads and executes the WASM module without proper URL validation, enabling attackers to create arbitrary Kubernetes resources or potentially escalate privileges to cluster-admin level. 12/02/2026 12/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2019-25341",
+    "descripcion": "iNetTools for iOS 8.20 contains a denial of service vulnerability in the Whois feature that allows attackers to crash the application by manipulating input. Attackers can paste a specially crafted 98-character buffer into the Domain Name field to trigger an application crash. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 6.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-12",
-    "cve": "CVE-2026-26055",
-    "descripcion": "Yoke is a Helm-inspired infrastructure-as-code (IaC) package deployer. In 0.19.0 and earlier, a vulnerability exists in the Air Traffic Controller (ATC) component of Yoke. The ATC webhook endpoints lack proper authentication mechanisms, allowing any pod within the cluster network to directly send AdmissionReview requests to the webhook, bypassing Kubernetes API Server authentication. This enables attackers to trigger WASM module execution in the ATC controller context without proper authorization. 12/02/2026 12/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-25828",
-    "descripcion": "grub-btrfs through 2026-01-31 (on Arch Linux and derivative distributions) allows initramfs OS command injection because it does not sanitize the $root parameter to resolve_device(). 12/02/2026 12/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2019-25340",
+    "descripcion": "SpotAuditor 5.3.2 contains a denial of service vulnerability in its Base64 decryption feature that allows attackers to crash the application by supplying an oversized buffer. Attackers can generate a malformed input file with 2000 repeated characters to trigger an application crash when pasted into the Base64 Encrypted Password field. 13/02/2026 13/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 6.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
