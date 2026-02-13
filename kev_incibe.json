@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-02-12",
+    "cve": "CVE-2026-26020",
+    "descripcion": "AutoGPT is a platform that allows users to create, deploy, and manage continuous artificial intelligence agents that automate complex workflows. Prior to 0.6.48, an authenticated user could achieve Remote Code Execution (RCE) on the backend server by embedding a disabled block inside a graph. The BlockInstallationBlock — a development tool capable of writing and importing arbitrary Python code — was marked disabled=True, but graph validation did not enforce this flag. This allowed any authenticated user to bypass the restriction by including the block as a node in a graph, rather than calling the block&#39;s execution endpoint directly (which did enforce the flag). This vulnerability is fixed in 0.6.48. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-12",
+    "cve": "CVE-2026-26011",
+    "descripcion": "navigation2 is a ROS 2 Navigation Framework and System. In 1.3.11 and earlier, a critical heap out-of-bounds write vulnerability exists in Nav2 AMCL&#39;s particle filter clustering logic. By publishing a single crafted geometry_msgs/PoseWithCovarianceStamped message with extreme covariance values to the /initialpose topic, an unauthenticated attacker on the same ROS 2 DDS domain can trigger a negative index write (set->clusters[-1]) into heap memory preceding the allocated buffer. In Release builds, the sole boundary check (assert) is compiled out, leaving zero runtime protection. This primitive allows controlled corruption of the heap chunk metadata(at least the size of the heap chunk where the set->clusters is in is controllable by the attacker), potentially leading to further exploitation. At minimum, it provides a reliable single-packet denial of service that kills localization and halts all navigation. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-12",
+    "cve": "CVE-2026-26005",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to 5.5.3 - #45, in Clip Bucket V5, The Remote Play allows creating video entries that reference external video URLs without uploading the video files to the server. However, by specifying an internal network host in the video URL, an SSRF can be triggered, causing GET requests to be sent to internal servers. An attacker can exploit this to scan the internal network. Even a regular (non-privileged) user can carry out the attack. 12/02/2026 12/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-12",
+    "cve": "CVE-2026-26000",
+    "descripcion": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Prior to 17.9.0, 17.4.6, and 16.10.13, it&#39;s possible using comments to inject CSS that would transform the full wiki in a link area leading to a malicious page. This vulnerability is fixed in 17.9.0, 17.4.6, and 16.10.13. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-12",
+    "cve": "CVE-2026-25996",
+    "descripcion": "Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF. String fields from eBPF events in columns output mode are rendered to the terminal without any sanitization of control characters or ANSI escape sequences. Therefore, a maliciously forged – partially or completely – event payload, coming from an observed container, might inject the escape sequences into the terminal of ig operators, with various effects. The columns output mode is the default when running ig run interactively. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-12",
+    "cve": "CVE-2026-0619",
+    "descripcion": "A reachable infinite loop via an integer wraparound is present in Silicon Labs&#39; Matter SDK which allows an attacker to trigger a denial of service. A hard reset is required to recover the device. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-12",
     "cve": "CVE-2026-25949",
     "descripcion": "Traefik is an HTTP reverse proxy and load balancer. Prior to 3.6.8, there is a potential vulnerability in Traefik managing STARTTLS requests. An unauthenticated client can bypass Traefik entrypoint respondingTimeouts.readTimeout by sending the 8-byte Postgres SSLRequest (STARTTLS) prelude and then stalling, causing connections to remain open indefinitely, leading to a denial of service. This vulnerability is fixed in 3.6.8. 12/02/2026 12/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-02-12",
     "cve": "CVE-2026-25768",
     "descripcion": "LavinMQ is a high-performance message queue & streaming server. Before 2.6.6, an authenticated user could access metadata in the broker they should not have access to. This vulnerability is fixed in 2.6.6. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-25767",
-    "descripcion": "LavinMQ is a high-performance message queue & streaming server. Before 2.6.8, an authenticated user, with the “Policymaker” tag, could create shovels bypassing access controls. an authenticated user with the &#34;Policymaker&#34; management tag could exploit it to read messages from vhosts they are not authorized to access or publish messages to vhosts they are not authorized to access. This vulnerability is fixed in 2.6.8. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-25748",
-    "descripcion": "authentik is an open-source identity provider. Prior to 2025.10.4 and 2025.12.4, with a malformed cookie it was possible to bypass authentication when using forward authentication in the authentik Proxy Provider when used in conjunction with Traefik or Caddy as reverse proxy. When a malicious cookie was used, none of the authentik-specific X-Authentik-* headers were set which depending on application can grant access to an attacker. authentik 2025.10.4 and 2025.12.4 fix this issue. 12/02/2026 12/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-25227",
-    "descripcion": "authentik is an open-source identity provider. From 2021.3.1 to before 2025.8.6, 2025.10.4, and 2025.12.4, when using delegated permissions, a User that has the permission Can view * Property Mapping or Can view Expression Policy is able to execute arbitrary code within the authentik server container through the test endpoint, which is intended to preview how a property mapping/policy works. authentik 2025.8.6, 2025.10.4, and 2025.12.4 fix this issue. 12/02/2026 12/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-24895",
-    "descripcion": "FrankenPHP is a modern application server for PHP. Prior to 1.11.2, FrankenPHP’s CGI path splitting logic improperly handles Unicode characters during case conversion. The logic computes the split index (for finding .php) on a lowercased copy of the request path but applies that byte index to the original path. Because strings.ToLower() in Go can increase the byte length of certain UTF-8 characters (e.g., Ⱥ expands when lowercased), the computed index may not align with the correct position in the original string. This results in an incorrect SCRIPT_NAME and SCRIPT_FILENAME, potentially causing FrankenPHP to execute a file other than the one intended by the URI. This vulnerability is fixed in 1.11.2. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-24894",
-    "descripcion": "FrankenPHP is a modern application server for PHP. Prior to 1.11.2, when running FrankenPHP in worker mode, the $_SESSION superglobal is not correctly reset between requests. This allows a subsequent request processed by the same worker to access the $_SESSION data of the previous request (potentially belonging to a different user) before session_start() is called. This vulnerability is fixed in 1.11.2. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-12",
-    "cve": "CVE-2026-24044",
-    "descripcion": "Element Server Suite Community Edition (ESS Community) deploys a Matrix stack using the provided Helm charts and Kubernetes distribution. The ESS Community Helm Chart secrets initialization hook (using matrix-tools container before 0.5.7) is using an insecure Matrix server key generation method, allowing network attackers to potentially recreate the same key pair, allowing them to impersonate the victim server. The secret is generated by the secrets initialization hook, in the ESS Community Helm Chart values, if both initSecrets.enabled is not set to false and synapse.signingKey is not defined. Given a server key in Matrix authenticates both requests originating from and events constructed on a given server, this potentially impacts confidentiality, integrity and availability of rooms which have a vulnerable server present as a member. The confidentiality of past conversations in end-to-end encrypted rooms is not impacted. The key generation issue was fixed in matrix-tools 0.5.7, released as part of ESS Community Helm Chart 25.12.1. 12/02/2026 12/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
