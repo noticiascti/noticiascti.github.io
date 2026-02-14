@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-02-14",
+    "cve": "CVE-2026-2312",
+    "descripcion": "The Media Library Folders plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 8.3.6 via the delete_maxgalleria_media() and maxgalleria_rename_image() functions due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Author-level access and above, to delete or rename attachments owned by other users (including administrators). The rename flow also deletes all postmeta for the target attachment, causing data loss. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-14",
     "cve": "CVE-2026-1512",
     "descripcion": "The Essential Addons for Elementor – Popular Elementor Templates & Widgets plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s Info Box widget in all versions up to, and including, 6.5.9 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-02-14",
     "cve": "CVE-2026-2022",
     "descripcion": "The Smart Forms plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;rednao_smart_forms_get_campaigns&#39; AJAX action in all versions up to, and including, 2.6.99. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve donation campaign data including campaign IDs and names. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-14",
-    "cve": "CVE-2026-1988",
-    "descripcion": "The Flexi Product Slider and Grid for WooCommerce plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.0.5 via the `flexipsg_carousel` shortcode. This is due to the `theme` parameter being directly concatenated into a file path without proper sanitization or validation, allowing directory traversal. This makes it possible for authenticated attackers, with Contributor-level access and above, to include and execute arbitrary PHP files on the server via the `theme` parameter granted they can create posts with shortcodes. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
