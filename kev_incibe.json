@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2026-24853",
-    "descripcion": "Caido is a web security auditing toolkit. Prior to 0.55.0, Caido blocks non whitelisted domains to reach out through the 8080 port, and shows Host/IP is not allowed to connect to Caido on all endpoints. But this is bypassable by injecting a X-Forwarded-Host: 127.0.0.1:8080 header. This vulnerability is fixed in 0.55.0. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-2469",
+    "descripcion": "Versions of the package directorytree/imapengine before 1.22.3 are vulnerable to Improper Neutralization of Special Elements in Output Used by a Downstream Component (&#39;Injection&#39;) via the id() function in ImapConnection.php due to improperly escaping user input before including it in IMAP ID commands. This allows attackers to read or delete victim&#39;s emails, terminate the victim&#39;s session or execute any valid IMAP command on victim&#39;s mailbox by including quote characters &#34; or CRLF sequences \\r\\n in the input. 14/02/2026 14/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2026-26273",
-    "descripcion": "Known is a social publishing platform. Prior to 1.6.3, a Critical Broken Authentication vulnerability exists in Known 1.6.2 and earlier. The application leaks the password reset token within a hidden HTML input field on the password reset page. This allows any unauthenticated attacker to retrieve the reset token for any user by simply querying the user&#39;s email, leading to full Account Takeover (ATO) without requiring access to the victim&#39;s email inbox. This vulnerability is fixed in 1.6.3. 13/02/2026 13/02/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-2144",
+    "descripcion": "The Magic Login Mail or QR Code plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.05. This is due to the plugin storing the magic login QR code image with a predictable, static filename (QR_Code.png) in the publicly accessible WordPress uploads directory during the email sending process. The file is only deleted after wp_mail() completes, creating an exploitable race condition window. This makes it possible for unauthenticated attackers to trigger a login link request for any user, including administrators, and then exploit the race condition between QR code file creation and deletion to obtain the login URL encoded in the QR code, thereby gaining unauthorized access to the targeted user&#39;s account. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2026-1844",
-    "descripcion": "The PixelYourSite PRO plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;pysTrafficSource&#39; parameter and the &#39;pys_landing_page&#39; parameter in all versions up to, and including, 12.4.0.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/02/2026 13/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-2027",
+    "descripcion": "The AMP Enhancer – Compatibility Layer for Official AMP Plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the AMP Custom CSS setting in all versions up to, and including, 1.0.49 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2026-1841",
-    "descripcion": "The PixelYourSite – Your smart PIXEL (TAG) & API Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;pysTrafficSource&#39; parameter and the &#39;pys_landing_page&#39; parameter in all versions up to, and including, 11.2.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/02/2026 13/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-1983",
+    "descripcion": "The SEATT: Simple Event Attendance plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.5.0. This is due to missing nonce validation on the event deletion functionality. This makes it possible for unauthenticated attackers to delete arbitrary events via a forged request granted they can trick an administrator into performing an action such as clicking on a link. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2025-70957",
-    "descripcion": "A Denial of Service (DoS) vulnerability was discovered in the TON Lite Server before v2024.09. The vulnerability arises from the handling of external arguments passed to locally executed &#34;get methods.&#34; An attacker can inject a constructed Continuation object (an internal TVM type) that is normally restricted within the VM. When the TVM executes this malicious continuation, it consumes excessive CPU resources while accruing disproportionately low virtual gas costs. This &#34;free&#34; computation allows an attacker to monopolize the Lite Server&#39;s processing power, significantly reducing its throughput and causing a denial of service for legitimate users acting through the gateway. 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-1912",
+    "descripcion": "The Citations tools plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;code&#39; parameter in the &#39;ctdoi&#39; shortcode in all versions up to, and including, 0.3.2 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2025-70956",
-    "descripcion": "A State Pollution vulnerability was discovered in the TON Virtual Machine (TVM) before v2025.04. The issue exists in the RUNVM instruction logic (VmState::run_child_vm), which is responsible for initializing child virtual machines. The operation moves critical resources (specifically libraries and log) from the parent state to a new child state in a non-atomic manner. If an Out-of-Gas (OOG) exception occurs after resources are moved but before the state transition is finalized, the parent VM retains a corrupted state where these resources are emptied/invalid. Because RUNVM supports gas isolation, the parent VM continues execution with this corrupted state, leading to unexpected behavior or denial of service within the contract&#39;s context. 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-1904",
+    "descripcion": "The Simple Wp colorfull Accordion plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;title&#39; parameter in the &#39;accordion&#39; shortcode in all versions up to, and including, 1.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2025-70955",
-    "descripcion": "A Stack Overflow vulnerability was discovered in the TON Virtual Machine (TVM) before v2024.10. The vulnerability stems from the improper handling of vmstate and continuation jump instructions, which allow for continuous dynamic tail calls. An attacker can exploit this by crafting a smart contract with deeply nested jump logic. Even within permissible gas limits, this nested execution exhausts the host process&#39;s stack space, causing the validator node to crash. This results in a Denial of Service (DoS) for the TON blockchain network. 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-1754",
+    "descripcion": "The personal-authors-category plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the URL path in all versions up to, and including, 0.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2025-70954",
-    "descripcion": "A Null Pointer Dereference vulnerability exists in the TON Virtual Machine (TVM) within the TON Blockchain before v2025.06. The issue is located in the execution logic of the INMSGPARAM instruction, where the program fails to validate if a specific pointer is null before accessing it. By sending a malicious transaction or smart contract, an attacker can trigger this null pointer dereference, causing the validator node process to crash (segmentation fault). This results in a Denial of Service (DoS) affecting the availability of the entire blockchain network. 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-1164",
+    "descripcion": "The Easy Voice Mail plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘message’ parameter in all versions up to, and including, 1.2.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2025-70866",
-    "descripcion": "LavaLite CMS 10.1.0 is vulnerable to Incorrect Access Control. An authenticated user with low-level privileges (User role) can directly access the admin backend by logging in through /admin/login. The vulnerability exists because the admin and user authentication guards share the same user provider without role-based access control verification. 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-0692",
+    "descripcion": "The BlueSnap Payment Gateway for WooCommerce plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 3.3.0. This is due to the plugin relying on WooCommerce&#39;s `WC_Geolocation::get_ip_address()` function to validate IPN requests, which trusts user-controllable headers like X-Real-IP and X-Forwarded-For to determine the client IP address. This makes it possible for unauthenticated attackers to bypass IP allowlist restrictions by spoofing a whitelisted BlueSnap IP address and send forged IPN (Instant Payment Notification) data to manipulate order statuses (mark orders as paid, failed, refunded, or on-hold) without proper authorization. 14/02/2026 14/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-02-13",
-    "cve": "CVE-2025-69633",
-    "descripcion": "A SQL Injection vulnerability in the Advanced Popup Creator (advancedpopupcreator) module for PrestaShop 1.1.26 through 1.2.6 (Fixed in version 1.2.7) allows remote unauthenticated attackers to execute arbitrary SQL queries via the fromController parameter in the popup controller. The parameter is passed unsanitized to SQL queries in classes/AdvancedPopup.php (getPopups() and updateVisits() functions). 13/02/2026 13/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-02-14",
+    "cve": "CVE-2026-26303",
+    "descripcion": "Rejected reason: Not used 14/02/2026 14/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
