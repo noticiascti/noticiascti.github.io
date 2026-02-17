@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-02-17",
+    "cve": "CVE-2026-25903",
+    "descripcion": "Apache NiFi 1.1.0 through 2.7.2 are missing authorization when updating configuration properties on extension components that have specific Required Permissions based on the Restricted annotation. The Restricted annotation indicates additional privileges required to add the annotated component to the flow configuration, but framework authorization did not check restricted status when updating a component previously added. The missing authorization requires a more privileged user to add a restricted component to the flow configuration, but permits a less privileged user to make property configuration changes. Apache NiFi installations that do not implement different levels of authorization for Restricted components are not subject to this vulnerability because the framework enforces write permissions as the security boundary. Upgrading to Apache NiFi 2.8.0 is the recommended mitigation. 17/02/2026 17/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:I/V:C/RE:M/U:Amber Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-17",
+    "cve": "CVE-2026-1216",
+    "descripcion": "The RSS Aggregator plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;template&#39; parameter in all versions up to, and including, 5.0.10 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 17/02/2026 17/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-17",
     "cve": "CVE-2026-0829",
     "descripcion": "The Frontend File Manager Plugin WordPress plugin through 23.5 allows unauthenticated users to send emails through the site without any security checks. This lets attackers use the WordPress site as an open relay for spam or phishing emails to anyone. Attackers can also guess file IDs to access and share uploaded files without permission, exposing sensitive information. 17/02/2026 17/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-02-16",
     "cve": "CVE-2025-15578",
     "descripcion": "Maypole versions from 2.10 through 2.13 for Perl generates session ids insecurely. The session id is seeded with the system time (which is available from HTTP response headers), a call to the built-in rand() function, and the PID. 16/02/2026 16/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-16",
-    "cve": "CVE-2026-2474",
-    "descripcion": "Crypt::URandom versions from 0.41 before 0.55 for Perl is vulnerable to a heap buffer overflow in the XS function crypt_urandom_getrandom(). The function does not validate that the length parameter is non-negative. If a negative value (e.g. -1) is supplied, the expression length + 1u causes an integer wraparound, resulting in a zero-byte allocation. The subsequent call to getrandom(data, length, GRND_NONBLOCK) passes the original negative value, which is implicitly converted to a large unsigned value (typically SIZE_MAX). This can result in writes beyond the allocated buffer, leading to heap memory corruption and application crash (denial of service). In common usage, the length argument is typically hardcoded by the caller, which reduces the likelihood of attacker-controlled exploitation. Applications that pass untrusted input to this parameter may be affected. 16/02/2026 16/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-16",
-    "cve": "CVE-2026-2001",
-    "descripcion": "The WowRevenue plugin for WordPress is vulnerable to unauthorized plugin installation due to a missing capability check in the &#39;Notice::install_activate_plugin&#39; function in all versions up to, and including, 2.1.3. This makes it possible for authenticated attackers, with subscriber-level access and above, to install arbitrary plugins on the affected site&#39;s server which may make remote code execution possible. 16/02/2026 16/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
