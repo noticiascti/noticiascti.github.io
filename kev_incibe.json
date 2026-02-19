@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-02-18",
+    "cve": "CVE-2026-2657",
+    "descripcion": "A vulnerability has been found in wren-lang wren up to 0.4.0. This impacts the function printError of the file src/vm/wren_compiler.c of the component Error Message Handler. Such manipulation leads to stack-based buffer overflow. An attack has to be approached locally. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet. 18/02/2026 18/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-02-18",
+    "cve": "CVE-2026-2507",
+    "descripcion": "When BIG-IP AFM or BIG-IP DDoS is provisioned, undisclosed traffic can cause TMM to terminate. Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated. 18/02/2026 18/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-18",
+    "cve": "CVE-2026-2230",
+    "descripcion": "The Booking Calendar plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 10.14.14 via the handle_ajax_save function due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Subscriber-level access and above, and booking permissions granted by an Administrator, to modify other users&#39; plugin settings, such as booking calendar display options, which can disrupt the booking calendar functionality for the targeted user. 18/02/2026 18/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-18",
+    "cve": "CVE-2025-13965",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2025-12500. Reason: This candidate is a reservation duplicate of CVE-2025-12500. Notes: All CVE users should reference CVE-2025-12500 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-18",
+    "cve": "CVE-2025-13933",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2025-12500. Reason: This candidate is a reservation duplicate of CVE-2025-12500. Notes: All CVE users should reference CVE-2025-12500 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-18",
+    "cve": "CVE-2025-13602",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-18",
     "cve": "CVE-2026-23230",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: smb: client: split cached_fid bitfields to avoid shared-byte RMW races is_open, has_lease and on_list are stored in the same bitfield byte in struct cached_fid but are updated in different code paths that may run concurrently. Bitfield assignments generate byte read–modify–write operations (e.g. `orb $mask, addr` on x86_64), so updating one flag can restore stale values of the others. A possible interleaving is: CPU1: load old byte (has_lease=1, on_list=1) CPU2: clear both flags (store 0) CPU1: RMW store (old | IS_OPEN) -> reintroduces cleared bits To avoid this class of races, convert these flags to separate bool fields. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-02-18",
     "cve": "CVE-2026-23227",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/exynos: vidi: use ctx->lock to protect struct vidi_context member variables related to memory alloc/free Exynos Virtual Display driver performs memory alloc/free operations without lock protection, which easily causes concurrency problem. For example, use-after-free can occur in race scenario like this: ``` CPU0 CPU1 CPU2 ---- ---- ---- vidi_connection_ioctl() if (vidi->connection) // true drm_edid = drm_edid_alloc(); // alloc drm_edid ... ctx->raw_edid = drm_edid; ... drm_mode_getconnector() drm_helper_probe_single_connector_modes() vidi_get_modes() if (ctx->raw_edid) // true drm_edid_dup(ctx->raw_edid); if (!drm_edid) // false ... vidi_connection_ioctl() if (vidi->connection) // false drm_edid_free(ctx->raw_edid); // free drm_edid ... drm_edid_alloc(drm_edid->edid) kmemdup(edid); // UAF!! ... ``` To prevent these vulns, at least in vidi_context, member variables related to memory alloc/free should be protected with ctx->lock. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-18",
-    "cve": "CVE-2026-23226",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ksmbd: add chann_lock to protect ksmbd_chann_list xarray ksmbd_chann_list xarray lacks synchronization, allowing use-after-free in multi-channel sessions (between lookup_chann_list() and ksmbd_chann_del). Adds rw_semaphore chann_lock to struct ksmbd_session and protects all xa_load/xa_store/xa_erase accesses. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-18",
-    "cve": "CVE-2026-23225",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: sched/mmcid: Don&#39;t assume CID is CPU owned on mode switch Shinichiro reported a KASAN UAF, which is actually an out of bounds access in the MMCID management code. CPU0 CPU1 T1 runs in userspace T0: fork(T4) -> Switch to per CPU CID mode fixup() set MM_CID_TRANSIT on T1/CPU1 T4 exit() T3 exit() T2 exit() T1 exit() switch to per task mode ---> Out of bounds access. As T1 has not scheduled after T0 set the TRANSIT bit, it exits with the TRANSIT bit set. sched_mm_cid_remove_user() clears the TRANSIT bit in the task and drops the CID, but it does not touch the per CPU storage. That&#39;s functionally correct because a CID is only owned by the CPU when the ONCPU bit is set, which is mutually exclusive with the TRANSIT flag. Now sched_mm_cid_exit() assumes that the CID is CPU owned because the prior mode was per CPU. It invokes mm_drop_cid_on_cpu() which clears the not set ONCPU bit and then invokes clear_bit() with an insanely large bit number because TRANSIT is set (bit 29). Prevent that by actually validating that the CID is CPU owned in mm_drop_cid_on_cpu(). 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-18",
-    "cve": "CVE-2026-23224",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: erofs: fix UAF issue for file-backed mounts w/ directio option [ 9.269940][ T3222] Call trace: [ 9.269948][ T3222] ext4_file_read_iter+0xac/0x108 [ 9.269979][ T3222] vfs_iocb_iter_read+0xac/0x198 [ 9.269993][ T3222] erofs_fileio_rq_submit+0x12c/0x180 [ 9.270008][ T3222] erofs_fileio_submit_bio+0x14/0x24 [ 9.270030][ T3222] z_erofs_runqueue+0x834/0x8ac [ 9.270054][ T3222] z_erofs_read_folio+0x120/0x220 [ 9.270083][ T3222] filemap_read_folio+0x60/0x120 [ 9.270102][ T3222] filemap_fault+0xcac/0x1060 [ 9.270119][ T3222] do_pte_missing+0x2d8/0x1554 [ 9.270131][ T3222] handle_mm_fault+0x5ec/0x70c [ 9.270142][ T3222] do_page_fault+0x178/0x88c [ 9.270167][ T3222] do_translation_fault+0x38/0x54 [ 9.270183][ T3222] do_mem_abort+0x54/0xac [ 9.270208][ T3222] el0_da+0x44/0x7c [ 9.270227][ T3222] el0t_64_sync_handler+0x5c/0xf4 [ 9.270253][ T3222] el0t_64_sync+0x1bc/0x1c0 EROFS may encounter above panic when enabling file-backed mount w/ directio mount option, the root cause is it may suffer UAF in below race condition: - z_erofs_read_folio wq s_dio_done_wq - z_erofs_runqueue - erofs_fileio_submit_bio - erofs_fileio_rq_submit - vfs_iocb_iter_read - ext4_file_read_iter - ext4_dio_read_iter - iomap_dio_rw : bio was submitted and return -EIOCBQUEUED - dio_aio_complete_work - dio_complete - dio->iocb->ki_complete (erofs_fileio_ki_complete()) - kfree(rq) : it frees iocb, iocb.ki_filp can be UAF in file_accessed(). - file_accessed : access NULL file point Introduce a reference count in struct erofs_fileio_rq, and initialize it as two, both erofs_fileio_ki_complete() and erofs_fileio_rq_submit() will decrease reference count, the last one decreasing the reference count to zero will free rq. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-18",
-    "cve": "CVE-2026-23223",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfs: fix UAF in xchk_btree_check_block_owner We cannot dereference bs->cur when trying to determine if bs->cur aliases bs->sc->sa.{bno,rmap}_cur after the latter has been freed. Fix this by sampling before type before any freeing could happen. The correct temporal ordering was broken when we removed xfs_btnum_t. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-18",
-    "cve": "CVE-2026-23222",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: omap - Allocate OMAP_CRYPTO_FORCE_COPY scatterlists correctly The existing allocation of scatterlists in omap_crypto_copy_sg_lists() was allocating an array of scatterlist pointers, not scatterlist objects, resulting in a 4x too small allocation. Use sizeof(*new_sg) to get the correct object size. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-18",
-    "cve": "CVE-2026-23221",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: bus: fsl-mc: fix use-after-free in driver_override_show() The driver_override_show() function reads the driver_override string without holding the device_lock. However, driver_override_store() uses driver_set_override(), which modifies and frees the string while holding the device_lock. This can result in a concurrent use-after-free if the string is freed by the store function while being read by the show function. Fix this by holding the device_lock around the read operation. 18/02/2026 18/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
