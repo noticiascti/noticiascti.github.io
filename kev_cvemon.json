@@ -31,6 +31,16 @@
   },
   {
     "fecha": "2026-02-20",
+    "cve": "CVE-2025-29824",
+    "descripcion": "Use after free in Windows Common Log File System Driver allows an authorized attacker to elevate privileges locally."
+  },
+  {
+    "fecha": "2026-02-20",
+    "cve": "CVE-2023-52271",
+    "descripcion": "The wsftprm.sys kernel driver 2.0.0.0 in Topaz Antifraud allows low-privileged attackers to kill any (Protected Process Light) process via an IOCTL (which will be named at a later time)."
+  },
+  {
+    "fecha": "2026-02-20",
     "cve": "CVE-2025-13176",
     "descripcion": "Planting a custom configuration file in ESET Inspect Connector allow load a malicious DLL."
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-02-20",
     "cve": "CVE-2024-7694",
     "descripcion": "ThreatSonar Anti-Ransomware from TeamT5 does not properly validate the content of uploaded files. Remote attackers with administrator privileges on the product platform can upload malicious files, which can be used to execute arbitrary system command on the server."
-  },
-  {
-    "fecha": "2026-02-20",
-    "cve": "CVE-2025-32355",
-    "descripcion": "Rocket TRUfusion Enterprise through 7.10.4.0 uses a reverse proxy to handle incoming connections. However, the proxy is misconfigured in a way that allows specifying absolute URLs in the HTTP request line, causing the proxy to load the given resource."
-  },
-  {
-    "fecha": "2026-02-20",
-    "cve": "CVE-2025-59793",
-    "descripcion": "Rocket TRUfusion Enterprise through 7.10.5 exposes the endpoint at /axis2/services/WsPortalV6UpDwAxis2Impl to authenticated users to be able to upload files. However, the application doesn't properly sanitize the jobDirectory parameter, which allows path traversal sequences to ..."
   }
 ]
