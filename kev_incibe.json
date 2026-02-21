@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-02-21",
+    "cve": "CVE-2026-2867",
+    "descripcion": "A vulnerability was determined in itsourcecode Vehicle Management System 1.0. Affected is an unknown function of the file /billaction.php. Executing a manipulation of the argument ID can lead to sql injection. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. 21/02/2026 21/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-21",
+    "cve": "CVE-2026-27579",
+    "descripcion": "CollabPlatform is a full-stack, real-time doc collaboration platform. In all versions of CollabPlatform, the Appwrite project used by the application is misconfigured to allow arbitrary origins in CORS responses while also permitting credentialed requests. An attacker-controlled domain can issue authenticated cross-origin requests and read sensitive user account information, including email address, account identifiers, and MFA status. The issue did not have a fix at the time of publication. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-21",
+    "cve": "CVE-2026-27574",
+    "descripcion": "OneUptime is a solution for monitoring and managing online services. In versions 9.5.13 and below, custom JavaScript monitor feature uses Node.js&#39;s node:vm module (explicitly documented as not a security mechanism) to execute user-supplied code, allowing trivial sandbox escape via a well-known one-liner that grants full access to the underlying process. Because the probe runs with host networking and holds all cluster credentials (ONEUPTIME_SECRET, DATABASE_PASSWORD, REDIS_PASSWORD, CLICKHOUSE_PASSWORD) in its environment variables, and monitor creation is available to the lowest role (ProjectMember) with open registration enabled by default, any anonymous user can achieve full cluster compromise in about 30 seconds. This issue has been fixed in version 10.0.5. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-02-21",
+    "cve": "CVE-2026-27492",
+    "descripcion": "Lettermint Node.js SDK is the official Node.js SDK for Lettermint. In versions 1.5.0 and below, email properties (such as to, subject, html, text, and attachments) are not reset between sends when a single client instance is reused across multiple .send() calls. This can cause properties from a previous send to leak into a subsequent one, potentially delivering content or recipient addresses to unintended parties. Applications sending emails to different recipients in sequence — such as transactional flows like password resets or notifications — are affected. This issue has been fixed in version 1.5.1. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-21",
+    "cve": "CVE-2026-1787",
+    "descripcion": "The LearnPress Export Import – WordPress extension for LearnPress plugin for WordPress is vulnerable to unauthorized loss of data due to a missing capability check on the &#39;delete_migrated_data&#39; function in all versions up to, and including, 4.1.0. This makes it possible for unauthenticated attackers to delete course that have been migrated from Tutor LMS. The Tutor LMS plugin must be installed and activated in order to exploit the vulnerability. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-21",
     "cve": "CVE-2026-27576",
     "descripcion": "OpenClaw is a personal AI assistant. In versions 2026.2.17 and below, the ACP bridge accepts very large prompt text blocks and can assemble oversized prompt payloads before forwarding them to chat.send. Because ACP runs over local stdio, this mainly affects local ACP clients (for example IDE integrations) that send unusually large inputs. This issue has been fixed in version 2026.2.19. 21/02/2026 21/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-02-21",
     "cve": "CVE-2026-27485",
     "descripcion": "OpenClaw is a personal AI assistant. In versions 2026.2.17 and below, skills/skill-creator/scripts/package_skill.py (a local helper script used when authors package skills) previously followed symlinks while building .skill archives. If an author runs this script on a crafted local skill directory containing symlinks to files outside the skill root, the resulting archive can include unintended file contents. If exploited, this vulnerability can lead to potential unintentional disclosure of local files from the packaging machine into a generated .skill artifact, but requires local execution of the packaging script on attacker-controlled skill contents. This issue has been fixed in version 2026.2.18. 21/02/2026 21/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-21",
-    "cve": "CVE-2026-27484",
-    "descripcion": "OpenClaw is a personal AI assistant. In versions 2026.2.17 and below, the Discord moderation action handling (timeout, kick, ban) uses sender identity from request parameters in tool-driven flows, instead of trusted runtime sender context. In setups where Discord moderation actions are enabled and the bot has the necessary guild permissions, a non-admin user can request moderation actions by spoofing sender identity fields. This issue has been fixed in version 2026.2.18. 21/02/2026 21/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-21",
-    "cve": "CVE-2026-27482",
-    "descripcion": "Ray is an AI compute engine. In versions 2.53.0 and below, thedashboard HTTP server blocks browser-origin POST/PUT but does not cover DELETE, and key DELETE endpoints are unauthenticated by default. If the dashboard/agent is reachable (e.g., --dashboard-host=0.0.0.0), a web page via DNS rebinding or same-network access can issue DELETE requests that shut down Serve or delete jobs without user interaction. This is a drive-by availability impact. The fix for this vulnerability is to update to Ray 2.54.0 or higher. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-21",
-    "cve": "CVE-2026-27480",
-    "descripcion": "Static Web Server (SWS) is a production-ready web server suitable for static web files or assets. In versions 2.1.0 through 2.40.1, a timing-based username enumeration vulnerability in Basic Authentication allows attackers to identify valid users by exploiting early responses for invalid usernames, enabling targeted brute-force or credential-stuffing attacks. SWS checks whether a username exists before verifying the password, causing valid usernames to follow a slower code path (e.g., bcrypt hashing) while invalid usernames receive an immediate 401 response. This timing discrepancy allows attackers to enumerate valid accounts by measuring response-time differences. This issue has been fixed in version 2.41.0. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-21",
-    "cve": "CVE-2025-14339",
-    "descripcion": "The weMail - Email Marketing, Lead Generation, Optin Forms, Email Newsletters, A/B Testing, and Automation plugin for WordPress is vulnerable to unauthorized form deletion in all versions up to, and including, 2.0.7. This is due to the `Forms::permission()` callback only validating the `X-WP-Nonce` header without checking user capabilities. Since the REST nonce is exposed to unauthenticated visitors via the `weMail` JavaScript object on pages with weMail forms, any unauthenticated user can permanently delete all weMail forms by extracting the nonce from the page source and sending a DELETE request to the forms endpoint. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-21",
-    "cve": "CVE-2026-27479",
-    "descripcion": "Wallos is an open-source, self-hostable personal subscription tracker. Versions 4.6.0 and below contain a Server-Side Request Forgery (SSRF) vulnerability in the subscription and payment logo/icon upload functionality. The application validates the IP address of the provided URL before making the request, but allows HTTP redirects (CURLOPT_FOLLOWLOCATION = true), enabling an attacker to bypass the IP validation and access internal resources, including cloud instance metadata endpoints. The getLogoFromUrl() function validates the URL by resolving the hostname and checking if the resulting IP is in a private or reserved range using FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE. However, the subsequent cURL request is configured with CURLOPT_FOLLOWLOCATION = true and CURLOPT_MAXREDIRS = 3, which means the request will follow HTTP redirects without re-validating the destination IP. This issue has been fixed in version 4.6.1. 21/02/2026 21/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
