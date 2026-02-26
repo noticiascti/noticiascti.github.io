@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-02-26",
+    "cve": "CVE-2026-25191",
+    "descripcion": "The installer of FinalCode Client provided by Digital Arts Inc. contains an issue with the DLL search path. If a user is directed to place a malicious DLL file and the installer to the same directory and execute the installer, arbitrary code may be executed with the installer&#39;s execution privilege. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-23703",
+    "descripcion": "The installer of FinalCode Client provided by Digital Arts Inc. contains an incorrect default permissions vulnerability. A non-administrative user may execute arbitrary code with SYSTEM privilege. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-1311",
+    "descripcion": "The Worry Proof Backup plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 0.2.4 via the backup upload functionality. This makes it possible for authenticated attackers, with Subscriber-level access and above, to upload a malicious ZIP archive with path traversal sequences to write arbitrary files anywhere on the server, including executable PHP files. This can lead to remote code execution. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-26",
     "cve": "CVE-2026-2356",
     "descripcion": "The User Registration & Membership – Custom Registration Form, Login Form, and User Profile plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.1.2 via the &#39;register_member&#39; function, due to missing validation on the &#39;member_id&#39; user controlled key. This makes it possible for unauthenticated attackers to delete arbitrary user accounts that newly registered on the site who has the &#39;urm_user_just_created&#39; user meta set. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-02-26",
     "cve": "CVE-2026-24004",
     "descripcion": "Fleet is open source device management software. In versions prior to 4.80.1, a vulnerability in Fleet’s Android MDM Pub/Sub handling could allow unauthenticated requests to trigger device unenrollment events. This may result in unauthorized removal of individual Android devices from Fleet management. If Android MDM is enabled, an attacker could send a crafted request to the Android Pub/Sub endpoint to unenroll a targeted Android device from Fleet without authentication. This issue does not grant access to Fleet, allow execution of commands, or provide visibility into device data. Impact is limited to disruption of Android device management for the affected device. Version 4.80.1 fixes the issue. If an immediate upgrade is not possible, affected Fleet users should temporarily disable Android MDM. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-23999",
-    "descripcion": "Fleet is open source device management software. In versions prior to 4.80.1, Fleet generated device lock and wipe PINs using a predictable algorithm based solely on the current Unix timestamp. Because no secret key or additional entropy was used, the resulting PIN could potentially be derived if the approximate time the device was locked is known. Fleet’s device lock and wipe commands generate a 6-digit PIN that is displayed to administrators for unlocking a device. In affected versions, this PIN was deterministically derived from the current timestamp. An attacker with physical possession of a locked device and knowledge of the approximate time the lock command was issued could theoretically predict the correct PIN within a limited search window. However, successful exploitation is constrained by multiple factors: Physical access to the device is required, the approximate lock time must be known, the operating system enforces rate limiting on PIN entry attempts, attempts would need to be spread over, and device wipe operations would typically complete before sufficient attempts could be made. As a result, this issue does not allow remote exploitation, fleet-wide compromise, or bypass of Fleet authentication controls. Version 4.80.1 contains a patch. No known workarounds are available. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.60 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-1779",
-    "descripcion": "The User Registration & Membership plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 5.1.2. This is due to incorrect authentication in the &#39;register_member&#39; function. This makes it possible for unauthenticated attackers to log in a newly registered user on the site who has the &#39;urm_user_just_created&#39; user meta set. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-2506",
-    "descripcion": "The EM Cost Calculator plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 2.3.1. This is due to the plugin storing attacker-controlled &#39;customer_name&#39; data and rendering it in the admin customer list without output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute when an administrator views the EMCC Customers page. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
