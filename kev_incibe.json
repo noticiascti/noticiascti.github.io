@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-3071",
-    "descripcion": "Deserialization of untrusted data in the LanguageModel class of Flair from versions 0.4.1 to latest are vulnerable to arbitrary code execution when loading a malicious model. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-26936",
+    "descripcion": "Inefficient Regular Expression Complexity (CWE-1333) in the AI Inference Anonymization Engine in Kibana can lead Denial of Service via Regular Expression Exponential Blowup (CAPEC-492). 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-2244",
-    "descripcion": "A vulnerability in Google Cloud Vertex AI Workbench from 7/21/2025 to 01/30/2026 allows an attacker to exfiltrate valid Google Cloud access tokens of other users via abuse of a built-in startup script. All instances after January 30th, 2026 have been patched to protect from this vulnerability. No user action is required for this. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Clear Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26935",
+    "descripcion": "Improper Input Validation (CWE-20) in the internal Content Connectors search endpoint in Kibana can lead Denial of Service via Input Data Manipulation (CAPEC-153) 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-26077",
-    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, several webhook endpoints (SendGrid, Mailjet, Mandrill, Postmark, SparkPost) in the `WebhooksController` accepted requests without a valid authentication token when no token was configured. This allowed unauthenticated attackers to forge webhook payloads and artificially inflate user bounce scores, potentially causing legitimate user emails to be disabled. The Mailpace endpoint had no token validation at all. Starting in versions 2025.12.2, 2026.1.1, and 2026.2.0, all webhook endpoints reject requests with a 406 response when no authentication token is configured. As a workaround, ensure that webhook authentication tokens are configured for all email provider integrations in site settings (e.g., `sendgrid_verification_key`, `mailjet_webhook_token`, `postmark_webhook_token`, `sparkpost_webhook_token`). There&#39;s no current workaround for mailpace before getting this fix. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-26934",
+    "descripcion": "Improper Validation of Specified Quantity in Input (CWE-1284) in Kibana can allow an authenticated attacker with view-only privileges to cause a Denial of Service via Input Data Manipulation (CAPEC-153). An attacker can send a specially crafted, malformed payload causing excessive resource consumption and resulting in Kibana becoming unresponsive or crashing. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-2680",
-    "descripcion": "Reflected Cross-Site Scripting (XSS) on the A3factura web platform, in parameter &#39;customerVATNumber&#39;, in &#39;a3factura-app.wolterskluwer.es/#/incomes/salesDeliveryNotes&#39; endpoint, which could allow an attacker to execute arbitrary code in the victim&#39;s browser. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26932",
+    "descripcion": "Improper Validation of Array Index (CWE-129) in the PostgreSQL protocol parser in Packetbeat can lead Denial of Service via Input Data Manipulation (CAPEC-153). An attacker can send a specially crafted packet causing a Go runtime panic that terminates the Packetbeat process. This vulnerability requires the pgsql protocol to be explicitly enabled and configured to monitor traffic on the targeted port. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-2679",
-    "descripcion": "Reflected Cross-Site Scripting (XSS) on the A3factura web platform, in parameter &#39;customerName&#39;, in &#39;a3factura-app.wolterskluwer.es/#/incomes/salesInvoices&#39; endpoint, which could allow an attacker to execute arbitrary code in the victim&#39;s browser. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26682",
+    "descripcion": "An issue in fastCMS before v.0.1.6 allows a local attacker to execute arbitrary code via the PluginController.java component 26/02/2026 26/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-2678",
-    "descripcion": "Reflected Cross-Site Scripting (XSS) on the A3factura web platform, in parameter &#39;name&#39;, parameter &#39;name&#39;, in &#39;a3factura-app.wolterskluwer.es/#/incomes/customers&#39; endpoint, which could allow an attacker to execute arbitrary code in the victim&#39;s browser. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-50857",
+    "descripcion": "ZenTaoPMS v18.11 through v21.6.beta is vulnerable to Directory Traversal in /module/ai/control.php. This allows attackers to execute arbitrary code via a crafted file upload 26/02/2026 26/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-2677",
-    "descripcion": "Reflected Cross-Site Scripting (XSS) on the A3factura web platform, in parameter &#39;name&#39;, in &#39;a3factura-app.wolterskluwer.es/#/incomes/representatives-management&#39; endpoint, which could allow an attacker to execute arbitrary code in the victim&#39;s browser. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-28296",
+    "descripcion": "A flaw was found in the FTP GVfs backend. A remote attacker could exploit this input validation vulnerability by supplying specially crafted file paths containing carriage return and line feed (CRLF) sequences. These unsanitized sequences allow the attacker to terminate intended FTP commands and inject arbitrary FTP commands, potentially leading to arbitrary code execution or other severe impacts. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2025-14343",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Dokuzsoft Technology Ltd. E-Commerce Product allows Reflected XSS.This issue affects E-Commerce Product: through 10122025. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-28295",
+    "descripcion": "A flaw was found in the FTP GVfs backend. A malicious FTP server can exploit this vulnerability by providing an arbitrary IP address and port in its passive mode (PASV) response. The client unconditionally trusts this information and attempts to connect to the specified endpoint, allowing the malicious server to probe for open ports accessible from the client&#39;s network. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2026-1198",
-    "descripcion": "SIMPLE.ERP is vulnerable to the SQL Injection in search functionality in &#34;Obroty na kontach&#34; window. Lack of input validation allows an authenticated attacker to prepare a malicious query to the database that will be executed. This issue was fixed in 6.30@A04.4_u06. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26265",
+    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, an IDOR vulnerability in the directory items endpoint allows any user, including anonymous users, to retrieve private user field values for all users in the directory. The `user_field_ids` parameter in `DirectoryItemsController#index` accepts arbitrary user field IDs without authorization checks, bypassing the visibility restrictions (`show_on_profile` / `show_on_user_card`) that are enforced elsewhere (e.g., `UserCardSerializer` via `Guardian#allowed_user_field_ids`). An attacker can request `GET /directory_items.json?period=all&user_field_ids=` with any private field ID and receive that field&#39;s value for every user in the directory response. This enables bulk exfiltration of private user data such as phone numbers, addresses, or other sensitive custom fields that admins have explicitly configured as non-public. The issue is patched in versions 2025.12.2, 2026.1.1, and 2026.2.0 by filtering `user_field_ids` against `UserField.public_fields` for non-staff users before building the custom field map. As a workaround, site administrators can remove sensitive data from private user fields, or disable the user directory via the `enable_user_directory` site setting. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-02-26",
-    "cve": "CVE-2025-64999",
-    "descripcion": "Improper neutralization of input in Checkmk versions 2.4.0 before 2.4.0p22, and 2.3.0 before 2.3.0p43 allows an attacker that can manipulate a host&#39;s check output to inject malicious JavaScript into the Synthetic Monitoring HTML logs, which can then be accessed via a crafted phishing link. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26228",
+    "descripcion": "VideoLAN VLC for Android prior to version 3.7.0 contains a path traversal vulnerability in the Remote Access Server routing for the authenticated endpoint GET /download. The file query parameter is concatenated into a filesystem path under the configured download directory without canonicalization or directory containment checks, allowing an authenticated attacker with network reachability to the Remote Access Server to request files outside the intended directory. The impact is bounded by the Android application sandbox and storage restrictions, typically limiting exposure to app-internal and app-specific external storage. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
