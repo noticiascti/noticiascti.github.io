@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-02-26",
+    "cve": "CVE-2026-27162",
+    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, `posts_nearby` was checking topic access but then returning all posts regardless of type, including whispers that should only be visible to whisperers. Use `Post.secured(guardian)` to properly filter post types based on user permissions. Versions 2025.12.2, 2026.1.1, and 2026.2.0 patch the issue. No known workarounds are available. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-27152",
+    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, DM communication-preference bypass when adding members via `Chat::AddUsersToChannel` — a user could add targets who have blocked/ignored/muted them to an existing DM channel, bypassing per-recipient PM restrictions that are enforced during DM channel creation. Versions 2025.12.2, 2026.1.1, and 2026.2.0 patch the issue. No known workarounds are available. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-27151",
+    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, the `move_posts` action only checked `can_move_posts?` on the source topic but never validated write permissions on the destination topic. This allowed TL4 users and category group moderators to move posts into topics in categories where they lack posting privileges (e.g., read-only categories or categories with group-restricted write access). Versions 2025.12.2, 2026.1.1, and 2026.2.0 patch the issue. No known workarounds are available. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-27150",
+    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, missing `validate_before_create` authorization in Data Explorer&#39;s `QueryGroupBookmarkable` allows any logged-in user to create bookmarks for query groups they don&#39;t have access to, enabling metadata disclosure via bookmark reminder notifications. Versions 2025.12.2, 2026.1.1, and 2026.2.0 fix this issue and also make sure `validate_before_create` throws NotImplementedError in BaseBookmarkable if not implemented, to prevent similar issues in the future. No known workarounds are available. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-27149",
+    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, SQL injection in PM tag filtering (`list_private_messages_tag`) allows bypassing tag filter conditions, potentially disclosing unauthorized private message metadata. Versions 2025.12.2, 2026.1.1, and 2026.2.0 patch the issue. No known workarounds are available. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-27021",
+    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, the voters endpoint in the poll plugin lacked post visibility checks which allowed unauthorized access to voters details of polls in any post. Versions 2025.12.2, 2026.1.1, and 2026.2.0 patch the issue. No known workarounds are available. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-22207",
+    "descripcion": "OpenViking through version 0.1.18, prior to commit 0251c70, contains a broken access control vulnerability that allows unauthenticated attackers to gain ROOT privileges when the root_api_key configuration is omitted. Attackers can send requests to protected endpoints without authentication headers to access administrative functions including account management, resource operations, and system configuration. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
     "cve": "CVE-2026-26938",
     "descripcion": "Improper Neutralization of Special Elements Used in a Template Engine (CWE-1336) exists in Workflows in Kibana which could allow an attacker to read arbitrary files from the Kibana server filesystem, and perform Server-Side Request Forgery (SSRF) via Code Injection (CAPEC-242). This requires an authenticated user who has the workflowsManagement:executeWorkflow privilege. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-02-26",
     "cve": "CVE-2026-22722",
     "descripcion": "A malicious actor with authenticated user privileges on a Windows based Workstation host may be able to cause a null pointer dereference error. To Remediate CVE-2026-22722, apply the patches listed in the &#34;Fixed version&#34; column of the &#39;Response Matrix&#39; 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-22715",
-    "descripcion": "VMWare Workstation and Fusion contain a logic flaw in the management of network packets. Known attack vectors: A malicious actor with administrative privileges on a Guest VM may be able to interrupt or intercept network connections of other Guest VM&#39;s. Resolution: To remediate CVE-2026-22715 please upgrade to VMware Workstation or Fusion Version 25H2U1 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26227",
-    "descripcion": "VideoLAN VLC for Android prior to version 3.7.0 contains an authentication bypass in the Remote Access Server feature due to missing or insufficient rate limiting on one-time password (OTP) verification. The Remote Access Server uses a 4-digit OTP and does not enforce effective throttling or lockout within the OTP validity window, allowing an attacker with network reachability to the server to repeatedly attempt OTP verification until a valid user_session cookie is issued. Successful exploitation results in unauthorized access to the Remote Access interface, limited to media files explicitly shared by the VLC for Android user. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26936",
-    "descripcion": "Inefficient Regular Expression Complexity (CWE-1333) in the AI Inference Anonymization Engine in Kibana can lead Denial of Service via Regular Expression Exponential Blowup (CAPEC-492). 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26935",
-    "descripcion": "Improper Input Validation (CWE-20) in the internal Content Connectors search endpoint in Kibana can lead Denial of Service via Input Data Manipulation (CAPEC-153) 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26934",
-    "descripcion": "Improper Validation of Specified Quantity in Input (CWE-1284) in Kibana can allow an authenticated attacker with view-only privileges to cause a Denial of Service via Input Data Manipulation (CAPEC-153). An attacker can send a specially crafted, malformed payload causing excessive resource consumption and resulting in Kibana becoming unresponsive or crashing. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26932",
-    "descripcion": "Improper Validation of Array Index (CWE-129) in the PostgreSQL protocol parser in Packetbeat can lead Denial of Service via Input Data Manipulation (CAPEC-153). An attacker can send a specially crafted packet causing a Go runtime panic that terminates the Packetbeat process. This vulnerability requires the pgsql protocol to be explicitly enabled and configured to monitor traffic on the targeted port. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26682",
-    "descripcion": "An issue in fastCMS before v.0.1.6 allows a local attacker to execute arbitrary code via the PluginController.java component 26/02/2026 26/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
