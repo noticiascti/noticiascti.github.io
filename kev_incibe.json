@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-02-26",
+    "cve": "CVE-2026-26938",
+    "descripcion": "Improper Neutralization of Special Elements Used in a Template Engine (CWE-1336) exists in Workflows in Kibana which could allow an attacker to read arbitrary files from the Kibana server filesystem, and perform Server-Side Request Forgery (SSRF) via Code Injection (CAPEC-242). This requires an authenticated user who has the workflowsManagement:executeWorkflow privilege. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-26937",
+    "descripcion": "Uncontrolled Resource Consumption (CWE-400) in the Timelion component in Kibana can lead Denial of Service via Input Data Manipulation (CAPEC-153) 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-22722",
+    "descripcion": "A malicious actor with authenticated user privileges on a Windows based Workstation host may be able to cause a null pointer dereference error. To Remediate CVE-2026-22722, apply the patches listed in the &#34;Fixed version&#34; column of the &#39;Response Matrix&#39; 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-22715",
+    "descripcion": "VMWare Workstation and Fusion contain a logic flaw in the management of network packets. Known attack vectors: A malicious actor with administrative privileges on a Guest VM may be able to interrupt or intercept network connections of other Guest VM&#39;s. Resolution: To remediate CVE-2026-22715 please upgrade to VMware Workstation or Fusion Version 25H2U1 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-02-26",
+    "cve": "CVE-2026-26227",
+    "descripcion": "VideoLAN VLC for Android prior to version 3.7.0 contains an authentication bypass in the Remote Access Server feature due to missing or insufficient rate limiting on one-time password (OTP) verification. The Remote Access Server uses a 4-digit OTP and does not enforce effective throttling or lockout within the OTP validity window, allowing an attacker with network reachability to the server to repeatedly attempt OTP verification until a valid user_session cookie is issued. Successful exploitation results in unauthorized access to the Remote Access interface, limited to media files explicitly shared by the VLC for Android user. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-26",
     "cve": "CVE-2026-26936",
     "descripcion": "Inefficient Regular Expression Complexity (CWE-1333) in the AI Inference Anonymization Engine in Kibana can lead Denial of Service via Regular Expression Exponential Blowup (CAPEC-492). 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-02-26",
     "cve": "CVE-2026-26682",
     "descripcion": "An issue in fastCMS before v.0.1.6 allows a local attacker to execute arbitrary code via the PluginController.java component 26/02/2026 26/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2025-50857",
-    "descripcion": "ZenTaoPMS v18.11 through v21.6.beta is vulnerable to Directory Traversal in /module/ai/control.php. This allows attackers to execute arbitrary code via a crafted file upload 26/02/2026 26/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-28296",
-    "descripcion": "A flaw was found in the FTP GVfs backend. A remote attacker could exploit this input validation vulnerability by supplying specially crafted file paths containing carriage return and line feed (CRLF) sequences. These unsanitized sequences allow the attacker to terminate intended FTP commands and inject arbitrary FTP commands, potentially leading to arbitrary code execution or other severe impacts. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-28295",
-    "descripcion": "A flaw was found in the FTP GVfs backend. A malicious FTP server can exploit this vulnerability by providing an arbitrary IP address and port in its passive mode (PASV) response. The client unconditionally trusts this information and attempts to connect to the specified endpoint, allowing the malicious server to probe for open ports accessible from the client&#39;s network. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26265",
-    "descripcion": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, an IDOR vulnerability in the directory items endpoint allows any user, including anonymous users, to retrieve private user field values for all users in the directory. The `user_field_ids` parameter in `DirectoryItemsController#index` accepts arbitrary user field IDs without authorization checks, bypassing the visibility restrictions (`show_on_profile` / `show_on_user_card`) that are enforced elsewhere (e.g., `UserCardSerializer` via `Guardian#allowed_user_field_ids`). An attacker can request `GET /directory_items.json?period=all&user_field_ids=` with any private field ID and receive that field&#39;s value for every user in the directory response. This enables bulk exfiltration of private user data such as phone numbers, addresses, or other sensitive custom fields that admins have explicitly configured as non-public. The issue is patched in versions 2025.12.2, 2026.1.1, and 2026.2.0 by filtering `user_field_ids` against `UserField.public_fields` for non-staff users before building the custom field map. As a workaround, site administrators can remove sensitive data from private user fields, or disable the user directory via the `enable_user_directory` site setting. 26/02/2026 26/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-26",
-    "cve": "CVE-2026-26228",
-    "descripcion": "VideoLAN VLC for Android prior to version 3.7.0 contains a path traversal vulnerability in the Remote Access Server routing for the authenticated endpoint GET /download. The file query parameter is concatenated into a filesystem path under the configured download directory without canonicalization or directory containment checks, allowing an authenticated attacker with network reachability to the Remote Access Server to request files outside the intended directory. The impact is bounded by the Android application sandbox and storage restrictions, typically limiting exposure to app-internal and app-specific external storage. 26/02/2026 26/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
