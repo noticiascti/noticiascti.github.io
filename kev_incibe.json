@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-02-28",
+    "cve": "CVE-2026-3010",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Microchip TimePictra allows Query System for Information.This issue affects TimePictra: from 11.0 through 11.3 SP2. 28/02/2026 28/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-28",
+    "cve": "CVE-2026-2844",
+    "descripcion": "Missing Authentication for Critical Function vulnerability in Microchip TimePictra allows Configuration/Environment Manipulation.This issue affects TimePictra: from 11.0 through 11.3 SP2. 28/02/2026 28/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-02-28",
     "cve": "CVE-2025-13673",
     "descripcion": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to SQL Injection via the &#39;coupon_code&#39; parameter in all versions up to, and including, 3.9.6 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. NOTE: This vulnerability was partially mitigated in versions 3.9.4 and 3.9.6. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-02-27",
     "cve": "CVE-2026-28426",
     "descripcion": "Statmatic is a Laravel and Git powered content management system (CMS). Prior to versions 5.73.11 and 6.4.0, stored XSS vulnerability in svg and icon related components allow authenticated users with appropriate permissions to inject malicious JavaScript that executes when viewed by higher-privileged users. This has been fixed in 5.73.11 and 6.4.0. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-27",
-    "cve": "CVE-2026-28425",
-    "descripcion": "Statmatic is a Laravel and Git powered content management system (CMS). Prior to versions 5.73.11 and 6.4.0, an authenticated control panel user with access to Antlers-enabled inputs may be able to achieve remote code execution in the application context. That can lead to full compromise of the application, including access to sensitive configuration, modification or exfiltration of data, and potential impact on availability. Exploitation is only possible where Antlers runs on user-controlled content—for example, content fields with Antlers explicitly enabled (requiring permission to configure fields and to edit entries), built-in config that supports Antlers such as Forms email notification settings (requiring configuration permission), or third-party addons that add Antlers-enabled fields to entries (for example, the SEO Pro addon). In each case the attacker must have the relevant control panel permissions. This has been fixed in 5.73.11 and 6.4.0. Users of addons that depend on Statamic should ensure that after updating they are running a patched Statamic version. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-02-27",
-    "cve": "CVE-2026-28424",
-    "descripcion": "Statmatic is a Laravel and Git powered content management system (CMS). Prior to versions 5.73.11 and 6.4.0, user email addresses were included in responses from the user fieldtype’s data endpoint for control panel users who did not have the &#34;view users&#34; permission. This has been fixed in 5.73.11 and 6.4.0. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
