@@ -1,5 +1,20 @@
 [
   {
+    "fecha": "2026-02-28",
+    "cve": "CVE-2025-13673",
+    "descripcion": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to SQL Injection via the &#39;coupon_code&#39; parameter in all versions up to, and including, 3.9.6 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. NOTE: This vulnerability was partially mitigated in versions 3.9.4 and 3.9.6. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-28",
+    "cve": "CVE-2026-2471",
+    "descripcion": "The WP Mail Logging plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.15.0 via deserialization of untrusted input from the email log message field. This is due to the `BaseModel` class constructor calling `maybe_unserialize()` on all properties retrieved from the database without validation. This makes it possible for unauthenticated attackers to inject a PHP Object by submitting a double-serialized payload through any public-facing form that sends email (e.g., Contact Form 7). When the email is logged and subsequently viewed by an administrator, the malicious payload is deserialized into an arbitrary PHP object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-02-28",
+    "cve": "CVE-2026-1542",
+    "descripcion": "The Super Stage WP WordPress plugin through 1.0.1 unserializes user input via REQUEST, which could allow unauthenticated users to perform PHP Object Injection when a suitable gadget is present on the blog. 28/02/2026 28/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
     "fecha": "2026-02-27",
     "cve": "CVE-2026-2647",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 28/02/2026 28/02/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -33,20 +48,5 @@
     "fecha": "2026-02-27",
     "cve": "CVE-2026-28424",
     "descripcion": "Statmatic is a Laravel and Git powered content management system (CMS). Prior to versions 5.73.11 and 6.4.0, user email addresses were included in responses from the user fieldtype’s data endpoint for control panel users who did not have the &#34;view users&#34; permission. This has been fixed in 5.73.11 and 6.4.0. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-27",
-    "cve": "CVE-2026-28423",
-    "descripcion": "Statmatic is a Laravel and Git powered content management system (CMS). Prior to versions 5.73.11 and 6.4.0, when Glide image manipulation is used in insecure mode (which is not the default), the image proxy can be abused by an unauthenticated user to make the server send HTTP requests to arbitrary URLs—either via the URL directly or via the watermark feature. That can allow access to internal services, cloud metadata endpoints, and other hosts reachable from the server. This has been fixed in 5.73.11 and 6.4.0. 28/02/2026 28/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-27",
-    "cve": "CVE-2026-27759",
-    "descripcion": "Featured Image from Content (featured-image-from-content) WordPress plugin versions prior to 1.7 contain an authenticated server-side request forgery vulnerability that allows Author-level users to fetch internal HTTP resources. Attackers can exploit insecure URL fetching and file write operations to retrieve sensitive internal data and store it in web-accessible upload directories. 28/02/2026 28/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-02-27",
-    "cve": "CVE-2026-28422",
-    "descripcion": "Vim is an open source, command line text editor. Prior to version 9.2.0078, a stack-buffer-overflow occurs in `build_stl_str_hl()` when rendering a statusline with a multi-byte fill character on a very wide terminal. Version 9.2.0078 patches the issue. 28/02/2026 27/02/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   }
 ]
