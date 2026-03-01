@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-03-01",
+    "cve": "CVE-2026-3384",
+    "descripcion": "A security vulnerability has been detected in ChaiScript up to 6.1.0. This impacts the function chaiscript::eval::AST_Node_Impl::eval/chaiscript::eval::Function_Push_Pop of the file include/chaiscript/language/chaiscript_eval.hpp. The manipulation leads to uncontrolled recursion. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet. 01/03/2026 01/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-03-01",
+    "cve": "CVE-2026-3383",
+    "descripcion": "A weakness has been identified in ChaiScript up to 6.1.0. This affects the function chaiscript::Boxed_Number::go of the file include/chaiscript/dispatchkit/boxed_number.hpp. Executing a manipulation can lead to divide by zero. The attack requires local access. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet. 01/03/2026 01/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-03-01",
+    "cve": "CVE-2026-3382",
+    "descripcion": "A security flaw has been discovered in ChaiScript up to 6.1.0. The impacted element is the function chaiscript::Boxed_Number::get_as of the file include/chaiscript/dispatchkit/boxed_number.hpp. Performing a manipulation results in memory corruption. The attack requires a local approach. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet. 01/03/2026 01/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-03-01",
     "cve": "CVE-2026-3380",
     "descripcion": "A vulnerability was found in Tenda F453 1.0.0.3. This issue affects the function frmL7ImForm of the file /goform/L7Im. The manipulation of the argument page results in buffer overflow. The attack may be launched remotely. The exploit has been made public and could be used. 01/03/2026 01/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-02-28",
     "cve": "CVE-2026-28561",
     "descripcion": "wpForo Forum 2.4.14 contains a stored cross-site scripting vulnerability that allows administrators to inject persistent JavaScript via forum description fields echoed without output escaping across multiple theme template files. On multisite installations or with a compromised admin account, attackers set a forum description containing HTML event handlers that execute when any user views the forum listing. 28/02/2026 28/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-28",
-    "cve": "CVE-2026-28560",
-    "descripcion": "wpForo Forum 2.4.14 contains a stored cross-site scripting vulnerability that allows script injection via forum URL data output into an inline script block using json_encode without the JSON_HEX_TAG flag. Attackers set a forum slug containing a closing script tag or unescaped single quote to break out of the JavaScript string context and execute arbitrary script in all visitors&#39; browsers. 28/02/2026 28/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-28",
-    "cve": "CVE-2026-28559",
-    "descripcion": "wpForo Forum 2.4.14 contains an information disclosure vulnerability that allows unauthenticated users to retrieve private and unapproved forum topics via the global RSS feed endpoint. Attackers request the RSS feed without a forum ID parameter, bypassing the privacy and status WHERE clauses that are only applied when a specific forum ID is present in the query. 28/02/2026 28/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-02-28",
-    "cve": "CVE-2026-28558",
-    "descripcion": "wpForo Forum 2.4.14 contains a stored cross-site scripting vulnerability that allows authenticated subscribers to upload SVG files as profile avatars through the avatar upload functionality. Attackers upload a crafted SVG containing CSS injection or JavaScript event handlers that execute in the browsers of any user who views the attacker&#39;s profile page. 28/02/2026 28/02/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
