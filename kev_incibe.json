@@ -1,5 +1,40 @@
 [
   {
+    "fecha": "2026-03-03",
+    "cve": "CVE-2026-2628",
+    "descripcion": "The All-in-One Microsoft 365 & Entra ID / Azure AD SSO Login plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 2.2.5. This makes it possible for unauthenticated attackers to bypass authentication and log in as other users, including administrators. 03/03/2026 03/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-03-03",
+    "cve": "CVE-2026-2448",
+    "descripcion": "The Page Builder by SiteOrigin plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 2.33.5 via the locate_template() function. This makes it possible for authenticated attackers, with Contributor-level access and above, to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included. 03/03/2026 03/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-03",
+    "cve": "CVE-2026-2269",
+    "descripcion": "The Uncanny Automator – Easy Automation, Integration, Webhooks & Workflow Builder Plugin plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 7.0.0.3 via the download_url() function. This makes it possible for authenticated attackers, with Administrator-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. Additionally, the plugin stores the contents of the remote files on the server, which can be leveraged to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 03/03/2026 03/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-03",
+    "cve": "CVE-2026-1487",
+    "descripcion": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to SQL Injection via the JSON Import in all versions up to, and including, 5.2.7 due to insufficient validation on the user-supplied JSON data. This makes it possible for authenticated attackers, with Administrator-level access and above, to execute arbitrary SQL queries on the database that can be used to extract information via time-based techniques, drop tables, or modify data. 03/03/2026 03/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-03",
+    "cve": "CVE-2026-0754",
+    "descripcion": "An embedded test key and certificate could be extracted from a Poly Voice device using specialized reverse engineering tools. This extracted certificate could be accepted by a SIP service provider if the service provider does not perform proper validation of the device certificate. 03/03/2026 03/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-02",
+    "cve": "CVE-2026-1566",
+    "descripcion": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to privilege escalation via password reset in all versions up to, and including, 5.2.7. This is due to the plugin allowing users with a LatePoint Agent role, who are creating new customers to set the &#39;wordpress_user_id&#39; field. This makes it possible for authenticated attackers, with Agent-level access and above, to gain elevated privileges by linking a customer to the arbitrary user ID, including administrators, and then resetting the password. 03/03/2026 03/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-02",
+    "cve": "CVE-2026-1336",
+    "descripcion": "The AI ChatBot with ChatGPT and Content Generator by AYS plugin for WordPress is vulnerable to unauthorized access and modification of data due to missing capability checks on the store_data() and get_chatgpt_api_key() functions in all versions up to, and including, 2.7.5. This makes it possible for unauthenticated attackers to view, modify or delete the plugin&#39;s ChatGPT API key. The vulnerability was partially fixed in version 2.7.5 and fully fixed in version 2.7.6 03/03/2026 03/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
     "fecha": "2026-03-02",
     "cve": "CVE-2026-2583",
     "descripcion": "The Blocksy theme for WordPress is vulnerable to Stored Cross-Site Scripting via the `blocksy_meta` metadata fields in all versions up to, and including, 2.1.30 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 03/03/2026 03/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -13,40 +48,5 @@
     "fecha": "2026-03-02",
     "cve": "CVE-2026-3337",
     "descripcion": "Observable timing discrepancy in AES-CCM decryption in AWS-LC allows an unauthenticated user to potentially determine authentication tag validity via timing analysis. The impacted implementations are through the EVP CIPHER API: EVP_aes_128_ccm, EVP_aes_192_ccm, and EVP_aes_256_ccm. Customers of AWS services do not need to take action. Applications using AWS-LC should upgrade to AWS-LC version 1.69.0. 03/03/2026 02/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-02",
-    "cve": "CVE-2026-3336",
-    "descripcion": "Improper certificate validation in PKCS7_verify() in AWS-LC allows an unauthenticated user to bypass certificate chain verification when processing PKCS7 objects with multiple signers, except the final signer. Customers of AWS services do not need to take action. Applications using AWS-LC should upgrade to AWS-LC version 1.69.0. 03/03/2026 02/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-02",
-    "cve": "CVE-2026-2256",
-    "descripcion": "A command injection vulnerability in ModelScope&#39;s ms-agent versions v1.6.0rc1 and earlier exists, allowing an attacker to execute arbitrary operating system commands through crafted prompt-derived input. 02/03/2026 02/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-02",
-    "cve": "CVE-2026-26713",
-    "descripcion": "code-projects Simple Food Order System v1.0 is vulnerable to SQL Injection in /food/routers/cancel-order.php. 02/03/2026 02/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-03-02",
-    "cve": "CVE-2026-27631",
-    "descripcion": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8, an uncaught exception was found in Exiv2. The vulnerability is in the preview component, which is only triggered when running Exiv2 with an extra command line argument, like -pp. Due to an integer overflow, the code attempts to create a huge std::vector, which causes Exiv2 to crash with an uncaught exception. This issue has been patched in version 0.28.8. 02/03/2026 02/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-02",
-    "cve": "CVE-2026-27596",
-    "descripcion": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8, an out-of-bounds read was found in Exiv2. The vulnerability is in the preview component, which is only triggered when running Exiv2 with an extra command line argument, like -pp. The out-of-bounds read is at a 4GB offset, which usually causes Exiv2 to crash. This issue has been patched in version 0.28.8. 02/03/2026 02/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-02",
-    "cve": "CVE-2026-26712",
-    "descripcion": "code-projects Simple Food Order System v1.0 is vulnerable to SQL Injection in /food/view-ticket-admin.php. 02/03/2026 02/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-03-02",
-    "cve": "CVE-2026-25884",
-    "descripcion": "Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. Prior to version 0.28.8, an out-of-bounds read was found. The vulnerability is in the CRW image parser. This issue has been patched in version 0.28.8. 02/03/2026 02/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
