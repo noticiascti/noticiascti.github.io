@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-25907",
-    "descripcion": "Dell PowerScale OneFS, version 9.13.0.0, contains an overly restrictive account lockout mechanism vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to denial of service. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-26673",
+    "descripcion": "An issue in DJI Mavic Mini, Spark, Mavic Air, Mini, Mini SE 0.1.00.0500 and below allows a remote attacker to cause a denial of service via the DJI Enhanced-WiFi transmission subsystem 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-24732",
-    "descripcion": "Files or Directories Accessible to External Parties, Incorrect Permission Assignment for Critical Resource vulnerability in Hallo Welt! GmbH BlueSpice (Extension:NSFileRepo modules) allows Accessing Functionality Not Properly Constrained by ACLs, Bypassing Electronic Locks and Access Controls.This issue affects BlueSpice: from 5.1 through 5.1.3, from 5.2 through 5.2.0. HINT: Versions provided apply to BlueSpice MediaWiki releases. For Extension:NSFileRepo the affected versions are 3.0 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:X/V:X/RE:L/U:X Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26514",
+    "descripcion": "An Argument Injection vulnerability exists in bird-lg-go before commit 6187a4e. The traceroute module uses shlex.Split to parse user input without validation, allowing remote attackers to inject arbitrary flags (e.g., -w, -q) via the q parameter. This can be exploited to cause a Denial of Service (DoS) by exhausting system resources. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-23231",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_tables: fix use-after-free in nf_tables_addchain() nf_tables_addchain() publishes the chain to table->chains via list_add_tail_rcu() (in nft_chain_add()) before registering hooks. If nf_tables_register_hook() then fails, the error path calls nft_chain_del() (list_del_rcu()) followed by nf_tables_chain_destroy() with no RCU grace period in between. This creates two use-after-free conditions: 1) Control-plane: nf_tables_dump_chains() traverses table->chains under rcu_read_lock(). A concurrent dump can still be walking the chain when the error path frees it. 2) Packet path: for NFPROTO_INET, nf_register_net_hook() briefly installs the IPv4 hook before IPv6 registration fails. Packets entering nft_do_chain() via the transient IPv4 hook can still be dereferencing chain->blob_gen_X when the error path frees the chain. Add synchronize_rcu() between nft_chain_del() and the chain destroy so that all RCU readers -- both dump threads and in-flight packet evaluation -- have finished before the chain is freed. 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22285",
+    "descripcion": "Dell Device Management Agent (DDMA), versions prior to 26.02, contain a Plaintext Storage of Password vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Unauthorized Access. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-22270",
-    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an uncontrolled search path element vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to denial of service, elevation of privileges, and information disclosure. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-62879",
+    "descripcion": "A vulnerability has been identified within the Rancher Backup Operator, resulting in the leakage of S3 tokens (both accessKey and secretKey) into the rancher-backup-operator pod&#39;s logs. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-21426",
-    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an execution with unnecessary privileges vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to denial of service, elevation of privileges, and information disclosure. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-59787",
+    "descripcion": "2N Access Commander application version 3.4.2 and prior returns HTTP 500 Internal Server Error responses when receiving malformed or manipulated requests, indicating improper handling of invalid input and potential security or availability impacts. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-21425",
-    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an incorrect privilege assignment vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-59786",
+    "descripcion": "2N Access Commander version 3.4.2 and prior improperly invalidates session tokens, allowing multiple session cookies to remain active after logout in web application. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-21424",
-    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an execution with unnecessary privileges vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-59785",
+    "descripcion": "Improper validation of API end-point in 2N Access Commander version 3.4.2 and prior allows attacker to bypass password policy for backup file encryption. This vulnerability can only be exploited after authenticating with administrator privileges. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-21423",
-    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an incorrect default permissions vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to code execution, denial of service, elevation of privileges, and information disclosure. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-59784",
+    "descripcion": "2N Access Commander version 3.4.1 and prior is vulnerable to log pollution. Certain parameters sent over API may be included in the logs without prior validation or sanitisation. This vulnerability can only be exploited after authenticating with administrator privileges. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-21422",
-    "descripcion": "Dell PowerScale OneFS, versions 9.10.0.0 through 9.10.1.5 and versions 9.11.0.0 through 9.12.0.1, contains an external control of system or configuration setting vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to protection mechanism bypass. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2025-59783",
+    "descripcion": "API endpoint for user synchronization in 2N Access Commander version 3.4.1 did not have a sufficient input validation allowing for OS command injection. This vulnerability can only be exploited after authenticating with administrator privileges. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-21421",
-    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an execution with unnecessary privileges vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-12801",
+    "descripcion": "A vulnerability was recently discovered in the rpc.mountd daemon in the nfs-utils package for Linux, that allows a NFSv3 client to escalate the privileges assigned to it in the /etc/exports file at mount time. In particular, it allows the client to access any subdirectory or subtree of an exported directory, regardless of the set file permissions, and regardless of any &#39;root_squash&#39; or &#39;all_squash&#39; attributes that would normally be expected to apply to that client. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
