@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3058",
-    "descripcion": "The Seraphinite Accelerator plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.28.14 via the `seraph_accel_api` AJAX action with `fn=GetData`. This is due to the `OnAdminApi_GetData()` function not performing any capability checks. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve sensitive operational data including cache status, scheduled task information, and external database state. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-25907",
+    "descripcion": "Dell PowerScale OneFS, version 9.13.0.0, contains an overly restrictive account lockout mechanism vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to denial of service. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3056",
-    "descripcion": "The Seraphinite Accelerator plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `seraph_accel_api` AJAX action with `fn=LogClear` in all versions up to, and including, 2.28.14. This makes it possible for authenticated attackers, with Subscriber-level access and above, to clear the plugin&#39;s debug/operational logs. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-24732",
+    "descripcion": "Files or Directories Accessible to External Parties, Incorrect Permission Assignment for Critical Resource vulnerability in Hallo Welt! GmbH BlueSpice (Extension:NSFileRepo modules) allows Accessing Functionality Not Properly Constrained by ACLs, Bypassing Electronic Locks and Access Controls.This issue affects BlueSpice: from 5.1 through 5.1.3, from 5.2 through 5.2.0. HINT: Versions provided apply to BlueSpice MediaWiki releases. For Extension:NSFileRepo the affected versions are 3.0 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:X/V:X/RE:L/U:X Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-2355",
-    "descripcion": "The My Calendar – Accessible Event Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `template` attribute of the `[my_calendar_upcoming]` shortcode in all versions up to, and including, 3.7.3. This is due to the use of `stripcslashes()` on user-supplied shortcode attribute values in the `mc_draw_template()` function, which decodes C-style hex escape sequences (e.g., `\\x3c` to ` 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23231",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_tables: fix use-after-free in nf_tables_addchain() nf_tables_addchain() publishes the chain to table->chains via list_add_tail_rcu() (in nft_chain_add()) before registering hooks. If nf_tables_register_hook() then fails, the error path calls nft_chain_del() (list_del_rcu()) followed by nf_tables_chain_destroy() with no RCU grace period in between. This creates two use-after-free conditions: 1) Control-plane: nf_tables_dump_chains() traverses table->chains under rcu_read_lock(). A concurrent dump can still be walking the chain when the error path frees it. 2) Packet path: for NFPROTO_INET, nf_register_net_hook() briefly installs the IPv4 hook before IPv6 registration fails. Packets entering nft_do_chain() via the transient IPv4 hook can still be dereferencing chain->blob_gen_X when the error path frees the chain. Add synchronize_rcu() between nft_chain_del() and the chain destroy so that all RCU readers -- both dump threads and in-flight packet evaluation -- have finished before the chain is freed. 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-1674",
-    "descripcion": "The Gutena Forms – Contact Form, Survey Form, Feedback Form, Booking Form, and Custom Form Builder plugin for WordPress is vulnerable to unauthorized modification of data due to missing authorization within the save_gutena_forms_schema() function in all versions up to, and including, 1.6.0. This makes it possible for authenticated attackers, with Contributor-level access and above, to update option values to a structured array value on the WordPress site. This can be leveraged to update an option that would create an error on the site and deny service to legitimate users or be used to set some values, that would, for example enable site user registration when it is explicitly disabled. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-22270",
+    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an uncontrolled search path element vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to denial of service, elevation of privileges, and information disclosure. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3439",
-    "descripcion": "A post-authentication Stack-based Buffer Overflow vulnerability in SonicOS certificate handling allows a remote attacker to crash a firewall. 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21426",
+    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an execution with unnecessary privileges vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to denial of service, elevation of privileges, and information disclosure. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-1706",
-    "descripcion": "The All-in-One Video Gallery plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;vi&#39; parameter in all versions up to, and including, 4.7.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-21425",
+    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an incorrect privilege assignment vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2023-7337",
-    "descripcion": "The JS Help Desk – AI-Powered Support & Ticketing System plugin for WordPress is vulnerable to SQL Injection via the &#39;js-support-ticket-token-tkstatus&#39; cookie in version 2.8.2 due to an incomplete fix for CVE-2023-50839 where a second sink was left with insufficient escaping on the user supplied values and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-21424",
+    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an execution with unnecessary privileges vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3094",
-    "descripcion": "Delta Electronics CNCSoft-G2 lacks proper validation of the user-supplied file. If a user opens a malicious file, an attacker can leverage this vulnerability to execute code in the context of the current process. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-21423",
+    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an incorrect default permissions vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to code execution, denial of service, elevation of privileges, and information disclosure. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-2748",
-    "descripcion": "SEPPmail Secure Email Gateway before version 15.0.1 improperly validates S/MIME certificates issued for email addresses containing whitespaces, allowing signature spoofing. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21422",
+    "descripcion": "Dell PowerScale OneFS, versions 9.10.0.0 through 9.10.1.5 and versions 9.11.0.0 through 9.12.0.1, contains an external control of system or configuration setting vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to protection mechanism bypass. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-2747",
-    "descripcion": "SEPPmail Secure Email Gateway before version 15.0.1 decrypts inline PGP messages without isolating them from surrounding unencrypted content, allowing exposure of sensitive information to an unauthorized actor. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21421",
+    "descripcion": "Dell PowerScale OneFS, versions prior to 9.10.1.6 and versions 9.11.0.0 through 9.12.0.1, contains an execution with unnecessary privileges vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
