@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3545",
-    "descripcion": "Insufficient data validation in Navigation in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-2297",
+    "descripcion": "The import hook in CPython that handles legacy *.pyc files (SourcelessFileLoader) is incorrectly handled in FileLoader (a base class) and so does not use io.open_code() to read the .pyc files. sys.audit handlers for this audit event therefore do not fire. 05/03/2026 05/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3544",
-    "descripcion": "Heap buffer overflow in WebCodecs in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: High) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-29086",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to version 4.12.4, the setCookie() utility did not validate semicolons (;), carriage returns (\\r), or newline characters (\\n) in the domain and path options when constructing the Set-Cookie header. Because cookie attributes are delimited by semicolons, this could allow injection of additional cookie attributes if untrusted input was passed into these fields. This issue has been patched in version 4.12.4. 05/03/2026 05/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3543",
-    "descripcion": "Inappropriate implementation in V8 in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-29085",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to version 4.12.4, when using streamSSE() in Streaming Helper, the event, id, and retry fields were not validated for carriage return (\\r) or newline (\\n) characters. Because the SSE protocol uses line breaks as field delimiters, this could allow injection of additional SSE fields within the same event frame if untrusted input was passed into these fields. This issue has been patched in version 4.12.4. 05/03/2026 05/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3542",
-    "descripcion": "Inappropriate implementation in WebAssembly in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-29045",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to version 4.12.4, when using serveStatic together with route-based middleware protections (e.g. app.use(&#39;/admin/*&#39;, ...)), inconsistent URL decoding allowed protected static resources to be accessed without authorization. The router used decodeURI, while serveStatic used decodeURIComponent. This mismatch allowed paths containing encoded slashes (%2F) to bypass middleware protections while still resolving to the intended filesystem path. This issue has been patched in version 4.12.4. 05/03/2026 05/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3541",
-    "descripcion": "Inappropriate implementation in CSS in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: High) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26002",
+    "descripcion": "Open OnDemand is an open-source high-performance computing portal. The Files application in OnDemand versions prior to 4.0.9 and 4.1.3 is susceptible to malicious input when navigating to a directory. This has been patched in versions 4.0.9 and 4.1.3. Versions below this remain susceptible. 05/03/2026 05/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3540",
-    "descripcion": "Inappropriate implementation in WebAudio in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-41257",
+    "descripcion": "Suprema’s BioStar 2 in version 2.9.11.6 allows users to set new password without providing the current one. Exploiting this flaw combined with other vulnerabilities can lead to unauthorized account access and potential system compromise. 05/03/2026 05/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3539",
-    "descripcion": "Object lifecycle issue in DevTools in Google Chrome prior to 145.0.7632.159 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension. (Chromium security severity: High) 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-29000",
+    "descripcion": "pac4j-jwt versions prior to 4.5.9, 5.7.9, and 6.3.3 contain an authentication bypass vulnerability in JwtAuthenticator when processing encrypted JWTs that allows remote attackers to forge authentication tokens. Attackers who possess the server&#39;s RSA public key can create a JWE-wrapped PlainJWT with arbitrary subject and role claims, bypassing signature verification to authenticate as any user including administrators. 04/03/2026 04/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3538",
-    "descripcion": "Integer overflow in Skia in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: Critical) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-27898",
+    "descripcion": "Vaultwarden is an unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs. Prior to version 1.35.4, an authenticated regular user can specify another user’s cipher_id and call &#34;PUT /api/ciphers/{id}/partial&#34; Even though the standard retrieval API correctly denies access to that cipher, the partial update endpoint returns 200 OK and exposes cipherDetails (including name, notes, data, secureNote, etc.). This issue has been patched in version 1.35.4. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3537",
-    "descripcion": "Object lifecycle issue in PowerVR in Google Chrome on Android prior to 145.0.7632.159 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Critical) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-27803",
+    "descripcion": "Vaultwarden is an unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs. Prior to version 1.35.4, when a Manager has manage=false for a given collection, they can still perform several management operations as long as they have access to the collection. This issue has been patched in version 1.35.4. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-04",
-    "cve": "CVE-2026-3536",
-    "descripcion": "Integer overflow in ANGLE in Google Chrome prior to 145.0.7632.159 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: Critical) 04/03/2026 04/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-27802",
+    "descripcion": "Vaultwarden is an unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs. Prior to version 1.35.4, there is a privilege escalation vulnerability via bulk permission update to unauthorized collections by Manager. This issue has been patched in version 1.35.4. 04/03/2026 04/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
