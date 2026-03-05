@@ -1,11 +1,6 @@
 [
   {
     "fecha": "2026-03-05",
-    "cve": "CVE-2025-38617",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
-  },
-  {
-    "fecha": "2026-03-05",
     "cve": "CVE-2024-30085",
     "descripcion": "Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability"
   },
@@ -43,6 +38,11 @@
     "fecha": "2026-03-05",
     "cve": "CVE-2025-70341",
     "descripcion": "Insecure permissions in App-Auto-Patch v3.4.2 create a race condition which allows attackers to write arbitrary files."
+  },
+  {
+    "fecha": "2026-03-05",
+    "cve": "CVE-2025-38617",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
   },
   {
     "fecha": "2026-03-05",
