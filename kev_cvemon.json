@@ -11,13 +11,13 @@
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2025-25257",
-    "descripcion": "An improper neutralization of special elements used in an SQL command ('SQL Injection') vulnerability [CWE-89] vulnerability in Fortinet FortiWeb 7.6.0 through 7.6.3, FortiWeb 7.4.0 through 7.4.7, FortiWeb 7.2.0 through 7.2.10, FortiWeb 7.0.0 through 7.0.10 allows an ..."
+    "cve": "CVE-2025-38352",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2025-38352",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
+    "cve": "CVE-2025-25257",
+    "descripcion": "An improper neutralization of special elements used in an SQL command ('SQL Injection') vulnerability [CWE-89] vulnerability in Fortinet FortiWeb 7.6.0 through 7.6.3, FortiWeb 7.4.0 through 7.4.7, FortiWeb 7.2.0 through 7.2.10, FortiWeb 7.0.0 through 7.0.10 allows an ..."
   },
   {
     "fecha": "2026-03-06",
@@ -31,22 +31,22 @@
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2025-70341",
-    "descripcion": "Insecure permissions in App-Auto-Patch v3.4.2 create a race condition which allows attackers to write arbitrary files."
-  },
-  {
-    "fecha": "2026-03-06",
     "cve": "CVE-2025-13350",
     "descripcion": "Ubuntu Linux 6.8 GA retains the legacy AF_UNIX garbage collector but backports upstream commit 8594d9b85c07 (\"af_unix: Don’t call skb_get() for OOB skb\"). When orphaned MSG_OOB sockets hit unix_gc(), the garbage collector still calls kfree_skb() as if OOB SKBs held two ..."
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2025-38617",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
+    "cve": "CVE-2025-70341",
+    "descripcion": "Insecure permissions in App-Auto-Patch v3.4.2 create a race condition which allows attackers to write arbitrary files."
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2025-70239",
-    "descripcion": "Stack buffer overflow vulnerability in D-Link DIR-513 v1.10 via the curTime parameter to goform/formSetWAN_Wizard55."
+    "cve": "CVE-2024-50629",
+    "descripcion": "Improper encoding or escaping of output vulnerability in the webapi component in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.1.1-42962-7, 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allow remote attackers to read limited files ..."
+  },
+  {
+    "fecha": "2026-03-06",
+    "cve": "CVE-2025-38617",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
   }
 ]

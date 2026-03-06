@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2026-3616",
-    "descripcion": "A vulnerability was detected in DefaultFuction Jeson Customer Relationship Management System 1.0.0. Impacted is an unknown function of the file /modules/customers/edit.php. Performing a manipulation of the argument ID results in sql injection. The attack may be initiated remotely. The exploit is now public and may be used. The patch is named f0e991870e9d33701cca3a1d0fd4eec135af01a6. It is suggested to install a patch to address this issue. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-29084",
+    "descripcion": "Gokapi is a self-hosted file sharing server with automatic expiration and encryption support. Prior to version 2.2.3, the login flow accepts credential-bearing requests without CSRF protection mechanisms tied to the browser session context. The handler parses form values directly and creates a session on successful credential validation. This issue has been patched in version 2.2.3. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2026-3613",
-    "descripcion": "A vulnerability was identified in Wavlink WL-NU516U1 V240425. This vulnerability affects the function sub_401A0C of the file /cgi-bin/login.cgi. Such manipulation of the argument ipaddr leads to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:M/C:C/I:C/A:C Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-29061",
+    "descripcion": "Gokapi is a self-hosted file sharing server with automatic expiration and encryption support. Prior to version 2.2.3, a privilege escalation vulnerability in the user rank demotion logic allows a demoted user&#39;s existing API keys to retain ApiPermManageFileRequests and ApiPermManageLogs permissions, enabling continued access to upload-request management and log viewing endpoints after the user has been stripped of all privileges. This issue has been patched in version 2.2.3. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2026-3612",
-    "descripcion": "A vulnerability was determined in Wavlink WL-NU516U1 V240425. This affects the function sub_405AF4 of the file /cgi-bin/adm.cgi of the component OTA Online Upgrade. This manipulation of the argument firmware_url causes command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:M/C:C/I:C/A:C Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-29060",
+    "descripcion": "Gokapi is a self-hosted file sharing server with automatic expiration and encryption support. Prior to version 2.2.3, a registered user without privileges to create or modify file requests is able to create a short-lived API key that has the permission to do so. The user must be registered with Gokapi. If there are no users with access to the admin/upload menu, there is no impact. This issue has been patched in version 2.2.3. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-06",
-    "cve": "CVE-2026-3610",
-    "descripcion": "A vulnerability was found in HSC Cybersecurity Mailinspector up to 5.3.2-3. Affected by this issue is some unknown functionality of the file /mailinspector/mliUserValidation.php of the component URL Handler. The manipulation of the argument error_description results in cross site scripting. The attack may be performed from remote. The exploit has been made public and could be used. Upgrading to version 5.4.0 can resolve this issue. You should upgrade the affected component. The vendor was contacted early and responded very professional: &#34;We have already implemented the fix and made a hotfix available to affected customers, ensuring mitigation while the official release 5.4.0 has not yet been published. This allows customers to address the issue immediately, outside the regular release cycle.&#34; 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-28794",
+    "descripcion": "oRPC is an tool that helps build APIs that are end-to-end type-safe and adhere to OpenAPI standards. Prior to version 1.13.6, a prototype pollution vulnerability exists in the RPC JSON deserializer of the @orpc/client package. The vulnerability allows unauthenticated, remote attackers to inject arbitrary properties into the global Object.prototype. Because this pollution persists for the lifetime of the Node.js process and affects all objects, it can lead to severe security breaches, including authentication bypass, denial of service, and potentially Remote Code Execution. This issue has been patched in version 1.13.6. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-03-05",
-    "cve": "CVE-2026-2589",
-    "descripcion": "The Greenshift – animation and page builder blocks plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 12.8.3 via the automated Settings Backup stored in a publicly accessible file. This makes it possible for unauthenticated attackers to extract sensitive data including the configured OpenAI, Claude, Google Maps, Gemini, DeepSeek, and Cloudflare Turnstile API keys. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-03-06",
+    "cve": "CVE-2026-28787",
+    "descripcion": "OneUptime is a solution for monitoring and managing online services. In version 10.0.11 and prior, the WebAuthn authentication implementation does not store the challenge on the server side. Instead, the challenge is returned to the client and accepted back from the client request body during verification. This violates the WebAuthn specification (W3C Web Authentication Level 2, §13.4.3) and allows an attacker who has obtained a valid WebAuthn assertion (e.g., via XSS, MitM, or log exposure) to replay it indefinitely, completely bypassing the second-factor authentication. No known patches are available. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-03-05",
-    "cve": "CVE-2026-28727",
-    "descripcion": "Local privilege escalation due to insecure Unix socket permissions. The following products are affected: Acronis Cyber Protect 17 (macOS) before build 41186, Acronis Cyber Protect Cloud Agent (macOS) before build 41124. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-03-06",
+    "cve": "CVE-2026-28785",
+    "descripcion": "Ghostfolio is an open source wealth management software. Prior to version 2.244.0, by bypassing symbol validation, an attacker can execute arbitrary SQL commands via the getHistorical() method, potentially allowing them to read, modify, or delete sensitive financial data for all users in the database. This issue has been patched in version 2.244.0. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-03-05",
-    "cve": "CVE-2026-28726",
-    "descripcion": "Sensitive information disclosure due to improper access control. The following products are affected: Acronis Cyber Protect 17 (Linux, Windows) before build 41186. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-03-06",
+    "cve": "CVE-2026-28685",
+    "descripcion": "Kimai is a web-based multi-user time-tracking application. Prior to version 2.51.0, &#34;GET /api/invoices/{id}&#34; only checks the role-based view_invoice permission but does not verify the requesting user has access to the invoice&#39;s customer. Any user with ROLE_TEAMLEAD (which grants view_invoice) can read all invoices in the system, including those belonging to customers assigned to other teams. This issue has been patched in version 2.51.0. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-05",
-    "cve": "CVE-2026-28725",
-    "descripcion": "Sensitive information disclosure due to improper configuration of a headless browser. The following products are affected: Acronis Cyber Protect 17 (Linux, Windows) before build 41186. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-03-06",
+    "cve": "CVE-2026-28683",
+    "descripcion": "Gokapi is a self-hosted file sharing server with automatic expiration and encryption support. Prior to version 2.2.3, if a malicious authenticated user uploads SVG and creates a hotlink for it, they can achieve stored XSS. This issue has been patched in version 2.2.3. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-03-05",
-    "cve": "CVE-2026-28724",
-    "descripcion": "Unauthorized data access due to insufficient access control validation. The following products are affected: Acronis Cyber Protect 17 (Linux, Windows) before build 41186. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-03-06",
+    "cve": "CVE-2026-28682",
+    "descripcion": "Gokapi is a self-hosted file sharing server with automatic expiration and encryption support. Prior to version 2.2.3, the upload status SSE implementation on /uploadStatus publishes global upload state to any authenticated listener and includes file_id values that are not scoped to the requesting user. This issue has been patched in version 2.2.3. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-05",
-    "cve": "CVE-2026-28723",
-    "descripcion": "Unauthorized report deletion due to insufficient access control. The following products are affected: Acronis Cyber Protect 17 (Linux, Windows) before build 41186. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-03-06",
+    "cve": "CVE-2026-28681",
+    "descripcion": "Internet Routing Registry daemon version 4 is an IRR database server, processing IRR objects in the RPSL format. From version 4.4.0 to before version 4.4.5 and from version 4.5.0 to before version 4.5.1, an attacker can manipulate the HTTP Host header on a password reset or account creation request. The confirmation link in the resulting email can then point to an attacker-controlled domain. Opening the link in the email is sufficient to pass the token to the attacker, who can then use it on the real IRRD instance to take over the account. A compromised account can then be used to modify RPSL objects maintained by the account&#39;s mntners and perform other account actions. If the user had two-factor authentication configured, which is required for users with override access, an attacker is not able to log in, even after successfully resetting the password. This issue has been patched in versions 4.4.5 and 4.5.1. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
