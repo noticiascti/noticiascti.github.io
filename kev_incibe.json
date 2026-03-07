@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-03-07",
+    "cve": "CVE-2026-30822",
+    "descripcion": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.0.13, unauthenticated users can inject arbitrary values into internal database fields when creating leads. This issue has been patched in version 3.0.13. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-30821",
+    "descripcion": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.0.13, the /api/v1/attachments/:chatflowId/:chatId endpoint is listed in WHITELIST_URLS, allowing unauthenticated access to the file upload API. While the server validates uploads based on the MIME types defined in chatbotConfig.fullFileUpload.allowedUploadFileTypes, it implicitly trusts the client-provided Content-Type header (file.mimetype) without verifying the file&#39;s actual content (magic bytes) or extension (file.originalname). Consequently, an attacker can bypass this restriction by spoofing the Content-Type as a permitted type (e.g., application/pdf) while uploading malicious scripts or arbitrary files. Once uploaded via addArrayFilesToStorage, these files persist in backend storage (S3, GCS, or local disk). This vulnerability serves as a critical entry point that, when chained with other features like static hosting or file retrieval, can lead to Stored XSS, malicious file hosting, or Remote Code Execution (RCE). This issue has been patched in version 3.0.13. 07/03/2026 07/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-30820",
+    "descripcion": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.0.13, Flowise trusts any HTTP client that sets the header x-request-from: internal, allowing an authenticated tenant session to bypass all /api/v1/** authorization checks. With only a browser cookie, a low-privilege tenant can invoke internal administration endpoints (API key management, credential stores, custom function execution, etc.), effectively escalating privilege. This issue has been patched in version 3.0.13. 07/03/2026 07/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-30247",
+    "descripcion": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. Prior to version 0.2.12, the application&#39;s &#34;Import document via URL&#34; feature is vulnerable to Server-Side Request Forgery (SSRF) through HTTP redirects. While the backend implements comprehensive URL validation (blocking private IPs, loopback addresses, reserved hostnames, and cloud metadata endpoints), it fails to validate redirect targets. An attacker can bypass all protections by using a redirect chain, forcing the server to access internal services. Additionally, Docker-specific internal addresses like host.docker.internal are not blocked. This issue has been patched in version 0.2.12. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-07",
     "cve": "CVE-2026-3352",
     "descripcion": "The Easy PHP Settings plugin for WordPress is vulnerable to PHP Code Injection in all versions up to, and including, 1.0.4 via the `update_wp_memory_constants()` method. This is due to insufficient input validation on the `wp_memory_limit` and `wp_max_memory_limit` settings before writing them to `wp-config.php`. The `sanitize_text_field()` function used for sanitization does not filter single quotes, allowing an attacker to break out of the string context in a PHP `define()` statement. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject and execute arbitrary PHP code on the server by modifying `wp-config.php`, which is loaded on every page request. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-03-07",
     "cve": "CVE-2026-2431",
     "descripcion": "The CM Custom Reports plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;date_from&#39; and &#39;date_to&#39; parameters in all versions up to, and including, 1.2.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-07",
-    "cve": "CVE-2026-2429",
-    "descripcion": "The Community Events plugin for WordPress is vulnerable to SQL Injection via the &#39;ce_venue_name&#39; CSV field in the `on_save_changes_venues` function in all versions up to, and including, 1.5.8. This is due to insufficient escaping on the user-supplied CSV data and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a crafted CSV file upload. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-07",
-    "cve": "CVE-2026-2020",
-    "descripcion": "The JS Archive List plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.1.7 via the &#39;included&#39; shortcode attribute. This is due to the deserialization of untrusted input supplied via the &#39;included&#39; parameter of the plugin&#39;s shortcode. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software. If a POP chain is present via an additional plugin or theme installed on the target system, it could allow the attacker to delete arbitrary files, retrieve sensitive data, or execute code. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-07",
-    "cve": "CVE-2026-1902",
-    "descripcion": "The Hammas Calendar plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;apix&#39; parameter in the &#39;hp-calendar-manage-redirect&#39; shortcode in all versions up to, and including, 1.5.11 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-07",
-    "cve": "CVE-2026-1650",
-    "descripcion": "The MDJM Event Management plugin for WordPress is vulnerable to unauthorized data modification due to a missing capability check on the &#39;custom_fields_controller&#39; function in all versions up to, and including, 1.7.8.1. This makes it possible for unauthenticated attackers to delete arbitrary custom event fields via the &#39;delete_custom_field&#39; and &#39;id&#39; parameters. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
