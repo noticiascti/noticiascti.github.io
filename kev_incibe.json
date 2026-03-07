@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-3233",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 07/03/2026 07/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-3352",
+    "descripcion": "The Easy PHP Settings plugin for WordPress is vulnerable to PHP Code Injection in all versions up to, and including, 1.0.4 via the `update_wp_memory_constants()` method. This is due to insufficient input validation on the `wp_memory_limit` and `wp_max_memory_limit` settings before writing them to `wp-config.php`. The `sanitize_text_field()` function used for sanitization does not filter single quotes, allowing an attacker to break out of the string context in a PHP `define()` statement. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject and execute arbitrary PHP code on the server by modifying `wp-config.php`, which is loaded on every page request. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-30244",
-    "descripcion": "Plane is an an open-source project management tool. Prior to version 1.2.2, unauthenticated attackers can enumerate workspace members and extract sensitive information including email addresses, user roles, and internal identifiers. The vulnerability stems from Django REST Framework permission classes being incorrectly configured to allow anonymous access to protected endpoints. This issue has been patched in version 1.2.2. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-2722",
+    "descripcion": "The Stock Ticker plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 3.26.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-30242",
-    "descripcion": "Plane is an an open-source project management tool. Prior to version 1.2.3, the webhook URL validation in plane/app/serializers/webhook.py only checks ip.is_loopback, allowing attackers with workspace ADMIN role to create webhooks pointing to private/internal network addresses (10.x.x.x, 172.16.x.x, 192.168.x.x, 169.254.169.254, etc.). When webhook events fire, the server makes requests to these internal addresses and stores the response — enabling SSRF with full response read-back. This issue has been patched in version 1.2.3. 06/03/2026 06/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-2721",
+    "descripcion": "The MailArchiver plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 4.4.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-30241",
-    "descripcion": "Mercurius is a GraphQL adapter for Fastify. Prior to version 16.8.0, Mercurius fails to enforce the configured queryDepth limit on GraphQL subscription queries received over WebSocket connections. The depth check is correctly applied to HTTP queries and mutations, but subscription queries are parsed and executed without invoking the depth validation. This allows a remote client to submit arbitrarily deeply nested subscription queries over WebSocket, bypassing the intended depth restriction. On schemas with recursive types, this can lead to denial of service through exponential data resolution on each subscription event. This issue has been patched in version 16.8.0. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-2494",
+    "descripcion": "The ProfileGrid – User Profiles, Groups and Communities plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 5.9.8.2. This is due to missing nonce validation on the membership request management page (approve and decline actions). This makes it possible for unauthenticated attackers to approve or deny group membership requests via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-30238",
-    "descripcion": "Group-Office is an enterprise customer relationship management and groupware tool. Prior to versions 6.8.155, 25.0.88, and 26.0.10, there is a reflected XSS vulnerability in GroupOffice on the external/index flow. The f parameter (Base64 JSON) is decoded and then injected into an inline JavaScript block without strict escaping, allowing ... injection and arbitrary JavaScript execution in the victim&#39;s browser. This issue has been patched in versions 6.8.155, 25.0.88, and 26.0.10. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-2488",
+    "descripcion": "The ProfileGrid – User Profiles, Groups and Communities plugin for WordPress is vulnerable to unauthorized message deletion due to a missing capability check on the pg_delete_msg() function in all versions up to, and including, 5.9.8.1. This is due to the function not verifying that the requesting user has permission to delete the targeted message. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary messages belonging to any user by sending a direct request with a valid message ID (mid parameter). 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-30237",
-    "descripcion": "Group-Office is an enterprise customer relationship management and groupware tool. Prior to versions 6.8.155, 25.0.88, and 26.0.10, there is a reflected XSS vulnerability in the GroupOffice installer, endpoint install/license.php. The POST field license is rendered without escaping inside a , allowing a ... breakout.. This issue has been patched in versions 6.8.155, 25.0.88, and 26.0.10. 06/03/2026 06/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-2431",
+    "descripcion": "The CM Custom Reports plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;date_from&#39; and &#39;date_to&#39; parameters in all versions up to, and including, 1.2.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-27142",
-    "descripcion": "Actions which insert URLs into the content attribute of HTML meta tags are not escaped. This can allow XSS if the meta tag also has an http-equiv attribute with the value &#34;refresh&#34;. A new GODEBUG setting has been added, htmlmetacontenturlescape, which can be used to disable escaping URLs in actions in the meta content attribute which follow &#34;url=&#34; by setting htmlmetacontenturlescape=0. 06/03/2026 06/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-2429",
+    "descripcion": "The Community Events plugin for WordPress is vulnerable to SQL Injection via the &#39;ce_venue_name&#39; CSV field in the `on_save_changes_venues` function in all versions up to, and including, 1.5.8. This is due to insufficient escaping on the user-supplied CSV data and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via a crafted CSV file upload. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-27139",
-    "descripcion": "On Unix platforms, when listing the contents of a directory using File.ReadDir or File.Readdir the returned FileInfo could reference a file outside of the Root in which the File was opened. The impact of this escape is limited to reading metadata provided by lstat from arbitrary locations on the filesystem without permitting reading or writing files outside the root. 06/03/2026 06/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-2020",
+    "descripcion": "The JS Archive List plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.1.7 via the &#39;included&#39; shortcode attribute. This is due to the deserialization of untrusted input supplied via the &#39;included&#39; parameter of the plugin&#39;s shortcode. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software. If a POP chain is present via an additional plugin or theme installed on the target system, it could allow the attacker to delete arbitrary files, retrieve sensitive data, or execute code. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-27138",
-    "descripcion": "Certificate verification can panic when a certificate in the chain has an empty DNS name and another certificate in the chain has excluded name constraints. This can crash programs that are either directly verifying X.509 certificate chains, or those that use TLS. 06/03/2026 06/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-1902",
+    "descripcion": "The Hammas Calendar plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;apix&#39; parameter in the &#39;hp-calendar-manage-redirect&#39; shortcode in all versions up to, and including, 1.5.11 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-03-06",
-    "cve": "CVE-2026-27137",
-    "descripcion": "When verifying a certificate chain which contains a certificate containing multiple email address constraints which share common local portions but different domain portions, these constraints will not be properly applied, and only the last constraint will be considered. 06/03/2026 06/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-1650",
+    "descripcion": "The MDJM Event Management plugin for WordPress is vulnerable to unauthorized data modification due to a missing capability check on the &#39;custom_fields_controller&#39; function in all versions up to, and including, 1.7.8.1. This makes it possible for unauthenticated attackers to delete arbitrary custom event fields via the &#39;delete_custom_field&#39; and &#39;id&#39; parameters. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
