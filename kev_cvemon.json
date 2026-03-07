@@ -6,11 +6,6 @@
   },
   {
     "fecha": "2026-03-07",
-    "cve": "CVE-2025-38352",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
-  },
-  {
-    "fecha": "2026-03-07",
     "cve": "CVE-2024-23225",
     "descripcion": "A memory corruption issue was addressed with improved validation. This issue is fixed in iOS 16.7.6 and iPadOS 16.7.6, iOS 17.4 and iPadOS 17.4. An attacker with arbitrary kernel read and write capability may be able to bypass kernel memory protections. Apple is aware of a ..."
   },
@@ -41,8 +36,13 @@
   },
   {
     "fecha": "2026-03-07",
-    "cve": "CVE-2024-30085",
-    "descripcion": "Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability"
+    "cve": "CVE-2025-13350",
+    "descripcion": "Ubuntu Linux 6.8 GA retains the legacy AF_UNIX garbage collector but backports upstream commit 8594d9b85c07 (\"af_unix: Don’t call skb_get() for OOB skb\"). When orphaned MSG_OOB sockets hit unix_gc(), the garbage collector still calls kfree_skb() as if OOB SKBs held two ..."
+  },
+  {
+    "fecha": "2026-03-07",
+    "cve": "CVE-2025-38352",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
   },
   {
     "fecha": "2026-03-07",

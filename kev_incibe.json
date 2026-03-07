@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-03-07",
+    "cve": "CVE-2026-2219",
+    "descripcion": "It was discovered that dpkg-deb (a component of dpkg, the Debian package management system) does not properly validate the end of the data stream when uncompressing a zstd-compressed .deb archive, which may result in denial of service (infinite loop spinning the CPU). 07/03/2026 07/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-24308",
+    "descripcion": "Improper handling of configuration values in ZKConfig in Apache ZooKeeper 3.8.5 and 3.9.4 on all platforms allows an attacker to expose sensitive information stored in client configuration in the client&#39;s logfile. Configuration values are exposed at INFO level logging rendering potential production systems affected by the issue. Users are recommended to upgrade to version 3.8.6 or 3.9.5 which fixes this issue. 07/03/2026 07/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-07",
+    "cve": "CVE-2026-24281",
+    "descripcion": "Hostname verification in Apache ZooKeeper ZKTrustManager falls back to reverse DNS (PTR) when IP SAN validation fails, allowing attackers who control or spoof PTR records to impersonate ZooKeeper servers or clients with a valid certificate for the PTR name. It&#39;s important to note that attacker must present a certificate which is trusted by ZKTrustManager which makes the attack vector harder to exploit. Users are recommended to upgrade to version 3.8.6 or 3.9.5, which fixes this issue by introducing a new configuration option to disable reverse DNS lookup in client and quorum protocols. 07/03/2026 07/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-07",
     "cve": "CVE-2026-2433",
     "descripcion": "The RSS Aggregator – RSS Import, News Feeds, Feed to Post, and Autoblogging plugin for WordPress is vulnerable to DOM-Based Cross-Site Scripting via postMessage in all versions up to, and including, 5.0.11. This is due to the plugin&#39;s admin-shell.js registering a global message event listener without origin validation (missing event.origin check) and directly passing user-controlled URLs to window.open() without URL scheme validation. This makes it possible for unauthenticated attackers to execute arbitrary JavaScript in the context of an authenticated administrator&#39;s session by tricking them into visiting a malicious website that sends crafted postMessage payloads to the plugin&#39;s admin page. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-03-07",
     "cve": "CVE-2026-1805",
     "descripcion": "The DA Media GigList plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s damedia_giglist shortcode in all versions up to, and including, 1.9.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-07",
-    "cve": "CVE-2026-1574",
-    "descripcion": "The MyQtip – easy qTip2 plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s `myqtip` shortcode in all versions up to, and including, 2.0.5 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-07",
-    "cve": "CVE-2026-1569",
-    "descripcion": "The Wueen plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s `wueen-blocket` shortcode in all versions up to, and including, 0.2.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-07",
-    "cve": "CVE-2026-1087",
-    "descripcion": "The Guardian News Feed plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.2. This is due to missing nonce validation on the settings update functionality. This makes it possible for unauthenticated attackers to modify the plugin&#39;s settings, including the Guardian API key, via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 07/03/2026 07/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
