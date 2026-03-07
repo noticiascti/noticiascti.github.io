@@ -36,11 +36,6 @@
   },
   {
     "fecha": "2026-03-07",
-    "cve": "CVE-2025-13350",
-    "descripcion": "Ubuntu Linux 6.8 GA retains the legacy AF_UNIX garbage collector but backports upstream commit 8594d9b85c07 (\"af_unix: Don’t call skb_get() for OOB skb\"). When orphaned MSG_OOB sockets hit unix_gc(), the garbage collector still calls kfree_skb() as if OOB SKBs held two ..."
-  },
-  {
-    "fecha": "2026-03-07",
     "cve": "CVE-2025-38352",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: posix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del() If an exiting non-autoreaping task has already passed exit_notify() and calls handle_posix_cpu_timers() from IRQ, it can ..."
   },
@@ -48,5 +43,10 @@
     "fecha": "2026-03-07",
     "cve": "CVE-2025-36911",
     "descripcion": "In key-based pairing, there is a possible ID due to a logic error in the code. This could lead to remote (proximal/adjacent) information disclosure of user's conversations and location with no additional execution privileges needed. User interaction is not needed for ..."
+  },
+  {
+    "fecha": "2026-03-07",
+    "cve": "CVE-2025-13350",
+    "descripcion": "Ubuntu Linux 6.8 GA retains the legacy AF_UNIX garbage collector but backports upstream commit 8594d9b85c07 (\"af_unix: Don’t call skb_get() for OOB skb\"). When orphaned MSG_OOB sockets hit unix_gc(), the garbage collector still calls kfree_skb() as if OOB SKBs held two ..."
   }
 ]
