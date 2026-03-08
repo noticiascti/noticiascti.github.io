@@ -26,13 +26,13 @@
   },
   {
     "fecha": "2026-03-08",
-    "cve": "CVE-2025-14174",
-    "descripcion": "Out of bounds memory access in ANGLE in Google Chrome on Mac prior to 143.0.7499.110 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)"
+    "cve": "CVE-2025-43529",
+    "descripcion": "A use-after-free issue was addressed with improved memory management. This issue is fixed in watchOS 26.2, Safari 26.2, iOS 18.7.3 and iPadOS 18.7.3, iOS 26.2 and iPadOS 26.2, macOS Tahoe 26.2, visionOS 26.2, tvOS 26.2. Processing maliciously crafted web content may lead to ..."
   },
   {
     "fecha": "2026-03-08",
-    "cve": "CVE-2025-43529",
-    "descripcion": "A use-after-free issue was addressed with improved memory management. This issue is fixed in watchOS 26.2, Safari 26.2, iOS 18.7.3 and iPadOS 18.7.3, iOS 26.2 and iPadOS 26.2, macOS Tahoe 26.2, visionOS 26.2, tvOS 26.2. Processing maliciously crafted web content may lead to ..."
+    "cve": "CVE-2025-14174",
+    "descripcion": "Out of bounds memory access in ANGLE in Google Chrome on Mac prior to 143.0.7499.110 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)"
   },
   {
     "fecha": "2026-03-08",
@@ -46,7 +46,7 @@
   },
   {
     "fecha": "2026-03-08",
-    "cve": "CVE-2025-13350",
-    "descripcion": "Ubuntu Linux 6.8 GA retains the legacy AF_UNIX garbage collector but backports upstream commit 8594d9b85c07 (\"af_unix: Don’t call skb_get() for OOB skb\"). When orphaned MSG_OOB sockets hit unix_gc(), the garbage collector still calls kfree_skb() as if OOB SKBs held two ..."
+    "cve": "CVE-2025-66168",
+    "descripcion": "Apache ActiveMQ does not properly validate the remaining length field which may lead to an overflow during the decoding of malformed packets. When this integer overflow occurs, ActiveMQ may incorrectly compute the total Remaining Length and subsequently misinterpret the payload ..."
   }
 ]
