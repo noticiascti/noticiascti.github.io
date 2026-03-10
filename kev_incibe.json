@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-70037",
-    "descripcion": "An issue pertaining to CWE-601: URL Redirection to Untrusted Site was discovered in linagora Twake v2023.Q1.1223. This allows attackers to obtain sensitive information and execute arbitrary code. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-25041",
+    "descripcion": "Budibase is a low code platform for creating internal tools, workflows, and admin panels. In 3.23.22 and earlier, the PostgreSQL integration constructs shell commands using user-controlled configuration values (database name, host, password, etc.) without proper sanitization. The password and other connection parameters are directly interpolated into a shell command. This affects packages/server/src/integrations/postgres.ts. 09/03/2026 09/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-15568",
-    "descripcion": "A command injection vulnerability was identified in the web module of Archer AXE75 v1.6/v1.0 router. An authenticated attacker with adjacent-network access may be able to perform remote code execution (RCE) when the router is configured with sysmode=ap. Successful exploitation results in root-level privileges and impacts confidentiality, integrity and availability of the device. This issue affects Archer AXE75 v1.6/v1.0: through 1.3.2 Build 20250107. 09/03/2026 09/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-0846",
+    "descripcion": "A vulnerability in the `filestring()` function of the `nltk.util` module in nltk version 3.9.2 allows arbitrary file read due to improper validation of input paths. The function directly opens files specified by user input without sanitization, enabling attackers to access sensitive system files by providing absolute paths or traversal paths. This vulnerability can be exploited locally or remotely, particularly in scenarios where the function is used in web APIs or other interfaces that accept user-supplied input. 09/03/2026 09/03/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2026-3588",
-    "descripcion": "A server-side request forgery (SSRF) vulnerability in IKEA Dirigera v2.866.4 allows an attacker to exfiltrate private keys by sending a crafted request. 09/03/2026 09/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-70031",
+    "descripcion": "An issue pertaining to CWE-352: Cross-Site Request Forgery was discovered in Sunbird-Ed SunbirdEd-portal v1.13.4. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2026-25866",
-    "descripcion": "MobaXterm versions prior to 26.1 contain an uncontrolled search path element vulnerability. The application calls WinExec to execute Notepad++ without a fully qualified executable path when opening remote files. An attacker can exploit the search path behavior by placing a malicious executable earlier in the search order, resulting in arbitrary code execution in the context of the affected user. 09/03/2026 09/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-70030",
+    "descripcion": "An issue pertaining to CWE-1333: Inefficient Regular Expression Complexity (4.19) was discovered in Sunbird-Ed SunbirdEd-portal v1.13.4. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-70060",
-    "descripcion": "An issue pertaining to CWE-79: Improper Neutralization of Input During Web Page Generation was discovered in YMFE yapi v1.12.0. 09/03/2026 09/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-68402",
+    "descripcion": "FreshRSS is a free, self-hostable RSS aggregator. From 57e1a37 - 00f2f04, the lengths of the nonce was changed from 40 chars to 64. password_verify() is currently being called with a constructed string (SHA-256 nonce + part of a bcrypt hash) instead of the raw user password. Due to bcrypt’s 72-byte input truncation, this causes password verification to succeed even when the user enters an incorrect password. This vulnerability is fixed in 1.27.2-dev (476e57b). The issue was only present in the edge branch and never in a stable release. 09/03/2026 09/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-70047",
-    "descripcion": "An issue pertaining to CWE-400: Uncontrolled Resource Consumption was discovered in Nexusoft NexusInterface v3.2.0-beta.2. 09/03/2026 09/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-62166",
+    "descripcion": "FreshRSS is a free, self-hostable RSS aggregator. Prior 1.28.0, a bug in the auth logic related to master authentication tokens, this restriction is bypassed. Usually only the default user&#39;s feed should be viewable if anonymous viewing is enabled, and feeds of other users should be private. This vulnerability is fixed in 1.28.0. 09/03/2026 09/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-70040",
-    "descripcion": "An issue pertaining to CWE-532: Insertion of Sensitive Information into Log File was discovered in LupinLin1 jimeng-web-mcp v2.1.2. This allows an attacker to obtain sensitive information. 09/03/2026 09/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3638",
+    "descripcion": "Improper access control in user and role restore API endpoints in Devolutions Server 2025.3.11.0 and earlier allows a low-privileged authenticated user to restore deleted users and roles via crafted API requests. 09/03/2026 09/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-70050",
-    "descripcion": "An issue pertaining to CWE-312: Cleartext Storage of Sensitive Information was discovered in lesspass lesspass v9.6.9 which allows attackers to obtain sensitive information. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-30140",
+    "descripcion": "An incorrect access control vulnerability exists in Tenda W15E V02.03.01.26_cn. An unauthenticated attacker can access the /cgi-bin/DownloadCfg/RouterCfm.jpg endpoint to download the configuration file containing plaintext administrator credentials, leading to sensitive information disclosure and potential remote administrative access. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-70048",
-    "descripcion": "An issue pertaining to CWE-319: Cleartext Transmission of Sensitive Information was discovered in Nexusoft NexusInterface v3.2.0-beta.2. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-70032",
+    "descripcion": "An issue pertaining to CWE-601: URL Redirection to Untrusted Site was discovered in Sunbird-Ed SunbirdEd-portal v1.13.4. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-09",
-    "cve": "CVE-2025-70046",
-    "descripcion": "An issue pertaining to CWE-829: Inclusion of Functionality from Untrusted Control Sphere was discovered in Miazzy oa-front-service master. 09/03/2026 09/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-29023",
+    "descripcion": "Keygraph Shannon contains a hard-coded API key in its router configuration that, when the router component is enabled and exposed, allows network attackers to authenticate using the publicly known static key. An attacker able to reach the router port can proxy requests through the Shannon instance using the victim’s configured upstream provider API credentials, resulting in unauthorized API usage and potential disclosure of proxied request and response data. This vulnerability&#39;s general exploitability has been mitigated with the introduction of commit 023cc95. 09/03/2026 09/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
