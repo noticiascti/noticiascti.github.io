@@ -16,6 +16,11 @@
   },
   {
     "fecha": "2026-03-10",
+    "cve": "CVE-2025-43300",
+    "descripcion": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 15.8.5 and iPadOS 15.8.5, iOS 16.7.12 and iPadOS 16.7.12. Processing a malicious image file may result in memory corruption. Apple is aware of a report that this issue may have ..."
+  },
+  {
+    "fecha": "2026-03-10",
     "cve": "CVE-2025-26399",
     "descripcion": "SolarWinds Web Help Desk was found to be susceptible to an unauthenticated AjaxProxy deserialization remote code execution vulnerability that, if exploited, would allow an attacker to run commands on the host machine. This vulnerability is a patch bypass of CVE-2024-28988, which ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-03-10",
     "cve": "CVE-2023-40238",
     "descripcion": "A LogoFAIL issue was discovered in BmpDecoderDxe in Insyde InsydeH2O with kernel 5.2 before 05.28.47, 5.3 before 05.37.47, 5.4 before 05.45.47, 5.5 before 05.53.47, and 5.6 before 05.60.47 for certain Lenovo devices. Image parsing of crafted BMP logo files can copy data to a ..."
-  },
-  {
-    "fecha": "2026-03-10",
-    "cve": "CVE-2025-38617",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
   }
 ]
