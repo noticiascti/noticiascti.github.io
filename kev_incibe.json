@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-3585",
-    "descripcion": "The The Events Calendar plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 6.15.17 via the &#39;ajax_create_import&#39; function. This makes it possible for authenticated attackers, with Author-level access and above, to read the contents of arbitrary files on the server, which can contain sensitive information. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-3370",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 10/03/2026 10/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30927",
-    "descripcion": "Admidio is an open-source user management solution. Prior to 5.0.6, in modules/events/events_function.php, the event participation logic allows any user who can participate in an event to register OTHER users by manipulating the user_uuid GET parameter. The condition uses || (OR), meaning if possibleToParticipate() returns true (event is open for participation), ANY user - not just leaders - can specify a different user_uuid and register/cancel participation for that user. The code then operates on $user->getValue(&#39;usr_id&#39;) (the target user from user_uuid) rather than the current user. This vulnerability is fixed in 5.0.6. 10/03/2026 10/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-28292",
+    "descripcion": "`simple-git`, an interface for running git commands in any node.js application, has an issue in versions 3.15.0 through 3.32.2 that allows an attacker to bypass two prior CVE fixes (CVE-2022-25860 and CVE-2022-25912) and achieve full remote code execution on the host machine. Version 3.23.0 contains an updated fix for the vulnerability. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30925",
-    "descripcion": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.0-alpha.14 and 8.6.11, a malicious client can subscribe to a LiveQuery with a crafted $regex pattern that causes catastrophic backtracking, blocking the Node.js event loop. This makes the entire Parse Server unresponsive, affecting all clients. Any Parse Server deployment with LiveQuery enabled is affected. The attacker only needs the application ID and JavaScript key, both of which are public in client-side apps. This only affects LiveQuery subscription matching, which evaluates regex in JavaScript on the Node.js event loop. Normal REST and GraphQL queries are not affected because their regex is evaluated by the database engine. This vulnerability is fixed in 9.5.0-alpha.14 and 8.6.11. 10/03/2026 10/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-27826",
+    "descripcion": "MCP Atlassian is a Model Context Protocol (MCP) server for Atlassian products (Confluence and Jira). Prior to version 0.17.0, an unauthenticated attacker who can reach the mcp-atlassian HTTP endpoint can force the server process to make outbound HTTP requests to an arbitrary attacker-controlled URL by supplying two custom HTTP headers without an `Authorization` header. No authentication is required. The vulnerability exists in the HTTP middleware and dependency injection layer — not in any MCP tool handler - making it invisible to tool-level code analysis. In cloud deployments, this could enable theft of IAM role credentials via the instance metadata endpoint (`169[.]254[.]169[.]254`). In any HTTP deployment it enables internal network reconnaissance and injection of attacker-controlled content into LLM tool results. Version 0.17.0 fixes the issue. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30921",
-    "descripcion": "OneUptime is a solution for monitoring and managing online services. Prior to 10.0.20, OneUptime Synthetic Monitors allow low-privileged project users to submit custom Playwright code that is executed on the oneuptime-probe service. In the current implementation, this untrusted code is run inside Node&#39;s vm and is given live host Playwright objects such as browser and page. This creates a distinct server-side RCE primitive: the attacker does not need the classic this.constructor.constructor(...) sandbox escape. Instead, the attacker can directly use the injected Playwright browser object to reach browser.browserType().launch(...) and spawn an arbitrary executable on the probe host/container. This vulnerability is fixed in 10.0.20. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-27281",
+    "descripcion": "DNG SDK versions 1.7.1 2471 and earlier are affected by an Integer Overflow or Wraparound vulnerability that could lead to application denial-of-service. An attacker could exploit this vulnerability to cause the application to crash or become unresponsive. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30920",
-    "descripcion": "OneUptime is a solution for monitoring and managing online services. Prior to 10.0.19, OneUptime&#39;s GitHub App callback trusts attacker-controlled state and installation_id values and updates Project.gitHubAppInstallationId with isRoot: true without validating that the caller is authorized for the target project. This allows an attacker to overwrite another project&#39;s GitHub App installation binding. Related GitHub endpoints also lack effective authorization, so a valid installation ID can be used to enumerate repositories and create CodeRepository records in an arbitrary project. This vulnerability is fixed in 10.0.19. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-27280",
+    "descripcion": "DNG SDK versions 1.7.1 2471 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30919",
-    "descripcion": "facileManager is a modular suite of web apps built with the sysadmin in mind. Prior to 6.0.4 , stored XSS (also known as persistent or second-order XSS) occurs when an application receives data from an untrusted source and includes that data in its subsequent HTTP responses in an unsafe manner. This vulnerability was found in the fmDNS module. This vulnerability is fixed in 6.0.4. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-27279",
+    "descripcion": "Substance3D - Stager versions 3.1.7 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30918",
-    "descripcion": "facileManager is a modular suite of web apps built with the sysadmin in mind. Prior to 6.0.4 , a reflected XSS occurs when an application receives data from an untrusted source and uses it in its HTTP responses in a way that could lead to vulnerabilities. It is possible to inject malicious JavaScript code into a URL by adding a script in a parameter. This vulnerability was found in the fmDNS module. The parameter that is vulnerable to an XSS attack is log_search_query. This vulnerability is fixed in 6.0.4. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-27277",
+    "descripcion": "Substance3D - Stager versions 3.1.7 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30917",
-    "descripcion": "Bucket is a MediaWiki extension to store and retrieve structured data on articles. Prior to 2.1.1, a stored XSS can be inserted into any Bucket table field that has a PAGE type, which will execute whenever a user views that table&#39;s corresponding Bucket namespace page. This vulnerability is fixed in 2.1.1. 10/03/2026 10/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:L/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-27276",
+    "descripcion": "Substance3D - Stager versions 3.1.7 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-30870",
-    "descripcion": "PowerSync Service is the server-side component of the PowerSync sync engine. In version 1.20.0, when using new sync streams with config.edition: 3, certain subquery filters were ignored when determining which data to sync to users. Depending on the sync stream configuration, this could result in authenticated users syncing data that should have been restricted. Only queries that gate synchronization using subqueries without partitioning the result set are affected. This vulnerability is fixed in 1.20.1. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-27275",
+    "descripcion": "Substance3D - Stager versions 3.1.7 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-10",
-    "cve": "CVE-2026-2364",
-    "descripcion": "If a legitimate user confirms a self-update prompt or initiate an installation of a CODESYS Development System, a low privileged local attacker can gain elevated rights due to a TOCTOU vulnerability in the CODESYS installer. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-27274",
+    "descripcion": "Substance3D - Stager versions 3.1.7 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 10/03/2026 10/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
