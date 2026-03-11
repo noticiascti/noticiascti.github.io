@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-2324",
-    "descripcion": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 5.2.7. This is due to missing or incorrect nonce validation on the reload_preview() function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-2413",
+    "descripcion": "The Ally – Web Accessibility & Usability plugin for WordPress is vulnerable to SQL Injection via the URL path in all versions up to, and including, 4.0.3. This is due to insufficient escaping on the user-supplied URL parameter in the `get_global_remediations()` method, where it is directly concatenated into an SQL JOIN clause without proper sanitization for SQL context. While `esc_url_raw()` is applied for URL safety, it does not prevent SQL metacharacters (single quotes, parentheses) from being injected. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database via time-based blind SQL injection techniques. The Remediation module must be active, which requires the plugin to be connected to an Elementor account. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-1781",
-    "descripcion": "The MC4WP: Mailchimp for WordPress plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 4.11.1. This is due to the plugin trusting the `_mc4wp_action` POST parameter without validation, allowing unauthenticated attackers to force the form to process unsubscribe actions instead of subscribe actions. This makes it possible for unauthenticated attackers to arbitrarily unsubscribe any email address from the connected Mailchimp audience via the `_mc4wp_action` parameter, granted they can obtain the form ID (which is publicly exposed in the HTML source). 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-13067",
+    "descripcion": "The Royal Addons for Elementor plugin for WordPress is vulnerable to arbitrary file upload in all versions up to, and including, 1.7.1049. This is due to insufficient file type validation detecting files named main.php, allowing a file with such a name to bypass sanitization. This makes it possible for authenticated attackers, with author-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2025-12473",
-    "descripcion": "The RTMKit plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;themebuilder&#39; parameter in all versions up to, and including, 1.6.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a site administrator into performing an action such as clicking on a link. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-29515",
+    "descripcion": "MiCode FileExplorer contains an authentication bypass vulnerability in the embedded SwiFTP FTP server component that allows network attackers to log in without valid credentials. Attackers can send arbitrary username and password combinations to the PASS command handler, which unconditionally grants access and allows listing, reading, writing, and deleting files exposed by the FTP server. The MiCode/Explorer open source project has reached end-of-life status. 11/03/2026 11/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-27266",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23817",
+    "descripcion": "A vulnerability in the web-based management interface of AOS-CX Switches could allow an unauthenticated remote attacker to redirect users to an arbitrary URL. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-27265",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23816",
+    "descripcion": "A vulnerability in the command line interface of AOS-CX Switches could allow an authenticated remote attacker to execute arbitrary commands on the underlying operating system. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-27264",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23815",
+    "descripcion": "A vulnerability in a custom binary used in AOS-CX Switches&#39; CLI could allow an authenticated remote attacker with high privileges to perform command injection. Successful exploitation could allow an attacker to execute unauthorized commands. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-27263",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23814",
+    "descripcion": "A vulnerability in the command parameters of a certain AOS-CX CLI command could allow a low-privilege authenticated remote attacker to inject malicious commands resulting in unwanted behavior. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-27262",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23813",
+    "descripcion": "A vulnerability has been identified in the web-based management interface of AOS-CX switches that could potentially allow an unauthenticated remote actor to circumvent existing authentication controls. In some cases this could enable resetting the admin password. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-27261",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3453",
+    "descripcion": "The ProfilePress plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 4.16.11. This is due to missing ownership validation on the change_plan_sub_id parameter in the process_checkout() function. The ppress_process_checkout AJAX handler accepts a user-controlled subscription ID intended for plan upgrades, loads the subscription record, and cancels/expires it without verifying the subscription belongs to the requesting user. This makes it possible for authenticated attackers, with Subscriber-level access and above, to cancel and expire any other user&#39;s active subscription via the change_plan_sub_id parameter during checkout, causing immediate loss of paid access for victims. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-11",
-    "cve": "CVE-2026-27260",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-21361",
+    "descripcion": "Adobe Commerce versions 2.4.9-alpha3, 2.4.8-p3, 2.4.7-p8, 2.4.6-p13, 2.4.5-p15, 2.4.4-p16 and earlier are affected by a stored Cross-Site Scripting (XSS) vvulnerability that could be abused by a high-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field. A successful attacker can abuse this to achieve session takeover, increasing the confidentiality, and integrity impact to high. Exploitation of this issue requires user interaction in that a victim must browse to the page containing the vulnerable field. 11/03/2026 11/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
