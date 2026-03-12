@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-03-12",
+    "cve": "CVE-2026-4040",
+    "descripcion": "A vulnerability was identified in OpenClaw up to 2026.2.17. This issue affects the function tools.exec.safeBins of the component File Existence Handler. The manipulation leads to information exposure through discrepancy. The attack needs to be performed locally. Upgrading to version 2026.2.19-beta.1 is capable of addressing this issue. The identifier of the patch is bafdbb6f112409a65decd3d4e7350fbd637c7754. Upgrading the affected component is advised. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-03-12",
+    "cve": "CVE-2026-4039",
+    "descripcion": "A vulnerability was determined in OpenClaw 2026.2.19-2. This vulnerability affects the function applySkillConfigenvOverrides of the component Skill Env Handler. Executing a manipulation can lead to code injection. It is possible to launch the attack remotely. Upgrading to version 2026.2.21-beta.1 is able to resolve this issue. This patch is called 8c9f35cdb51692b650ddf05b259ccdd75cc9a83c. It is recommended to upgrade the affected component. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-12",
+    "cve": "CVE-2026-3989",
+    "descripcion": "SGLangs `replay_request_dump.py` contains an insecure pickle.load() without validation and proper deserialization. An attacker can take advantage of this by providing a malicious .pkl file, which will execute the attackers code on the device running the script. 12/03/2026 12/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-12",
+    "cve": "CVE-2026-3060",
+    "descripcion": "SGLang&#39; encoder parallel disaggregation system is vulnerable to unauthenticated remote code execution through the disaggregation module, which deserializes untrusted data using pickle.loads() without authentication. 12/03/2026 12/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-12",
+    "cve": "CVE-2026-3059",
+    "descripcion": "SGLang&#39;s multimodal generation module is vulnerable to unauthenticated remote code execution through the ZMQ broker, which deserializes untrusted data using pickle.loads() without authentication. 12/03/2026 12/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-12",
+    "cve": "CVE-2026-3234",
+    "descripcion": "A flaw was found in mod_proxy_cluster. This vulnerability, a Carriage Return Line Feed (CRLF) injection in the decodeenc() function, allows a remote attacker to bypass input validation. By injecting CRLF sequences into the cluster configuration, an attacker can corrupt the response body of INFO endpoint responses. Exploitation requires network access to the MCMP protocol port, but no authentication is needed. 12/03/2026 12/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-12",
+    "cve": "CVE-2026-2366",
+    "descripcion": "A flaw was found in Keycloak. An authorization bypass vulnerability in the Keycloak Admin API allows any authenticated user, even those without administrative privileges, to enumerate the organization memberships of other users. This information disclosure occurs if the attacker knows the victim&#39;s unique identifier (UUID) and the Organizations feature is enabled. 12/03/2026 12/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-03-12",
     "cve": "CVE-2026-4016",
     "descripcion": "A security vulnerability has been detected in GPAC 26.03-DEV. Affected by this vulnerability is the function svgin_process of the file src/filters/load_svg.c of the component SVG Parser. The manipulation leads to out-of-bounds write. Local access is required to approach this attack. The exploit has been disclosed publicly and may be used. The identifier of the patch is 7618d7206cdeb3c28961dc97ab0ecabaff0c8af2. It is suggested to install a patch to address this issue. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-03-12",
     "cve": "CVE-2026-4014",
     "descripcion": "A security flaw has been discovered in itsourcecode Cafe Reservation System 1.0. This impacts an unknown function of the file /curvus2/signup.php of the component Registration. Performing a manipulation of the argument Username results in sql injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-12",
-    "cve": "CVE-2026-4013",
-    "descripcion": "A vulnerability was identified in SourceCodester Web-based Pharmacy Product Management System 1.0. This affects an unknown function of the file add_admin.php. Such manipulation leads to improper authorization. The attack may be launched remotely. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-12",
-    "cve": "CVE-2026-4012",
-    "descripcion": "A vulnerability was determined in rxi fe up to ed4cda96bd582cbb08520964ba627efb40f3dd91. The impacted element is the function read_ of the file src/fe.c. This manipulation with the input 1 causes out-of-bounds read. The attack requires local access. The exploit has been publicly disclosed and may be utilized. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-03-12",
-    "cve": "CVE-2026-4010",
-    "descripcion": "A vulnerability was found in ThakeeNathees pocketlang up to cc73ca61b113d48ee130d837a7a8b145e41de5ce. The affected element is the function pkByteBufferAddString. The manipulation of the argument length with the input 4294967290 results in memory corruption. The attack requires a local approach. The exploit has been made public and could be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-03-12",
-    "cve": "CVE-2026-4009",
-    "descripcion": "A vulnerability has been found in jarikomppa soloud up to 20200207. Impacted is the function drwav_read_pcm_frames_s16__msadpcm in the library src/audiosource/wav/dr_wav.h of the component WAV File Parser. The manipulation leads to out-of-bounds read. The attack needs to be performed locally. The exploit has been disclosed to the public and may be used. Upgrading to version 20200207 is recommended to address this issue. It is recommended to upgrade the affected component. The project was informed of the problem early through an issue report but has not responded yet. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-03-12",
-    "cve": "CVE-2026-4008",
-    "descripcion": "A flaw has been found in Tenda W3 1.0.0.3(2204). This issue affects some unknown processing of the file /goform/wifiSSIDset of the component POST Parameter Handler. Executing a manipulation of the argument index/GO can lead to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been published and may be used. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-12",
-    "cve": "CVE-2026-4007",
-    "descripcion": "A vulnerability was detected in Tenda W3 1.0.0.3(2204). This vulnerability affects unknown code of the file /goform/wifiSSIDget of the component POST Parameter Handler. Performing a manipulation of the argument index results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit is now public and may be used. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-12",
-    "cve": "CVE-2026-3994",
-    "descripcion": "A vulnerability was detected in rui314 mold up to 2.40.4. This issue affects the function mold::ObjectFilemold::X86_64::initialize_sections of the file src/input-files.cc of the component Object File Handler. Performing a manipulation results in heap-based buffer overflow. Attacking locally is a requirement. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet. 12/03/2026 12/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
