@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-4312",
-    "descripcion": "GCB/FCB Audit Software developed by DrangSoft has a Missing Authentication vulnerability, allowing unauthenticated remote attackers to directly access certain APIs to create a new administrative account. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-4324",
+    "descripcion": "A flaw was found in the Katello plugin for Red Hat Satellite. This vulnerability, caused by improper sanitization of user-provided input, allows a remote attacker to inject arbitrary SQL commands into the sort_by parameter of the /api/hosts/bootc_images API endpoint. This can lead to a Denial of Service (DoS) by triggering database errors, and potentially enable Boolean-based Blind SQL injection, which could allow an attacker to extract sensitive information from the database. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-3237",
-    "descripcion": "In affected versions of Octopus Server it was possible for a low privileged user to manipulate an API request to change the signing key expiration and revocation time frames via an API endpoint that had incorrect permission validation. It was not possible to expose the signing keys using this vulnerability. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3888",
+    "descripcion": "Local privilege escalation in snapd on Linux allows local attackers to get root privilege by re-creating snap&#39;s private /tmp directory when systemd-tmpfiles is configured to automatically clean up this directory. This issue affects Ubuntu 16.04 LTS, 18.04 LTS, 20.04 LTS, 22.04 LTS, and 24.04 LTS. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-4258",
-    "descripcion": "All versions of the package sjcl are vulnerable to Improper Verification of Cryptographic Signature due to missing point-on-curve validation in sjcl.ecc.basicKey.publicKey(). An attacker can recover a victim&#39;s ECDH private key by sending crafted off-curve public keys and observing ECDH outputs. The dhJavaEc() function directly returns the raw x-coordinate of the scalar multiplication result (no hashing), providing a plaintext oracle without requiring any decryption feedback. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-62320",
+    "descripcion": "HTML Injection can be carried out in Product when a web application does not properly check or clean user input before showing it on a webpage. Because of this, an attacker may insert unwanted HTML code into the page. When the browser loads the page, it may automatically interact with external resources included in that HTML, which can cause unexpected requests from the user’s browser. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-4308",
-    "descripcion": "A weakness has been identified in frdel/agent0ai agent-zero 0.9.7. This affects the function handle_pdf_document of the file python/helpers/document_query.py. This manipulation causes server-side request forgery. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-4271",
+    "descripcion": "A flaw was found in libsoup, a library for handling HTTP requests. This vulnerability, known as a Use-After-Free, occurs in the HTTP/2 server implementation. A remote attacker can exploit this by sending specially crafted HTTP/2 requests that cause authentication failures. This can lead to the application attempting to access memory that has already been freed, potentially causing application instability or crashes, resulting in a Denial of Service (DoS). 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-4307",
-    "descripcion": "A security flaw has been discovered in frdel/agent0ai agent-zero 0.9.7-10. The impacted element is the function get_abs_path of the file python/helpers/files.py. The manipulation results in path traversal. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-31966",
+    "descripcion": "HCL Sametime is vulnerable to broken server-side validation. While the application performs client-side input checks, these are not enforced by the web server. An attacker can bypass these restrictions by sending manipulated HTTP requests directly to the server. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-2373",
-    "descripcion": "The Royal Addons for Elementor – Addons and Templates Kit for Elementor plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 1.7.1049 via the get_main_query_args() function due to insufficient restrictions on which posts can be included. This makes it possible for unauthenticated attackers to extract contents of non-public custom post types, such as Contact Form 7 submissions or WooCommerce coupons. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-30911",
+    "descripcion": "Apache Airflow versions 3.1.0 through 3.1.7 missing authorization vulnerability in the Execution API&#39;s Human-in-the-Loop (HITL) endpoints that allows any authenticated task instance to read, approve, or reject HITL workflows belonging to any other task instance. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-0708",
-    "descripcion": "A flaw was found in libucl. A remote attacker could exploit this by providing a specially crafted Universal Configuration Language (UCL) input that contains a key with an embedded null byte. This can cause a segmentation fault (SEGV fault) in the `ucl_object_emit` function when parsing and emitting the object, leading to a Denial of Service (DoS) for the affected system. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-28779",
+    "descripcion": "Apache Airflow versions 3.1.0 through 3.1.7 session token (_token) in cookies is set to path=/ regardless of the configured [webserver] base_url or [api] base_url. This allows any application co-hosted under the same domain to capture valid Airflow session tokens from HTTP request headers, allowing full session takeover without attacking Airflow itself. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2026-2579",
-    "descripcion": "The WowStore – Store Builder & Product Blocks for WooCommerce plugin for WordPress is vulnerable to SQL Injection via the ‘search’ parameter in all versions up to, and including, 4.4.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-28563",
+    "descripcion": "Apache Airflow versions 3.1.0 through 3.1.7 /ui/dependencies endpoint returns the full DAG dependency graph without filtering by authorized DAG IDs. This allows an authenticated user with only DAG Dependencies permission to enumerate DAGs they are not authorized to view. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-03-16",
-    "cve": "CVE-2026-4289",
-    "descripcion": "A security vulnerability has been detected in Tiandy Easy7 Integrated Management Platform up to 7.17.0. This affects an unknown function of the file /rest/preSetTemplate/getRecByTemplateId. The manipulation of the argument ID leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-26929",
+    "descripcion": "Apache Airflow versions 3.0.0 through 3.1.7 FastAPI DagVersion listing API does not apply per-DAG authorization filtering when the request is made with dag_id set to &#34;~&#34; (wildcard for all DAGs). As a result, version metadata of DAGs that the requester is not authorized to access is returned. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-03-16",
-    "cve": "CVE-2026-4288",
-    "descripcion": "A weakness has been identified in Tiandy Easy7 Integrated Management Platform 7.17.0. The impacted element is an unknown function of the file /rest/devStatus/getDevDetailedInfo of the component Endpoint. Executing a manipulation of the argument ID can lead to sql injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-3634",
+    "descripcion": "A flaw was found in libsoup. An attacker controlling the value used to set the Content-Type header can inject a Carriage Return Line Feed (CRLF) sequence due to improper input sanitization in the `soup_message_headers_set_content_type()` function. This vulnerability allows for the injection of arbitrary header-value pairs, potentially leading to HTTP header injection and response splitting attacks. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   }
 ]
