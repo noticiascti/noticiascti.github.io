@@ -21,13 +21,13 @@
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2019-8605",
-    "descripcion": "A use after free issue was addressed with improved memory management. This issue is fixed in iOS 12.3, macOS Mojave 10.14.5, tvOS 12.3, watchOS 5.2.1. A malicious application may be able to execute arbitrary code with system privileges."
+    "cve": "CVE-2019-2215",
+    "descripcion": "A use-after-free in binder.c allows an elevation of privilege from an application to the Linux Kernel. No user interaction is required to exploit this vulnerability, however exploitation does require either the installation of a malicious local application or a separate ..."
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2019-2215",
-    "descripcion": "A use-after-free in binder.c allows an elevation of privilege from an application to the Linux Kernel. No user interaction is required to exploit this vulnerability, however exploitation does require either the installation of a malicious local application or a separate ..."
+    "cve": "CVE-2019-8605",
+    "descripcion": "A use after free issue was addressed with improved memory management. This issue is fixed in iOS 12.3, macOS Mojave 10.14.5, tvOS 12.3, watchOS 5.2.1. A malicious application may be able to execute arbitrary code with system privileges."
   },
   {
     "fecha": "2026-03-17",
@@ -41,8 +41,8 @@
   },
   {
     "fecha": "2026-03-17",
-    "cve": "CVE-2024-45163",
-    "descripcion": "The Mirai botnet through 2024-08-19 mishandles simultaneous TCP connections to the CNC (command and control) server. Unauthenticated sessions remain open, causing resource consumption. For example, an attacker can send a recognized username (such as root), or can send arbitrary ..."
+    "cve": "CVE-2025-38617",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
   },
   {
     "fecha": "2026-03-17",
