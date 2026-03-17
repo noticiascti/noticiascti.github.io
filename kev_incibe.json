@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-17",
+    "cve": "CVE-2026-4148",
+    "descripcion": "A use-after-free vulnerability can be triggered in sharded clusters by an authenticated user with the read role who issues a specially crafted $lookup or $graphLookup aggregation pipeline. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-4147",
+    "descripcion": "An authenticated user with the read role may read limited amounts of uninitialized stack memory via specially-crafted issuances of the filemd5 command. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-28506",
+    "descripcion": "Outline is a service that allows for collaborative documentation. Prior to 1.5.0, the events.list API endpoint, used for retrieving activity logs, contains a logic flaw in its filtering mechanism. It allows any authenticated user to retrieve activity events associated with documents that have no collection (e.g., Private Drafts, Deleted Documents), regardless of the user&#39;s actual permissions on those documents. While the document content is not directly exposed, this vulnerability leaks sensitive metadata (such as Document IDs, user activity timestamps, and in some specific cases like the Document Title of Permanent Delete). Crucially, leaking valid Document IDs of deleted drafts removes the protection of UUID randomness, making High-severity IDOR attacks (such as the one identified in documents.restore) trivially exploitable by lowering the attack complexity. Version 1.5.0 fixes the issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-24901",
+    "descripcion": "Outline is a service that allows for collaborative documentation. Prior to 1.4.0, an Insecure Direct Object Reference (IDOR) vulnerability in the document restoration logic allows any team member to unauthorizedly restore, view, and seize ownership of deleted drafts belonging to other users, including administrators. By bypassing ownership validation during the restore process, an attacker can access sensitive private information and effectively lock the original owner out of their own content. Version 1.4.0 fixes the issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-23759",
+    "descripcion": "Perle IOLAN STS/SCS terminal server models with firmware versions prior to 6.0 allow authenticated OS command injection via the restricted shell accessed over Telnet or SSH. The shell &#39;ps&#39; command does not perform proper argument sanitization and passes user-supplied parameters into an &#39;sh -c&#39; invocation running as root. An authenticated attacker who can log in to the device can inject shell metacharacters after the &#39;ps&#39; subcommand to execute arbitrary OS commands with root privileges, leading to full compromise of the underlying operating system. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-21886",
+    "descripcion": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to version 6.9.1, the GraphQL mutations &#34;IndividualDeletionDeleteMutation&#34; is intended to allow users to delete individual entity objects respectively. However, it was observed that this mutation can be misused to delete unrelated and sensitive objects such as analyses reports etc. This behavior stems from the lack of validation in the API to ensure that the targeted object is contextually related to the mutation being executed. Version 6.9.1 fixes the issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-4318",
+    "descripcion": "A vulnerability was determined in UTT HiPER 810G up to 1.7.7-171114. Affected is the function strcpy of the file /goform/formApLbConfig. This manipulation of the argument loadBalanceNameOld causes buffer overflow. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2026-3564",
+    "descripcion": "A condition in ScreenConnect may allow an actor with access to server-level cryptographic material used for authentication to obtain unauthorized access, including elevated privileges, in certain scenarios. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-03-17",
+    "cve": "CVE-2025-13406",
+    "descripcion": "NULL Pointer Dereference vulnerability in Softing Industrial Automation GmbH smartLink SW-HT (Webserver modules) allows HTTP DoS.This issue affects smartLink SW-HT: 1.43. 17/03/2026 17/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:A/V:X/RE:L/U:Red Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-17",
     "cve": "CVE-2026-4324",
     "descripcion": "A flaw was found in the Katello plugin for Red Hat Satellite. This vulnerability, caused by improper sanitization of user-provided input, allows a remote attacker to inject arbitrary SQL commands into the sort_by parameter of the /api/hosts/bootc_images API endpoint. This can lead to a Denial of Service (DoS) by triggering database errors, and potentially enable Boolean-based Blind SQL injection, which could allow an attacker to extract sensitive information from the database. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2026-3888",
-    "descripcion": "Local privilege escalation in snapd on Linux allows local attackers to get root privilege by re-creating snap&#39;s private /tmp directory when systemd-tmpfiles is configured to automatically clean up this directory. This issue affects Ubuntu 16.04 LTS, 18.04 LTS, 20.04 LTS, 22.04 LTS, and 24.04 LTS. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2025-62320",
-    "descripcion": "HTML Injection can be carried out in Product when a web application does not properly check or clean user input before showing it on a webpage. Because of this, an attacker may insert unwanted HTML code into the page. When the browser loads the page, it may automatically interact with external resources included in that HTML, which can cause unexpected requests from the user’s browser. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2026-4271",
-    "descripcion": "A flaw was found in libsoup, a library for handling HTTP requests. This vulnerability, known as a Use-After-Free, occurs in the HTTP/2 server implementation. A remote attacker can exploit this by sending specially crafted HTTP/2 requests that cause authentication failures. This can lead to the application attempting to access memory that has already been freed, potentially causing application instability or crashes, resulting in a Denial of Service (DoS). 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2025-31966",
-    "descripcion": "HCL Sametime is vulnerable to broken server-side validation. While the application performs client-side input checks, these are not enforced by the web server. An attacker can bypass these restrictions by sending manipulated HTTP requests directly to the server. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2026-30911",
-    "descripcion": "Apache Airflow versions 3.1.0 through 3.1.7 missing authorization vulnerability in the Execution API&#39;s Human-in-the-Loop (HITL) endpoints that allows any authenticated task instance to read, approve, or reject HITL workflows belonging to any other task instance. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2026-28779",
-    "descripcion": "Apache Airflow versions 3.1.0 through 3.1.7 session token (_token) in cookies is set to path=/ regardless of the configured [webserver] base_url or [api] base_url. This allows any application co-hosted under the same domain to capture valid Airflow session tokens from HTTP request headers, allowing full session takeover without attacking Airflow itself. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2026-28563",
-    "descripcion": "Apache Airflow versions 3.1.0 through 3.1.7 /ui/dependencies endpoint returns the full DAG dependency graph without filtering by authorized DAG IDs. This allows an authenticated user with only DAG Dependencies permission to enumerate DAGs they are not authorized to view. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2026-26929",
-    "descripcion": "Apache Airflow versions 3.0.0 through 3.1.7 FastAPI DagVersion listing API does not apply per-DAG authorization filtering when the request is made with dag_id set to &#34;~&#34; (wildcard for all DAGs). As a result, version metadata of DAGs that the requester is not authorized to access is returned. Users are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-17",
-    "cve": "CVE-2026-3634",
-    "descripcion": "A flaw was found in libsoup. An attacker controlling the value used to set the Content-Type header can inject a Carriage Return Line Feed (CRLF) sequence due to improper input sanitization in the `soup_message_headers_set_content_type()` function. This vulnerability allows for the injection of arbitrary header-value pairs, potentially leading to HTTP header injection and response splitting attacks. 17/03/2026 17/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   }
 ]
