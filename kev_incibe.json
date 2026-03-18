@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-32565",
-    "descripcion": "Missing Authorization vulnerability in WebberZone Contextual Related Posts allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Contextual Related Posts: from n/a before 4.2.2. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3278",
+    "descripcion": "Improper neutralization of input during web page generation (&#39;cross-site scripting&#39;) vulnerability in OpenText™ ZENworks Service Desk allows Cross-Site Scripting (XSS). The vulnerability could allow an attacker to execute arbitrary JavaScript leading to unauthorized actions on behalf of the user.This issue affects ZENworks Service Desk: 25.2, 25.3. 18/03/2026 18/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:U/V:D/RE:M/U:Amber Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-1217",
-    "descripcion": "The Yoast Duplicate Post plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the clone_bulk_action_handler() and republish_request() functions in all versions up to, and including, 4.5. This makes it possible for authenticated attackers, with Contributor-level access and above, to duplicate any post on the site including private, draft, and trashed posts they shouldn&#39;t have access to. Additionally, attackers with Author-level access and above can use the Rewrite & Republish feature to overwrite any published post with their own content. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-32694",
+    "descripcion": "In Juju from version 3.0.0 through 3.6.18, when a secret owner grants permissions to a secret to a grantee, the secret owner relies exclusively on a predictable XID of the secret to verify ownership. This allows a malicious grantee which can request secrets to predict past secrets granted by the same secret owner to different grantees, allowing them to use the resources granted by those past secrets. Successful exploitation relies on a very specific configuration, specific data semantic, and the administrator having the need to deploy at least two different applications, one of them controlled by the attacker. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22730",
-    "descripcion": "A critical SQL injection vulnerability in Spring AI&#39;s MariaDBFilterExpressionConverter allows attackers to bypass metadata-based access controls and execute arbitrary SQL commands. The vulnerability exists due to missing input sanitization. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-25449",
+    "descripcion": "Deserialization of Untrusted Data vulnerability in Shinetheme Traveler allows Object Injection.This issue affects Traveler: from n/a before 3.2.8.1. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22729",
-    "descripcion": "A JSONPath injection vulnerability in Spring AI&#39;s AbstractFilterExpressionConverter allows authenticated users to bypass metadata-based access controls through crafted filter expressions. User-controlled input passed to FilterExpressionBuilder is concatenated into JSONPath queries without proper escaping, enabling attackers to inject arbitrary JSONPath logic and access unauthorized documents. This vulnerability affects applications using vector stores that extend AbstractFilterExpressionConverter for multi-tenant isolation, role-based access control, or document filtering based on metadata. The vulnerability occurs when user-supplied values in filter expressions are not escaped before being inserted into JSONPath queries. Special characters like &#34;, ||, and && are passed through unescaped, allowing injection of arbitrary JSONPath logic that can alter the intended query semantics. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-32693",
+    "descripcion": "In Juju from version 3.0.0 through 3.6.18, the authorization of the &#34;secret-set&#34; tool is not performed correctly, which allows a grantee to update the secret content, and can lead to reading or updating other secrets. When the &#34;secret-set&#34; tool logs an error in an exploitation attempt, the secret is still updated contrary to expectations, and the new value is visible to both the owner and the grantee. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22323",
-    "descripcion": "A CSRF vulnerability in the Link Aggregation configuration interface allows an unauthenticated remote attacker to trick authenticated users into sending unauthorized POST requests to the device by luring them to a malicious webpage. This can silently alter the device’s configuration without the victim’s knowledge or consent. Availability impact was set to low because after a successful attack the device will automatically recover without external intervention. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-32692",
+    "descripcion": "An authorization bypass vulnerability in the Vault secrets back-end implementation of Juju versions 3.1.6 through 3.6.18 allows an authenticated unit agent to perform unauthorized updates to secret revisions. With sufficient information, an attacker can poison any existing secret revision within the scope of that Vault secret back-end. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22322",
-    "descripcion": "A stored cross‑site scripting (XSS) vulnerability in the Link Aggregation configuration interface allows an unauthenticated remote attacker to create a trunk entry containing malicious HTML/JavaScript code. When the affected page is viewed, the injected script executes in the context of the victim’s browser, enabling unauthorized actions such as interface manipulation. The session cookie is secured by the httpOnly Flag. Therefore an attacker is not able to take over the session of an authenticated user. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-32691",
+    "descripcion": "A race condition in the secrets management subsystem of Juju versions 3.0.0 through 3.6.18 allows an authenticated unit agent to claim ownership of a newly initialized secret. Between generating a Juju Secret ID and creating the secret&#39;s first revision, an attacker authenticated as another unit agent can claim ownership of a known secret. This leads to the attacking unit being able to read the content of the initial secret revision. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22321",
-    "descripcion": "A stack-based buffer overflow in the device&#39;s Telnet/SSH CLI login routine occurs when a unauthenticated attacker send an oversized or unexpected username input. An overflow condition crashes the thread handling the login attempt, forcing the session to close. Because other CLI sessions remain unaffected, the impact is limited to a low‑severity availability disruption. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-33265",
+    "descripcion": "In LibreChat 0.8.1-rc2, a logged-in user obtains a JWT for both the LibreChat API and the RAG API. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22320",
-    "descripcion": "A stack-based buffer overflow in the CLI&#39;s TFTP file‑transfer command handling allows a low-privileged attacker with Telnet/SSH access to trigger memory corruption by supplying unexpected or oversized filename input. Exploitation results in the corruption of the internal buffer, causing the CLI and web dashboard to become unavailable and leading to a denial of service. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-41258",
+    "descripcion": "LibreChat version 0.8.1-rc2 uses the same JWT secret for the user session mechanism and RAG API which compromises the service-level authentication of the RAG API. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22319",
-    "descripcion": "A stack-based buffer overflow in the device&#39;s file installation workflow allows a high-privileged attacker to send oversized POST parameters that overflow a fixed-size stack buffer within an internal process, resulting in a DoS attack. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23248",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: perf/core: Fix refcount bug and potential UAF in perf_mmap Syzkaller reported a refcount_t: addition on 0; use-after-free warning in perf_mmap. The issue is caused by a race condition between a failing mmap() setup and a concurrent mmap() on a dependent event (e.g., using output redirection). In perf_mmap(), the ring_buffer (rb) is allocated and assigned to event->rb with the mmap_mutex held. The mutex is then released to perform map_range(). If map_range() fails, perf_mmap_close() is called to clean up. However, since the mutex was dropped, another thread attaching to this event (via inherited events or output redirection) can acquire the mutex, observe the valid event->rb pointer, and attempt to increment its reference count. If the cleanup path has already dropped the reference count to zero, this results in a use-after-free or refcount saturation warning. Fix this by extending the scope of mmap_mutex to cover the map_range() call. This ensures that the ring buffer initialization and mapping (or cleanup on failure) happens atomically effectively, preventing other threads from accessing a half-initialized or dying ring buffer. 18/03/2026 18/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-18",
-    "cve": "CVE-2026-22318",
-    "descripcion": "A stack-based buffer overflow vulnerability in the device&#39;s file transfer parameter workflow allows a high-privileged attacker to send oversized POST parameters, causing memory corruption in an internal process, resulting in a DoS attack. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-23247",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: tcp: secure_seq: add back ports to TS offset This reverts 28ee1b746f49 (&#34;secure_seq: downgrade to per-host timestamp offsets&#34;) tcp_tw_recycle went away in 2017. Zhouyan Deng reported off-path TCP source port leakage via SYN cookie side-channel that can be fixed in multiple ways. One of them is to bring back TCP ports in TS offset randomization. As a bonus, we perform a single siphash() computation to provide both an ISN and a TS offset. 18/03/2026 18/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
