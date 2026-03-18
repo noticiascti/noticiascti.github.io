@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-03-18",
+    "cve": "CVE-2026-32565",
+    "descripcion": "Missing Authorization vulnerability in WebberZone Contextual Related Posts allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Contextual Related Posts: from n/a before 4.2.2. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-18",
+    "cve": "CVE-2026-1217",
+    "descripcion": "The Yoast Duplicate Post plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the clone_bulk_action_handler() and republish_request() functions in all versions up to, and including, 4.5. This makes it possible for authenticated attackers, with Contributor-level access and above, to duplicate any post on the site including private, draft, and trashed posts they shouldn&#39;t have access to. Additionally, attackers with Author-level access and above can use the Rewrite & Republish feature to overwrite any published post with their own content. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-18",
     "cve": "CVE-2026-22730",
     "descripcion": "A critical SQL injection vulnerability in Spring AI&#39;s MariaDBFilterExpressionConverter allows attackers to bypass metadata-based access controls and execute arbitrary SQL commands. The vulnerability exists due to missing input sanitization. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-03-18",
     "cve": "CVE-2026-22318",
     "descripcion": "A stack-based buffer overflow vulnerability in the device&#39;s file transfer parameter workflow allows a high-privileged attacker to send oversized POST parameters, causing memory corruption in an internal process, resulting in a DoS attack. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-22317",
-    "descripcion": "A command injection vulnerability in the device’s Root CA certificate transfer workflow allows a high-privileged attacker to send crafted HTTP POST requests that result in arbitrary command execution on the underlying Linux OS with root privileges. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-22316",
-    "descripcion": "A remote attacker with user privileges for the webUI can use the setting of the TFTP Filename with a POST Request to trigger a stack-based Buffer Overflow, resulting in a DoS attack. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
