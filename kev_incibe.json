@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-03-18",
+    "cve": "CVE-2026-31865",
+    "descripcion": "Elysia is a Typescript framework for request validation, type inference, OpenAPI documentation, and client-server communication. Prior to version 1.4.27, an Elysia cookie can be overridden by prototype pollution , eg. `__proto__`. This issue is patched in 1.4.27. As a workaround, use t.Cookie validation to enforce validation value and/or prevent iterable over cookie if possible. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-18",
+    "cve": "CVE-2026-30922",
+    "descripcion": "pyasn1 is a generic ASN.1 library for Python. Prior to 0.6.3, the `pyasn1` library is vulnerable to a Denial of Service (DoS) attack caused by uncontrolled recursion when decoding ASN.1 data with deeply nested structures. An attacker can supply a crafted payload containing thousands of nested `SEQUENCE` (`0x30`) or `SET` (`0x31`) tags with &#34;Indefinite Length&#34; (`0x80`) markers. This forces the decoder to recursively call itself until the Python interpreter crashes with a `RecursionError` or consumes all available memory (OOM), crashing the host application. This is a distinct vulnerability from CVE-2026-23490 (which addressed integer overflows in OID decoding). The fix for CVE-2026-23490 (`MAX_OID_ARC_CONTINUATION_OCTETS`) does not mitigate this recursion issue. Version 0.6.3 fixes this specific issue. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-18",
+    "cve": "CVE-2026-30884",
+    "descripcion": "mdjnelson/moodle-mod_customcert is a Moodle plugin for creating dynamically generated certificates with complete customization via the web browser. Prior to versions 4.4.9 and 5.0.3, a teacher who holds `mod/customcert:manage` in any single course can read and silently overwrite certificate elements belonging to any other course in the Moodle installation. The `core_get_fragment` callback `editelement` and the `mod_customcert_save_element` web service both fail to verify that the supplied `elementid` belongs to the authorized context, enabling cross-course information disclosure and data tampering. Versions 4.4.9 and 5.0.3 fix the issue. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-03-18",
+    "cve": "CVE-2026-2575",
+    "descripcion": "A flaw was found in Keycloak. An unauthenticated remote attacker can trigger an application level Denial of Service (DoS) by sending a highly compressed SAMLRequest through the SAML Redirect Binding. The server fails to enforce size limits during DEFLATE decompression, leading to an OutOfMemoryError (OOM) and subsequent process termination. This vulnerability allows an attacker to disrupt the availability of the service. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-18",
+    "cve": "CVE-2026-29112",
+    "descripcion": "DiceBear is an avatar library for designers and developers. Prior to version 9.4.0, the `ensureSize()` function in `@dicebear/converter` read the `width` and `height` attributes from the input SVG to determine the output canvas size for rasterization (PNG, JPEG, WebP, AVIF). An attacker who can supply a crafted SVG with extremely large dimensions (e.g. `width=&#34;999999999&#34;`) could force the server to allocate excessive memory, leading to denial of service. This primarily affects server-side applications that pass untrusted or user-supplied SVGs to the converter&#39;s `toPng()`, `toJpeg()`, `toWebp()`, or `toAvif()` functions. Applications that only convert self-generated DiceBear avatars are not practically exploitable, but are still recommended to upgrade. This is fixed in version 9.4.0. The `ensureSize()` function no longer reads SVG attributes to determine output size. Instead, a new `size` option (default: 512, max: 2048) controls the output dimensions. Invalid values (NaN, negative, zero, Infinity) fall back to the default. If upgrading is not immediately possible, validate and sanitize the `width` and `height` attributes of any untrusted SVG input before passing it to the converter. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-18",
+    "cve": "CVE-2026-1926",
+    "descripcion": "The Subscriptions for WooCommerce plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the `wps_sfw_admin_cancel_susbcription()` function in all versions up to, and including, 1.9.2. This is due to the function being hooked to the `init` action without any authentication or authorization checks, and only performing a non-empty check on the nonce parameter without actually validating it via `wp_verify_nonce()`. This makes it possible for unauthenticated attackers to cancel any active WooCommerce subscription by sending a crafted GET request with an arbitrary nonce value via the `wps_subscription_id` parameter. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-18",
+    "cve": "CVE-2026-1780",
+    "descripcion": "The [CR]Paid Link Manager plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the URL path in all versions up to, and including, 0.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-18",
     "cve": "CVE-2026-4356",
     "descripcion": "A flaw has been found in itsourcecode University Management System 1.0. Affected is an unknown function of the file /add_result.php. Executing a manipulation of the argument vr can lead to cross site scripting. The attack may be launched remotely. The exploit has been published and may be used. 18/03/2026 18/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:M/C:N/I:P/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 2.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-03-18",
     "cve": "CVE-2026-2603",
     "descripcion": "A flaw was found in Keycloak. A remote attacker could bypass security controls by sending a valid SAML response from an external Identity Provider (IdP) to the Keycloak SAML endpoint for IdP-initiated broker logins. This allows the attacker to complete broker logins even when the SAML Identity Provider is disabled, leading to unauthorized authentication. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-2092",
-    "descripcion": "A flaw was found in Keycloak. Keycloak&#39;s Security Assertion Markup Language (SAML) broker endpoint does not properly validate encrypted assertions when the overall SAML response is not signed. An attacker with a valid signed SAML assertion can exploit this by crafting a malicious SAML response. This allows the attacker to inject an encrypted assertion for an arbitrary principal, leading to unauthorized access and potential information disclosure. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-29056",
-    "descripcion": "Kanboard is project management software focused on Kanban methodology. Prior to 1.2.51, Kanboard&#39;s user invite registration endpoint (`UserInviteController::register()`) accepts all POST parameters and passes them to `UserModel::create()` without filtering out the `role` field. An attacker who receives an invite link can inject `role=app-admin` in the registration form to create an administrator account. Version 1.2.51 fixes the issue. 18/03/2026 18/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-28500",
-    "descripcion": "Open Neural Network Exchange (ONNX) is an open standard for machine learning interoperability. In versions up to and including 1.20.1, a security control bypass exists in onnx.hub.load() due to improper logic in the repository trust verification mechanism. While the function is designed to warn users when loading models from non-official sources, the use of the silent=True parameter completely suppresses all security warnings and confirmation prompts. This vulnerability transforms a standard model-loading function into a vector for Zero-Interaction Supply-Chain Attacks. When chained with file-system vulnerabilities, an attacker can silently exfiltrate sensitive files (SSH keys, cloud credentials) from the victim&#39;s machine the moment the model is loaded. As of time of publication, no known patched versions are available. 18/03/2026 18/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-28499",
-    "descripcion": "LeafKit is a templating language with Swift-inspired syntax. Prior to version 1.14.2, HTML escaping doesn&#39;t work correctly when a template prints a collection (Array / Dictionary) via `#(value)`. This can result in XSS, allowing potentially untrusted input to be rendered unescaped. Version 1.14.2 fixes the issue. 18/03/2026 18/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-27545",
-    "descripcion": "OpenClaw versions prior to 2026.2.26 contain an approval bypass vulnerability in system.run execution that allows attackers to execute commands from unintended filesystem locations by rebinding writable parent symlinks in the current working directory after approval. An attacker can modify mutable parent symlink path components between approval and execution time to redirect command execution to a different location while preserving the visible working directory string. 18/03/2026 18/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-27524",
-    "descripcion": "OpenClaw versions prior to 2026.2.21 accept prototype-reserved keys in runtime /debug set override object values, allowing prototype pollution attacks. Authorized /debug set callers can inject __proto__, constructor, or prototype keys to manipulate object prototypes and bypass command gate restrictions. 18/03/2026 18/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-03-18",
-    "cve": "CVE-2026-27523",
-    "descripcion": "OpenClaw versions prior to 2026.2.24 contain a sandbox bind validation vulnerability allowing attackers to bypass allowed-root and blocked-path checks via symlinked parent directories with non-existent leaf paths. Attackers can craft bind source paths that appear within allowed roots but resolve outside sandbox boundaries once missing leaf components are created, weakening bind-source isolation enforcement. 18/03/2026 18/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
