@@ -1,6 +1,46 @@
 [
   {
     "fecha": "2026-03-19",
+    "cve": "CVE-2026-3580",
+    "descripcion": "In wolfSSL 5.8.4, constant-time masking logic in sp_256_get_entry_256_9 is optimized into conditional branches (bnez) by GCC when targeting RISC-V RV32I with -O3. This transformation breaks the side-channel resistance of ECC scalar multiplication, potentially allowing a local attacker to recover secret keys via timing analysis. 19/03/2026 19/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-19",
+    "cve": "CVE-2026-3579",
+    "descripcion": "wolfSSL 5.8.4 on RISC-V RV32I architectures lacks a constant-time software implementation for 64-bit multiplication. The compiler-inserted __muldi3 subroutine executes in variable time based on operand values. This affects multiple SP math functions (sp_256_mul_9, sp_256_sqr_9, etc.), leading to a timing side-channel that may expose sensitive cryptographic data. 19/03/2026 19/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-19",
+    "cve": "CVE-2026-32238",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Versions prior to 8.0.0.2 contain a Command injection vulnerability in the backup functionality that can be exploited by authenticated attackers. The vulnerability exists due to insufficient input validation in the backup functionality. Version 8.0.0.2 fixes the issue. 19/03/2026 19/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-03-19",
+    "cve": "CVE-2026-32119",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.0.0.2, DOM-based stored XSS in the jQuery SearchHighlight plugin (`library/js/SearchHighlight.js`) allows an authenticated user with encounter form write access to inject arbitrary JavaScript that executes in another clinician&#39;s browser session when they use the search/find feature on the Custom Report page. The plugin reverses server-side HTML entity encoding by reading decoded text from DOM text nodes, concatenating it into a raw HTML string, and passing it to jQuery&#39;s `$()` constructor for HTML parsing. Version 8.0.0.2 fixes the issue. 19/03/2026 19/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-19",
+    "cve": "CVE-2026-25928",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.0.0.2, the DICOM zip/export feature uses a user-supplied destination or path component when creating the zip file, without sanitizing path traversal sequences (e.g. `../`). An attacker with DICOM upload/export permission can write files outside the intended directory, potentially under the web root, leading to arbitrary file write and possibly remote code execution if PHP or other executable files can be written. Version 8.0.0.2 fixes the issue. 19/03/2026 19/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-19",
+    "cve": "CVE-2026-25744",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.0.0.2, the encounter vitals API accepts an `id` in the request body and treats it as an UPDATE. There is no verification that the vital belongs to the current patient or encounter. An authenticated user with encounters/notes permission can overwrite any patient&#39;s vitals by supplying another patient&#39;s vital `id`, leading to medical record tampering. Version 8.0.0.2 fixes the issue. 19/03/2026 19/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-19",
+    "cve": "CVE-2026-3503",
+    "descripcion": "Protection mechanism failure in wolfCrypt post-quantum implementations (ML-KEM and ML-DSA) in wolfSSL on ARM Cortex-M microcontrollers allows a physical attacker to compromise key material and/or cryptographic outcomes via induced transient faults that corrupt or redirect seed/pointer values during Keccak-based expansion. This issue affects wolfSSL (wolfCrypt): commit hash d86575c766e6e67ef93545fa69c04d6eb49400c6. 19/03/2026 19/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:H/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 4.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-19",
+    "cve": "CVE-2026-25667",
+    "descripcion": "ASP.NET Core Kestrel in Microsoft .NET 8.0 before 8.0.22 and .NET 9.0 before 9.0.11 allows a remote attacker to cause excessive CPU consumption by sending a crafted QUIC packet, because of an incorrect exit condition for HTTP/3 Encoder/Decoder stream processing. 19/03/2026 19/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-19",
     "cve": "CVE-2026-3548",
     "descripcion": "Two buffer overflow vulnerabilities existed in the wolfSSL CRL parser when parsing CRL numbers: a heap-based buffer overflow could occur when improperly storing the CRL number as a hexadecimal string, and a stack-based overflow for sufficiently sized CRL numbers. With appropriately crafted CRLs, either of these out of bound writes could be triggered. Note this only affects builds that specifically enable CRL support, and the user would need to load a CRL from an untrusted source. 19/03/2026 19/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -8,45 +48,5 @@
     "fecha": "2026-03-19",
     "cve": "CVE-2026-30694",
     "descripcion": "An issue in DedeCMS v.5.7.118 and before allows a remote attacker to execute arbitrary code via the array_filter component 19/03/2026 19/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2026-2646",
-    "descripcion": "A heap-buffer-overflow vulnerability exists in wolfSSL&#39;s wolfSSL_d2i_SSL_SESSION() function. When deserializing session data with SESSION_CERTS enabled, certificate and session id lengths are read from an untrusted input without bounds validation, allowing an attacker to overflow fixed-size buffers and corrupt heap memory. A maliciously crafted session would need to be loaded from an external source to trigger this vulnerability. Internal sessions were not vulnerable. 19/03/2026 19/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2026-2645",
-    "descripcion": "In wolfSSL 5.8.2 and earlier, a logic flaw existed in the TLS 1.2 server state machine implementation. The server could incorrectly accept the CertificateVerify message before the ClientKeyExchange message had been received. This issue affects wolfSSL before 5.8.4 (wolfSSL 5.8.2 and earlier is vulnerable, 5.8.4 is not vulnerable). In 5.8.4 wolfSSL would detect the issue later in the handshake. 5.9.0 was further hardened to catch the issue earlier in the handshake. 19/03/2026 19/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2026-26940",
-    "descripcion": "Improper Validation of Specified Quantity in Input (CWE-1284) in the Timelion visualization plugin in Kibana can lead Denial of Service via Excessive Allocation (CAPEC-130). The vulnerability allows an authenticated user to send a specially crafted Timelion expression that overwrites internal series data properties with an excessively large quantity value. 19/03/2026 19/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2026-26939",
-    "descripcion": "Missing Authorization (CWE-862) in Kibana’s server-side Detection Rule Management can lead to Unauthorized Endpoint Response Action Configuration (host isolation, process termination, and process suspension) via CAPEC-1 (Accessing Functionality Not Properly Constrained by ACLs). This requires an authenticated attacker with rule management privileges. 19/03/2026 19/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2026-26933",
-    "descripcion": "Improper Validation of Array Index (CWE-129) in multiple protocol parser components in Packetbeat can lead Denial of Service via Input Data Manipulation (CAPEC-153). An attacker with the ability to send specially crafted, malformed network packets to a monitored network interface can trigger out-of-bounds read operations, resulting in application crashes or resource exhaustion. This requires the attacker to be positioned on the same network segment as the Packetbeat deployment or to control traffic routed to monitored interfaces. 19/03/2026 19/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2025-67115",
-    "descripcion": "A path traversal vulnerability in /ftl/web/setup.cgi in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote authenticated users to read arbitrary files from the filesystem via crafted values in the log_type parameter to /logsave.htm. 19/03/2026 19/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2025-67114",
-    "descripcion": "Use of a deterministic credential generation algorithm in /ftl/bin/calc_f2 in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers to derive valid administrative/root credentials from the device&#39;s MAC address, enabling authentication bypass and full device access. 19/03/2026 19/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-19",
-    "cve": "CVE-2025-67113",
-    "descripcion": "OS command injection in the CWMP client (/ftl/bin/cwmp) of Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers controlling the ACS endpoint to execute arbitrary commands as root via a crafted TR-069 Download URL that is passed unescaped into the firmware upgrade pipeline. 19/03/2026 19/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
