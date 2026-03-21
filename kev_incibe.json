@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-03-21",
+    "cve": "CVE-2026-4514",
+    "descripcion": "A flaw has been found in PbootCMS up to 3.2.12. Affected by this issue is some unknown functionality of the file apps/admin/controller/system/UserController.php of the component Backend. Executing a manipulation of the argument Field can lead to improper access controls. The attack may be performed from remote. The exploit has been published and may be used. 21/03/2026 21/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-21",
+    "cve": "CVE-2026-4513",
+    "descripcion": "A vulnerability was detected in vanna-ai vanna up to 2.0.2. Affected by this vulnerability is the function ask of the file vanna\\legacy\\base\\base.py. Performing a manipulation results in sql injection. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 21/03/2026 21/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-21",
+    "cve": "CVE-2026-4511",
+    "descripcion": "A security vulnerability has been detected in vanna-ai vanna up to 2.0.2. Affected is the function exec of the file /src/vanna/legacy. Such manipulation leads to injection. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 21/03/2026 21/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-21",
     "cve": "CVE-2026-4510",
     "descripcion": "A weakness has been identified in PbootCMS up to 3.2.12. This impacts the function alert_location of the file apps/home/controller/MemberController.php of the component Parameter Handler. This manipulation of the argument backurl causes cross site scripting. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. 21/03/2026 21/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-03-21",
     "cve": "CVE-2026-4127",
     "descripcion": "The Speedup Optimization plugin for WordPress is vulnerable to Missing Authorization in all versions up to and including 1.5.9. The `speedup01_ajax_enabled()` function, which handles the `wp_ajax_speedup01_enabled` AJAX action, does not perform any capability check via `current_user_can()` and also lacks nonce verification. This is in contrast to other AJAX handlers in the same plugin (e.g., `speedup01_ajax_install_iox` and `speedup01_ajax_delete_cache_file`) which properly check for `install_plugins` and `manage_options` capabilities respectively. This makes it possible for authenticated attackers, with Subscriber-level access and above, to enable or disable the site&#39;s optimization module by sending a POST request to admin-ajax. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-21",
-    "cve": "CVE-2026-4087",
-    "descripcion": "The Pre* Party Resource Hints plugin for WordPress is vulnerable to SQL Injection via the &#39;hint_ids&#39; parameter of the pprh_update_hints AJAX action in all versions up to, and including, 1.8.20. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-21",
-    "cve": "CVE-2026-4086",
-    "descripcion": "The WP Random Button plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;cat&#39;, &#39;nocat&#39;, and &#39;text&#39; shortcode attributes of the &#39;wp_random_button&#39; shortcode in all versions up to, and including, 1.0. This is due to insufficient input sanitization and output escaping on user-supplied shortcode attributes. Specifically, the random_button_html() function directly concatenates the &#39;cat&#39; and &#39;nocat&#39; parameters into HTML data-attributes without esc_attr(), and the &#39;text&#39; parameter into HTML content without esc_html(). This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-21",
-    "cve": "CVE-2026-4084",
-    "descripcion": "The fyyd podcast shortcodes plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;fyyd-podcast&#39;, &#39;fyyd-episode&#39;, and &#39;fyyd&#39; shortcodes in all versions up to, and including, 0.3.1. This is due to insufficient input sanitization and output escaping on user-supplied shortcode attributes such as &#39;color&#39;, &#39;podcast_id&#39;, and &#39;podcast_slug&#39;. These attributes are directly concatenated into inline JavaScript within single-quoted string arguments without any escaping or sanitization, allowing an attacker to break out of the JavaScript string context. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
