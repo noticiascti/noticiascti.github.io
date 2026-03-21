@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-03-21",
+    "cve": "CVE-2026-4510",
+    "descripcion": "A weakness has been identified in PbootCMS up to 3.2.12. This impacts the function alert_location of the file apps/home/controller/MemberController.php of the component Parameter Handler. This manipulation of the argument backurl causes cross site scripting. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. 21/03/2026 21/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-21",
+    "cve": "CVE-2026-4373",
+    "descripcion": "The JetFormBuilder plugin for WordPress is vulnerable to arbitrary file read via path traversal in all versions up to, and including, 3.5.6.2. This is due to the &#39;Uploaded_File::set_from_array&#39; method accepting user-supplied file paths from the Media Field preset JSON payload without validating that the path belongs to the WordPress uploads directory. Combined with an insufficient same-file check in &#39;File_Tools::is_same_file&#39; that only compares basenames, this makes it possible for unauthenticated attackers to exfiltrate arbitrary local files as email attachments by submitting a crafted form request when the form is configured with a Media Field and a Send Email action with file attachment. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-21",
+    "cve": "CVE-2026-4509",
+    "descripcion": "A security flaw has been discovered in PbootCMS up to 3.2.12. This affects an unknown function of the file core/function/file.php of the component File Upload. The manipulation of the argument black results in incomplete blacklist. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. 21/03/2026 21/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-21",
     "cve": "CVE-2026-4261",
     "descripcion": "The Expire Users plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.2.2. This is due to the plugin allowing a user to update the &#39;on_expire_default_to_role&#39; meta through the &#39;save_extra_user_profile_fields&#39; function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to that of an administrator. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-03-21",
     "cve": "CVE-2026-4084",
     "descripcion": "The fyyd podcast shortcodes plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;fyyd-podcast&#39;, &#39;fyyd-episode&#39;, and &#39;fyyd&#39; shortcodes in all versions up to, and including, 0.3.1. This is due to insufficient input sanitization and output escaping on user-supplied shortcode attributes such as &#39;color&#39;, &#39;podcast_id&#39;, and &#39;podcast_slug&#39;. These attributes are directly concatenated into inline JavaScript within single-quoted string arguments without any escaping or sanitization, allowing an attacker to break out of the JavaScript string context. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-21",
-    "cve": "CVE-2026-4077",
-    "descripcion": "The Ecover Builder For Dummies plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;id&#39; parameter of the &#39;ecover&#39; shortcode in all versions up to and including 1.0. This is due to insufficient input sanitization and output escaping on the user-supplied &#39;id&#39; shortcode attribute. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-21",
-    "cve": "CVE-2026-4072",
-    "descripcion": "The WordPress PayPal Donation plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;donate&#39; shortcode in all versions up to, and including, 1.01. This is due to insufficient input sanitization and output escaping on user-supplied shortcode attributes such as &#39;amount&#39;, &#39;email&#39;, &#39;title&#39;, &#39;return_url&#39;, &#39;cancel_url&#39;, &#39;ccode&#39;, and &#39;image&#39;. The wordpress_paypal_donation_create() function uses extract(shortcode_atts(...)) to process shortcode attributes and then directly interpolates these values into HTML output within single-quoted attribute values without any escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-21",
-    "cve": "CVE-2026-4069",
-    "descripcion": "The Alfie – Feed Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;naam&#39; parameter in all versions up to, and including, 1.2.1. This is due to missing nonce validation on the alfie_option_page() function combined with insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject malicious web scripts that will be stored in the plugin&#39;s database and execute whenever a user accesses the page displaying the injected data, granted they can trick a site administrator into performing an action such as clicking on a link. 21/03/2026 21/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
