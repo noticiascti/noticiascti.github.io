@@ -1,5 +1,35 @@
 [
   {
+    "fecha": "2026-03-23",
+    "cve": "CVE-2026-4606",
+    "descripcion": "GV Edge Recording Manager (ERM) v2.3.1 improperly runs application components with SYSTEM-level privileges, allowing any local user to gain full control of the operating system. During installation, ERM creates a Windows service that runs under the LocalSystem account. When the ERM application is launched, related processes are spawned under SYSTEM privileges rather than the security context of the logged-in user. Functions such as &#39;Import Data&#39; open a Windows file dialog operating with SYSTEM permissions, enabling modification or deletion of protected system files and directories. Any ERM function invoking Windows file open/save dialogs exposes the same risk. This vulnerability allows local privilege escalation and may result in full system compromise. 23/03/2026 23/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:I/V:C/RE:M/U:Green Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-23",
+    "cve": "CVE-2026-4565",
+    "descripcion": "A vulnerability was detected in Tenda AC21 16.03.08.16. Impacted is the function formSetQosBand of the file /goform/SetNetControlList. Performing a manipulation of the argument list results in buffer overflow. The attack can be initiated remotely. The exploit is now public and may be used. 23/03/2026 23/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-22",
+    "cve": "CVE-2026-4564",
+    "descripcion": "A security vulnerability has been detected in yangzongzhuan RuoYi up to 4.8.2. This issue affects some unknown processing of the file /monitor/job/ of the component Quartz Job Handler. Such manipulation of the argument invokeTarget leads to code injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 23/03/2026 23/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-22",
+    "cve": "CVE-2026-4563",
+    "descripcion": "A weakness has been identified in MacCMS up to 2025.1000.4052. This vulnerability affects the function order_info of the file application/index/controller/User.php of the component Member Order Detail Interface. This manipulation of the argument order_id causes authorization bypass. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. 23/03/2026 23/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-22",
+    "cve": "CVE-2026-4562",
+    "descripcion": "A security flaw has been discovered in MacCMS 2025.1000.4052. This affects an unknown part of the file application/api/controller/Timming.php of the component Timming API Endpoint. The manipulation results in missing authentication. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks. 23/03/2026 23/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-22",
+    "cve": "CVE-2026-2580",
+    "descripcion": "The WP Maps – Store Locator,Google Maps,OpenStreetMap,Mapbox,Listing,Directory & Filters plugin for WordPress is vulnerable to time-based SQL Injection via the ‘orderby’ parameter in all versions up to, and including, 4.9.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 23/03/2026 23/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2026-03-22",
     "cve": "CVE-2026-4558",
     "descripcion": "A flaw has been found in Linksys MR9600 2.0.6.206937. Affected is the function smartConnectConfigure of the file SmartConnect.lua. Executing a manipulation of the argument configApSsid/configApPassphrase/srpLogin/srpPassword can lead to os command injection. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 22/03/2026 22/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
@@ -18,35 +48,5 @@
     "fecha": "2026-03-22",
     "cve": "CVE-2026-4554",
     "descripcion": "A security flaw has been discovered in Tenda F453 1.0.0.3. The affected element is the function FormWriteFacMac of the file /goform/WriteFacMac. The manipulation of the argument mac results in command injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. 22/03/2026 22/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-22",
-    "cve": "CVE-2026-33319",
-    "descripcion": "WWBN AVideo is an open source video platform. Prior to version 26.0, the `uploadVideoToLinkedIn()` method in the SocialMediaPublisher plugin constructs a shell command by directly interpolating an upload URL received from LinkedIn&#39;s API response, without sanitization via `escapeshellarg()`. If an attacker can influence the LinkedIn API response (via MITM, compromised OAuth token, or API compromise), they can inject arbitrary OS commands that execute as the web server user. Version 26.0 contains a fix for the issue. 22/03/2026 22/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-22",
-    "cve": "CVE-2026-33296",
-    "descripcion": "WWBN AVideo is an open source video platform. Prior to version 26.0, WWBN/AVideo contains an open redirect vulnerability in the login flow where a user-supplied redirectUri parameter is reflected directly into a JavaScript `document.location` assignment without JavaScript-safe encoding. After a user completes the login popup flow, a timer callback executes the redirect using the unvalidated value, sending the victim to an attacker-controlled site. Version 26.0 fixes the issue. 22/03/2026 22/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-22",
-    "cve": "CVE-2026-33295",
-    "descripcion": "WWBN AVideo is an open source video platform. Prior to version 26.0, WWBN/AVideo contains a stored cross-site scripting vulnerability in the CDN plugin&#39;s download buttons component. The `clean_title` field of a video record is interpolated directly into a JavaScript string literal without any escaping, allowing an attacker who can create or modify a video to inject arbitrary JavaScript that executes in the browser of any user who visits the affected download page. Version 26.0 fixes the issue. 22/03/2026 22/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-22",
-    "cve": "CVE-2026-33294",
-    "descripcion": "WWBN AVideo is an open source video platform. Prior to version 26.0, the BulkEmbed plugin&#39;s save endpoint (`plugin/BulkEmbed/save.json.php`) fetches user-supplied thumbnail URLs via `url_get_contents()` without SSRF protection. Unlike all six other URL-fetching endpoints in AVideo that were hardened with `isSSRFSafeURL()`, this code path was missed. An authenticated attacker can force the server to make HTTP requests to internal network resources and retrieve the responses by viewing the saved video thumbnail. Version 26.0 fixes the issue. 22/03/2026 22/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-22",
-    "cve": "CVE-2026-33293",
-    "descripcion": "WWBN AVideo is an open source video platform. Prior to version 26.0, the `deleteDump` parameter in `plugin/CloneSite/cloneServer.json.php` is passed directly to `unlink()` without any path sanitization. An attacker with valid clone credentials can use path traversal sequences (e.g., `../../`) to delete arbitrary files on the server, including critical application files such as `configuration.php`, causing complete denial of service or enabling further attacks by removing security-critical files. Version 26.0 fixes the issue. 22/03/2026 22/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-03-22",
-    "cve": "CVE-2026-33292",
-    "descripcion": "WWBN AVideo is an open source video platform. Prior to version 26.0, the HLS streaming endpoint (`view/hls.php`) is vulnerable to a path traversal attack that allows an unauthenticated attacker to stream any private or paid video on the platform. The `videoDirectory` GET parameter is used in two divergent code paths — one for authorization (which truncates at the first `/` segment) and one for file access (which preserves `..` traversal sequences) — creating a split-oracle condition where authorization is checked against one video while content is served from another. Version 26.0 contains a fix for the issue. 22/03/2026 22/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
