@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-03-25",
+    "cve": "CVE-2026-4761",
+    "descripcion": "When a certificate and its private key are installed in the Windows machine certificate store using Network and Security tool, access rights to the private key are unnecessarily granted to the operator group. * Installations based on Panorama Suite 2025 (25.00.004) are vulnerable unless update PS-2500-00-0357 (or higher) is installed * Installations based on Panorama Suite 2025 Updated Dec. 25 (25.10.007) are not vulnerable Please refer to security bulletin BS-036, available on the Panorama CSIRT website: https://my.codra.net/en-gb/csirt . 25/03/2026 25/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 3.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-25",
+    "cve": "CVE-2026-4760",
+    "descripcion": "From Panorama Web HMI, an attacker can gain read access to certain Web HMI server files, if he knows their paths and if these files are accessible to the Servin process execution account. * Installations based on Panorama Suite 2022-SP1 (22.50.005) are vulnerable unless update PS-2210-02-4079 (or higher) is installed * Installations based on Panorama Suite 2023 (23.00.004) are vulnerable unless updates PS-2300-03-3078 (or higher) and PS-2300-04-3078 (or higher) and PS-2300-82-3078 (or higher) are installed * Installations based on Panorama Suite 2025 (25.00.016) are vulnerable unless updates PS-2500-02-1078 (or higher) and PS-2500-04-1078 (or higher) are installed * Installations based on Panorama Suite 2025 Updated Dec. 25 (25.10.007) are vulnerable unless updates PS-2510-02-1077 (or higher) and PS-2510-04-1077 (or higher) are installed Please refer to security bulletin BS-035, available on the Panorama CSIRT website: https://my.codra.net/en-gb/csirt . 25/03/2026 25/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-25",
+    "cve": "CVE-2026-31788",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xen/privcmd: restrict usage in unprivileged domU The Xen privcmd driver allows to issue arbitrary hypercalls from user space processes. This is normally no problem, as access is usually limited to root and the hypervisor will deny any hypercalls affecting other domains. In case the guest is booted using secure boot, however, the privcmd driver would be enabling a root user process to modify e.g. kernel memory contents, thus breaking the secure boot feature. The only known case where an unprivileged domU is really needing to use the privcmd driver is the case when it is acting as the device model for another guest. In this case all hypercalls issued via the privcmd driver will target that other guest. Fortunately the privcmd driver can already be locked down to allow only hypercalls targeting a specific domain, but this mode can be activated from user land only today. The target domain can be obtained from Xenstore, so when not running in dom0 restrict the privcmd driver to that target domain from the beginning, resolving the potential problem of breaking secure boot. This is XSA-482 --- V2: - defer reading from Xenstore if Xenstore isn&#39;t ready yet (Jan Beulich) - wait in open() if target domain isn&#39;t known yet - issue message in case no target domain found (Jan Beulich) 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-25",
     "cve": "CVE-2026-23395",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: L2CAP: Fix accepting multiple L2CAP_ECRED_CONN_REQ Currently the code attempts to accept requests regardless of the command identifier which may cause multiple requests to be marked as pending (FLAG_DEFER_SETUP) which can cause more than L2CAP_ECRED_MAX_CID(5) to be allocated in l2cap_ecred_rsp_defer causing an overflow. The spec is quite clear that the same identifier shall not be used on subsequent requests: &#39;Within each signaling channel a different Identifier shall be used for each successive request or indication.&#39; https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-62/out/en/host/logical-link-control-and-adaptation-protocol-specification.html#UUID-32a25a06-4aa4-c6c7-77c5-dcfe3682355d So this attempts to check if there are any channels pending with the same identifier and rejects if any are found. 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-03-25",
     "cve": "CVE-2026-23389",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ice: Fix memory leak in ice_set_ringparam() In ice_set_ringparam, tx_rings and xdp_rings are allocated before rx_rings. If the allocation of rx_rings fails, the code jumps to the done label leaking both tx_rings and xdp_rings. Furthermore, if the setup of an individual Rx ring fails during the loop, the code jumps to the free_tx label which releases tx_rings but leaks xdp_rings. Fix this by introducing a free_xdp label and updating the error paths to ensure both xdp_rings and tx_rings are properly freed if rx_rings allocation or setup fails. Compile tested only. Issue found using a prototype static analysis tool and code review. 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-25",
-    "cve": "CVE-2026-23388",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: Squashfs: check metadata block offset is within range Syzkaller reports a &#34;general protection fault in squashfs_copy_data&#34; This is ultimately caused by a corrupted index look-up table, which produces a negative metadata block offset. This is subsequently passed to squashfs_copy_data (via squashfs_read_metadata) where the negative offset causes an out of bounds access. The fix is to check that the offset is within range in squashfs_read_metadata. This will trap this and other cases. 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-25",
-    "cve": "CVE-2026-23387",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: pinctrl: cirrus: cs42l43: Fix double-put in cs42l43_pin_probe() devm_add_action_or_reset() already invokes the action on failure, so the explicit put causes a double-put. 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-03-25",
-    "cve": "CVE-2026-23386",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: gve: fix incorrect buffer cleanup in gve_tx_clean_pending_packets for QPL In DQ-QPL mode, gve_tx_clean_pending_packets() incorrectly uses the RDA buffer cleanup path. It iterates num_bufs times and attempts to unmap entries in the dma array. This leads to two issues: 1. The dma array shares storage with tx_qpl_buf_ids (union). Interpreting buffer IDs as DMA addresses results in attempting to unmap incorrect memory locations. 2. num_bufs in QPL mode (counting 2K chunks) can significantly exceed the size of the dma array, causing out-of-bounds access warnings (trace below is how we noticed this issue). UBSAN: array-index-out-of-bounds in drivers/net/ethernet/drivers/net/ethernet/google/gve/gve_tx_dqo.c:178:5 index 18 is out of range for type &#39;dma_addr_t[18]&#39; (aka &#39;unsigned long long[18]&#39;) Workqueue: gve gve_service_task [gve] Call Trace: dump_stack_lvl+0x33/0xa0 __ubsan_handle_out_of_bounds+0xdc/0x110 gve_tx_stop_ring_dqo+0x182/0x200 [gve] gve_close+0x1be/0x450 [gve] gve_reset+0x99/0x120 [gve] gve_service_task+0x61/0x100 [gve] process_scheduled_works+0x1e9/0x380 Fix this by properly checking for QPL mode and delegating to gve_free_tx_qpl_bufs() to reclaim the buffers. 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
