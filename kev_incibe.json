@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-33247",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, if a nats-server is run with static credentials for all clients provided via argv (the command-line), then those credentials are visible to any user who can see the monitoring port, if that too is enabled. The `/debug/vars` end-point contains an unredacted copy of argv. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, configure credentials inside a configuration file instead of via argv, and do not enable the monitoring port if using secrets in argv. Best practice remains to not expose the monitoring port to the Internet, or to untrusted network sources. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-4825",
+    "descripcion": "A vulnerability was found in SourceCodester Sales and Inventory System 1.0. This affects an unknown part of the file /update_sales.php of the component HTTP GET Parameter Handler. The manipulation of the argument sid results in sql injection. The attack may be launched remotely. The exploit has been made public and could be used. 26/03/2026 26/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-33246",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. The nats-server offers a `Nats-Request-Info:` message header, providing information about a request. This is supposed to provide enough information to allow for account/user identification, such that NATS clients could make their own decisions on how to trust a message, provided that they trust the nats-server as a broker. A leafnode connecting to a nats-server is not fully trusted unless the system account is bridged too. Thus identity claims should not have propagated unchecked. Prior to versions 2.11.15 and 2.12.6, NATS clients relying upon the Nats-Request-Info: header could be spoofed. This does not directly affect the nats-server itself, but the CVSS Confidentiality and Integrity scores are based upon what a hypothetical client might choose to do with this NATS header. Versions 2.11.15 and 2.12.6 contain a fix. No known workarounds are available. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-33913",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.3, an authenticated user with access to the Carecoordination module can upload a crafted CCDA document containing `` to read arbitrary files from the server. Version 8.0.0.3 patches the issue. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-33219",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, a malicious client which can connect to the WebSockets port can cause unbounded memory use in the nats-server before authentication; this requires sending a corresponding amount of data. This is a milder variant of CVE-2026-27571. That earlier issue was a compression bomb, this vulnerability is not. Attacks against this new issue thus require significant client bandwidth. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, disable websockets if not required for project deployment. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-33912",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.3, an authenticated attacker could craft a malicious form that, when submitted by a victim, executes arbitrary JavaScript in the victim&#39;s browser session. Version 8.0.0.3 patches the issue. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-33218",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, a client which can connect to the leafnode port can crash the nats-server with a certain malformed message pre-authentication. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, disable leafnode support if not needed or restrict network connections to the leafnode port, if plausible without compromising the service offered. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-33911",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.3, the POST parameter `title` is reflected back in a JSON response built with `json_encode()`. Because the response is served with a `text/html` Content-Type, the browser interprets injected HTML/script tags rather than treating the output as JSON. An authenticated attacker can craft a request that executes arbitrary JavaScript in a victim&#39;s session. Version 8.0.0.3 contains a fix. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-33217",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, when using ACLs on message subjects, these ACLs were not applied in the `$MQTT.>` namespace, allowing MQTT clients to bypass ACL checks for MQTT subjects. Versions 2.11.15 and 2.12.6 contain a fix. No known workarounds are available. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-33910",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Versions up to and including 8.0.0.2 contain a SQL injection vulnerability in the patient selection feature that can be exploited by authenticated attackers. The vulnerability exists due to insufficient input validation in the patient selection feature. Version 8.0.0.3 contains a patch. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-33216",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, for MQTT deployments using usercodes/passwords: MQTT passwords are incorrectly classified as a non-authenticating identity statement (JWT) and exposed via monitoring endpoints. Versions 2.11.14 and 2.12.6 contain a fix. As a workaround, ensure monitoring end-points are adequately secured. Best practice remains to not expose the monitoring endpoint to the Internet or other untrusted network users. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-33909",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.3, several variables in the MedEx recall/reminder processing code are concatenated directly into SQL queries without parameterization or type casting, enabling SQL injection. Version 8.0.0.3 contains a patch. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-29785",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.14 and 2.12.5, if the nats-server has the &#34;leafnode&#34; configuration enabled (not default), then anyone who can connect can crash the nats-server by triggering a panic. This happens pre-authentication and requires that compression be enabled (which it is, by default, when leafnodes are used). Versions 2.11.14 and 2.12.5 contain a fix. As a workaround, disable compression on the leafnode port. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-33348",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Users with the `Notes - my encounters` role can fill Eye Exam forms in patient encounters. The answers to the form are displayed on the encounter page and in the visit history for the users with the same role. Versions prior to 8.0.0.3 have a stored cross-site scripting (XSS) vulnerability in the function to display the form answers, allowing any authenticated attacker with the specific role to insert arbitrary JavaScript into the system by entering malicious payloads to the form answers. The JavaScript code is later executed by any user with the form role when viewing the form answers in the patient encounter pages or visit history. Version 8.0.0.3 contains a patch. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-27889",
-    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Starting in version 2.2.0 and prior to versions 2.11.14 and 2.12.5, a missing sanity check on a WebSockets frame could trigger a server panic in the nats-server. This happens before authentication, and so is exposed to anyone who can connect to the websockets port. Versions 2.11.14 and 2.12.5 contains a fix. A workaround is available. The vulnerability only affects deployments which use WebSockets and which expose the network port to untrusted end-points. If one is able to do so, a defense in depth of restricting either of these will mitigate the attack. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-32120",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.3, an Insecure Direct Object Reference (IDOR) vulnerability in the fee sheet product save logic (`library/FeeSheet.class.php`) allows any authenticated user with fee sheet ACL access to delete, modify, or read `drug_sales` records belonging to arbitrary patients by manipulating the hidden `prod[][sale_id]` form field. The `save()` method uses the user-supplied `sale_id` in five SQL queries (SELECT, UPDATE, DELETE) without verifying that the record belongs to the current patient and encounter. Version 8.0.0.3 contains a patch. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2025-70888",
-    "descripcion": "An issue in mtrojnar Osslsigncode affected at v2.10 and before allows a remote attacker to escalate privileges via the osslsigncode.c component 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-29187",
+    "descripcion": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 8.0.0.3, a Blind SQL Injection vulnerability exists in the Patient Search functionality (/interface/new/new_search_popup.php). The vulnerability allows an authenticated attacker to execute arbitrary SQL commands by manipulating the HTTP parameter keys rather than the values. Version 8.0.0.3 contains a patch. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2025-14790",
-    "descripcion": "IBM InfoSphere Information Server 11.7.0.0 through 11.7.1.6 could allow an attacker to obtain sensitive information due to insufficiently protected credentials. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2025-2535",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 26/03/2026 26/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
