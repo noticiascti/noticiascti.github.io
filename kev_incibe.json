@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-3988",
-    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.5 before 18.8.7, 18.9 before 18.9.3, and 18.10 before 18.10.1 that could have allowed an unauthenticated user to cause a denial of service by making the GitLab instance unresponsive due to improper input validation in GraphQL request processing. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-33247",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, if a nats-server is run with static credentials for all clients provided via argv (the command-line), then those credentials are visible to any user who can see the monitoring port, if that too is enabled. The `/debug/vars` end-point contains an unredacted copy of argv. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, configure credentials inside a configuration file instead of via argv, and do not enable the monitoring port if using secrets in argv. Best practice remains to not expose the monitoring port to the Internet, or to untrusted network sources. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-3857",
-    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.10 before 18.8.7, 18.9 before 18.9.3, and 18.10 before 18.10.1 that could have allowed an unauthenticated user to execute arbitrary GraphQL mutations on behalf of authenticated users due to insufficient CSRF protection. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-33246",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. The nats-server offers a `Nats-Request-Info:` message header, providing information about a request. This is supposed to provide enough information to allow for account/user identification, such that NATS clients could make their own decisions on how to trust a message, provided that they trust the nats-server as a broker. A leafnode connecting to a nats-server is not fully trusted unless the system account is bridged too. Thus identity claims should not have propagated unchecked. Prior to versions 2.11.15 and 2.12.6, NATS clients relying upon the Nats-Request-Info: header could be spoofed. This does not directly affect the nats-server itself, but the CVSS Confidentiality and Integrity scores are based upon what a hypothetical client might choose to do with this NATS header. Versions 2.11.15 and 2.12.6 contain a fix. No known workarounds are available. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-34085",
-    "descripcion": "fontconfig before 2.17.1 has an off-by-one error in allocation during sfnt capability handling, leading to a one-byte out-of-bounds write, and potentially a crash or code execution. This is in FcFontCapabilities in fcfreetype.c. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-33219",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, a malicious client which can connect to the WebSockets port can cause unbounded memory use in the nats-server before authentication; this requires sending a corresponding amount of data. This is a milder variant of CVE-2026-27571. That earlier issue was a compression bomb, this vulnerability is not. Attacks against this new issue thus require significant client bandwidth. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, disable websockets if not required for project deployment. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-32573",
-    "descripcion": "Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in Nelio Software Nelio AB Testing nelio-ab-testing allows Code Injection.This issue affects Nelio AB Testing: from n/a through 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-33218",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, a client which can connect to the leafnode port can crash the nats-server with a certain malformed message pre-authentication. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, disable leafnode support if not needed or restrict network connections to the leafnode port, if plausible without compromising the service offered. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-32567",
-    "descripcion": "Improper Limitation of a Pathname to a Restricted Directory (&#39;Path Traversal&#39;) vulnerability in icopydoc YML for Yandex Market yml-for-yandex-market allows Path Traversal.This issue affects YML for Yandex Market: from n/a through 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-33217",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, when using ACLs on message subjects, these ACLs were not applied in the `$MQTT.>` namespace, allowing MQTT clients to bypass ACL checks for MQTT subjects. Versions 2.11.15 and 2.12.6 contain a fix. No known workarounds are available. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-32562",
-    "descripcion": "Missing Authorization vulnerability in WP Folio Team PPWP password-protect-page allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects PPWP: from n/a through 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-33216",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, for MQTT deployments using usercodes/passwords: MQTT passwords are incorrectly classified as a non-authenticating identity statement (JWT) and exposed via monitoring endpoints. Versions 2.11.14 and 2.12.6 contain a fix. As a workaround, ensure monitoring end-points are adequately secured. Best practice remains to not expose the monitoring endpoint to the Internet or other untrusted network users. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-32546",
-    "descripcion": "Missing Authorization vulnerability in StellarWP Restrict Content restrict-content allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Restrict Content: from n/a through 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-29785",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.14 and 2.12.5, if the nats-server has the &#34;leafnode&#34; configuration enabled (not default), then anyone who can connect can crash the nats-server by triggering a panic. This happens pre-authentication and requires that compression be enabled (which it is, by default, when leafnodes are used). Versions 2.11.14 and 2.12.5 contain a fix. As a workaround, disable compression on the leafnode port. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-32545",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Taboola Taboola Pixel taboola-pixel allows Reflected XSS.This issue affects Taboola Pixel: from n/a through 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-27889",
+    "descripcion": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Starting in version 2.2.0 and prior to versions 2.11.14 and 2.12.5, a missing sanity check on a WebSockets frame could trigger a server panic in the nats-server. This happens before authentication, and so is exposed to anyone who can connect to the websockets port. Versions 2.11.14 and 2.12.5 contains a fix. A workaround is available. The vulnerability only affects deployments which use WebSockets and which expose the network port to untrusted end-points. If one is able to do so, a defense in depth of restricting either of these will mitigate the attack. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-32544",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in OOPSpam Team OOPSpam Anti-Spam oopspam-anti-spam allows Stored XSS.This issue affects OOPSpam Anti-Spam: from n/a through 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-70888",
+    "descripcion": "An issue in mtrojnar Osslsigncode affected at v2.10 and before allows a remote attacker to escalate privileges via the osslsigncode.c component 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-25",
-    "cve": "CVE-2026-32542",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in ThemeFusion Fusion Builder fusion-builder allows Reflected XSS.This issue affects Fusion Builder: from n/a through 25/03/2026 25/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-14790",
+    "descripcion": "IBM InfoSphere Information Server 11.7.0.0 through 11.7.1.6 could allow an attacker to obtain sensitive information due to insufficiently protected credentials. 25/03/2026 25/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
