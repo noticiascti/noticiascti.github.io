@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-4897",
-    "descripcion": "A flaw was found in polkit. A local user can exploit this by providing a specially crafted, excessively long input to the `polkit-agent-helper-1` setuid binary via standard input (stdin). This unbounded input can lead to an out-of-memory (OOM) condition, resulting in a Denial of Service (DoS) for the system. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-4867",
+    "descripcion": "Impact: A bad regular expression is generated any time you have three or more parameters within a single segment, separated by something that is not a period (.). For example, /:a-:b-:c or /:a-:b-:c-:d. The backtrack protection added in path-to-regexp@0.1.12 only prevents ambiguity for two parameters. With three or more, the generated lookahead does not block single separator characters, so capture groups overlap and cause catastrophic backtracking. Patches: Upgrade to path-to-regexp@0.1.13 Custom regex patterns in route definitions (e.g., /:a-:b([^-/]+)-:c([^-/]+)) are not affected because they override the default capture group. Workarounds: All versions can be patched by providing a custom regular expression for parameters after the first in a single segment. As long as the custom regular expression does not match the text before the parameter, you will be safe. For example, change /:a-:b-:c to /:a-:b([^-/]+)-:c([^-/]+). If paths cannot be rewritten and versions cannot be upgraded, another alternative is to limit the URL length. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-33397",
-    "descripcion": "The Angular SSR is a server-rise rendering tool for Angular applications. Versions on the 22.x branch prior to 22.0.0-next.2, the 21.x branch prior to 21.2.3, and the 20.x branch prior to 20.3.21 have an Open Redirect vulnerability in `@angular/ssr` due to an incomplete fix for CVE-2026-27738. While the original fix successfully blocked multiple leading slashes (e.g., `///`), the internal validation logic fails to account for a single backslash (`\\`) bypass. When an Angular SSR application is deployed behind a proxy that passes the `X-Forwarded-Prefix` header, an attacker provides a value starting with a single backslash, the internal validation failed to flag the single backslash as invalid, the application prepends a leading forward slash, resulting in a `Location` header containing the URL, and modern browsers interpret the `/\\` sequence as `//`, treating it as a protocol-relative URL and redirecting the user to the attacker-controlled domain. Furthermore, the response lacks the `Vary: X-Forwarded-Prefix` header, allowing the malicious redirect to be stored in intermediate caches (Web Cache Poisoning). Versions 22.0.0-next.2, 21.2.3, and 20.3.21 contain a patch. Until the patch is applied, developers should sanitize the `X-Forwarded-Prefix` header in their `server.ts` before the Angular engine processes the request. 26/03/2026 26/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3116",
+    "descripcion": "Mattermost Plugins versions 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-29976",
-    "descripcion": "Buffer Overflow vulnerability in ZerBea hcxpcapngtool v. 7.0.1-43-g2ee308e allows a local attacker to obtain sensitive information via the getradiotapfield() function 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3115",
+    "descripcion": "Mattermost versions 11.2.x 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-30162",
-    "descripcion": "Cross Site Scripting (xss) vulnerability in Timo 2.0.3 via crafted links in the title field. 26/03/2026 26/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3114",
+    "descripcion": "Mattermost versions 11.4.x 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-29934",
-    "descripcion": "A reflected cross-site scripting (XSS) vulnerability in the /admin/menus component of Lightcms v2.0 allows attackers to execute arbitrary Javascript in the context of the user&#39;s browser via modifying the referer value in the request header. 26/03/2026 26/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3113",
+    "descripcion": "Mattermost versions 11.4.x 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-29933",
-    "descripcion": "A reflected cross-site scripting (XSS) vulnerability in the /index/login.html component of YZMCMS v7.4 allows attackers to execute arbitrary Javascript in the context of the user&#39;s browser via modifying the referrer value in the request header. 26/03/2026 26/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3112",
+    "descripcion": "Mattermost versions 11.4.x 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-28298",
-    "descripcion": "SolarWinds Observability Self-Hosted was found to be affected by a stored cross-site scripting vulnerability, which when exploited, can lead to unintended script execution. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3109",
+    "descripcion": "Mattermost Plugins versions 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 2.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-28297",
-    "descripcion": "SolarWinds Observability Self-Hosted was found to be affected by a stored cross-site scripting vulnerability, which when exploited, can lead to unintended script execution. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3108",
+    "descripcion": "Mattermost versions 11.2.x 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-27664",
-    "descripcion": "A vulnerability has been identified in CPCI85 Central Processing/Communication (All versions 26/03/2026 26/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-34071",
+    "descripcion": "Stirling-PDF is a locally hosted web application that allows you to perform various operations on PDF files. In version 2.7.3, the /api/v1/convert/eml/pdf endpoint with parameter downloadHtml=true returns unsanitized HTML from the email body with Content-Type: text/html. An attacker who sends a malicious email to a Stirling-PDF user can achieve JavaScript execution when that user exports the email using the &#34;Download HTML intermediate file&#34; feature. Version 2.8.0 fixes the issue. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-26",
-    "cve": "CVE-2026-27663",
-    "descripcion": "A vulnerability has been identified in CPCI85 Central Processing/Communication (All versions 26/03/2026 26/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-33636",
+    "descripcion": "LIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. In versions 1.6.36 through 1.6.55, an out-of-bounds read and write exists in libpng&#39;s ARM/AArch64 Neon-optimized palette expansion path. When expanding 8-bit paletted rows to RGB or RGBA, the Neon loop processes a final partial chunk without verifying that enough input pixels remain. Because the implementation works backward from the end of the row, the final iteration dereferences pointers before the start of the row buffer (OOB read) and writes expanded pixel data to the same underflowed positions (OOB write). This is reachable via normal decoding of attacker-controlled PNG input if Neon is enabled. Version 1.6.56 fixes the issue. 26/03/2026 26/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
