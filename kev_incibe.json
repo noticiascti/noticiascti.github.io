@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-5153",
-    "descripcion": "A flaw has been found in Tenda CH22 1.0.0.1. The affected element is the function FormWriteFacMac of the file /goform/WriteFacMac. Executing a manipulation of the argument mac can lead to command injection. The attack may be launched remotely. The exploit has been published and may be used. 31/03/2026 31/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5115",
+    "descripcion": "The PaperCut NG/MF (specifically, the embedded application for Konica Minolta devices) is vulnerable to session hijacking. The PaperCut NG/MF Embedded application is a software interface that runs directly on the touch screen of a multi-function device. It was internally discovered that the communication channel between the embedded application and the server was insecure, which could leak data including sensitive information that may be used to mount an attack on the device. Such an attack could potentially be used to steal data or to perform a phishing attack on the end user. 31/03/2026 31/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 3.60 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-4257",
-    "descripcion": "The Contact Form by Supsystic plugin for WordPress is vulnerable to Server-Side Template Injection (SSTI) leading to Remote Code Execution (RCE) in all versions up to, and including, 1.7.36. This is due to the plugin using the Twig `Twig_Loader_String` template engine without sandboxing, combined with the `cfsPreFill` prefill functionality that allows unauthenticated users to inject arbitrary Twig expressions into form field values via GET parameters. This makes it possible for unauthenticated attackers to execute arbitrary PHP functions and OS commands on the server by leveraging Twig&#39;s `registerUndefinedFilterCallback()` method to register arbitrary PHP callbacks. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-4794",
+    "descripcion": "Multiple cross-site scripting (XSS) vulnerabilities in PaperCut NG/MF before 25.0.10 allow authenticated administrator users to inject arbitrary web script or HTML code via different UI fields. This could be used to compromise other admininistrator&#39;s sessions or perform unauthorized actions via the administrator&#39;s authenticated context (e.g. requires an active login session). 31/03/2026 31/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33995",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, a double-free vulnerability in kerberos_AcceptSecurityContext() and kerberos_InitializeSecurityContextA() (WinPR, winpr/libwinpr/sspi/Kerberos/kerberos.c) can cause a crash in any FreeRDP clients on systems where Kerberos and/or Kerberos U2U is configured (Samba AD member, or krb5 for NFS). The crash is triggered during NLA connection teardown and requires a failed authentication attempt. This issue has been patched in version 3.24.2. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-32734",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, baserCMS has DOM-based cross-site scripting in tag creation. This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33987",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, in persistent_cache_read_entry_v3() in libfreerdp/cache/persistent.c, persistent->bmpSize is updated before winpr_aligned_recalloc(). If realloc fails, bmpSize is inflated while bmpData points to the old buffer. This issue has been patched in version 3.24.2. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-30940",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, a path traversal vulnerability exists in the theme file management API (/baser/api/admin/bc-theme-file/theme_files/add.json) that allows arbitrary file write. An authenticated administrator can include ../ sequences in the path parameter to create a PHP file in an arbitrary directory outside the theme directory, which may result in remote code execution (RCE). This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33986",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, in yuv_ensure_buffer() in libfreerdp/codec/h264.c, h264->width and h264->height are updated before the reallocation loop. If any winpr_aligned_recalloc() call fails, the function returns FALSE but width/height are already inflated. This issue has been patched in version 3.24.2. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-30880",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, baserCMS has an OS command injection vulnerability in the installer. This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33985",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, pixel data from adjacent heap memory is rendered to screen, potentially leaking sensitive data to the attacker. This issue has been patched in version 3.24.2. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-30879",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, baserCMS has a cross-site scripting vulnerability in blog posts. This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33984",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, in resize_vbar_entry() in libfreerdp/codec/clear.c, vBarEntry->size is updated to vBarEntry->count before the winpr_aligned_recalloc() call. If realloc fails, size is inflated while pixels still points to the old, smaller buffer. On a subsequent call where count 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-30878",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, a public mail submission API allows unauthenticated users to submit mail form entries even when the corresponding form is not accepting submissions. This bypasses administrative controls intended to stop form intake and enables spam or abuse via the API. This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33983",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, progressive_decompress_tile_upgrade() detects a mismatch via progressive_rfx_quant_cmp_equal() but only emits WLog_WARN, execution continues. The wrapped value (247) is used as a shift exponent, causing undefined behavior and an approximately 80 billion iteration loop (CPU DoS). This issue has been patched in version 3.24.2. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-30877",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, there is an OS command injection vulnerability in the update functionality. Due to this issue, an authenticated user with administrator privileges in baserCMS can execute arbitrary OS commands on the server with the privileges of the user account running baserCMS. This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33982",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, there is a heap-buffer-overflow READ vulnerability at 24 bytes before the allocation, in winpr_aligned_offset_recalloc(). This issue has been patched in version 3.24.2. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-27697",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, baserCMS has a SQL injection vulnerability in blog posts. This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-03-30",
-    "cve": "CVE-2026-33977",
-    "descripcion": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to version 3.24.2, a malicious RDP server can crash the FreeRDP client by sending audio data in IMA ADPCM format with an invalid initial step index value (>= 89). The unvalidated step index is read directly from the network and used to index into a 89-entry lookup table, triggering a WINPR_ASSERT() failure and process abort via SIGABRT. This affects any FreeRDP client that has audio redirection (RDPSND) enabled, which is the default configuration. This issue has been patched in version 3.24.2. 31/03/2026 31/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-21861",
+    "descripcion": "baserCMS is a website development framework. Prior to version 5.2.3, baserCMS contains an OS command injection vulnerability in the core update functionality. An authenticated administrator can execute arbitrary OS commands on the server due to improper handling of user-controlled input that is directly passed to exec() without sufficient validation or escaping. This issue has been patched in version 5.2.3. 31/03/2026 31/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
