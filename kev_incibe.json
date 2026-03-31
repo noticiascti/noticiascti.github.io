@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-5126",
+    "descripcion": "A flaw has been found in SourceCodester RSS Feed Parser 1.0. Affected by this issue is the function file_get_contents. This manipulation causes server-side request forgery. The attack is possible to be carried out remotely. The exploit has been published and may be used. 30/03/2026 30/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-5125",
+    "descripcion": "A vulnerability was detected in raine consult-llm-mcp up to 2.5.3. Affected by this vulnerability is the function child_process.execSync of the file src/server.ts. The manipulation of the argument git_diff.base_ref/git_diff.files results in os command injection. The attack is only possible with local access. The exploit is now public and may be used. Upgrading to version 2.5.4 addresses this issue. The patch is identified as 4abf297b34e5e8a9cb364b35f52c5f0ca1d599d3. Upgrading the affected component is recommended. 30/03/2026 30/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-4046",
+    "descripcion": "The iconv() function in the GNU C Library versions 2.43 and earlier may crash due to an assertion failure when converting inputs from the IBM1390 or IBM1399 character sets, which may be used to remotely crash an application. This vulnerability can be trivially mitigated by removing the IBM1390 and IBM1399 character sets from systems that do not need them. 30/03/2026 30/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-33032",
+    "descripcion": "Nginx UI is a web user interface for the Nginx web server. In versions 2.3.5 and prior, the nginx-ui MCP (Model Context Protocol) integration exposes two HTTP endpoints: /mcp and /mcp_message. While /mcp requires both IP whitelisting and authentication (AuthRequired() middleware), the /mcp_message endpoint only applies IP whitelisting - and the default IP whitelist is empty, which the middleware treats as &#34;allow all&#34;. This means any network attacker can invoke all MCP tools without authentication, including restarting nginx, creating/modifying/deleting nginx configuration files, and triggering automatic config reloads - achieving complete nginx service takeover. At time of publication, there are no publicly available patches. 30/03/2026 30/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-33030",
+    "descripcion": "Nginx UI is a web user interface for the Nginx web server. In versions 2.3.3 and prior, Nginx-UI contains an Insecure Direct Object Reference (IDOR) vulnerability that allows any authenticated user to access, modify, and delete resources belonging to other users. The application&#39;s base Model struct lacks a user_id field, and all resource endpoints perform queries by ID without verifying user ownership, enabling complete authorization bypass in multi-user environments. At time of publication, there are no publicly available patches. 30/03/2026 30/03/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-33029",
+    "descripcion": "Nginx UI is a web user interface for the Nginx web server. Prior to version 2.3.4, an input validation vulnerability in the logrotate configuration allows an authenticated user to cause a complete Denial of Service (DoS). By submitting a negative integer for the rotation interval, the backend enters an infinite loop or an invalid state, rendering the web interface unresponsive. This issue has been patched in version 2.3.4. 30/03/2026 30/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-33028",
+    "descripcion": "Nginx UI is a web user interface for the Nginx web server. Prior to version 2.3.4, the nginx-ui application is vulnerable to a Race Condition. Due to the complete absence of synchronization mechanisms (Mutex) and non-atomic file writes, concurrent requests lead to the severe corruption of the primary configuration file (app.ini). This vulnerability results in a persistent Denial of Service (DoS) and introduces a non-deterministic path for Remote Code Execution (RCE) through configuration cross-contamination. This issue has been patched in version 2.3.4. 30/03/2026 30/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-33027",
+    "descripcion": "Nginx UI is a web user interface for the Nginx web server. Prior to version 2.3.4, the nginx-ui configuration improperly handles URL-encoded traversal sequences. When specially crafted paths are supplied, the backend resolves them to the base Nginx configuration directory and executes the operation on the base directory (/etc/nginx). In particular, this allows an authenticated user to remove the entire /etc/nginx directory, resulting in a partial Denial of Service. This issue has been patched in version 2.3.4. 30/03/2026 30/03/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-30077",
+    "descripcion": "OpenAirInterface V2.2.0 AMF crashes when it fails to decode the message. Not all decode failures result in a crash. But the crash is consistent for particular inputs. An example input in hex stream is 80 00 00 0E 00 00 01 00 0F 80 02 02 40 00 58 00 01 88. 30/03/2026 30/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-03-30",
+    "cve": "CVE-2026-29872",
+    "descripcion": "A cross-session information disclosure vulnerability exists in the awesome-llm-apps project in commit e46690f99c3f08be80a9877fab52acacf7ab8251 (2026-01-19). The affected Streamlit-based GitHub MCP Agent stores user-supplied API tokens in process-wide environment variables using os.environ without proper session isolation. Because Streamlit serves multiple concurrent users from a single Python process, credentials provided by one user remain accessible to subsequent unauthenticated users. An attacker can exploit this issue to retrieve sensitive information such as GitHub Personal Access Tokens or LLM API keys, potentially leading to unauthorized access to private resources and financial abuse. 30/03/2026 30/03/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  }
+]
