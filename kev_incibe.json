@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-03-31",
+    "cve": "CVE-2026-34548",
+    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, there is an Undefined Behavior (UB) condition in the XML conversion tooling path (iccToXml) caused by an implicit conversion from a negative signed integer to icUInt32Number (unsigned 32-bit), which changes the value. This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-31",
+    "cve": "CVE-2026-34547",
+    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, an Undefined Behavior (UB) condition in IccUtil.cpp can be triggered by a crafted ICC profile when running iccDumpProfile. This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-31",
+    "cve": "CVE-2026-34546",
+    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, a crafted TIFF input can trigger Undefined Behavior (UB) due to division by zero in the TIFF handling code paths used by iccTiffDump. This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-31",
+    "cve": "CVE-2026-2480",
+    "descripcion": "The WP Shortcodes Plugin — Shortcodes Ultimate plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;max_width&#39; attribute of the `su_box` shortcode in all versions up to, and including, 7.4.10 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-03-31",
     "cve": "CVE-2026-5215",
     "descripcion": "A vulnerability was identified in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. The impacted element is the function cgi_get_ipv6 of the file /cgi-bin/network_mgr.cgi. Such manipulation leads to improper access controls. The exploit is publicly available and might be used. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:A/AC:L/Au:N/C:P/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-03-31",
     "cve": "CVE-2026-34541",
     "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, a crafted ICC profile can trigger Undefined Behavior (UB) via a null-pointer member call in CIccCombinedConnectionConditions::CIccCombinedConnectionConditions() (reported by UBSan as “member call on null pointer of type CIccTagSpectralViewingConditions”). The issue is reachable when running iccApplyNamedCmm with -PCC using a malformed .icc profile. This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-31",
-    "cve": "CVE-2026-34540",
-    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, a crafted ICC profile can trigger a heap-buffer-overflow (HBO) in icMemDump() when iccDumpProfile attempts to dump/describe malformed tag contents. The issue is observable under AddressSanitizer as an out-of-bounds heap read in icMemDump(...) at IccProfLib/IccUtil.cpp:1002, reachable via CIccTagUnknown::Describe(). This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-31",
-    "cve": "CVE-2026-34539",
-    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, a crafted ICC profile and TIFF input can trigger a heap-buffer-overflow (HBO) in CTiffImg::WriteLine(). The issue is observable under AddressSanitizer as an out-of-bounds heap read when running iccSpecSepToTiff on a malicious .icc + .tif pair, leading to a crash during TIFF strip writing. This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-31",
-    "cve": "CVE-2026-34537",
-    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, a crafted ICC profile can trigger Undefined Behavior (UB) in CIccOpDefEnvVar::Exec() due to invalid enum values being loaded for icSigCmmEnvVar. The issue is observable under UBSan as a “load of value … not a valid value for type icSigCmmEnvVar”, indicating an invalid enum/type value being consumed during ICC profile processing. This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-03-31",
-    "cve": "CVE-2026-34536",
-    "descripcion": "iccDEV provides a set of libraries and tools for working with ICC color management profiles. Prior to version 2.3.1.6, a crafted ICC profile can trigger a stack overflow (SO) in SIccCalcOp::ArgsUsed(). The issue is observable under AddressSanitizer as a stack-overflow when iccApplyProfiles processes a malicious profile, with the crash occurring while computing argument usage during calculator underflow/overflow checks. This issue has been patched in version 2.3.1.6. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
