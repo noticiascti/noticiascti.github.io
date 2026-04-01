@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-25601",
-    "descripcion": "A vulnerability was identified in MEPIS RM, an industrial software product developed by Metronik. The application contained a hardcoded cryptographic key within the Mx.Web.ComponentModel.dll component. When the option to store domain passwords was enabled, this key was used to encrypt user passwords before storing them in the application’s database. An attacker with sufficient privileges to access the database could extract the encrypted passwords, decrypt them using the embedded key, and gain unauthorized access to the associated ICS/OT environment. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-30573",
+    "descripcion": "A Business Logic vulnerability exists in SourceCodester Pharmacy Product Management System 1.0. The vulnerability is located in the add-sales.php file. The application fails to validate the &#34;txtprice&#34; and &#34;txttotalcost&#34; parameters, allowing attackers to submit negative values for sales transactions. This leads to incorrect financial calculations, corruption of sales reports, and potential financial loss. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-24096",
-    "descripcion": "Insufficient permission validation on multiple REST API Quick Setup endpoints in Checkmk 2.5.0 (beta) before version 2.5.0b2 and 2.4.0 before version 2.4.0p25 allows low-privileged users to perform unauthorized actions or obtain sensitive information 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-30523",
+    "descripcion": "A Business Logic vulnerability exists in SourceCodester Loan Management System v1.0 due to the lack of proper input validation. The application allows administrators to define &#34;Loan Plans&#34; which determine the duration of a loan (in months). However, the backend fails to validate that the duration must be a positive integer. An attacker can submit a negative value for the months parameter. The system accepts this invalid data and creates a loan plan with a negative duration. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-0932",
-    "descripcion": "Blind server-side request forgery (SSRF) vulnerability in legacy connection methods of document co-authoring features in M-Files Server before 26.3 allow an unauthenticated attacker to cause the server to send HTTP GET requests to arbitrary URLs. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-30292",
+    "descripcion": "An arbitrary file overwrite vulnerability in Docudepot PDF Reader: PDF Viewer APP v1.0.34 allows attackers to overwrite critical internal files via the file import process, leading to arbitrary code execution or information exposure. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-23899",
-    "descripcion": "An improper access check allows unauthorized access to webservice endpoints. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-30291",
+    "descripcion": "An arbitrary file overwrite vulnerability in Ora Tools PDF Reader &#39; Reader & Editor APPv4.3.5 allows attackers to overwrite critical internal files via the file import process, leading to arbitrary code execution or information exposure. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-23898",
-    "descripcion": "Lack of input validation leads to an arbitrary file deletion vulnerability in the autoupdate server mechanism. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-29598",
+    "descripcion": "Multiple stored cross-site scripting (XSS) vulnerabilities in the submit_add_user.asp endpoint of DDSN Interactive Acora CMS v10.7.1 allow attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the First Name and Last Name parameters. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-21632",
-    "descripcion": "Lack of output escaping for article titles leads to XSS vectors in various locations. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-13535",
+    "descripcion": "The King Addons for Elementor plugin for WordPress is vulnerable to multiple Contributor+ DOM-Based Stored Cross-Site Scripting vulnerabilities in all versions up to, and including, 51.1.38. This is due to insufficient input sanitization and output escaping across multiple widgets and features. The plugin uses esc_attr() and esc_url() within JavaScript inline event handlers (onclick attributes), which allows HTML entities to be decoded by the DOM, enabling attackers to break out of the JavaScript context. Additionally, several JavaScript files use unsafe DOM manipulation methods (template literals, .html(), and window.location.href with unvalidated URLs) with user-controlled data. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts via Elementor widget settings that execute when a user accesses the injected page or when an administrator previews the page in Elementor&#39;s editor. The vulnerability was partially patched in version 5.1.51. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-21631",
-    "descripcion": "Lack of output escaping leads to a XSS vector in the multilingual associations component. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3877",
+    "descripcion": "A reflected cross-site scripting (XSS) vulnerability in the dashboard search functionality of the VertiGIS FM solution allows attackers to craft a malicious URL, that if visited by an authenticated victim, will execute arbitrary JavaScript in the victim&#39;s context. Such a URL could be delivered through various means, for instance, by sending a link or by tricking victims to visit a page crafted by the attacker. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-21630",
-    "descripcion": "Improperly built order clauses lead to a SQL injection vulnerability in the articles webservice endpoint. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-35094",
+    "descripcion": "A flaw was found in libinput. An attacker capable of deploying a Lua plugin file in specific system directories can exploit a dangling pointer vulnerability. This occurs when a garbage collection cleanup function is called, leaving a pointer that can then be printed to system logs. This could potentially expose sensitive data if the memory location is re-used, leading to information disclosure. For this exploit to work, Lua plugins must be enabled in libinput and loaded by the compositor. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-21629",
-    "descripcion": "The ajax component was excluded from the default logged-in-user check in the administrative area. This behavior was potentially unexpected by 3rd party developers. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-35093",
+    "descripcion": "A flaw was found in libinput. A local attacker who can place a specially crafted Lua bytecode file in certain system or user configuration directories can bypass security restrictions. This allows the attacker to run unauthorized code with the same permissions as the program using libinput, such as a graphical compositor. This could lead to the attacker monitoring keyboard input and sending that information to an external location. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-1879",
-    "descripcion": "A vulnerability was detected in Harvard University IQSS Dataverse up to 6.8. This affects an unknown function of the file /ThemeAndWidgets.xhtml of the component Theme Customization. Performing a manipulation of the argument uploadLogo results in unrestricted upload. Remote exploitation of the attack is possible. The exploit is now public and may be used. Upgrading to version 6.10 mitigates this issue. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-35092",
+    "descripcion": "A flaw was found in Corosync. An integer overflow vulnerability in Corosync&#39;s join message sanity validation allows a remote, unauthenticated attacker to send crafted User Datagram Protocol (UDP) packets. This can cause the service to crash, leading to a denial of service. This vulnerability specifically affects Corosync deployments configured to use totemudp/totemudpu mode. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
