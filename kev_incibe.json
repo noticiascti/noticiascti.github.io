@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-5175",
-    "descripcion": "Improper access control in the multi-factor authentication (MFA) management API in Devolutions Server allows an authenticated attacker to delete their own configured MFA factors and reduce account protection to password-only authentication via crafted HTTP requests. This issue affects Server: from 2026.1.6 through 2026.1.11. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-5199",
+    "descripcion": "A writer role user in an attacker-controlled namespace could signal, delete, and reset workflows or activities in a victim namespace on the same cluster. Exploitation requires the attacker to know or guess specific victim workflow ID(s) and, for signal operations, signal names. This was due to a bug introduced in Temporal Server v1.29.0 which inadvertently allowed an attacker to control the namespace name value instead of using the server&#39;s own trusted name value within the batch activity code. The batch activity validated the namespace ID but did not cross-check the namespace name against the worker&#39;s bound namespace, allowing the per-namespace worker&#39;s privileged credentials to operate on an arbitrary namespace. Exploitation requires a server configuration where internal components have cross-namespace authorization, such as deployment of the internal-frontend service or equivalent TLS-based authorization for internal identities. This vulnerability also impacted Temporal Cloud when the attacker and victim namespaces were on the same cell, with the same preconditions as self-hosted clusters. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:U/V:X/RE:M/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-4989",
-    "descripcion": "Improper input validation in the gateway health check feature in Devolutions Server allows a low-privileged authenticated user to perform server-side request forgery (SSRF), potentially leading to information disclosure, via a crafted API request. This issue affects Server: from 2026.1.1 through 2026.1.11, from 2025.3.1 through 2025.3.17. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34751",
+    "descripcion": "Payload is a free and open source headless content management system. Prior to version 3.79.1 in @payloadcms/graphql and payload, a vulnerability in the password recovery flow could allow an unauthenticated attacker to perform actions on behalf of a user who initiates a password reset. This issue has been patched in version 3.79.1 for @payloadcms/graphql and payload. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-4927",
-    "descripcion": "Exposure of sensitive information in the users MFA feature in Devolutions Server allows users with user management privileges to obtain other users OTP keys via an authenticated API request. This issue affects Server: from 2026.1.6 through 2026.1.11. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34447",
+    "descripcion": "Open Neural Network Exchange (ONNX) is an open standard for machine learning interoperability. Prior to version 1.21.0, there is a symlink traversal vulnerability in external data loading allows reading files outside the model directory. This issue has been patched in version 1.21.0. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-4925",
-    "descripcion": "Improper access control in the users MFA feature in Devolutions Server allows an authenticated user to bypass administrator-enforced restrictions and remove their own multi-factor authentication (MFA) configuration via a crafted request. This issue affects Server: from 2026.1.6 through 2026.1.11. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34446",
+    "descripcion": "Open Neural Network Exchange (ONNX) is an open standard for machine learning interoperability. Prior to version 1.21.0, there is an issue in onnx.load, the code checks for symlinks to prevent path traversal, but completely misses hardlinks because a hardlink looks exactly like a regular file on the filesystem. This issue has been patched in version 1.21.0. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-4924",
-    "descripcion": "Improper authentication in the two-factor authentication (2FA) feature in Devolutions Server 2026.1.11 and earlier allows a remote attacker with valid credentials to bypass multifactor authentication and gain unauthorized access to the victim account via reuse of a partially authenticated session token. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34445",
+    "descripcion": "Open Neural Network Exchange (ONNX) is an open standard for machine learning interoperability. Prior to version 1.21.0, the ExternalDataInfo class in ONNX was using Python’s setattr() function to load metadata (like file paths or data lengths) directly from an ONNX model file. It didn’t check if the &#34;keys&#34; in the file were valid. Due to this, an attacker could craft a malicious model that overwrites internal object properties. This issue has been patched in version 1.21.0. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-4829",
-    "descripcion": "Improper authentication in the external OAuth authentication flow in Devolutions Server 2026.1.11 and earlier allows an authenticated user to authenticate as other users, including administrators, via reuse of a session code from an external authentication flow. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34397",
+    "descripcion": "Himmelblau is an interoperability suite for Microsoft Azure Entra ID and Intune. From versions 2.0.0-alpha to before 2.3.9 and 3.0.0-alpha to before 3.1.1, there is a conditional local privilege escalation vulnerability in an edge-case naming collision. Only authenticated himmelblau users whose mapped CN/short name exactly matches a privileged local group name (e.g., &#34;sudo&#34;, &#34;wheel&#34;, &#34;docker&#34;, &#34;adm&#34;) can cause the NSS module to resolve that group name to their fake primary group. If the system uses NSS results for group-based authorization decisions (sudo, polkit, etc.), this can grant the attacker the privileges of that group. This issue has been patched in versions 2.3.9 and 3.1.1. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-4828",
-    "descripcion": "Improper authentication in the OAuth login functionality in Devolutions Server 2026.1.11 and earlier allows a remote attacker with valid credentials to bypass multi-factor authentication via a crafted login request. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34376",
+    "descripcion": "PdfDing is a selfhosted PDF manager, viewer and editor offering a seamless user experience on multiple devices. Prior to version 1.7.0, an access-control vulnerability allows unauthenticated users to retrieve password-protected shared PDFs by directly calling the file-serving endpoint without completing the password verification flow. This results in unauthorized access to confidential documents that users expected to be protected by a shared-link password. This issue has been patched in version 1.7.0. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-35099",
-    "descripcion": "Lakeside SysTrack Agent 11 before 11.2.1.28 has a race condition with resultant Local Privilege Escalation to SYSTEM. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-34236",
+    "descripcion": "Auth0-PHP is a PHP SDK for Auth0 Authentication and Management APIs. From version 8.0.0 to before version 8.19.0, in applications built with the Auth0 PHP SDK, cookies are encrypted with insufficient entropy, which may result in threat actors brute-forcing the encryption key and forging session cookies. This issue has been patched in version 8.19.0. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-34510",
-    "descripcion": "OpenClaw before 2026.3.22 contains a path traversal vulnerability in Windows media loaders that accepts remote-host file URLs and UNC-style paths before local-path validation. Attackers can exploit this by providing network-hosted file targets that are treated as local content, bypassing intended access restrictions. 01/04/2026 01/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-34222",
+    "descripcion": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to version 0.8.11, there is a broken access control vulnerability in tool values. This issue has been patched in version 0.8.11. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-01",
-    "cve": "CVE-2026-31027",
-    "descripcion": "TOTOlink A3600R v5.9c.4959 contains a buffer overflow vulnerability in the setAppEasyWizardConfig interface of /lib/cste_modules/app.so. The vulnerability occurs because the rootSsid parameter is not properly validated for length, allowing remote attackers to trigger a buffer overflow, potentially leading to arbitrary code execution or denial of service. 01/04/2026 01/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34159",
+    "descripcion": "llama.cpp is an inference of several LLM models in C/C++. Prior to version b8492, the RPC backend&#39;s deserialize_tensor() skips all bounds validation when a tensor&#39;s buffer field is 0. An unauthenticated attacker can read and write arbitrary process memory via crafted GRAPH_COMPUTE messages. Combined with pointer leaks from ALLOC_BUFFER/BUFFER_GET_BASE, this gives full ASLR bypass and remote code execution. No authentication required, just TCP access to the RPC server port. This issue has been patched in version b8492. 01/04/2026 01/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
