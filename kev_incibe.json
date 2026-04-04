@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-04-04",
+    "cve": "CVE-2026-2949",
+    "descripcion": "The Xpro Addons — 140+ Widgets for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Icon Box widget in versions up to, and including, 1.4.24 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 04/04/2026 04/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-04-04",
+    "cve": "CVE-2026-2924",
+    "descripcion": "The Gutenverse – Ultimate WordPress FSE Blocks Addons & Ecosystem plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;imageLoad&#39; parameter in versions up to, and including, 3.4.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 04/04/2026 04/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-04-04",
     "cve": "CVE-2026-3571",
     "descripcion": "The Pie Register – User Registration, Profiles & Content Restriction plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the pie_main() function in all versions up to, and including, 3.8.4.8. This makes it possible for unauthenticated attackers to change registration form status. 04/04/2026 04/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-04-03",
     "cve": "CVE-2026-34776",
     "descripcion": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.1, 40.8.1, and 41.0.0, on macOS and Linux, apps that call app.requestSingleInstanceLock() were vulnerable to an out-of-bounds heap read when parsing a crafted second-instance message. Leaked memory could be delivered to the app&#39;s second-instance event handler. This issue is limited to processes running as the same user as the Electron app. Apps that do not call app.requestSingleInstanceLock() are not affected. Windows is not affected by this issue. This issue has been patched in versions 38.8.6, 39.8.1, 40.8.1, and 41.0.0. 04/04/2026 04/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-03",
-    "cve": "CVE-2026-34775",
-    "descripcion": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.4, 40.8.4, and 41.0.0, the nodeIntegrationInWorker webPreference was not correctly scoped in all configurations. In certain process-sharing scenarios, workers spawned in frames configured with nodeIntegrationInWorker: false could still receive Node.js integration. Apps are only affected if they enable nodeIntegrationInWorker. Apps that do not use nodeIntegrationInWorker are not affected. This issue has been patched in versions 38.8.6, 39.8.4, 40.8.4, and 41.0.0. 04/04/2026 04/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-03",
-    "cve": "CVE-2026-34774",
-    "descripcion": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 39.8.1, 40.7.0, and 41.0.0, apps that use offscreen rendering and allow child windows via window.open() may be vulnerable to a use-after-free. If the parent offscreen WebContents is destroyed while a child window remains open, subsequent paint frames on the child dereference freed memory, which may lead to a crash or memory corruption. Apps are only affected if they use offscreen rendering (webPreferences.offscreen: true) and their setWindowOpenHandler permits child windows. Apps that do not use offscreen rendering, or that deny child windows, are not affected. This issue has been patched in versions 39.8.1, 40.7.0, and 41.0.0. 04/04/2026 04/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
