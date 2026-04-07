@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5384",
-    "descripcion": "An issue that could allow a credential to be updated and used for a task from outside of the authorized organization scope has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N (5.8 Medium). This issue was fixed in version 4.0.26021.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5745",
+    "descripcion": "A flaw was found in libarchive. A NULL pointer dereference vulnerability exists in the ACL parsing logic, specifically within the archive_acl_from_text_nl() function. When processing a malformed ACL string (such as a bare &#34;d&#34; or &#34;default&#34; tag without subsequent fields), the function fails to perform adequate validation before advancing the pointer. An attacker can exploit this by providing a maliciously crafted archive, causing an application utilizing the libarchive API (such as bsdtar) to crash, resulting in a Denial of Service (DoS). 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5383",
-    "descripcion": "An issue that could allow access to Explorer groups from outside of the authorized organization scope has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:L/A:L (4.4 Medium). This issue was fixed in version 4.0.260208.0 of the runZero Explorer. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5359",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5382",
-    "descripcion": "An issue that could expose records outside of the authorized organization scope through the MCP endpoints has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:N/A:N (3.0 Low). This issue was fixed in version 4.0.260206.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-4931",
+    "descripcion": "Smart contract Marginal v1 performs unsafe downcast, allowing attackers to settle a large debt position for a negligible asset cost. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5381",
-    "descripcion": "An issue that could expose task information outside of the authorized organization scope has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N (2.2 Low). This issue was fixed in version 4.0.260205.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-35571",
+    "descripcion": "Emissary is a P2P based data-driven workflow engine. Prior to 8.39.0, Mustache navigation templates interpolated configuration-controlled link values directly into href attributes without URL scheme validation. An administrator who could modify the navItems configuration could inject javascript: URIs, enabling stored cross-site scripting (XSS) against other authenticated users viewing the Emissary web interface. This vulnerability is fixed in 8.39.0. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5380",
-    "descripcion": "An issue that could allow an authorized user to view the clear-text secrets for a subset of credential types and fields has been resolved. This is an instance of CWE-522: Insufficiently Protected Credentials, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N (5.3 Medium). This issue was fixed in version 4.0.260204.2 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-35567",
+    "descripcion": "ChurchCRM is an open-source church management system. Prior to 7.1.0, the NewRole POST parameter in src/MemberRoleChange.php is used in an SQL query without proper integer validation, allowing authenticated users to inject arbitrary SQL. The attack requires an authenticated session with ManageGroups role, knowledge of a valid GroupID and PersonID (obtainable from GroupView or PersonView pages) This vulnerability is fixed in 7.1.0. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5379",
-    "descripcion": "An issue that allowed MCP agents to access certificate information from outside of their authorized organization scope has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:N/A:N (3.0 Low). This issue was fixed in version 4.0.260203.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-35566",
+    "descripcion": "ChurchCRM is an open-source church management system. Prior to 7.1.0, a critical SQL injection vulnerability exists in src/Reports/FundRaiserStatement.php where the $_SESSION[&#39;iCurrentFundraiser&#39;] value is used in an unquoted numeric SQL context without integer validation. The value originates from src/FundRaiserEditor.php where InputUtils::legacyFilterInputArr() is called without the &#39;int&#39; type specifier. This vulnerability is fixed in 7.1.0. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5378",
-    "descripcion": "An issue that allowed administrators to create and update users outside of their authorized organization scope has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:H/A:N (5.8 Medium). This issue was fixed in version 4.0.260203.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-35534",
+    "descripcion": "ChurchCRM is an open-source church management system. Prior to 7.1.0, a stored cross-site scripting vulnerability exists in PersonView.php due to incorrect use of sanitizeText() as an output sanitizer for HTML attribute context. The function only strips HTML tags, it does not escape quote characters allowing an attacker to break out of the href attribute and inject arbitrary JavaScript event handlers. Any authenticated user with the EditRecords role can store the payload in a person&#39;s Facebook field. The XSS fires against any user who views that person&#39;s profile page, including administrators, enabling session hijacking and full account takeover. This vulnerability is fixed in 7.1.0. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5376",
-    "descripcion": "An issue that could prevent session inactivity timeouts from triggering due to automatic page reloading has been resolved. This is an instance of CWE-613: Insufficient Control of Resources After Expiration or Release, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N (5.9 Medium). This issue was fixed in version 4.0.260203.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-35526",
+    "descripcion": "Strawberry GraphQL is a library for creating GraphQL APIs. Prior to 0.312.3, Strawberry GraphQL&#39;s WebSocket subscription handlers for both the graphql-transport-ws and legacy graphql-ws protocols allocate an asyncio.Task and associated Operation object for every incoming subscribe message without enforcing any limit on the number of active subscriptions per connection. An unauthenticated attacker can open a single WebSocket connection, send connection_init, and then flood subscribe messages with unique IDs. Each message unconditionally spawns a new asyncio.Task and async generator, causing linear memory growth and event loop saturation. This leads to server degradation or an OOM crash. This vulnerability is fixed in 0.312.3. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5375",
-    "descripcion": "An issue that could allow a user with access to a credential to view sensitive fields through an API response has been resolved. This is an instance of CWE-200: Exposure of Sensitive Information to an Unauthorized Actor, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N (2.7 Low). This issue was fixed in version 4.0.260203.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-35521",
+    "descripcion": "FTLDNS (pihole-FTL) provides an interactive API and also generates statistics for Pi-hole&#39;s Web interface. From 6.0 to before 6.6, the Pi-hole FTL engine contains a Remote Code Execution (RCE) vulnerability in the DHCP hosts configuration parameter (dhcp.hosts). This vulnerability allows an authenticated attacker to inject arbitrary dnsmasq configuration directives through newline characters, ultimately achieving command execution on the underlying system. This vulnerability is fixed in 6.6. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-07",
-    "cve": "CVE-2026-5374",
-    "descripcion": "An issue that allowed MCP agents to access remediation and asset information from outside of the authorized organization scope has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N (5.8 Medium). This issue was fixed in version 4.0.260202.0 of the runZero Platform. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-35520",
+    "descripcion": "FTLDNS (pihole-FTL) provides an interactive API and also generates statistics for Pi-hole&#39;s Web interface. From 6.0 to before 6.6, the Pi-hole FTL engine contains a Remote Code Execution (RCE) vulnerability in the DHCP lease time configuration parameter (dhcp.leaseTime). This vulnerability allows an authenticated attacker to inject arbitrary dnsmasq configuration directives through newline characters, ultimately achieving command execution on the underlying system. This vulnerability is fixed in 6.6. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
