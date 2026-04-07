@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-07",
+    "cve": "CVE-2026-5465",
+    "descripcion": "The Booking for Appointments and Events Calendar – Amelia plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.1.3. This is due to the `UpdateProviderCommandHandler` failing to validate changes to the `externalId` field when a Provider (Employee) user updates their own profile. The `externalId` maps directly to a WordPress user ID and is passed to `wp_set_password()` and `wp_update_user()` without authorization checks. This makes it possible for authenticated attackers, with Provider-level (Employee) access and above, to take over any WordPress account — including Administrator — by injecting an arbitrary `externalId` value when updating their own provider profile. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2026-4079",
+    "descripcion": "The SQL Chart Builder WordPress plugin before 2.3.8 does not properly escape user input as it is concatened to SQL queries, making it possible for attackers to conduct SQL Injection attacks against the dynamic filter functionality. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2026-1900",
+    "descripcion": "The Link Whisper Free WordPress plugin before 0.9.1 has a publicly accessible REST endpoint that allows unauthenticated settings updates. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2026-1114",
+    "descripcion": "In parisneo/lollms version 2.1.0, the application&#39;s session management is vulnerable to improper access control due to the use of a weak secret key for signing JSON Web Tokens (JWT). This vulnerability allows an attacker to perform an offline brute-force attack to recover the secret key. Once the secret key is obtained, the attacker can forge administrative tokens by modifying the JWT payload and resigning it with the cracked secret. This enables unauthorized users to escalate privileges, impersonate the administrator, and gain access to restricted endpoints. The issue is resolved in version 2.2.0. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2025-15611",
+    "descripcion": "The Popup Box WordPress plugin before 5.5.0 does not properly validate nonces in the add_or_edit_popupbox() function before saving popup data, allowing unauthenticated attackers to perform Cross-Site Request Forgery attacks. When an authenticated admin visits a malicious page, the attacker can create or modify popups with arbitrary JavaScript that executes in the admin panel and frontend. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2026-1839",
+    "descripcion": "A vulnerability in the HuggingFace Transformers library, specifically in the `Trainer` class, allows for arbitrary code execution. The `_load_rng_state()` method in `src/transformers/trainer.py` at line 3059 calls `torch.load()` without the `weights_only=True` parameter. This issue affects all versions of the library supporting `torch>=2.2` when used with PyTorch versions below 2.6, as the `safe_globals()` context manager provides no protection in these versions. An attacker can exploit this vulnerability by supplying a malicious checkpoint file, such as `rng_state.pth`, which can execute arbitrary code when loaded. The issue is resolved in version v5.0.0rc3. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2025-65116",
+    "descripcion": "Buffer Overflow Vulnerability in JP1/IT Desktop Management 2 - Manager on Windows, JP1/IT Desktop Management 2 - Operations Director on Windows, Job Management Partner 1/IT Desktop Management 2 - Manager on Windows, JP1/IT Desktop Management - Manager on Windows, Job Management Partner 1/IT Desktop Management - Manager on Windows, JP1/NETM/DM Manager on Windows, JP1/NETM/DM Client on Windows, Job Management Partner 1/Software Distribution Manager on Windows, Job Management Partner 1/Software Distribution Client on Windows.This issue affects JP1/IT Desktop Management 2 - Manager: from 13-50 before 13-50-02, from 13-11 before 13-11-04, from 13-10 before 13-10-07, from 13-01 before 13-01-07, from 13-00 before 13-00-05, from 12-60 before 12-60-12, from 10-50 through 12-50-11; JP1/IT Desktop Management 2 - Operations Director: from 13-50 before 13-50-02, from 13-11 before 13-11-04, from 13-10 before 13-10-07, from 13-01 before 13-01-07, from 13-00 before 13-00-05, from 12-60 before 12-60-12, from 10-50 through 12-50-11; Job Management Partner 1/IT Desktop Management 2 - Manager: from 10-50 through 10-50-11; JP1/IT Desktop Management - Manager: from 09-50 through 10-10-16; Job Management Partner 1/IT Desktop Management - Manager: from 09-50 through 10-10-16; JP1/NETM/DM Manager: from 09-00 through 10-20-02; JP1/NETM/DM Client: from 09-00 through 10-20-02; Job Management Partner 1/Software Distribution Manager: from 09-00 through 09-51-13; Job Management Partner 1/Software Distribution Client: from 09-00 through 09-51-13. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2025-65115",
+    "descripcion": "Remote Code Execution Vulnerability in JP1/IT Desktop Management 2 - Manager on Windows, JP1/IT Desktop Management 2 - Operations Director on Windows, Job Management Partner 1/IT Desktop Management 2 - Manager on Windows, JP1/IT Desktop Management - Manager on Windows, Job Management Partner 1/IT Desktop Management - Manager on Windows, JP1/NETM/DM Manager on Windows, JP1/NETM/DM Client on Windows, Job Management Partner 1/Software Distribution Manager on Windows, Job Management Partner 1/Software Distribution Client on Windows.This issue affects JP1/IT Desktop Management 2 - Manager: from 13-50 before 13-50-02, from 13-11 before 13-11-04, from 13-10 before 13-10-07, from 13-01 before 13-01-07, from 13-00 before 13-00-05, from 12-60 before 12-60-12, from 10-50 through 12-50-11; JP1/IT Desktop Management 2 - Operations Director: from 13-50 before 13-50-02, from 13-11 before 13-11-04, from 13-10 before 13-10-07, from 13-01 before 13-01-07, from 13-00 before 13-00-05, from 12-60 before 12-60-12, from 10-50 through 12-50-11; Job Management Partner 1/IT Desktop Management 2 - Manager: from 10-50 through 10-50-11; JP1/IT Desktop Management - Manager: from 09-50 through 10-10-16; Job Management Partner 1/IT Desktop Management - Manager: from 09-50 through 10-10-16; JP1/NETM/DM Manager: from 09-00 through 10-20-02; JP1/NETM/DM Client: from 09-00 through 10-20-02; Job Management Partner 1/Software Distribution Manager: from 09-00 through 09-51-13; Job Management Partner 1/Software Distribution Client: from 09-00 through 09-51-13. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-04-07",
+    "cve": "CVE-2026-0740",
+    "descripcion": "The Ninja Forms - File Uploads plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the &#39;NF_FU_AJAX_Controllers_Uploads::handle_upload&#39; function in all versions up to, and including, 3.3.26. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. Note: The vulnerability was partially patched in version 3.3.25 and fully patched in version 3.3.27. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-04-07",
     "cve": "CVE-2026-20446",
     "descripcion": "In sec boot, there is a possible out of bounds write due to an integer overflow. This could lead to local denial of service, if an attacker has physical access to the device, with User execution privileges needed. User interaction is not needed for exploitation. Patch ID: ALPS09963054; Issue ID: MSV-3899. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-04-07",
-    "cve": "CVE-2026-20433",
-    "descripcion": "In Modem, there is a possible out of bounds write due to a missing bounds check. This could lead to remote escalation of privilege, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is needed for exploitation. Patch ID: MOLY01088681; Issue ID: MSV-4460. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-04-07",
-    "cve": "CVE-2026-20432",
-    "descripcion": "In Modem, there is a possible out of bounds write due to a missing bounds check. This could lead to remote escalation of privilege, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is needed for exploitation. Patch ID: MOLY01406170; Issue ID: MSV-4461. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-04-07",
-    "cve": "CVE-2026-20431",
-    "descripcion": "In Modem, there is a possible system crash due to a logic error. This could lead to remote denial of service, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: MOLY01106496; Issue ID: MSV-4467. 07/04/2026 07/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-04-07",
-    "cve": "CVE-2026-5719",
-    "descripcion": "A flaw has been found in itsourcecode Construction Management System 1.0. This affects an unknown function of the file /borrowedtool.php. Executing a manipulation of the argument code can lead to sql injection. It is possible to launch the attack remotely. The exploit has been published and may be used. 07/04/2026 07/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-07",
-    "cve": "CVE-2025-13044",
-    "descripcion": "IBM Concert 1.0.0 through 2.2.0 creates temporary files with predictable names, which allows local users to overwrite arbitrary files via a symlink attack. 07/04/2026 07/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-06",
-    "cve": "CVE-2026-5705",
-    "descripcion": "A vulnerability was identified in code-projects Online Hotel Booking 1.0. Affected by this vulnerability is an unknown functionality of the file /booknow.php of the component Booking Endpoint. Such manipulation of the argument roomname leads to cross site scripting. It is possible to launch the attack remotely. The exploit is publicly available and might be used. 07/04/2026 07/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-06",
-    "cve": "CVE-2026-5692",
-    "descripcion": "A vulnerability was found in Totolink A7100RU 7.4cu.2313_b20191024. This impacts the function setGameSpeedCfg of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument enable results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. 07/04/2026 07/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-04-06",
-    "cve": "CVE-2026-5691",
-    "descripcion": "A vulnerability has been found in Totolink A7100RU 7.4cu.2313_b20191024. This affects the function setFirewallType of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument firewallType leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. 07/04/2026 07/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-04-06",
-    "cve": "CVE-2026-5690",
-    "descripcion": "A flaw has been found in Totolink A7100RU 7.4cu.2313_b20191024. The impacted element is the function setRemoteCfg of the file /cgi-bin/cstecgi.cgi. Executing a manipulation of the argument enable can lead to os command injection. The attack can be executed remotely. The exploit has been published and may be used. 07/04/2026 07/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
