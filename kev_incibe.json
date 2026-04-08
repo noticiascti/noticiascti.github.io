@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-4303",
-    "descripcion": "The WP Visitor Statistics (Real Time Traffic) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;wsm_showDayStatsGraph&#39; shortcode in all versions up to, and including, 8.4 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5600",
+    "descripcion": "A new API endpoint introduced in pretix 2025 that is supposed to return all check-in events of a specific event in fact returns all check-in events belonging to the respective organizer. This allows an API consumer to access information for all other events under the same organizer, even those they should not have access to. These records contain information on the time and result of every ticket scan as well as the ID of the matched ticket. Example: { &#34;id&#34;: 123, &#34;successful&#34;: true, &#34;error_reason&#34;: null, &#34;error_explanation&#34;: null, &#34;position&#34;: 321, &#34;datetime&#34;: &#34;2020-08-23T09:00:00+02:00&#34;, &#34;list&#34;: 456, &#34;created&#34;: &#34;2020-08-23T09:00:00+02:00&#34;, &#34;auto_checked_in&#34;: false, &#34;gate&#34;: null, &#34;device&#34;: 1, &#34;device_id&#34;: 1, &#34;type&#34;: &#34;entry&#34; } An unauthorized user usually has no way to match these IDs (position) back to individual people. 08/04/2026 08/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-4300",
-    "descripcion": "The Robo Gallery plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;Loading Label&#39; setting in all versions up to, and including, 5.1.3. The plugin uses a custom `|***...***|` marker pattern in its `fixJsFunction()` method to embed raw JavaScript function references within JSON-encoded configuration objects. When a gallery&#39;s options are rendered on the frontend, `json_encode()` wraps all string values in double quotes. The `fixJsFunction()` method then strips the `&#34;|***` and `***|&#34;` sequences, effectively converting a JSON string value into raw JavaScript code. The Loading Label field (stored as `rbs_gallery_LoadingWord` post_meta) is an `rbstext` type field that is sanitized with `sanitize_text_field()` on save. While this strips HTML tags, it does not strip the `|***...***|` markers since they contain no HTML. When a user inputs `|***alert(document.domain)***|`, the value passes through sanitization intact, is stored in post_meta, and is later retrieved and output within an inline `` tag via `renderMainBlock()` with the quote markers stripped — resulting in arbitrary JavaScript execution. The gallery post type uses `capability_type => &#39;post&#39;`, allowing Author-level users to create galleries. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses a page containing the gallery shortcode. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5302",
+    "descripcion": "CORS misconfiguration in CoolerControl/coolercontrold 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-4073",
-    "descripcion": "The pdfl.io plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;pdflio&#39; shortcode in all versions up to, and including, 1.0.5. This is due to insufficient input sanitization and output escaping on the &#39;text&#39; shortcode attribute. The output_shortcode() function directly concatenates the user-supplied $text variable into HTML output without applying esc_html() or any other escaping function. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5301",
+    "descripcion": "Stored XSS in log viewer in CoolerControl/coolercontrol-ui 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-4025",
-    "descripcion": "The PrivateContent Free plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;align&#39; shortcode attribute in the [pc-login-form] shortcode in all versions up to, and including, 1.2.0. This is due to insufficient input sanitization and output escaping on the &#39;align&#39; attribute. Specifically, the attribute value flows from the shortcode through pc_login_form() to pc_static::form_align(), where it is directly concatenated into an HTML class attribute without esc_attr() or any escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5300",
+    "descripcion": "Unauthenticated functionality in CoolerControl/coolercontrold 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-39716",
-    "descripcion": "Missing Authorization vulnerability in CKThemes Flipmart flipmart allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Flipmart: from n/a through 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-4402",
+    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-39715",
-    "descripcion": "Missing Authorization vulnerability in AnyTrack AnyTrack Affiliate Link Manager anytrack-affiliate-link-manager allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AnyTrack Affiliate Link Manager: from n/a through 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-28261",
+    "descripcion": "Dell Elastic Cloud Storage, version 3.8.1.7 and prior, and Dell ObjectScale, versions prior to 4.1.0.3 and version 4.2.0.0, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to secret exposure. The attacker may be able to use the exposed secret to access the vulnerable system with privileges of the compromised account. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-39714",
-    "descripcion": "Missing Authorization vulnerability in G5Theme G5Plus April g5plus-april allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects G5Plus April: from n/a through 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-27102",
+    "descripcion": "Dell PowerScale OneFS, versions 9.5.0.0 through 9.10.1.6 and versions 9.11.0.0 through 9.13.0.1, contains an incorrect privilege assignment vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-39713",
-    "descripcion": "Missing Authorization vulnerability in mailercloud Mailercloud &#8211; Integrate webforms and synchronize website contacts mailercloud-integrate-webforms-synchronize-contacts allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Mailercloud &#8211; Integrate webforms and synchronize website contacts: from n/a through 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-24511",
+    "descripcion": "Dell PowerScale OneFS, versions 9.5.0.0 through 9.10.1.6 and versions 9.11.0.0 through 9.13.0.0, contains a generation of error message containing sensitive information vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to information disclosure. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-39712",
-    "descripcion": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in tagDiv tagDiv Composer td-composer allows Code Injection.This issue affects tagDiv Composer: from n/a through 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-5208",
+    "descripcion": "Command injection in alerts in CoolerControl/coolercontrold 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-39711",
-    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in stmcan RT-Theme 18 | Extensions rt18-extensions allows Retrieve Embedded Sensitive Data.This issue affects RT-Theme 18 | Extensions: from n/a through 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3396",
+    "descripcion": "WCAPF – WooCommerce Ajax Product Filter plugin is vulnerable to time-based SQL Injection via the &#39;post-author&#39; parameter in all versions up to, and including, 4.2.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
