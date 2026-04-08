@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-5600",
-    "descripcion": "A new API endpoint introduced in pretix 2025 that is supposed to return all check-in events of a specific event in fact returns all check-in events belonging to the respective organizer. This allows an API consumer to access information for all other events under the same organizer, even those they should not have access to. These records contain information on the time and result of every ticket scan as well as the ID of the matched ticket. Example: { &#34;id&#34;: 123, &#34;successful&#34;: true, &#34;error_reason&#34;: null, &#34;error_explanation&#34;: null, &#34;position&#34;: 321, &#34;datetime&#34;: &#34;2020-08-23T09:00:00+02:00&#34;, &#34;list&#34;: 456, &#34;created&#34;: &#34;2020-08-23T09:00:00+02:00&#34;, &#34;auto_checked_in&#34;: false, &#34;gate&#34;: null, &#34;device&#34;: 1, &#34;device_id&#34;: 1, &#34;type&#34;: &#34;entry&#34; } An unauthorized user usually has no way to match these IDs (position) back to individual people. 08/04/2026 08/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-39865",
+    "descripcion": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.13.2, Axios HTTP/2 session cleanup logic contains a state corruption bug that allows a malicious server to crash the client process through concurrent session closures. The vulnerability exists in the Http2Sessions.getSession() method in lib/adapters/http.js. The session cleanup logic contains a control flow error when removing sessions from the sessions array. This vulnerability is fixed in 1.13.2. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-5302",
-    "descripcion": "CORS misconfiguration in CoolerControl/coolercontrold 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-39410",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.12, a discrepancy between browser cookie parsing and parse() handling allows cookie prefix protections to be bypassed. Cookie names that are treated as distinct by the browser may be normalized to the same key by parse(), allowing attacker-controlled cookies to override legitimate ones. This vulnerability is fixed in 4.12.12. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-5301",
-    "descripcion": "Stored XSS in log viewer in CoolerControl/coolercontrol-ui 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-39409",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.12, ipRestriction() does not canonicalize IPv4-mapped IPv6 client addresses (e.g. ::ffff:127.0.0.1) before applying IPv4 allow or deny rules. In environments such as Node.js dual-stack, this can cause IPv4 rules to fail to match, leading to unintended authorization behavior. This vulnerability is fixed in 4.12.12. 08/04/2026 08/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-5300",
-    "descripcion": "Unauthenticated functionality in CoolerControl/coolercontrold 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-39408",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.12, a path traversal issue in toSSG() allows files to be written outside the configured output directory during static site generation. When using dynamic route parameters via ssgParams, specially crafted values can cause generated file paths to escape the intended output directory. This vulnerability is fixed in 4.12.12. 08/04/2026 08/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-4402",
-    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 08/04/2026 08/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-39407",
+    "descripcion": "Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.12, a path handling inconsistency in serveStatic allows protected static files to be accessed by using repeated slashes (//) in the request path. When route-based middleware (e.g., /admin/*) is used for authorization, the router may not match paths containing repeated slashes, while serveStatic resolves them as normalized paths. This can lead to a middleware bypass. This vulnerability is fixed in 4.12.12. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-28261",
-    "descripcion": "Dell Elastic Cloud Storage, version 3.8.1.7 and prior, and Dell ObjectScale, versions prior to 4.1.0.3 and version 4.2.0.0, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to secret exposure. The attacker may be able to use the exposed secret to access the vulnerable system with privileges of the compromised account. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-39406",
+    "descripcion": "@hono/node-server allows running the Hono application on Node.js. Prior to 1.19.13, a path handling inconsistency in serveStatic allows protected static files to be accessed by using repeated slashes (//) in the request path. When route-based middleware (e.g., /admin/*) is used for authorization, the router may not match paths containing repeated slashes, while serveStatic resolves them as normalized paths. This can lead to a middleware bypass. This vulnerability is fixed in 1.19.13. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-27102",
-    "descripcion": "Dell PowerScale OneFS, versions 9.5.0.0 through 9.10.1.6 and versions 9.11.0.0 through 9.13.0.1, contains an incorrect privilege assignment vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-39394",
+    "descripcion": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to 0.31.4.0, the Install::index() controller reads the host POST parameter without any validation and passes it directly into updateEnvSettings(), which writes it into the .env file via preg_replace(). Because newline characters in the value are not stripped, an attacker can inject arbitrary configuration directives into the .env file. The install routes have CSRF protection explicitly disabled, and the InstallFilter can be bypassed when cache(&#39;settings&#39;) is empty (cache expiry or fresh deployment). This vulnerability is fixed in 0.31.4.0. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-24511",
-    "descripcion": "Dell PowerScale OneFS, versions 9.5.0.0 through 9.10.1.6 and versions 9.11.0.0 through 9.13.0.0, contains a generation of error message containing sensitive information vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to information disclosure. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-39393",
+    "descripcion": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to 0.31.4.0, the install route guard in ci4ms relies solely on a volatile cache check (cache(&#39;settings&#39;)) combined with .env file existence to block post-installation access to the setup wizard. When the database is temporarily unreachable during a cache miss (TTL expiry or admin-triggered cache clear), the guard fails open, allowing an unauthenticated attacker to overwrite the .env file with attacker-controlled database credentials, achieving full application takeover. This vulnerability is fixed in 0.31.4.0. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-5208",
-    "descripcion": "Command injection in alerts in CoolerControl/coolercontrold 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-39392",
+    "descripcion": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to 0.31.4.0, the Pages module does not apply the html_purify validation rule to content fields during create and update operations, while the Blog module does. Page content is stored unsanitized in the database and rendered as raw HTML on the public frontend via echo $pageInfo->content. An authenticated admin with page-editing privileges can inject arbitrary JavaScript that executes in the browser of every public visitor viewing the page. This vulnerability is fixed in 0.31.4.0. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-3396",
-    "descripcion": "WCAPF – WooCommerce Ajax Product Filter plugin is vulnerable to time-based SQL Injection via the &#39;post-author&#39; parameter in all versions up to, and including, 4.2.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-39391",
+    "descripcion": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to 0.31.4.0, the blacklist (ban) note parameter in UserController::ajax_blackList_post() is stored in the database without sanitization and rendered into an HTML data-note attribute without escaping. An admin with blacklist privileges can inject arbitrary JavaScript that executes in the browser of any other admin who views the user management page. This vulnerability is fixed in 0.31.4.0. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
