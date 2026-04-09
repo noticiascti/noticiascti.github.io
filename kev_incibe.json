@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-39851",
-    "descripcion": "Saleor is an e-commerce platform. From 2.10.0 to before 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118, the requestEmailChange() mutation was revealing the existence of user-provided email addresses in error messages. This vulnerability is fixed in 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118. 08/04/2026 08/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-5919",
+    "descripcion": "Insufficient validation of untrusted input in WebSockets in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who had compromised the renderer process to bypass same origin policy via a crafted HTML page. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35455",
-    "descripcion": "immich is a high performance self-hosted photo and video management solution. Prior to 2.7.0, sStored Cross-Site Scripting (XSS) in the 360° panorama viewer allows any authenticated user to execute arbitrary JavaScript in the browser of any other user who views the malicious panorama with the OCR overlay enabled. The attacker uploads an equirectangular image containing crafted text; OCR extracts it, and the panorama viewer renders it via innerHTML without sanitization. This enables session hijacking (via persistent API key creation), private photo exfiltration, and access to GPS location history and face biometric data. This vulnerability is fixed in 2.7.0. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-5918",
+    "descripcion": "Inappropriate implementation in Navigation in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35446",
-    "descripcion": "LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 24.0.0 to before 27.0.3 and 28.0.1, an incorrect order of operations in the FilesDownloadHandler could result in an attacker escaping the intended download directories. This vulnerability is fixed in 27.0.3 and 28.0.1. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-5915",
+    "descripcion": "Insufficient validation of untrusted input in WebML in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35407",
-    "descripcion": "Saleor is an e-commerce platform. From 2.10.0 to before 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118, a business-logic and authorization flaw was found in the account email change workflow, the confirmation flow did not verify that the email change confirmation token was issued for the given authenticated user. As a result, a valid email-change token generated for one account can be replayed while authenticated as a different account. The second account’s email address is then updated to the token&#39;s new_email, even though that token was never issued for that account. This vulnerability is fixed in 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118. 08/04/2026 08/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-5914",
+    "descripcion": "Type Confusion in CSS in Google Chrome prior to 147.0.7727.55 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35403",
-    "descripcion": "LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 15.10 to before 27.0.3 and 28.0.1, there is a potential for a cross-site scripting attack in the survey_accounts module if a user provides an invalid visit label. While the data is properly JSON encoded, the Content-Type header is not set causing the web browser to interpret the payload as HTML, opening the possibility of a cross-site scripting if a user is tricked into following an invalid link. This vulnerability is fixed in 27.0.3 and 28.0.1. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5913",
+    "descripcion": "Out of bounds read in Blink in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35401",
-    "descripcion": "Saleor is an e-commerce platform. From 2.0.0 to before 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118, a malicious actor can include many GraphQL mutations or queries in a single API call using aliases or chaining multiple mutations, resulting in resource exhaustion. This vulnerability is fixed in 3.23.0a3, 3.22.47, 3.21.54, and 3.20.118. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-5912",
+    "descripcion": "Integer overflow in WebRTC in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35400",
-    "descripcion": "LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 20.0.0 to before 27.0.3 and 28.0.1, an endpoint in the publication module was incorrectly trusting the baseURL submitted by a user&#39;s POST request rather than the internal LORIS value. This could result in a theoretical attacker with publication module access forging an email to an external domain under the attacker&#39;s control which appeared to come from LORIS. This vulnerability is fixed in 27.0.3 and 28.0.1. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-5911",
+    "descripcion": "Policy bypass in ServiceWorkers in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to bypass content security policy via a crafted HTML page. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35169",
-    "descripcion": "LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From to before 27.0.3 and 28.0.1, the help_editor module of LORIS did not properly sanitize some user supplied variables which could result in a reflected cross-site scripting attack if a user is tricked into following an invalid link. The same input vector could also allow an attacker to download arbitrary markdown files on an unpatched server. This vulnerability is fixed in 27.0.3 and 28.0.1. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-5910",
+    "descripcion": "Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-35165",
-    "descripcion": "LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 21.0.0 to before 27.0.3 and 28.0.1, while the document_repository frontend was restricting file access, the backend endpoint was not correctly verifying access permissions. A user could theoretically download a file that they should not have access to, if they know or can brute force the filename. This vulnerability is fixed in 27.0.3 and 28.0.1. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5909",
+    "descripcion": "Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-08",
-    "cve": "CVE-2026-34985",
-    "descripcion": "LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From 16.1.0 to before 27.0.3 and 28.0.1, While the frontend of the media module filters files that the user should not have access to, the backend was not applying access checks and it would be possible for someone who should not have access to a file to access it if they know the filename. This vulnerability is fixed in 27.0.3 and 28.0.1. 08/04/2026 08/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5908",
+    "descripcion": "Integer overflow in Media in Google Chrome prior to 147.0.7727.55 allowed a remote attacker to potentially exploit heap corruption via a crafted video file. (Chromium security severity: Low) 09/04/2026 09/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
