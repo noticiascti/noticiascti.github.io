@@ -11,11 +11,6 @@
   },
   {
     "fecha": "2026-04-10",
-    "cve": "CVE-2023-30845",
-    "descripcion": "ESPv2 is a service proxy that provides API management capabilities using Google Service Infrastructure. ESPv2 2.20.0 through 2.42.0 contains an authentication bypass vulnerability. API clients can craft a malicious `X-HTTP-Method-Override` header value to bypass JWT ..."
-  },
-  {
-    "fecha": "2026-04-10",
     "cve": "CVE-2025-8088",
     "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
   },
@@ -28,6 +23,11 @@
     "fecha": "2026-04-10",
     "cve": "CVE-2025-59718",
     "descripcion": "A improper verification of cryptographic signature vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiProxy 7.6.0 through 7.6.3, FortiProxy 7.4.0 through 7.4.10, FortiProxy 7.2.0 ..."
+  },
+  {
+    "fecha": "2026-04-10",
+    "cve": "CVE-2025-62718",
+    "descripcion": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, Axios does not correctly handle hostname normalization when checking NO_PROXY rules. Requests to loopback addresses like localhost. (with a trailing dot) or [::1] (IPv6 literal) skip NO_PROXY ..."
   },
   {
     "fecha": "2026-04-10",
@@ -46,7 +46,7 @@
   },
   {
     "fecha": "2026-04-10",
-    "cve": "CVE-2025-62718",
-    "descripcion": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, Axios does not correctly handle hostname normalization when checking NO_PROXY rules. Requests to loopback addresses like localhost. (with a trailing dot) or [::1] (IPv6 literal) skip NO_PROXY ..."
+    "cve": "CVE-2025-57735",
+    "descripcion": "When user logged out, the JWT token the user had authtenticated with was not invalidated, which could lead to reuse of that token in case it was intercepted. In Airflow 3.2 we implemented the mechanism that implements token invalidation at logout. Users who are concerned about ..."
   }
 ]
