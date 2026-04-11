@@ -26,6 +26,11 @@
   },
   {
     "fecha": "2026-04-11",
+    "cve": "CVE-2025-0520",
+    "descripcion": "An unrestricted file upload vulnerability in ShowDoc caused by improper validation of file extension allows execution of arbitrary PHP, leading to remote code execution.This issue affects ShowDoc: before 2.8.7."
+  },
+  {
+    "fecha": "2026-04-11",
     "cve": "CVE-2025-62718",
     "descripcion": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, Axios does not correctly handle hostname normalization when checking NO_PROXY rules. Requests to loopback addresses like localhost. (with a trailing dot) or [::1] (IPv6 literal) skip NO_PROXY ..."
   },
@@ -33,11 +38,6 @@
     "fecha": "2026-04-11",
     "cve": "CVE-2025-8088",
     "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
-  },
-  {
-    "fecha": "2026-04-11",
-    "cve": "CVE-2025-57735",
-    "descripcion": "When user logged out, the JWT token the user had authtenticated with was not invalidated, which could lead to reuse of that token in case it was intercepted. In Airflow 3.2 we implemented the mechanism that implements token invalidation at logout. Users who are concerned about ..."
   },
   {
     "fecha": "2026-04-11",
