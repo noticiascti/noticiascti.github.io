@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-04-11",
+    "cve": "CVE-2026-5809",
+    "descripcion": "The wpForo Forum plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to and including 3.0.2. This is due to a two-step logic flaw: the topic_add() and topic_edit() action handlers accept arbitrary user-supplied data[*] arrays from $_REQUEST and store them as postmeta without restricting which fields may contain array values. Because &#39;body&#39; is included in the allowed topic fields list, an attacker can supply data[body][fileurl] with an arbitrary file path (e.g., wp-config.php or an absolute server path). This poisoned fileurl is persisted to the plugin&#39;s custom postmeta database table. Subsequently, when the attacker submits wpftcf_delete[]=body on a topic_edit request, the add_file() method retrieves the stored postmeta record, extracts the attacker-controlled fileurl, passes it through wpforo_fix_upload_dir() which only rewrites legitimate wpforo upload paths and returns all other paths unchanged, and then calls wp_delete_file() on the unvalidated path. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files writable by the PHP process on the server, including critical files such as wp-config. 11/04/2026 11/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-04-11",
     "cve": "CVE-2026-34621",
     "descripcion": "Acrobat Reader versions 24.001.30356, 26.001.21367 and earlier are affected by an Improperly Controlled Modification of Object Prototype Attributes (&#39;Prototype Pollution&#39;) vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 11/04/2026 11/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-04-11",
     "cve": "CVE-2026-3371",
     "descripcion": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 3.9.7. This is due to missing authorization checks in the `save_course_content_order()` private method, which is called unconditionally by the `tutor_update_course_content_order` AJAX handler. While the handler&#39;s `content_parent` branch includes a `can_user_manage()` check, the `save_course_content_order()` call processes attacker-supplied `tutor_topics_lessons_sorting` JSON without any ownership or capability verification. This makes it possible for authenticated attackers with Subscriber-level access or above to detach lessons from topics, reorder course content, and reassign lessons between topics in any course, including admin-owned courses, by sending a crafted AJAX request with manipulated topic and lesson IDs. 11/04/2026 11/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-11",
-    "cve": "CVE-2026-3358",
-    "descripcion": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to unauthorized private course enrollment in all versions up to, and including, 3.9.7. This is due to missing post_status validation in the `enroll_now()` and `course_enrollment()` functions. Both enrollment endpoints verify the nonce, user authentication, and whether the course is purchasable, but fail to check if the course has a `private` post_status. This makes it possible for authenticated attackers with Subscriber-level access or above to enroll in private courses by sending a crafted POST request with the target course ID. The enrollment record is created in the database and the private course title and enrollment status are exposed in the subscriber&#39;s dashboard, though WordPress core access control prevents the subscriber from viewing the actual course content (returns 404). Enrollment in private courses should be restricted to users with the `read_private_posts` capability. 11/04/2026 11/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
