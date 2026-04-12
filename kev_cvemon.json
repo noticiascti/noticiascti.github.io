@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-04-12",
+    "cve": "CVE-2025-38617",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
+  },
+  {
+    "fecha": "2026-04-12",
     "cve": "CVE-2025-59536",
     "descripcion": "Claude Code is an agentic coding tool. Versions before 1.0.111 were vulnerable to Code Injection due to a bug in the startup trust dialog implementation. Claude Code could be tricked to execute code contained in a project before the user accepted the startup trust dialog. ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-04-12",
     "cve": "CVE-2026-21852",
     "descripcion": "Claude Code is an agentic coding tool. Prior to version 2.0.65, vulnerability in Claude Code's project-load flow allowed malicious repositories to exfiltrate data including Anthropic API keys before users confirmed trust. An attacker-controlled repository could include a ..."
-  },
-  {
-    "fecha": "2026-04-12",
-    "cve": "CVE-2025-38617",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
   }
 ]
