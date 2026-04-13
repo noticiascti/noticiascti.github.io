@@ -6,18 +6,13 @@
   },
   {
     "fecha": "2026-04-13",
-    "cve": "CVE-2026-34197",
-    "descripcion": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ. Apache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy ..."
-  },
-  {
-    "fecha": "2026-04-13",
-    "cve": "CVE-2024-32114",
-    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
-  },
-  {
-    "fecha": "2026-04-13",
     "cve": "CVE-2025-55182",
     "descripcion": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code ..."
+  },
+  {
+    "fecha": "2026-04-13",
+    "cve": "CVE-2025-38617",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
   },
   {
     "fecha": "2026-04-13",
@@ -31,8 +26,8 @@
   },
   {
     "fecha": "2026-04-13",
-    "cve": "CVE-2025-38617",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/packet: fix a race in packet_set_ring() and packet_notifier() When packet_set_ring() releases po->bind_lock, another thread can run packet_notifier() and process an NETDEV_UP event. This race and the fix ..."
+    "cve": "CVE-2025-53779",
+    "descripcion": "Relative path traversal in Windows Kerberos allows an authorized attacker to elevate privileges over a network."
   },
   {
     "fecha": "2026-04-13",
@@ -41,12 +36,17 @@
   },
   {
     "fecha": "2026-04-13",
-    "cve": "CVE-2025-53779",
-    "descripcion": "Relative path traversal in Windows Kerberos allows an authorized attacker to elevate privileges over a network."
+    "cve": "CVE-2026-21852",
+    "descripcion": "Claude Code is an agentic coding tool. Prior to version 2.0.65, vulnerability in Claude Code's project-load flow allowed malicious repositories to exfiltrate data including Anthropic API keys before users confirmed trust. An attacker-controlled repository could include a ..."
   },
   {
     "fecha": "2026-04-13",
-    "cve": "CVE-2026-21852",
-    "descripcion": "Claude Code is an agentic coding tool. Prior to version 2.0.65, vulnerability in Claude Code's project-load flow allowed malicious repositories to exfiltrate data including Anthropic API keys before users confirmed trust. An attacker-controlled repository could include a ..."
+    "cve": "CVE-2025-62718",
+    "descripcion": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0, Axios does not correctly handle hostname normalization when checking NO_PROXY rules. Requests to loopback addresses like localhost. (with a trailing dot) or [::1] (IPv6 literal) skip NO_PROXY ..."
+  },
+  {
+    "fecha": "2026-04-13",
+    "cve": "CVE-2025-8088",
+    "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
   }
 ]
