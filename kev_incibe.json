@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-04-14",
+    "cve": "CVE-2026-2582",
+    "descripcion": "The The Germanized for WooCommerce plugin for WordPress is vulnerable to arbitrary shortcode execution via &#39;account_holder&#39; parameter in all versions up to, and including, 3.20.5. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-04-14",
+    "cve": "CVE-2026-3017",
+    "descripcion": "The Smart Post Show – Post Grid, Post Carousel & Slider, and List Category Posts plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.0.12 via deserialization of untrusted input in the import_shortcodes() function. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-04-14",
     "cve": "CVE-2026-4479",
     "descripcion": "The WholeSale Products Dynamic Pricing Management WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-04-14",
     "cve": "CVE-2026-1607",
     "descripcion": "The Surbma | Booking.com Shortcode plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s `surbma-bookingcom` shortcode in all versions up to, and including, 2.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-14",
-    "cve": "CVE-2026-6264",
-    "descripcion": "A critical vulnerability in the Talend JobServer and Talend Runtime allows unauthenticated remote code execution via the JMX monitoring port. The attack vector is the JMX monitoring port of the Talend JobServer. The vulnerability can be mitigated for the Talend JobServer by requiring TLS client authentication for the monitoring port; however, the patch must be applied for full mitigation. For Talend ESB Runtime, the vulnerability can be mitigated by disabling the JobServer JMX monitoring port, which is disabled by default from the R2024-07-RT patch. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-04-14",
-    "cve": "CVE-2026-6227",
-    "descripcion": "The BackWPup plugin for WordPress is vulnerable to Local File Inclusion via the `block_name` parameter of the `/wp-json/backwpup/v1/getblock` REST endpoint in all versions up to, and including, 5.6.6 due to a non-recursive `str_replace()` sanitization of path traversal sequences. This makes it possible for authenticated attackers, with Administrator-level access and above, to include arbitrary PHP files on the server via crafted traversal sequences (e.g., `....//`), which can be leveraged to read sensitive files such as `wp-config.php` or achieve remote code execution in certain configurations. Administrators have the ability to grant individual users permission to handle backups, which may then allow lower-level users to exploit this vulnerability. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
