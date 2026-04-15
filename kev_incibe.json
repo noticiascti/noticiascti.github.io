@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-34630",
-    "descripcion": "Bridge versions 16.0.2, 15.1.4 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-40291",
+    "descripcion": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, an insecure direct object modification vulnerability in the PUT /api/users/{id} endpoint allows any authenticated user with ROLE_STUDENT to escalate their privileges to ROLE_ADMIN by modifying the roles field on their own user record. The API Platform security expression is_granted(&#39;EDIT&#39;, object) only verifies record ownership, and the roles field is included in the writable serialization group, enabling any user to set arbitrary roles such as ROLE_ADMIN. Successful exploitation grants full administrative control of the platform, including access to all courses, user data, grades, and administrative settings. This issue has been fixed in version 2.0.0-RC.3. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-34618",
-    "descripcion": "Illustrator versions 30.2, 29.8.5 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-39907",
+    "descripcion": "Unisys WebPerfect Image Suite versions 3.0.3960.22810 and 3.0.3960.22604 expose an unauthenticated WCF SOAP endpoint on TCP port 1208 that accepts unsanitized file paths in the ReadLicense action&#39;s LFName parameter, allowing remote attackers to trigger SMB connections and leak NTLMv2 machine-account hashes. Attackers can submit crafted SOAP requests with UNC paths to force the server to initiate outbound SMB connections, exposing authentication credentials that may be relayed for privilege escalation or lateral movement within the network. 15/04/2026 15/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-27313",
-    "descripcion": "Bridge versions 16.0.2, 15.1.4 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-39906",
+    "descripcion": "Unisys WebPerfect Image Suite versions 3.0.3960.22810 and 3.0.3960.22604 expose a deprecated .NET Remoting TCP channel that allows remote unauthenticated attackers to leak NTLMv2 machine-account hashes by supplying a Windows UNC path as a target file argument through object-unmarshalling techniques. Attackers can capture the leaked NTLMv2 hash and relay it to other hosts to achieve privilege escalation or lateral movement depending on network configuration and patch level. 15/04/2026 15/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-27312",
-    "descripcion": "Bridge versions 16.0.2, 15.1.4 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-35196",
+    "descripcion": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, an OS Command Injection vulnerability exists in the main/inc/ajax/gradebook.ajax.php endpoint within the export_all_certificates action, where the course code retrieved from the session variable $_SESSION[&#39;_cid&#39;] via api_get_course_id() is concatenated directly into a shell_exec() command string without sanitization or escaping using escapeshellarg(). If an attacker can manipulate or poison their session data to inject shell metacharacters into the _cid variable, they can achieve arbitrary command execution on the underlying server. Successful exploitation grants full access to read system files and credentials, alters the application and database, or disrupts server availability. This issue has been fixed in version 2.0.0-RC.3. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-27311",
-    "descripcion": "Bridge versions 16.0.2, 15.1.4 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-34631",
+    "descripcion": "InCopy versions 20.5.2, 21.2 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-27310",
-    "descripcion": "Bridge versions 16.0.2, 15.1.4 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-34619",
+    "descripcion": "ColdFusion versions 2023.18, 2025.6 and earlier are affected by an Improper Limitation of a Pathname to a Restricted Directory (&#39;Path Traversal&#39;) vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to access unauthorized files or directories outside the intended restrictions. Exploitation of this issue does not require user interaction. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-27289",
-    "descripcion": "Photoshop Desktop versions 27.4 and earlier are affected by an out-of-bounds read vulnerability when parsing a crafted file, which could result in a read past the end of an allocated memory structure. An attacker could leverage this vulnerability to execute code in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-34602",
+    "descripcion": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, the /api/course_rel_users endpoint is vulnerable to Insecure Direct Object Reference (IDOR), allowing an authenticated attacker to modify the user parameter in the request body to enroll any arbitrary user into any course without proper authorization checks. The backend trusts the user-supplied input for the user field and performs no server-side verification that the requester owns the referenced user ID or has permission to act on behalf of other users. This enables unauthorized manipulation of user-course relationships, potentially granting unintended access to course materials, bypassing enrollment controls, and compromising platform integrity. This issue has been fixed in version 2.0.0-RC.3. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-27222",
-    "descripcion": "Bridge versions 16.0.2, 15.1.4 and earlier are affected by a Divide By Zero vulnerability that could lead to application denial-of-service. An attacker could exploit this vulnerability to crash the application or render it unresponsive. Exploitation of this issue requires user interaction in that a victim must open a malicious file. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-34370",
+    "descripcion": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, the notebook module contains an Insecure Direct Object Reference (IDOR) vulnerability that allows any authenticated student to read the private course notes of any other user on the platform by manipulating the notebook_id parameter in the editnote action. The application fetches the note content using only the supplied integer ID without verifying that the requesting user owns the note, and the full title and HTML body are rendered in the edit form and returned to the attacker&#39;s browser. While ownership checks exist in the write paths (updateNote() and delete_note()), they are entirely absent from the read path (get_note_information()). This issue has been fixed in version 2.0.0-RC.3. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-34625",
-    "descripcion": "Adobe Experience Manager versions 6.5.24, FP11.7 and earlier are affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim&#39;s browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-34213",
+    "descripcion": "Docmost is open-source collaborative wiki and documentation software. Starting in version 0.3.0 and prior to version 0.71.0, improper authorization in Docmost allows a low-privileged authenticated user to overwrite another page&#39;s attachment within the same workspace by supplying a victim `attachmentId` to `POST /api/files/upload`. This is a remote integrity issue requiring no victim interaction. Version 0.71.0 contains a patch. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-14",
-    "cve": "CVE-2026-34624",
-    "descripcion": "Adobe Experience Manager versions 6.5.24, FP11.7 and earlier are affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim&#39;s browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. 14/04/2026 14/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-34212",
+    "descripcion": "Docmost is open-source collaborative wiki and documentation software. In versions prior to 0.71.0, improper neutralization of attachment URLs in Docmost allows a low-privileged authenticated user to store a malicious `javascript:` URL inside an attachment node in page content. When another user views the page and activates the attachment link/icon, attacker-controlled JavaScript executes in the context of the Docmost origin. Version 0.71.0 patches the issue. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
