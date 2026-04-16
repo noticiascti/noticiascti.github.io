@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-5387",
-    "descripcion": "The vulnerability, if exploited, could allow an unauthenticated miscreant to perform operations intended only for Simulator Instructor or Simulator Developer (Administrator) roles, resulting in privilege escalation with potential for modification of simulation parameters, training configuration, and training records. 15/04/2026 15/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-6383",
+    "descripcion": "A flaw was found in KubeVirt&#39;s Role-Based Access Control (RBAC) evaluation logic. The authorization mechanism improperly truncates subresource names, leading to incorrect permission evaluations. This allows authenticated users with specific custom roles to gain unauthorized access to subresources, potentially disclosing sensitive information or performing actions they are not permitted to do. Additionally, legitimate users may be denied access to resources. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-30625",
-    "descripcion": "Upsonic 0.71.6 contains a remote code execution vulnerability in its MCP server/task creation functionality. The application allows users to define MCP tasks with arbitrary command and args values. Although an allowlist exists, certain allowed commands (npm, npx) accept argument flags that enable execution of arbitrary OS commands. Maliciously crafted MCP tasks may lead to remote code execution with the privileges of the Upsonic process. In version 0.72.0 Upsonic added a warning about using Stdio servers being able to execute commands directly on the machine. 15/04/2026 15/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-6245",
+    "descripcion": "A flaw was found in the System Security Services Daemon (SSSD). The pam_passkey_child_read_data() function within the PAM passkey responder fails to properly handle raw bytes received from a pipe. Because the data is treated as a NUL-terminated C string without explicit termination, it results in an out-of-bounds read when processed by functions like snprintf(). A local attacker could potentially trigger this vulnerability by initiating a crafted passkey authentication request, causing the SSSD PAM responder to crash, resulting in a local Denial of Service (DoS). 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-30624",
-    "descripcion": "Agent Zero 0.9.8 contains a remote code execution vulnerability in its External MCP Servers configuration feature. The application allows users to define MCP servers using a JSON configuration containing arbitrary command and args values. These values are executed by the application when the configuration is applied without sufficient validation or restriction. An attacker may supply a malicious MCP configuration to execute arbitrary operating system commands, potentially resulting in remote code execution with the privileges of the Agent Zero process. 15/04/2026 15/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-5189",
+    "descripcion": "CWE-798: Use of Hard-coded Credentials in Sonatype Nexus Repository Manager versions 3.0.0 through 3.70.5 allows an unauthenticated attacker with network access to gain unauthorized read/write access to the internal database and execute arbitrary OS commands as the Nexus process user. Exploitation requires the non-default nexus.orient.binaryListenerEnabled=true configuration to be enabled. 15/04/2026 15/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-30617",
-    "descripcion": "LangChain-ChatChat 0.3.1 contains a remote code execution vulnerability in its MCP STDIO server configuration and execution handling. A remote attacker can access the publicly exposed MCP management interface and configure an MCP STDIO server with attacker-controlled commands and arguments. When the MCP server is started and MCP is enabled for agent execution, subsequent agent activity triggers execution of arbitrary commands on the server. Successful exploitation allows arbitrary command execution within the context of the LangChain-ChatChat service. 15/04/2026 15/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-4857",
+    "descripcion": "IdentityIQ 8.5, all IdentityIQ 8.5 patch levels prior to 8.5p2, IdentityIQ 8.4, and all IdentityIQ 8.4 patch levels prior to 8.4p4 allow authenticated users assigned the Debug Pages Read Only capability or any custom capability with the ViewAccessDebugPage SPRight to incorrectly create new IdentityIQ objects. Until a remediating security fix or patches containing this security fix are installed, the Debug Pages Read Only capability and any custom capabilities that contain the ViewAccessDebugPage SPRight should be unassigned from all identities and workgroups. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-30461",
-    "descripcion": "Daylight Studio FuelCMS v1.5.2 was discovered to contain an authenticated remote code execution (RCE) vulnerability via the /controllers/Installer.php and the function add_git_submodule. 15/04/2026 15/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-40256",
+    "descripcion": "Weblate is a web based localization tool. In versions prior to 5.17, repository-boundary validation relies on string prefix checks on resolved absolute paths. In multiple code paths, the check uses startswith against the repository root path. This is not path-segment aware and can be bypassed when the external path shares the same string prefix as the repository path (for example, repo and repo_outside). This issue has been fixed in version 5.17. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-20205",
-    "descripcion": "In Splunk MCP Server app versions below 1.0.3 , a user who holds a role with access to the Splunk `_internal` index or possesses the high-privilege capability `mcp_tool_admin` could view users session and authorization tokens in clear text.The vulnerability would require either local access to the log files or administrative access to internal indexes, which by default only the admin role receives. Review roles and capabilities on your instance and restrict internal index access to administrator-level roles. See [Define roles on the Splunk platform with capabilities](https://docs.splunk.com/Documentation/Splunk/latest/Security/Rolesandcapabilities) and [Connecting to MCP Server and Admin settings](https://help.splunk.com/en/splunk-enterprise/mcp-server-for-splunk-platform/connecting-to-mcp-server-and-admin-settings) in the Splunk documentation for more information. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-39845",
+    "descripcion": "Weblate is a web based localization tool. In versions prior to 5.17, the webhook add-on did not utilize existing SSRF protections. This issue has been fixed in version 5.17. If developers are unable to update immediately, they can disable the webhook add-on as a workaround. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-20204",
-    "descripcion": "In Splunk Enterprise versions below 10.2.1, 10.0.5, 9.4.10, and 9.3.11, and Splunk Cloud Platform versions below 10.4.2603.0, 10.3.2512.5, 10.2.2510.9, 10.1.2507.19, 10.0.2503.13, and 9.3.2411.127, a low-privileged user that does not hold the `admin` or `power` Splunk roles could potentially perform a Remote Code Execution (RCE) by uploading a malicious file to the `$SPLUNK_HOME/var/run/splunk/apptemp` directory due to improper handling and insufficient isolation of temporary files within the `apptemp` directory. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-34632",
+    "descripcion": "Adobe Photoshop Installer was affected by an Uncontrolled Search Path Element vulnerability that could have resulted in arbitrary code execution in the context of the current user. A low-privileged local attacker could have exploited this vulnerability by manipulating the search path used by the application to locate critical resources, potentially causing unauthorized code execution. Exploitation of this issue required user interaction in that a user had to be running the installer. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-20203",
-    "descripcion": "In Splunk Enterprise versions below 10.2.2, 10.0.5, 9.4.10, and 9.3.11, and Splunk Cloud Platform versions below 10.4.2603.0, 10.3.2512.6, 10.2.2510.10, 10.1.2507.19, 10.0.2503.13, and 9.3.2411.127, a low-privileged user that does not hold the `admin` or `power` Splunk roles, has write permission on the app, and does not hold the high-privilege capability `accelerate_datamodel`, could turn on or off Data Model Acceleration due to improper access control. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-34393",
+    "descripcion": "Weblate is a web based localization tool. In versions prior to 5.17, the user patching API endpoint didn&#39;t properly limit the scope of edits. This issue has been fixed in version 5.17. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2026-20202",
-    "descripcion": "In Splunk Enterprise versions below 10.2.2, 10.0.5, 9.4.10, and 9.3.11, and Splunk Cloud Platform versions below 10.4.2603.0, 10.3.2512.6, 10.2.2510.10, 10.1.2507.20, 10.0.2503.13, and 9.3.2411.127, a user who holds a role that contains the high-privilege capability `edit_user`could create a specially crafted username that includes a null byte or a non-UTF-8 percent-encoded byte due to improper input validation.This could lead to inconsistent conversion of usernames into a proper format for storage and account management inconsistencies, such as being unable to edit or delete affected users. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-34244",
+    "descripcion": "Weblate is a web based localization tool. In versions prior to 5.17, a user with the project.edit permission (granted by the per-project &#34;Administration&#34; role) can configure machine translation service URLs pointing to arbitrary internal network addresses. During configuration validation, Weblate makes an HTTP request to the attacker-controlled URL and reflects up to 200 characters of the response body back to the user in an error message. This constitutes a Server-Side Request Forgery (SSRF) with partial response read. This issue has been fixed in version 5.17. If developers are unable to immediately upgrade, they can limit available machinery services via WEBLATE_MACHINERY setting. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-15",
-    "cve": "CVE-2025-67841",
-    "descripcion": "Nordic Semiconductor IronSide SE for nRF54H20 before 23.0.2+17 has an Algorithmic complexity issue. 15/04/2026 15/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34242",
+    "descripcion": "Weblate is a web based localization tool. In versions prior to 5.17, the ZIP download feature didn&#39;t verify downloaded files, potentially following symlinks outside the repository. This issue has been fixed in version 5.17. 15/04/2026 15/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
