@@ -129,8 +129,8 @@
             <th>Tipo</th>
             <th>Maltiverse</th>
             <th>VirusTotal</th>
-            <th>Score ISecurity</th>
-            <th>Veredicto</th>
+            <th title="Score basado en detección, inteligencia y actividad reciente">Score ISecurity</th>
+            <th>Nivel de Riesgo</th>
           </tr>
         </thead>
 
@@ -152,16 +152,21 @@
 const API_URL = "https://iocvalidator.vercel.app";
 let lastResults = [];
 
+// 🎨 COLORES NUEVOS
 function colorVerdict(v) {
-    if (v === "Malicioso") return "text-red-400";
+    if (v === "Crítico") return "text-red-500";
+    if (v === "Alto") return "text-orange-400";
     if (v === "Sospechoso") return "text-yellow-400";
-    return "text-green-400";
+    if (v === "Bajo") return "text-blue-400";
+    return "text-gray-400";
 }
 
 function colorScore(score){
-    if (score >= 70) return "text-red-400";
+    if (score >= 85) return "text-red-500";
+    if (score >= 60) return "text-orange-400";
     if (score >= 30) return "text-yellow-400";
-    return "text-green-400";
+    if (score >= 10) return "text-blue-400";
+    return "text-gray-400";
 }
 
 async function login(password){
@@ -216,6 +221,7 @@ async function startAnalysis(){
     });
 
     const data = await res.json();
+    lastResults = data.results;
     render(data.results);
 }
 
@@ -232,14 +238,20 @@ function render(results){
 
         const maltiverseBlock = sinDatos
             ? "Sin información"
-            : `${r.maltiverse?.classification || "-"}
+            : `${r.maltiverse?.classification}
                <div class="small">
                  Primera vez visto: ${r.maltiverse?.primera_vez || "-"}<br>
                  Última vez visto: ${r.maltiverse?.ultima_vez || "-"}
                </div>`;
 
+        const vtPercent = r.vt && r.vt.total
+            ? Math.round((r.vt.malicious / r.vt.total) * 100)
+            : 0;
+
         const vtBlock = r.vt
-            ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">${r.vt.summary}</a>
+            ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">
+                ${r.vt.summary} (${vtPercent}%)
+               </a>
                <div class="small">
                  Primera vez visto: ${r.vt?.primera_vez || "-"}<br>
                  Última vez visto: ${r.vt?.ultima_vez || "-"}
@@ -274,7 +286,7 @@ function exportCSV(){
     ]);
 
     const csv = [
-        ["IOC","Tipo","Maltiverse","M_First","M_Last","VT","VT_First","VT_Last","Score","Veredicto"],
+        ["IOC","Tipo","Maltiverse","M_First","M_Last","VT","VT_First","VT_Last","Score","Nivel"],
         ...rows
     ].map(e=>e.join(",")).join("\n");
 
