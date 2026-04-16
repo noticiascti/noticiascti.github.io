@@ -129,7 +129,7 @@
             <th>Tipo</th>
             <th>Maltiverse</th>
             <th>VirusTotal</th>
-            <th>Score iSecurity</th>
+            <th>Score ISecurity</th>
             <th>Veredicto</th>
           </tr>
         </thead>
@@ -230,48 +230,30 @@ function render(results){
 
         const sinDatos = r.maltiverse?.classification === "sin_datos";
 
-        const label = sinDatos
+        const maltiverseBlock = sinDatos
             ? "Sin información"
-            : r.maltiverse?.classification || "-";
+            : `${r.maltiverse?.classification || "-"}
+               <div class="small">
+                 Primera vez visto: ${r.maltiverse?.primera_vez || "-"}<br>
+                 Última vez visto: ${r.maltiverse?.ultima_vez || "-"}
+               </div>`;
 
-        const malScore =
-            !sinDatos && r.maltiverse?.score !== null
-            ? ` (Score: ${r.maltiverse.score})`
-            : "";
+        const vtBlock = r.vt
+            ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">${r.vt.summary}</a>
+               <div class="small">
+                 Primera vez visto: ${r.vt?.primera_vez || "-"}<br>
+                 Última vez visto: ${r.vt?.ultima_vez || "-"}
+               </div>`
+            : "-";
 
         table.innerHTML += `
         <tr>
-
           <td class="hash">${r.ioc}</td>
-
           <td>${r.type}</td>
-
-          <td>
-            ${label}${malScore}<br>
-            ${
-              sinDatos
-              ? `<span class="small">-</span>`
-              : `<span class="small">
-                    Primera: ${r.maltiverse?.primera_vez || "-"}<br>
-                    Última: ${r.maltiverse?.ultima_vez || "-"}
-                 </span>`
-            }
-          </td>
-
-          <td>
-            ${r.vt?.summary
-              ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">${r.vt.summary}</a>`
-              : "-"}
-          </td>
-
-          <td class="${colorScore(r.score)} font-bold">
-            ${r.score}
-          </td>
-
-          <td class="${colorVerdict(r.verdict)} font-bold text-right">
-            ${r.verdict}
-          </td>
-
+          <td>${maltiverseBlock}</td>
+          <td>${vtBlock}</td>
+          <td class="${colorScore(r.score)} font-bold">${r.score}</td>
+          <td class="${colorVerdict(r.verdict)} font-bold text-right">${r.verdict}</td>
         </tr>`;
     });
 }
@@ -285,13 +267,14 @@ function exportCSV(){
         r.maltiverse?.primera_vez || "",
         r.maltiverse?.ultima_vez || "",
         r.vt?.summary || "",
-        r.vt?.link || "",
+        r.vt?.primera_vez || "",
+        r.vt?.ultima_vez || "",
         r.score,
         r.verdict
     ]);
 
     const csv = [
-        ["IOC","Tipo","Maltiverse","Primera","Última","VT","VT_Link","Score iSecurity","Veredicto"],
+        ["IOC","Tipo","Maltiverse","M_First","M_Last","VT","VT_First","VT_Last","Score","Veredicto"],
         ...rows
     ].map(e=>e.join(",")).join("\n");
 
