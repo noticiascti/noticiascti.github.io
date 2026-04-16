@@ -10,32 +10,56 @@
 
   <style>
     body { font-family: 'Inter', sans-serif; }
-    .card { background:#111827; border-radius:12px; padding:20px; border:1px solid #1f2937; }
-    table.compact th, table.compact td { padding:10px 8px; border-bottom:1px dashed rgba(255,255,255,0.08); }
-    table.compact thead th { background:#0f1724; color:#cbd5e1; font-weight:600; font-size:13px; }
+
+    .card {
+      background:#111827;
+      border-radius:12px;
+      padding:20px;
+      border:1px solid #1f2937;
+    }
+
+    table {
+      width:100%;
+      table-layout: fixed; /* 🔥 clave para alineación */
+    }
+
+    th, td {
+      padding:12px;
+      text-align:left;
+      vertical-align:top;
+    }
+
+    th {
+      color:#cbd5e1;
+      font-size:13px;
+      border-bottom:1px solid #1f2937;
+    }
+
+    td {
+      border-bottom:1px dashed rgba(255,255,255,0.08);
+    }
+
     .mono { font-family: monospace; }
+
+    .small {
+      font-size:12px;
+      color:#9ca3af;
+    }
   </style>
 </head>
 
 <body class="bg-gray-900 text-gray-200">
 
 <!-- HEADER -->
-<div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center">
-  <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='./index.html'">
-    <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" class="h-8">
-    <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
-  </div>
+<div class="bg-gray-950 p-4 border-b border-gray-700 flex items-center space-x-3 cursor-pointer"
+     onclick="window.location.href='./index.html'">
+  <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" class="h-8">
+  <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
 </div>
 
 <!-- NAV -->
-<nav class="bg-gray-950 border-b border-gray-700">
-  <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
-    <li><a href="./index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
-    <li><a href="./medios.html" class="hover:text-yellow-400">📰 Medios</a></li>
-    <li><a href="./status.html" class="hover:text-yellow-400">📊 Status</a></li>
-    <li><a href="./ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Vulnerabilidades</a></li>
-    <li><a href="./validador_ioc.html" class="text-yellow-400 font-bold">🔎 Validador IOC</a></li>
-  </ul>
+<nav class="bg-gray-950 border-b border-gray-700 p-4">
+  <a href="./index.html" class="hover:text-yellow-400">🏠 Inicio</a>
 </nav>
 
 <!-- CONTENIDO -->
@@ -62,7 +86,17 @@
     <div id="timer" class="text-yellow-400 font-bold"></div>
 
     <div class="overflow-x-auto mt-6">
-      <table class="w-full compact">
+      <table>
+
+        <!-- 🔥 widths fijos -->
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:10%">
+          <col style="width:30%">
+          <col style="width:25%">
+          <col style="width:15%">
+        </colgroup>
+
         <thead>
           <tr>
             <th>IOC</th>
@@ -72,7 +106,9 @@
             <th>Veredicto</th>
           </tr>
         </thead>
+
         <tbody id="results"></tbody>
+
       </table>
     </div>
 
@@ -115,7 +151,8 @@ function startTimer(minutes){
         sec--;
         let m = Math.floor(sec/60);
         let s = sec%60;
-        document.getElementById("timer").innerText = `${m}:${s.toString().padStart(2,"0")}`;
+        document.getElementById("timer").innerText =
+            `${m}:${s.toString().padStart(2,"0")}`;
         if(sec<=0) clearInterval(int);
     },1000);
 }
@@ -131,7 +168,9 @@ async function startAnalysis(){
     if(!token) return alert("Password incorrecta");
 
     const minutes = estimate(iocs.length);
-    document.getElementById("estimate").innerText = `Tiempo estimado: ${minutes} min`;
+    document.getElementById("estimate").innerText =
+        `Tiempo estimado: ${minutes} min`;
+
     startTimer(minutes);
 
     const res = await fetch(API_URL + "/api/validate-ioc", {
@@ -150,31 +189,36 @@ async function startAnalysis(){
 function render(results){
 
     lastResults = results;
-
     const table = document.getElementById("results");
     table.innerHTML = "";
 
     results.forEach(r=>{
+
         table.innerHTML += `
         <tr>
+
           <td class="mono">${r.ioc}</td>
+
           <td>${r.type}</td>
 
           <td>
-            ${r.maltiverse?.classification || "-"}<br>
-            <span class="text-xs text-gray-400">
-              Primera vez visto: ${r.maltiverse?.primera_vez || "-"}<br>
-              Última vez visto: ${r.maltiverse?.ultima_vez || "-"}
-            </span>
+            <div class="font-semibold">${r.maltiverse?.classification || "-"}</div>
+            <div class="small">Primera vez: ${r.maltiverse?.primera_vez || "-"}</div>
+            <div class="small">Última vez: ${r.maltiverse?.ultima_vez || "-"}</div>
           </td>
 
           <td>
-            ${r.vt?.summary ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">${r.vt.summary}</a>` : "-"}
+            ${r.vt?.summary
+              ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">
+                   ${r.vt.summary}
+                 </a>`
+              : "-"}
           </td>
 
-          <td class="${colorVerdict(r.verdict)} font-bold">
+          <td class="${colorVerdict(r.verdict)} font-bold text-right">
             ${r.verdict}
           </td>
+
         </tr>`;
     });
 }
@@ -193,7 +237,7 @@ function exportCSV(){
     ]);
 
     const csv = [
-        ["IOC","Tipo","Maltiverse","Primera vez visto","Última vez visto","VT","VT_Link","Veredicto"],
+        ["IOC","Tipo","Maltiverse","Primera vez","Última vez","VT","VT_Link","Veredicto"],
         ...rows
     ].map(e=>e.join(",")).join("\n");
 
@@ -201,8 +245,8 @@ function exportCSV(){
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement("a");
-    a.href=url;
-    a.download="ioc_results.csv";
+    a.href = url;
+    a.download = "ioc_results.csv";
     a.click();
 }
 
