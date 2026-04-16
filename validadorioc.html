@@ -60,7 +60,7 @@
   <h1 class="text-2xl font-bold text-yellow-400">Validador IOC</h1>
 </header>
 
-<!-- NAV COMPLETO -->
+<!-- NAV -->
 <nav class="bg-gray-950 border-b border-gray-700">
   <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
 
@@ -78,12 +78,12 @@
       </ul>
     </li>
 
-    <li><a href="/medios.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
+    <li><a href="/medios.html" class="hover:text-yellow-400">📰 Medios</a></li>
     <li><a href="/status.html" class="hover:text-yellow-400">📊 Status</a></li>
     <li><a href="/ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Vulnerabilidades</a></li>
     <li><a href="/reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
 
-    <li><a href="/validadorioc.html" class="text-yellow-400 font-bold">🔎 Validador IOC</a></li>
+    <li><a href="/validador_ioc.html" class="text-yellow-400 font-bold">🔎 Validador IOC</a></li>
 
   </ul>
 </nav>
@@ -129,7 +129,7 @@
             <th>Tipo</th>
             <th>Maltiverse</th>
             <th>VirusTotal</th>
-            <th>Score</th>
+            <th>Score iSecurity</th>
             <th>Veredicto</th>
           </tr>
         </thead>
@@ -228,7 +228,14 @@ function render(results){
 
     results.forEach(r=>{
 
-        const malScore = r.maltiverse?.score !== null
+        const sinDatos = r.maltiverse?.classification === "sin_datos";
+
+        const label = sinDatos
+            ? "Sin información"
+            : r.maltiverse?.classification || "-";
+
+        const malScore =
+            !sinDatos && r.maltiverse?.score !== null
             ? ` (Score: ${r.maltiverse.score})`
             : "";
 
@@ -240,11 +247,15 @@ function render(results){
           <td>${r.type}</td>
 
           <td>
-            ${r.maltiverse?.classification || "-"}${malScore}<br>
-            <span class="small">
-              Primera: ${r.maltiverse?.primera_vez || "-"}<br>
-              Última: ${r.maltiverse?.ultima_vez || "-"}
-            </span>
+            ${label}${malScore}<br>
+            ${
+              sinDatos
+              ? `<span class="small">-</span>`
+              : `<span class="small">
+                    Primera: ${r.maltiverse?.primera_vez || "-"}<br>
+                    Última: ${r.maltiverse?.ultima_vez || "-"}
+                 </span>`
+            }
           </td>
 
           <td>
@@ -280,7 +291,7 @@ function exportCSV(){
     ]);
 
     const csv = [
-        ["IOC","Tipo","Maltiverse","Primera","Última","VT","VT_Link","Score","Veredicto"],
+        ["IOC","Tipo","Maltiverse","Primera","Última","VT","VT_Link","Score iSecurity","Veredicto"],
         ...rows
     ].map(e=>e.join(",")).join("\n");
 
