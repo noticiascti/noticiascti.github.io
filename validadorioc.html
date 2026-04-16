@@ -1,89 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Validador IOC — iSecurity</title>
+  <base href="https://noticiascti.github.io/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador IOC</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-body { font-family: 'Inter', sans-serif; }
-.card { background: #111827; border-radius: 8px; padding: 18px; border: 1px solid #1f2937; }
-table.compact th, table.compact td { padding: 10px 8px; border-bottom: 1px dashed rgba(255,255,255,0.08); color:#e5e7eb; }
-table.compact thead th { background:#0f1724; color:#cbd5e1; font-weight:600; font-size:13px; }
-.btn { background:#111827; border:1px solid #374151; color:#e5e7eb; padding:6px 10px; border-radius:6px; font-size:13px; }
-.mono { font-family: monospace; }
-</style>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .card { background:#111827; border-radius:12px; padding:20px; border:1px solid #1f2937; }
+    table.compact th, table.compact td { padding:10px 8px; border-bottom:1px dashed rgba(255,255,255,0.08); }
+    table.compact thead th { background:#0f1724; color:#cbd5e1; font-weight:600; font-size:13px; }
+    .mono { font-family: monospace; }
+  </style>
 </head>
 
 <body class="bg-gray-900 text-gray-200">
 
 <!-- HEADER -->
-<header class="bg-gray-950 p-4 border-b border-gray-700 flex items-center space-x-3" onclick="window.location.href='/index.html'">
-<img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" class="h-8">
-<h1 class="text-2xl font-bold text-yellow-400">Validador IOC</h1>
-</header>
+<div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center">
+  <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='./index.html'">
+    <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" class="h-8">
+    <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
+  </div>
+</div>
 
 <!-- NAV -->
-<nav class="bg-gray-950 border-b border-gray-700 p-4">
-<a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a>
+<nav class="bg-gray-950 border-b border-gray-700">
+  <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
+    <li><a href="./index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+    <li><a href="./medios.html" class="hover:text-yellow-400">📰 Medios</a></li>
+    <li><a href="./status.html" class="hover:text-yellow-400">📊 Status</a></li>
+    <li><a href="./ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Vulnerabilidades</a></li>
+    <li><a href="./validador_ioc.html" class="text-yellow-400 font-bold">🔎 Validador IOC</a></li>
+  </ul>
 </nav>
 
-<main class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- CONTENIDO -->
+<div class="p-6">
 
-<!-- INPUT -->
-<section class="lg:col-span-4">
-<div class="card">
+  <div class="card">
 
-<input type="password" id="password" placeholder="Password"
-class="w-full bg-gray-800 border border-gray-700 p-3 rounded mb-3">
+    <h2 class="text-xl font-bold text-yellow-400 mb-4">🔎 Validador IOC</h2>
 
-<textarea id="iocInput" rows="10"
-class="w-full bg-gray-800 border border-gray-700 p-3 rounded mono"
-placeholder="IOC separados por coma o espacio"></textarea>
+    <input type="password" id="password"
+      placeholder="Password"
+      class="w-full bg-gray-800 border border-gray-700 p-3 rounded mb-3">
 
-<button onclick="startAnalysis()"
-class="mt-3 w-full bg-yellow-500 text-black py-2 rounded">
-Analizar
-</button>
+    <textarea id="iocInput" rows="6"
+      class="w-full bg-gray-800 border border-gray-700 p-3 rounded mono"
+      placeholder="Ej: 1.1.1.1, dominio.com, hash"></textarea>
 
-<div id="estimate" class="text-sm text-gray-400 mt-2"></div>
-<div id="timer" class="text-yellow-400"></div>
+    <button onclick="startAnalysis()"
+      class="mt-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-2 px-4 rounded">
+      Analizar
+    </button>
+
+    <div id="estimate" class="text-sm text-gray-400 mt-2"></div>
+    <div id="timer" class="text-yellow-400 font-bold"></div>
+
+    <div class="overflow-x-auto mt-6">
+      <table class="w-full compact">
+        <thead>
+          <tr>
+            <th>IOC</th>
+            <th>Tipo</th>
+            <th>Maltiverse</th>
+            <th>VirusTotal</th>
+            <th>Veredicto</th>
+          </tr>
+        </thead>
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+
+    <button onclick="exportCSV()" class="mt-4 bg-gray-700 px-3 py-1 rounded">
+      Exportar CSV
+    </button>
+
+  </div>
 
 </div>
-</section>
-
-<!-- RESULTADOS -->
-<section class="lg:col-span-8">
-<div class="card">
-
-<table class="w-full compact">
-<thead>
-<tr>
-<th>IOC</th>
-<th>Tipo</th>
-<th>Maltiverse</th>
-<th>VirusTotal</th>
-<th>Veredicto</th>
-</tr>
-</thead>
-
-<tbody id="results"></tbody>
-</table>
-
-<button onclick="exportCSV()" class="btn mt-4">Exportar CSV</button>
-
-</div>
-</section>
-
-</main>
 
 <script>
 
 const API_URL = "https://iocvalidator.vercel.app";
-let token = null;
 let lastResults = [];
+
+function colorVerdict(v) {
+    if (v === "Malicioso") return "text-red-400";
+    if (v === "Sospechoso") return "text-yellow-400";
+    return "text-green-400";
+}
 
 async function login(password){
     const res = await fetch(API_URL + "/api/login", {
@@ -96,8 +106,7 @@ async function login(password){
 }
 
 function estimate(count){
-    const rate = 40;
-    return Math.ceil(count / rate);
+    return Math.ceil(count / 40);
 }
 
 function startTimer(minutes){
@@ -118,7 +127,7 @@ async function startAnalysis(){
 
     const iocs = text.split(/[\s,]+/).filter(x=>x);
 
-    token = await login(password);
+    const token = await login(password);
     if(!token) return alert("Password incorrecta");
 
     const minutes = estimate(iocs.length);
@@ -141,48 +150,52 @@ async function startAnalysis(){
 function render(results){
 
     lastResults = results;
+
     const table = document.getElementById("results");
     table.innerHTML = "";
 
     results.forEach(r=>{
-
-        let color="text-green-400";
-        if(r.verdict==="malicious") color="text-red-400";
-        if(r.verdict==="suspicious") color="text-yellow-400";
-
         table.innerHTML += `
         <tr>
-        <td class="mono">${r.ioc}</td>
-        <td>${r.type}</td>
+          <td class="mono">${r.ioc}</td>
+          <td>${r.type}</td>
 
-        <td>
-        ${r.maltiverse?.classification || "-"}<br>
-        <span class="text-xs text-gray-400">
-        Primera vez visto: ${r.maltiverse?.first_seen || "-"}<br>
-        Última vez visto: ${r.maltiverse?.last_seen || "-"}
-        </span>
-        </td>
+          <td>
+            ${r.maltiverse?.classification || "-"}<br>
+            <span class="text-xs text-gray-400">
+              Primera vez visto: ${r.maltiverse?.primera_vez || "-"}<br>
+              Última vez visto: ${r.maltiverse?.ultima_vez || "-"}
+            </span>
+          </td>
 
-        <td>${r.vt?.summary || "-"}</td>
+          <td>
+            ${r.vt?.summary ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">${r.vt.summary}</a>` : "-"}
+          </td>
 
-        <td class="${color} font-bold">${r.verdict}</td>
+          <td class="${colorVerdict(r.verdict)} font-bold">
+            ${r.verdict}
+          </td>
         </tr>`;
     });
 }
 
 function exportCSV(){
+
     const rows = lastResults.map(r=>[
         r.ioc,
         r.type,
         r.maltiverse?.classification || "",
-        r.maltiverse?.first_seen || "",
-        r.maltiverse?.last_seen || "",
+        r.maltiverse?.primera_vez || "",
+        r.maltiverse?.ultima_vez || "",
         r.vt?.summary || "",
+        r.vt?.link || "",
         r.verdict
     ]);
 
-    const csv = [["IOC","Tipo","Maltiverse","Primera vez visto","Última vez visto","VT","Veredicto"],...rows]
-        .map(e=>e.join(",")).join("\n");
+    const csv = [
+        ["IOC","Tipo","Maltiverse","Primera vez visto","Última vez visto","VT","VT_Link","Veredicto"],
+        ...rows
+    ].map(e=>e.join(",")).join("\n");
 
     const blob = new Blob([csv]);
     const url = URL.createObjectURL(blob);
