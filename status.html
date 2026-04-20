@@ -13,14 +13,11 @@
 </head>
 <body class="bg-gray-900 text-gray-200">
 
-  <!-- Header -->
-  <header class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3 cursor-pointer"
-          onclick="window.location.href='index.html'">
+  <header class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3 cursor-pointer" onclick="window.location.href='index.html'">
     <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
     <h1 class="text-2xl font-bold text-yellow-400">Status Monitor</h1>
   </header>
 
-  <!-- Menú principal -->
   <nav class="bg-gray-950 border-b border-gray-700">
     <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
       <li><a href="index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
@@ -40,26 +37,142 @@
     </ul>
   </nav>
 
-  <!-- 🔹 Sección Plataformas Nacionales -->
   <main class="p-6 space-y-10">
     <section>
-      <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">
-        Plataformas Nacionales
-      </h2>
+      <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">Plataformas Nacionales</h2>
       <div id="statusGridNacional" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
-    <!-- 🔹 Sección Plataformas Globales -->
     <section>
-      <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">
-        Plataformas Globales
-      </h2>
+      <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">Plataformas Globales</h2>
       <div id="statusGridGlobal" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
   </main>
 
   <script>
-    // 🔹 Configuración del dropdown
+    // Configuración de servicios nacionales con URLs y Nombres reales
+    const nacionales = {
+      "bci": { nombre: "Banco BCI", logo: "https://cdn.worldvectorlogo.com/logos/bci-logotype.svg", url: "https://downdetector.cl/problemas/bancodecreditoenversionesbci/" },
+      "banco_estado": { nombre: "Banco Estado", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_BancoEstado.svg", url: "https://downdetector.cl/problemas/banco-estado/" },
+      "transbank": { nombre: "Transbank", logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/Transbank-1200px-logo.png", url: "https://downdetector.cl/problemas/transbank/" },
+      "banco_itau": { nombre: "Banco Itaú", logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Ita%C3%BA_Unibanco_logo_2023.svg", url: "https://downdetector.cl/problemas/banco-itau/" },
+      "banco_chile": { nombre: "Banco de Chile", logo: "https://upload.wikimedia.org/wikipedia/en/b/b3/Banco_de_Chile_logo.svg", url: "https://downdetector.cl/problemas/bancodechile/" },
+      "santander": { nombre: "Banco Santander", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Banco_Santander_Logotipo.svg", url: "https://downdetector.cl/problemas/santander/" },
+      "banco_falabella": { nombre: "Banco Falabella", logo: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Banco_Falabella_Logo.svg", url: "https://downdetector.cl/problemas/banco-falabella/" },
+      "scotiabank": { nombre: "Scotiabank", logo: "https://upload.wikimedia.org/wikipedia/commons/2/22/Scotiabank_logo.svg", url: "https://downdetector.cl/problemas/scotiabank/" },
+      "sii": { nombre: "SII", logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/Logotipo_Servicio_de_Impuestos_Internos.svg", url: "https://downdetector.cl/problemas/sii/" },
+      "banco_bice": { nombre: "Banco BICE", logo: "https://upload.wikimedia.org/wikipedia/commons/1/17/Logo_Banco_BICE-300dpi.jpg", url: "https://downdetector.cl/problemas/bice/" },
+      "machbank": { nombre: "MACH", logo: "https://s3.us-west-2.amazonaws.com/dev-byflow.com/uploads/logo_machbank_e725174b16.png", url: "https://downdetector.cl/problemas/mach/" },
+      "tenpo": { nombre: "Tenpo", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Logotipo_Tenpo.svg", url: "https://downdetector.cl/problemas/tenpo/" }
+    };
+
+    // Configuración de servicios globales con URLs y Nombres reales
+    const globales = {
+      "googlegemini": { nombre: "Google Gemini", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg", url: "https://downdetector.cl/problemas/googlegemini/" },
+      "openai": { nombre: "OpenAI", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg", url: "https://downdetector.cl/problemas/openai/" },
+      "microsoft_copilot": { nombre: "Microsoft Copilot", logo: "https://stoneridgesoftware.com/wp-content/uploads/2024/03/copilot-logo-color.png", url: "https://downdetector.cl/problemas/microsoft-copilot/" },
+      "aws": { nombre: "AWS Amazon Web Services", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg", url: "https://downdetector.cl/problemas/aws-amazon-web-services/" },
+      "google_cloud": { nombre: "Google Cloud", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg", url: "https://downdetector.cl/problemas/google-cloud/" },
+      "azure": { nombre: "Windows Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Windows_Azure_logo.png", url: "https://downdetector.cl/problemas/windows-azure/" },
+      "ibm_cloud": { nombre: "IBM Cloud", logo: "https://wp.logos-download.com/wp-content/uploads/2023/02/IBM_Cloud_Logo-3000x695.png", url: "https://downdetector.cl/problemas/ibm-cloud/" },
+      "oracle_cloud": { nombre: "Oracle Cloud", logo: "https://cdn.worldvectorlogo.com/logos/oracle-cloud-1.svg", url: "https://downdetector.cl/problemas/oracle-cloud/" },
+      "cloudflare": { nombre: "Cloudflare", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg", url: "https://downdetector.cl/problemas/cloudflare/" },
+      "outlook": { nombre: "Outlook", logo: "https://wibrahim.com/wp-content/uploads/2020/09/png-transparent-microsoft-outlook-logo-outlook-com-microsoft-outlook-email-microsoft-office-365-outlook-miscellaneous-blue-text-2.png", url: "https://downdetector.cl/problemas/outlook/" },
+      "teams": { nombre: "Microsoft Teams", logo: "https://logodownload.org/wp-content/uploads/2021/08/microsoft-teams-logo-2.png", url: "https://downdetector.cl/problemas/teams/" },
+      "google_meet": { nombre: "Google Meet", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Google_Meet_text_logo_(2020).svg", url: "https://downdetector.cl/problemas/google-meet/" },
+      "gmail": { nombre: "Gmail", logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Gmail2020.logo.png", url: "https://downdetector.cl/problemas/gmail/" },
+      "github": { nombre: "GitHub", logo: "https://pngimg.com/d/github_PNG25.png", url: "https://downdetector.cl/problemas/github/" },
+      "whatsapp": { nombre: "WhatsApp", logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-9.svg", url: "https://downdetector.cl/problemas/whatsapp/" }
+    };
+
+    function renderCards(data, config, containerId) {
+      const container = document.getElementById(containerId);
+      const now = new Date();
+
+      const stats = Object.keys(config).map(key => {
+        const dataset = (data[key] && data[key].data) || [];
+        let lastHour = 0, avg24 = 0;
+
+        if (Array.isArray(dataset) && dataset.length > 0) {
+          const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60 * 60 * 1000);
+          const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24 * 60 * 60 * 1000);
+          lastHour = last1.reduce((a, b) => a + b.y, 0);
+          avg24 = last24.reduce((a, b) => a + b.y, 0) / (last24.length || 1);
+        }
+        return { key, lastHour, avg24 };
+      });
+
+      const sorted = stats.sort((a, b) => b.lastHour - a.lastHour);
+
+      sorted.forEach(({ key, lastHour, avg24 }) => {
+        const service = config[key];
+        const serviceData = data[key] || {};
+        const dataset = serviceData.data || [];
+
+        const card = document.createElement("div");
+        card.className = "bg-white rounded-xl shadow-lg p-4 text-gray-900 flex flex-col items-center";
+
+        card.innerHTML = `
+          <div class="flex justify-center mb-3">
+            <a href="${service.url}" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity" title="Ir a reporte de ${service.nombre}">
+              <img src="${service.logo}" alt="${service.nombre}" class="h-12 object-contain">
+            </a>
+          </div>
+          <canvas id="chart-${key}" height="100"></canvas>
+          <div class="mt-3 text-sm text-gray-700 w-full">
+             <div class="font-bold text-center mb-1 text-gray-500">${service.nombre}</div>
+            📅 Actualización: ${
+              serviceData.ultima_actualizacion
+                ? new Date(serviceData.ultima_actualizacion).toLocaleString("es-CL", { timeZone: "America/Santiago", hour: '2-digit', minute:'2-digit' })
+                : "Sin datos"
+            }<br>
+            📊 Promedio 24h: <span class="font-bold">${avg24.toFixed(1)}</span><br>
+            🚨 Última hora: <span class="font-bold text-red-600">${lastHour}</span>
+          </div>
+        `;
+
+        container.appendChild(card);
+
+        if (Array.isArray(dataset) && dataset.length > 0) {
+          const ctx = card.querySelector("canvas").getContext("2d");
+          const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+          gradient.addColorStop(0, "rgba(59,130,246,0.4)");
+          gradient.addColorStop(1, "rgba(59,130,246,0)");
+
+          new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: dataset.map(p =>
+                new Date(p.x).toLocaleTimeString("es-CL", {
+                  timeZone: "America/Santiago",
+                  hour: "2-digit",
+                  minute: "2-digit"
+                })
+              ),
+              datasets: [{
+                label: "Reportes",
+                data: dataset.map(p => p.y),
+                borderColor: "rgba(59,130,246,1)",
+                backgroundColor: gradient,
+                borderWidth: 2,
+                tension: 0.4,
+                pointRadius: 0,
+                fill: true
+              }]
+            },
+            options: {
+              plugins: { legend: { display: false } },
+              scales: {
+                x: { ticks: { color: "#6b7280", maxTicksLimit: 6 }, grid: { display: false } },
+                y: { beginAtZero: true, ticks: { color: "#6b7280", stepSize: 1 }, grid: { color: "rgba(0,0,0,0.05)" } }
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // Configuración del dropdown
     const dropdownBtns = document.querySelectorAll(".group > button");
     dropdownBtns.forEach(btn => {
       const menu = btn.nextElementSibling;
@@ -67,150 +180,21 @@
         e.stopPropagation();
         menu.classList.toggle("hidden");
       });
-      document.addEventListener("click", e => {
-        if (!btn.contains(e.target) && !menu.contains(e.target)) {
-          menu.classList.add("hidden");
-        }
-      });
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".group > ul").forEach(m => m.classList.add("hidden"));
     });
 
-    // 🔹 Configuración de servicios nacionales
-    const nacionales = {
-      "bci": { logo: "https://cdn.worldvectorlogo.com/logos/bci-logotype.svg" },
-      "banco_estado": { logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_BancoEstado.svg" },
-      "transbank": { logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/Transbank-1200px-logo.png" },
-      "banco_itau": { logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Ita%C3%BA_Unibanco_logo_2023.svg" },
-      "banco_chile": { logo: "https://upload.wikimedia.org/wikipedia/en/b/b3/Banco_de_Chile_logo.svg" },
-      "santander": { logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Banco_Santander_Logotipo.svg" },
-      "banco_falabella": { logo: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Banco_Falabella_Logo.svg" },
-      "scotiabank": { logo: "https://upload.wikimedia.org/wikipedia/commons/2/22/Scotiabank_logo.svg" },
-      "sii": { logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/Logotipo_Servicio_de_Impuestos_Internos.svg" },
-      "banco_bice": { logo: "https://upload.wikimedia.org/wikipedia/commons/1/17/Logo_Banco_BICE-300dpi.jpg" },
-      "machbank": { logo: "https://s3.us-west-2.amazonaws.com/dev-byflow.com/uploads/logo_machbank_e725174b16.png" },
-      "tenpo": { logo: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Logotipo_Tenpo.svg" }
-
-    };
-
-    // 🔹 Configuración de servicios globales
-    const globales = {
-      "googlegemini": { logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" },
-      "openai": { logo: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" },
-      "microsoft_copilot": { logo: "https://stoneridgesoftware.com/wp-content/uploads/2024/03/copilot-logo-color.png" },
-      "aws": { logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-      "google_cloud": { logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" },
-      "azure": { logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Windows_Azure_logo.png" },
-      "ibm_cloud": { logo: "https://wp.logos-download.com/wp-content/uploads/2023/02/IBM_Cloud_Logo-3000x695.png" },
-      "oracle_cloud": { logo: "https://cdn.worldvectorlogo.com/logos/oracle-cloud-1.svg" },
-      "cloudflare": { logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg" },
-      "outlook": { logo: "https://wibrahim.com/wp-content/uploads/2020/09/png-transparent-microsoft-outlook-logo-outlook-com-microsoft-outlook-email-microsoft-office-365-outlook-miscellaneous-blue-text-2.png" },
-      "teams": { logo: "https://logodownload.org/wp-content/uploads/2021/08/microsoft-teams-logo-2.png" },
-      "google_meet": { logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Google_Meet_text_logo_(2020).svg" },
-      "gmail": { logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Gmail2020.logo.png" },
-      "github": { logo: "https://pngimg.com/d/github_PNG25.png" },
-      "whatsapp": { logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-9.svg" }
-    };
-
-function renderCards(data, config, containerId) {
-  const container = document.getElementById(containerId);
-  const now = new Date();
-
-  // 🔸 Precalcular las métricas para ordenar correctamente
-  const stats = Object.keys(config).map(key => {
-    const dataset = (data[key] && data[key].data) || [];
-    let lastHour = 0, avg24 = 0;
-
-    if (Array.isArray(dataset) && dataset.length > 0) {
-      const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60 * 60 * 1000);
-      const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24 * 60 * 60 * 1000);
-      lastHour = last1.reduce((a, b) => a + b.y, 0);
-      avg24 = last24.reduce((a, b) => a + b.y, 0) / (last24.length || 1);
-    }
-
-    return { key, lastHour, avg24 };
-  });
-
-  // 🔸 Ordenar descendente según reportes en la última hora
-  const sorted = stats.sort((a, b) => b.lastHour - a.lastHour);
-
-  // 🔸 Renderizar en orden
-  sorted.forEach(({ key, lastHour, avg24 }, index) => {
-    const service = config[key];
-    const serviceData = data[key] || {};
-    const dataset = serviceData.data || [];
-
-    const card = document.createElement("div");
-    card.className = "bg-white rounded-xl shadow-lg p-4 text-gray-900 flex flex-col items-center";
-
-     card.innerHTML = `
-      <div class="flex justify-center mb-3">
-        <img src="${service.logo}" alt="${key}" class="h-12">
-      </div>
-      <canvas id="chart-${key}" height="100"></canvas>
-      <div class="mt-3 text-sm text-gray-700 w-full">
-        📅 Última actualización: ${
-          serviceData.ultima_actualizacion
-            ? new Date(serviceData.ultima_actualizacion).toLocaleString("es-CL", { timeZone: "America/Santiago" })
-            : "Sin datos"
-        }<br>
-        📊 Promedio últimas 24 hrs: <span class="font-bold">${avg24.toFixed(1)}</span><br>
-        🚨 Última hora: <span class="font-bold text-red-600">${lastHour}</span>
-      </div>
-    `;
-
-    container.appendChild(card);
-
-    if (Array.isArray(dataset) && dataset.length > 0) {
-      const ctx = card.querySelector("canvas").getContext("2d");
-      const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-      gradient.addColorStop(0, "rgba(59,130,246,0.4)");
-      gradient.addColorStop(1, "rgba(59,130,246,0)");
-
-      new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: dataset.map(p =>
-            new Date(p.x).toLocaleTimeString("es-CL", {
-              timeZone: "America/Santiago",
-              hour: "2-digit",
-              minute: "2-digit"
-            })
-          ),
-          datasets: [{
-            label: "Reportes",
-            data: dataset.map(p => p.y),
-            borderColor: "rgba(59,130,246,1)",
-            backgroundColor: gradient,
-            borderWidth: 2,
-            tension: 0.4,
-            pointRadius: 0,
-            fill: true
-          }]
-        },
-        options: {
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { ticks: { color: "#6b7280", maxTicksLimit: 6 }, grid: { display: false } },
-            y: { beginAtZero: true, ticks: { color: "#6b7280", stepSize: 1 }, grid: { color: "rgba(0,0,0,0.05)" } }
-          }
-        }
-      });
-    }
-  });
-}
-
-
-    // 🔹 Cargar datos nacionales
+    // Cargar datos
     fetch("status_data.json?t=" + Date.now())
       .then(r => r.json())
       .then(allData => renderCards(allData.data, nacionales, "statusGridNacional"))
       .catch(err => console.error("Error cargando nacionales:", err));
 
-    // 🔹 Cargar datos globales
     fetch("status_data_global.json?t=" + Date.now())
       .then(r => r.json())
       .then(allData => renderCards(allData.data, globales, "statusGridGlobal"))
       .catch(err => console.error("Error cargando globales:", err));
   </script>
-
 </body>
 </html>
