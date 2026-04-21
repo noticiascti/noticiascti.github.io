@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-04-21",
+    "cve": "CVE-2026-6553",
+    "descripcion": "Changing backend users&#39; passwords via the user settings module results in storing the cleartext password in the uc and user_settings fields of the be_users database table. This issue affects TYPO3 CMS version 14.2.0. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-21",
+    "cve": "CVE-2026-41036",
+    "descripcion": "This vulnerability exists in Quantum Networks router due to inadequate sanitization of user-supplied input in the management CLI interface. An authenticated remote attacker could exploit this vulnerability by injecting arbitrary OS commands on the targeted device. Successful exploitation of this vulnerability could allow the attacker to perform remote code execution with root privileges on the targeted device. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-21",
+    "cve": "CVE-2026-3317",
+    "descripcion": "Reflected Cross-Site Scripting (XSS) vulnerability in Navigate Content Management System. The vulnerability is present in the &#39;/blog&#39; endpoint because user input is not properly sanitized through designed query parameters. This results in unsafe HTML rendering, which could allow a remote attacker to execute JavaScript code in the victim&#39;s browser. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-21",
+    "cve": "CVE-2026-39467",
+    "descripcion": "Deserialization of Untrusted Data vulnerability in MetaSlider Responsive Slider by MetaSlider allows Object Injection.This issue affects Responsive Slider by MetaSlider: from n/a through 3.106.0. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-04-21",
+    "cve": "CVE-2025-13826",
+    "descripcion": "Zervit&#39;s portable HTTP/web server is vulnerable to remote DoS attacks when a configuration reset request is made. The vulnerability is caused by inadequate validation of user-supplied input. An attacker can exploit this vulnerability by sending malicious requests. If the vulnerability is successfully exploited, the application can be made to stop responding, resulting in a DoS condition. It is possible to manually restart the application. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:D/RE:L/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-21",
     "cve": "CVE-2026-6712",
     "descripcion": "The Website LLMs.txt plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 8.2.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-04-21",
     "cve": "CVE-2026-31369",
     "descripcion": "PcManager is affected by type privilege bypass, successful exploitation of this vulnerability may affect service availability 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2026-31368",
-    "descripcion": "AiAssistant is affected by type privilege bypass, successful exploitation of this vulnerability may affect service availability. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2026-5965",
-    "descripcion": "NewSoftOA developed by NewSoft has an OS Command Injection vulnerability, allowing unauthenticated local attackers to inject arbitrary OS commands and execute them on the server. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2026-6675",
-    "descripcion": "The Responsive Blocks – Page Builder for Blocks & Patterns plugin for WordPress is vulnerable to Unauthenticated Open Email Relay in all versions up to, and including, 2.2.0. This is due to insufficient authorization checks and missing server-side validation of the recipient email address supplied via a public REST API route. This makes it possible for unauthenticated attackers to send arbitrary emails to any recipient of their choosing through the affected WordPress site&#39;s mail server, effectively turning the site into an open mail relay. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2026-6674",
-    "descripcion": "The Plugin: CMS für Motorrad Werkstätten plugin for WordPress is vulnerable to SQL Injection via the &#39;arttype&#39; parameter in all versions up to, and including, 1.0.0 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2026-40497",
-    "descripcion": "FreeScout is a free self-hosted help desk and shared mailbox. Prior to version 1.8.213, FreeScout&#39;s `Helper::stripDangerousTags()` removes ``, ``, ``, `` but does NOT strip `` tags. The mailbox signature field is saved via POST /mailbox/settings/{id} and later rendered unescaped via `{!! $conversation->getSignatureProcessed([], true) !!}` in conversation views. CSP allows `style-src * &#39;self&#39; &#39;unsafe-inline&#39;`, so injected inline styles execute freely. An attacker with access to mailbox settings (admin or agent with mailbox permission) can inject CSS attribute selectors to exfiltrate the CSRF token of any agent/admin who views a conversation in that mailbox. With the CSRF token, the attacker can perform any state-changing action as the victim (create admin accounts, change email/password, etc.) — privilege escalation from agent to admin. This is the result of an incomplete fix of GHSA-jqjf-f566-485j. That advisory reported XSS via mailbox signature. The fix applied `Helper::stripDangerousTags()` to the signature before saving. However, `stripDangerousTags()` only removes `script`, `form`, `iframe`, and `object` tags — it does NOT strip `` tags, leaving CSS injection possible. Version 1.8.213 contains an updated fix. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
