@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-6248",
-    "descripcion": "The wpForo Forum plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to and including 3.0.5. This is due to two compounding flaws: the Members::update() method does not validate or restrict the value of file-type custom profile fields, allowing authenticated users to store an arbitrary path instead of a legitimate upload path; and the wpforo_fix_upload_dir() sanitization function in ucf_file_delete() only remaps paths that match the expected pattern, and it is passed directly to the unlink() function. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Note: The vulnerability requires a file custom field, which requires the wpForo - User Custom Fields addon plugin. 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-6729",
+    "descripcion": "HKUDS OpenHarness prior to PR #159 remediation contains a session key derivation vulnerability that allows authenticated participants in shared chats or threads to hijack other users&#39; sessions by exploiting a shared ohmo session key that lacks sender identity verification. Attackers can reuse another user&#39;s conversation state and replace or interrupt their active tasks by colliding into the same session boundary through the shared chat or thread scope. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-6060",
-    "descripcion": "A vulnerability in the SQL Box in the admin interface of OTRS leads to an uncontrolled resource consumption leading to a DoS against the webserver. will be killed by the systemThis issue affects OTRS: * 7.0.X * 8.0.X * 2023.X * 2024.X * 2025.X * 2026.X before 2026.3.X 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-29643",
+    "descripcion": "XiangShan (Open-source high-performance RISC-V processor) commit edb1dfaf7d290ae99724594507dc46c2c2125384 (2024-11-28) contains an improper exceptional-condition handling flaw in its CSR subsystem (NewCSR). On affected versions, certain sequences of CSR operations targeting non-existent/custom CSR addresses may trigger an illegal-instruction exception but fail to reliably transfer control to the configured trap handler (mtvec), causing control-flow disruption and potentially leaving the core in a hung or unrecoverable state. This can be exploited by a local attacker able to execute code on the processor to cause a denial of service and potentially inconsistent architectural state. 21/04/2026 21/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2025-11249",
-    "descripcion": "Rejected reason: This CVE id was assigned as a duplicate of CVE-2025-66414. 20/04/2026 20/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-22051",
+    "descripcion": "StorageGRID (formerly StorageGRID Webscale) versions prior to 11.9.0.13 and 12.0.0.6 are susceptible to a Information Disclosure vulnerability. Successful exploit could allow an authenticated attacker with low privileges to run arbitrary metrics queries, revealing metric results that they do not have access to. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-39110",
-    "descripcion": "SQL Injection vulnerability in Apartment Visitors Management System Apartment Visitors Management System V1.1 in the contactno parameter of the forgot password page (forgot-password.php). This allows an unauthenticated attacker to manipulate backend SQL queries during authentication and retrieve sensitive database contents. 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-0930",
+    "descripcion": "Potential read out of bounds case with wolfSSHd on Windows while handling a terminal resize request. An authenticated user could trigger the out of bounds read after establishing a connection which would leak the adjacent stack memory to the pseudo-console output. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-39109",
-    "descripcion": "SQL Injection vulnerability in Apartment Visitors Management System Apartment Visitors Management System V1.1 within the username parameter of the login page (index.php). This allows an unauthenticated attacker to manipulate backend SQL queries during authentication and retrieve sensitive database contents. 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-5928",
+    "descripcion": "Calling the ungetwc function on a FILE stream with wide characters encoded in a character set that has overlaps between its single byte and multi-byte character encodings, in the GNU C Library version 2.43 or earlier, may result in an attempt to read bytes before an allocated buffer, potentially resulting in unintentional disclosure of neighboring data in the heap, or a program crash. A bug in the wide character pushback implementation (_IO_wdefault_pbackfail in libio/wgenops.c) causes ungetwc() to operate on the regular character buffer (fp->_IO_read_ptr) instead of the actual wide-stream read pointer (fp->_wide_data->_IO_read_ptr). The program crash may happen in cases where fp->_IO_read_ptr is not initialized and hence points to NULL. The buffer under-read requires a special situation where the input character encoding is such that there are overlaps between single byte representations and multibyte representations in that encoding, resulting in spurious matches. The spurious match case is not possible in the standard Unicode character sets. 20/04/2026 20/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-41389",
-    "descripcion": "OpenClaw versions 2026.4.7 before 2026.4.15 fail to enforce local-root containment on tool-result media paths, allowing arbitrary local and UNC file access. Attackers can craft malicious tool-result media references to trigger host-side file reads or Windows network path access, potentially disclosing sensitive files or exposing credentials. 20/04/2026 20/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5450",
+    "descripcion": "Calling the scanf family of functions with a %mc (malloc&#39;d character match) in the GNU C Library version 2.7 to version 2.43 with a format width specifier with an explicit width greater than 1024 could result in a one byte heap buffer overflow. 20/04/2026 20/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-39112",
-    "descripcion": "Cross Site Scripting vulnerability in Apartment Visitors Management System Apartment Visitors Management System V1.1 in the visname parameter of visitors-form.php. An authenticated attacker can inject arbitrary JavaScript that is later executed when the malicious input is viewed in manage-newvisitors.php or visitor-detail.php. 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5358",
+    "descripcion": "The obsolete nis_local_principal function in the GNU C Library version 2.43 and older may overflow a buffer in the data section, which could allow an attacker to spoof a crafted response to a UDP request generated by this function and overwrite neighboring static data in the requesting application. NIS support is obsolete and has been deprecated in the GNU C Library since version 2.26 and is only maintained for legacy usage. Applications should port away from NIS to more modern identity and access management services. 20/04/2026 20/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-39111",
-    "descripcion": "SQL Injection vulnerability in Apartment Visitors Management System Apartment Visitors Management System V1.1 in the email parameter of the forgot password page (forgot-password.php). This allows an unauthenticated attacker to manipulate backend SQL queries and retrieve sensitive user data. 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-4852",
+    "descripcion": "The Image Source Control Lite – Show Image Credits and Captions plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;Image Source&#39; attachment field in all versions up to, and including, 3.9.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-26399",
-    "descripcion": "A stack-use-after-return issue exists in the Arduino_Core_STM32 library prior to version 1.7.0. The pwm_start() function allocates a TIM_HandleTypeDef structure on the stack and passes its address to HAL initialization routines, where it is stored in a global timer handle registry. After the function returns, interrupt service routines may dereference this dangling pointer, resulting in memory corruption. 20/04/2026 20/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-34403",
+    "descripcion": "Nginx UI is a web user interface for the Nginx web server. Prior to version 2.3.5, all WebSocket endpoints in nginx-ui use a gorilla/websocket Upgrader with CheckOrigin unconditionally returning true, allowing Cross-Site WebSocket Hijacking (CSWSH). Combined with the fact that authentication tokens are stored in browser cookies (set via JavaScript without HttpOnly or explicit SameSite attributes), a malicious webpage can establish authenticated WebSocket connections to the nginx-ui instance when a logged-in administrator visits the attacker-controlled page. Version 2.3.5 patches the issue. 20/04/2026 20/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-20",
-    "cve": "CVE-2026-23758",
-    "descripcion": "GFI HelpDesk before 4.99.9 contains a stored cross-site scripting vulnerability in the ticket subject field that allows authenticated staff members to inject malicious JavaScript by manipulating the editsubject POST parameter. Attackers can inject XSS payloads through inadequate sanitization in Controller_Ticket.EditSubmit() that bypass the incomplete SanitizeForXSS() method to execute arbitrary JavaScript when other staff members or administrators view the affected ticket. 20/04/2026 20/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-33626",
+    "descripcion": "LMDeploy is a toolkit for compressing, deploying, and serving large language models. Versions prior to 0.12.3 have a Server-Side Request Forgery (SSRF) vulnerability in LMDeploy&#39;s vision-language module. The `load_image()` function in `lmdeploy/vl/utils.py` fetches arbitrary URLs without validating internal/private IP addresses, allowing attackers to access cloud metadata services, internal networks, and sensitive resources. Version 0.12.3 patches the issue. 20/04/2026 20/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
