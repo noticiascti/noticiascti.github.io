@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-6835",
-    "descripcion": "The a+HCM developed by aEnrich has an Arbitrary File Upload vulnerability, allowing unauthenticated remote attackers to upload arbitrary files to any path, including HTML documents, which may result in a XSS-like effect. 22/04/2026 22/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-6842",
+    "descripcion": "A flaw was found in nano. In environments with permissive umask settings, a local attacker can exploit incorrect directory permissions (0777 instead of 0700) for the `~/.local` directory. This allows the attacker to inject a malicious `.desktop` launcher, which could lead to unintended actions or information disclosure if the launcher is subsequently processed. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-6834",
-    "descripcion": "The a+HRD developed by aEnrich has a Missing Authorization vulnerability, allowing authenticated remote attackers to arbitrarily read database contents through a specific API method. 22/04/2026 22/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-6023",
+    "descripcion": "In Progress® Telerik® UI for AJAX versions 2024.4.1114 through 2026.1.421, the RadFilter control is vulnerable to insecure deserialization when restoring filter state if the state is exposed to the client. If an attacker tampers with this state, a server-side remote code execution is possible. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-6833",
-    "descripcion": "The a+HRD developed by aEnrich has a SQL Injection vulnerability, allowing authenticated remote attackers to inject arbitrary SQL commands to read database contents. 22/04/2026 22/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-6022",
+    "descripcion": "In Progress® Telerik® UI for AJAX prior to 2026.1.421, RadAsyncUpload contains an uncontrolled resource consumption vulnerability that allows file uploads to exceed the configured maximum size due to missing cumulative size enforcement during chunk reassembly, leading to disk space exhaustion. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-6416",
-    "descripcion": "Tanium addressed an uncontrolled resource consumption vulnerability in Interact. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-40542",
+    "descripcion": "Missing critical step in authentication in Apache HttpClient 5.6 allows an attacker to cause the client to accept SCRAM-SHA-256 authentication without proper mutual authentication verification. Users are recommended to upgrade to version 5.6.1, which fixes this issue. 22/04/2026 22/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-6408",
-    "descripcion": "Tanium addressed an information disclosure vulnerability in Tanium Server. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-6840",
+    "descripcion": "Missing bounds validation for operator could allow out of range operator-code lookup during model loading Affected version is prior to commit 1.30.0. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-6392",
-    "descripcion": "Tanium addressed an information disclosure vulnerability in Threat Response. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-6839",
+    "descripcion": "Improper validation of STRING tensor offsets could allows malformed string metadata to trigger out of bounds access during constant tensor import in Samsung Open Source ONE Affected version is prior to commit 1.30.0. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-6386",
-    "descripcion": "In order to apply a particular protection key to an address range, the kernel must update the corresponding page table entries. The subroutine which handled this failed to take into account the presence of 1GB largepage mappings created using the shm_create_largepage(3) interface. In particular, it would always treat a page directory page entry as pointing to another page table page. The bug can be abused by an unprivileged user to cause pmap_pkru_update_range() to treat userspace memory as a page table page, and thus overwrite memory to which the application would otherwise not have access. 22/04/2026 22/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41667",
+    "descripcion": "Integer overflow in constant tensor data size calculation in Samsung Open Source ONE could cause incorrect buffer sizing for large constant nodes. Affected version is prior to commit 1.30.0. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-5398",
-    "descripcion": "The implementation of TIOCNOTTY failed to clear a back-pointer from the structure representing the controlling terminal to the calling process&#39; session. If the invoking process then exits, the terminal structure may end up containing a pointer to freed memory. A malicious process can abuse the dangling pointer to grant itself root privileges. 22/04/2026 22/04/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41666",
+    "descripcion": "Integer overflow in tensor copy size calculation in Samsung Open Source ONE could lead to out of bounds access during loop state propagation. Affected version is prior to commit 1.30.0. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-41458",
-    "descripcion": "OwnTone Server versions 28.4 through 29.0 contain a race condition vulnerability in the DAAP login handler that allows unauthenticated attackers to crash the server by exploiting unsynchronized access to the global DAAP session list. Attackers can flood the DAAP /login endpoint with concurrent requests to trigger a remote denial of service condition without requiring authentication. 22/04/2026 22/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41665",
+    "descripcion": "Integer overflow in scratch buffer initialization size calculation in Samsung Open Source ONE cause incorrect memory initialization for large intermediate tensors. Affected version is prior to commit 1.30.0. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-04-22",
-    "cve": "CVE-2026-41457",
-    "descripcion": "OwnTone Server versions 28.4 through 29.0 contain a SQL injection vulnerability in DAAP query and filter handling that allows attackers to inject arbitrary SQL expressions by supplying malicious values through the query= and filter= parameters for integer-mapped DAAP fields. Attackers can exploit insufficient sanitization of these parameters to bypass filters and gain unauthorized access to media library data. 22/04/2026 22/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41664",
+    "descripcion": "Integer overflow in memory copy size calculation in Samsung Open Source ONE could lead to invalid memory operations with large tensor shapes. Affected version is prior to commit 1.30.0. 22/04/2026 22/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
