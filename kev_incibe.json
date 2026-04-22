@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-04-21",
+    "cve": "CVE-2025-41029",
+    "descripcion": "SQL injection vulnerability in Zeon Academy Pro by Zeon Global Tech. This vulnerability allows an attacker to retrieve, create, update, and delete databases by sending a POST request using the parameter &#39;phonenumber&#39; in &#39;/private/continue-upload.php&#39;. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-21",
+    "cve": "CVE-2025-41011",
+    "descripcion": "HTML injection vulnerability in PHP Point of Sale v19.4. This vulnerability allows an attacker to render HTML in the victim&#39;s browser due to a lack of proper validation of user input by sending a request to &#39;/reports/generate/specific_customer&#39;, ussing &#39;start_date_formatted&#39; y &#39;end_date_formatted&#39; parameters. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-21",
     "cve": "CVE-2026-5789",
     "descripcion": "Vulnerability related to an unquoted search path in CivetWeb v1.16. This vulnerability allows a local attacker to execute arbitrary code with elevated privileges by placing a malicious executable in a directory that is scanned before the intended application path (C:\\Program Files\\CivetWeb\\CivetWeb.exe --), due to the absence of quotes in the service configuration. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -8,6 +18,11 @@
     "fecha": "2026-04-21",
     "cve": "CVE-2026-3298",
     "descripcion": "The method &#34;sock_recvfrom_into()&#34; of &#34;asyncio.ProacterEventLoop&#34; (Windows only) was missing a boundary check for the data buffer when using nbytes parameter. This allowed for an out-of-bounds buffer write if data was larger than the buffer size. Non-Windows platforms are not affected. 21/04/2026 21/04/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-04-21",
+    "cve": "CVE-2026-31018",
+    "descripcion": "In Dolibarr ERP & CRM 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-04-21",
@@ -33,20 +48,5 @@
     "fecha": "2026-04-21",
     "cve": "CVE-2026-1089",
     "descripcion": "User‑Controlled HTTP Header in Fortra&#39;s GoAnywhere MFT prior to version 7.10.0 allows attackers to trigger a DNS lookup, as well as DNS Rebinding and Information Disclosure. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2026-0972",
-    "descripcion": "The login limit is not enforced on the SFTP service of Fortra&#39;s GoAnywhere MFT prior to 7.10.0 if the Web User attempting to be logged in to is configured to log in with an SSH Key, making the SSH key vulnerable to being guessed via Brute Force. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2026-0971",
-    "descripcion": "An improper session timeout issue in Fortra&#39;s GoAnywhere MFT prior to version 7.10.0 results in SAML configured Web Users being redirected to the regular login page instead of the SAML login page. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-04-21",
-    "cve": "CVE-2025-31981",
-    "descripcion": "HCL BigFix Service Management (SM) Discovery is vulnerable to unenforced encryption due to port 80 (HTTP) being open, allowing unencrypted access. An attacker with access to the network traffic can sniff packets from the connection and uncover the data. 21/04/2026 21/04/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
