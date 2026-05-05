@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2024-30085",
     "descripcion": "Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability"
   },
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2026-31789",
     "descripcion": "Issue summary: Converting an excessively large OCTET STRING value to a hexadecimal string leads to a heap buffer overflow on 32 bit platforms. Impact summary: A heap buffer overflow may lead to a crash or possibly an attacker controlled code execution or other undefined ..."
   },
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2025-33073",
     "descripcion": "Improper access control in Windows SMB allows an authorized attacker to elevate privileges over a network."
   },
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2026-26128",
     "descripcion": "Improper authentication in Windows SMB Server allows an authorized attacker to elevate privileges locally."
   },
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2025-8088",
     "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
   },
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2025-55182",
     "descripcion": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code ..."
   },
   {
-    "fecha": "2026-05-04",
-    "cve": "CVE-2025-54253",
-    "descripcion": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a Misconfiguration vulnerability that could result in arbitrary code execution. An attacker could leverage this vulnerability to bypass security mechanisms and execute code. Exploitation of this issue does not ..."
-  },
-  {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2026-31431",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: algif_aead - Revert to operating out-of-place This mostly reverts commit 72548b093ee3 except for the copying of the associated data. There is no benefit in operating in-place in algif_aead since ..."
   },
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2025-70069",
     "descripcion": "An issue in Assimp v.6.0.2 allows a remote attacker to cause a denial of service via the FBXConverter.cpp and ConvertMeshMultiMaterial() method"
   },
   {
-    "fecha": "2026-05-04",
+    "fecha": "2026-05-05",
     "cve": "CVE-2025-40271",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: fs/proc: fix uaf in proc_readdir_de() Pde is erased from subdir rbtree through rb_erase(), but not set the node to EMPTY, which may result in uaf access. We should use RB_CLEAR_NODE() set the erased node to ..."
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2025-70067",
+    "descripcion": "Buffer Overflow vulnerability exists in Assimp versions up to 6.0.2 in the FBX Importer. The vulnerability occurs in aiMaterial::AddBinaryProperty, where a property key string from a crafted FBX file is copied into a fixed-size heap buffer using strcpy() without runtime length ..."
   }
 ]
