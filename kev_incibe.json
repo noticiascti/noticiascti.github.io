@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-05",
+    "cve": "CVE-2026-38428",
+    "descripcion": "Kestra v1.3.3 and before is vulnerable to SQL Injection. The vulnerability occurs because user-controlled input from a GET parameter is directly concatenated into an SQL query without proper sanitization or parameterization. As a result, attackers can inject arbitrary SQL expressions into the database query. 05/05/2026 05/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-31835",
+    "descripcion": "Vaultwarden is a Bitwarden-compatible server written in Rust. In versions 1.35.4 and earlier, the WebAuthn authentication flow in `validate_webauthn_login()` updates persistent credential metadata (1backup_eligible1 and 1backup_state flags1) based on unverified `authenticatorData` before signature validation is performed. An attacker who knows a user&#39;s password but cannot produce a valid WebAuthn signature can permanently modify the stored backup flags for that user&#39;s credential. If signature verification fails, the database update is not rolled back. This can result in a persistent denial of service of WebAuthn two-factor authentication for affected credentials. This issue has been fixed in version 1.35.5. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-27960",
+    "descripcion": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. In versions 6.6.0 through 6.9.12, there is a privilege escalation vulnerability that can be exploited by unauthenticated attackers to query the API as any existing user, including the default admin account. This issue has been fixed in version 6.9.13. As a workaround, the default admin can be disabled using the `APP__ADMIN__EXTERNALLY_MANAGED` configuration. 05/05/2026 05/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-7853",
+    "descripcion": "A weakness has been identified in D-Link DI-8100 16.07.26A1. Affected is the function sprintf of the file /auto_reboot.asp of the component HTTP Handler. This manipulation of the argument enable/time causes buffer overflow. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-7851",
+    "descripcion": "A vulnerability was identified in D-Link DI-8100 16.07.26A1. This affects the function sprintf of the file yyxz.asp. The manipulation of the argument ID leads to stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:M/C:C/I:C/A:C Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-7847",
+    "descripcion": "A vulnerability was found in chatchat-space Langchain-Chatchat up to 0.3.1.3. The affected element is the function _get_file_id of the file libs/chatchat-server/chatchat/server/api_server/openai_routes.py of the component Uploaded File Handler. Performing a manipulation results in insufficiently random values. Access to the local network is required for this attack. The attack&#39;s complexity is rated as high. The exploitability is described as difficult. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:A/AC:H/Au:S/C:P/I:N/A:N Gravedad 4.0 1.20 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 2.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-43002",
+    "descripcion": "An issue was discovered in OpenStack Horizon 25.6 and 25.7 before 25.7.3. There is a write operation to the session storage backend before authentication and thus storage can be exhausted by unauthenticated requests. This is a regression of the CVE-2014-8124 fix. 05/05/2026 05/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-38432",
+    "descripcion": "ERPNext v15.103.1 and before is vulnerable to Cross Site Scripting (XSS) in the Email Template engine. An attacker with permission to create or edit email templates can inject malicious JavaScript code that are executed on the victim&#39;s browser when the template is applied. 05/05/2026 05/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2026-38431",
+    "descripcion": "ERPNext v15.103.1 and before is vulnerable to Server-Side Template Injection (SSTI). An attacker with permission to create or edit email templates can inject template expressions that are executed on the server when the template is rendered. 05/05/2026 05/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-05",
     "cve": "CVE-2026-7865",
     "descripcion": "A hidden console command is vulnerable to command injection flaw when control characters are passed to its second argument. A third party researcher Eugene Lim had discovered vulnerability in the way console command passes to a popen function call. Attackers with authenticated access to SSH console of Crestron devices may use to run underlying OS commands. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-7846",
-    "descripcion": "A vulnerability has been found in chatchat-space Langchain-Chatchat up to 0.3.1.3. Impacted is the function files of the file libs/chatchat-server/chatchat/server/api_server/openai_routes.py of the component OpenAI-Compatible File Upload API. Such manipulation of the argument file.filename leads to time-of-check time-of-use. Access to the local network is required for this attack to succeed. The attack requires a high level of complexity. The exploitability is considered difficult. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:A/AC:H/Au:S/C:N/I:P/A:N Gravedad 4.0 1.20 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 2.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-7845",
-    "descripcion": "A flaw has been found in chatchat-space Langchain-Chatchat up to 0.3.1.3. This issue affects the function PIL.Image.tobytes of the file libs/chatchat-server/chatchat/webui_pages/dialogue/dialogue.py of the component Vision Chat Paste Image Handler. This manipulation of the argument paste_image.image_data causes use of weak hash. The attacker needs to be present on the local network. The attack is considered to have high complexity. The exploitability is assessed as difficult. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:A/AC:H/Au:S/C:N/I:P/A:N Gravedad 4.0 1.20 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 2.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-7844",
-    "descripcion": "A vulnerability was detected in chatchat-space Langchain-Chatchat up to 0.3.1.3. This vulnerability affects the function files/list_files/retrieve_file/retrieve_file_content/delete_file of the file libs/chatchat-server/chatchat/server/api_server/openai_routes.py of the component Compatible File Service. The manipulation results in missing authentication. The attacker must have access to the local network to execute the attack. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:A/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-7412",
-    "descripcion": "In Eclipse BaSyx Java Server SDK versions prior to 2.0.0-milestone-10, the Operation Delegation feature fails to validate the destination URI of delegated requests. An unauthenticated remote attacker can exploit this design flaw to force the BaSyx server to execute blind HTTP POST requests to arbitrary internal or external targets. This allows an attacker to bypass network segmentation and pivot into isolated internal IT/OT infrastructure or target Cloud Metadata services (IMDS). 05/05/2026 05/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-7411",
-    "descripcion": "In Eclipse BaSyx Java Server SDK versions prior to 2.0.0-milestone-10, inadequate path normalization in the Submodel HTTP API allows an unauthenticated remote attacker to perform a path traversal attack. By supplying a maliciously crafted fileName parameter during a file upload operation, an attacker can bypass intended storage boundaries and write arbitrary files to any location on the host filesystem accessible by the Java process. This can lead to Remote Code Execution (RCE) and complete system compromise. 05/05/2026 05/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-6907",
-    "descripcion": "An issue was discovered in 6.0 before 6.0.5 and 5.2 before 5.2.14. `django.middleware.cache.UpdateCacheMiddleware` erroneously caches requests where the `Vary` header contained an asterisk (`&#39;*&#39;`). This can lead to private data being stored and served. Earlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected. Django would like to thank Ahmad Sadeddin for reporting this issue. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-5766",
-    "descripcion": "An issue was discovered in 6.0 before 6.0.5 and 5.2 before 5.2.14. ASGI requests with a missing or understated `Content-Length` header can bypass the `FILE_UPLOAD_MAX_MEMORY_SIZE` limit, potentially loading large files into memory and causing service degradation. As a reminder, Django expects a limit to be configured at the web server level rather than solely relying on `FILE_UPLOAD_MAX_MEMORY_SIZE`. Earlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected. Django would like to thank Kyle Agronick for reporting this issue. 05/05/2026 05/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-43073",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: x86-64: rename misleadingly named &#39;__copy_user_nocache()&#39; function This function was a masterclass in bad naming, for various historical reasons. It claimed to be a non-cached user copy. It is literally _neither_ of those things. It&#39;s a specialty memory copy routine that uses non-temporal stores for the destination (but not the source), and that does exception handling for both source and destination accesses. Also note that while it works for unaligned targets, any unaligned parts (whether at beginning or end) will not use non-temporal stores, since only words and quadwords can be non-temporal on x86. The exception handling means that it _can_ be used for user space accesses, but not on its own - it needs all the normal &#34;start user space access&#34; logic around it. But typically the user space access would be the source, not the non-temporal destination. That was the original intention of this, where the destination was some fragile persistent memory target that needed non-temporal stores in order to catch machine check exceptions synchronously and deal with them gracefully. Thus that non-descriptive name: one use case was to copy from user space into a non-cached kernel buffer. However, the existing users are a mix of that intended use-case, and a couple of random drivers that just did this as a performance tweak. Some of those random drivers then actively misused the user copying version (with STAC/CLAC and all) to do kernel copies without ever even caring about the exception handling, _just_ for the non-temporal destination. Rename it as a first small step to actually make it halfway sane, and change the prototype to be more normal: it doesn&#39;t take a user pointer unless the caller has done the proper conversion, and the argument size is the full size_t (it still won&#39;t actually copy more than 4GB in one go, but there&#39;s also no reason to silently truncate the size argument in the caller). Finally, use this now sanely named function in the NTB code, which mis-used a user copy version (with STAC/CLAC and all) of this interface despite it not actually being a user copy at all. 05/05/2026 05/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-05",
-    "cve": "CVE-2026-43072",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/vc4: platform_get_irq_byname() returns an int platform_get_irq_byname() will return a negative value if an error happens, so it should be checked and not just passed directly into devm_request_threaded_irq() hoping all will be ok. 05/05/2026 05/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
