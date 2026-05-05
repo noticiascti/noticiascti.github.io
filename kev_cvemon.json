@@ -36,11 +36,6 @@
   },
   {
     "fecha": "2026-05-05",
-    "cve": "CVE-2025-70067",
-    "descripcion": "Buffer Overflow vulnerability exists in Assimp versions up to 6.0.2 in the FBX Importer. The vulnerability occurs in aiMaterial::AddBinaryProperty, where a property key string from a crafted FBX file is copied into a fixed-size heap buffer using strcpy() without runtime length ..."
-  },
-  {
-    "fecha": "2026-05-05",
     "cve": "CVE-2025-67796",
     "descripcion": "IKUS Rdiffweb before 2.10.5 has an improper authorization flaw that allows an attacker with any valid or stolen access token to act as other users. The API does not enforce binding between the authenticated subject and the targeted user/tenant, so crafted requests can read or ..."
   },
@@ -48,5 +43,10 @@
     "fecha": "2026-05-05",
     "cve": "CVE-2025-70069",
     "descripcion": "An issue in Assimp v.6.0.2 allows a remote attacker to cause a denial of service via the FBXConverter.cpp and ConvertMeshMultiMaterial() method"
+  },
+  {
+    "fecha": "2026-05-05",
+    "cve": "CVE-2025-70070",
+    "descripcion": "An issue in Assimp v.6.0.2 allows a remote attacker to cause a denial of service via the FBXMeshGeometry.cpp, MeshGeometry::MeshGeometry()"
   }
 ]
