@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-05-06",
+    "cve": "CVE-2026-2306",
+    "descripcion": "The Ninja Tables – Easy Data Table Builder plugin for WordPress is vulnerable to unauthorized database table creation due to missing authorization checks on the `createFluentCartTable` function in all versions up to, and including, 5.2.6. This makes it possible for authenticated attackers, with Subscriber-level access and above, to create arbitrary Ninja Tables in the database which can lead to database pollution and resource exhaustion. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-06",
     "cve": "CVE-2026-5753",
     "descripcion": "The All-in-One WP Migration Unlimited Extension plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 2.83. This is due to the &#39;Ai1wmve_Schedules_Controller::save&#39; handler for &#39;admin_post_ai1wm_schedule_event_save&#39; not verifying user capabilities before saving schedule data. This makes it possible for authenticated attackers, with subscriber-level access and above, to create scheduled export jobs and send backup notifications to attacker-controlled email addresses. Because such notifications include the random backup filename, full site backups can subsequently be downloaded from the target site, resulting in sensitive information exposure. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-05-06",
     "cve": "CVE-2025-71252",
     "descripcion": "In Modem IMS, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-06",
-    "cve": "CVE-2025-71251",
-    "descripcion": "In IMS, there is a possible system crash due to improper input validation. This could lead to remote denial of service with no additional execution privileges needed. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
