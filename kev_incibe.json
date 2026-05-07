@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-7875",
-    "descripcion": "NanoClaw contains a host/container filesystem boundary vulnerability in outbound attachment handling and outbox cleanup that allows a compromised or prompt-injected container to read files outside the intended outbox directory by supplying crafted messages_out.id and content.files values or creating symlinked outbox files. Attackers can exploit this vulnerability to trigger host-side reads of arbitrary files and in some cases achieve recursive deletion of paths outside the intended cleanup target. 06/05/2026 06/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-8022",
+    "descripcion": "Inappropriate implementation in MHTML in Google Chrome prior to 148.0.7778.96 allowed a remote attacker who convinced a user to engage in specific UI gestures to leak cross-origin data via a crafted MHTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-42503",
-    "descripcion": "gopls by default communicates via pipe. However, -port and -listen flags are supported as means of debugging. If -listen is given a value without an explicit host (e.g. :8080), or -port is used, gopls will listen on 0.0.0.0. As a result, users might inadvertently cause gopls to bind 0.0.0.0. This can allow a malicious party on the same network to execute code arbitrarily via gopls. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-8021",
+    "descripcion": "Script injection in UI in Google Chrome prior to 148.0.7778.96 allowed a remote attacker who convinced a user to engage in specific UI gestures to inject arbitrary scripts or HTML (UXSS) via a crafted HTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-29080",
-    "descripcion": "A SQL injection vulnerability in `FilterEngine.create_sqla_query()` allows any authenticated Rucio user to execute arbitrary SQL against the backend database through the DID search endpoint (`GET /dids//dids/search`). On Oracle deployments attacker-controlled filter keys and values are interpolated directly into `sqlalchemy.text()` via Python `.format()`, completely bypassing parameterization. This enables full database compromise including extraction of authentication tokens, password hashes, and all managed data identifiers. This affects versions 1.27.0 and later before 35.8.5, 38.5.5, 39.4.2, and 40.1.1. The vulnerability exists in `lib/rucio/core/did_meta_plugins/filter_engine.py` within the `create_sqla_query()` method. When the database dialect is Oracle, filter expressions for JSON metadata columns are constructed using `text()` with Python string formatting. Both `key` and `value` are attacker-controlled strings derived from HTTP query parameters. The `text()` function creates a raw SQL fragment — it does **not** escape or parameterize its contents. Any authenticated Rucio user can exploit this through the DID search API to execute arbitrary SQL against the backend database. This can expose all managed data identifiers and sensitive tables such as identities, tokens, accounts, rse_settings, and rules, and may allow modification of database contents. The issue affects Oracle deployments using the default json_meta plugin and does not affect PostgreSQL or MySQL deployments using that plugin. This vulnerability has been fixed in versions 35.8.5, 38.5.5, 39.4.2, and 40.1.1. 06/05/2026 06/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-8031",
+    "descripcion": "A vulnerability was detected in PicoTronica e-Clinic Healthcare System ECHS 5.7. The affected element is an unknown function of the file /cdemos/echs/api/v2/patient-records of the component API Endpoint. The manipulation results in missing authentication. The attack can be executed remotely. The exploit is now public and may be used. Upgrading to version 5.7.1 is sufficient to fix this issue. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product. 06/05/2026 06/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:N/A:N Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-23870",
-    "descripcion": "A denial of service vulnerability could be triggered by sending specially crafted HTTP requests to server function endpoints, this could lead to server crashes, out-of-memory exceptions or excessive CPU usage; affecting the following packages: react-server-dom-webpack, react-server-dom-parcel, react-server-dom-turbopack (versions 19.0.0 through 19.0.5, 19.1.0 through 19.1.6, and 19.2.0 through 19.2.5). 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-8020",
+    "descripcion": "Uninitialized Use in GPU in Google Chrome on Android prior to 148.0.7778.96 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-6863",
-    "descripcion": "Velociraptor versions prior to 0.76.4 contain a cross organization authorization bypass in the HTTP API. A user with only the reader role in the root organization (the lowest authenticated role, holding only READ_RESULTS permission ) can issue a single authenticated HTTP GET that can read any files from other orgs - even if they have no explicit permissions in the target org. However, the problem does not occur in reverse - a user with read access to a sub org is unable to read from other org or the root org. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-8019",
+    "descripcion": "Insufficient policy enforcement in WebApp in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-6691",
-    "descripcion": "The MongoDB C Driver&#39;s Cyrus SASL integration performs unsafe string copying during username canonicalization, enabling a heap buffer overflow before any authentication or network traffic. This may be triggered by passing untrusted input in the username of a MongoDB URI with authMechanism=GSSAPI. 06/05/2026 06/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-8018",
+    "descripcion": "Insufficient policy enforcement in DevTools in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to potentially perform a sandbox escape via malicious network traffic. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-36358",
-    "descripcion": "Cross Site Scripting vulnerability in Juzaweb CMS v.5.0.0 allows a remote attacker via execute arbitrary code via a crafted script to the Add Banner Ads function 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-8017",
+    "descripcion": "Side-channel information leakage in Media in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-5081",
-    "descripcion": "Apache::Session::Generate::ModUniqueId versions from 1.54 through 1.94 for Perl session ids are insecure. Apache::Session::Generate::ModUniqueId (added in version 1.54) uses the value of the UNIQUE_ID environment variable for the session id. The UNIQUE_ID variable is set by the Apache mod_unique_id plugin, which generates unique ids for the request. The id is based on the IPv4 address, the process id, the epoch time, a 16-bit counter and a thread index, with no obfuscation. The server IP is often available to the public, and if not available, can be guessed from previous session ids being issued. The process ids may also be guessed from previous session ids. The timestamp is easily guessed (and leaked in the HTTP Date response header). The purpose of mod_unique_id is to assign a unique id to requests so that events can be correlated in different logs. The id is not designed, nor is it suitable for security purposes. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-8016",
+    "descripcion": "Use after free in WebRTC in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-40562",
-    "descripcion": "Gazelle versions through 0.49 for Perl allows HTTP Request Smuggling via Improper Header Precedence. Gazelle incorrectly prioritizes &#34;Content-Length&#34; over &#34;Transfer-Encoding: chunked&#34; when both headers are present in an HTTP request. Per RFC 7230 3.3.3, Transfer-Encoding must take precedence. An attacker could exploit this to smuggle malicious HTTP requests via a front-end reverse proxy. 06/05/2026 06/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-8015",
+    "descripcion": "Inappropriate implementation in Media in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-06",
-    "cve": "CVE-2026-43283",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: ethernet: ec_bhf: Fix dma_free_coherent() dma handle dma_free_coherent() in error path takes priv->rx_buf.alloc_len as the dma handle. This would lead to improper unmapping of the buffer. Change the dma handle to priv->rx_buf.alloc_phys. 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-8014",
+    "descripcion": "Inappropriate implementation in Preload in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low) 06/05/2026 06/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
