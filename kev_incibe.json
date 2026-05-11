@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-05-11",
+    "cve": "CVE-2026-8290",
+    "descripcion": "A security flaw has been discovered in Open5GS up to 2.7.7. This issue affects the function smf_nsmf_handle_update_data_in_vsmf of the file /src/smf/nsmf-handler.c of the component SMF. The manipulation results in denial of service. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet. 11/05/2026 11/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-11",
+    "cve": "CVE-2026-8289",
+    "descripcion": "A vulnerability was identified in Open5GS up to 2.7.7. This vulnerability affects the function smf_nsmf_handle_update_data_in_vsmf of the file /src/smf/nsmf-handler.c of the component SMF. The manipulation of the argument qosFlowProfile leads to denial of service. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet. 11/05/2026 11/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-11",
+    "cve": "CVE-2026-4802",
+    "descripcion": "A flaw was found in Cockpit. This vulnerability allows a remote attacker to achieve arbitrary command execution on the host by exploiting unsanitized user-controlled parameters within crafted links in the system logs user interface (UI). An attacker can inject shell metacharacters and command substitutions into these parameters, leading to the execution of arbitrary shell commands on the affected system. This could result in a complete system compromise. 11/05/2026 11/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-11",
+    "cve": "CVE-2026-8288",
+    "descripcion": "A vulnerability was determined in Open5GS up to 2.7.7. This affects the function gsm_handle_pdu_session_modification_qos_flow_descriptions of the file src/smf/gsm-handler.c of the component SMF. Executing a manipulation of the argument n1SmMsg can lead to denial of service. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The pull request to fix this issue awaits acceptance. 11/05/2026 11/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-11",
     "cve": "CVE-2025-9973",
     "descripcion": "Due to not validating the organization context when executing adaptive authentication flows, the WSO2 Identity Server allows adaptive authentication logic to be triggered on unintended organizations. A malicious actor with privileges to configure adaptive authentication within one organization can leverage this functionality to execute authentication logic on other organizations and sub-organizations. This flaw allows bypassing authorization boundaries between organizations, leading to unauthorized access to critical operations and user accounts in other organizations. When adaptive authentication is enabled in a multi-organization deployment, a malicious actor with privileges to configure adaptive authentication in one organization could exploit this feature to perform critical operations in other organizations without authorization. This may result in privilege escalation, unauthorized access to resources, and potential account takeover across organizations. 11/05/2026 11/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-05-11",
     "cve": "CVE-2026-40636",
     "descripcion": "Dell ECS versions 3.8.1.0 through 3.8.1.7 and Dell ObjectScale versions prior to 4.3.0.0, contains a use of hard-coded credentials vulnerability. An unauthenticated attacker with local access could potentially exploit this vulnerability, leading to filesystem access for attacker. 11/05/2026 11/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-35157",
-    "descripcion": "Dell ECS versions 3.8.1.0 through 3.8.1.7 and Dell ObjectScale versions prior to 4.3.0.0, contains an improper neutralization of formula elements in a CSV File vulnerability in the UI. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to remote execution. 11/05/2026 11/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-32658",
-    "descripcion": "Dell Automation Platform versions prior to 2.0.0.0, contains a missing authorization vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges. 11/05/2026 11/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-26946",
-    "descripcion": "Dell ECS versions 3.8.1.0 through 3.8.1.7 and Dell ObjectScale versions prior to 4.3.0.0, contains an improper privilege management vulnerability in the OS. A high privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges. 11/05/2026 11/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2025-8325",
-    "descripcion": "The software fails to enforce role-based access controls for certain Gateway API invocations. Users with the &#39;Internal/Everyone&#39; role can invoke these APIs, bypassing intended permission checks. This same vulnerability also affects Internal Service APIs, potentially exposing them in WSO2 APIM 3.x versions. A malicious actor with a valid user account on a vulnerable deployment can perform sensitive operations against the Gateway REST API regardless of their actual roles or privileges. This could lead to unintended behavior or misuse, particularly in production environments. 11/05/2026 11/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
