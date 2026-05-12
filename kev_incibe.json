@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-05-11",
+    "cve": "CVE-2026-45362",
+    "descripcion": "Sangoma Switchvox before 8.4 places cleartext SIP authentication credentials in a backup file. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-05-11",
+    "cve": "CVE-2026-45321",
+    "descripcion": "On 2026-05-11, between approximately 19:20 and 19:26 UTC, 84 malicious versions across 42 @tanstack/* packages were published to the npm registry. The publishes were authenticated via the legitimate GitHub Actions OIDC trusted-publisher binding for TanStack/router, but the publish workflow itself was not modified. The attacker chained three known vulnerability classes — a pull_request_target &#34;Pwn Request&#34; misconfiguration, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of the OIDC token from the Actions runner process — to publish credential-stealing malware under a trusted identity. Each affected package received exactly two malicious versions, published a few minutes apart. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-05-11",
+    "cve": "CVE-2026-8349",
+    "descripcion": "A flaw has been found in omec-project amf up to 2.1.1. This vulnerability affects unknown code of the component NGAP Message Handler. Executing a manipulation can lead to memory corruption. The attack can be launched remotely. The exploit has been published and may be used. This patch is called 8a4c33cdda866094f1989bdeff6d8642fce8de8435f89defd66831c97715f5aa. It is best practice to apply a patch to resolve this issue. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-11",
+    "cve": "CVE-2026-8346",
+    "descripcion": "A vulnerability was detected in D-Link DIR-816 1.10CNB05_R1B011D88210. This affects the function portForward. Performing a manipulation of the argument ip_address results in command injection. The attack can be initiated remotely. The exploit is now public and may be used. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-11",
+    "cve": "CVE-2026-8345",
+    "descripcion": "A security vulnerability has been detected in D-Link DIR-816 1.10CNB05_R1B011D88210. Affected by this issue is the function sub_445E7C of the file /goform/singlePortForward. Such manipulation of the argument ip_address leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-11",
     "cve": "CVE-2026-43914",
     "descripcion": "Vaultwarden is a Bitwarden-compatible server written in Rust. Prior to 1.35.4, there is a security vulnerability in Vaultwarden that allows bypassing the login brute-force protection if email 2fa is enabled. If email 2fa is enabled, the unprotected 2fa-function send_email_login (email.rs, api endpoint /api/two-factor/send-email-login) also acts as an oracle determining whether a username-password combination is correct. An attacker can abuse that endpoint to brute-force passwords without rate-limiting. This works even for users who don&#39;t have email 2fa configured. This vulnerability is fixed in 1.35.4. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-05-11",
     "cve": "CVE-2026-43901",
     "descripcion": "Wireshark MCP is an MCP Server that turns tshark into a structured analysis interface, then layers in optional Wireshark suite utilities. In 1.1.5 and earlier, wireshark-mcp exposes a wireshark_export_objects MCP tool that accepts an attacker-controlled dest_dir parameter and passes it to tshark&#39;s --export-objects flag with no mandatory path restriction. The path sandbox (_allowed_dirs) is None by default and only activates when the environment variable WIRESHARK_MCP_ALLOWED_DIRS is explicitly set. In a default installation, any directory on the filesystem can be used as the export destination. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-43900",
-    "descripcion": "DeepChat is an open-source artificial intelligence agent platform that unifies models, tools, and agents. Prior to v1.0.4-beta.1, a Cross-Site Scripting (XSS) vulnerability exists due to a discrepancy between the backend validation layer and the frontend browser rendering engine. The SVGSanitizer (src/main/lib/svgSanitizer.ts) restricts script execution by scrubbing javascript: protocols using plain-text regular expressions. However, it fails to account for HTML entity decoding prior to Vue&#39;s v-html DOM insertion inside the SvgArtifact.vue component. By feeding an SVG artifact with obfuscated entities (e.g., j&#x61;vascript:alert(1)), an attacker can completely bypass the sanitizer, culminating in arbitrary JavaScript execution when a victim interacts with the rendered SVG Element. This vulnerability is fixed in v1.0.4-beta.1. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-43899",
-    "descripcion": "DeepChat is an open-source artificial intelligence agent platform that unifies models, tools, and agents. Prior to v1.0.4-beta.1, An incomplete mitigation for CVE-2025-55733 leaves DeepChat vulnerable to an arbitrary protocol execution bypass (RCE). While the patch correctly restricted api.openExternal() inside the renderer&#39;s preload/index.ts script, it structurally neglected to sanitize native Electron pop-up window handlers. An attacker or a compromised AI endpoint returning a Markdown link can trigger a target=&#34;_blank&#34; native window interception in tabPresenter.ts, which forwards the malicious URL directly to shell.openExternal(url) and completely bypasses the isValidExternalUrl security boundary. This vulnerability is fixed in v1.0.4-beta.1. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-42554",
-    "descripcion": "Fiber is a web framework for Go. Prior to 2.52.12 and 3.1.0, Cross-Site Scripting vulnerability in Go Fiber allows a remote attacker to inject arbitrary HTML/JavaScript by supplying Accept: text/html on any request whose handler passes attacker-influenced data to the AutoFormat() feature. The developer opts into content negotiation by calling AutoFormat(), but does not opt into raw HTML emission for a particular request; Fiber chooses that branch from attacker-controlled Accept. The html branch is the sole outlier in a method whose name (AutoFormat) and symmetrical structure actively telegraph &#34;safe, format-agnostic reply.&#34; This vulnerability is fixed in 2.52.12 and 3.1.0. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-34963",
-    "descripcion": "barebox version prior to 2026.04.0 contains multiple memory-safety vulnerabilities in the EFI PE loader in efi/loader/pe.c where integer overflow in virtual image size computation using 32-bit arithmetic on section VirtualAddress and size values allows undersized heap allocation, and PE section loading logic fails to validate that PointerToRawData plus copied size remains within the PE file buffer. An attacker can supply a malicious EFI PE binary via TFTP, USB, SD card, or network boot to trigger heap buffer overflow or out-of-bounds read from heap memory, potentially achieving code execution in bootloader context. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-11",
-    "cve": "CVE-2026-34962",
-    "descripcion": "barebox version prior to 2026.04.0 contains a denial-of-service vulnerability in ext4 directory parsing in fs/ext4/ext4_common.c where the ext4fs_iterate_dir() function fails to validate that directory entry length values are non-zero. Attackers can supply a malicious ext4 filesystem image with a crafted directory entry containing a direntlen value of 0 to cause an infinite loop during directory listing or path resolution, resulting in the boot process hanging indefinitely. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
