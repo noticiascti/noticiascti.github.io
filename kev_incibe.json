@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-05-12",
+    "cve": "CVE-2026-1681",
+    "descripcion": "Issuing an ICMP ping via the `net ping` shell command to a device&#39;s own IPv4 address causes the network stack to recursively re-enter the input path on the same system work-queue stack. Because the destination is recognized as a local address, both the echo request and the resulting echo reply are processed inline before the current frame returns. The nested input-path frames exceed the work-queue stack and trigger a stack overflow. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-12",
+    "cve": "CVE-2026-1185",
+    "descripcion": "A configuration file on the local file system had improper input validation which could allow code execution and potentially lead to privilege escalation. This vulnerability can only be exploited if an attacker can log in to the Axis device using SSH. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-12",
+    "cve": "CVE-2026-0804",
+    "descripcion": "An ACAP configuration file lacked sufficient input validation, which could allow a path traversal attack leading to potential privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-12",
+    "cve": "CVE-2026-0802",
+    "descripcion": "An ACAP configuration file lacked sufficient input validation, which could allow command injection and potentially lead to privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-12",
+    "cve": "CVE-2026-0541",
+    "descripcion": "ACAP applications can gain elevated privileges due to improper input validation during the installation process, potentially leading to privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-12",
+    "cve": "CVE-2026-41872",
+    "descripcion": "&#34;Kura Sushi Official App&#34; provided by EPG, Inc. is vulnerable to improper certificate validation. A man-in-the-middle attack may allow eavesdropping on, or altering, the communication on push notifications between the affected application and the relevant server. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 9.10 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-12",
+    "cve": "CVE-2026-41530",
+    "descripcion": "The automatic folder creation feature of Lhaz and Lhaz+ provided by Chitora soft contains a path traversal vulnerability. When the affected product is configured with the automatic folder creation feature enabled, and a product user tries to extract an archive file which has a crafted file name, then the archived files may be extracted to an unexpected folder. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-05-12",
     "cve": "CVE-2026-7287",
     "descripcion": "** UNSUPPORTED WHEN ASSIGNED ** A buffer overflow vulnerability in the formWep(), formWlAc(), formPasswordSetup(), formUpgradeCert(), and formDelcert() functions of the “webs” binary in Zyxel NWA1100-N customized firmware version 1.00(AACE.1)C0 could allow an attacker to trigger a denial-of-service (DoS) condition by sending a crafted HTTP request to a vulnerable device. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-05-12",
     "cve": "CVE-2026-7256",
     "descripcion": "** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI program of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow an adjacent attacker on the LAN to execute operating system (OS) commands on a vulnerable device by sending a crafted HTTP request. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-7255",
-    "descripcion": "** UNSUPPORTED WHEN ASSIGNED ** An improper restriction of excessive authentication attempts vulnerability in the web management interface of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow an adjacent attacker on the LAN to brute-force the password and bypass authentication. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-45430",
-    "descripcion": "The Salesforce module before 1.x-1.0.1 for Backdrop CMS does not properly use a random state parameter to protect the authorization flow against CSRF attacks. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-40137",
-    "descripcion": "SAP TAF_APPLAUNCHER within Business Server Pages allows an unauthenticated attacker to craft malicious links that, when clicked by a victim, redirects them to attacker?controlled sites, potentially exposing or altering sensitive information in the victim�s browser. This results in a low impact on confidentiality and integrity, with no impact on the availability of the application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-40136",
-    "descripcion": "SAP Financial Consolidation allows an authenticated attacker to disconnect other users by terminating their sessions temporarily preventing access. However, the application itself cannot be compromised resulting in a low impact on availability. There is no impact on confidentiality and integrity of the data 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-40135",
-    "descripcion": "An OS Command Injection vulnerability exists in the SAP NetWeaver Application Server for ABAP and ABAP Platform that allows an authenticated attacker with administrative access to execute specially crafted shell commands on the server, bypassing the logging mechanism. This allows the execution of unintended OS commands without detection, potentially impacting the integrity and availability of the application, with no impact on confidentiality. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-40134",
-    "descripcion": "Due to insufficient authorization checks in the SAP Incentive and Commission Management application, authenticated users could invoke a remote-enabled function module to perform table update operations. This vulnerability has a low impact on integrity with no impact on confidentiality and availability of the application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-40133",
-    "descripcion": "Due to missing authorization check in SAP S/4HANA Condition Maintenance, an authenticated attacker could gain unauthorized access to view and modify condition table records, resulting in low impact on the confidentiality and integrity of the data. Additionally, this vulnerability may prevent the legitimate user from accessing the records, causing low impact on application availability. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
