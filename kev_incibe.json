@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-8162",
-    "descripcion": "multiparty@4.2.3 and lower versions are vulnerable to denial of service via uncaught exception. By sending a multipart/form-data request with a Content-Disposition header whose filename* parameter contains a malformed percent-encoding, the parser invokes decodeURI on the value without try/catch. The resulting URIError propagates as an uncaught exception and crashes the process. Impact: any service accepting multipart uploads via multiparty is affected. Workarounds: none. Upgrade to multiparty@4.3.0 or higher. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-45218",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in WP Travel WP Travel wp-travel allows Blind SQL Injection.This issue affects WP Travel: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-8161",
-    "descripcion": "multiparty@4.2.3 and lower versions are vulnerable to denial of service via uncaught exception. By sending a multipart/form-data request with a field name that collides with an inherited Object.prototype property such as __proto__, constructor, or toString, the parser invokes .push() on the inherited prototype value rather than an array, throwing a TypeError that propagates as an uncaught exception and crashes the process. Impact: any service accepting multipart uploads via multiparty is affected. Workarounds: none. Upgrade to multiparty@4.3.0 or higher. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-45215",
+    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in Saad Iqbal WP EasyPay wp-easy-pay allows Retrieve Embedded Sensitive Data.This issue affects WP EasyPay: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-8159",
-    "descripcion": "multiparty@4.2.3 and lower versions are vulnerable to denial of service via regular expression backtracking in the Content-Disposition filename parameter parser. A crafted multipart upload with a long header value can cause regex matching to take seconds, blocking the event loop. Impact: any service accepting multipart uploads via multiparty is affected. Workarounds: limiting upload sizes at the proxy or gateway layer reduces but does not eliminate the attack surface, since a small header of around 8 KB is sufficient to trigger the vulnerable backtracking. Upgrade to multiparty@4.3.0 or higher. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-45214",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Xpro Xpro Elementor Addons xpro-elementor-addons allows Blind SQL Injection.This issue affects Xpro Elementor Addons: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-8072",
-    "descripcion": "Insecure generation of credentials in the local SAT (Technical Support) access functionality of the Ingecon Sun EMS Board. The vulnerability arose because the secret access credentials were not based on a secure cryptographic scheme, but rather on a weak hashing algorithm, which could allow an attacker to carry out a privilege escalation. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-45213",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in RealMag777 BEAR woo-bulk-editor allows Blind SQL Injection.This issue affects BEAR: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-7428",
-    "descripcion": "Prior to 2025-11-03, well-intended users of Terraform or REST API for Google Cloud AlloyDB for PostgreSQL could have created clusters with an insecure default password which could have been exploited by a remote attacker to gain full administrative access to the database. Exploitation required network access to the AlloyDB cluster and was limited to Terraform or the REST API, as other clients blocked it. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-45212",
+    "descripcion": "Missing Authorization vulnerability in Gabe Livan Asset CleanUp: Page Speed Booster wp-asset-clean-up allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Asset CleanUp: Page Speed Booster: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-6813",
-    "descripcion": "The Continually plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 4.3.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-45211",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Saad Iqbal APIExperts Square for WooCommerce woosquare allows Blind SQL Injection.This issue affects APIExperts Square for WooCommerce: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-6800",
-    "descripcion": "The FastBots plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.0.12 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-45210",
+    "descripcion": "Missing Authorization vulnerability in Broadstreet Broadstreet Ads broadstreet allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Broadstreet Ads: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-6001",
-    "descripcion": "Authorization bypass through User-Controlled key vulnerability in ABIS Technology Ltd. Co. BAPSİS allows Exploitation of Trusted Identifiers. This issue affects BAPSİS: before v.202604152042. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-42742",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Aman Views for WPForms views-for-wpforms-lite allows Blind SQL Injection.This issue affects Views for WPForms: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-5029",
-    "descripcion": "A remote code execution vulnerability exists in Code Runner MCP Server when run with the --transport http option, which exposes the /mcp JSON-RPC endpoint without authentication on port 3088. An unauthenticated remote attacker can invoke the run-code MCP tool to supply arbitrary source code and execute it via child_process.exec() using the specified language interpreter. This allows execution of arbitrary code with the privileges of the user running the server. This vulnerability has not been fixed and might affect the project in all versions. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-42741",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Aman Ninja Forms Views &#8211; Display &amp; Edit Ninja Forms Submissions on your site frontend views-for-ninja-forms allows Blind SQL Injection.This issue affects Ninja Forms Views &#8211; Display &amp; Edit Ninja Forms Submissions on your site frontend: from n/a through 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-44412",
-    "descripcion": "A vulnerability has been identified in Solid Edge SE2026 (All versions 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-41713",
+    "descripcion": "A malicious user could craft input that is stored in conversation memory and later interpreted by the model in an unintended way. Applications using the affected advisor with user-controlled input may be susceptible to manipulation of model behavior across conversation turns. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
