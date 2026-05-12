@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-1681",
-    "descripcion": "Issuing an ICMP ping via the `net ping` shell command to a device&#39;s own IPv4 address causes the network stack to recursively re-enter the input path on the same system work-queue stack. Because the destination is recognized as a local address, both the echo request and the resulting echo reply are processed inline before the current frame returns. The nested input-path frames exceed the work-queue stack and trigger a stack overflow. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7661",
+    "descripcion": "The Bootstrap Shortcode plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `box` shortcode in all versions up to, and including, 1.0. This is due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-1185",
-    "descripcion": "A configuration file on the local file system had improper input validation which could allow code execution and potentially lead to privilege escalation. This vulnerability can only be exploited if an attacker can log in to the Axis device using SSH. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7659",
+    "descripcion": "The Advanced Social Media Icons plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `social` shortcode in all versions up to, and including, 1.2. This is due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-0804",
-    "descripcion": "An ACAP configuration file lacked sufficient input validation, which could allow a path traversal attack leading to potential privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7626",
+    "descripcion": "The Slek Gateway for WooCommerce plugin for WordPress is vulnerable to Information Exposure in version 1.0. This is due to the wsb_handle_slek_payment_redirect() function placing the merchant&#39;s slek_key and slek_secret API credentials directly into a client-side HTML form, and additionally embedding the slek_secret as a plaintext GET parameter in the IPN callback URL. This makes it possible for unauthenticated attackers who can place an order on the affected store to extract the merchant&#39;s API credentials by viewing the HTML source or using browser DevTools on the WooCommerce order-pay page before the JavaScript auto-submit fires. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-0802",
-    "descripcion": "An ACAP configuration file lacked sufficient input validation, which could allow command injection and potentially lead to privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7616",
+    "descripcion": "The Zawgyi Embed plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.1.1. This is due to missing or incorrect nonce validation on the zawgyi_adminpage function. This makes it possible for unauthenticated attackers to update the plugin&#39;s zawgyi_forceCSS setting by submitting a forged POST request to options-general.php?page=zawgyi_embed via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-0541",
-    "descripcion": "ACAP applications can gain elevated privileges due to improper input validation during the installation process, potentially leading to privilege escalation. This vulnerability can only be exploited if the Axis device is configured to allow the installation of unsigned ACAP applications, and if an attacker convinces the victim to install a malicious ACAP application. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7562",
+    "descripcion": "The WP-Redirection plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to and including 1.0.3. This is due to the absence of a nonce field in the admin settings form and the lack of any nonce verification (via check_admin_referer() or wp_verify_nonce()) in the displayWPRedirectionManagementPage() function before processing POST requests that add, edit, or delete URL redirection rules. This makes it possible for unauthenticated attackers to trick a logged-in administrator into clicking a crafted link, causing the attacker to create, modify, or delete redirection records in the plugin&#39;s database table without the administrator&#39;s consent. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-41872",
-    "descripcion": "&#34;Kura Sushi Official App&#34; provided by EPG, Inc. is vulnerable to improper certificate validation. A man-in-the-middle attack may allow eavesdropping on, or altering, the communication on push notifications between the affected application and the relevant server. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 9.10 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-7561",
+    "descripcion": "The Tm – WordPress Redirection plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.2. This is due to missing or incorrect nonce validation on a function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-41530",
-    "descripcion": "The automatic folder creation feature of Lhaz and Lhaz+ provided by Chitora soft contains a path traversal vulnerability. When the affected product is configured with the automatic folder creation feature enabled, and a product user tries to extract an archive file which has a crafted file name, then the archived files may be extracted to an unexpected folder. 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-7464",
+    "descripcion": "The WP Google Maps Integration plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the `page` parameter in all versions up to, and including, 1.2. This is due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick an administrator into performing an action such as clicking on a link. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-7287",
-    "descripcion": "** UNSUPPORTED WHEN ASSIGNED ** A buffer overflow vulnerability in the formWep(), formWlAc(), formPasswordSetup(), formUpgradeCert(), and formDelcert() functions of the “webs” binary in Zyxel NWA1100-N customized firmware version 1.00(AACE.1)C0 could allow an attacker to trigger a denial-of-service (DoS) condition by sending a crafted HTTP request to a vulnerable device. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-7437",
+    "descripcion": "The AzonPost plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the `editpos_hidden` parameter in all versions up to, and including, 1.3. This is due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick an administrator into performing an action such as clicking on a link. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-7257",
-    "descripcion": "** UNSUPPORTED WHEN ASSIGNED ** An insecure storage of sensitive information vulnerability in the configuration file of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow a local attacker with administrator privileges to download and decrypt a backup configuration file. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7050",
+    "descripcion": "The Forms Rb plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.1.9. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with contributor-level access and above, to read form submission records, modify form configuration options, and delete records belonging to any form they do not own. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-12",
-    "cve": "CVE-2026-7256",
-    "descripcion": "** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI program of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow an adjacent attacker on the LAN to execute operating system (OS) commands on a vulnerable device by sending a crafted HTTP request. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-6932",
+    "descripcion": "The Woo Commerce Minimum Weight plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to and including 3.0.1. This is due to missing nonce verification on the settings update handler in edit-weight.php. This makes it possible for unauthenticated attackers to modify the minimum order weight setting by tricking a site administrator into clicking a link or visiting an attacker-controlled page containing a forged POST request. 12/05/2026 12/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
