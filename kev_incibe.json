@@ -36,6 +36,11 @@
   },
   {
     "fecha": "2026-05-12",
+    "cve": "CVE-2026-34187",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command vulnerability allows SQL Injection via graph container parameter. This issue affects Pandora FMS: from 777 through 800 12/05/2026 12/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:U/V:C/RE:L/U:Amber Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-12",
     "cve": "CVE-2026-31224",
     "descripcion": "The snorkel library thru v0.10.0 contains an insecure deserialization vulnerability (CWE-502) in the MultitaskClassifier.load() method of the MultitaskClassifier class. The method loads model weight files using torch.load() without enabling the security-restrictive weights_only=True parameter. This default behavior allows the deserialization of arbitrary Python objects via the Pickle module. A remote attacker can exploit this by providing a maliciously crafted model file, leading to arbitrary code execution on the victim&#39;s system when the file is loaded via the vulnerable method. 12/05/2026 12/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-05-12",
     "cve": "CVE-2026-31223",
     "descripcion": "The snorkel library thru v0.10.0 contains a critical insecure deserialization vulnerability (CWE-502) in the BaseLabeler.load() method of the BaseLabeler class. The method loads serialized labeler models using the unsafe pickle.load() function on user-supplied file paths without any validation or security controls. Python&#39;s pickle module is inherently dangerous for deserializing untrusted data, as it can execute arbitrary code during the deserialization process. A remote attacker can exploit this by providing a maliciously crafted pickle file, leading to arbitrary code execution on the victim&#39;s system when the file is loaded via the vulnerable method. 12/05/2026 12/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-31222",
-    "descripcion": "The snorkel library thru v0.10.0 contains an insecure deserialization vulnerability (CWE-502) in the Trainer.load() method of the Trainer class. The method loads model checkpoint files using torch.load() without enabling the security-restrictive weights_only=True parameter. This default behavior allows the deserialization of arbitrary Python objects via the Pickle module. A remote attacker can exploit this by providing a maliciously crafted model file, leading to arbitrary code execution on the victim&#39;s system when the file is loaded via the vulnerable method. 12/05/2026 12/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
