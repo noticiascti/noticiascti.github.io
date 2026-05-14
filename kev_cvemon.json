@@ -16,6 +16,11 @@
   },
   {
     "fecha": "2026-05-14",
+    "cve": "CVE-2026-42945",
+    "descripcion": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when the rewrite directive is followed by a rewrite, if, or set directive and an unnamed Perl-Compatible Regular Expression (PCRE) capture (for example, $1, $2) ..."
+  },
+  {
+    "fecha": "2026-05-14",
     "cve": "CVE-2026-3888",
     "descripcion": "Local privilege escalation in snapd on Linux allows local attackers to get root privilege by re-creating snap's private /tmp directory when systemd-tmpfiles is configured to automatically clean up this directory. This issue affects Ubuntu 16.04 LTS, 18.04 LTS, 20.04 LTS, 22.04 ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-05-14",
     "cve": "CVE-2026-44575",
     "descripcion": "Next.js is a React framework for building full-stack web applications. From 15.2.0 to before 15.5.16 and 16.2.5, App Router applications that rely on middleware or proxy-based checks for authorization can allow unauthorized access through transport-specific route variants used ..."
-  },
-  {
-    "fecha": "2026-05-14",
-    "cve": "CVE-2026-44579",
-    "descripcion": "Next.js is a React framework for building full-stack web applications. From to before 15.5.16 and 16.2.5, applications using Partial Prerendering through the Cache Components feature can be vulnerable to connection exhaustion through crafted POST requests to a server action. In ..."
   }
 ]
