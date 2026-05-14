@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-8108",
-    "descripcion": "The installation of Fuji Tellus adds a driver to the kernel which grants all users read and write permissions. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2026-6929",
+    "descripcion": "The JoomSport – for Sports: Team & League, Football, Hockey & more plugin for WordPress is vulnerable to time-based blind SQL Injection via the &#39;sortf&#39; parameter in all versions up to, and including, 5.7.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-5371",
-    "descripcion": "The MonsterInsights – Google Analytics Dashboard for WordPress (Website Stats Made Easy) plugin for WordPress is vulnerable to unauthorized access and modification of data due to a missing capability checks on the get_ads_access_token() and reset_experience() functions in all versions up to, and including, 10.1.2. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve live Google OAuth access tokens and reset Plugins&#39;s Google Ads integration. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2025-14033",
+    "descripcion": "The ilGhera Support System for WooCommerce plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the &#39;get_ticket_content_callback&#39; function in all versions up to, and including, 1.3.0. This makes it possible for unauthenticated attackers to view any support ticket content, including sensitive customer information and private communications, by providing a ticket ID. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-44548",
-    "descripcion": "ChurchCRM is an open-source church management system. Prior to 7.3.2, top-level cross-site GET navigation from an attacker-controlled page to FundRaiserDelete.php, PropertyTypeDelete.php, or NoteDelete.php causes a logged-in ChurchCRM user with the relevant role to silently delete records, including cascaded property and record-to-property assignments. This vulnerability is fixed in 7.3.2. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2026-7635",
+    "descripcion": "The coreActivity: Activity Logging for WordPress plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.0. This is due to the plugin failing to validate or strip PHP serialization syntax from the User-Agent HTTP header before storing it in the logmeta table, and subsequently calling `maybe_unserialize()` on every retrieved `meta_value` in `query_metas()` without verifying the data was originally serialized by the application. This makes it possible for unauthenticated attackers to inject a crafted PHP serialized payload via the User-Agent header during any logged event (such as a failed login attempt), which, when an administrator views the Logs page, is deserialized and passed to `DeviceDetector::setUserAgent()`, triggering a Fatal TypeError that creates a persistent Denial of Service condition blocking administrator access to the Logs page entirely. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-44547",
-    "descripcion": "ChurchCRM is an open-source church management system. From 7.2.0 to 7.2.2, The fix for CVE-2026-4058 is incomplete. The hardening commit was merged and then silently stripped from src/api/routes/public/public-user.php by an unrelated PR before any 7.2.x tag was cut. Every shipped 7.2.x release therefore remains exploitable by the PoC published with the original advisory. This vulnerability is fixed in 7.3.1. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2026-7619",
+    "descripcion": "The Charitable – Donation Plugin for WordPress – Fundraising with Recurring Donations & More plugin for WordPress is vulnerable to generic SQL Injection via the &#39;s&#39; parameter in all versions up to, and including, 1.8.10.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with access to the donation management admin area (requiring the edit_others_donations capability) and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-44352",
-    "descripcion": "Flowsint is an open-source OSINT graph exploration tool designed for cybersecurity investigation, transparency, and verification. Prior to 1.2.3, Broken Access Control allows reading of sketch logs from any user. This vulnerability is fixed in 1.2.3. 13/05/2026 13/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2026-7051",
+    "descripcion": "The Blog2Social: Social Media Auto Post & Scheduler plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 8.9.0. This is due to a missing ownership verification in the B2S_Post_Tools::deleteUserPublishPost() and B2S_Post_Tools::deleteUserSchedPost() functions, neither function includes a blog_user_id constraint in its database query, allowing authenticated attackers to soft-delete any user&#39;s B2S post records by supplying arbitrary sequential wp_b2s_posts.id values via the &#39;postId&#39; parameter. This makes it possible for authenticated attackers to delete other users&#39; published and scheduled social media post records, disrupting content publishing workflows. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-44347",
-    "descripcion": "Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. Prior to 0.23.3, the SSO flow does not validate the state parameter, which makes it possible for an attacker to trick a user into logging into the attacker&#39;s account, possibly convincing them to perform sensitive actions on the attacker&#39;s account (such as writing sensitive data to the attacker&#39;s SSH target, or logging into an HTTP target that the attacker set up). This vulnerability is fixed in 0.23.3. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2026-6962",
+    "descripcion": "The Cost of Goods: Product Cost & Profit Calculator for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;alg_wc_cog_product_cost&#39; and &#39;alg_wc_cog_product_profit&#39; shortcodes in all versions up to, and including, 4.1.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-44341",
-    "descripcion": "GoJobs is a REST API for a Job Board platform. The application exposes a job retrieval endpoint that allows unauthenticated users to access job details by directly manipulating object identifiers. The endpoint lacks proper authentication and authorization checks, resulting in unauthorized access to job data. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2026-6828",
+    "descripcion": "The Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;permission_message&#39; parameter in all versions up to, and including, 6.2.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-44245",
-    "descripcion": "Kyverno is a policy engine designed for cloud native platform engineering teams. Prior to 2.5.2, Vue 3&#39;s v-html directive is the framework-documented mechanism for injecting raw HTML, and it intentionally disables the auto-escaping that {{ }} interpolation provides. The PropertyCard.vue component uses v-html for the else branch of the URL check, meaning any non-URL string value flows directly into the DOM as HTML. The isURL() guard only filters values that parse as http: or https: URLs, so any HTML payload not starting with those schemes bypasses it entirely. The data originates from Kubernetes PolicyReport .results[].properties fields, which are arbitrary string maps populated by policy engines and potentially by any principal with write access to PolicyReport objects in the cluster. This vulnerability is fixed in 2.5.2. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2025-9989",
+    "descripcion": "The Broadstreet plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 1.53.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-43685",
-    "descripcion": "A Remote Code Execution vulnerability in Claris FileMaker Cloud allowed a user with Admin Console privileges to inject arbitrary operating system commands through unsanitized input in the External ODBC Data Source connection test feature. This issue is fixed in FileMaker Cloud 2.22.0.5. 13/05/2026 13/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2025-9988",
+    "descripcion": "The Broadstreet plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the create_advertiser AJAX action in all versions up to, and including, 1.53.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to create advertisers. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-12",
-    "cve": "CVE-2026-43680",
-    "descripcion": "A Remote Code Execution vulnerability in Claris FileMaker Cloud allowed a user with Admin Console privileges to bypass a front-end restriction on OS Script schedule types and execute arbitrary operating system commands on the underlying host. This issue is fixed in FileMaker Cloud 2.22.0.5. 13/05/2026 13/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-13",
+    "cve": "CVE-2025-9987",
+    "descripcion": "The Broadstreet plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.53.1 via the get_sponsored_meta() AJAX action. This makes it possible for authenticated attackers, with subscriber-level access and above, to extract data from password protected and private business details. 13/05/2026 13/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
