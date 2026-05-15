@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <base href="https://noticiascti.github.io/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Noticias CTI | Ransomware & CISA KEV</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--bg:#05070d;--text:#f8fafc;--muted:#94a3b8;--blue:#60a5fa;--cyan:#22d3ee;--violet:#a78bfa;--amber:#fbbf24;--red:#f87171;--green:#34d399;}
+    *{font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(circle at 14% 8%, rgba(59,130,246,.17), transparent 30%),radial-gradient(circle at 86% 3%, rgba(168,85,247,.13), transparent 28%),radial-gradient(circle at 72% 92%, rgba(34,211,238,.08), transparent 25%),linear-gradient(180deg,#05070d 0%,#08111f 54%,#05070d 100%);overflow-x:hidden;}
+    body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at center, black 24%, transparent 82%);-webkit-mask-image:radial-gradient(circle at center, black 24%, transparent 82%);}
+    #neuralnet{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+    .app-shell{position:relative;z-index:2;min-height:100vh;}
+    .glass{background:linear-gradient(180deg, rgba(15,23,42,.76), rgba(2,6,23,.62));border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 80px rgba(0,0,0,.28);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);}
+    .glass-soft{background:rgba(15,23,42,.42);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+    .gradient-text{background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .nav-link{color:#cbd5e1;transition:.2s ease;}.nav-link:hover{color:#fff;}
+    .stat-card{position:relative;overflow:hidden;}.stat-card::after{content:"";position:absolute;inset:auto -20% -60% -20%;height:100px;background:radial-gradient(circle, rgba(96,165,250,.18), transparent 65%);pointer-events:none;}
+    .panel-card,.item-card{position:relative;overflow:hidden;transition:.25s ease;}
+    .item-card::before,.panel-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top left, rgba(96,165,250,.13), transparent 34%),linear-gradient(120deg, transparent, rgba(255,255,255,.035), transparent);opacity:.58;pointer-events:none;}
+    .item-card:hover{transform:translateY(-4px);border-color:rgba(96,165,250,.32);box-shadow:0 0 0 1px rgba(96,165,250,.08),0 28px 90px rgba(37,99,235,.12);}
+    .period-pill,.scope-pill{transition:.2s ease;white-space:nowrap;}
+    .period-pill.active{color:#020617;background:linear-gradient(90deg,#fbbf24,#fde68a);border-color:rgba(251,191,36,.65);}
+    .scope-pill.active{color:#020617;background:linear-gradient(90deg,#60a5fa,#22d3ee);border-color:rgba(96,165,250,.65);}
+    .period-pill:not(.active):hover,.scope-pill:not(.active):hover{background:rgba(255,255,255,.08);color:#fff;}
+    .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+    .line-clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .mobile-menu{max-height:0;overflow:hidden;transition:max-height .28s ease;}.mobile-menu.open{max-height:420px;}
+    select option{background:#020617;color:#f8fafc;}
+    @media(max-width:768px){body::before{background-size:42px 42px;}.item-card:hover{transform:none;}}
+  </style>
+</head>
+
+<body>
+  <canvas id="neuralnet"></canvas>
+  <div class="app-shell">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#05070dcc] backdrop-blur-2xl">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between gap-4">
+          <button onclick="window.location.href='./index.html'" class="flex items-center gap-3 text-left">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl border border-sky-400/25 bg-sky-400/10 shadow-lg shadow-sky-500/10"><span class="text-lg">🛡️</span></div>
+            <div><h1 class="text-lg sm:text-xl font-black tracking-tight">Noticias <span class="gradient-text">CTI</span></h1><p class="hidden sm:block text-[11px] uppercase tracking-[0.26em] text-slate-500">Cyber Threat Intelligence</p></div>
+          </button>
+          <nav class="hidden lg:flex items-center gap-6 text-sm">
+            <a href="./index.html" class="nav-link">Inicio</a><a href="./noticias.html" class="nav-link">Noticias Ciberseguridad</a><a href="./medios.html" class="nav-link">Noticias Nacionales</a><a href="./status.html" class="nav-link">Downdetector</a><a href="./ransom_vulnerabilidades.html" class="nav-link text-white font-semibold">Ransomware & Vulnerabilidades</a><a href="./reclamos.html" class="nav-link">Reclamos</a>
+          </nav>
+          <button onclick="toggleMenu()" class="lg:hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Menú</button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu lg:hidden">
+          <div class="grid gap-2 pb-4 text-sm">
+            <a href="./index.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🏠 Inicio</a><a href="./noticias.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🔒 Noticias Ciberseguridad</a><a href="./medios.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📰 Noticias Nacionales</a><a href="./status.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📊 Downdetector</a><a href="./ransom_vulnerabilidades.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">⚡ Ransomware & Vulnerabilidades</a><a href="./reclamos.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📣 Reclamos</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section class="py-8 sm:py-10 lg:py-14 text-center">
+        <div class="mx-auto max-w-5xl">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] text-sky-200"><span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,.9)]"></span>Ransomware Live & CISA KEV </div>
+          <h2 class="text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">Ransomware y <span class="gradient-text">vulnerabilidades explotadas</span></h2>
+          <p class="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">Dashboard basado en víctimas ransomware acumuladas y vulnerabilidades activamente explotadas conocidas por CISA.</p>
+        </div>
+      </section>
+
+      <!-- RANSOMWARE -->
+      <section class="pb-10">
+        <div class="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h3 class="mt-1 text-3xl font-black tracking-tight sm:text-4xl">Ransomware</h3>
+            <p class="mt-2 text-sm text-slate-400">Período seleccionado: <span id="ransomPeriodText" class="text-sky-300">Mes en curso</span></p>
+          </div>
+          <div class="flex gap-2 overflow-x-auto pb-2">
+            <button data-ransom-period="month" onclick="setRansomPeriod('month')" class="period-pill active rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Mes en curso</button>
+            <button data-ransom-period="30d" onclick="setRansomPeriod('30d')" class="period-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Últimos 30 días</button>
+            <button data-ransom-period="90d" onclick="setRansomPeriod('90d')" class="period-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Últimos 90 días</button>
+            <button data-ransom-period="year" onclick="setRansomPeriod('year')" class="period-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Año en curso</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+          <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5"><div class="relative z-10"><p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Ransomware</p><p class="mt-1 text-xs font-semibold text-slate-400">Víctimas globales</p><div id="statRansomGlobal" class="mt-3 text-4xl font-black text-red-300">0</div></div></div>
+          <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5"><div class="relative z-10"><p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Ransomware</p><p class="mt-1 text-xs font-semibold text-slate-400">Víctimas LATAM</p><div id="statRansomLatam" class="mt-3 text-4xl font-black text-amber-300">0</div></div></div>
+          <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5 col-span-2 sm:col-span-1"><div class="relative z-10"><p class="text-[10px] uppercase tracking-[.18em] text-slate-500">LATAM</p><p class="mt-1 text-xs font-semibold text-slate-400">Países afectados</p><div id="statLatamCountries" class="mt-3 text-4xl font-black text-violet-300">0</div></div></div>
+        </div>
+
+        <div class="mt-5 grid gap-5 lg:grid-cols-3">
+          <div class="panel-card glass rounded-[2rem] p-5"><div class="relative z-10"><p class="text-xs uppercase tracking-[.22em] text-slate-500">Ransomware</p><h3 class="mt-2 text-2xl font-black">Actores más activos</h3><p class="mt-2 text-sm text-slate-400">Top por víctimas en el período seleccionado.</p><div class="mt-5 h-64"><canvas id="chartActors"></canvas></div></div></div>
+          <div class="panel-card glass rounded-[2rem] p-5"><div class="relative z-10"><p class="text-xs uppercase tracking-[.22em] text-slate-500">Ransomware</p><h3 class="mt-2 text-2xl font-black">Sectores afectados</h3><p class="mt-2 text-sm text-slate-400">Distribución por industria en el período seleccionado.</p><div class="mt-5 h-64"><canvas id="chartIndustries"></canvas></div></div></div>
+          <div class="panel-card glass rounded-[2rem] p-5"><div class="relative z-10"><p class="text-xs uppercase tracking-[.22em] text-slate-500">LATAM</p><h3 class="mt-2 text-2xl font-black">Top 3 actores LATAM</h3><p class="mt-2 text-sm text-slate-400">Actores más observados en víctimas LATAM.</p><div id="latamActorBox" class="mt-5 space-y-3 text-slate-400">Cargando datos...</div></div></div>
+        </div>
+
+        <div class="mt-8">
+          <div class="mb-4 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div><h3 class="text-2xl font-black tracking-tight sm:text-3xl">Explorador ransomware</h3><p class="mt-1 text-sm text-slate-500">Listado de víctimas según período, alcance, actor y sector.</p></div>
+          </div>
+          <div class="mb-4 flex gap-2 overflow-x-auto pb-2">
+            <button data-scope="global" onclick="setRansomScope('global')" class="scope-pill active rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Global</button>
+            <button data-scope="latam" onclick="setRansomScope('latam')" class="scope-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">LATAM</button>
+          </div>
+          <div class="mb-5 grid gap-3 lg:grid-cols-[1fr_1fr_1.3fr]">
+            <select id="actorFilter" onchange="applyRansomFilters()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40"><option value="all">Todos los actores</option></select>
+            <select id="sectorFilter" onchange="applyRansomFilters()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40"><option value="all">Todos los sectores</option></select>
+            <div class="relative"><input id="ransomSearch" oninput="applyRansomFilters()" type="search" placeholder="Buscar víctima, país, grupo o dominio..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40"><span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span></div>
+          </div>
+          <div id="ransomGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+          <div id="ransomEmptyState" class="hidden glass mt-6 rounded-[2rem] p-8 text-center"><div class="text-4xl">🛰️</div><h4 class="mt-3 text-xl font-black">Sin resultados</h4><p class="mt-2 text-slate-400">No se encontraron víctimas para el filtro actual.</p></div>
+          <div class="mt-8 flex items-center justify-center gap-3"><button id="ransomPrevBtn" onclick="changeRansomPage(-1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">← Anterior</button><span id="ransomPageIndicator" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-400">Página 1</span><button id="ransomNextBtn" onclick="changeRansomPage(1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">Siguiente →</button></div>
+        </div>
+      </section>
+
+      <div class="my-4 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+
+      <!-- VULNERABILIDADES -->
+      <section class="py-10">
+        <div class="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h3 class="mt-1 text-3xl font-black tracking-tight sm:text-4xl">Vulnerabilidades explotadas</h3>
+            <p class="mt-2 text-sm text-slate-400">Período seleccionado: <span id="kevPeriodText" class="text-sky-300">Mes en curso</span></p>
+          </div>
+          <div class="flex gap-2 overflow-x-auto pb-2">
+            <button data-kev-period="month" onclick="setKevPeriod('month')" class="period-pill active rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Mes en curso</button>
+            <button data-kev-period="30d" onclick="setKevPeriod('30d')" class="period-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Últimos 30 días</button>
+            <button data-kev-period="90d" onclick="setKevPeriod('90d')" class="period-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Últimos 90 días</button>
+            <button data-kev-period="year" onclick="setKevPeriod('year')" class="period-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Año en curso</button>
+          </div>
+        </div>
+
+        <div class="grid gap-5 lg:grid-cols-[.8fr_1.2fr]">
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5"><div class="relative z-10"><p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Vulnerabilidades activamente explotadas</p><p class="mt-1 text-xs font-semibold text-slate-400">Vulnerabilidades</p><div id="statKevCisa" class="mt-3 text-4xl font-black text-sky-300">0</div></div></div>
+            <div class="panel-card glass rounded-[2rem] p-5"><div class="relative z-10"><p class="text-xs uppercase tracking-[.22em] text-slate-500">Vulnerabilidades activamente explotadas</p><h3 class="mt-2 text-2xl font-black">Vendors recurrentes</h3><p class="mt-2 text-sm text-slate-400">Fabricantes más presentes en el período.</p><div class="mt-5 h-56"><canvas id="chartVendors"></canvas></div></div></div>
+          </div>
+          <div class="glass rounded-[2rem] p-5 sm:p-6">
+            <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"><div><p class="text-xs uppercase tracking-[.22em] text-slate-500">Vulnerabilidades activamente explotadas</p><h3 class="mt-1 text-2xl font-black">Última vulnerabilidad agregada</h3></div><div class="rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200">Exploited in the wild</div></div>
+            <div id="latestKevBox" class="rounded-3xl border border-white/10 bg-white/[.04] p-5 text-slate-400">Cargando datos...</div>
+          </div>
+        </div>
+
+        <div class="mt-8 glass rounded-[2rem] p-5 sm:p-6">
+          <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div><p class="text-xs uppercase tracking-[.22em] text-slate-500">Vulnerabilidades activamente explotadas</p><h3 class="mt-1 text-2xl font-black">Detalle de vulnerabilidades explotadas</h3><p class="mt-2 text-sm text-slate-400">Listado filtrado por período seleccionado.</p></div>
+            <div class="relative"><input id="kevSearch" oninput="renderKevList()" type="search" placeholder="Buscar CVE, vendor o producto..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-80"><span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span></div>
+          </div>
+          <div id="kevList" class="grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+          <div class="mt-6 flex items-center justify-center gap-3"><button id="kevPrevBtn" onclick="changeKevPage(-1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">← Anterior</button><span id="kevPageIndicator" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-400">Página 1</span><button id="kevNextBtn" onclick="changeKevPage(1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">Siguiente →</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const LATAM = new Set(["AR","BO","BR","CL","CO","CR","CU","DO","EC","GT","HN","MX","NI","PA","PE","PY","UY","VE"]);
+    let ransomware = [], cisa = [], filteredRansom = [], filteredKev = [];
+    let ransomPage = 1, kevPage = 1, ransomScope = "global", ransomPeriod = "month", kevPeriod = "month";
+    const pageSize = 9, kevPageSize = 6;
+    const charts = [];
+
+    init();
+
+    async function init(){
+      const [ransomData, cisaData] = await Promise.all([fetchJSON("./ransomware.json", []), fetchJSON("./kev_cisa.json", [])]);
+      ransomware = Array.isArray(ransomData) ? ransomData.map(normalizeRansom).sort((a,b) => getDate(b.date) - getDate(a.date)) : [];
+      cisa = Array.isArray(cisaData) ? cisaData.map(normalizeKev).sort((a,b) => getDate(b.fecha) - getDate(a.fecha)) : [];
+      populateFilters();
+      refreshRansomSection();
+      refreshKevSection();
+    }
+
+    async function fetchJSON(url, fallback){try{const res = await fetch(`${url}?t=${Date.now()}`);if(!res.ok) throw new Error(`HTTP ${res.status}`);return await res.json();}catch(err){console.warn(`No se pudo cargar ${url}`, err);return fallback;}}
+    function normalizeRansom(item){return {date:item.attackdate || item.discovered || item.date || "", victim:item.victim || item.domain || "Sin víctima", country:String(item.country || "").toUpperCase(), group:item.group || "Sin grupo", activity:item.activity || "Sin sector", description:item.description || "", url:item.url || "#", screenshot:item.screenshot || "", domain:item.domain || ""};}
+    function normalizeKev(item){return {fecha:item.fecha || item.date || "", cve:item.cve || "Sin CVE", vendor:item.vendor || "Sin vendor", producto:item.producto || "Sin producto", descripcion:item.descripcion || item.description || ""};}
+    function getDate(value){if(!value) return new Date(0);const d = new Date(String(value).replace(" ", "T"));return isNaN(d.getTime()) ? new Date(0) : d;}
+    function formatDate(value){const d = getDate(value);if(!d || d.getTime() === 0) return "-";return d.toLocaleDateString("es-CL", { day:"2-digit", month:"short", year:"numeric" });}
+    function getPeriodStart(type){const now = new Date();if(type === "month") return new Date(now.getFullYear(), now.getMonth(), 1);if(type === "30d") return new Date(now.getTime() - 30*24*60*60*1000);if(type === "90d") return new Date(now.getTime() - 90*24*60*60*1000);if(type === "year") return new Date(now.getFullYear(), 0, 1);return new Date(0);}
+    function periodLabel(type){if(type === "month") return "Mes en curso";if(type === "30d") return "Últimos 30 días";if(type === "90d") return "Últimos 90 días";if(type === "year") return "Año en curso";return "Período seleccionado";}
+    function inPeriod(value, type){const d = getDate(value);return d >= getPeriodStart(type) && d <= new Date();}
+    function setText(id, value){const el = document.getElementById(id);if(el) el.textContent = value;}
+
+    function setRansomPeriod(period){ransomPeriod = period;document.querySelectorAll("[data-ransom-period]").forEach(btn => btn.classList.toggle("active", btn.dataset.ransomPeriod === period));refreshRansomSection();}
+    function setKevPeriod(period){kevPeriod = period;document.querySelectorAll("[data-kev-period]").forEach(btn => btn.classList.toggle("active", btn.dataset.kevPeriod === period));refreshKevSection();}
+
+    function getRansomPeriodItems(){return ransomware.filter(i => inPeriod(i.date, ransomPeriod));}
+    function getKevPeriodItems(){return cisa.filter(i => inPeriod(i.fecha, kevPeriod));}
+
+    function refreshRansomSection(){
+      const items = getRansomPeriodItems();
+      const latam = items.filter(i => LATAM.has(i.country));
+      setText("ransomPeriodText", periodLabel(ransomPeriod));
+      setText("statRansomGlobal", items.length);
+      setText("statRansomLatam", latam.length);
+      setText("statLatamCountries", new Set(latam.map(i => i.country).filter(Boolean)).size);
+      renderRansomCharts(items);
+      renderLatamTopActors(latam);
+      applyRansomFilters();
+    }
+
+    function refreshKevSection(){
+      const items = getKevPeriodItems();
+      setText("kevPeriodText", periodLabel(kevPeriod));
+      setText("statKevCisa", items.length);
+      renderKevCharts(items);
+      renderLatestKev(items);
+      kevPage = 1;
+      renderKevList();
+    }
+
+    function populateFilters(){populateSelect("actorFilter", values(ransomware, "group", 80), "Todos los actores");populateSelect("sectorFilter", values(ransomware, "activity", 80), "Todos los sectores");}
+    function populateSelect(id, valuesList, defaultText){const select = document.getElementById(id);select.innerHTML = `<option value="all">${defaultText}</option>`;valuesList.forEach(value => {const option = document.createElement("option");option.value = value;option.textContent = value;select.appendChild(option);});}
+    function values(items, field, limit){return [...new Set(items.map(i => String(i[field] || "Sin dato").trim()).filter(Boolean))].sort().slice(0, limit);}
+
+    function renderRansomCharts(items){destroyChartsByIds(["chartActors","chartIndustries"]);renderBarChart("chartActors", topCounts(items, "group", 7), "Actores");renderBarChart("chartIndustries", topCounts(items, "activity", 7), "Sectores");}
+    function renderKevCharts(items){destroyChartsByIds(["chartVendors"]);renderBarChart("chartVendors", topCounts(items, "vendor", 7), "Vendors");}
+    function topCounts(items, field, limit){const counts = new Map();items.forEach(item => {const value = String(item[field] || "Sin dato").trim() || "Sin dato";counts.set(value, (counts.get(value) || 0) + 1);});return [...counts.entries()].sort((a,b) => b[1] - a[1]).slice(0, limit).map(([label,value]) => ({ label, value }));}
+    function renderBarChart(canvasId, data, label){const canvas = document.getElementById(canvasId);if(!canvas) return;const ctx = canvas.getContext("2d");const chart = new Chart(ctx,{type:"bar",data:{labels:data.map(i => truncate(i.label, 16)),datasets:[{label,data:data.map(i => i.value),backgroundColor:"rgba(96,165,250,.38)",borderColor:"rgba(96,165,250,1)",borderWidth:1,borderRadius:10}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:"rgba(15,23,42,.95)",titleColor:"#fff",bodyColor:"#cbd5e1",borderColor:"rgba(255,255,255,.12)",borderWidth:1}},scales:{x:{ticks:{color:"rgba(148,163,184,.85)",font:{size:10}},grid:{display:false}},y:{beginAtZero:true,ticks:{color:"rgba(148,163,184,.85)",precision:0,font:{size:10}},grid:{color:"rgba(255,255,255,.06)"}}}}});charts.push({id:canvasId,chart});}
+    function destroyChartsByIds(ids){for(let i=charts.length-1;i>=0;i--){if(ids.includes(charts[i].id)){charts[i].chart.destroy();charts.splice(i,1);}}}
+
+    function renderLatamTopActors(latam){const top = topCounts(latam, "group", 3);const box = document.getElementById("latamActorBox");if(!top.length){box.innerHTML = "No hay víctimas LATAM para el período seleccionado.";return;}box.innerHTML = top.map((item, idx) => `<div class="rounded-3xl border border-white/10 bg-white/[.04] p-4"><div class="flex items-center justify-between gap-4"><div><p class="text-xs uppercase tracking-[.18em] text-slate-500">Top ${idx+1}</p><h4 class="mt-1 text-xl font-black text-amber-300">${escapeHTML(item.label)}</h4></div><div class="text-right"><p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Víctimas</p><p class="text-3xl font-black text-white">${item.value}</p></div></div></div>`).join("");}
+    function renderLatestKev(items){const latest = items[0];const box = document.getElementById("latestKevBox");if(!latest){box.innerHTML = "No hay datos CISA para el período seleccionado.";return;}box.innerHTML = `<div class="flex flex-col gap-3"><div class="flex items-center justify-between gap-3"><h4 class="text-2xl font-black text-sky-300">${escapeHTML(latest.cve)}</h4><span class="rounded-full border border-white/10 bg-white/[.05] px-3 py-1 text-xs text-slate-300">${escapeHTML(formatDate(latest.fecha))}</span></div><p class="text-sm text-slate-400"><strong class="text-slate-200">${escapeHTML(latest.vendor)}</strong> · ${escapeHTML(latest.producto)}</p><p class="line-clamp-3 text-sm leading-relaxed text-slate-400">${escapeHTML(latest.descripcion)}</p><a href="https://nvd.nist.gov/vuln/detail/${encodeURIComponent(latest.cve)}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:bg-sky-400/15">Ver CVE →</a></div>`;}
+
+    function setRansomScope(scope){ransomScope = scope;document.querySelectorAll(".scope-pill").forEach(btn => btn.classList.toggle("active", btn.dataset.scope === scope));applyRansomFilters();}
+    function applyRansomFilters(){const actor = document.getElementById("actorFilter")?.value || "all";const sector = document.getElementById("sectorFilter")?.value || "all";const q = document.getElementById("ransomSearch")?.value?.toLowerCase().trim() || "";filteredRansom = getRansomPeriodItems().filter(item => {const matchScope = ransomScope === "global" || LATAM.has(item.country);const matchActor = actor === "all" || item.group === actor;const matchSector = sector === "all" || item.activity === sector;const text = [item.victim,item.country,item.group,item.activity,item.description,item.domain].join(" ").toLowerCase();return matchScope && matchActor && matchSector && (!q || text.includes(q));});ransomPage = 1;renderRansomGrid();}
+    function renderRansomGrid(){const grid = document.getElementById("ransomGrid");const empty = document.getElementById("ransomEmptyState");grid.innerHTML = "";const start=(ransomPage-1)*pageSize;const pageItems=filteredRansom.slice(start,start+pageSize);empty.classList.toggle("hidden", pageItems.length>0);pageItems.forEach(item=>{const card=document.createElement("article");card.className="item-card glass rounded-[2rem] p-5";card.innerHTML=renderRansomCard(item);grid.appendChild(card);});const totalPages=Math.max(1,Math.ceil(filteredRansom.length/pageSize));document.getElementById("ransomPrevBtn").disabled=ransomPage===1;document.getElementById("ransomNextBtn").disabled=ransomPage>=totalPages;document.getElementById("ransomPageIndicator").textContent=`Página ${ransomPage} de ${totalPages}`;}
+    function renderRansomCard(item){return `<div class="relative z-10 flex h-full flex-col">${item.screenshot ? `<div class="mb-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[.03]"><img src="${escapeHTML(item.screenshot)}" alt="${escapeHTML(item.victim)}" class="h-40 w-full object-cover opacity-90" loading="lazy" onerror="this.parentElement.remove()"></div>` : ""}<div class="mb-4 flex items-start justify-between gap-3"><div class="inline-flex rounded-full border border-red-400/20 bg-red-400/10 px-3 py-1.5 text-xs font-bold text-red-300">Ransomware</div><time class="text-right text-[11px] text-slate-500">${escapeHTML(formatDate(item.date))}</time></div><h4 class="line-clamp-2 text-xl font-black leading-snug text-white">${escapeHTML(item.victim)}</h4><p class="mt-3 text-sm text-slate-400"><strong class="text-slate-200">Actor:</strong> ${escapeHTML(item.group)}</p><p class="mt-1 text-sm text-slate-400"><strong class="text-slate-200">País:</strong> ${escapeHTML(item.country || "-")} · <strong class="text-slate-200">Sector:</strong> ${escapeHTML(item.activity)}</p><p class="line-clamp-3 mt-4 text-sm leading-relaxed text-slate-400">${escapeHTML(item.description || "Sin descripción disponible.")}</p><div class="mt-auto pt-5"><a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:bg-sky-400/15">Ver registro →</a></div></div>`;}
+    function changeRansomPage(direction){const totalPages=Math.max(1,Math.ceil(filteredRansom.length/pageSize));ransomPage=Math.min(Math.max(1,ransomPage+direction),totalPages);renderRansomGrid();document.querySelector("#ransomGrid")?.scrollIntoView({behavior:"smooth",block:"start"});}
+
+    function renderKevList(){const q=document.getElementById("kevSearch")?.value?.toLowerCase().trim()||"";filteredKev=getKevPeriodItems().filter(item=>{const text=[item.cve,item.vendor,item.producto,item.descripcion,item.fecha].join(" ").toLowerCase();return !q || text.includes(q);});const grid=document.getElementById("kevList");grid.innerHTML="";const start=(kevPage-1)*kevPageSize;filteredKev.slice(start,start+kevPageSize).forEach(item=>{const card=document.createElement("article");card.className="item-card glass-soft rounded-[1.6rem] p-4";card.innerHTML=renderKevCard(item);grid.appendChild(card);});const totalPages=Math.max(1,Math.ceil(filteredKev.length/kevPageSize));document.getElementById("kevPrevBtn").disabled=kevPage===1;document.getElementById("kevNextBtn").disabled=kevPage>=totalPages;document.getElementById("kevPageIndicator").textContent=`Página ${kevPage} de ${totalPages}`;}
+    function renderKevCard(item){return `<div class="relative z-10 flex h-full flex-col"><div class="mb-3 flex items-start justify-between gap-3"><div class="inline-flex rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-xs font-bold text-sky-300">CISA KEV</div><time class="text-right text-[11px] text-slate-500">${escapeHTML(formatDate(item.fecha))}</time></div><h4 class="text-xl font-black leading-snug text-white">${escapeHTML(item.cve)}</h4><p class="mt-3 text-sm text-slate-400"><strong class="text-slate-200">${escapeHTML(item.vendor)}</strong> · ${escapeHTML(item.producto)}</p><p class="line-clamp-3 mt-3 text-sm leading-relaxed text-slate-400">${escapeHTML(item.descripcion || "Sin descripción disponible.")}</p><div class="mt-auto pt-4"><a href="https://nvd.nist.gov/vuln/detail/${encodeURIComponent(item.cve)}" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:bg-sky-400/15">Ver CVE →</a></div></div>`;}
+    function changeKevPage(direction){const totalPages=Math.max(1,Math.ceil(filteredKev.length/kevPageSize));kevPage=Math.min(Math.max(1,kevPage+direction),totalPages);renderKevList();}
+
+    function truncate(value,max){const s=String(value||"");return s.length>max?s.slice(0,max-1)+"…":s;}
+    function escapeHTML(value){return String(value ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");}
+    function toggleMenu(force){const menu=document.getElementById("mobileMenu");if(typeof force==="boolean"){menu.classList.toggle("open",force);return;}menu.classList.toggle("open");}
+
+    (()=>{const canvas=document.getElementById("neuralnet");const ctx=canvas.getContext("2d");let W,H,DPR,nodes=[];const mouse={x:-9999,y:-9999};function config(){const mobile=window.innerWidth<768;return{count:mobile?38:92,distance:mobile?112:150,speed:mobile?.18:.26};}function resize(){W=window.innerWidth;H=window.innerHeight;DPR=Math.min(window.devicePixelRatio||1,2);canvas.width=W*DPR;canvas.height=H*DPR;canvas.style.width=W+"px";canvas.style.height=H+"px";ctx.setTransform(DPR,0,0,DPR,0,0);initNodes();}function initNodes(){const cfg=config();nodes=Array.from({length:cfg.count},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*cfg.speed,vy:(Math.random()-.5)*cfg.speed,r:Math.random()*1.7+.45}));}window.addEventListener("resize",resize);window.addEventListener("mousemove",e=>{mouse.x=e.clientX;mouse.y=e.clientY;});window.addEventListener("touchmove",e=>{const t=e.touches[0];if(t){mouse.x=t.clientX;mouse.y=t.clientY;}},{passive:true});function draw(){const cfg=config();ctx.clearRect(0,0,W,H);for(const n of nodes){n.x+=n.vx;n.y+=n.vy;if(n.x<-20||n.x>W+20)n.vx*=-1;if(n.y<-20||n.y>H+20)n.vy*=-1;}for(let i=0;i<nodes.length;i++){const a=nodes[i];for(let j=i+1;j<nodes.length;j++){const b=nodes[j];const dx=a.x-b.x;const dy=a.y-b.y;const d=Math.sqrt(dx*dx+dy*dy);if(d<cfg.distance){ctx.beginPath();ctx.strokeStyle=`rgba(96,165,250,${(1-d/cfg.distance)*.09})`;ctx.lineWidth=.55;ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}const mdx=a.x-mouse.x;const mdy=a.y-mouse.y;const md=Math.sqrt(mdx*mdx+mdy*mdy);if(md<190){ctx.beginPath();ctx.strokeStyle=`rgba(34,211,238,${(1-md/190)*.18})`;ctx.lineWidth=.7;ctx.moveTo(a.x,a.y);ctx.lineTo(mouse.x,mouse.y);ctx.stroke();}}for(const n of nodes){ctx.beginPath();ctx.fillStyle="rgba(226,232,240,.62)";ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.fillStyle="rgba(96,165,250,.045)";ctx.arc(n.x,n.y,n.r*6,0,Math.PI*2);ctx.fill();}requestAnimationFrame(draw);}resize();draw();})();
+  </script>
+</body>
+</html>
