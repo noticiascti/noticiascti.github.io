@@ -2,170 +2,380 @@
 <html lang="es">
 <head>
   <base href="https://noticiascti.github.io/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validador IOC — iSecurity</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Noticias CTI | Validador IOC</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
-
-    .card {
-      background:#111827;
-      border-radius:12px;
-      padding:20px;
-      border:1px solid #1f2937;
+    :root{
+      --bg:#05070d;
+      --text:#f8fafc;
+      --muted:#94a3b8;
+      --blue:#60a5fa;
+      --cyan:#22d3ee;
+      --violet:#a78bfa;
+      --amber:#fbbf24;
+      --red:#f87171;
+      --green:#34d399;
     }
 
-    table {
+    *{
+      font-family:'Inter',sans-serif;
+      -webkit-tap-highlight-color:transparent;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
       width:100%;
-      table-layout: fixed;
+      max-width:100%;
+      overflow-x:hidden;
     }
 
-    th, td {
-      padding:12px;
+    body{
+      margin:0;
+      min-height:100vh;
+      width:100%;
+      max-width:100%;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 14% 8%, rgba(59,130,246,.17), transparent 30%),
+        radial-gradient(circle at 86% 3%, rgba(168,85,247,.13), transparent 28%),
+        radial-gradient(circle at 72% 92%, rgba(34,211,238,.08), transparent 25%),
+        linear-gradient(180deg,#05070d 0%,#08111f 54%,#05070d 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+      background-size:56px 56px;
+      mask-image:radial-gradient(circle at center, black 24%, transparent 82%);
+      -webkit-mask-image:radial-gradient(circle at center, black 24%, transparent 82%);
+    }
+
+    #neuralnet{
+      position:fixed;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .app-shell{
+      position:relative;
+      z-index:2;
+      min-height:100vh;
+      width:100%;
+      max-width:100%;
+      overflow-x:hidden;
+    }
+
+    .glass{
+      background:linear-gradient(180deg, rgba(15,23,42,.76), rgba(2,6,23,.62));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 24px 80px rgba(0,0,0,.28);
+      backdrop-filter:blur(22px);
+      -webkit-backdrop-filter:blur(22px);
+    }
+
+    .glass-soft{
+      background:rgba(15,23,42,.42);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .gradient-text{
+      background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .nav-link{
+      color:#cbd5e1;
+      transition:.2s ease;
+    }
+
+    .nav-link:hover{color:#fff;}
+
+    .mobile-menu{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .28s ease;
+    }
+
+    .mobile-menu.open{max-height:520px;}
+
+    .panel-card,
+    .result-card{
+      position:relative;
+      overflow:hidden;
+      transition:.25s ease;
+    }
+
+    .panel-card::before,
+    .result-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(96,165,250,.13), transparent 34%),
+        linear-gradient(120deg, transparent, rgba(255,255,255,.035), transparent);
+      opacity:.58;
+      pointer-events:none;
+    }
+
+    .result-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(96,165,250,.32);
+      box-shadow:
+        0 0 0 1px rgba(96,165,250,.08),
+        0 28px 90px rgba(37,99,235,.12);
+    }
+
+    .ioc-text{
+      overflow-wrap:anywhere;
+      word-break:break-word;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    }
+
+    .small{
+      font-size:12px;
+      color:#94a3b8;
+      line-height:1.5;
+      margin-top:.35rem;
+    }
+
+    .table-wrap{
+      width:100%;
+      max-width:100%;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+
+    table{
+      width:100%;
+      min-width:980px;
+      table-layout:fixed;
+      border-collapse:collapse;
+    }
+
+    th,td{
+      padding:14px 12px;
       text-align:left;
       vertical-align:top;
     }
 
-    th {
+    th{
       color:#cbd5e1;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+    }
+
+    td{
+      color:#dbeafe;
       font-size:13px;
-      border-bottom:1px solid #1f2937;
+      border-bottom:1px dashed rgba(255,255,255,.09);
     }
 
-    td {
-      border-bottom:1px dashed rgba(255,255,255,0.08);
+    input,textarea{
+      max-width:100%;
     }
 
-    .hash {
-      word-break: break-all;
-      font-family: monospace;
-    }
-
-    .small {
-      font-size:12px;
-      color:#9ca3af;
+    @media(max-width:768px){
+      body::before{background-size:42px 42px;}
+      .result-card:hover{transform:none;}
+      table{min-width:900px;}
     }
   </style>
 </head>
 
-<body class="bg-gray-900 text-gray-200">
+<body>
+  <canvas id="neuralnet"></canvas>
 
-<!-- HEADER -->
-<header class="bg-gray-950 p-4 border-b border-gray-700 flex items-center space-x-3 cursor-pointer"
-        onclick="window.location.href='/index.html'">
-  <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" class="h-8">
-  <h1 class="text-2xl font-bold text-yellow-400">Validador IOC</h1>
-</header>
+  <div class="app-shell">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#05070dcc] backdrop-blur-2xl">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between gap-4">
+          <button onclick="window.location.href='./index.html'" class="flex items-center gap-3 text-left">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl border border-sky-400/25 bg-sky-400/10 shadow-lg shadow-sky-500/10">
+              <span class="text-lg">🛡️</span>
+            </div>
+            <div>
+              <h1 class="text-lg sm:text-xl font-black tracking-tight">Noticias <span class="gradient-text">CTI</span></h1>
+              <p class="hidden sm:block text-[11px] uppercase tracking-[0.26em] text-slate-500">Cyber Threat Intelligence</p>
+            </div>
+          </button>
 
-<!-- NAV -->
-<nav class="bg-gray-950 border-b border-gray-700">
-  <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
+          <nav class="hidden lg:flex items-center gap-6 text-sm">
+            <a href="./index.html" class="nav-link">Inicio</a>
+            <a href="./noticias.html" class="nav-link">Noticias Ciberseguridad</a>
+            <a href="./medios.html" class="nav-link">Noticias Nacionales</a>
+            <a href="./ransomware.html" class="nav-link">Ransomware</a>
+            <a href="./vulnerabilidades.html" class="nav-link">Vulnerabilidades</a>
+            <a href="./reclamos.html" class="nav-link">Reclamos</a>
+            <a href="./status.html" class="nav-link">Downdetector</a>
+          </nav>
 
-    <li><a href="/index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+          <button onclick="toggleMenu()" class="lg:hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Menú</button>
+        </div>
 
-    <li class="relative group">
-      <button class="hover:text-yellow-400 flex items-center">
-        🔒 Noticias Ciberseguridad ▾
-      </button>
-      <ul class="absolute hidden group-hover:block bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
-        <li><a href="/index.html#incidentes" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes</a></li>
-        <li><a href="/index.html#tendencias" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
-        <li><a href="/index.html#locales" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Locales</a></li>
-        <li><a href="/index.html#prevencion" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Prevención</a></li>
-      </ul>
-    </li>
+        <div id="mobileMenu" class="mobile-menu lg:hidden">
+          <div class="grid gap-2 pb-4 text-sm">
+            <a href="./index.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🏠 Inicio</a>
+            <a href="./noticias.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🔒 Noticias Ciberseguridad</a>
+            <a href="./medios.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📰 Noticias Nacionales</a>
+            <a href="./ransomware.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🧬 Ransomware</a>
+            <a href="./vulnerabilidades.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">⚡ Vulnerabilidades</a>
+            <a href="./reclamos.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📣 Reclamos</a>
+            <a href="./status.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📊 Downdetector</a>
+            <a href="./validadorioc.html" class="rounded-xl px-3 py-2 text-white font-semibold bg-white/10">🔎 Validador IOC</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    <li><a href="/medios.html" class="hover:text-yellow-400">📰 Medios</a></li>
-    <li><a href="/status.html" class="hover:text-yellow-400">📊 Status</a></li>
-    <li><a href="/ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Vulnerabilidades</a></li>
-    <li><a href="/reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
+    <main class="mx-auto max-w-7xl overflow-hidden px-4 sm:px-6 lg:px-8">
+      <section class="py-8 sm:py-10 lg:py-14 text-center">
+        <div class="mx-auto max-w-5xl">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] text-sky-200">
+            <span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,.9)]"></span>
+            IOC Validator
+          </div>
 
-    <li><a href="/validadorioc.html" class="text-yellow-400 font-bold">🔎 Validador IOC</a></li>
+          <h2 class="text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">
+            Validador de <span class="gradient-text">indicadores</span>
+          </h2>
 
-  </ul>
-</nav>
+          <p class="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
+            Validación de IOC contra fuentes de inteligencia, reputación y telemetría externa para priorizar riesgos y apoyar decisiones CTI.
+          </p>
+        </div>
+      </section>
 
-<!-- CONTENIDO -->
-<div class="p-6">
+      <section class="pb-10">
+        <div class="panel-card glass rounded-[2rem] p-5 sm:p-6">
+          <div class="relative z-10">
+            <div class="mb-5 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-[.22em] text-slate-500">Análisis IOC</p>
+                <h3 class="mt-1 text-2xl font-black sm:text-3xl">Carga de indicadores</h3>
+                <p class="mt-2 text-sm text-slate-400">Ingresa IPs, dominios, URLs o hashes separados por coma, espacio o salto de línea.</p>
+              </div>
+              <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm font-bold text-emerald-300">
+                ● Servicio API activo
+              </div>
+            </div>
 
-  <div class="card">
+            <div class="grid gap-4 lg:grid-cols-[.8fr_1.2fr]">
+              <div>
+                <label for="password" class="mb-2 block text-xs uppercase tracking-[.18em] text-slate-500">Password</label>
+                <input type="password" id="password" placeholder="Password" class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40">
+              </div>
 
-    <h2 class="text-xl font-bold text-yellow-400 mb-4">🔎 Validador IOC</h2>
+              <div>
+                <label for="iocInput" class="mb-2 block text-xs uppercase tracking-[.18em] text-slate-500">Indicadores</label>
+                <textarea id="iocInput" rows="5" placeholder="Ej: 1.1.1.1, dominio.com, hash" class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40"></textarea>
+              </div>
+            </div>
 
-    <input type="password" id="password"
-      placeholder="Password"
-      class="w-full bg-gray-800 border border-gray-700 p-3 rounded mb-3">
+            <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <button onclick="startAnalysis()" class="inline-flex items-center justify-center rounded-2xl border border-amber-400/30 bg-amber-400/90 px-5 py-3 text-sm font-black text-slate-950 transition hover:bg-amber-300">
+                Analizar indicadores →
+              </button>
 
-    <textarea id="iocInput" rows="6"
-      class="w-full bg-gray-800 border border-gray-700 p-3 rounded"
-      placeholder="Ej: 1.1.1.1, dominio.com, hash"></textarea>
+              <div class="flex flex-col text-sm sm:text-right">
+                <span id="estimate" class="text-slate-400"></span>
+                <span id="timer" class="font-black text-amber-300"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <button onclick="startAnalysis()"
-      class="mt-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-2 px-4 rounded">
-      Analizar
-    </button>
+      <section class="pb-10">
+        <div class="glass rounded-[2rem] p-5 sm:p-6">
+          <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[.22em] text-slate-500">Resultados</p>
+              <h3 class="mt-1 text-2xl font-black">Detalle de validación</h3>
+              <p class="mt-2 text-sm text-slate-400">Resultados ordenados por score de riesgo.</p>
+            </div>
 
-    <div id="estimate" class="text-sm text-gray-400 mt-2"></div>
-    <div id="timer" class="text-yellow-400 font-bold"></div>
+            <button onclick="exportCSV()" class="inline-flex items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:bg-sky-400/15">
+              Exportar CSV
+            </button>
+          </div>
 
-    <div class="overflow-x-auto mt-6">
-      <table>
+          <div class="table-wrap rounded-[1.5rem] border border-white/10 bg-white/[.03]">
+            <table>
+              <colgroup>
+                <col style="width:25%">
+                <col style="width:10%">
+                <col style="width:25%">
+                <col style="width:20%">
+                <col style="width:10%">
+                <col style="width:10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>IOC</th>
+                  <th>Tipo</th>
+                  <th>Maltiverse</th>
+                  <th>VirusTotal</th>
+                  <th title="Score basado en detección, inteligencia y actividad reciente">Score ISecurity</th>
+                  <th>Nivel de Riesgo</th>
+                </tr>
+              </thead>
+              <tbody id="results"></tbody>
+            </table>
+          </div>
 
-        <colgroup>
-          <col style="width:25%">
-          <col style="width:10%">
-          <col style="width:25%">
-          <col style="width:20%">
-          <col style="width:10%">
-          <col style="width:10%">
-        </colgroup>
-
-        <thead>
-          <tr>
-            <th>IOC</th>
-            <th>Tipo</th>
-            <th>Maltiverse</th>
-            <th>VirusTotal</th>
-            <th title="Score basado en detección, inteligencia y actividad reciente">Score ISecurity</th>
-            <th>Nivel de Riesgo</th>
-          </tr>
-        </thead>
-
-        <tbody id="results"></tbody>
-
-      </table>
-    </div>
-
-    <button onclick="exportCSV()" class="mt-4 bg-gray-700 px-3 py-1 rounded">
-      Exportar CSV
-    </button>
-
+          <div id="emptyResults" class="mt-6 rounded-[2rem] border border-white/10 bg-white/[.04] p-8 text-center">
+            <div class="text-4xl">🛰️</div>
+            <h4 class="mt-3 text-xl font-black">Sin resultados</h4>
+            <p class="mt-2 text-slate-400">Ejecuta un análisis para visualizar la reputación y el score de los indicadores.</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
-
-</div>
 
 <script>
 
 const API_URL = "https://iocvalidator.vercel.app";
 let lastResults = [];
 
-// 🎨 COLORES NUEVOS
 function colorVerdict(v) {
-    if (v === "Crítico") return "text-red-500";
-    if (v === "Alto") return "text-orange-400";
-    if (v === "Sospechoso") return "text-yellow-400";
-    if (v === "Bajo") return "text-blue-400";
+    if (v === "Crítico") return "text-red-400";
+    if (v === "Alto") return "text-orange-300";
+    if (v === "Sospechoso") return "text-yellow-300";
+    if (v === "Bajo") return "text-blue-300";
     return "text-gray-400";
 }
 
 function colorScore(score){
-    if (score >= 85) return "text-red-500";
-    if (score >= 60) return "text-orange-400";
-    if (score >= 30) return "text-yellow-400";
-    if (score >= 10) return "text-blue-400";
+    if (score >= 85) return "text-red-400";
+    if (score >= 60) return "text-orange-300";
+    if (score >= 30) return "text-yellow-300";
+    if (score >= 10) return "text-blue-300";
     return "text-gray-400";
 }
 
@@ -202,6 +412,11 @@ async function startAnalysis(){
 
     const iocs = text.split(/[\s,]+/).filter(x=>x);
 
+    if(!iocs.length){
+      alert("Debes ingresar al menos un IOC.");
+      return;
+    }
+
     const token = await login(password);
     if(!token) return alert("Password incorrecta");
 
@@ -221,8 +436,8 @@ async function startAnalysis(){
     });
 
     const data = await res.json();
-    lastResults = data.results;
-    render(data.results);
+    lastResults = data.results || [];
+    render(lastResults);
 }
 
 function render(results){
@@ -230,7 +445,10 @@ function render(results){
     results.sort((a, b) => b.score - a.score);
 
     const table = document.getElementById("results");
+    const empty = document.getElementById("emptyResults");
     table.innerHTML = "";
+
+    if(empty) empty.classList.toggle("hidden", results.length > 0);
 
     results.forEach(r=>{
 
@@ -238,10 +456,10 @@ function render(results){
 
         const maltiverseBlock = sinDatos
             ? "Sin información"
-            : `${r.maltiverse?.classification}
+            : `${escapeHTML(r.maltiverse?.classification || "-")}
                <div class="small">
-                 Primera vez visto: ${r.maltiverse?.primera_vez || "-"}<br>
-                 Última vez visto: ${r.maltiverse?.ultima_vez || "-"}
+                 Primera vez visto: ${escapeHTML(r.maltiverse?.primera_vez || "-")}<br>
+                 Última vez visto: ${escapeHTML(r.maltiverse?.ultima_vez || "-")}
                </div>`;
 
         const vtPercent = r.vt && r.vt.total
@@ -249,23 +467,23 @@ function render(results){
             : 0;
 
         const vtBlock = r.vt
-            ? `<a href="${r.vt.link}" target="_blank" class="text-yellow-400 underline">
-                ${r.vt.summary} (${vtPercent}%)
+            ? `<a href="${escapeHTML(r.vt.link)}" target="_blank" rel="noopener noreferrer" class="text-amber-300 underline">
+                ${escapeHTML(r.vt.summary)} (${vtPercent}%)
                </a>
                <div class="small">
-                 Primera vez visto: ${r.vt?.primera_vez || "-"}<br>
-                 Última vez visto: ${r.vt?.ultima_vez || "-"}
+                 Primera vez visto: ${escapeHTML(r.vt?.primera_vez || "-")}<br>
+                 Última vez visto: ${escapeHTML(r.vt?.ultima_vez || "-")}
                </div>`
             : "-";
 
         table.innerHTML += `
         <tr>
-          <td class="hash">${r.ioc}</td>
-          <td>${r.type}</td>
+          <td class="ioc-text text-slate-200">${escapeHTML(r.ioc)}</td>
+          <td>${escapeHTML(r.type)}</td>
           <td>${maltiverseBlock}</td>
           <td>${vtBlock}</td>
-          <td class="${colorScore(r.score)} font-bold">${r.score}</td>
-          <td class="${colorVerdict(r.verdict)} font-bold text-right">${r.verdict}</td>
+          <td class="${colorScore(r.score)} font-black">${escapeHTML(r.score)}</td>
+          <td class="${colorVerdict(r.verdict)} font-black">${escapeHTML(r.verdict)}</td>
         </tr>`;
     });
 }
@@ -288,16 +506,144 @@ function exportCSV(){
     const csv = [
         ["IOC","Tipo","Maltiverse","M_First","M_Last","VT","VT_First","VT_Last","Score","Nivel"],
         ...rows
-    ].map(e=>e.join(",")).join("\n");
+    ].map(e=>e.map(v => `"${String(v ?? "").replaceAll('"','""')}"`).join(",")).join("\n");
 
-    const blob = new Blob([csv]);
+    const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement("a");
     a.href=url;
     a.download="ioc_results.csv";
     a.click();
+    URL.revokeObjectURL(url);
 }
+
+function escapeHTML(value){
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function toggleMenu(force){
+  const menu = document.getElementById("mobileMenu");
+  if(typeof force === "boolean"){
+    menu.classList.toggle("open", force);
+    return;
+  }
+  menu.classList.toggle("open");
+}
+
+(() => {
+  const canvas = document.getElementById("neuralnet");
+  const ctx = canvas.getContext("2d");
+  let W,H,DPR;
+  let nodes = [];
+  const mouse = { x:-9999, y:-9999 };
+
+  function config(){
+    const mobile = window.innerWidth < 768;
+    return {
+      count: mobile ? 38 : 92,
+      distance: mobile ? 112 : 150,
+      speed: mobile ? .18 : .26
+    };
+  }
+
+  function resize(){
+    W = window.innerWidth;
+    H = window.innerHeight;
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = W * DPR;
+    canvas.height = H * DPR;
+    canvas.style.width = W + "px";
+    canvas.style.height = H + "px";
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    initNodes();
+  }
+
+  function initNodes(){
+    const cfg = config();
+    nodes = Array.from({ length:cfg.count }, () => ({
+      x:Math.random()*W,
+      y:Math.random()*H,
+      vx:(Math.random()-.5)*cfg.speed,
+      vy:(Math.random()-.5)*cfg.speed,
+      r:Math.random()*1.7+.45
+    }));
+  }
+
+  window.addEventListener("resize", resize);
+  window.addEventListener("mousemove", e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  window.addEventListener("touchmove", e => {
+    const t = e.touches[0];
+    if(t){ mouse.x = t.clientX; mouse.y = t.clientY; }
+  }, { passive:true });
+
+  function draw(){
+    const cfg = config();
+    ctx.clearRect(0,0,W,H);
+
+    for(const n of nodes){
+      n.x += n.vx;
+      n.y += n.vy;
+      if(n.x < -20 || n.x > W + 20) n.vx *= -1;
+      if(n.y < -20 || n.y > H + 20) n.vy *= -1;
+    }
+
+    for(let i=0;i<nodes.length;i++){
+      const a = nodes[i];
+      for(let j=i+1;j<nodes.length;j++){
+        const b = nodes[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if(d < cfg.distance){
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(96,165,250,${(1 - d/cfg.distance) * .09})`;
+          ctx.lineWidth = .55;
+          ctx.moveTo(a.x,a.y);
+          ctx.lineTo(b.x,b.y);
+          ctx.stroke();
+        }
+      }
+
+      const mdx = a.x - mouse.x;
+      const mdy = a.y - mouse.y;
+      const md = Math.sqrt(mdx*mdx + mdy*mdy);
+      if(md < 190){
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(34,211,238,${(1 - md/190) * .18})`;
+        ctx.lineWidth = .7;
+        ctx.moveTo(a.x,a.y);
+        ctx.lineTo(mouse.x,mouse.y);
+        ctx.stroke();
+      }
+    }
+
+    for(const n of nodes){
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(226,232,240,.62)";
+      ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(96,165,250,.045)";
+      ctx.arc(n.x,n.y,n.r*6,0,Math.PI*2);
+      ctx.fill();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  draw();
+})();
 
 </script>
 
