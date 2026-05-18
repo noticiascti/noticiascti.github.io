@@ -1,168 +1,788 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <base href="https://noticiascti.github.io/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias CTI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Noticias CTI | Inicio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .card { @apply bg-gray-800 text-white shadow-lg rounded-xl p-5 border border-gray-700; }
-    .category-btn { @apply px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer transition flex items-center space-x-2; }
-    .category-btn:hover { @apply bg-yellow-500 text-black; }
-    .active { @apply bg-yellow-500 text-black; }
+    :root{
+      --bg:#05070d;
+      --panel:#0b1020;
+      --text:#f8fafc;
+      --muted:#94a3b8;
+      --blue:#60a5fa;
+      --cyan:#22d3ee;
+      --violet:#a78bfa;
+      --amber:#fbbf24;
+      --red:#f87171;
+      --green:#34d399;
+    }
+
+    *{
+      font-family:'Inter',sans-serif;
+      -webkit-tap-highlight-color:transparent;
+      box-sizing:border-box;
+    }
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 14% 8%, rgba(59,130,246,.17), transparent 30%),
+        radial-gradient(circle at 86% 3%, rgba(168,85,247,.13), transparent 28%),
+        radial-gradient(circle at 72% 92%, rgba(34,211,238,.08), transparent 25%),
+        linear-gradient(180deg,#05070d 0%,#08111f 54%,#05070d 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+      background-size:56px 56px;
+      mask-image:radial-gradient(circle at center, black 24%, transparent 82%);
+      -webkit-mask-image:radial-gradient(circle at center, black 24%, transparent 82%);
+    }
+
+    #neuralnet{
+      position:fixed;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .app-shell{
+      position:relative;
+      z-index:2;
+      min-height:100vh;
+    }
+
+    .glass{
+      background:linear-gradient(180deg, rgba(15,23,42,.76), rgba(2,6,23,.62));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 24px 80px rgba(0,0,0,.28);
+      backdrop-filter:blur(22px);
+      -webkit-backdrop-filter:blur(22px);
+    }
+
+    .glass-soft{
+      background:rgba(15,23,42,.42);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .gradient-text{
+      background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .nav-link{
+      color:#cbd5e1;
+      transition:.2s ease;
+    }
+
+    .nav-link:hover{color:#fff;}
+
+    .chip{
+      background:rgba(96,165,250,.10);
+      border:1px solid rgba(96,165,250,.18);
+      color:#bae6fd;
+    }
+
+    .stat-card{
+      position:relative;
+      overflow:hidden;
+      min-height:138px;
+    }
+
+    .stat-card::after{
+      content:"";
+      position:absolute;
+      inset:auto -20% -60% -20%;
+      height:100px;
+      background:radial-gradient(circle, rgba(96,165,250,.18), transparent 65%);
+      pointer-events:none;
+    }
+
+    .news-card{
+      position:relative;
+      overflow:hidden;
+      transition:.25s ease;
+    }
+
+    .news-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(96,165,250,.13), transparent 34%),
+        linear-gradient(120deg, transparent, rgba(255,255,255,.035), transparent);
+      opacity:.66;
+      pointer-events:none;
+    }
+
+    .news-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(96,165,250,.32);
+      box-shadow:0 0 0 1px rgba(96,165,250,.08),0 28px 90px rgba(37,99,235,.12);
+    }
+
+    .category-pill{
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+
+    .category-pill.active{
+      color:#020617;
+      background:linear-gradient(90deg,#fbbf24,#fde68a);
+      border-color:rgba(251,191,36,.65);
+    }
+
+    .category-pill:not(.active):hover{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+    }
+
+    .line-clamp-2{
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .line-clamp-4{
+      display:-webkit-box;
+      -webkit-line-clamp:4;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .mobile-menu{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .28s ease;
+    }
+
+    .mobile-menu.open{max-height:420px;}
+
+    @media(max-width:768px){
+      body::before{background-size:42px 42px;}
+      .news-card:hover{transform:none;}
+      .stat-card{min-height:128px;}
+    }
   </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
 
-  <!-- Header -->
-  <div class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex justify-between items-center relative">
-    <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='./index.html'">
-      <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
-      <h1 class="text-2xl font-bold text-yellow-400">Noticias CTI</h1>
-    </div>
-    <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleMenu()">☰</button>
-  </div>
+<body>
+  <canvas id="neuralnet"></canvas>
 
-  <!-- Menú principal -->
-  <nav class="bg-gray-950 border-b border-gray-700">
-    <ul id="menu" class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
-      <!-- Inicio -->
-      <li><a href="./index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
+  <div class="app-shell">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#05070dcc] backdrop-blur-2xl">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between gap-4">
+          <button onclick="window.location.href='./index.html'" class="flex items-center gap-3 text-left">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl border border-sky-400/25 bg-sky-400/10 shadow-lg shadow-sky-500/10">
+              <span class="text-lg">🛡️</span>
+            </div>
+            <div>
+              <h1 class="text-lg sm:text-xl font-black tracking-tight">Noticias <span class="gradient-text">CTI</span></h1>
+              <p class="hidden sm:block text-[11px] uppercase tracking-[0.26em] text-slate-500">Cyber Threat Intelligence</p>
+            </div>
+          </button>
 
-      <!-- Noticias Ciberseguridad (dropdown) -->
-      <li class="relative group">
-        <button class="hover:text-yellow-400 flex items-center">🔒 Noticias Ciberseguridad ▾</button>
-        <ul class="absolute hidden group-hover:block bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
-          <li><a href="#" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
-          <li><a href="#" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
-          <li><a href="#" onclick="filtrarCategoria('Noticias Locales (Chile) sobre Ciberfraude / Ciberataques')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias Locales</a></li>
-          <li><a href="#" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
-        </ul>
-      </li>
+          <nav class="hidden lg:flex items-center gap-6 text-sm">
+            <a href="./index.html" class="nav-link text-white font-semibold">Inicio</a>
+            <a href="./noticias.html" class="nav-link">Noticias Ciberseguridad</a>
+            <a href="./medios.html" class="nav-link">Noticias Nacionales</a>
+            <a href="./ransomware.html" class="nav-link">Ransomware</a>
+            <a href="./vulnerabilidades.html" class="nav-link">Vulnerabilidades</a>
+            <a href="./reclamos.html" class="nav-link">Reclamos</a>
+            <a href="./status.html" class="nav-link">Downdetector</a>
+          </nav>
 
-      <!-- Medios Nacionales -->
-      <li><a href="./medios.html" class="hover:text-yellow-400">📰 Medios Nacionales</a></li>
+          <button onclick="toggleMenu()" class="lg:hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">
+            Menú
+          </button>
+        </div>
 
-      <!-- Status -->
-      <li><a href="./status.html" class="hover:text-yellow-400">📊 Status</a></li>
+        <div id="mobileMenu" class="mobile-menu lg:hidden">
+          <div class="grid gap-2 pb-4 text-sm">
+            <a href="./index.html" class="rounded-xl bg-white/10 px-3 py-2 text-white font-semibold">🏠 Inicio</a>
+            <a href="./noticias.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🔒 Noticias Ciberseguridad</a>
+            <a href="./medios.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📰 Noticias Nacionales</a>
+            <a href="./ransomware.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🧬 Ransomware</a>
+            <a href="./vulnerabilidades.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">⚡ Vulnerabilidades</a>
+            <a href="./reclamos.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📣 Reclamos</a>
+            <a href="./status.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📊 Downdetector</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-      <!-- Ransom & Vulnerabilidades -->
-      <li><a href="./ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Ransom & Vulnerabilidades</a></li>
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section class="py-8 sm:py-10 lg:py-14 text-center">
+        <div class="mx-auto flex max-w-5xl flex-col items-center text-center">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] text-sky-200">
+            <span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,.9)]"></span>
+            Monitoreo de amenazas en tiempo real
+          </div>
 
-      <!-- Reclamos -->
-      <li><a href="./reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
-    </ul>
-  </nav>
+          <h2 class="mx-auto max-w-5xl text-center text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">
+            Panorama de <span class="gradient-text">amenazas</span> para decisiones CTI
+          </h2>
 
-  <!-- Contenido -->
-  <div id="feed" class="p-6 space-y-6"></div>
+          <p class="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
+            Monitoreo consolidado de ransomware, vulnerabilidades explotadas, fraude digital y noticias relevantes para equipos de ciberinteligencia.
+          </p>
+        </div>
+      </section>
 
-  <!-- Paginación -->
-  <div class="flex justify-center space-x-2 p-4">
-    <button id="prevBtn" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50" onclick="cambiarPagina(-1)">⬅️ Anterior</button>
-    <button id="nextBtn" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50" onclick="cambiarPagina(1)">Siguiente ➡️</button>
+      <section class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
+          <div class="relative z-10">
+            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
+            <p class="mt-1 text-xs font-semibold text-slate-400">Víctimas ransomware</p>
+            <div id="statRansomGlobal" class="mt-3 text-4xl font-black text-red-300">0</div>
+            <p class="mt-1 text-xs text-slate-500">Global</p>
+          </div>
+        </div>
+
+        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
+          <div class="relative z-10">
+            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
+            <p class="mt-1 text-xs font-semibold text-slate-400">Víctimas ransomware</p>
+            <div id="statRansomLatam" class="mt-3 text-4xl font-black text-amber-300">0</div>
+            <p class="mt-1 text-xs text-slate-500">LATAM</p>
+          </div>
+        </div>
+
+        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
+          <div class="relative z-10">
+            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
+            <p class="mt-1 text-xs font-semibold text-slate-400">Vulnerabilidades</p>
+            <div id="statKev" class="mt-3 text-4xl font-black text-sky-300">0</div>
+            <p class="mt-1 text-xs text-slate-500">Explotadas</p>
+          </div>
+        </div>
+
+        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
+          <div class="relative z-10">
+            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
+            <p class="mt-1 text-xs font-semibold text-slate-400">Noticias nacionales</p>
+            <div id="statNoticiasChile" class="mt-3 text-4xl font-black text-violet-300">0</div>
+            <p class="mt-1 text-xs text-slate-500">Chile</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-8 sm:py-10">
+        <div class="mb-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="text-center lg:text-left">
+            <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Últimas noticias</h3>
+            <p class="mt-1 text-sm text-slate-500">Vista ejecutiva y táctica del feed CTI.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div class="relative">
+              <input id="searchInput" oninput="aplicarFiltros()" type="search" placeholder="Buscar noticia, país, sector, keyword..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-80">
+              <span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span>
+            </div>
+            <button onclick="filtrarCategoria('all')" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 hover:bg-white/[.09]">
+              Limpiar filtros
+            </button>
+          </div>
+        </div>
+
+        <div id="categoryBar" class="mb-6 flex gap-2 overflow-x-auto pb-2">
+          <button data-category="all" onclick="filtrarCategoria('all')" class="category-pill active rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">🏠 Todas</button>
+          <button data-category="Incidentes y Fugas de Datos en Empresas" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="category-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">💥 Incidentes</button>
+          <button data-category="Tendencias de Ataques al Sector Financiero" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="category-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">📊 Tendencias</button>
+          <button data-category="Prevención / Innovación en el Sector Financiero" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="category-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">💡 Innovación</button>
+        </div>
+
+        <div id="feed" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+
+        <div id="emptyState" class="hidden glass mt-6 rounded-[2rem] p-8 text-center">
+          <div class="text-4xl">🛰️</div>
+          <h4 class="mt-3 text-xl font-black">Sin resultados</h4>
+          <p class="mt-2 text-slate-400">No se encontraron noticias para el filtro actual.</p>
+        </div>
+
+        <div class="mt-8 flex items-center justify-center gap-3">
+          <button id="prevBtn" onclick="cambiarPagina(-1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
+            ← Anterior
+          </button>
+          <span id="pageIndicator" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-400">Página 1</span>
+          <button id="nextBtn" onclick="cambiarPagina(1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
+            Siguiente →
+          </button>
+        </div>
+      </section>
+    </main>
   </div>
 
   <script>
-    // 🔹 Dropdown toggle
-    const dropdownBtn = document.getElementById("dropdownBtn");
-    const dropdownMenu = document.getElementById("dropdownMenu");
+    const DATA_JSON = "./data.json";
+    const KEV_JSON = "./kev_cisa.json";
+    const RANSOMWARE_JSON = "./ransomware.json";
+    const NOTICIAS_NACIONALES_JSON = "./status_nacional.json";
 
-    // Compatibilidad con hover + click
-    document.querySelectorAll(".group").forEach(group => {
-      const button = group.querySelector("button");
-      const menu = group.querySelector("ul");
-      button.addEventListener("click", e => {
-        e.stopPropagation();
-        menu.classList.toggle("hidden");
-      });
-      document.addEventListener("click", e => {
-        if (!group.contains(e.target)) menu.classList.add("hidden");
-      });
-    });
+    const LATAM = new Set(["AR","BO","BR","CL","CO","CR","CU","DO","EC","GT","HN","MX","NI","PA","PE","PY","UY","VE"]);
 
-    // 🔹 Categorías largas → cortas
+    const MESES_ES = {
+      "enero":0,
+      "febrero":1,
+      "marzo":2,
+      "abril":3,
+      "mayo":4,
+      "junio":5,
+      "julio":6,
+      "agosto":7,
+      "septiembre":8,
+      "setiembre":8,
+      "octubre":9,
+      "noviembre":10,
+      "diciembre":11
+    };
+
     const categoryMap = {
-      "all": { short: "Inicio", icon: "🏠" },
-      "Incidentes y Fugas de Datos en Empresas": { short: "Incidentes & DataBreach", icon: "💥" },
-      "Tendencias de Ataques al Sector Financiero": { short: "Tendencias", icon: "📊" },
-      "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques": { short: "Noticias Locales", icon: "🇨🇱" },
-      "Prevención / Innovación en el Sector Financiero": { short: "Innovación & Prevención", icon: "💡" }
+      "all": { short:"Todas", icon:"🏠", tone:"text-sky-300", border:"border-sky-400/20" },
+      "Incidentes y Fugas de Datos en Empresas": { short:"Incidentes & DataBreach", icon:"💥", tone:"text-red-300", border:"border-red-400/20" },
+      "Tendencias de Ataques al Sector Financiero": { short:"Tendencias", icon:"📊", tone:"text-sky-300", border:"border-sky-400/20" },
+      "Prevención / Innovación en el Sector Financiero": { short:"Innovación & Prevención", icon:"💡", tone:"text-amber-300", border:"border-amber-400/20" },
+      "Noticias Ciberseguridad": { short:"Noticias Ciberseguridad", icon:"🔒", tone:"text-cyan-300", border:"border-cyan-400/20" }
     };
 
     let data = [];
-    const itemsPorPagina = 10;
+    let kevData = [];
+    let ransomwareData = [];
+    let noticiasNacionalesData = [];
+    let filteredData = [];
     let paginaActual = 1;
     let categoriaActual = "all";
+    const itemsPorPagina = 9;
 
-    // 🔹 Cargar noticias (JSON)
-    fetch(`./data.json?t=${Date.now()}`) // ✅ ruta relativa, evita caché
-      .then(res => res.json())
-      .then(json => {
-        data = json
-          .filter(item => item.timestamp)
-          .sort((a, b) => new Date(b.timestamp.replace(" ", "T")) - new Date(a.timestamp.replace(" ", "T")));
-        renderFeed(data);
-      })
-      .catch(err => console.error("Error cargando feed:", err));
+    init();
 
-    // 🔹 Render de noticias
-    function renderFeed(items) {
+    async function init(){
+      const [noticias, kev, ransomware, noticiasNacionales] = await Promise.all([
+        fetchJSON(DATA_JSON, []),
+        fetchJSON(KEV_JSON, []),
+        fetchJSON(RANSOMWARE_JSON, []),
+        fetchJSON(NOTICIAS_NACIONALES_JSON, [])
+      ]);
+
+      data = normalizarNoticias(noticias)
+        .filter(item => item.timestamp)
+        .sort((a,b) => new Date(normalizarFecha(b.timestamp)) - new Date(normalizarFecha(a.timestamp)));
+
+      kevData = Array.isArray(kev) ? kev : [];
+      ransomwareData = Array.isArray(ransomware) ? ransomware : [];
+      noticiasNacionalesData = Array.isArray(noticiasNacionales) ? noticiasNacionales : [];
+
+      actualizarMetricasMes();
+      aplicarFiltros();
+    }
+
+    async function fetchJSON(url, fallback){
+      try{
+        const res = await fetch(`${url}?t=${Date.now()}`);
+        if(!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+      }catch(err){
+        console.warn(`No se pudo cargar ${url}`, err);
+        return fallback;
+      }
+    }
+
+    function normalizarNoticias(items){
+      if(!Array.isArray(items)) return [];
+
+      return items.map(item => {
+        const timestamp = item.timestamp || fechaNacionalToISO(item.date, item.time) || item.fecha || item.date;
+        return {
+          ...item,
+          timestamp,
+          resumen: item.resumen || item.description || item.descripcion || "",
+          palabras_claves: item.palabras_claves || item.keywords || []
+        };
+      });
+    }
+
+    function normalizarFecha(value){
+      if(!value) return "";
+      return String(value).replace(" ", "T");
+    }
+
+    function getDate(value){
+      if(!value) return null;
+      const parsedSpanish = fechaTextoEspanolToDate(value);
+      if(parsedSpanish) return parsedSpanish;
+
+      const date = new Date(normalizarFecha(value));
+      return isNaN(date.getTime()) ? null : date;
+    }
+
+    function fechaTextoEspanolToDate(value, time = "00:00"){
+      if(!value || typeof value !== "string") return null;
+
+      const texto = value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+
+      const match = texto.match(/(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})/);
+      if(!match) return null;
+
+      const dia = parseInt(match[1], 10);
+      const mes = MESES_ES[match[2]];
+      const anio = parseInt(match[3], 10);
+
+      if(Number.isNaN(dia) || mes === undefined || Number.isNaN(anio)) return null;
+
+      const horaMatch = String(time || "00:00").match(/(\d{1,2}):(\d{2})/);
+      const hora = horaMatch ? parseInt(horaMatch[1], 10) : 0;
+      const minuto = horaMatch ? parseInt(horaMatch[2], 10) : 0;
+
+      return new Date(anio, mes, dia, hora, minuto, 0);
+    }
+
+    function fechaNacionalToISO(dateText, timeText){
+      const date = fechaTextoEspanolToDate(dateText, timeText);
+      return date ? date.toISOString() : "";
+    }
+
+    function isCurrentMonth(value){
+      const date = getDate(value);
+      if(!date) return false;
+
+      const now = new Date();
+      return date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth();
+    }
+
+    function isCurrentMonthNacional(item){
+      const date = fechaTextoEspanolToDate(item.date, item.time) || getDate(item.timestamp || item.fecha || item.date);
+      if(!date) return false;
+
+      const now = new Date();
+      return date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth();
+    }
+
+    function formatearFecha(value){
+      const fecha = getDate(value);
+      if(!fecha) return value || "-";
+      return fecha.toLocaleString("es-CL", {
+        day:"2-digit",
+        month:"short",
+        year:"numeric",
+        hour:"2-digit",
+        minute:"2-digit"
+      });
+    }
+
+    function escapeHTML(value){
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function limpiarHTML(value){
+      const raw = String(value || "");
+      const txt = document.createElement("textarea");
+      txt.innerHTML = raw;
+      const decoded = txt.value;
+      return decoded
+        .replace(/<!\[CDATA\[/g, "")
+        .replace(/\]\]>/g, "")
+        .replace(/<[^>]*>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function actualizarMetricasMes(){
+      const ransomwareMes = ransomwareData.filter(item => isCurrentMonth(item.attackdate || item.discovered));
+      const ransomwareLatamMes = ransomwareMes.filter(item => LATAM.has(String(item.country || "").toUpperCase().trim()));
+      const kevMes = kevData.filter(item => 
+  isCurrentMonth(item.fecha || item.date || item.dateAdded || item.date_added || item.published || item.date_published));
+      const noticiasNacionalesMes = noticiasNacionalesData.filter(item => isCurrentMonthNacional(item));
+
+      document.getElementById("statRansomGlobal").textContent = ransomwareMes.length;
+      document.getElementById("statRansomLatam").textContent = ransomwareLatamMes.length;
+      document.getElementById("statKev").textContent = kevMes.length;
+      document.getElementById("statNoticiasChile").textContent = noticiasNacionalesMes.length;
+    }
+
+    function obtenerTitulo(item){
+      return item.title || item.titulo || item.headline || generarTituloDesdeResumen(item.resumen) || "Actualización de ciberinteligencia";
+    }
+
+    function generarTituloDesdeResumen(resumen){
+      if(!resumen) return "";
+      const limpio = limpiarHTML(resumen).replace(/\s+/g," ").trim();
+      if(!limpio) return "";
+      const primeraFrase = limpio.split(/[.!?]/)[0];
+      return primeraFrase.length > 95 ? primeraFrase.slice(0,92) + "..." : primeraFrase;
+    }
+
+    function aplicarFiltros(){
+      const q = document.getElementById("searchInput")?.value?.toLowerCase().trim() || "";
+
+      filteredData = data.filter(item => {
+        const categoria = String(item.categoria || "");
+        const esCategoriaOculta = categoria === "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques";
+        const coincideCategoria = categoriaActual === "all" || categoria === categoriaActual;
+        const texto = [
+          item.title,
+          item.titulo,
+          item.headline,
+          item.resumen,
+          item.description,
+          item.descripcion,
+          item.categoria,
+          item.pais,
+          item.sector,
+          item.source,
+          ...(item.palabras_claves || [])
+        ].join(" ").toLowerCase();
+
+        const coincideBusqueda = !q || texto.includes(q);
+        return !esCategoriaOculta && coincideCategoria && coincideBusqueda;
+      });
+
+      paginaActual = 1;
+      renderFeed();
+    }
+
+    function filtrarCategoria(categoria){
+      categoriaActual = categoria;
+      document.querySelectorAll(".category-pill").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.category === categoria);
+      });
+      aplicarFiltros();
+    }
+
+    function renderFeed(){
       const feed = document.getElementById("feed");
+      const emptyState = document.getElementById("emptyState");
       feed.innerHTML = "";
 
       const inicio = (paginaActual - 1) * itemsPorPagina;
       const fin = inicio + itemsPorPagina;
-      const paginatedItems = items.slice(inicio, fin);
+      const paginatedItems = filteredData.slice(inicio, fin);
+
+      emptyState.classList.toggle("hidden", paginatedItems.length > 0);
 
       paginatedItems.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "card border-t border-gray-600 pt-4";
+        const meta = categoryMap[item.categoria] || { short:item.categoria || "Sin categoría", icon:"🛰️", tone:"text-slate-300", border:"border-white/10" };
+        const title = obtenerTitulo(item);
+        const resumen = limpiarHTML(item.resumen || item.description || item.descripcion || "Sin resumen disponible.");
+        const keywords = Array.isArray(item.palabras_claves) ? item.palabras_claves.slice(0,4) : [];
+
+        const card = document.createElement("article");
+        card.className = `news-card glass rounded-[2rem] p-5 ${meta.border}`;
         card.innerHTML = `
-          <div class="flex justify-between items-center mb-2 flex-wrap">
-            <span class="text-sm font-bold text-yellow-400">${(categoryMap[item.categoria]?.short) || item.categoria}</span>
-            <span class="text-xs text-gray-400">${new Date(item.timestamp).toLocaleString()}</span>
+          <div class="relative z-10 flex h-full flex-col">
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.05] px-3 py-1.5 text-xs font-bold ${meta.tone}">
+                <span>${meta.icon}</span>
+                <span>${escapeHTML(meta.short)}</span>
+              </div>
+              <time class="shrink-0 text-right text-[11px] leading-snug text-slate-500">${escapeHTML(formatearFecha(item.timestamp))}</time>
+            </div>
+
+            ${item.image ? `
+              <div class="mb-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[.03]">
+                <img src="${escapeHTML(item.image)}" alt="${escapeHTML(title)}" class="h-40 w-full object-cover opacity-90" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            ` : ""}
+
+            <h4 class="line-clamp-2 text-xl font-black leading-snug tracking-tight text-white">
+              ${escapeHTML(title)}
+            </h4>
+
+            <p class="line-clamp-4 mt-4 text-sm leading-relaxed text-slate-400">
+              ${escapeHTML(resumen)}
+            </p>
+
+            <div class="mt-5 grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
+              <div class="rounded-2xl bg-white/[.04] px-3 py-2">
+                <span class="text-slate-500">País / Fuente</span><br>
+                <strong class="text-slate-200">${escapeHTML(item.pais || item.source || "-")}</strong>
+              </div>
+              <div class="rounded-2xl bg-white/[.04] px-3 py-2">
+                <span class="text-slate-500">Sector</span><br>
+                <strong class="text-slate-200">${escapeHTML(item.sector || "-")}</strong>
+              </div>
+            </div>
+
+            ${keywords.length ? `
+              <div class="mt-4 flex flex-wrap gap-2">
+                ${keywords.map(k => `<span class="chip rounded-full px-3 py-1 text-[11px]">${escapeHTML(k)}</span>`).join("")}
+              </div>
+            ` : ""}
+
+            <div class="mt-auto pt-5">
+              ${item.url ? `<a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:bg-sky-400/15">Ver noticia →</a>` : `<span class="inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[.04] px-4 py-3 text-sm text-slate-500">Sin URL disponible</span>`}
+            </div>
           </div>
-          <p class="mb-3 text-gray-300 whitespace-pre-line text-justify">${item.resumen}</p>
-          <div class="text-sm text-gray-400">
-            <strong>🌍 País:</strong> ${item.pais || "-"} &nbsp;
-            <strong>🏛 Sector:</strong> ${item.sector || "-"}
-          </div>
-          <div class="text-sm text-gray-400 mt-1">
-            <strong>🔑 Claves:</strong> ${(item.palabras_claves || []).join(", ")}
-          </div>
-          ${item.url ? `<a href="${item.url}" target="_blank" class="text-yellow-400 underline mt-3 block">🔗 Ver noticia</a>` : ""}
         `;
         feed.appendChild(card);
       });
 
       document.getElementById("prevBtn").disabled = paginaActual === 1;
-      document.getElementById("nextBtn").disabled = fin >= items.length;
+      document.getElementById("nextBtn").disabled = fin >= filteredData.length;
+      const totalPaginas = Math.max(1, Math.ceil(filteredData.length / itemsPorPagina));
+      document.getElementById("pageIndicator").textContent = `Página ${paginaActual} de ${totalPaginas}`;
     }
 
-    // 🔹 Filtro por categoría
-    function filtrarCategoria(categoria) {
-      categoriaActual = categoria;
-      paginaActual = 1;
-      const filtrados = categoria === "all" ? data : data.filter(item => item.categoria === categoria);
-      renderFeed(filtrados);
-      document.querySelectorAll(".group ul").forEach(menu => menu.classList.add("hidden"));
+    function cambiarPagina(direccion){
+      const totalPaginas = Math.max(1, Math.ceil(filteredData.length / itemsPorPagina));
+      paginaActual = Math.min(Math.max(1, paginaActual + direccion), totalPaginas);
+      renderFeed();
+      document.querySelector("#feed")?.scrollIntoView({ behavior:"smooth", block:"start" });
     }
 
-    // 🔹 Paginación
-    function cambiarPagina(direccion) {
-      paginaActual += direccion;
-      const filtrados = categoriaActual === "all" ? data : data.filter(item => item.categoria === categoriaActual);
-      renderFeed(filtrados);
+    function toggleMenu(force){
+      const menu = document.getElementById("mobileMenu");
+      if(typeof force === "boolean"){
+        menu.classList.toggle("open", force);
+        return;
+      }
+      menu.classList.toggle("open");
     }
 
-    // 🔹 Menú móvil
-    function toggleMenu() {
-      const cont = document.querySelector("nav ul");
-      cont.classList.toggle("hidden");
-    }
+    (() => {
+      const canvas = document.getElementById("neuralnet");
+      const ctx = canvas.getContext("2d");
+      let W,H,DPR;
+      let nodes = [];
+      const mouse = { x:-9999, y:-9999 };
+
+      function config(){
+        const mobile = window.innerWidth < 768;
+        return {
+          count: mobile ? 38 : 92,
+          distance: mobile ? 112 : 150,
+          speed: mobile ? .18 : .26
+        };
+      }
+
+      function resize(){
+        W = window.innerWidth;
+        H = window.innerHeight;
+        DPR = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = W * DPR;
+        canvas.height = H * DPR;
+        canvas.style.width = W + "px";
+        canvas.style.height = H + "px";
+        ctx.setTransform(DPR,0,0,DPR,0,0);
+        initNodes();
+      }
+
+      function initNodes(){
+        const cfg = config();
+        nodes = Array.from({ length:cfg.count }, () => ({
+          x:Math.random()*W,
+          y:Math.random()*H,
+          vx:(Math.random()-.5)*cfg.speed,
+          vy:(Math.random()-.5)*cfg.speed,
+          r:Math.random()*1.7+.45
+        }));
+      }
+
+      window.addEventListener("resize", resize);
+      window.addEventListener("mousemove", e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+      window.addEventListener("touchmove", e => {
+        const t = e.touches[0];
+        if(t){ mouse.x = t.clientX; mouse.y = t.clientY; }
+      }, { passive:true });
+
+      function draw(){
+        const cfg = config();
+        ctx.clearRect(0,0,W,H);
+
+        for(const n of nodes){
+          n.x += n.vx;
+          n.y += n.vy;
+          if(n.x < -20 || n.x > W + 20) n.vx *= -1;
+          if(n.y < -20 || n.y > H + 20) n.vy *= -1;
+        }
+
+        for(let i=0;i<nodes.length;i++){
+          const a = nodes[i];
+          for(let j=i+1;j<nodes.length;j++){
+            const b = nodes[j];
+            const dx = a.x - b.x;
+            const dy = a.y - b.y;
+            const d = Math.sqrt(dx*dx + dy*dy);
+            if(d < cfg.distance){
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(96,165,250,${(1 - d/cfg.distance) * .09})`;
+              ctx.lineWidth = .55;
+              ctx.moveTo(a.x,a.y);
+              ctx.lineTo(b.x,b.y);
+              ctx.stroke();
+            }
+          }
+
+          const mdx = a.x - mouse.x;
+          const mdy = a.y - mouse.y;
+          const md = Math.sqrt(mdx*mdx + mdy*mdy);
+          if(md < 190){
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(34,211,238,${(1 - md/190) * .18})`;
+            ctx.lineWidth = .7;
+            ctx.moveTo(a.x,a.y);
+            ctx.lineTo(mouse.x,mouse.y);
+            ctx.stroke();
+          }
+        }
+
+        for(const n of nodes){
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(226,232,240,.62)";
+          ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(96,165,250,.045)";
+          ctx.arc(n.x,n.y,n.r*6,0,Math.PI*2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      draw();
+    })();
   </script>
 </body>
 </html>
