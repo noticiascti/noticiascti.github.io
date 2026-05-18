@@ -8,6 +8,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,6 +16,7 @@
   <style>
     :root{
       --bg:#05070d;
+      --panel:#0b1020;
       --text:#f8fafc;
       --muted:#94a3b8;
       --blue:#60a5fa;
@@ -102,9 +104,16 @@
 
     .nav-link:hover{color:#fff;}
 
+    .chip{
+      background:rgba(96,165,250,.10);
+      border:1px solid rgba(96,165,250,.18);
+      color:#bae6fd;
+    }
+
     .stat-card{
       position:relative;
       overflow:hidden;
+      min-height:138px;
     }
 
     .stat-card::after{
@@ -181,6 +190,13 @@
       overflow:hidden;
     }
 
+    .line-clamp-4{
+      display:-webkit-box;
+      -webkit-line-clamp:4;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
     .mobile-menu{
       max-height:0;
       overflow:hidden;
@@ -194,9 +210,14 @@
       color:#f8fafc;
     }
 
+    canvas{
+      max-width:100%;
+    }
+
     @media(max-width:768px){
       body::before{background-size:42px 42px;}
       .item-card:hover{transform:none;}
+      .stat-card{min-height:128px;}
     }
   </style>
 </head>
@@ -253,13 +274,13 @@
 
     <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <section class="py-8 sm:py-10 lg:py-14 text-center">
-        <div class="mx-auto max-w-5xl">
+        <div class="mx-auto flex max-w-5xl flex-col items-center text-center">
           <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] text-amber-200">
             <span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,.9)]"></span>
             Monitoreo de reclamos públicos
           </div>
 
-          <h2 class="text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">
+          <h2 class="mx-auto max-w-5xl text-center text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">
             Reclamos de <span class="gradient-text">entidades financieras</span>
           </h2>
 
@@ -294,6 +315,7 @@
               <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Reclamos</p>
               <p class="mt-1 text-xs font-semibold text-slate-400">Total período</p>
               <div id="statTotal" class="mt-3 text-4xl font-black text-amber-300">0</div>
+              <p class="mt-1 text-xs text-slate-500">Registros observados</p>
             </div>
           </div>
 
@@ -302,6 +324,7 @@
               <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Entidades</p>
               <p class="mt-1 text-xs font-semibold text-slate-400">Observadas</p>
               <div id="statEntities" class="mt-3 text-4xl font-black text-sky-300">0</div>
+              <p class="mt-1 text-xs text-slate-500">Bancos / fintech</p>
             </div>
           </div>
 
@@ -310,6 +333,7 @@
               <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Riesgo</p>
               <p class="mt-1 text-xs font-semibold text-slate-400">Fraude / robo</p>
               <div id="statFraud" class="mt-3 text-4xl font-black text-red-300">0</div>
+              <p class="mt-1 text-xs text-slate-500">Menciones sensibles</p>
             </div>
           </div>
 
@@ -318,6 +342,7 @@
               <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Operacional</p>
               <p class="mt-1 text-xs font-semibold text-slate-400">Cobros / retenciones</p>
               <div id="statOperational" class="mt-3 text-4xl font-black text-violet-300">0</div>
+              <p class="mt-1 text-xs text-slate-500">Fricciones operativas</p>
             </div>
           </div>
         </div>
@@ -349,7 +374,7 @@
             <div class="relative z-10">
               <p class="text-xs uppercase tracking-[.22em] text-slate-500">Temáticas</p>
               <h3 class="mt-2 text-2xl font-black">Categorías principales</h3>
-              <p class="mt-2 text-sm text-slate-400">Clasificación automática por palabras clave del título.</p>
+              <p class="mt-2 text-sm text-slate-400">Clasificación de reclamos según categoría del JSON.</p>
               <div class="mt-5 h-64">
                 <canvas id="chartCategories"></canvas>
               </div>
@@ -362,7 +387,7 @@
             <div class="relative z-10">
               <p class="text-xs uppercase tracking-[.22em] text-slate-500">Ranking</p>
               <h3 class="mt-2 text-2xl font-black">Entidades con más reclamos</h3>
-              <p class="mt-2 text-sm text-slate-400">Resumen preparado para escalar cuando existan datos de múltiples bancos y entidades financieras.</p>
+              <p class="mt-2 text-sm text-slate-400">Resumen por banco o entidad financiera observada en el archivo reclamos.json.</p>
               <div id="entityRanking" class="mt-5 grid gap-3 sm:grid-cols-2"></div>
             </div>
           </div>
@@ -371,7 +396,7 @@
             <div class="relative z-10">
               <p class="text-xs uppercase tracking-[.22em] text-slate-500">Alertamiento</p>
               <h3 class="mt-2 text-2xl font-black">Temas sensibles</h3>
-              <p class="mt-2 text-sm text-slate-400">Detección de términos asociados a fraude, robo, retención, soporte y cobros.</p>
+              <p class="mt-2 text-sm text-slate-400">Distribución de categorías relevantes para análisis operativo y de fraude.</p>
               <div id="sensitiveTopics" class="mt-5 space-y-3"></div>
             </div>
           </div>
@@ -384,7 +409,1088 @@
             <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Explorador de reclamos</h3>
             <p class="mt-1 text-sm text-slate-500">Listado filtrable por entidad, categoría y búsqueda libre.</p>
           </div>
+
+          <button onclick="limpiarFiltros()" class="w-fit rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 hover:bg-white/[.09]">
+            Limpiar filtros
+          </button>
         </div>
 
         <div class="mb-5 grid gap-3 lg:grid-cols-[1fr_1fr_1.4fr]">
-          <select id="entityFilter" onchange="applyFilters()" class="rounded-2
+          <select id="entityFilter" onchange="applyFilters()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
+            <option value="all">Todas las entidades</option>
+          </select>
+
+          <select id="categoryFilter" onchange="applyFilters()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
+            <option value="all">Todas las categorías</option>
+          </select>
+
+          <div class="relative">
+            <input id="searchInput" oninput="applyFilters()" type="search" placeholder="Buscar por título, entidad, categoría o URL..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40">
+            <span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span>
+          </div>
+        </div>
+
+        <div id="itemsList" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+
+        <div id="emptyState" class="hidden glass mt-6 rounded-[2rem] p-8 text-center">
+          <div class="text-4xl">📣</div>
+          <h4 class="mt-3 text-xl font-black">Sin resultados</h4>
+          <p class="mt-2 text-slate-400">No se encontraron reclamos para el filtro actual.</p>
+        </div>
+
+        <div class="mt-8 flex items-center justify-center gap-3">
+          <button id="prevBtn" onclick="changePage(-1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
+            ← Anterior
+          </button>
+          <span id="pageIndicator" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-400">Página 1</span>
+          <button id="nextBtn" onclick="changePage(1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
+            Siguiente →
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const RECLAMOS_JSON = "./reclamos.json";
+
+    const MESES_ES = {
+      "ene":0, "enero":0, "jan":0, "january":0,
+      "feb":1, "febrero":1, "february":1,
+      "mar":2, "marzo":2, "march":2,
+      "abr":3, "abril":3, "apr":3, "april":3,
+      "may":4, "mayo":4,
+      "jun":5, "junio":5, "june":5,
+      "jul":6, "julio":6, "july":6,
+      "ago":7, "agosto":7, "aug":7, "august":7,
+      "sep":8, "sept":8, "septiembre":8, "setiembre":8, "september":8,
+      "oct":9, "octubre":9, "october":9,
+      "nov":10, "noviembre":10, "november":10,
+      "dic":11, "diciembre":11, "dec":11, "december":11
+    };
+
+    const categoryMeta = {
+      "Fraude / Robo": {
+        icon:"🚨",
+        tone:"text-red-300",
+        border:"border-red-400/20",
+        group:"fraud"
+      },
+      "Cobros / Retenciones": {
+        icon:"💳",
+        tone:"text-amber-300",
+        border:"border-amber-400/20",
+        group:"operational"
+      },
+      "Cobros / Cargos": {
+        icon:"💳",
+        tone:"text-amber-300",
+        border:"border-amber-400/20",
+        group:"operational"
+      },
+      "Soporte / Atención": {
+        icon:"🎧",
+        tone:"text-sky-300",
+        border:"border-sky-400/20",
+        group:"support"
+      },
+      "Atención / Soporte": {
+        icon:"🎧",
+        tone:"text-sky-300",
+        border:"border-sky-400/20",
+        group:"support"
+      },
+      "Retención / Bloqueo": {
+        icon:"⛔",
+        tone:"text-violet-300",
+        border:"border-violet-400/20",
+        group:"operational"
+      },
+      "Operacional / Otros": {
+        icon:"🏦",
+        tone:"text-cyan-300",
+        border:"border-cyan-400/20",
+        group:"operational"
+      },
+      "Producto / Cuenta": {
+        icon:"🏦",
+        tone:"text-cyan-300",
+        border:"border-cyan-400/20",
+        group:"operational"
+      },
+      "Otros": {
+        icon:"📌",
+        tone:"text-slate-300",
+        border:"border-white/10",
+        group:"other"
+      }
+    };
+
+    let rawData = null;
+    let allItems = [];
+    let filteredItems = [];
+    let currentPeriod = "year";
+    let currentPage = 1;
+    const itemsPerPage = 9;
+
+    let chartTrend = null;
+    let chartEntities = null;
+    let chartCategories = null;
+
+    init();
+
+    async function init(){
+      rawData = await fetchJSON(RECLAMOS_JSON, []);
+
+      allItems = normalizeReclamos(rawData)
+        .map(item => ({
+          ...item,
+          categoria: normalizeCategory(item.categoria || item.categoria_original || classifyItem(item)),
+          fechaDate: parseDate(item.fecha)
+        }))
+        .sort((a,b) => {
+          const da = a.fechaDate ? a.fechaDate.getTime() : 0;
+          const db = b.fechaDate ? b.fechaDate.getTime() : 0;
+          return db - da;
+        });
+
+      populateFilters();
+      applyFilters();
+    }
+
+    async function fetchJSON(url, fallback){
+      try{
+        const res = await fetch(`${url}?t=${Date.now()}`);
+        if(!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+      }catch(err){
+        console.warn(`No se pudo cargar ${url}`, err);
+        return fallback;
+      }
+    }
+
+    function normalizeReclamos(input){
+      const items = [];
+
+      if(Array.isArray(input)){
+        input.forEach(ent => {
+          const entidad = normalizeEntityName(
+            ent.entidad ||
+            ent.nombre ||
+            ent.name ||
+            inferEntityFromUrl(ent.url_fuente) ||
+            "Entidad financiera"
+          );
+
+          const reclamos = ent.items || ent.reclamos || ent.data || [];
+
+          if(Array.isArray(reclamos) && reclamos.length){
+            reclamos.forEach(x => {
+              items.push(normalizeItem({
+                ...x,
+                entidad:x.entidad || entidad,
+                url_fuente:ent.url_fuente || ent.url || "",
+                total_reclamos_entidad:ent.total_reclamos || reclamos.length
+              }));
+            });
+          }else{
+            items.push(normalizeItem(ent));
+          }
+        });
+
+        return deduplicateItems(items.filter(isValidItem));
+      }
+
+      if(input && Array.isArray(input.reclamos)){
+        input.reclamos.forEach(x => items.push(normalizeItem(x)));
+      }
+
+      if(input && Array.isArray(input.items)){
+        input.items.forEach(x => items.push(normalizeItem(x)));
+      }
+
+      if(input && Array.isArray(input.data)){
+        input.data.forEach(x => items.push(normalizeItem(x)));
+      }
+
+      if(input && Array.isArray(input.empresa)){
+        input.empresa.forEach(x => items.push(normalizeItem({
+          ...x,
+          fuente_tipo:"empresa",
+          entidad:x.entidad || input.entidad || input.nombre || inferEntityFromUrl(x.url) || "Entidad financiera"
+        })));
+      }
+
+      if(input && Array.isArray(input.busqueda)){
+        input.busqueda.forEach(x => items.push(normalizeItem({
+          ...x,
+          fuente_tipo:"busqueda",
+          entidad:x.entidad || inferEntityFromTitle(x.titulo || x.title) || inferEntityFromUrl(x.url) || "Búsqueda general"
+        })));
+      }
+
+      if(input && Array.isArray(input.entidades)){
+        input.entidades.forEach(ent => {
+          const entidad = ent.entidad || ent.nombre || ent.name || inferEntityFromUrl(ent.url_fuente) || "Entidad financiera";
+          const reclamos = ent.reclamos || ent.items || ent.data || [];
+
+          if(Array.isArray(reclamos)){
+            reclamos.forEach(x => items.push(normalizeItem({
+              ...x,
+              entidad:x.entidad || entidad,
+              url_fuente:ent.url_fuente || ent.url || ""
+            })));
+          }
+        });
+      }
+
+      return deduplicateItems(items.filter(isValidItem));
+    }
+
+    function normalizeItem(item){
+      const title = item.titulo || item.title || item.headline || item.nombre || "";
+      const url = item.url || item.link || item.href || "";
+      const entidad = normalizeEntityName(
+        item.entidad ||
+        item.empresa ||
+        item.banco ||
+        item.institucion ||
+        item.institución ||
+        inferEntityFromTitle(title) ||
+        inferEntityFromUrl(url) ||
+        "Sin entidad"
+      );
+
+      const fecha = item.fecha || item.date || item.created || item.created_at || item.timestamp || "";
+      const frase = item.frase_coincidencia || item.frase || item.resumen || item.descripcion || item.description || item.extracto || "";
+
+      return {
+        entidad,
+        fecha,
+        titulo:title,
+        url,
+        categoria:item.categoria || item.categoria_original || "",
+        frase_coincidencia:frase,
+        fuente_tipo:item.fuente_tipo || item.source_type || "Reclamos.cl",
+        url_fuente:item.url_fuente || "",
+        total_reclamos_entidad:item.total_reclamos_entidad || null
+      };
+    }
+
+    function isValidItem(item){
+      return Boolean(item && (item.titulo || item.url || item.frase_coincidencia));
+    }
+
+    function deduplicateItems(items){
+      const seen = new Set();
+
+      return items.filter(item => {
+        const key = `${item.entidad}|${item.fecha}|${item.titulo}|${item.url}`.toLowerCase();
+
+        if(seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+
+    function normalizeEntityName(value){
+      const raw = String(value || "").trim();
+      if(!raw) return "Sin entidad";
+
+      const clean = raw
+        .replace(/[_-]+/g," ")
+        .replace(/\s+/g," ")
+        .trim();
+
+      const map = [
+        [/banco de chile|banco chile|banco_chile|banco-de-chile/i, "Banco de Chile"],
+        [/banco estado|bancoestado|banco_estado|banco-estado/i, "Banco Estado"],
+        [/scotiabank|banco scotiabank|banco_scotiabank/i, "Scotiabank"],
+        [/banco bice|banco_bice|\bbice\b/i, "Banco BICE"],
+        [/itau|itaú|banco itau|banco_itau/i, "Banco Itaú"],
+        [/falabella|banco_falabella/i, "Banco Falabella"],
+        [/consorcio|banco_consorcio/i, "Banco Consorcio"],
+        [/internacional|banco_internacional/i, "Banco Internacional"],
+        [/ripley|banco-ripley|banco ripley/i, "Banco Ripley"],
+        [/santander|banco_santander/i, "Banco Santander"],
+        [/\bbci\b|mach/i, "Banco BCI / MACH"]
+      ];
+
+      for(const [regex, name] of map){
+        if(regex.test(clean)) return name;
+      }
+
+      return clean
+        .split(" ")
+        .map(w => w ? w.charAt(0).toUpperCase() + w.slice(1).toLowerCase() : "")
+        .join(" ");
+    }
+
+    function inferEntityFromUrl(url){
+      const text = String(url || "").toLowerCase();
+      if(!text) return "";
+
+      const patterns = [
+        ["banco_de_chile", "Banco de Chile"],
+        ["banco-de-chile", "Banco de Chile"],
+        ["bancoestado", "Banco Estado"],
+        ["banco_estado", "Banco Estado"],
+        ["banco-estado", "Banco Estado"],
+        ["banco_scotiabank", "Scotiabank"],
+        ["scotiabank", "Scotiabank"],
+        ["banco_bice", "Banco BICE"],
+        ["banco_itau", "Banco Itaú"],
+        ["itau", "Banco Itaú"],
+        ["banco_falabella", "Banco Falabella"],
+        ["banco_consorcio", "Banco Consorcio"],
+        ["banco_internacional", "Banco Internacional"],
+        ["banco-ripley", "Banco Ripley"],
+        ["banco_santander", "Banco Santander"],
+        ["banco-bci", "Banco BCI / MACH"],
+        ["bci", "Banco BCI / MACH"],
+        ["mach", "Banco BCI / MACH"]
+      ];
+
+      for(const [needle, name] of patterns){
+        if(text.includes(needle)) return name;
+      }
+
+      return "";
+    }
+
+    function inferEntityFromTitle(title){
+      const text = String(title || "").toLowerCase();
+      if(!text) return "";
+
+      const patterns = [
+        ["banco de chile", "Banco de Chile"],
+        ["banco chile", "Banco de Chile"],
+        ["bancoestado", "Banco Estado"],
+        ["banco estado", "Banco Estado"],
+        ["scotiabank", "Scotiabank"],
+        ["bice", "Banco BICE"],
+        ["itau", "Banco Itaú"],
+        ["itaú", "Banco Itaú"],
+        ["falabella", "Banco Falabella"],
+        ["consorcio", "Banco Consorcio"],
+        ["internacional", "Banco Internacional"],
+        ["ripley", "Banco Ripley"],
+        ["santander", "Banco Santander"],
+        ["mach", "Banco BCI / MACH"],
+        ["bci", "Banco BCI / MACH"]
+      ];
+
+      for(const [needle, name] of patterns){
+        if(text.includes(needle)) return name;
+      }
+
+      return "";
+    }
+
+    function normalizeCategory(value){
+      const raw = String(value || "").trim();
+
+      if(!raw) return "Otros";
+
+      const clean = raw
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .toLowerCase()
+        .replace(/\s+/g," ")
+        .trim();
+
+      if(clean.includes("fraude") || clean.includes("robo")) return "Fraude / Robo";
+      if(clean.includes("cobro") || clean.includes("retencion") || clean.includes("retenciones")) return "Cobros / Retenciones";
+      if(clean.includes("soporte") || clean.includes("atencion")) return "Soporte / Atención";
+      if(clean.includes("operacional") || clean.includes("otros")) return "Operacional / Otros";
+      if(clean.includes("bloqueo")) return "Retención / Bloqueo";
+
+      return raw;
+    }
+
+    function classifyItem(item){
+      const text = [
+        item.titulo,
+        item.frase_coincidencia,
+        item.entidad
+      ].join(" ").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+
+      if(["fraude","estafa","robo","hackeo","hackeado","clonacion","suplantacion","phishing","hurto"].some(w => text.includes(w))){
+        return "Fraude / Robo";
+      }
+
+      if(["cobro","cargo","comision","deuda","facturacion","descuento","cobranza","seguro"].some(w => text.includes(w))){
+        return "Cobros / Retenciones";
+      }
+
+      if(["soporte","atencion","ejecutivo","call center","no responden","sin respuesta","mala atencion"].some(w => text.includes(w))){
+        return "Soporte / Atención";
+      }
+
+      if(["bloqueo","bloqueada","retenido","retencion","fondos","clave bloqueada"].some(w => text.includes(w))){
+        return "Retención / Bloqueo";
+      }
+
+      return "Operacional / Otros";
+    }
+
+    function getCategoryMeta(name){
+      return categoryMeta[name] || {
+        icon:"📌",
+        tone:"text-slate-300",
+        border:"border-white/10",
+        group:"other"
+      };
+    }
+
+    function parseDate(value){
+      if(!value) return null;
+
+      const raw = String(value).trim();
+      if(!raw) return null;
+
+      let d = new Date(raw.replace(" ", "T"));
+      if(!isNaN(d.getTime())) return d;
+
+      let m = raw.match(/^(\d{1,2})[-/](\d{1,2})[-/](\d{2,4})$/);
+      if(m){
+        const day = parseInt(m[1],10);
+        const month = parseInt(m[2],10) - 1;
+        let year = parseInt(m[3],10);
+
+        if(year < 100) year += 2000;
+
+        d = new Date(year, month, day);
+        if(!isNaN(d.getTime())) return d;
+      }
+
+      m = raw.toLowerCase().match(/(\d{1,2})\s+de\s+([a-záéíóúñ]+)\s+de\s+(\d{4})/i);
+      if(m){
+        const day = parseInt(m[1],10);
+        const monthName = m[2].normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+        const month = MESES_ES[monthName];
+        const year = parseInt(m[3],10);
+
+        if(month !== undefined){
+          d = new Date(year, month, day);
+          if(!isNaN(d.getTime())) return d;
+        }
+      }
+
+      return null;
+    }
+
+    function formatDate(value){
+      const d = value instanceof Date ? value : parseDate(value);
+      if(!d) return value || "-";
+
+      return d.toLocaleDateString("es-CL", {
+        day:"2-digit",
+        month:"short",
+        year:"numeric"
+      });
+    }
+
+    function periodLabel(period){
+      return {
+        month:"Mes en curso",
+        "30d":"Últimos 30 días",
+        "90d":"Últimos 90 días",
+        year:"Año en curso",
+        all:"Histórico"
+      }[period] || "Año en curso";
+    }
+
+    function isInPeriod(item, period){
+      if(period === "all") return true;
+
+      const d = item.fechaDate;
+      if(!d) return false;
+
+      const now = new Date();
+
+      if(period === "month"){
+        return d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth();
+      }
+
+      if(period === "year"){
+        return d.getFullYear() === now.getFullYear();
+      }
+
+      if(period === "30d"){
+        const limit = new Date(now);
+        limit.setDate(limit.getDate() - 30);
+        return d >= limit && d <= now;
+      }
+
+      if(period === "90d"){
+        const limit = new Date(now);
+        limit.setDate(limit.getDate() - 90);
+        return d >= limit && d <= now;
+      }
+
+      return true;
+    }
+
+    function setPeriod(period){
+      currentPeriod = period;
+      document.getElementById("periodText").textContent = periodLabel(period);
+
+      document.querySelectorAll(".period-pill").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.period === period);
+      });
+
+      applyFilters();
+    }
+
+    function populateFilters(){
+      const entityFilter = document.getElementById("entityFilter");
+      const categoryFilter = document.getElementById("categoryFilter");
+
+      const entities = [...new Set(allItems.map(x => x.entidad).filter(Boolean))]
+        .sort((a,b) => a.localeCompare(b, "es"));
+
+      const categories = [...new Set(allItems.map(x => x.categoria).filter(Boolean))]
+        .sort((a,b) => a.localeCompare(b, "es"));
+
+      entityFilter.innerHTML = `<option value="all">Todas las entidades</option>`;
+      entities.forEach(ent => {
+        entityFilter.insertAdjacentHTML("beforeend", `<option value="${escapeAttr(ent)}">${escapeHTML(ent)}</option>`);
+      });
+
+      categoryFilter.innerHTML = `<option value="all">Todas las categorías</option>`;
+      categories.forEach(cat => {
+        categoryFilter.insertAdjacentHTML("beforeend", `<option value="${escapeAttr(cat)}">${escapeHTML(cat)}</option>`);
+      });
+    }
+
+    function applyFilters(){
+      const entity = document.getElementById("entityFilter")?.value || "all";
+      const category = document.getElementById("categoryFilter")?.value || "all";
+      const q = document.getElementById("searchInput")?.value?.toLowerCase().trim() || "";
+
+      filteredItems = allItems.filter(item => {
+        const inPeriod = isInPeriod(item, currentPeriod);
+        const matchEntity = entity === "all" || item.entidad === entity;
+        const matchCategory = category === "all" || item.categoria === category;
+
+        const text = [
+          item.entidad,
+          item.fecha,
+          item.titulo,
+          item.url,
+          item.frase_coincidencia,
+          item.categoria
+        ].join(" ").toLowerCase();
+
+        const matchSearch = !q || text.includes(q);
+
+        return inPeriod && matchEntity && matchCategory && matchSearch;
+      });
+
+      currentPage = 1;
+      updateMetrics();
+      renderCharts();
+      renderRanking();
+      renderSensitiveTopics();
+      renderItems();
+    }
+
+    function limpiarFiltros(){
+      document.getElementById("entityFilter").value = "all";
+      document.getElementById("categoryFilter").value = "all";
+      document.getElementById("searchInput").value = "";
+      applyFilters();
+    }
+
+    function updateMetrics(){
+      const total = filteredItems.length;
+      const entities = new Set(filteredItems.map(x => x.entidad)).size;
+      const fraud = filteredItems.filter(x => x.categoria === "Fraude / Robo").length;
+
+      const operational = filteredItems.filter(x => {
+        const meta = getCategoryMeta(x.categoria);
+        return meta.group === "operational";
+      }).length;
+
+      document.getElementById("statTotal").textContent = total;
+      document.getElementById("statEntities").textContent = entities;
+      document.getElementById("statFraud").textContent = fraud;
+      document.getElementById("statOperational").textContent = operational;
+    }
+
+    function renderCharts(){
+      renderTrendChart();
+      renderEntitiesChart();
+      renderCategoriesChart();
+    }
+
+    function chartBaseOptions(){
+      return {
+        responsive:true,
+        maintainAspectRatio:false,
+        plugins:{
+          legend:{
+            labels:{
+              color:"#cbd5e1",
+              boxWidth:12,
+              usePointStyle:true
+            }
+          },
+          tooltip:{
+            backgroundColor:"rgba(2,6,23,.92)",
+            titleColor:"#f8fafc",
+            bodyColor:"#cbd5e1",
+            borderColor:"rgba(255,255,255,.12)",
+            borderWidth:1
+          }
+        },
+        scales:{
+          x:{
+            ticks:{ color:"#94a3b8" },
+            grid:{ color:"rgba(148,163,184,.10)" }
+          },
+          y:{
+            beginAtZero:true,
+            ticks:{ color:"#94a3b8", precision:0 },
+            grid:{ color:"rgba(148,163,184,.10)" }
+          }
+        }
+      };
+    }
+
+    function renderTrendChart(){
+      const ctx = document.getElementById("chartTrend");
+
+      const grouped = {};
+      filteredItems.forEach(item => {
+        const d = item.fechaDate;
+        const key = d ? `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}` : "Sin fecha";
+        grouped[key] = (grouped[key] || 0) + 1;
+      });
+
+      const labels = Object.keys(grouped).sort();
+      const values = labels.map(k => grouped[k]);
+
+      if(chartTrend) chartTrend.destroy();
+
+      chartTrend = new Chart(ctx, {
+        type:"line",
+        data:{
+          labels,
+          datasets:[{
+            label:"Reclamos",
+            data:values,
+            tension:.38,
+            fill:true,
+            borderColor:"rgba(96,165,250,.95)",
+            backgroundColor:"rgba(96,165,250,.12)",
+            pointBackgroundColor:"rgba(34,211,238,.95)",
+            pointBorderColor:"rgba(34,211,238,.95)",
+            pointRadius:3
+          }]
+        },
+        options:chartBaseOptions()
+      });
+    }
+
+    function renderEntitiesChart(){
+      const ctx = document.getElementById("chartEntities");
+
+      const grouped = countBy(filteredItems, "entidad");
+      const top = Object.entries(grouped)
+        .sort((a,b) => b[1] - a[1])
+        .slice(0,8);
+
+      if(chartEntities) chartEntities.destroy();
+
+      chartEntities = new Chart(ctx, {
+        type:"bar",
+        data:{
+          labels:top.map(x => x[0]),
+          datasets:[{
+            label:"Reclamos",
+            data:top.map(x => x[1]),
+            borderColor:"rgba(34,211,238,.85)",
+            backgroundColor:"rgba(34,211,238,.28)",
+            borderWidth:1
+          }]
+        },
+        options:{
+          ...chartBaseOptions(),
+          plugins:{
+            ...chartBaseOptions().plugins,
+            legend:{ display:false }
+          }
+        }
+      });
+    }
+
+    function renderCategoriesChart(){
+      const ctx = document.getElementById("chartCategories");
+
+      const grouped = countBy(filteredItems, "categoria");
+      const entries = Object.entries(grouped)
+        .sort((a,b) => b[1] - a[1]);
+
+      if(chartCategories) chartCategories.destroy();
+
+      chartCategories = new Chart(ctx, {
+        type:"doughnut",
+        data:{
+          labels:entries.map(x => x[0]),
+          datasets:[{
+            data:entries.map(x => x[1]),
+            borderColor:"rgba(2,6,23,.92)",
+            borderWidth:2,
+            backgroundColor:[
+              "rgba(248,113,113,.78)",
+              "rgba(251,191,36,.78)",
+              "rgba(167,139,250,.78)",
+              "rgba(96,165,250,.78)",
+              "rgba(34,211,238,.78)",
+              "rgba(148,163,184,.70)",
+              "rgba(52,211,153,.70)"
+            ]
+          }]
+        },
+        options:{
+          responsive:true,
+          maintainAspectRatio:false,
+          plugins:{
+            legend:{
+              position:"bottom",
+              labels:{
+                color:"#cbd5e1",
+                boxWidth:12,
+                usePointStyle:true
+              }
+            },
+            tooltip:{
+              backgroundColor:"rgba(2,6,23,.92)",
+              titleColor:"#f8fafc",
+              bodyColor:"#cbd5e1",
+              borderColor:"rgba(255,255,255,.12)",
+              borderWidth:1
+            }
+          }
+        }
+      });
+    }
+
+    function renderRanking(){
+      const container = document.getElementById("entityRanking");
+      container.innerHTML = "";
+
+      const grouped = countBy(filteredItems, "entidad");
+      const total = filteredItems.length || 1;
+
+      const top = Object.entries(grouped)
+        .sort((a,b) => b[1] - a[1])
+        .slice(0,8);
+
+      if(!top.length){
+        container.innerHTML = `<div class="rounded-3xl border border-white/10 bg-white/[.04] p-4 text-sm text-slate-400">Sin datos para el período seleccionado.</div>`;
+        return;
+      }
+
+      top.forEach(([entity, count], index) => {
+        const pct = Math.round((count / total) * 100);
+
+        const item = document.createElement("div");
+        item.className = "rounded-3xl border border-white/10 bg-white/[.04] p-4";
+        item.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <p class="text-xs uppercase tracking-[.18em] text-slate-500">#${index + 1}</p>
+              <h4 class="mt-1 text-base font-black text-white">${escapeHTML(entity)}</h4>
+            </div>
+            <div class="text-right">
+              <p class="text-2xl font-black text-sky-300">${count}</p>
+              <p class="text-xs text-slate-500">${pct}%</p>
+            </div>
+          </div>
+          <div class="mt-4 h-2 overflow-hidden rounded-full bg-white/[.06]">
+            <div class="h-full rounded-full bg-sky-400/70" style="width:${pct}%"></div>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function renderSensitiveTopics(){
+      const container = document.getElementById("sensitiveTopics");
+      container.innerHTML = "";
+
+      const grouped = countBy(filteredItems, "categoria");
+      const total = filteredItems.length || 1;
+
+      const ordered = Object.entries(grouped)
+        .sort((a,b) => b[1] - a[1])
+        .slice(0,6);
+
+      if(!ordered.length){
+        container.innerHTML = `<div class="rounded-3xl border border-white/10 bg-white/[.04] p-4 text-sm text-slate-400">Sin categorías disponibles.</div>`;
+        return;
+      }
+
+      ordered.forEach(([category, count]) => {
+        const meta = getCategoryMeta(category);
+        const pct = Math.round((count / total) * 100);
+
+        container.insertAdjacentHTML("beforeend", `
+          <div class="rounded-3xl border border-white/10 bg-white/[.04] p-4">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="text-xl">${meta.icon}</span>
+                <div>
+                  <p class="text-sm font-bold text-white">${escapeHTML(category)}</p>
+                  <p class="text-xs text-slate-500">${pct}% del período</p>
+                </div>
+              </div>
+              <span class="text-xl font-black ${meta.tone}">${count}</span>
+            </div>
+          </div>
+        `);
+      });
+    }
+
+    function renderItems(){
+      const container = document.getElementById("itemsList");
+      const emptyState = document.getElementById("emptyState");
+
+      container.innerHTML = "";
+
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = filteredItems.slice(start, end);
+
+      emptyState.classList.toggle("hidden", pageItems.length > 0);
+
+      pageItems.forEach(item => {
+        const meta = getCategoryMeta(item.categoria);
+
+        const card = document.createElement("article");
+        card.className = `item-card glass rounded-[2rem] p-5 ${meta.border}`;
+
+        card.innerHTML = `
+          <div class="relative z-10 flex h-full flex-col">
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.05] px-3 py-1.5 text-xs font-bold ${meta.tone}">
+                <span>${meta.icon}</span>
+                <span>${escapeHTML(item.categoria || "Otros")}</span>
+              </div>
+              <time class="shrink-0 text-right text-[11px] leading-snug text-slate-500">${escapeHTML(formatDate(item.fecha))}</time>
+            </div>
+
+            <h4 class="line-clamp-3 text-xl font-black leading-snug tracking-tight text-white">
+              ${escapeHTML(item.titulo || "Reclamo sin título")}
+            </h4>
+
+            <p class="mt-3 text-sm font-semibold text-sky-300">
+              ${escapeHTML(item.entidad || "Sin entidad")}
+            </p>
+
+            <p class="line-clamp-4 mt-4 text-sm leading-relaxed text-slate-400">
+              ${escapeHTML(item.frase_coincidencia || "Sin descripción adicional disponible.")}
+            </p>
+
+            <div class="mt-5 grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
+              <div class="rounded-2xl bg-white/[.04] px-3 py-2">
+                <span class="text-slate-500">Fuente</span><br>
+                <strong class="text-slate-200">${escapeHTML(item.fuente_tipo || "Reclamos.cl")}</strong>
+              </div>
+              <div class="rounded-2xl bg-white/[.04] px-3 py-2">
+                <span class="text-slate-500">Categoría</span><br>
+                <strong class="text-slate-200">${escapeHTML(item.categoria || "Otros")}</strong>
+              </div>
+            </div>
+
+            <div class="mt-auto pt-5">
+              ${item.url ? `
+                <a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:bg-sky-400/15">
+                  Ver reclamo →
+                </a>
+              ` : `
+                <span class="inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[.04] px-4 py-3 text-sm text-slate-500">
+                  Sin URL disponible
+                </span>
+              `}
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      document.getElementById("prevBtn").disabled = currentPage === 1;
+      document.getElementById("nextBtn").disabled = end >= filteredItems.length;
+
+      const totalPages = Math.max(1, Math.ceil(filteredItems.length / itemsPerPage));
+      document.getElementById("pageIndicator").textContent = `Página ${currentPage} de ${totalPages}`;
+    }
+
+    function changePage(direction){
+      const totalPages = Math.max(1, Math.ceil(filteredItems.length / itemsPerPage));
+      currentPage = Math.min(Math.max(1, currentPage + direction), totalPages);
+      renderItems();
+      document.querySelector("#itemsList")?.scrollIntoView({ behavior:"smooth", block:"start" });
+    }
+
+    function countBy(items, key){
+      return items.reduce((acc, item) => {
+        const value = item[key] || "Sin dato";
+        acc[value] = (acc[value] || 0) + 1;
+        return acc;
+      }, {});
+    }
+
+    function escapeHTML(value){
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function escapeAttr(value){
+      return escapeHTML(value).replaceAll("`", "&#096;");
+    }
+
+    function toggleMenu(force){
+      const menu = document.getElementById("mobileMenu");
+
+      if(typeof force === "boolean"){
+        menu.classList.toggle("open", force);
+        return;
+      }
+
+      menu.classList.toggle("open");
+    }
+
+    (() => {
+      const canvas = document.getElementById("neuralnet");
+      const ctx = canvas.getContext("2d");
+
+      let W,H,DPR;
+      let nodes = [];
+      const mouse = { x:-9999, y:-9999 };
+
+      function config(){
+        const mobile = window.innerWidth < 768;
+        return {
+          count: mobile ? 38 : 92,
+          distance: mobile ? 112 : 150,
+          speed: mobile ? .18 : .26
+        };
+      }
+
+      function resize(){
+        W = window.innerWidth;
+        H = window.innerHeight;
+        DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+        canvas.width = W * DPR;
+        canvas.height = H * DPR;
+        canvas.style.width = W + "px";
+        canvas.style.height = H + "px";
+
+        ctx.setTransform(DPR,0,0,DPR,0,0);
+        initNodes();
+      }
+
+      function initNodes(){
+        const cfg = config();
+
+        nodes = Array.from({ length:cfg.count }, () => ({
+          x:Math.random()*W,
+          y:Math.random()*H,
+          vx:(Math.random()-.5)*cfg.speed,
+          vy:(Math.random()-.5)*cfg.speed,
+          r:Math.random()*1.7+.45
+        }));
+      }
+
+      window.addEventListener("resize", resize);
+
+      window.addEventListener("mousemove", e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+
+      window.addEventListener("touchmove", e => {
+        const t = e.touches[0];
+
+        if(t){
+          mouse.x = t.clientX;
+          mouse.y = t.clientY;
+        }
+      }, { passive:true });
+
+      function draw(){
+        const cfg = config();
+        ctx.clearRect(0,0,W,H);
+
+        for(const n of nodes){
+          n.x += n.vx;
+          n.y += n.vy;
+
+          if(n.x < -20 || n.x > W + 20) n.vx *= -1;
+          if(n.y < -20 || n.y > H + 20) n.vy *= -1;
+        }
+
+        for(let i=0;i<nodes.length;i++){
+          const a = nodes[i];
+
+          for(let j=i+1;j<nodes.length;j++){
+            const b = nodes[j];
+            const dx = a.x - b.x;
+            const dy = a.y - b.y;
+            const d = Math.sqrt(dx*dx + dy*dy);
+
+            if(d < cfg.distance){
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(96,165,250,${(1 - d/cfg.distance) * .09})`;
+              ctx.lineWidth = .55;
+              ctx.moveTo(a.x,a.y);
+              ctx.lineTo(b.x,b.y);
+              ctx.stroke();
+            }
+          }
+
+          const mdx = a.x - mouse.x;
+          const mdy = a.y - mouse.y;
+          const md = Math.sqrt(mdx*mdx + mdy*mdy);
+
+          if(md < 190){
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(34,211,238,${(1 - md/190) * .18})`;
+            ctx.lineWidth = .7;
+            ctx.moveTo(a.x,a.y);
+            ctx.lineTo(mouse.x,mouse.y);
+            ctx.stroke();
+          }
+        }
+
+        for(const n of nodes){
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(226,232,240,.62)";
+          ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(96,165,250,.045)";
+          ctx.arc(n.x,n.y,n.r*6,0,Math.PI*2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      draw();
+    })();
+  </script>
+</body>
+</html>
