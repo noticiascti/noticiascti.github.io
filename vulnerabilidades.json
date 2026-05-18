@@ -1,16 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-05-18 00:10:48",
+    "generated_at": "2026-05-17 20:55:07",
+    "generated_timezone": "America/Santiago",
     "source": "cves_2026_dashboard.json",
     "repo": "https://github.com/CVEProject/cvelistV5.git",
     "repo_dir": "cvelistV5",
     "year": "2026",
     "current_month": "2026-05",
     "previous_month": "2026-04",
-    "total_cves_source": 19044,
-    "total_cves_current_month": 3504,
+    "total_cves_source": 19045,
+    "total_cves_current_month": 3505,
     "total_cves_previous_month": 5347,
-    "total_cves_year": 19044,
+    "total_cves_year": 19045,
     "known_vendors": [
       "Microsoft",
       "Cisco",
@@ -48,9 +49,23 @@
       "QNAP",
       "Synology"
     ],
-    "note": "Archivo resumido para dashboard web. Incluye detalle compacto del mes en curso, estadísticas del mes anterior y timeline anual."
+    "note": "Archivo resumido para dashboard web. Incluye detalle compacto del mes en curso, estadísticas del mes anterior y timeline anual hasta el mes en curso."
   },
   "items": [
+    {
+      "cve": "CVE-2026-8773",
+      "date": "2026-05-18T00:00:13.854Z",
+      "day": "2026-05-18",
+      "month": "2026-05",
+      "severity": "MEDIUM",
+      "score": 5.1,
+      "vendor": "linlinjava",
+      "product": "litemall",
+      "title": "linlinjava litemall Database Setting DbUtil.java load argument injection",
+      "known_vendor": false,
+      "exploited": false,
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8773"
+    },
     {
       "cve": "CVE-2026-8772",
       "date": "2026-05-17T23:45:10.800Z",
@@ -200,7 +215,7 @@
       "score": null,
       "vendor": "JONASBN",
       "product": "Crypt::OpenSSL::PKCS12",
-      "title": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws",
+      "title": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out-of-bounds (OOB) write flaws",
       "known_vendor": false,
       "exploited": false,
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8507"
@@ -49109,10 +49124,10 @@
     }
   ],
   "summary": {
-    "total": 3504,
+    "total": 3505,
     "critical": 280,
     "high": 1062,
-    "medium": 1115,
+    "medium": 1116,
     "low": 113,
     "none": 7,
     "unknown": 927,
@@ -49125,7 +49140,7 @@
     "severity": [
       {
         "name": "MEDIUM",
-        "count": 1115
+        "count": 1116
       },
       {
         "name": "HIGH",
@@ -49143,7 +49158,7 @@
     "cvss_ranges": [
       {
         "name": "4.0 - 6.9",
-        "count": 1115
+        "count": 1116
       },
       {
         "name": "7.0 - 8.9",
@@ -49329,7 +49344,7 @@
     "by_month": [
       {
         "name": "2026-05",
-        "count": 3504
+        "count": 3505
       }
     ],
     "by_day": [
@@ -49400,6 +49415,10 @@
       {
         "name": "2026-05-16",
         "count": 6
+      },
+      {
+        "name": "2026-05-18",
+        "count": 1
       }
     ],
     "top_vulnerabilities": [
@@ -49828,6 +49847,20 @@
     ],
     "latest": [
       {
+        "cve": "CVE-2026-8773",
+        "date": "2026-05-18T00:00:13.854Z",
+        "day": "2026-05-18",
+        "month": "2026-05",
+        "severity": "MEDIUM",
+        "score": 5.1,
+        "vendor": "linlinjava",
+        "product": "litemall",
+        "title": "linlinjava litemall Database Setting DbUtil.java load argument injection",
+        "known_vendor": false,
+        "exploited": false,
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8773"
+      },
+      {
         "cve": "CVE-2026-8772",
         "date": "2026-05-17T23:45:10.800Z",
         "day": "2026-05-17",
@@ -49976,7 +50009,7 @@
         "score": null,
         "vendor": "JONASBN",
         "product": "Crypt::OpenSSL::PKCS12",
-        "title": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws",
+        "title": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out-of-bounds (OOB) write flaws",
         "known_vendor": false,
         "exploited": false,
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8507"
@@ -54012,20 +54045,6 @@
         "known_vendor": true,
         "exploited": false,
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8526"
-      },
-      {
-        "cve": "CVE-2026-8525",
-        "date": "2026-05-14T19:52:17.052Z",
-        "day": "2026-05-14",
-        "month": "2026-05",
-        "severity": "UNKNOWN",
-        "score": null,
-        "vendor": "Google",
-        "product": "Chrome",
-        "title": "",
-        "known_vendor": true,
-        "exploited": false,
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8525"
       }
     ],
     "latest_known_vendors": [
@@ -72331,10 +72350,10 @@
   },
   "year": {
     "summary": {
-      "total": 19044,
+      "total": 19045,
       "critical": 1501,
       "high": 5953,
-      "medium": 7827,
+      "medium": 7828,
       "low": 657,
       "none": 25,
       "unknown": 3081,
@@ -72360,35 +72379,7 @@
       },
       {
         "name": "2026-05",
-        "count": 3504
-      },
-      {
-        "name": "2026-06",
-        "count": 0
-      },
-      {
-        "name": "2026-07",
-        "count": 0
-      },
-      {
-        "name": "2026-08",
-        "count": 0
-      },
-      {
-        "name": "2026-09",
-        "count": 0
-      },
-      {
-        "name": "2026-10",
-        "count": 0
-      },
-      {
-        "name": "2026-11",
-        "count": 0
-      },
-      {
-        "name": "2026-12",
-        "count": 0
+        "count": 3505
       }
     ],
     "top_vendors": [
@@ -72558,7 +72549,7 @@
     "severity": [
       {
         "name": "MEDIUM",
-        "count": 7827
+        "count": 7828
       },
       {
         "name": "HIGH",
