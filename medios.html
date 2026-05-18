@@ -1,147 +1,703 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
   <base href="https://noticiascti.github.io/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medios Nacionales — iSecurity</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Noticias CTI | Medios Nacionales</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
-</head>
-<body class="bg-gray-900 text-gray-200">
-
-  <!-- Header -->
-  <header class="bg-gray-950 p-4 shadow-md border-b border-gray-700 flex items-center space-x-3 cursor-pointer"
-          onclick="window.location.href='index.html'">
-    <img src="https://isecurityqa.com/wp-content/uploads/2025/03/isecurity_logo-c.png" alt="iSecurity Logo" class="h-8">
-    <h1 class="text-2xl font-bold text-yellow-400">Medios Nacionales</h1>
-  </header>
-
-  <!-- Menú principal -->
-  <nav class="bg-gray-950 border-b border-gray-700">
-    <ul class="flex flex-col md:flex-row md:space-x-6 p-4 md:p-2">
-      <!-- Inicio -->
-      <li><a href="index.html" class="hover:text-yellow-400">🏠 Inicio</a></li>
-
-      <!-- Noticias Ciberseguridad (dropdown) -->
-      <li class="relative group">
-        <button class="hover:text-yellow-400 flex items-center">🔒 Noticias Ciberseguridad ▾</button>
-        <ul class="absolute hidden group-hover:block bg-gray-900 border border-gray-700 mt-2 rounded-lg w-56 z-50">
-          <li><a href="index.html#incidentes" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💥 Incidentes & DataBreach</a></li>
-          <li><a href="index.html#tendencias" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">📊 Tendencias</a></li>
-          <li><a href="index.html#locales" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">🇨🇱 Noticias Locales</a></li>
-          <li><a href="index.html#prevencion" class="block px-4 py-2 hover:bg-yellow-500 hover:text-black">💡 Innovación & Prevención</a></li>
-        </ul>
-      </li>
-
-      <!-- Medios Nacionales -->
-      <li><a href="medios.html" class="text-yellow-400 font-semibold">📰 Medios Nacionales</a></li>
-
-      <!-- Status -->
-      <li><a href="status.html" class="hover:text-yellow-400">📊 Status</a></li>
-
-      <!-- Ransom & Vulnerabilidades -->
-      <li><a href="ransom_vulnerabilidades.html" class="hover:text-yellow-400">⚡ Ransom & Vulnerabilidades</a></li>
-
-      <!-- Reclamos -->
-      <li><a href="reclamos.html" class="hover:text-yellow-400">📣 Reclamos</a></li>
-    </ul>
-  </nav>
-
-  <!-- Contenedor principal -->
-  <main class="p-6">
-
-    <!-- Bloque de logos -->
-    <h2 class="text-xl font-bold text-yellow-400 text-center mt-6 mb-2">
-      Sitios web monitoreados
-    </h2>
-    <div class="bg-white rounded-xl shadow-md mb-6 p-6">
-      <div class="flex flex-wrap justify-center items-center gap-6">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/24_horas_2023_logo.png" alt="24 Horas" class="h-20 object-contain">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Logotipo_de_Teletrece_(2019-2022).png" alt="T13" class="h-20 object-contain">
-        <img src="https://cdn.brandfetch.io/idbvH4nfxl/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="The Clinic" class="h-20 object-contain">
-        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/39/b6/af39b69a-0ed8-9633-f968-786862398c9c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="BioBio" class="h-20 object-contain">
-        <img src="https://r.prcdn.co/res/es-ar/g25056/t490995764/2/images/new-logo-diariofinanciero.png" alt="Diario Financiero" class="h-20 object-contain">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Logolatercera2017.png" alt="La Tercera" class="h-20 object-contain">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Radio_Cooperativa_Logo.svg/1920px-Radio_Cooperativa_Logo.svg.png" alt="Cooperativa" class="h-20 object-contain">
-        <img src="https://static.emol.cl/emol50/img/logo_emol.gif" alt="EMOL" class="h-20 object-contain">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/CNN_Chile_logo_2017.svg/960px-CNN_Chile_logo_2017.svg.png" alt="CNN Chile" class="h-20 object-contain">
-        <img src="https://colegiofarmaceutico.cl/wp-content/uploads/2019/08/n03_20082019-ba7.png" alt="El Libero" class="h-20 object-contain">
-        <img src="https://i.imgur.com/IUJbfr8.jpeg" alt="TrendTIC" class="h-20 object-contain">
-        <img src="https://zonaciso.cl/wp-content/uploads/2025/10/cropped-logo.png" alt="Zona CISO" class="h-20 object-contain">
-
-
-
-
-      </div>
-    </div>
-
-    <!-- Grid de noticias -->
-    <div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-  </main>
-
-  <script>
-    // 🔹 Dropdown toggle
-    const dropdownBtns = document.querySelectorAll(".group > button");
-    dropdownBtns.forEach(btn => {
-      const menu = btn.nextElementSibling;
-      btn.addEventListener("click", e => {
-        e.stopPropagation();
-        menu.classList.toggle("hidden");
-      });
-      document.addEventListener("click", e => {
-        if (!btn.contains(e.target) && !menu.contains(e.target)) {
-          menu.classList.add("hidden");
-        }
-      });
-    });
-
-    // 🔹 Parsear fechas en español
-    function parseFecha(fechaStr, horaStr) {
-      const meses = {
-        "enero": 0, "febrero": 1, "marzo": 2, "abril": 3,
-        "mayo": 4, "junio": 5, "julio": 6, "agosto": 7,
-        "septiembre": 8, "octubre": 9, "noviembre": 10, "diciembre": 11
-      };
-      const match = fechaStr.match(/(\d{1,2}) de (\w+) de (\d{4})/i);
-      if (!match) return new Date(0);
-      const dia = parseInt(match[1], 10);
-      const mes = meses[match[2].toLowerCase()];
-      const año = parseInt(match[3], 10);
-      const [h, m] = horaStr.split(":").map(Number);
-      return new Date(año, mes, dia, h, m);
+    :root{
+      --bg:#05070d;
+      --text:#f8fafc;
+      --muted:#94a3b8;
+      --blue:#60a5fa;
+      --cyan:#22d3ee;
+      --violet:#a78bfa;
+      --amber:#fbbf24;
+      --red:#f87171;
+      --green:#34d399;
     }
 
-    // 🔹 Cargar noticias
-    fetch("status_nacional.json?t=" + Date.now())
-      .then(r => r.json())
-      .then(news => {
-        const container = document.getElementById("newsGrid");
+    *{
+      font-family:'Inter',sans-serif;
+      -webkit-tap-highlight-color:transparent;
+      box-sizing:border-box;
+    }
 
-        // Ordenar de más reciente a más antiguo
-        news.sort((a, b) => parseFecha(b.date, b.time) - parseFecha(a.date, a.time));
+    html{scroll-behavior:smooth;}
 
-        news.forEach(n => {
-          const card = document.createElement("div");
-          card.className = "bg-white rounded-xl shadow-lg overflow-hidden text-gray-900 flex flex-col";
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 14% 8%, rgba(59,130,246,.17), transparent 30%),
+        radial-gradient(circle at 86% 3%, rgba(168,85,247,.13), transparent 28%),
+        radial-gradient(circle at 72% 92%, rgba(34,211,238,.08), transparent 25%),
+        linear-gradient(180deg,#05070d 0%,#08111f 54%,#05070d 100%);
+      overflow-x:hidden;
+    }
 
-          card.innerHTML = `
-            <img src="${n.image}" alt="${n.title}" class="h-48 w-full object-cover">
-            <div class="p-4 flex flex-col flex-grow">
-              <p class="text-xs text-gray-500">${n.date} - ${n.time}</p>
-              <h2 class="mt-2 text-lg font-bold text-gray-800 hover:text-yellow-600">
-                <a href="${n.url}" target="_blank">${n.title}</a>
-              </h2>
-              <p class="mt-3 text-xs text-gray-500">Fuente: ${n.source}</p>
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+      background-size:56px 56px;
+      mask-image:radial-gradient(circle at center, black 24%, transparent 82%);
+      -webkit-mask-image:radial-gradient(circle at center, black 24%, transparent 82%);
+    }
+
+    #neuralnet{
+      position:fixed;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .app-shell{
+      position:relative;
+      z-index:2;
+      min-height:100vh;
+    }
+
+    .glass{
+      background:linear-gradient(180deg, rgba(15,23,42,.76), rgba(2,6,23,.62));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 24px 80px rgba(0,0,0,.28);
+      backdrop-filter:blur(22px);
+      -webkit-backdrop-filter:blur(22px);
+    }
+
+    .glass-soft{
+      background:rgba(15,23,42,.42);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .gradient-text{
+      background:linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .nav-link{
+      color:#cbd5e1;
+      transition:.2s ease;
+    }
+
+    .nav-link:hover{color:#fff;}
+
+    .media-logo-card{
+      position:relative;
+      overflow:hidden;
+      transition:.25s ease;
+      background:rgba(255,255,255,.94);
+      aspect-ratio:1 / 1;
+    }
+
+    .media-logo-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 24px 70px rgba(37,99,235,.14);
+    }
+
+    .news-card{
+      position:relative;
+      overflow:hidden;
+      transition:.25s ease;
+    }
+
+    .news-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(96,165,250,.13), transparent 34%),
+        linear-gradient(120deg, transparent, rgba(255,255,255,.035), transparent);
+      opacity:.66;
+      pointer-events:none;
+    }
+
+    .news-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(96,165,250,.32);
+      box-shadow:0 0 0 1px rgba(96,165,250,.08),0 28px 90px rgba(37,99,235,.12);
+    }
+
+    .source-pill{
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+
+    .source-pill.active{
+      color:#020617;
+      background:linear-gradient(90deg,#fbbf24,#fde68a);
+      border-color:rgba(251,191,36,.65);
+    }
+
+    .source-pill:not(.active):hover{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+    }
+
+    .line-clamp-2{
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .line-clamp-4{
+      display:-webkit-box;
+      -webkit-line-clamp:4;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    .mobile-menu{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .28s ease;
+    }
+
+    .mobile-menu.open{max-height:420px;}
+
+    @media(max-width:768px){
+      body::before{background-size:42px 42px;}
+      .news-card:hover,.media-logo-card:hover{transform:none;}
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="neuralnet"></canvas>
+
+  <div class="app-shell">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#05070dcc] backdrop-blur-2xl">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between gap-4">
+          <button onclick="window.location.href='./index.html'" class="flex items-center gap-3 text-left">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl border border-sky-400/25 bg-sky-400/10 shadow-lg shadow-sky-500/10">
+              <span class="text-lg">🛡️</span>
             </div>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => console.error("Error cargando noticias:", err));
+            <div>
+              <h1 class="text-lg sm:text-xl font-black tracking-tight">Noticias <span class="gradient-text">CTI</span></h1>
+              <p class="hidden sm:block text-[11px] uppercase tracking-[0.26em] text-slate-500">Cyber Threat Intelligence</p>
+            </div>
+          </button>
+
+          <nav class="hidden lg:flex items-center gap-6 text-sm">
+            <a href="./index.html" class="nav-link">Inicio</a>
+            <a href="./noticias.html" class="nav-link">Noticias Ciberseguridad</a>
+            <a href="./medios.html" class="nav-link text-white font-semibold">Noticias Nacionales</a>
+            <a href="./ransomware.html" class="nav-link">Ransomware</a>
+            <a href="./vulnerabilidades.html" class="nav-link">Vulnerabilidades</a>
+            <a href="./reclamos.html" class="nav-link">Reclamos</a>
+            <a href="./status.html" class="nav-link">Downdetector</a>
+          </nav>
+
+          <button onclick="toggleMenu()" class="lg:hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">
+            Menú
+          </button>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu lg:hidden">
+          <div class="grid gap-2 pb-4 text-sm">
+            <a href="./index.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🏠 Inicio</a>
+            <a href="./noticias.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🔒 Noticias Ciberseguridad</a>
+            <a href="./medios.html" class="rounded-xl px-3 py-2 text-white font-semibold bg-white/10">📰 Noticias Nacionales</a>
+            <a href="./ransomware.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">🧬 Ransomware</a>
+            <a href="./vulnerabilidades.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">⚡ Vulnerabilidades</a>
+            <a href="./reclamos.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📣 Reclamos</a>
+            <a href="./status.html" class="rounded-xl px-3 py-2 text-slate-200 hover:bg-white/10">📊 Downdetector</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section class="py-8 sm:py-10 lg:py-14 text-center">
+        <div class="mx-auto max-w-5xl">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] text-sky-200">
+            <span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,.9)]"></span>
+            National Cyber & Fraud Monitoring
+          </div>
+
+          <h2 class="text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">
+            Noticias <span class="gradient-text">nacionales</span>
+          </h2>
+
+          <p class="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
+            Monitoreo de medios chilenos y fuentes especializadas para identificar eventos de ciberseguridad, fraude digital, interrupciones operacionales y tendencias relevantes.
+          </p>
+        </div>
+      </section>
+
+      <section class="pb-8">
+        <div class="mb-5 flex flex-col gap-2 text-center">
+          <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Sitios web monitoreados</h3>
+          <p class="text-sm text-slate-500">Fuentes nacionales y especializadas integradas al monitoreo.</p>
+        </div>
+
+        <div id="mediaLogos" class="glass rounded-[2rem] p-4 sm:p-6">
+          <div class="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/24_horas_2023_logo.png" alt="24 Horas" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Logotipo_de_Teletrece_(2019-2022).png" alt="T13" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://cdn.brandfetch.io/idbvH4nfxl/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="The Clinic" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/39/b6/af39b69a-0ed8-9633-f968-786862398c9c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="BioBio" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://r.prcdn.co/res/es-ar/g25056/t490995764/2/images/new-logo-diariofinanciero.png" alt="Diario Financiero" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Logolatercera2017.png" alt="La Tercera" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://i.ibb.co/sdPM2gkT/cooperativa.png" alt="Cooperativa" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://i.ibb.co/DDhhc282/emol.jpg" alt="EMOL" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/CNN_Chile_logo_2017.svg/960px-CNN_Chile_logo_2017.svg.png" alt="CNN Chile" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://i.ibb.co/Xxk1GxDJ/el-libero.jpg" alt="El Líbero" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://i.imgur.com/IUJbfr8.jpeg" alt="TrendTIC" class="h-[72%] w-[72%] object-contain">
+            </div>
+            <div class="media-logo-card flex items-center justify-center rounded-2xl p-2.5">
+              <img src="https://i.ibb.co/m5KRrv8H/zona-ciso.jpg" alt="Zona CISO" class="h-[72%] w-[72%] object-contain">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-8 sm:py-10">
+        <div class="mb-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Últimas publicaciones</h3>
+            <p class="mt-1 text-sm text-slate-500">Feed consolidado desde <code>status_nacional.json</code>.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div class="relative">
+              <input id="searchInput" oninput="aplicarFiltros()" type="search" placeholder="Buscar noticia, fuente o categoría..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-80">
+              <span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span>
+            </div>
+            <button onclick="filtrarFuente('all')" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 hover:bg-white/[.09]">
+              Limpiar filtros
+            </button>
+          </div>
+        </div>
+
+        <div id="sourceBar" class="mb-6 flex gap-2 overflow-x-auto pb-2">
+          <button data-source="all" onclick="filtrarFuente('all')" class="source-pill active rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">Todas</button>
+        </div>
+
+        <div id="newsGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+
+        <div id="emptyState" class="hidden glass mt-6 rounded-[2rem] p-8 text-center">
+          <div class="text-4xl">🛰️</div>
+          <h4 class="mt-3 text-xl font-black">Sin resultados</h4>
+          <p class="mt-2 text-slate-400">No se encontraron noticias para el filtro actual.</p>
+        </div>
+
+        <div class="mt-8 flex items-center justify-center gap-3">
+          <button id="prevBtn" onclick="cambiarPagina(-1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
+            ← Anterior
+          </button>
+          <span id="pageIndicator" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-400">Página 1</span>
+          <button id="nextBtn" onclick="cambiarPagina(1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
+            Siguiente →
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const STATUS_NACIONAL_JSON = "./status_nacional.json";
+
+    const MESES_ES = {
+      "enero":0,
+      "febrero":1,
+      "marzo":2,
+      "abril":3,
+      "mayo":4,
+      "junio":5,
+      "julio":6,
+      "agosto":7,
+      "septiembre":8,
+      "setiembre":8,
+      "octubre":9,
+      "noviembre":10,
+      "diciembre":11
+    };
+
+    let newsData = [];
+    let filteredNews = [];
+    let fuenteActual = "all";
+    let paginaActual = 1;
+    const itemsPorPagina = 9;
+
+    init();
+
+    async function init(){
+      const news = await fetchJSON(STATUS_NACIONAL_JSON, []);
+      newsData = normalizarNoticias(news)
+        .sort((a,b) => getDate(b.timestamp) - getDate(a.timestamp));
+
+      construirFiltrosFuente(newsData);
+      aplicarFiltros();
+    }
+
+    async function fetchJSON(url, fallback){
+      try{
+        const res = await fetch(`${url}?t=${Date.now()}`);
+        if(!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+      }catch(err){
+        console.warn(`No se pudo cargar ${url}`, err);
+        return fallback;
+      }
+    }
+
+    function normalizarNoticias(items){
+      if(!Array.isArray(items)) return [];
+
+      return items.map(item => ({
+        ...item,
+        timestamp: fechaNacionalToISO(item.date, item.time) || item.timestamp || item.fecha || item.date,
+        description: item.description || item.descripcion || item.resumen || ""
+      }));
+    }
+
+    function fechaTextoEspanolToDate(value, time = "00:00"){
+      if(!value || typeof value !== "string") return null;
+
+      const texto = value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+
+      const match = texto.match(/(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})/);
+      if(!match) return null;
+
+      const dia = parseInt(match[1], 10);
+      const mes = MESES_ES[match[2]];
+      const anio = parseInt(match[3], 10);
+
+      if(Number.isNaN(dia) || mes === undefined || Number.isNaN(anio)) return null;
+
+      const horaMatch = String(time || "00:00").match(/(\d{1,2}):(\d{2})/);
+      const hora = horaMatch ? parseInt(horaMatch[1], 10) : 0;
+      const minuto = horaMatch ? parseInt(horaMatch[2], 10) : 0;
+
+      return new Date(anio, mes, dia, hora, minuto, 0);
+    }
+
+    function fechaNacionalToISO(dateText, timeText){
+      const date = fechaTextoEspanolToDate(dateText, timeText);
+      return date ? date.toISOString() : "";
+    }
+
+    function getDate(value){
+      if(!value) return new Date(0);
+      const date = new Date(String(value).replace(" ", "T"));
+      return isNaN(date.getTime()) ? new Date(0) : date;
+    }
+
+    function formatearFecha(value){
+      const fecha = getDate(value);
+      if(!fecha || fecha.getTime() === 0) return "-";
+      return fecha.toLocaleString("es-CL", {
+        day:"2-digit",
+        month:"short",
+        year:"numeric",
+        hour:"2-digit",
+        minute:"2-digit"
+      });
+    }
+
+    function escapeHTML(value){
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function limpiarHTML(value){
+      const raw = String(value || "");
+      const txt = document.createElement("textarea");
+      txt.innerHTML = raw;
+      const decoded = txt.value;
+      return decoded
+        .replace(/<!\[CDATA\[/g, "")
+        .replace(/\]\]>/g, "")
+        .replace(/<[^>]*>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function construirFiltrosFuente(items){
+      const sourceBar = document.getElementById("sourceBar");
+      const fuentes = [...new Set(items.map(i => i.source).filter(Boolean))].sort();
+
+      fuentes.forEach(source => {
+        const btn = document.createElement("button");
+        btn.dataset.source = source;
+        btn.className = "source-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200";
+        btn.textContent = source;
+        btn.onclick = () => filtrarFuente(source);
+        sourceBar.appendChild(btn);
+      });
+    }
+
+    function aplicarFiltros(){
+      const q = document.getElementById("searchInput")?.value?.toLowerCase().trim() || "";
+
+      filteredNews = newsData.filter(item => {
+        const coincideFuente = fuenteActual === "all" || item.source === fuenteActual;
+        const texto = [
+          item.title,
+          item.description,
+          item.source,
+          item.categoria,
+          item.date,
+          item.time
+        ].join(" ").toLowerCase();
+
+        const coincideBusqueda = !q || texto.includes(q);
+        return coincideFuente && coincideBusqueda;
+      });
+
+      paginaActual = 1;
+      renderNews();
+    }
+
+    function filtrarFuente(source){
+      fuenteActual = source;
+      document.querySelectorAll(".source-pill").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.source === source);
+      });
+      aplicarFiltros();
+    }
+
+    function renderNews(){
+      const container = document.getElementById("newsGrid");
+      const emptyState = document.getElementById("emptyState");
+      container.innerHTML = "";
+
+      const inicio = (paginaActual - 1) * itemsPorPagina;
+      const fin = inicio + itemsPorPagina;
+      const paginatedItems = filteredNews.slice(inicio, fin);
+
+      emptyState.classList.toggle("hidden", paginatedItems.length > 0);
+
+      paginatedItems.forEach(n => {
+        const title = n.title || "Noticia nacional";
+        const description = limpiarHTML(n.description || "");
+
+        const card = document.createElement("article");
+        card.className = "news-card glass rounded-[2rem] p-5";
+        card.innerHTML = `
+          <div class="relative z-10 flex h-full flex-col">
+            ${n.image ? `
+              <div class="mb-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[.03]">
+                <img src="${escapeHTML(n.image)}" alt="${escapeHTML(title)}" class="h-44 w-full object-cover opacity-90" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            ` : ""}
+
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <div class="inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-xs font-bold text-sky-200">
+                <span>📰</span>
+                <span>${escapeHTML(n.source || "Medio nacional")}</span>
+              </div>
+              <time class="shrink-0 text-right text-[11px] leading-snug text-slate-500">${escapeHTML(formatearFecha(n.timestamp))}</time>
+            </div>
+
+            <h4 class="line-clamp-2 text-xl font-black leading-snug tracking-tight text-white">
+              ${escapeHTML(title)}
+            </h4>
+
+            <p class="line-clamp-4 mt-4 text-sm leading-relaxed text-slate-400">
+              ${escapeHTML(description || "Sin descripción disponible.")}
+            </p>
+
+            <div class="mt-5 grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
+              <div class="rounded-2xl bg-white/[.04] px-3 py-2">
+                <span class="text-slate-500">Categoría</span><br>
+                <strong class="text-slate-200">${escapeHTML(n.categoria || "-")}</strong>
+              </div>
+              <div class="rounded-2xl bg-white/[.04] px-3 py-2">
+                <span class="text-slate-500">Fecha original</span><br>
+                <strong class="text-slate-200">${escapeHTML((n.date || "-") + (n.time ? " · " + n.time : ""))}</strong>
+              </div>
+            </div>
+
+            <div class="mt-auto pt-5">
+              ${n.url ? `<a href="${escapeHTML(n.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:bg-sky-400/15">Ver publicación →</a>` : `<span class="inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[.04] px-4 py-3 text-sm text-slate-500">Sin URL disponible</span>`}
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      document.getElementById("prevBtn").disabled = paginaActual === 1;
+      document.getElementById("nextBtn").disabled = fin >= filteredNews.length;
+      const totalPaginas = Math.max(1, Math.ceil(filteredNews.length / itemsPorPagina));
+      document.getElementById("pageIndicator").textContent = `Página ${paginaActual} de ${totalPaginas}`;
+    }
+
+    function cambiarPagina(direccion){
+      const totalPaginas = Math.max(1, Math.ceil(filteredNews.length / itemsPorPagina));
+      paginaActual = Math.min(Math.max(1, paginaActual + direccion), totalPaginas);
+      renderNews();
+      document.querySelector("#newsGrid")?.scrollIntoView({ behavior:"smooth", block:"start" });
+    }
+
+    function toggleMenu(force){
+      const menu = document.getElementById("mobileMenu");
+      if(typeof force === "boolean"){
+        menu.classList.toggle("open", force);
+        return;
+      }
+      menu.classList.toggle("open");
+    }
+
+    (() => {
+      const canvas = document.getElementById("neuralnet");
+      const ctx = canvas.getContext("2d");
+      let W,H,DPR;
+      let nodes = [];
+      const mouse = { x:-9999, y:-9999 };
+
+      function config(){
+        const mobile = window.innerWidth < 768;
+        return {
+          count: mobile ? 38 : 92,
+          distance: mobile ? 112 : 150,
+          speed: mobile ? .18 : .26
+        };
+      }
+
+      function resize(){
+        W = window.innerWidth;
+        H = window.innerHeight;
+        DPR = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = W * DPR;
+        canvas.height = H * DPR;
+        canvas.style.width = W + "px";
+        canvas.style.height = H + "px";
+        ctx.setTransform(DPR,0,0,DPR,0,0);
+        initNodes();
+      }
+
+      function initNodes(){
+        const cfg = config();
+        nodes = Array.from({ length:cfg.count }, () => ({
+          x:Math.random()*W,
+          y:Math.random()*H,
+          vx:(Math.random()-.5)*cfg.speed,
+          vy:(Math.random()-.5)*cfg.speed,
+          r:Math.random()*1.7+.45
+        }));
+      }
+
+      window.addEventListener("resize", resize);
+      window.addEventListener("mousemove", e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+      window.addEventListener("touchmove", e => {
+        const t = e.touches[0];
+        if(t){ mouse.x = t.clientX; mouse.y = t.clientY; }
+      }, { passive:true });
+
+      function draw(){
+        const cfg = config();
+        ctx.clearRect(0,0,W,H);
+
+        for(const n of nodes){
+          n.x += n.vx;
+          n.y += n.vy;
+          if(n.x < -20 || n.x > W + 20) n.vx *= -1;
+          if(n.y < -20 || n.y > H + 20) n.vy *= -1;
+        }
+
+        for(let i=0;i<nodes.length;i++){
+          const a = nodes[i];
+          for(let j=i+1;j<nodes.length;j++){
+            const b = nodes[j];
+            const dx = a.x - b.x;
+            const dy = a.y - b.y;
+            const d = Math.sqrt(dx*dx + dy*dy);
+            if(d < cfg.distance){
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(96,165,250,${(1 - d/cfg.distance) * .09})`;
+              ctx.lineWidth = .55;
+              ctx.moveTo(a.x,a.y);
+              ctx.lineTo(b.x,b.y);
+              ctx.stroke();
+            }
+          }
+
+          const mdx = a.x - mouse.x;
+          const mdy = a.y - mouse.y;
+          const md = Math.sqrt(mdx*mdx + mdy*mdy);
+          if(md < 190){
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(34,211,238,${(1 - md/190) * .18})`;
+            ctx.lineWidth = .7;
+            ctx.moveTo(a.x,a.y);
+            ctx.lineTo(mouse.x,mouse.y);
+            ctx.stroke();
+          }
+        }
+
+        for(const n of nodes){
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(226,232,240,.62)";
+          ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(96,165,250,.045)";
+          ctx.arc(n.x,n.y,n.r*6,0,Math.PI*2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      draw();
+    })();
   </script>
 </body>
 </html>
