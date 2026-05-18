@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -275,7 +277,7 @@
         <div class="mx-auto max-w-5xl">
           <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] text-sky-200">
             <span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,.9)]"></span>
-            Vulnerabilidades
+            Feed Vulnerabilidades
           </div>
           <h2 class="text-4xl font-black leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">
             Panorama de <span class="gradient-text">vulnerabilidades</span>
@@ -306,7 +308,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
           <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
             <div class="relative z-10">
               <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Explotadas</p>
@@ -331,13 +333,6 @@
             </div>
           </div>
 
-          <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
-            <div class="relative z-10">
-              <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Explotadas</p>
-              <p class="mt-1 text-xs font-semibold text-slate-400">Últimos 30 días</p>
-              <div id="statExploited30d" class="mt-3 text-4xl font-black text-amber-300">0</div>
-            </div>
-          </div>
         </div>
 
         <div class="mt-5 grid gap-5 lg:grid-cols-3">
@@ -396,17 +391,17 @@
             </div>
 
             <div class="relative">
-              <input id="exploitedSearch" oninput="renderExploitedList()" type="search" placeholder="Buscar CVE, vendor, producto o descripción..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-96">
+              <input id="exploitedSearch" oninput="resetExploitedPageAndRender()" type="search" placeholder="Buscar CVE, vendor, producto o descripción..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-96">
               <span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span>
             </div>
           </div>
 
           <div class="mb-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-2">
-            <select id="exploitedVendorFilter" onchange="renderExploitedList()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
+            <select id="exploitedVendorFilter" onchange="resetExploitedPageAndRender()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
               <option value="all">Todos los vendors</option>
             </select>
 
-            <select id="exploitedMonthFilter" onchange="renderExploitedList()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
+            <select id="exploitedMonthFilter" onchange="resetExploitedPageAndRender()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
               <option value="all">Todos los meses</option>
             </select>
           </div>
@@ -439,7 +434,7 @@
               <span id="generalPeriodText" class="text-sky-300">Mes en curso</span>
             </p>
             <p id="currentMonthNote" class="mt-2 text-xs text-slate-500">
-              El detalle inferior considera únicamente vulnerabilidades publicadas durante el mes en curso.
+El detalle inferior se actualiza de acuerdo con el período seleccionado.
             </p>
           </div>
 
@@ -546,7 +541,7 @@
             <div>
               <p class="text-xs uppercase tracking-[.22em] text-slate-500">Vendors conocidos</p>
               <h3 class="mt-1 text-2xl font-black">Últimas vulnerabilidades relevantes</h3>
-              <p class="mt-2 text-sm text-slate-400">Últimos 12 registros HIGH o CRITICAL asociados a vendors de interés.</p>
+              <p class="mt-2 text-sm text-slate-400">Últimos 12 registros HIGH o CRITICAL asociados a vendors de interés dentro del período seleccionado.</p>
             </div>
           </div>
 
@@ -558,25 +553,25 @@
             <div>
               <p class="text-xs uppercase tracking-[.22em] text-slate-500">Explorador</p>
               <h3 class="mt-1 text-2xl font-black">Detalle de vulnerabilidades</h3>
-              <p class="mt-2 text-sm text-slate-400">Listado compacto del mes en curso. Filtra por búsqueda, vendor, severidad y rango CVSS.</p>
+              <p class="mt-2 text-sm text-slate-400">Listado compacto del período seleccionado. Filtra por búsqueda, vendor, severidad y rango CVSS.</p>
             </div>
 
             <div class="relative">
-              <input id="generalSearch" oninput="renderGeneralList()" type="search" placeholder="Buscar CVE, vendor, producto o título..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-96">
+              <input id="generalSearch" oninput="resetGeneralPageAndRender()" type="search" placeholder="Buscar CVE, vendor, producto o título..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-96">
               <span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span>
             </div>
           </div>
 
           <div class="mb-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <select id="generalVendorFilter" onchange="renderGeneralList()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
+            <select id="generalVendorFilter" onchange="resetGeneralPageAndRender()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
               <option value="all">Todos los vendors</option>
             </select>
 
-            <select id="generalSeverityFilter" onchange="renderGeneralList()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
+            <select id="generalSeverityFilter" onchange="resetGeneralPageAndRender()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
               <option value="all">Todas las severidades</option>
             </select>
 
-            <select id="generalCvssFilter" onchange="renderGeneralList()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
+            <select id="generalCvssFilter" onchange="resetGeneralPageAndRender()" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-white outline-none focus:border-sky-400/40">
               <option value="all">Todos los CVSS</option>
               <option value="critical">9.0 - 10.0</option>
               <option value="high">7.0 - 8.9</option>
@@ -646,19 +641,21 @@
         ? kevData.map(normalizeKev).sort((a,b) => getDate(b.date) - getDate(a.date))
         : [];
 
-      generalItems = normalizeList(
-        rawData?.items ||
-        rawData?.general?.latest ||
-        []
-      );
+      /*
+        Se consolida todo lo disponible en vulnerabilidades.json, no solo el último mes.
+        Esto corrige el problema donde “Últimos 90 días” podía quedar igual que
+        “Últimos 30 días” porque la vista solo estaba usando rawData.general.latest.
+      */
+      generalItems = collectGeneralItems(rawData);
 
-      knownVendorItems = normalizeList(rawData?.general?.latest_known_vendors || [])
+      knownVendorItems = getGeneralPeriodItems()
+        .filter(item => item.known_vendor)
         .filter(item => ["CRITICAL","HIGH"].includes(item.severity))
         .slice(0, 12);
 
       const currentMonth = rawData?.metadata?.current_month || "";
       if(currentMonth){
-        document.getElementById("currentMonthNote").textContent = `El detalle inferior considera únicamente vulnerabilidades publicadas durante el mes en curso (${monthLabel(currentMonth)}).`;
+        document.getElementById("currentMonthNote").textContent = `El detalle inferior se actualiza de acuerdo con el período seleccionado. Mes de referencia del JSON: ${monthLabel(currentMonth)}.`;
       }
 
       populateFilters();
@@ -676,6 +673,70 @@
         console.warn(`No se pudo cargar ${url}`, err);
         return fallback;
       }
+    }
+
+    function collectGeneralItems(data){
+      const buckets = [];
+
+      function add(value){
+        if(Array.isArray(value)) buckets.push(...value);
+      }
+
+      /* Fuentes conocidas / esperadas */
+      add(data?.items);
+      add(data?.general?.items);
+      add(data?.general?.latest);
+      add(data?.general?.latest_known_vendors);
+      add(data?.current_month?.items);
+      add(data?.current_month?.latest);
+      add(data?.current_month?.latest_known_vendors);
+      add(data?.previous_month?.items);
+      add(data?.previous_month?.latest);
+      add(data?.previous_month?.latest_known_vendors);
+      add(data?.year?.items);
+      add(data?.year?.latest);
+      add(data?.year?.latest_known_vendors);
+
+      /* Nuevo formato generado por el Python corregido: estadísticas por período */
+      ["month", "30d", "90d", "year"].forEach(period => {
+        const stats = data?.period_stats?.[period];
+        add(stats?.items);
+        add(stats?.general?.latest);
+        add(stats?.general?.latest_known_vendors);
+        add(stats?.general?.top_vulnerabilities);
+        add(stats?.general?.top_critical_high);
+      });
+
+      /* Soporte flexible por si el JSON agrupa meses como objetos con items/latest */
+      [data?.months, data?.by_month, data?.general?.months, data?.year?.months].forEach(group => {
+        if(Array.isArray(group)){
+          group.forEach(m => {
+            add(m?.items);
+            add(m?.latest);
+            add(m?.latest_known_vendors);
+            add(m?.vulnerabilities);
+          });
+        }
+      });
+
+      return dedupeItems(normalizeList(buckets));
+    }
+
+    function dedupeItems(items){
+      const seen = new Map();
+
+      items.forEach(item => {
+        const key = [
+          item.cve || "",
+          item.date || "",
+          item.vendor || "",
+          item.product || ""
+        ].join("|").toLowerCase();
+
+        if(!seen.has(key)) seen.set(key, item);
+      });
+
+      return [...seen.values()].sort((a,b) => getDate(b.date) - getDate(a.date));
     }
 
     function normalizeKev(item){
@@ -830,11 +891,75 @@
     }
 
     function getExploitedPeriodItems(){
-  return exploitedItems.filter(item => String(item.month || "").startsWith("2026-"));
-}
+      return exploitedItems
+        .filter(item => String(item.month || "").startsWith("2026-"))
+        .filter(item => inPeriod(item.date, exploitedPeriod));
+    }
+
+    function getGeneralPeriodStats(){
+      if(!rawData?.period_stats) return null;
+
+      if(generalPeriod === "month") return rawData.period_stats.month || null;
+      if(generalPeriod === "30d") return rawData.period_stats["30d"] || null;
+      if(generalPeriod === "90d") return rawData.period_stats["90d"] || null;
+      if(generalPeriod === "year") return rawData.period_stats.year || null;
+
+      return null;
+    }
 
     function getGeneralPeriodItems(){
+      const stats = getGeneralPeriodStats();
+
+      /*
+        Prioridad de datos para el detalle:
+        1) Si el Python nuevo entrega period_stats[period].items, usamos ese detalle completo.
+        2) Para Mes en curso, usamos rawData.items porque ahí viene el mes completo.
+           Esto evita quedar limitado a general.latest, que normalmente trae solo 300 registros.
+        3) Para otros períodos, intentamos reconstruir con lo disponible en el JSON.
+        4) Solo como último recurso usamos general.latest/top lists, ya que son resúmenes y no detalle completo.
+      */
+      if(Array.isArray(stats?.items)){
+        return normalizeList(stats.items);
+      }
+
+      if(generalPeriod === "month" && Array.isArray(rawData?.items)){
+        return normalizeList(rawData.items);
+      }
+
+      const periodItems = collectPeriodDetailItems(generalPeriod);
+      if(periodItems.length){
+        return periodItems;
+      }
+
+      if(Array.isArray(stats?.general?.latest)){
+        return normalizeList(stats.general.latest);
+      }
+
       return generalItems.filter(item => inPeriod(item.date, generalPeriod));
+    }
+
+    function collectPeriodDetailItems(period){
+      const buckets = [];
+
+      function add(value){
+        if(Array.isArray(value)) buckets.push(...value);
+      }
+
+      add(rawData?.items);
+      add(rawData?.current_month?.items);
+      add(rawData?.previous_month?.items);
+
+      if(rawData?.monthly_history && typeof rawData.monthly_history === "object"){
+        Object.values(rawData.monthly_history).forEach(monthData => {
+          add(monthData?.items);
+          add(monthData?.general?.items);
+          add(monthData?.general?.latest);
+        });
+      }
+
+      const normalized = dedupeItems(normalizeList(buckets));
+
+      return normalized.filter(item => inPeriod(item.date, period));
     }
 
     function refreshExploitedSection(){
@@ -844,8 +969,6 @@
       setText("statExploitedTotal", items.length);
       setText("statExploitedVendors", new Set(items.map(i => i.vendor).filter(isValidStatValue)).size);
       setText("statExploitedProducts", new Set(items.map(i => i.product).filter(isValidStatValue)).size);
-      setText("statExploited30d", exploitedItems.filter(i => inPeriod(i.date, "30d")).length);
-
       renderLatestExploitedThree(items);
       renderExploitedCharts(items);
 
@@ -854,16 +977,31 @@
     }
 
     function refreshGeneralSection(){
+      const periodStats = getGeneralPeriodStats();
       const items = getGeneralPeriodItems();
+      const summary = periodStats?.summary || {};
 
       setText("generalPeriodText", periodLabel(generalPeriod));
-      setText("statGeneralTotal", items.length);
-      setText("statGeneralCritical", countSeverity(items, "CRITICAL"));
-      setText("statGeneralHigh", countSeverity(items, "HIGH"));
-      setText("statGeneralVendors", new Set(items.map(i => i.vendor).filter(isValidStatValue)).size);
-      setText("statGeneralProducts", new Set(items.map(i => i.product).filter(isValidStatValue)).size);
+      setText("statGeneralTotal", summary.total ?? items.length);
+      setText("statGeneralCritical", summary.critical ?? countSeverity(items, "CRITICAL"));
+      setText("statGeneralHigh", summary.high ?? countSeverity(items, "HIGH"));
+      setText("statGeneralVendors", summary.vendors_total ?? new Set(items.map(i => i.vendor).filter(isValidStatValue)).size);
+      setText("statGeneralProducts", summary.products_total ?? new Set(items.map(i => i.product).filter(isValidStatValue)).size);
 
-      renderGeneralCharts(items);
+      renderGeneralChartsFromStats(periodStats, items);
+
+      if(Array.isArray(periodStats?.general?.latest_known_vendors)){
+        knownVendorItems = normalizeList(periodStats.general.latest_known_vendors)
+          .filter(item => ["CRITICAL","HIGH"].includes(item.severity))
+          .slice(0, 12);
+      } else {
+        knownVendorItems = items
+          .filter(item => item.known_vendor)
+          .filter(item => ["CRITICAL","HIGH"].includes(item.severity))
+          .slice(0, 12);
+      }
+
+      renderKnownVendorsList();
 
       generalPage = 1;
       renderGeneralList();
@@ -931,6 +1069,51 @@
       renderBarChart("chartGeneralProducts", topCounts(sourceItems, "product", 10), "Productos");
       renderDoughnutChart("chartGeneralSeverity", severityCounts(sourceItems), "Severidad");
       renderLineChart("chartByMonth", buildAnnualTimeline(), "Vulnerabilidades");
+    }
+
+    function renderGeneralChartsFromStats(periodStats, fallbackItems){
+      destroyChartsByIds(["chartGeneralVendors", "chartGeneralProducts", "chartGeneralSeverity", "chartByMonth"]);
+
+      if(periodStats?.general){
+        renderBarChart(
+          "chartGeneralVendors",
+          normalizeChartData(periodStats.general.top_vendors || []),
+          "Vendors"
+        );
+
+        renderBarChart(
+          "chartGeneralProducts",
+          normalizeChartData(periodStats.general.top_products || []),
+          "Productos"
+        );
+
+        renderDoughnutChart(
+          "chartGeneralSeverity",
+          normalizeChartData(periodStats.general.severity || []),
+          "Severidad"
+        );
+
+        renderLineChart(
+          "chartByMonth",
+          buildAnnualTimeline(),
+          "Vulnerabilidades"
+        );
+
+        return;
+      }
+
+      renderGeneralCharts(fallbackItems);
+    }
+
+    function normalizeChartData(items){
+      if(!Array.isArray(items)) return [];
+
+      return items
+        .filter(item => isValidStatValue(item.name || item.label))
+        .map(item => ({
+          label: item.name || item.label,
+          value: item.count ?? item.value ?? 0
+        }));
     }
 
     function topCounts(items, field, limit){
@@ -1245,12 +1428,26 @@
       `).join("");
     }
 
+    function resetExploitedPageAndRender(){
+      exploitedPage = 1;
+      renderExploitedList();
+    }
+
+    function resetGeneralPageAndRender(){
+      generalPage = 1;
+      renderGeneralList();
+    }
+
     function renderExploitedList(){
       const vendor = document.getElementById("exploitedVendorFilter")?.value || "all";
       const month = document.getElementById("exploitedMonthFilter")?.value || "all";
       const q = document.getElementById("exploitedSearch")?.value?.toLowerCase().trim() || "";
 
-      filteredExploited = getExploitedPeriodItems().filter(item => {
+      const sourceItems = month === "all"
+        ? getExploitedPeriodItems()
+        : exploitedItems.filter(item => String(item.month || "").startsWith("2026-"));
+
+      filteredExploited = sourceItems.filter(item => {
         const matchVendor = vendor === "all" || item.vendor === vendor;
         const matchMonth = month === "all" || item.month === month;
 
@@ -1284,7 +1481,7 @@
       const cvss = document.getElementById("generalCvssFilter")?.value || "all";
       const q = document.getElementById("generalSearch")?.value?.toLowerCase().trim() || "";
 
-      filteredGeneral = generalItems.filter(item => {
+      filteredGeneral = getGeneralPeriodItems().filter(item => {
         const matchVendor = vendor === "all" || item.vendor === vendor;
         const matchSeverity = severity === "all" || item.severity === severity;
         const matchCvss = cvss === "all" || cvssFilterMatches(item, cvss);
@@ -1366,17 +1563,33 @@
 
       grid.innerHTML = "";
 
-      const items = (knownVendorItems.length ? knownVendorItems : generalItems)
+      const periodItems = getGeneralPeriodItems();
+
+      const items = (knownVendorItems.length ? knownVendorItems : periodItems)
         .filter(item => item.known_vendor)
         .filter(item => ["CRITICAL", "HIGH"].includes(item.severity))
         .slice(0, 12);
 
       if(!items.length){
+        const fallbackItems = periodItems
+          .filter(item => ["CRITICAL", "HIGH"].includes(item.severity))
+          .slice(0, 12);
+
+        if(fallbackItems.length){
+          fallbackItems.forEach(item => {
+            const card = document.createElement("article");
+            card.className = "item-card glass-soft rounded-[1.6rem] p-4";
+            card.innerHTML = renderVulnCard(item, "Vulnerabilidad relevante");
+            grid.appendChild(card);
+          });
+          return;
+        }
+
         grid.innerHTML = `
           <div class="rounded-[2rem] border border-white/10 bg-white/[.04] p-8 text-center md:col-span-2 xl:col-span-3">
             <div class="text-4xl">🛰️</div>
             <h4 class="mt-3 text-xl font-black">Sin resultados</h4>
-            <p class="mt-2 text-slate-400">No hay vulnerabilidades HIGH o CRITICAL de vendors conocidos en el resumen actual.</p>
+            <p class="mt-2 text-slate-400">No hay vulnerabilidades HIGH o CRITICAL para el período seleccionado.</p>
           </div>
         `;
         return;
