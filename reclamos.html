@@ -844,41 +844,63 @@
     }
 
     function parseDate(value){
-      if(!value) return null;
+  if(!value) return null;
 
-      const raw = String(value).trim();
-      if(!raw) return null;
+  const raw = String(value).trim();
+  if(!raw) return null;
 
-      let d = new Date(raw.replace(" ", "T"));
-      if(!isNaN(d.getTime())) return d;
+  // Formato principal esperado: DD-MM-YY o DD-MM-YYYY
+  // Ejemplo: 13-05-26 => 13 mayo 2026
+  let m = raw.match(/^(\d{1,2})[-/](\d{1,2})[-/](\d{2,4})$/);
+  if(m){
+    const day = parseInt(m[1], 10);
+    const month = parseInt(m[2], 10) - 1;
+    let year = parseInt(m[3], 10);
 
-      let m = raw.match(/^(\d{1,2})[-/](\d{1,2})[-/](\d{2,4})$/);
-      if(m){
-        const day = parseInt(m[1],10);
-        const month = parseInt(m[2],10) - 1;
-        let year = parseInt(m[3],10);
+    if(year < 100) year += 2000;
 
-        if(year < 100) year += 2000;
+    const d = new Date(year, month, day);
 
-        d = new Date(year, month, day);
-        if(!isNaN(d.getTime())) return d;
-      }
-
-      m = raw.toLowerCase().match(/(\d{1,2})\s+de\s+([a-záéíóúñ]+)\s+de\s+(\d{4})/i);
-      if(m){
-        const day = parseInt(m[1],10);
-        const monthName = m[2].normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-        const month = MESES_ES[monthName];
-        const year = parseInt(m[3],10);
-
-        if(month !== undefined){
-          d = new Date(year, month, day);
-          if(!isNaN(d.getTime())) return d;
-        }
-      }
-
-      return null;
+    if(
+      !isNaN(d.getTime()) &&
+      d.getFullYear() === year &&
+      d.getMonth() === month &&
+      d.getDate() === day
+    ){
+      return d;
     }
+
+    return null;
+  }
+
+  // Formato texto: 13 de mayo de 2026
+  m = raw.toLowerCase().match(/(\d{1,2})\s+de\s+([a-záéíóúñ]+)\s+de\s+(\d{4})/i);
+  if(m){
+    const day = parseInt(m[1], 10);
+    const monthName = m[2].normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+    const month = MESES_ES[monthName];
+    const year = parseInt(m[3], 10);
+
+    if(month !== undefined){
+      const d = new Date(year, month, day);
+
+      if(
+        !isNaN(d.getTime()) &&
+        d.getFullYear() === year &&
+        d.getMonth() === month &&
+        d.getDate() === day
+      ){
+        return d;
+      }
+    }
+
+    return null;
+  }
+
+  // ISO como último recurso
+  const d = new Date(raw.replace(" ", "T"));
+  return isNaN(d.getTime()) ? null : d;
+}
 
     function formatDate(value){
       const d = value instanceof Date ? value : parseDate(value);
@@ -902,35 +924,40 @@
     }
 
     function isInPeriod(item, period){
-      if(period === "all") return true;
+  const d = item.fechaDate;
+  if(!d) return false;
 
-      const d = item.fechaDate;
-      if(!d) return false;
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
 
-      const now = new Date();
+  // Nunca considerar fechas futuras
+  if(d > today) return false;
 
-      if(period === "month"){
-        return d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth();
-      }
+  if(period === "all") return true;
 
-      if(period === "year"){
-        return d.getFullYear() === now.getFullYear();
-      }
+  if(period === "month"){
+    return d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth();
+  }
 
-      if(period === "30d"){
-        const limit = new Date(now);
-        limit.setDate(limit.getDate() - 30);
-        return d >= limit && d <= now;
-      }
+  if(period === "year"){
+    const start = new Date(now.getFullYear(), 0, 1);
+    return d >= start && d <= today;
+  }
 
-      if(period === "90d"){
-        const limit = new Date(now);
-        limit.setDate(limit.getDate() - 90);
-        return d >= limit && d <= now;
-      }
+  if(period === "30d"){
+    const limit = new Date(today);
+    limit.setDate(limit.getDate() - 30);
+    return d >= limit && d <= today;
+  }
 
-      return true;
-    }
+  if(period === "90d"){
+    const limit = new Date(today);
+    limit.setDate(limit.getDate() - 90);
+    return d >= limit && d <= today;
+  }
+
+  return true;
+}
 
     function setPeriod(period){
       currentPeriod = period;
@@ -1060,40 +1087,70 @@
     }
 
     function renderTrendChart(){
-      const ctx = document.getElementById("chartTrend");
+  const ctx = document.getElementById("chartTrend");
 
-      const grouped = {};
-      filteredItems.forEach(item => {
-        const d = item.fechaDate;
-        const key = d ? `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}` : "Sin fecha";
-        grouped[key] = (grouped[key] || 0) + 1;
-      });
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth();
 
-      const labels = Object.keys(grouped).sort();
-      const values = labels.map(k => grouped[k]);
+  const monthNames = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ];
 
-      if(chartTrend) chartTrend.destroy();
+  const labels = monthNames.slice(0, currentMonth + 1);
+  const values = new Array(currentMonth + 1).fill(0);
 
-      chartTrend = new Chart(ctx, {
-        type:"line",
-        data:{
-          labels,
-          datasets:[{
-            label:"Reclamos",
-            data:values,
-            tension:.38,
-            fill:true,
-            borderColor:"rgba(96,165,250,.95)",
-            backgroundColor:"rgba(96,165,250,.12)",
-            pointBackgroundColor:"rgba(34,211,238,.95)",
-            pointBorderColor:"rgba(34,211,238,.95)",
-            pointRadius:3
-          }]
+  // Usa los filtros actuales de entidad/categoría/búsqueda,
+  // pero fuerza el rango Enero -> mes actual.
+  filteredItems.forEach(item => {
+    const d = item.fechaDate;
+    if(!d) return;
+
+    if(d.getFullYear() !== currentYear) return;
+    if(d.getMonth() > currentMonth) return;
+
+    values[d.getMonth()]++;
+  });
+
+  if(chartTrend) chartTrend.destroy();
+
+  chartTrend = new Chart(ctx, {
+    type:"line",
+    data:{
+      labels,
+      datasets:[{
+        label:"Reclamos",
+        data:values,
+        tension:.38,
+        fill:true,
+        borderColor:"rgba(96,165,250,.95)",
+        backgroundColor:"rgba(96,165,250,.12)",
+        pointBackgroundColor:"rgba(34,211,238,.95)",
+        pointBorderColor:"rgba(34,211,238,.95)",
+        pointRadius:4
+      }]
+    },
+    options:{
+      ...chartBaseOptions(),
+      scales:{
+        x:{
+          ticks:{
+            color:"#94a3b8",
+            maxRotation:45,
+            minRotation:0
+          },
+          grid:{ color:"rgba(148,163,184,.10)" }
         },
-        options:chartBaseOptions()
-      });
+        y:{
+          beginAtZero:true,
+          ticks:{ color:"#94a3b8", precision:0 },
+          grid:{ color:"rgba(148,163,184,.10)" }
+        }
+      }
     }
-
+  });
+}
     function renderEntitiesChart(){
       const ctx = document.getElementById("chartEntities");
 
