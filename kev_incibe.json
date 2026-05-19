@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-8922",
-    "descripcion": "A flaw was found in Keycloak. When both realm-level and client-level `notBefore` revocation policies are configured, Keycloak&#39;s OpenID Connect (OIDC) Introspection feature fails to properly honor the realm-level policy. This allows tokens that should have been revoked to remain active, potentially leading to unauthorized access or continued session validity. This could impact the security of systems utilizing Keycloak for identity and access management. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-8827",
+    "descripcion": "The AddressRepository::getSqlQuery() method constructs a database query without properly sanitizing user input, leading to SQL Injection. The method is not invoked anywhere within the extension itself and therefore poses no direct risk in a default installation. However, custom extensions that call this method with untrusted input would expose the site to SQL injection. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-4885",
-    "descripcion": "The Piotnet Addons for Elementor Pro plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the &#39;pafe_ajax_form_builder&#39; function in all versions up to, and including, 7.1.70. The plugin uses an incomplete extension blacklist that only blocks php, phpt, php5, php7, and exe extensions, while allowing dangerous extensions such as .phar or .phtml to be uploaded. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. Note: The exploit can only be exploited if a file field is added to the form. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-8727",
+    "descripcion": "The Crawler extension passes the X-T3Crawler-Meta response header from crawled URLs directly to PHP&#39;s unserialize(). An attacker controlling a crawled endpoint can inject arbitrary serialized PHP objects, leading to Remote Code Execution on the TYPO3 server. Exploitation requires administrative privileges to configure a crawler-enabled page and trigger the crawl via a Scheduler task. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-47317",
-    "descripcion": "Uncontrolled Recursion vulnerability in Samsung Open Source Escargot allows Excessive Allocation. This issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-8726",
+    "descripcion": "The extension fails to properly sanitize user input before using it in a database query. As a result, an unauthenticated attacker can inject arbitrary SQL through a URL parameter on pages using the &#34;Date Menu of news articles&#34; plugin. Exploitation requires the &#34;Date Menu of news articles&#34; plugin to be in use and the TypoScript/Plugin setting disableOverrideDemand not to be enabled. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-47316",
-    "descripcion": "Improper Check or Handling of Exceptional Conditions vulnerability in Samsung Open Source Escargot allows Input Data Manipulation. This issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-46725",
+    "descripcion": "The extension passes an attacker-controlled cookie directly to PHP&#39;s unserialize() without safely processing the input. A remote, unauthenticated attacker can supply a crafted serialized payload to trigger PHP Object Injection, leading to Remote Code Execution on the TYPO3 server. Exploitation requires the content element to be configured with &#34;Persistent Mode: Static&#34; in the plugin settings. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-47315",
-    "descripcion": "Improper Check for Unusual or Exceptional Conditions vulnerability in Samsung Open Source Escargot allows Input Data Manipulation. This issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-46724",
+    "descripcion": "The file indexer does not normalize the configured directory path. A backend user with permission to edit indexer configurations can index documents from arbitrary locations on the server file system through path traversal sequences. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-47314",
-    "descripcion": "Out-of-bounds write vulnerability in Samsung Open Source Escargot allows Overflow Buffers. This issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-46723",
+    "descripcion": "The additional_tables configuration of the page and tt_content indexers accepts arbitrary table and field names. A backend user with permission to edit indexer configurations can copy sensitive data from internal TYPO3 tables into the search index. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-47313",
-    "descripcion": "Memory allocation with excessive size value vulnerability in Samsung Open Source Escargot allows Excessive Allocation. This issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-46722",
+    "descripcion": "The OOXML parsing of the file indexer does not disable external entity resolution. A crafted xlsx or pptx document placed in an indexed directory can cause local files to be read or outbound HTTP requests to be performed, with the retrieved content being written to the search index. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-47312",
-    "descripcion": "Release of invalid pointer or reference vulnerability in Samsung Open Source Escargot allows Buffer Manipulation. This issue affects Escargot: 590345cc6258317c5da850d846ce6baaf2afc2d3. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-46721",
+    "descripcion": "The create and edit flows do not restrict which user properties may be submitted and do not enforce access control on the frontend user group assignment. As a result, an attacker can assign an arbitrary frontend user group to a newly registered or edited account, gaining unauthorized access to content and functionality restricted to privileged frontend user groups. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-8830",
-    "descripcion": "A flaw was found in Keycloak. An authenticated user can bypass configured WebAuthn policies during credential registration by manipulating client-side JavaScript. This occurs because the server-side processAction() fails to validate that the newly created credential&#39;s parameters, such as public key algorithms, match the realm&#39;s configured WebAuthn policies. This could lead to the creation of credentials that do not adhere to administrative security requirements, potentially weakening the overall security posture of the system by allowing non-compliant authentication methods. 19/05/2026 19/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-46586",
+    "descripcion": "Improper Control of Generation of Code (&#39;Code Injection&#39;), Improper Neutralization of Directives in Dynamically Evaluated Code (&#39;Eval Injection&#39;) vulnerability in Apache OFBiz. This issue affects Apache OFBiz: before 24.09.06. Users are recommended to upgrade to version 24.09.06, which fixes the issue. 19/05/2026 19/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-19",
-    "cve": "CVE-2026-8814",
-    "descripcion": "Versions of the package exifreader before 4.39.0 are vulnerable to Improper Handling of Highly Compressed Data (Data Amplification) due to decompressing PNG zTXt metadata without enforcing a built-in maximum decompressed output size. When asynchronous parsing is enabled, a crafted PNG file containing a highly compressed zTXt chunk can cause ExifReader to materialize a disproportionately large Comment value in memory. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-45434",
+    "descripcion": "Improper Authentication vulnerability in Apache OFBiz via Password-Change Logic Flaw Leading to Remote Code Execution This issue affects Apache OFBiz: before 24.09.06. Users are recommended to upgrade to version 24.09.06, which fixes the issue. 19/05/2026 19/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
