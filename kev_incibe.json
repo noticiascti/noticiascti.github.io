@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-05-19",
+    "cve": "CVE-2026-43493",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: pcrypt - Fix handling of MAY_BACKLOG requests MAY_BACKLOG requests can return EBUSY. Handle them by checking for that value and filtering out EINPROGRESS notifications. 19/05/2026 19/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-19",
+    "cve": "CVE-2026-43492",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: lib/crypto: mpi: Fix integer underflow in mpi_read_raw_from_sgl() Yiming reports an integer underflow in mpi_read_raw_from_sgl() when subtracting &#34;lzeros&#34; from the unsigned &#34;nbytes&#34;. For this to happen, the scatterlist &#34;sgl&#34; needs to occupy more bytes than the &#34;nbytes&#34; parameter and the first &#34;nbytes + 1&#34; bytes of the scatterlist must be zero. Under these conditions, the while loop iterating over the scatterlist will count more zeroes than &#34;nbytes&#34;, subtract the number of zeroes from &#34;nbytes&#34; and cause the underflow. When commit 2d4d1eea540b (&#34;lib/mpi: Add mpi sgl helpers&#34;) originally introduced the bug, it couldn&#39;t be triggered because all callers of mpi_read_raw_from_sgl() passed a scatterlist whose length was equal to &#34;nbytes&#34;. However since commit 63ba4d67594a (&#34;KEYS: asymmetric: Use new crypto interface without scatterlists&#34;), the underflow can now actually be triggered. When invoking a KEYCTL_PKEY_ENCRYPT system call with a larger &#34;out_len&#34; than &#34;in_len&#34; and filling the &#34;in&#34; buffer with zeroes, crypto_akcipher_sync_prep() will create an all-zero scatterlist used for both the &#34;src&#34; and &#34;dst&#34; member of struct akcipher_request and thereby fulfil the conditions to trigger the bug: sys_keyctl() keyctl_pkey_e_d_s() asymmetric_key_eds_op() software_key_eds_op() crypto_akcipher_sync_encrypt() crypto_akcipher_sync_prep() crypto_akcipher_encrypt() rsa_enc() mpi_read_raw_from_sgl() To the user this will be visible as a DoS as the kernel spins forever, causing soft lockup splats as a side effect. Fix it. 19/05/2026 19/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-19",
+    "cve": "CVE-2026-43491",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: qrtr: ns: Limit the maximum server registration per node Current code does no bound checking on the number of servers added per node. A malicious client can flood NEW_SERVER messages and exhaust memory. Fix this issue by limiting the maximum number of server registrations to 256 per node. If the NEW_SERVER message is received for an old port, then don&#39;t restrict it as it will get replaced. While at it, also rate limit the error messages in the failure path of qrtr_ns_worker(). Note that the limit of 256 is chosen based on the current platform requirements. If requirement changes in the future, this limit can be increased. 19/05/2026 19/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-19",
     "cve": "CVE-2026-8827",
     "descripcion": "The AddressRepository::getSqlQuery() method constructs a database query without properly sanitizing user input, leading to SQL Injection. The method is not invoked anywhere within the extension itself and therefore poses no direct risk in a default installation. However, custom extensions that call this method with untrusted input would expose the site to SQL injection. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-05-19",
     "cve": "CVE-2026-46722",
     "descripcion": "The OOXML parsing of the file indexer does not disable external entity resolution. A crafted xlsx or pptx document placed in an indexed directory can cause local files to be read or outbound HTTP requests to be performed, with the retrieved content being written to the search index. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-46721",
-    "descripcion": "The create and edit flows do not restrict which user properties may be submitted and do not enforce access control on the frontend user group assignment. As a result, an attacker can assign an arbitrary frontend user group to a newly registered or edited account, gaining unauthorized access to content and functionality restricted to privileged frontend user groups. 19/05/2026 19/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-46586",
-    "descripcion": "Improper Control of Generation of Code (&#39;Code Injection&#39;), Improper Neutralization of Directives in Dynamically Evaluated Code (&#39;Eval Injection&#39;) vulnerability in Apache OFBiz. This issue affects Apache OFBiz: before 24.09.06. Users are recommended to upgrade to version 24.09.06, which fixes the issue. 19/05/2026 19/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-45434",
-    "descripcion": "Improper Authentication vulnerability in Apache OFBiz via Password-Change Logic Flaw Leading to Remote Code Execution This issue affects Apache OFBiz: before 24.09.06. Users are recommended to upgrade to version 24.09.06, which fixes the issue. 19/05/2026 19/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
