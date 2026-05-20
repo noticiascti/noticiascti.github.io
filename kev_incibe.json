@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-45585",
-    "descripcion": "Microsoft is aware of a security feature bypass vulnerability in Windows publicly referred to as &quot;YellowKey&quot;. The proof of concept for this vulnerability has been made public violating coordinated vulnerability best practices. We are issuing this CVE to provide mitigation guidance that can be implemented to protect against this vulnerability until the security update is made available. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8685",
+    "descripcion": "The Infility Global plugin for WordPress is vulnerable to SQL Injection via the &#39;orderby&#39; and &#39;order&#39; parameters in all versions up to, and including, 2.15.16. This is due to insufficient escaping on user supplied parameters and lack of sufficient preparation on the existing SQL query within the show_control_data::post_list() function, which is registered as an admin menu page with only the &#39;read&#39; capability. This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-39309",
-    "descripcion": "Trilium Notes is a cross-platform, hierarchical note taking application focused on building large personal knowledge bases. In versions 0.102.1 and prior, the Electron configuration is vulnerable to TCC Bypass via Prompt Spoofing, allowing local attackers to trigger misleading macOS permission prompts by running malicious code under the identity of the trusted app. The root cause is that the RunAsNode fuse allows launching the app in a special Node.js mode using -e to execute arbitrary system commands with Trilium Notes&#39;s permissions and identity. An attacker can leverage this through a subprocess to request any sensitive permissions, such as access to hardware (camera, microphone) and TCC-protected files, causing the TCC system prompt to appear as if the request came from Trilium rather than the attacker&#39;s code, because macOS treats the subprocess as part of the parent application. Exploitation allows access to TCC-protected resources like the screen, camera, microphone, and folders such as ~/Documents and ~/Downloads, undermining macOS&#39;s security model and UI integrity through social engineering. This issue has been fixed in version 0.102.2. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8627",
+    "descripcion": "The Correct Prices plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the $_SERVER[&#39;PHP_SELF&#39;] variable in versions up to and including 1.0. This is due to the correct_prices_page() function echoing $_SERVER[&#39;PHP_SELF&#39;] into a form&#39;s action attribute without any input sanitization or output escaping (such as esc_url() or esc_attr()). Because PHP_SELF reflects attacker-controlled path-info appended to the script URL, an attacker can break out of the attribute and inject arbitrary markup. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a specially crafted link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-35593",
-    "descripcion": "Trilium Notes is an open-source, cross-platform hierarchical note taking application for building large personal knowledge bases. Versions 0.102.1 and prior are vulnerable to Local File Inclusion, allowing an authenticated attacker to read sensitive arbitrary files from the server&#39;s filesystem. The uploadModifiedFileToAttachment function, which is called when a POST request is received to /api/attachments/{attachmentId}/upload-modified-file, replaces the content of the attachment with the content from another file (whose path is provided in filePath of Request body). After which the content of the attachment can be viewed at /api/attachments/{attachmentId}/download. This exposes sensitive system files such as SSH keys, credentials, configs, and OS files, potentially leading to remote code execution and compromise of co-hosted applications. This issue has been fixed in version 0.102.2. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8626",
+    "descripcion": "The SponsorMe plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via PHP_SELF Parameter in all versions up to, and including, 0.5.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. The PHP_SELF value is reflected in two separate locations within the vulnerable function — a form action attribute and an anchor href attribute — both of which can be exploited by appending a crafted payload to the wp-admin/admin.php URL path. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-34970",
-    "descripcion": "Mantis Bug Tracker (MantisBT) is an open source issue tracker. Versions 2.28.1 and prior allow a bugnote author to access the note&#39;s Revisions page after losing access to the parent private issue. This issue has been fixed in version 2.28.2. 20/05/2026 20/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8624",
+    "descripcion": "The LJ comments import: reloaded plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via PHP_SELF Parameter in all versions up to, and including, 0.97.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. The vulnerability arises specifically because PHP_SELF includes attacker-controllable PATH_INFO appended to the script name, and there are two distinct unsanitized echo points for this value in the same function. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-34754",
-    "descripcion": "Mantis Bug Tracker (MantisBT) is an open source issue tracker. Versions 2.28.1 and prior allow an authenticated user to upload attachments to private Issues they are not authorized to access. This issue has been fixed in version 2.28.2. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8610",
+    "descripcion": "The TypeSquare Webfonts for ConoHa plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.0.4. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to modify the plugin&#39;s site-wide font settings, including the typesquare_auth option (fontThemeUseType), show_post_form, and typesquare_fonttheme, by submitting a POST request to any wp-admin page. For fontThemeUseType values 1 and 3, no nonce verification is performed either, meaning those branches are additionally exploitable via cross-site request forgery. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-8495",
-    "descripcion": "Missing Authorization vulnerability in Drupal Date iCal allows Forceful Browsing. This issue affects Date iCal: from 0.0.0 before 4.0.15. 20/05/2026 20/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8424",
+    "descripcion": "The Remove Yellow BGBOX plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.0. This is due to missing or incorrect nonce validation on the &#39;rybb_api_settings&#39; page. This makes it possible for unauthenticated attackers to reset the plugin&#39;s stored settings by overwriting its configuration via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-8493",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Colorbox Inline allows Cross-Site Scripting (XSS). This issue affects Colorbox Inline: from 0.0.0 before 2.1.1. 20/05/2026 20/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8423",
+    "descripcion": "The JaviBola Custom Theme Test plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.0.5. This is due to missing or incorrect nonce validation on the options page. This makes it possible for unauthenticated attackers to change the site&#39;s active theme by modifying the jbct_theme option via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-8492",
-    "descripcion": "Modification of Assumed-Immutable Data (MAID) vulnerability in Drupal Translate Drupal with GTranslate allows Resource Location Spoofing. This issue affects Translate Drupal with GTranslate: from 0.0.0 before 3.0.5. 20/05/2026 20/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8420",
+    "descripcion": "The BLOGCHAT Chat System plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.3.6.3. This is due to missing or incorrect nonce validation on a function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-8491",
-    "descripcion": "Improper Check for Unusual or Exceptional Conditions vulnerability in Drupal Node View Permissions allows Forceful Browsing. This issue affects Node View Permissions: from 0.0.0 before 1.7.0, from 2.0.0 before 2.0.1. 20/05/2026 20/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8419",
+    "descripcion": "The Amazon Scraper plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.1. This is due to missing or incorrect nonce validation on a function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-19",
-    "cve": "CVE-2026-6871",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Obfuscate allows Cross-Site Scripting (XSS). This issue affects Obfuscate: from 0.0.0 before 2.0.2. 20/05/2026 20/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8418",
+    "descripcion": "The Games Catalog plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.2.0. This is due to missing or incorrect nonce validation on the gc_crud() function which handles the delete action (action=delete) via a GET request without any wp_verify_nonce() / check_admin_referer() call. This makes it possible for unauthenticated attackers to delete arbitrary game catalog entries (including the associated WordPress post created for the game) via a forged request, granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
