@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8685",
-    "descripcion": "The Infility Global plugin for WordPress is vulnerable to SQL Injection via the &#39;orderby&#39; and &#39;order&#39; parameters in all versions up to, and including, 2.15.16. This is due to insufficient escaping on user supplied parameters and lack of sufficient preparation on the existing SQL query within the show_control_data::post_list() function, which is registered as an admin menu page with only the &#39;read&#39; capability. This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7385",
+    "descripcion": "The Decent Comments WordPress plugin before 3.0.2 does not restrict access to comment author email addresses and post author email addresses via its REST API endpoint, allowing unauthenticated attackers to enumerate registered user email addresses. 20/05/2026 20/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8627",
-    "descripcion": "The Correct Prices plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the $_SERVER[&#39;PHP_SELF&#39;] variable in versions up to and including 1.0. This is due to the correct_prices_page() function echoing $_SERVER[&#39;PHP_SELF&#39;] into a form&#39;s action attribute without any input sanitization or output escaping (such as esc_url() or esc_attr()). Because PHP_SELF reflects attacker-controlled path-info appended to the script URL, an attacker can break out of the attribute and inject arbitrary markup. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a specially crafted link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-6566",
+    "descripcion": "The Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to and including 4.2.0. This is due to insufficient object-level authorization in the image deletion REST flow where the permission callback for DELETE /imagely/v1/images/{id} only checks &#39;NextGEN Manage gallery&#39; permissions and does not enforce gallery ownership or &#39;NextGEN Manage others gallery&#39; permissions. This makes it possible for authenticated attackers, with Subscriber-level privileges and &#39;NextGEN Manage gallery&#39; capability, to delete gallery images belonging to other users as well as their associated image files from disk when deleteImg is enabled (default). 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8626",
-    "descripcion": "The SponsorMe plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via PHP_SELF Parameter in all versions up to, and including, 0.5.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. The PHP_SELF value is reflected in two separate locations within the vulnerable function — a form action attribute and an anchor href attribute — both of which can be exploited by appending a crafted payload to the wp-admin/admin.php URL path. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-5776",
+    "descripcion": "The Email Encoder WordPress plugin before 2.4.7 does not escape email addresses retrieved via user input, allowing unauthenticated attackers to perform Stored XSS attacks 20/05/2026 20/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8624",
-    "descripcion": "The LJ comments import: reloaded plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via PHP_SELF Parameter in all versions up to, and including, 0.97.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. The vulnerability arises specifically because PHP_SELF includes attacker-controllable PATH_INFO appended to the script name, and there are two distinct unsanitized echo points for this value in the same function. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-47784",
+    "descripcion": "In memcached before 1.6.42, password data for SASL password database authentication has a timing side channel because memcmp is used by sasl_server_userdb_checkpass. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8610",
-    "descripcion": "The TypeSquare Webfonts for ConoHa plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.0.4. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to modify the plugin&#39;s site-wide font settings, including the typesquare_auth option (fontThemeUseType), show_post_form, and typesquare_fonttheme, by submitting a POST request to any wp-admin page. For fontThemeUseType values 1 and 3, no nonce verification is performed either, meaning those branches are additionally exploitable via cross-site request forgery. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-47783",
+    "descripcion": "In memcached before 1.6.42, username data for SASL password database authentication has a timing side channel because a loop exits as soon as a valid username is found by sasl_server_userdb_checkpass. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8424",
-    "descripcion": "The Remove Yellow BGBOX plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.0. This is due to missing or incorrect nonce validation on the &#39;rybb_api_settings&#39; page. This makes it possible for unauthenticated attackers to reset the plugin&#39;s stored settings by overwriting its configuration via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-44392",
+    "descripcion": "Missing authorization vulnerability exists in Movable Type. Under certain conditions, when a user without administrator privileges signs in to the product, unintended update processing may be executed. 20/05/2026 20/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8423",
-    "descripcion": "The JaviBola Custom Theme Test plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.0.5. This is due to missing or incorrect nonce validation on the options page. This makes it possible for unauthenticated attackers to change the site&#39;s active theme by modifying the jbct_theme option via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-2955",
+    "descripcion": "The AI Chatbot & Workflow Automation by AIWU plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;X-Forwarded-For&#39; header in versions up to, and including, 1.4.14 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. NOTE: Practical exploitation is constrained due to a 20-character storage limit. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8420",
-    "descripcion": "The BLOGCHAT Chat System plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.3.6.3. This is due to missing or incorrect nonce validation on a function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-9057",
+    "descripcion": "A broken access control issue has been identified in the Talend Administration Center, that allows a user with “View” permission to modify the Talend Studio update URL. This issue was resolved in a patch, which is already available. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8419",
-    "descripcion": "The Amazon Scraper plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.1. This is due to missing or incorrect nonce validation on a function. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-9056",
+    "descripcion": "A stored cross-site scripting vulnerability has been found in the Talend Administration Center. An attacker with permission to manage servers can store a XSS payload that can be triggered by a different user. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-20",
-    "cve": "CVE-2026-8418",
-    "descripcion": "The Games Catalog plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.2.0. This is due to missing or incorrect nonce validation on the gc_crud() function which handles the delete action (action=delete) via a GET request without any wp_verify_nonce() / check_admin_referer() call. This makes it possible for unauthenticated attackers to delete arbitrary game catalog entries (including the associated WordPress post created for the game) via a forged request, granted they can trick a site administrator into performing an action such as clicking on a link. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7522",
+    "descripcion": "The Advanced Database Cleaner – Premium plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 4.1.0 via the &#39;template&#39; parameter. This makes it possible for authenticated attackers, with Subscriber-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. 20/05/2026 20/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
