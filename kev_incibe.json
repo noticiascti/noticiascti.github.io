@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-05-20",
+    "cve": "CVE-2026-9149",
+    "descripcion": "A flaw was found in libsolv. This heap buffer overflow vulnerability occurs when a victim processes a specially crafted `.solv` file containing negative size values in the `repo_add_solv` function. This leads to an undersized memory allocation and a subsequent out-of-bounds write. An attacker could exploit this to cause a denial of service (DoS). 21/05/2026 21/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-40165",
+    "descripcion": "authentik is an open-source identity provider. Versions 2025.12.4 and prior, and versions 2026.2.0-rc1 through 2026.2.2 were vulnerable to Authentication Bypass through SAML NameID XML Comment Injection. Due to how authentik extracted the NameID value from a SAML assertion, it was possible for an attacker to trick authentik into only seeing a part of the NameID value, potentially allowing an attacker to gain access to other accounts. This issue could be exploited on an authentik instance with a SAML Source, where the attacker had an account on the SAML Source and the ability to modify their NameID value (commonly username or E-mail), and XML Signing was enabled. The attacker could modify the SAML assertion given to authentik by injecting a comment within the NameID value, which effectively truncated the NameID value to the snippet before the comment, and gave the attacker access to any user account. This issue has been fixed in versions 2025.12.5 and 2026.2.3. 21/05/2026 21/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-9150",
+    "descripcion": "A flaw was found in libsolv. This stack-based buffer overflow vulnerability occurs in libsolv&#39;s Debian metadata parser when processing specially crafted Debian repository metadata. An attacker could exploit this by providing malicious SHA384 or SHA512 checksum tags, leading to memory corruption and a denial of service (DoS) in the affected system. 21/05/2026 21/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-8399",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/05/2026 21/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-20",
+    "cve": "CVE-2026-47782",
+    "descripcion": "Android App &#34;RoboForm Password Manager&#34; provided by Siber Systems, Inc. handles Android intents without sufficient URL validation, user confirmation nor notification. If a URL to some malicious web page is given through an intent, RoboForm may silently download files without user confirmation nor notification. 21/05/2026 21/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-05-20",
     "cve": "CVE-2026-47372",
     "descripcion": "Crypt::SaltedHash versions through 0.09 for Perl generate insecure random values for salts. These versions use the built-in rand function, which is predictable and unsuitable for cryptography. 21/05/2026 21/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-05-20",
     "cve": "CVE-2026-39960",
     "descripcion": "Mantis Bug Tracker (MantisBT) is an open source issue tracker. Versions 2.28.1 and below contain flawed logic that causes improper escaping of a textarea custom field&#39;s contents in the Update Issue page, (bug_update_page.php) allowing an attacker to inject HTML and, if CSP settings permit, execute arbitrary JavaScript when the page is loaded. This facilitates session theft, leading to admin account takeover, full project data access. In order to exploit this issue, a textarea-type custom field must be configured for the project, the attack must be carried out by an authenticated user with bug report permission (low privilege). This can affect any user viewing the bug edit form, including administrators. The issue has been fixed in version 2.28.2. If users cannot immediately upgrade, they can work around the issue by using the default Content-Security Policy, which blocks script execution. 21/05/2026 21/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-20",
-    "cve": "CVE-2026-8632",
-    "descripcion": "A potential security vulnerability has been identified in the HP Linux Imaging and Printing Software. This potential vulnerability may allow escalation of privileges and/or arbitrary code execution via operating system command injection. 20/05/2026 20/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-20",
-    "cve": "CVE-2026-8631",
-    "descripcion": "A potential security vulnerability has been identified in the HP Linux Imaging and Printing Software. This potential vulnerability may allow escalation of privileges and/or arbitrary code execution via an integer overflow in the hpcups processing path when handling crafted print data. 20/05/2026 20/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-20",
-    "cve": "CVE-2026-9144",
-    "descripcion": "Taiko AG1000-01A SMS Alert Gateway Rev 7.3 and Rev 8 contains a stored cross-site scripting vulnerability in the embedded web configuration interface that allows authenticated attackers to execute persistent JavaScript by fragmenting malicious payloads across multiple administrative form fields. Attackers can bypass front-end length restrictions using JavaScript comments and template literals to concatenate executable script fragments that are rendered in administrative dashboard views such as index.zhtml, resulting in persistent script execution within administrative sessions. 20/05/2026 20/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-20",
-    "cve": "CVE-2026-9141",
-    "descripcion": "Taiko AG1000-01A SMS Alert Gateway Rev 7.3 and Rev 8 contains an authentication bypass vulnerability in the embedded web configuration interface that allows unauthenticated attackers to access internal application pages without any session management or server-side authentication checks. Attackers with network access can directly request internal resources such as index.zhtml, point.zhtml, and log.shtml to gain full administrative read and write access, enabling unauthorized modification of alarm routing, device configuration, and disruption of monitoring and control functions. 20/05/2026 20/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-20",
-    "cve": "CVE-2026-9139",
-    "descripcion": "Taiko AG1000-01A SMS Alert Gateway Rev 7.3 and Rev 8 contains a hard-coded credential vulnerability in the embedded web configuration interface where authentication is implemented entirely in client-side JavaScript in login.zhtml, exposing static plaintext credentials in the page source. Unauthenticated attackers with network access can recover administrative credentials directly from the client-side validate() function to obtain full administrative access to the device. 20/05/2026 20/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
