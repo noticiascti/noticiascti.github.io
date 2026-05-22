@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-22",
+    "cve": "CVE-2026-9104",
+    "descripcion": "The Draft List plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Draft Post Title in all versions up to, and including, 2.6.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The unescaped injection path is triggered specifically when the viewing user lacks edit capabilities, meaning payloads embedded in draft post titles via attribute-breakout techniques execute for unauthenticated users and subscribers. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-9018",
+    "descripcion": "The Easy Elements for Elementor – Addons & Website Templates plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.4.5 via the `easyel_handle_register()` function. This is due to the `wp_ajax_nopriv_eel_register` AJAX handler iterating the attacker-controlled `custom_meta` POST array and writing every supplied key-value pair to the newly created user&#39;s meta via `update_user_meta()` without any key whitelist or blocklist, allowing the `wp_capabilities` user meta key to be overwritten after `wp_insert_user()` has already assigned a safe role. This makes it possible for unauthenticated attackers to register a new account with full administrator-level privileges by supplying `custom_meta[wp_capabilities][administrator]=1`. Exploitation requires that user registration is enabled on the site and that at least one page exposes the Login/Register widget, which publishes the required `easy_elements_nonce` into the page DOM where it can be retrieved by any unauthenticated visitor via a simple GET request. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-7509",
+    "descripcion": "The KIA Subtitle plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s `the-subtitle` shortcode `before` and `after` attributes in all versions up to, and including, 4.0.1. This is due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-7249",
+    "descripcion": "The Location Weather plugin for WordPress is vulnerable to unauthorized modification of data due to missing capability checks on the `splw_update_block_options()` and `lwp_clean_weather_transients()` functions in all versions up to, and including, 3.0.2. This makes it possible for authenticated attackers, with Contributor-level access and above, to disable all weather blocks and purge all weather cache transients. The nonce required for these actions is exposed to all authenticated users via `wp_localize_script()` on the `init` hook. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-6864",
+    "descripcion": "The CBX 5 Star Rating & Review plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;page&#39; parameter in all versions up to, and including, 1.0.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick an administrator into performing an action such as clicking on a link. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-4070",
+    "descripcion": "The Alfie – Feed Plugin plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.2.1. This is due to missing nonce validation on the alfie_manage() function which handles feed deletion via the &#39;delete&#39; GET parameter. This makes it possible for unauthenticated attackers to delete arbitrary plugin feed data (from alfie_colindex, alfie_producten, alfie_reactions, and alfie_searchproduct tables) via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-44409",
+    "descripcion": "There is an an information disclosure vulnerability in ZTE MU5250. Due to improper configuration of the access control mechanism, attackers can obtain information without authorization, causing the risk of information disclosure. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-3481",
+    "descripcion": "The WP Blockade plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the &#39;shortcode&#39; parameter in all versions up to and including 0.9.14. This is due to insufficient input sanitization and output escaping in the render_shortcode_preview() function. The function receives user input from $_GET[&#39;shortcode&#39;], passes it through stripslashes() without any sanitization, and then outputs it directly via echo do_shortcode($shortcode) on line 393. When the input is not a valid WordPress shortcode (e.g., an HTML tag with JavaScript event handlers), do_shortcode() returns it unchanged, and it is reflected into the page without escaping. The endpoint is registered via admin_post_ (not admin_post_nopriv_), meaning it requires the user to be logged in with at minimum a Subscriber-level account. There is no nonce verification or additional capability check. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary web scripts in pages that will execute if they can successfully trick a user into performing an action such as clicking a link. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-2518",
+    "descripcion": "The FastX theme for WordPress is vulnerable to unauthorized limited plugin installation and activation due to missing capability checks on the &#39;ultp_install_callback&#39; and &#39;ultp_activate_callback&#39; functions in all versions up to, and including, 1.0.2. This makes it possible for authenticated attackers, with Subscriber-level access and above, to install and activate the PostX plugin. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
     "cve": "CVE-2026-9054",
     "descripcion": "An attacker sending tcp, il, rudp, rudp, or gre packets with a length less than the header size would trigger a kernel panic. 22/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:A/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-9053",
-    "descripcion": "Mothra would respect a default value given by a website for HTML file upload forms. An attacker could craft a website with a malicious default file path, and then conceal this form element. 22/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:A/V:X/RE:L/U:Amber Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-4834",
-    "descripcion": "The WP ERP Pro plugin for WordPress is vulnerable to SQL Injection via the &#39;search_key&#39; parameter in all versions up to, and including, 1.5.1. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-46598",
-    "descripcion": "For certain crafted inputs, a &#39;ed25519.PrivateKey&#39; was created by casting malformed wire bytes, leading to a panic when used. 22/05/2026 22/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-46597",
-    "descripcion": "An incorrectly placed cast from bytes to int allowed for server-side panic in the AES-GCM packet decoder for well-crafted inputs. 22/05/2026 22/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-46595",
-    "descripcion": "Previously, CVE-2024-45337 fixed an authorization bypass for misused ssh server configurations; if any other type of callback is passed other than public key, then the source-address validation would be skipped. 22/05/2026 22/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-42508",
-    "descripcion": "Previously, a revoked &#39;SignatureKey&#39; belonging to a CA was not correctly checked for revocation. Now, both the &#39;key&#39; and &#39;key.SignatureKey&#39; are checked for @revoked. 22/05/2026 22/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-39835",
-    "descripcion": "SSH servers which use CertChecker as a public key callback without setting IsUserAuthority or IsHostAuthority could be caused to panic by a client presenting a certificate. CertChecker now returns an error instead of panicking when these callbacks are nil. 22/05/2026 22/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-39834",
-    "descripcion": "When writing data larger than 4GB in a single Write call on an SSH channel, an integer overflow in the internal payload size calculation caused the write loop to spin indefinitely, sending empty packets without making progress. The size comparison now uses int64 to prevent truncation. 22/05/2026 22/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-39833",
-    "descripcion": "The in-memory keyring returned by NewKeyring() silently accepted keys with the ConfirmBeforeUse constraint but never enforced it. The key would sign without any confirmation prompt, with no indication to the caller that the constraint was not in effect. NewKeyring() now returns an error when unsupported constraints are requested. 22/05/2026 22/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
