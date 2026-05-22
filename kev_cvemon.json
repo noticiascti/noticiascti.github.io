@@ -16,11 +16,6 @@
   },
   {
     "fecha": "2026-05-22",
-    "cve": "CVE-2026-43284",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: esp: avoid in-place decrypt on shared skb frags MSG_SPLICE_PAGES can attach pages from a pipe directly to an skb. TCP marks such skbs with SKBFL_SHARED_FRAG after skb_splice_from_iter(), so later paths ..."
-  },
-  {
-    "fecha": "2026-05-22",
     "cve": "CVE-2026-31431",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: algif_aead - Revert to operating out-of-place This mostly reverts commit 72548b093ee3 except for the copying of the associated data. There is no benefit in operating in-place in algif_aead since ..."
   },
@@ -43,6 +38,11 @@
     "fecha": "2026-05-22",
     "cve": "CVE-2026-43121",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: io_uring/zcrx: fix user_ref race between scrub and refill paths The io_zcrx_put_niov_uref() function uses a non-atomic check-then-decrement pattern (atomic_read followed by separate atomic_dec) to manipulate ..."
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-43494",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/rds: reset op_nents when zerocopy page pin fails When iov_iter_get_pages2() fails in rds_message_zcopy_from_user(), the pinned pages are released with put_page(), and rm->data.op_mmp_znotifier is cleared. ..."
   },
   {
     "fecha": "2026-05-22",
