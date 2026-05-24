@@ -11,18 +11,23 @@
   },
   {
     "fecha": "2026-05-24",
+    "cve": "CVE-2026-46300",
+    "descripcion": "Currently trending CVE - Hype Score: 31"
+  },
+  {
+    "fecha": "2026-05-24",
     "cve": "CVE-2026-43284",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: esp: avoid in-place decrypt on shared skb frags MSG_SPLICE_PAGES can attach pages from a pipe directly to an skb. TCP marks such skbs with SKBFL_SHARED_FRAG after skb_splice_from_iter(), so later paths ..."
   },
   {
     "fecha": "2026-05-24",
-    "cve": "CVE-2026-43500",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Also unshare DATA/RESPONSE packets when paged frags are present The DATA-packet handler in rxrpc_input_call_event() and the RESPONSE handler in rxrpc_verify_response() copy the skb to a linear one ..."
+    "cve": "CVE-2022-0847",
+    "descripcion": "A flaw was found in the way the \"flags\" member of the new pipe buffer structure was lacking proper initialization in copy_page_to_iter_pipe and push_pipe functions in the Linux kernel and could thus contain stale values. An unprivileged local user could use this flaw to write to ..."
   },
   {
     "fecha": "2026-05-24",
-    "cve": "CVE-2022-0847",
-    "descripcion": "A flaw was found in the way the \"flags\" member of the new pipe buffer structure was lacking proper initialization in copy_page_to_iter_pipe and push_pipe functions in the Linux kernel and could thus contain stale values. An unprivileged local user could use this flaw to write to ..."
+    "cve": "CVE-2026-43500",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Also unshare DATA/RESPONSE packets when paged frags are present The DATA-packet handler in rxrpc_input_call_event() and the RESPONSE handler in rxrpc_verify_response() copy the skb to a linear one ..."
   },
   {
     "fecha": "2026-05-24",
@@ -33,11 +38,6 @@
     "fecha": "2026-05-24",
     "cve": "CVE-2026-43121",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: io_uring/zcrx: fix user_ref race between scrub and refill paths The io_zcrx_put_niov_uref() function uses a non-atomic check-then-decrement pattern (atomic_read followed by separate atomic_dec) to manipulate ..."
-  },
-  {
-    "fecha": "2026-05-24",
-    "cve": "CVE-2026-46300",
-    "descripcion": "Currently trending CVE - Hype Score: 30"
   },
   {
     "fecha": "2026-05-24",
