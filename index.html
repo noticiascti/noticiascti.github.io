@@ -252,91 +252,87 @@
           </h2>
 
           <p class="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
-            Monitoreo consolidado de ransomware, vulnerabilidades explotadas, fraude digital y noticias relevantes para equipos de ciberinteligencia.
+            Monitoreo resumido de noticias, ransomware, vulnerabilidades, reclamos públicos y estados de servicio relevantes para equipos de ciberinteligencia.
           </p>
         </div>
       </section>
 
-      <section class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
-          <div class="relative z-10">
-            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
-            <p class="mt-1 text-xs font-semibold text-slate-400">Víctimas ransomware</p>
-            <div id="statRansomGlobal" class="mt-3 text-4xl font-black text-red-300">0</div>
-            <p class="mt-1 text-xs text-slate-500">Global</p>
+      <section class="pb-8 sm:pb-10">
+        <div class="mb-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="text-center lg:text-left">
+            <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Resumen por secciones</h3>
+            <p class="mt-1 text-sm text-slate-500">Vista rápida de cobertura por categoría del portal.</p>
           </div>
         </div>
 
-        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
-          <div class="relative z-10">
-            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
-            <p class="mt-1 text-xs font-semibold text-slate-400">Víctimas ransomware</p>
-            <div id="statRansomLatam" class="mt-3 text-4xl font-black text-amber-300">0</div>
-            <p class="mt-1 text-xs text-slate-500">LATAM</p>
-          </div>
-        </div>
+        <div id="sectionSummary" class="grid items-stretch gap-5 lg:grid-cols-3">
+          <article class="news-card glass h-full rounded-[2rem] p-5 border-red-400/20">
+            <div class="relative z-10 flex h-full flex-col">
+              <div class="mb-4 flex items-start justify-between gap-3">
+                <div>
+                  <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.05] px-3 py-1.5 text-xs font-bold text-red-300">
+                    <span>Ransomware</span>
+                  </div>
+                  <h4 class="mt-4 text-xl font-black text-white">Últimas víctimas publicadas en LATAM</h4>
+                </div>
+                <a href="./ransomware.html" class="shrink-0 text-sm font-bold text-sky-300 hover:text-sky-200">Ver más →</a>
+              </div>
+              <div id="ransomLatamList" class="mt-2 grid flex-1 auto-rows-fr gap-3"></div>
+            </div>
+          </article>
 
-        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
-          <div class="relative z-10">
-            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
-            <p class="mt-1 text-xs font-semibold text-slate-400">Vulnerabilidades</p>
-            <div id="statKev" class="mt-3 text-4xl font-black text-sky-300">0</div>
-            <p class="mt-1 text-xs text-slate-500">Explotadas</p>
-          </div>
-        </div>
+          <article class="news-card glass h-full rounded-[2rem] p-5 border-amber-400/20">
+            <div class="relative z-10 flex h-full flex-col">
+              <div class="mb-4 flex items-start justify-between gap-3">
+                <div>
+                  <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.05] px-3 py-1.5 text-xs font-bold text-amber-300">
+                    <span>Vulnerabilidades</span>
+                  </div>
+                  <h4 class="mt-4 text-xl font-black text-white">CVEs recientes relevantes</h4>
+                </div>
+                <a href="./vulnerabilidades.html" class="shrink-0 text-sm font-bold text-sky-300 hover:text-sky-200">Ver más →</a>
+              </div>
+              <div id="vulnRecentList" class="mt-2 grid flex-1 auto-rows-fr gap-3"></div>
+            </div>
+          </article>
 
-        <div class="stat-card glass-soft rounded-3xl p-4 sm:p-5">
-          <div class="relative z-10">
-            <p class="text-[10px] uppercase tracking-[.18em] text-slate-500">Mes en curso</p>
-            <p class="mt-1 text-xs font-semibold text-slate-400">Noticias nacionales</p>
-            <div id="statNoticiasChile" class="mt-3 text-4xl font-black text-violet-300">0</div>
-            <p class="mt-1 text-xs text-slate-500">Chile</p>
-          </div>
+          <article class="news-card glass h-full rounded-[2rem] p-5 border-cyan-400/20">
+            <div class="relative z-10 flex h-full flex-col">
+              <div class="mb-4 flex items-start justify-between gap-3">
+                <div>
+                  <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.05] px-3 py-1.5 text-xs font-bold text-sky-300">
+                    <span>Downdetector</span>
+                  </div>
+                  <h4 class="mt-4 text-xl font-black text-white">Más reportes en la última hora</h4>
+                </div>
+                <a href="./status.html" class="shrink-0 text-sm font-bold text-sky-300 hover:text-sky-200">Ver más →</a>
+              </div>
+              <div id="downdetectorTopList" class="mt-2 grid flex-1 auto-rows-fr gap-3"></div>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="py-8 sm:py-10">
         <div class="mb-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div class="text-center lg:text-left">
-            <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Últimas noticias</h3>
-            <p class="mt-1 text-sm text-slate-500">Vista ejecutiva y táctica del feed CTI.</p>
+            <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Últimas noticias globales</h3>
+            <p class="mt-1 text-sm text-slate-500">Solo las 3 publicaciones más recientes del feed global.</p>
           </div>
+          <a href="./noticias.html" class="mx-auto inline-flex rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 hover:bg-white/[.09] lg:mx-0">Ver todas →</a>
+        </div>
+        <div id="globalNewsFeed" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+      </section>
 
-          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <div class="relative">
-              <input id="searchInput" oninput="aplicarFiltros()" type="search" placeholder="Buscar noticia, país, sector, keyword..." class="w-full rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 pr-10 text-sm text-white outline-none placeholder:text-slate-500 focus:border-sky-400/40 sm:w-80">
-              <span class="pointer-events-none absolute right-4 top-3 text-slate-500">⌕</span>
-            </div>
-            <button onclick="filtrarCategoria('all')" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 hover:bg-white/[.09]">
-              Limpiar filtros
-            </button>
+      <section class="pb-12 sm:pb-16">
+        <div class="mb-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="text-center lg:text-left">
+            <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Últimas noticias nacionales</h3>
+            <p class="mt-1 text-sm text-slate-500">Solo las 3 publicaciones más recientes del feed nacional.</p>
           </div>
+          <a href="./medios.html" class="mx-auto inline-flex rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 hover:bg-white/[.09] lg:mx-0">Ver todas →</a>
         </div>
-
-        <div id="categoryBar" class="mb-6 flex gap-2 overflow-x-auto pb-2">
-          <button data-category="all" onclick="filtrarCategoria('all')" class="category-pill active rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">🏠 Todas</button>
-          <button data-category="Incidentes y Fugas de Datos en Empresas" onclick="filtrarCategoria('Incidentes y Fugas de Datos en Empresas')" class="category-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">💥 Incidentes</button>
-          <button data-category="Tendencias de Ataques al Sector Financiero" onclick="filtrarCategoria('Tendencias de Ataques al Sector Financiero')" class="category-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">📊 Tendencias</button>
-          <button data-category="Prevención / Innovación en el Sector Financiero" onclick="filtrarCategoria('Prevención / Innovación en el Sector Financiero')" class="category-pill rounded-2xl border border-white/10 bg-white/[.05] px-4 py-2 text-sm text-slate-200">💡 Innovación</button>
-        </div>
-
-        <div id="feed" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
-
-        <div id="emptyState" class="hidden glass mt-6 rounded-[2rem] p-8 text-center">
-          <div class="text-4xl">🛰️</div>
-          <h4 class="mt-3 text-xl font-black">Sin resultados</h4>
-          <p class="mt-2 text-slate-400">No se encontraron noticias para el filtro actual.</p>
-        </div>
-
-        <div class="mt-8 flex items-center justify-center gap-3">
-          <button id="prevBtn" onclick="cambiarPagina(-1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
-            ← Anterior
-          </button>
-          <span id="pageIndicator" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-400">Página 1</span>
-          <button id="nextBtn" onclick="cambiarPagina(1)" class="rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3 text-sm text-slate-200 disabled:cursor-not-allowed disabled:opacity-40">
-            Siguiente →
-          </button>
-        </div>
+        <div id="nationalNewsFeed" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
       </section>
     </main>
   </div>
@@ -346,8 +342,40 @@
     const KEV_JSON = "./kev_cisa.json";
     const RANSOMWARE_JSON = "./ransomware.json";
     const NOTICIAS_NACIONALES_JSON = "./status_nacional.json";
+    const RECLAMOS_JSON = "./reclamos.json";
+    const VULNERABILIDADES_JSON = "./vulnerabilidades.json";
+    const STATUS_NACIONAL_JSON = "./status_data.json";
+    const STATUS_GLOBAL_JSON = "./status_data_global.json";
 
-    const LATAM = new Set(["AR","BO","BR","CL","CO","CR","CU","DO","EC","GT","HN","MX","NI","PA","PE","PY","UY","VE"]);
+    const COUNTRY_NAMES_ES = {
+      AR:"Argentina", ARG:"Argentina", ARGENTINA:"Argentina",
+      BO:"Bolivia", BOL:"Bolivia", BOLIVIA:"Bolivia",
+      BR:"Brasil", BRA:"Brasil", BRASIL:"Brasil", BRAZIL:"Brasil",
+      CL:"Chile", CHL:"Chile", CHILE:"Chile",
+      CO:"Colombia", COL:"Colombia", COLOMBIA:"Colombia",
+      CR:"Costa Rica", CRI:"Costa Rica", COSTARICA:"Costa Rica", "COSTA RICA":"Costa Rica",
+      CU:"Cuba", CUB:"Cuba", CUBA:"Cuba",
+      DO:"República Dominicana", DOM:"República Dominicana", RD:"República Dominicana", "REPUBLICA DOMINICANA":"República Dominicana", "REPÚBLICA DOMINICANA":"República Dominicana", "DOMINICAN REPUBLIC":"República Dominicana",
+      EC:"Ecuador", ECU:"Ecuador", ECUADOR:"Ecuador",
+      SV:"El Salvador", SLV:"El Salvador", ELSALVADOR:"El Salvador", "EL SALVADOR":"El Salvador",
+      GT:"Guatemala", GTM:"Guatemala", GUATEMALA:"Guatemala",
+      HT:"Haití", HTI:"Haití", HAITI:"Haití", "HAITÍ":"Haití",
+      HN:"Honduras", HND:"Honduras", HONDURAS:"Honduras",
+      MX:"México", MEX:"México", MEXICO:"México", "MÉXICO":"México",
+      NI:"Nicaragua", NIC:"Nicaragua", NICARAGUA:"Nicaragua",
+      PA:"Panamá", PAN:"Panamá", PANAMA:"Panamá", "PANAMÁ":"Panamá",
+      PY:"Paraguay", PRY:"Paraguay", PARAGUAY:"Paraguay",
+      PE:"Perú", PER:"Perú", PERU:"Perú", "PERÚ":"Perú",
+      UY:"Uruguay", URY:"Uruguay", URUGUAY:"Uruguay",
+      VE:"Venezuela", VEN:"Venezuela", VENEZUELA:"Venezuela",
+      BZ:"Belice", BLZ:"Belice", BELICE:"Belice", BELIZE:"Belice",
+      GF:"Guayana Francesa", GUAYANAFRANCESA:"Guayana Francesa", "GUAYANA FRANCESA":"Guayana Francesa", "FRENCH GUIANA":"Guayana Francesa",
+      GY:"Guyana", GUY:"Guyana", GUYANA:"Guyana",
+      SR:"Surinam", SUR:"Surinam", SURINAM:"Surinam", SURINAME:"Surinam",
+      PR:"Puerto Rico", PRI:"Puerto Rico", PUERTORICO:"Puerto Rico", "PUERTO RICO":"Puerto Rico"
+    };
+
+    const LATAM = new Set(Object.keys(COUNTRY_NAMES_ES));
 
     const MESES_ES = {
       "enero":0,
@@ -370,26 +398,63 @@
       "Incidentes y Fugas de Datos en Empresas": { short:"Incidentes & DataBreach", icon:"💥", tone:"text-red-300", border:"border-red-400/20" },
       "Tendencias de Ataques al Sector Financiero": { short:"Tendencias", icon:"📊", tone:"text-sky-300", border:"border-sky-400/20" },
       "Prevención / Innovación en el Sector Financiero": { short:"Innovación & Prevención", icon:"💡", tone:"text-amber-300", border:"border-amber-400/20" },
-      "Noticias Ciberseguridad": { short:"Noticias Ciberseguridad", icon:"🔒", tone:"text-cyan-300", border:"border-cyan-400/20" }
+      "Noticias Ciberseguridad": { short:"Noticias Ciberseguridad", icon:"🔒", tone:"text-cyan-300", border:"border-cyan-400/20" },
+      "Noticias Nacionales": { short:"Noticias Nacionales", icon:"📰", tone:"text-violet-300", border:"border-violet-400/20" }
+    };
+
+    const nacionales = {
+      "bci": { nombre: "Banco BCI", logo: "https://cdn.worldvectorlogo.com/logos/bci-logotype.svg", url: "https://downdetector.cl/problemas/bancodecreditoenversionesbci/" },
+      "banco_estado": { nombre: "Banco Estado", logo: "https://upload.wikimedia.org/wikipedia/commons/archive/8/82/20250630182742%21Logo_BancoEstado_%28cropped%29.svg", url: "https://downdetector.cl/problemas/banco-estado/" },
+      "transbank": { nombre: "Transbank", logo: "https://i.ibb.co/nM6QHhCk/Screenshot-1.jpg", url: "https://downdetector.cl/problemas/transbank/" },
+      "banco_itau": { nombre: "Banco Itaú", logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Ita%C3%BA_Unibanco_logo_2023.svg", url: "https://downdetector.cl/problemas/banco-itau/" },
+      "banco_chile": { nombre: "Banco de Chile", logo: "https://companieslogo.com/img/orig/BCH-1e8f26ec.png", url: "https://downdetector.cl/problemas/bancodechile/" },
+      "santander": { nombre: "Banco Santander", logo: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Santander_Logo.jpg", url: "https://downdetector.cl/problemas/santander/" },
+      "banco_falabella": { nombre: "Banco Falabella", logo: "https://images.ctfassets.net/p6eyia4djstu/1o1z5PwFbFe7rhOjHbUzp8/3acc5848393a09d069cfa3c004fbd6a1/bf-logo-mobile.svg", url: "https://downdetector.cl/problemas/banco-falabella/" },
+      "scotiabank": { nombre: "Scotiabank", logo: "https://static.wikia.nocookie.net/logopedia/images/7/7c/Scotiabankicon2019.svg", url: "https://downdetector.cl/problemas/scotiabank/" },
+      "sii": { nombre: "SII", logo: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Logo_de_Servicio_de_Impuestos_Internos.svg", url: "https://downdetector.cl/problemas/sii/" },
+      "banco_bice": { nombre: "Banco BICE", logo: "https://congreso.america-digital.com/wp-content/uploads/2025/02/Bice-300x200-1.png", url: "https://downdetector.cl/problemas/bice/" },
+      "machbank": { nombre: "MACH", logo: "https://getonbrd-prod.s3.amazonaws.com/uploads/users/logo/7337/thumb_LOGOMACH2-200x200.jpg", url: "https://downdetector.cl/problemas/mach/" },
+      "tenpo": { nombre: "Tenpo", logo: "https://logosenvector.com/logo/img/icon-tenpo-39601.png", url: "https://downdetector.cl/problemas/tenpo/" }
+    };
+
+    const globales = {
+      "googlegemini": { nombre: "Google Gemini", logo: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Google_Gemini_icon_2025.svg", url: "https://downdetector.cl/problemas/googlegemini/" },
+      "openai": { nombre: "OpenAI", logo: "https://images.icon-icons.com/3913/PNG/512/openai_logo_icon_248315.png", url: "https://downdetector.cl/problemas/openai/" },
+      "microsoft_copilot": { nombre: "Microsoft Copilot", logo: "https://learningtech.uncg.edu/wp-content/uploads/2025/10/app-page-logo_copilot.png", url: "https://downdetector.cl/problemas/microsoft-copilot/" },
+      "aws": { nombre: "AWS Amazon Web Services", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg", url: "https://downdetector.cl/problemas/aws-amazon-web-services/" },
+      "google_cloud": { nombre: "Google Cloud", logo: "https://images.icon-icons.com/2699/PNG/512/google_cloud_logo_icon_171058.png", url: "https://downdetector.cl/problemas/google-cloud/" },
+      "azure": { nombre: "Windows Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg", url: "https://downdetector.cl/problemas/windows-azure/" },
+      "ibm_cloud": { nombre: "IBM Cloud", logo: "https://images.icon-icons.com/2699/PNG/512/ibm_cloud_logo_icon_169019.png", url: "https://downdetector.cl/problemas/ibm-cloud/" },
+      "oracle_cloud": { nombre: "Oracle Cloud", logo: "https://iconlogovector.com/uploads/images/2024/09/lg-66dda83d94540-Oracle.webp", url: "https://downdetector.cl/problemas/oracle-cloud/" },
+      "cloudflare": { nombre: "Cloudflare", logo: "https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png", url: "https://downdetector.cl/problemas/cloudflare/" },
+      "outlook": { nombre: "Outlook", logo: "https://upload.wikimedia.org/wikipedia/commons/4/45/Microsoft_Office_Outlook_%282018%E2%80%932024%29.svg", url: "https://downdetector.cl/problemas/outlook/" },
+      "teams": { nombre: "Microsoft Teams", logo: "https://upload.wikimedia.org/wikipedia/commons/0/07/Microsoft_Office_Teams_%282025%E2%80%93present%29.svg", url: "https://downdetector.cl/problemas/teams/" },
+      "google_meet": { nombre: "Google Meet", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Google_Meet_icon_%282020%29.svg", url: "https://downdetector.cl/problemas/google-meet/" },
+      "gmail": { nombre: "Gmail", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg", url: "https://downdetector.cl/problemas/gmail/" },
+      "github": { nombre: "GitHub", logo: "https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png", url: "https://downdetector.cl/problemas/github/" },
+      "whatsapp": { nombre: "WhatsApp", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg", url: "https://downdetector.cl/problemas/whatsapp/" }
     };
 
     let data = [];
     let kevData = [];
     let ransomwareData = [];
     let noticiasNacionalesData = [];
-    let filteredData = [];
-    let paginaActual = 1;
-    let categoriaActual = "all";
-    const itemsPorPagina = 9;
+    let reclamosData = [];
+    let vulnerabilidadesData = [];
+    let statusServices = [];
 
     init();
 
     async function init(){
-      const [noticias, kev, ransomware, noticiasNacionales] = await Promise.all([
+      const [noticias, kev, ransomware, noticiasNacionales, reclamos, vulnData, statusNacional, statusGlobal] = await Promise.all([
         fetchJSON(DATA_JSON, []),
         fetchJSON(KEV_JSON, []),
         fetchJSON(RANSOMWARE_JSON, []),
-        fetchJSON(NOTICIAS_NACIONALES_JSON, [])
+        fetchJSON(NOTICIAS_NACIONALES_JSON, []),
+        fetchJSON(RECLAMOS_JSON, []),
+        fetchJSON(VULNERABILIDADES_JSON, null),
+        fetchJSON(STATUS_NACIONAL_JSON, { data:{} }),
+        fetchJSON(STATUS_GLOBAL_JSON, { data:{} })
       ]);
 
       data = normalizarNoticias(noticias)
@@ -398,10 +463,20 @@
 
       kevData = Array.isArray(kev) ? kev : [];
       ransomwareData = Array.isArray(ransomware) ? ransomware : [];
-      noticiasNacionalesData = Array.isArray(noticiasNacionales) ? noticiasNacionales : [];
+      noticiasNacionalesData = normalizarNoticiasNacionales(Array.isArray(noticiasNacionales) ? noticiasNacionales : []);
+      reclamosData = normalizarNoticias(Array.isArray(reclamos) ? reclamos : []);
+      vulnerabilidadesData = normalizeVulnerabilidades(vulnData);
+      statusServices = [
+        ...buildStatusServices(statusNacional.data || {}, nacionales, "nacional"),
+        ...buildStatusServices(statusGlobal.data || {}, globales, "global")
+      ].sort((a,b) => b.lastHour - a.lastHour);
 
-      actualizarMetricasMes();
-      aplicarFiltros();
+      actualizarResumen();
+      renderRansomLatam();
+      renderVulnerabilidadesRecientes();
+      renderDowndetectorTop();
+      renderNewsList("globalNewsFeed", data.filter(item => String(item.categoria || "") !== "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques").slice(0,3), "global");
+      renderNewsList("nationalNewsFeed", noticiasNacionalesData.slice(0,3), "national");
     }
 
     async function fetchJSON(url, fallback){
@@ -427,6 +502,17 @@
           palabras_claves: item.palabras_claves || item.keywords || []
         };
       });
+    }
+
+    function normalizarNoticiasNacionales(items){
+      return normalizarNoticias(items)
+        .map(item => ({
+          ...item,
+          categoria: item.categoria || "Noticias Nacionales",
+          timestamp: item.timestamp || fechaNacionalToISO(item.date, item.time) || item.fecha || item.date
+        }))
+        .filter(item => item.timestamp)
+        .sort((a,b) => getDate(b.timestamp) - getDate(a.timestamp));
     }
 
     function normalizarFecha(value){
@@ -481,14 +567,6 @@
       return date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth();
     }
 
-    function isCurrentMonthNacional(item){
-      const date = fechaTextoEspanolToDate(item.date, item.time) || getDate(item.timestamp || item.fecha || item.date);
-      if(!date) return false;
-
-      const now = new Date();
-      return date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth();
-    }
-
     function formatearFecha(value){
       const fecha = getDate(value);
       if(!fecha) return value || "-";
@@ -499,6 +577,35 @@
         hour:"2-digit",
         minute:"2-digit"
       });
+    }
+
+    function formatearFechaResumen(value){
+      const fecha = getDate(value);
+      if(!fecha) return "-";
+      return fecha.toLocaleDateString("es-CL", {
+        day:"2-digit",
+        month:"short",
+        year:"numeric"
+      }).replace(/\./g, "");
+    }
+
+    function normalizarCodigoPais(value){
+      return String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toUpperCase()
+        .trim();
+    }
+
+    function esPaisLatam(value){
+      const normalized = normalizarCodigoPais(value);
+      return LATAM.has(normalized);
+    }
+
+    function formatearPaisLatam(value){
+      const normalized = normalizarCodigoPais(value);
+      if(!normalized) return "-";
+      return COUNTRY_NAMES_ES[normalized] || String(value || "-").trim();
     }
 
     function escapeHTML(value){
@@ -523,17 +630,163 @@
         .trim();
     }
 
-    function actualizarMetricasMes(){
-      const ransomwareMes = ransomwareData.filter(item => isCurrentMonth(item.attackdate || item.discovered));
-      const ransomwareLatamMes = ransomwareMes.filter(item => LATAM.has(String(item.country || "").toUpperCase().trim()));
-      const kevMes = kevData.filter(item => 
-  isCurrentMonth(item.fecha || item.date || item.dateAdded || item.date_added || item.published || item.date_published));
-      const noticiasNacionalesMes = noticiasNacionalesData.filter(item => isCurrentMonthNacional(item));
+    function actualizarResumen(){
+      return;
+    }
 
-      document.getElementById("statRansomGlobal").textContent = ransomwareMes.length;
-      document.getElementById("statRansomLatam").textContent = ransomwareLatamMes.length;
-      document.getElementById("statKev").textContent = kevMes.length;
-      document.getElementById("statNoticiasChile").textContent = noticiasNacionalesMes.length;
+    function normalizeVulnerabilidades(raw){
+      const items = Array.isArray(raw?.general?.latest_known_vendors) && raw.general.latest_known_vendors.length
+        ? raw.general.latest_known_vendors
+        : (Array.isArray(raw?.items) ? raw.items : []);
+
+      return items.map(item => ({
+        cve: item.cve || "Sin CVE",
+        date: item.date || item.fecha || item.date_published || item.date_updated || "",
+        severity: normalizeSeverity(item.severity || item.criticidad),
+        score: typeof item.score === "number" ? item.score : null,
+        vendor: item.vendor || "Sin vendor",
+        product: item.product || item.producto || "Sin producto",
+        title: item.title || item.titulo || item.description || item.descripcion || "",
+        description: item.description || item.descripcion || "",
+        url: item.url || `https://nvd.nist.gov/vuln/detail/${encodeURIComponent(item.cve || "")}`
+      })).sort((a,b) => getDate(b.date) - getDate(a.date));
+    }
+
+    function normalizeSeverity(value){
+      const sev = String(value || "UNKNOWN").toUpperCase();
+      if(sev.includes("CRITICAL")) return "CRITICAL";
+      if(sev.includes("HIGH")) return "HIGH";
+      if(sev.includes("MEDIUM")) return "MEDIUM";
+      if(sev.includes("LOW")) return "LOW";
+      return "UNKNOWN";
+    }
+
+    function buildStatusServices(data, config, scope){
+      const now = new Date();
+      return Object.keys(config).map(key => {
+        const service = config[key];
+        const serviceData = data[key] || {};
+        const dataset = Array.isArray(serviceData.data) ? serviceData.data : [];
+        const last1 = dataset.filter(p => (now - new Date(p.x)) <= 60 * 60 * 1000);
+        const last24 = dataset.filter(p => (now - new Date(p.x)) <= 24 * 60 * 60 * 1000);
+        const lastHour = last1.reduce((a,b) => a + Number(b.y || 0), 0);
+        const max24 = Math.max(0, ...last24.map(p => Number(p.y || 0)));
+        return { key, scope, service, lastHour, max24, updatedAt: serviceData.ultima_actualizacion || null };
+      });
+    }
+
+    function renderRansomLatam(){
+      const container = document.getElementById("ransomLatamList");
+      if(!container) return;
+      const items = ransomwareData
+        .filter(item => esPaisLatam(item.country))
+        .sort((a,b) => getDate(b.attackdate || b.discovered) - getDate(a.attackdate || a.discovered))
+        .slice(0,3);
+
+      if(!items.length){
+        container.innerHTML = emptyMini("Sin víctimas LATAM para mostrar.");
+        return;
+      }
+
+      container.innerHTML = items.map(item => {
+        const name = item.victim || item.post_title || item.name || item.title || "Víctima sin nombre";
+        const group = item.group || item.actor || item.ransomware_group || "Grupo no informado";
+        const country = formatearPaisLatam(item.country);
+        const date = formatearFechaResumen(item.attackdate || item.discovered);
+        return `
+          <div class="flex h-full min-h-[86px] rounded-3xl border border-white/10 bg-white/[.04] p-4">
+            <div class="flex w-full items-start justify-between gap-3">
+              <div class="min-w-0 pr-2">
+                <p class="truncate text-base font-black text-white">${escapeHTML(name)}</p>
+                <p class="mt-2 text-xs text-slate-400"><span class="text-slate-500">Grupo:</span> <strong class="text-slate-200">${escapeHTML(group)}</strong></p>
+              </div>
+              <div class="flex shrink-0 flex-col items-end gap-2">
+                <span class="rounded-full border border-red-400/20 bg-red-400/10 px-3 py-1 text-[11px] font-bold text-red-300">${escapeHTML(date)}</span>
+                <span class="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-[11px] font-bold text-sky-300">${escapeHTML(country)}</span>
+              </div>
+            </div>
+          </div>`;
+      }).join("");
+    }
+
+    function renderVulnerabilidadesRecientes(){
+      const container = document.getElementById("vulnRecentList");
+      if(!container) return;
+      const priority = { "CRITICAL": 4, "HIGH": 3, "MEDIUM": 2, "LOW": 1, "UNKNOWN": 0 };
+      const items = vulnerabilidadesData
+        .filter(item => ["CRITICAL","HIGH","MEDIUM"].includes(item.severity))
+        .sort((a,b) => (getDate(b.date) - getDate(a.date)) || ((priority[b.severity] || 0) - (priority[a.severity] || 0)))
+        .slice(0,3);
+
+      if(!items.length){
+        container.innerHTML = emptyMini("Sin CVEs recientes para mostrar.");
+        return;
+      }
+
+      container.innerHTML = items.map(item => {
+        const sevClass = item.severity === "CRITICAL" ? "text-red-300 border-red-400/20 bg-red-400/10" : item.severity === "HIGH" ? "text-amber-300 border-amber-400/20 bg-amber-400/10" : "text-sky-300 border-sky-400/20 bg-sky-400/10";
+        const date = formatearFechaResumen(item.date);
+        return `
+          <a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" class="block h-full min-h-[86px] rounded-3xl border border-white/10 bg-white/[.04] p-4 transition hover:bg-white/[.07]">
+            <div class="flex items-start justify-between gap-3">
+              <div class="min-w-0 pr-2">
+                <p class="text-base font-black text-white">${escapeHTML(item.cve)}</p>
+                <p class="mt-1 text-xs text-slate-400"><strong class="text-slate-200">${escapeHTML(item.vendor)}</strong> · ${escapeHTML(item.product)}</p>
+              </div>
+              <div class="flex shrink-0 flex-col items-end gap-2">
+                <span class="rounded-full border px-3 py-1 text-[11px] font-bold ${sevClass}">${escapeHTML(item.severity)}</span>
+                <span class="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-[11px] font-bold text-sky-300">${escapeHTML(date)}</span>
+              </div>
+            </div>
+          </a>`;
+      }).join("");
+    }
+
+    function renderDowndetectorTop(){
+      const container = document.getElementById("downdetectorTopList");
+      if(!container) return;
+
+      const fallbackServices = [
+        ...Object.values(nacionales).map(service => ({ service, scope:"nacional", lastHour:0, max24:0 })),
+        ...Object.values(globales).map(service => ({ service, scope:"global", lastHour:0, max24:0 }))
+      ];
+
+      const used = new Set();
+      const items = [...statusServices, ...fallbackServices]
+        .filter(item => {
+          const key = `${item.scope}:${item.service.nombre}`;
+          if(used.has(key)) return false;
+          used.add(key);
+          return true;
+        })
+        .sort((a,b) => (b.lastHour || 0) - (a.lastHour || 0))
+        .slice(0,3);
+
+      container.innerHTML = items.map((item, index) => `
+        <a href="${escapeHTML(item.service.url)}" target="_blank" rel="noopener noreferrer" class="block h-full min-h-[76px] rounded-3xl border border-white/10 bg-white/[.04] p-4 transition hover:bg-white/[.07]">
+          <div class="flex h-full items-center gap-4">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white p-2">
+              <img src="${escapeHTML(item.service.logo)}" alt="${escapeHTML(item.service.nombre)}" class="h-full w-full object-contain" onerror="this.style.display='none'">
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="truncate text-base font-black text-white">${index + 1}. ${escapeHTML(item.service.nombre)}</p>
+              <p class="mt-1 text-xs text-slate-500">${item.scope === "nacional" ? "Nacional" : "Global"} · Máx. 24h: ${escapeHTML(item.max24 || 0)}</p>
+            </div>
+            <div class="text-right">
+              <p class="text-[10px] uppercase tracking-[.14em] text-slate-500">Últ. hora</p>
+              <p class="text-2xl font-black text-red-300">${escapeHTML(item.lastHour || 0)}</p>
+            </div>
+          </div>
+        </a>`).join("");
+    }
+
+    function emptyMini(message){
+      return `<div class="rounded-3xl border border-white/10 bg-white/[.04] p-4 text-sm text-slate-400">${escapeHTML(message)}</div>`;
+    }
+
+    function setText(id, value){
+      const el = document.getElementById(id);
+      if(el) el.textContent = value;
     }
 
     function obtenerTitulo(item){
@@ -548,56 +801,27 @@
       return primeraFrase.length > 95 ? primeraFrase.slice(0,92) + "..." : primeraFrase;
     }
 
-    function aplicarFiltros(){
-      const q = document.getElementById("searchInput")?.value?.toLowerCase().trim() || "";
-
-      filteredData = data.filter(item => {
-        const categoria = String(item.categoria || "");
-        const esCategoriaOculta = categoria === "Noticias Locales (Chile) sobre Ciberfraude / Ciberataques";
-        const coincideCategoria = categoriaActual === "all" || categoria === categoriaActual;
-        const texto = [
-          item.title,
-          item.titulo,
-          item.headline,
-          item.resumen,
-          item.description,
-          item.descripcion,
-          item.categoria,
-          item.pais,
-          item.sector,
-          item.source,
-          ...(item.palabras_claves || [])
-        ].join(" ").toLowerCase();
-
-        const coincideBusqueda = !q || texto.includes(q);
-        return !esCategoriaOculta && coincideCategoria && coincideBusqueda;
-      });
-
-      paginaActual = 1;
-      renderFeed();
-    }
-
-    function filtrarCategoria(categoria){
-      categoriaActual = categoria;
-      document.querySelectorAll(".category-pill").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.category === categoria);
-      });
-      aplicarFiltros();
-    }
-
-    function renderFeed(){
-      const feed = document.getElementById("feed");
-      const emptyState = document.getElementById("emptyState");
+    function renderNewsList(containerId, items, type){
+      const feed = document.getElementById(containerId);
+      if(!feed) return;
       feed.innerHTML = "";
 
-      const inicio = (paginaActual - 1) * itemsPorPagina;
-      const fin = inicio + itemsPorPagina;
-      const paginatedItems = filteredData.slice(inicio, fin);
+      if(!items.length){
+        feed.innerHTML = `
+          <div class="glass rounded-[2rem] p-8 text-center md:col-span-2 xl:col-span-3">
+            <div class="text-4xl">🛰️</div>
+            <h4 class="mt-3 text-xl font-black">Sin datos disponibles</h4>
+            <p class="mt-2 text-slate-400">No se encontraron registros para mostrar en este bloque.</p>
+          </div>
+        `;
+        return;
+      }
 
-      emptyState.classList.toggle("hidden", paginatedItems.length > 0);
+      items.forEach(item => {
+        const meta = type === "national"
+          ? categoryMap["Noticias Nacionales"]
+          : (categoryMap[item.categoria] || { short:item.categoria || "Sin categoría", icon:"🛰️", tone:"text-slate-300", border:"border-white/10" });
 
-      paginatedItems.forEach(item => {
-        const meta = categoryMap[item.categoria] || { short:item.categoria || "Sin categoría", icon:"🛰️", tone:"text-slate-300", border:"border-white/10" };
         const title = obtenerTitulo(item);
         const resumen = limpiarHTML(item.resumen || item.description || item.descripcion || "Sin resumen disponible.");
         const keywords = Array.isArray(item.palabras_claves) ? item.palabras_claves.slice(0,4) : [];
@@ -608,7 +832,6 @@
           <div class="relative z-10 flex h-full flex-col">
             <div class="mb-4 flex items-start justify-between gap-3">
               <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.05] px-3 py-1.5 text-xs font-bold ${meta.tone}">
-                <span>${meta.icon}</span>
                 <span>${escapeHTML(meta.short)}</span>
               </div>
               <time class="shrink-0 text-right text-[11px] leading-snug text-slate-500">${escapeHTML(formatearFecha(item.timestamp))}</time>
@@ -652,18 +875,6 @@
         `;
         feed.appendChild(card);
       });
-
-      document.getElementById("prevBtn").disabled = paginaActual === 1;
-      document.getElementById("nextBtn").disabled = fin >= filteredData.length;
-      const totalPaginas = Math.max(1, Math.ceil(filteredData.length / itemsPorPagina));
-      document.getElementById("pageIndicator").textContent = `Página ${paginaActual} de ${totalPaginas}`;
-    }
-
-    function cambiarPagina(direccion){
-      const totalPaginas = Math.max(1, Math.ceil(filteredData.length / itemsPorPagina));
-      paginaActual = Math.min(Math.max(1, paginaActual + direccion), totalPaginas);
-      renderFeed();
-      document.querySelector("#feed")?.scrollIntoView({ behavior:"smooth", block:"start" });
     }
 
     function toggleMenu(force){
