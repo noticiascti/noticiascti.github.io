@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-25",
+    "cve": "CVE-2025-9074",
+    "descripcion": "A vulnerability was identified in Docker Desktop that allows local running Linux containers to access the Docker Engine API via the configured Docker subnet, at 192.168.65.7:2375 by default. This vulnerability occurs with or without Enhanced Container Isolation (ECI) enabled, ..."
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2025-24367",
+    "descripcion": "Cacti is an open source performance and fault management framework. An authenticated Cacti user can abuse graph creation and graph template functionality to create arbitrary PHP scripts in the web root of the application, leading to remote code execution on the server. This ..."
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-20239",
+    "descripcion": "In Splunk Enterprise versions below 10.2.2 and 10.0.5, and Splunk Cloud Platform versions below 10.3.2512.8, 10.2.2510.11, 10.1.2507.21, and 10.0.2503.13, a user with a role that has access to the `_internal` index could view session cookies and response bodies that contain ..."
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-46333",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ptrace: slightly saner 'get_dumpable()' logic The 'dumpability' of a task is fundamentally about the memory image of the task - the concept comes from whether it can core dump or not - and makes no sense when ..."
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-20238",
+    "descripcion": "In Splunk AI Toolkit versions below 5.7.3, a low-privileged user that does not hold the 'admin' or 'power' roles could access confidential data that was restricted through `srchFilter` configurations on custom roles. The app contains an `authorize.conf` configuration file ..."
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-20240",
+    "descripcion": "In Splunk Enterprise versions below 10.2.2, 10.0.5, 9.4.11, and 9.3.12, and Splunk Cloud Platform versions below 10.4.2603.1, 10.3.2512.9, 10.2.2510.11, 10.1.2507.21, 10.0.2503.13, and 9.3.2411.129, a low-privileged user that does not hold the ‘admin’ or ‘power’ Splunk roles ..."
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-46529",
+    "descripcion": "Currently trending CVE - Hype Score: 7"
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-48172",
+    "descripcion": "LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exploited in the wild in May 2026. Detection is best done via a command line of grep -rE \"cpanel_jsonapi_func=redisAble\" /var/cpanel/logs /usr/local/cpanel/logs/ 2>/dev/null in Bash. ..."
+  },
+  {
+    "fecha": "2026-05-25",
+    "cve": "CVE-2025-55182",
+    "descripcion": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code ..."
+  },
+  {
+    "fecha": "2026-05-25",
     "cve": "CVE-2025-49113",
     "descripcion": "Roundcube Webmail before 1.5.10 and 1.6.x before 1.6.11 allows remote code execution by authenticated users because the _from parameter in a URL is not validated in program/actions/settings/upload.php, leading to PHP Object Deserialization."
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-43284",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: esp: avoid in-place decrypt on shared skb frags MSG_SPLICE_PAGES can attach pages from a pipe directly to an skb. TCP marks such skbs with SKBFL_SHARED_FRAG after skb_splice_from_iter(), so later paths ..."
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-31431",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: algif_aead - Revert to operating out-of-place This mostly reverts commit 72548b093ee3 except for the copying of the associated data. There is no benefit in operating in-place in algif_aead since ..."
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-43500",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Also unshare DATA/RESPONSE packets when paged frags are present The DATA-packet handler in rxrpc_input_call_event() and the RESPONSE handler in rxrpc_verify_response() copy the skb to a linear one ..."
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2022-0847",
-    "descripcion": "A flaw was found in the way the \"flags\" member of the new pipe buffer structure was lacking proper initialization in copy_page_to_iter_pipe and push_pipe functions in the Linux kernel and could thus contain stale values. An unprivileged local user could use this flaw to write to ..."
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2016-5195",
-    "descripcion": "Race condition in mm/gup.c in the Linux kernel 2.x through 4.x before 4.8.3 allows local users to gain privileges by leveraging incorrect handling of a copy-on-write (COW) feature to write to a read-only memory mapping, as exploited in the wild in October 2016, aka \"Dirty COW.\""
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2022-2602",
-    "descripcion": "io_uring UAF, Unix SCM garbage collection"
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-43121",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: io_uring/zcrx: fix user_ref race between scrub and refill paths The io_zcrx_put_niov_uref() function uses a non-atomic check-then-decrement pattern (atomic_read followed by separate atomic_dec) to manipulate ..."
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-46300",
-    "descripcion": "Currently trending CVE - Hype Score: 1"
-  },
-  {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-43494",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/rds: reset op_nents when zerocopy page pin fails When iov_iter_get_pages2() fails in rds_message_zcopy_from_user(), the pinned pages are released with put_page(), and rm->data.op_mmp_znotifier is cleared. ..."
   }
 ]
