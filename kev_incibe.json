@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-39969",
-    "descripcion": "TypeBot is a chatbot builder tool. In versions 3.16.0 and prior, the WhatsApp Cloud API webhook endpoint (POST /v1/workspaces/{workspaceId}/whatsapp/{credentialsId}/webhook) does not verify the x-hub-signature-256 HMAC signature included by Meta in every webhook delivery. The webhook URL exposes both workspaceId and credentialsId as path parameters, which are logged in web server access logs, visible in Meta&#39;s webhook configuration dashboard, and potentially shared when configuring integrations. This allows any unauthenticated attacker to send spoofed webhook messages to trigger bot flows, consume API resources, and interact with external services using the workspace owner&#39;s credentials. The issue has been fixed in version 3.17.0. 23/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-9511",
+    "descripcion": "A vulnerability was identified in Totolink CA750-PoE 6.2c.510. This affects the function setWebWlanIdx of the file /cgi-bin/cstecgi.cgi of the component Setting Handler. Such manipulation of the argument webWlanIdx leads to os command injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. 26/05/2026 26/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-39964",
-    "descripcion": "TypeBot is a chatbot builder tool. In versions prior to 3.16.0, the Typebot viewer (packages/embeds/js) renders anchor tags from rich text bubble content without filtering the javascript: URI scheme. A bot author can set a link URL to javascript:PAYLOAD, which executes in the visitor&#39;s browser context when clicked. Since the viewer is typically embedded in a third-party site, the attacker&#39;s JavaScript runs in the host page&#39;s origin and can exfiltrate cookies and session tokens. This can result in any authenticated Typebot user (including those on the free tier) being able to create a bot with this payload. Shared bots are publicly accessible — no victim authentication is required. This issue has been resolved in version 3.16.0. 23/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-27398",
+    "descripcion": "Missing Authorization vulnerability in WP Chill RSVP and Event Management allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects RSVP and Event Management: from n/a through 2.7.16. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-9256",
-    "descripcion": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when a rewrite directive uses a regex pattern with distinct, overlapping Perl-Compatible Regular Expression (PCRE) captures (for example, ^/((.*))$) and a replacement string that references multiple such captures (for example, $1$2) in a redirect or arguments context. An unauthenticated attacker along with conditions beyond their control can exploit this vulnerability by sending crafted HTTP requests. This may cause a heap buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR. Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated. 23/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-27357",
+    "descripcion": "Missing Authorization vulnerability in Cornel Raiu WP Search Analytics allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects WP Search Analytics: from n/a before 1.5.0. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-25608",
-    "descripcion": "STER uses unencrypted TCP traffic to transmit data over the network. It allows an attacker to conduct a Man-In-The-Middle attack and obtain sensitive data such as passwords, personal data, or authentication tokens. This issue was fixed in version 9.5. 22/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-27346",
+    "descripcion": "Missing Authorization vulnerability in Kings Plugins B2BKing allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects B2BKing: from n/a before 5.2.10. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-25607",
-    "descripcion": "Use of a weak password encoding algorithm in STER software allows the value of the password to be guessed after analyzing how passwords with known values are encoded. This issue was fixed in version 9.5. 22/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-24592",
+    "descripcion": "Missing Authorization vulnerability in Lucian Apostol Auto Affiliate Links allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Auto Affiliate Links: from n/a through 6.8.8.3. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-25606",
-    "descripcion": "A SQL injection vulnerability has been identified in STER. Improper neutralization of input provided by user into multiple Search Filters allows for SQL Injection attacks. It allows an authenticated attacker to view sensitive data such as data belonging to other users, or any other data that the application itself is able to access This issue was fixed in version 9.5. 22/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-24586",
+    "descripcion": "Missing Authorization vulnerability in Themeansar Newses allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Newses: from n/a through 2.0.0.77. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-9011",
-    "descripcion": "The Ditty – Responsive News Tickers, Sliders, and Lists plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.1.65. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to retrieve the full item content of non-public Dittys — including drafts, pending, scheduled, and disabled entries — by enumerating integer post IDs against the ditty_init AJAX endpoint. Unlike the non-AJAX init() counterpart, init_ajax() does not verify that the requested Ditty has a &#39;publish&#39; post status before loading and returning its items, allowing content that administrators explicitly withheld from public view to be extracted. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-24582",
+    "descripcion": "Missing Authorization vulnerability in WPPOOL FlexTable allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects FlexTable: from n/a through 3.24.0. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-8692",
-    "descripcion": "The Vedrixa Forms – User Registration Form, Signup Form & Drag & Drop Form Builder plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.1.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to overwrite the structure of any form — adding, removing, or altering fields — by writing attacker-controlled data to the plugin&#39;s FORMS database table. The &#39;ajax-nonce&#39; nonce used by this handler is injected into the public frontend via wp_localize_script(), so any authenticated user who visits a page containing a form shortcode can obtain it without any elevated access. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-24554",
+    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in Convers Lab WPSubscription allows Cross Site Request Forgery. This issue affects WPSubscription: from n/a through 1.9.1. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-8684",
-    "descripcion": "The MotoPress Hotel Booking plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 6.0.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to overwrite or delete the internal notes (_mphb_booking_internal_notes) of any booking by supplying an arbitrary booking ID. The nonce for this action is output in the HTML source of every public page through wp_localize_script (MPHB._data.nonces), so any unauthenticated visitor can obtain a valid nonce and perform the action without any account or prior interaction. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2026-24527",
+    "descripcion": "Missing Authorization vulnerability in Patterns in the cloud Autoship Cloud for WooCommerce Subscription Products allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Autoship Cloud for WooCommerce Subscription Products: from n/a through 2.14.0. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-8679",
-    "descripcion": "The AudioIgniter plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 2.0.2. This is due to the handle_playlist_endpoint() function (hooked to template_redirect) accepting a user-controlled playlist ID via the audioigniter_playlist_id query var or the /audioigniter/playlist/{id}/ rewrite rule and returning playlist track data without performing any authentication, capability, or post_status check — only the post_type is validated. This makes it possible for unauthenticated attackers to view track metadata (titles, artists, audio URLs, buy links, download URLs, and cover images) of any playlist on the site, including those in draft, private, pending, or trash status. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-25",
+    "cve": "CVE-2025-62745",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in PickPlugins Team Showcase allows Stored XSS. This issue affects Team Showcase: from n/a through 1.22.28. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
