@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-9514",
-    "descripcion": "A security vulnerability has been detected in Totolink CA750-PoE 6.2c.510. Impacted is the function setNetworkDiag of the file /cgi-bin/cstecgi.cgi of the component Setting Handler. The manipulation of the argument NetDiagHost/NetDiagPingNum/NetDiagPingSize/NetDiagPingTimeOut/NetDiagTracertHop is directly passed by the attacker/so we can control the NetDiagHost/NetDiagPingNum/NetDiagPingSize/NetDiagPingTimeOut/NetDiagTracertHop leads to os command injection. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. 26/05/2026 26/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-48692",
+    "descripcion": "FastNetMon Community Edition through 1.2.9 exposes a gRPC API server on port 50052 with no authentication mechanism. The server is initialized with grpc::InsecureServerCredentials() (src/fastnetmon.cpp line 477) and a source code comment explicitly acknowledges &#39;Listen on the given address without any authentication mechanism.&#39; None of the RPC methods in src/api.cpp (ExecuteBan, ExecuteUnBan, GetBanlist, GetTotalTrafficCounters, etc.) perform any credential verification. The ExecuteBan and ExecuteUnBan methods trigger security-critical actions: BGP route announcements that can blackhole network traffic, and execution of external notification scripts via popen(). An attacker with local network access can ban arbitrary IP addresses (causing denial of service to legitimate traffic), unban active attacks (disabling DDoS mitigation), and trigger script execution. There is also no role-based access control separating read-only monitoring from destructive administrative operations. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-9513",
-    "descripcion": "A weakness has been identified in Totolink CA750-PoE 6.2c.510. This issue affects the function NTPSyncWithHost of the file /cgi-bin/cstecgi.cgi of the component Setting Handler. Executing a manipulation of the argument host_time can lead to os command injection. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. 26/05/2026 26/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-48688",
+    "descripcion": "FastNetMon Community Edition through 1.2.9 contains multiple out-of-bounds reads in the BGP MP_REACH_NLRI IPv6 attribute decoder. The function decode_mp_reach_ipv6() in src/bgp_protocol.cpp contains a TODO comment at line 156 explicitly acknowledging &#39;we should add sanity checks to avoid reads after attribute memory block.&#39; The function casts raw pointers to structure types without verifying sufficient data exists (line 158), uses the attacker-controlled length_of_next_hop field to determine memcpy size (line 181), and computes prefix_length by dereferencing a pointer calculated from multiple attacker-controlled offsets without bounds validation (line 189). The prefix_length is then used to calculate number_of_bytes_required_for_prefix which becomes a memcpy length (line 202) with no check against remaining buffer size. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-9512",
-    "descripcion": "A security flaw has been discovered in Totolink CA750-PoE 6.2c.510. This vulnerability affects the function setPasswordCfg of the file /cgi-bin/cstecgi.cgi of the component Setting Handler. Performing a manipulation of the argument admuser/admpass results in os command injection. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. 26/05/2026 26/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-48687",
+    "descripcion": "FastNetMon Community Edition through 1.2.9 contains an OS command injection vulnerability in the Juniper router integration plugin. The _log() function in src/juniper_plugin/fastnetmon_juniper.php (lines 117-118) constructs shell commands by concatenating the $msg parameter directly into exec() calls: exec(&#34;echo `date` \\&#34;- {FASTNETMON] - &#34; . $msg . &#34; \\&#34; >> &#34; . $FILE_LOG_TMP). The $msg variable contains unsanitized data derived from command-line arguments argv[1] through argv[3], which represent the attack IP address, direction, and power. While FastNetMon&#39;s C++ core currently passes IP addresses via inet_ntoa() (which only produces safe dotted-decimal notation), the PHP script performs no input validation or shell escaping. If the script is invoked directly, by another orchestration system, or if future code changes pass string-sourced IPs, arbitrary commands can be injected. The correct fix is to replace exec() with file_put_contents() or use escapeshellarg() on all parameters. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-48837",
-    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Unlimited Elements For Elementor allows Blind SQL Injection. This issue affects Unlimited Elements For Elementor: from n/a through 2.0.8. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-48686",
+    "descripcion": "FastNetMon Community Edition through 1.2.9 contains a stack-based buffer overflow in the BGP NLRI (Network Layer Reachability Information) decoder. The function decode_bgp_subnet_encoding_ipv4_raw() in src/bgp_protocol.cpp reads prefix_bit_length directly from the BGP packet (line 99) without validating it is 32 causes undefined behavior. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-45438",
-    "descripcion": "Missing Authorization vulnerability in WebToffee Smart Coupons for WooCommerce allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Smart Coupons for WooCommerce: from n/a before 2.3.0. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-48685",
+    "descripcion": "FastNetMon Community Edition through 1.2.9 has out-of-bounds memory access because it incorrectly parses BGP path attributes with the extended length flag set. In src/bgp_protocol.hpp, the parse_raw_bgp_attribute() function correctly identifies when extended_length_bit is set and sets length_of_length_field to 2, but then reads only a single byte for the attribute value length (attribute_value_length = value[2] at line 173). Per RFC 4271 Section 4.3, when the Extended Length bit is set, the Attribute Length field is two octets and the value should be read as a 16-bit big-endian integer from value[2] and value[3]. As a result, any attribute longer than 255 bytes has its length silently truncated to the low byte (e.g., 300 bytes = 0x012C is read as 0x2C = 44 bytes). The remaining 256 bytes are then misinterpreted as subsequent attributes, causing cascading parse failures and potential out-of-bounds memory access. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-45435",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Melapress WP Activity Log allows DOM-Based XSS. This issue affects WP Activity Log: from n/a through 5.6.3. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-48684",
+    "descripcion": "FastNetMon Community Edition through 1.2.9 contains an out-of-bounds read in the NetFlow v9 options template parser. In process_netflow_v9_options_template() (src/netflow_plugin/netflow_v9_collector.cpp), the scope parsing loop (lines 224-229) iterates until scopes_offset reaches the attacker-controlled option_scope_length value, reading netflow9_template_flowset_record_t structures at each step. No bounds check validates that (zone_address + scopes_offset + sizeof(record)) stays within the flowset. The same issue affects the options field loop (lines 241-257) with option_length. Furthermore, option_scope_length is not validated to be a multiple of sizeof(netflow9_template_flowset_record_t), potentially causing misaligned reads. An attacker can trigger reads past the end of the UDP packet buffer. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-45217",
-    "descripcion": "Authentication Bypass Using an Alternate Path or Channel vulnerability in ThemeHigh Stripe Payment Gateway for WooCommerce allows Password Recovery Exploitation. This issue affects Stripe Payment Gateway for WooCommerce: from n/a through 5.0.7. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-48683",
+    "descripcion": "FastNetMon Community Edition through 1.2.9 contains an out-of-bounds read vulnerability in the NetFlow v9 data flowset processor. In src/netflow_plugin/netflow_v9_collector.cpp, the Data template branch (lines 1695-1702) iterates over flow records without performing a per-iteration bounds check against the packet end pointer. In contrast, the Options template branch (lines 1709-1719) correctly checks &#39;if (pkt + offset + field_template->total_length > packet_end)&#39; before each iteration. The Data branch omits this check entirely. Since template definitions are sent by the network peer (and are unauthenticated UDP), an attacker can craft templates that cause the parser to read arbitrary memory past the packet buffer. This can leak sensitive memory contents or cause a crash. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-45216",
-    "descripcion": "Incorrect Privilege Assignment vulnerability in StoreApps Smart Manager allows Privilege Escalation. This issue affects Smart Manager: from n/a through 8.85.0. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-46620",
+    "descripcion": "e107 is a content management system (CMS). Prior to 2.3.5, e107 CMS does not properly enforce CSRF token validation on comment moderation actions. The problem comes down to how session_handler::check() handles CSRF tokens. Instead of requiring a token on every state-changing request, it only validates the token if one happens to be present. If there is no token at all, the check is skipped entirely. This vulnerability is fixed in 2.3.5. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-45209",
-    "descripcion": "Missing Authorization vulnerability in edward_plainview MyCryptoCheckout allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects MyCryptoCheckout: from n/a through 2.161. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-43936",
+    "descripcion": "e107 is a content management system (CMS). Prior to 2.3.4, you can access the local environment by specifying the URL of the local environment from &#34;Image/File URL:&#34; of &#34;From a remote location&#34; in &#34;Media Manager&#34; on the administrator screen. This vulnerability is fixed in 2.3.4. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-05-25",
-    "cve": "CVE-2026-42776",
-    "descripcion": "Missing Authorization vulnerability in WP Sunshine Sunshine Photo Cart allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Sunshine Photo Cart: from n/a through 3.6.7. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-43935",
+    "descripcion": "e107 is a content management system (CMS). Prior to 2.3.4, a Host Header Injection vulnerability in the password reset page allows attackers to manipulate the Host header to generate password reset links pointing to attacker-controlled domains. This can lead to phishing attacks, account takeover, or other security risks. The severity is high, as the vulnerability affects a critical function related to user authentication. This vulnerability is fixed in 2.3.4. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
