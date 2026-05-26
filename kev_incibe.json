@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-05-22",
+    "cve": "CVE-2026-39969",
+    "descripcion": "TypeBot is a chatbot builder tool. In versions 3.16.0 and prior, the WhatsApp Cloud API webhook endpoint (POST /v1/workspaces/{workspaceId}/whatsapp/{credentialsId}/webhook) does not verify the x-hub-signature-256 HMAC signature included by Meta in every webhook delivery. The webhook URL exposes both workspaceId and credentialsId as path parameters, which are logged in web server access logs, visible in Meta&#39;s webhook configuration dashboard, and potentially shared when configuring integrations. This allows any unauthenticated attacker to send spoofed webhook messages to trigger bot flows, consume API resources, and interact with external services using the workspace owner&#39;s credentials. The issue has been fixed in version 3.17.0. 23/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-39964",
+    "descripcion": "TypeBot is a chatbot builder tool. In versions prior to 3.16.0, the Typebot viewer (packages/embeds/js) renders anchor tags from rich text bubble content without filtering the javascript: URI scheme. A bot author can set a link URL to javascript:PAYLOAD, which executes in the visitor&#39;s browser context when clicked. Since the viewer is typically embedded in a third-party site, the attacker&#39;s JavaScript runs in the host page&#39;s origin and can exfiltrate cookies and session tokens. This can result in any authenticated Typebot user (including those on the free tier) being able to create a bot with this payload. Shared bots are publicly accessible — no victim authentication is required. This issue has been resolved in version 3.16.0. 23/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-22",
+    "cve": "CVE-2026-9256",
+    "descripcion": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when a rewrite directive uses a regex pattern with distinct, overlapping Perl-Compatible Regular Expression (PCRE) captures (for example, ^/((.*))$) and a replacement string that references multiple such captures (for example, $1$2) in a redirect or arguments context. An unauthenticated attacker along with conditions beyond their control can exploit this vulnerability by sending crafted HTTP requests. This may cause a heap buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR. Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated. 23/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-22",
     "cve": "CVE-2026-25608",
     "descripcion": "STER uses unencrypted TCP traffic to transmit data over the network. It allows an attacker to conduct a Man-In-The-Middle attack and obtain sensitive data such as passwords, personal data, or authentication tokens. This issue was fixed in version 9.5. 22/05/2026 22/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-05-22",
     "cve": "CVE-2026-8679",
     "descripcion": "The AudioIgniter plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 2.0.2. This is due to the handle_playlist_endpoint() function (hooked to template_redirect) accepting a user-controlled playlist ID via the audioigniter_playlist_id query var or the /audioigniter/playlist/{id}/ rewrite rule and returning playlist track data without performing any authentication, capability, or post_status check — only the post_type is validated. This makes it possible for unauthenticated attackers to view track metadata (titles, artists, audio URLs, buy links, download URLs, and cover images) of any playlist on the site, including those in draft, private, pending, or trash status. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-8381",
-    "descripcion": "A broken access control vulnerability exists in the TeamViewer DEX Platform (On‑Premises) prior version 9.2. Certain backend API endpoints do not correctly enforce authorization checks, allowing an authenticated user with low privileges to perform actions and access resources intended only for higher‑privileged roles. An attacker with low‑privileged credentials may exploit this to gain unauthorized access to administrative or sensitive functionality. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-7798",
-    "descripcion": "The FluentCRM – Email Newsletter, Automation, Email Marketing, Email Campaigns, Optins, Leads, and CRM Solution plugin for WordPress is vulnerable to Blind Server-Side Request Forgery in all versions up to, and including, 2.9.87 via the &#39;SubscribeURL&#39; parameter. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. Exploitation requires that the SES bounce handling key (&#39;_fc_bounce_key&#39;) has never been stored (i.e., the site is in its default/unconfigured state with respect to SES bounce handling) as visiting the bounce configuration page auto-generates and stores a random key that causes the authentication check to evaluate correctly and reject unauthenticated requests. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-22",
-    "cve": "CVE-2026-7636",
-    "descripcion": "The Slider by Soliloquy – Responsive Image Slider for WordPress plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.8.1 via the map_meta_cap. This makes it possible for authenticated attackers, with subscriber-level access and above, to extract draft slider metadata including unpublished media URLs, captions, and slider configuration authored by administrators or editors. 22/05/2026 22/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
