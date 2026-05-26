@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-48692",
-    "descripcion": "FastNetMon Community Edition through 1.2.9 exposes a gRPC API server on port 50052 with no authentication mechanism. The server is initialized with grpc::InsecureServerCredentials() (src/fastnetmon.cpp line 477) and a source code comment explicitly acknowledges &#39;Listen on the given address without any authentication mechanism.&#39; None of the RPC methods in src/api.cpp (ExecuteBan, ExecuteUnBan, GetBanlist, GetTotalTrafficCounters, etc.) perform any credential verification. The ExecuteBan and ExecuteUnBan methods trigger security-critical actions: BGP route announcements that can blackhole network traffic, and execution of external notification scripts via popen(). An attacker with local network access can ban arbitrary IP addresses (causing denial of service to legitimate traffic), unban active attacks (disabling DDoS mitigation), and trigger script execution. There is also no role-based access control separating read-only monitoring from destructive administrative operations. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-4051",
+    "descripcion": "IBM Engineering Lifecycle Management 7.0.3 ( through ) Interim Fix 021, 7.1.0 ( through ) Interim Fix 009, and 7.2.0 ( through ) Interim Fix 001 could allow an attacker with administrative privileges to execute remote code due to exposed method that is not properly restricted. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-48688",
-    "descripcion": "FastNetMon Community Edition through 1.2.9 contains multiple out-of-bounds reads in the BGP MP_REACH_NLRI IPv6 attribute decoder. The function decode_mp_reach_ipv6() in src/bgp_protocol.cpp contains a TODO comment at line 156 explicitly acknowledging &#39;we should add sanity checks to avoid reads after attribute memory block.&#39; The function casts raw pointers to structure types without verifying sufficient data exists (line 158), uses the attacker-controlled length_of_next_hop field to determine memcpy size (line 181), and computes prefix_length by dereferencing a pointer calculated from multiple attacker-controlled offsets without bounds validation (line 189). The prefix_length is then used to calculate number_of_bytes_required_for_prefix which becomes a memcpy length (line 202) with no check against remaining buffer size. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3660",
+    "descripcion": "IBM Engineering Lifecycle Management 7.0.3 ( through ) Interim Fix 021, 7.1.0 ( through ) Interim Fix 009, and 7.2.0 ( through ) Interim Fix 001 could allow an unauthenticated remote attacker to update server property files that would allow them to gain unauthorized access to the application. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-48687",
-    "descripcion": "FastNetMon Community Edition through 1.2.9 contains an OS command injection vulnerability in the Juniper router integration plugin. The _log() function in src/juniper_plugin/fastnetmon_juniper.php (lines 117-118) constructs shell commands by concatenating the $msg parameter directly into exec() calls: exec(&#34;echo `date` \\&#34;- {FASTNETMON] - &#34; . $msg . &#34; \\&#34; >> &#34; . $FILE_LOG_TMP). The $msg variable contains unsanitized data derived from command-line arguments argv[1] through argv[3], which represent the attack IP address, direction, and power. While FastNetMon&#39;s C++ core currently passes IP addresses via inet_ntoa() (which only produces safe dotted-decimal notation), the PHP script performs no input validation or shell escaping. If the script is invoked directly, by another orchestration system, or if future code changes pass string-sourced IPs, arbitrary commands can be injected. The correct fix is to replace exec() with file_put_contents() or use escapeshellarg() on all parameters. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-3603",
+    "descripcion": "IBM Engineering Lifecycle Management 7.0.3 Interim Fix 001 through Interim Fix 021, 7.1.0 Interim Fix 001 through Interim Fix 009, and 7.2.0 and 7.2.0 Interim Fix 001 is vulnerable to an XML external entity injection (XXE) attack when processing XML data. An authenticated attacker could exploit this vulnerability to expose sensitive information or consume memory resources. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-48686",
-    "descripcion": "FastNetMon Community Edition through 1.2.9 contains a stack-based buffer overflow in the BGP NLRI (Network Layer Reachability Information) decoder. The function decode_bgp_subnet_encoding_ipv4_raw() in src/bgp_protocol.cpp reads prefix_bit_length directly from the BGP packet (line 99) without validating it is 32 causes undefined behavior. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-9560",
+    "descripcion": "Privilege escalation via background service of OpenVPN Connect 3.5.1 through 3.8.1 on macOS allows attackers to execute arbitrary commands with elevated privileges via local IPC channel 26/05/2026 26/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-48685",
-    "descripcion": "FastNetMon Community Edition through 1.2.9 has out-of-bounds memory access because it incorrectly parses BGP path attributes with the extended length flag set. In src/bgp_protocol.hpp, the parse_raw_bgp_attribute() function correctly identifies when extended_length_bit is set and sets length_of_length_field to 2, but then reads only a single byte for the attribute value length (attribute_value_length = value[2] at line 173). Per RFC 4271 Section 4.3, when the Extended Length bit is set, the Attribute Length field is two octets and the value should be read as a 16-bit big-endian integer from value[2] and value[3]. As a result, any attribute longer than 255 bytes has its length silently truncated to the low byte (e.g., 300 bytes = 0x012C is read as 0x2C = 44 bytes). The remaining 256 bytes are then misinterpreted as subsequent attributes, causing cascading parse failures and potential out-of-bounds memory access. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-9170",
+    "descripcion": "IBM Web Server Plug-ins for WebSphere Application Server and WebSphere Liberty 8.5, 9.0 IBM WebSphere Application Server and WebSphere Application Server Liberty are vulnerable to denial of service and a potential remote code execution due to improper input validation. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-48684",
-    "descripcion": "FastNetMon Community Edition through 1.2.9 contains an out-of-bounds read in the NetFlow v9 options template parser. In process_netflow_v9_options_template() (src/netflow_plugin/netflow_v9_collector.cpp), the scope parsing loop (lines 224-229) iterates until scopes_offset reaches the attacker-controlled option_scope_length value, reading netflow9_template_flowset_record_t structures at each step. No bounds check validates that (zone_address + scopes_offset + sizeof(record)) stays within the flowset. The same issue affects the options field loop (lines 241-257) with option_length. Furthermore, option_scope_length is not validated to be a multiple of sizeof(netflow9_template_flowset_record_t), potentially causing misaligned reads. An attacker can trigger reads past the end of the UDP packet buffer. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-8854",
+    "descripcion": "IBM HTTP Server 8.5, and 9.0 is vulnerable to denial of service via the optional module mod_mem_cache. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-48683",
-    "descripcion": "FastNetMon Community Edition through 1.2.9 contains an out-of-bounds read vulnerability in the NetFlow v9 data flowset processor. In src/netflow_plugin/netflow_v9_collector.cpp, the Data template branch (lines 1695-1702) iterates over flow records without performing a per-iteration bounds check against the packet end pointer. In contrast, the Options template branch (lines 1709-1719) correctly checks &#39;if (pkt + offset + field_template->total_length > packet_end)&#39; before each iteration. The Data branch omits this check entirely. Since template definitions are sent by the network peer (and are unauthenticated UDP), an attacker can craft templates that cause the parser to read arbitrary memory past the packet buffer. This can leak sensitive memory contents or cause a crash. 26/05/2026 26/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-8835",
+    "descripcion": "IBM HTTP Server 8.5, and 9.0 is vulnerable to invalid pointer dereference. A privileged user, authenticated to the Administration Server, could exploit this vulnerability to expose sensitive information or cause a denial of service. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-46620",
-    "descripcion": "e107 is a content management system (CMS). Prior to 2.3.5, e107 CMS does not properly enforce CSRF token validation on comment moderation actions. The problem comes down to how session_handler::check() handles CSRF tokens. Instead of requiring a token on every state-changing request, it only validates the token if one happens to be present. If there is no token at all, the check is skipped entirely. This vulnerability is fixed in 2.3.5. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-8834",
+    "descripcion": "IBM HTTP Server 8.5, and 9.0 contains a buffer overflow vulnerability. A privileged user, authenticated to the Administration Server, could exploit this vulnerability to execute remote code or cause a denial of service. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-43936",
-    "descripcion": "e107 is a content management system (CMS). Prior to 2.3.4, you can access the local environment by specifying the URL of the local environment from &#34;Image/File URL:&#34; of &#34;From a remote location&#34; in &#34;Media Manager&#34; on the administrator screen. This vulnerability is fixed in 2.3.4. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-8633",
+    "descripcion": "IBM Web Server Plug-ins for WebSphere Application Server and WebSphere Liberty 8.5, 9.0 IBM WebSphere Application Server and WebSphere Application Server Liberty are vulnerable to remote code execution in the Web Server Plug-ins, through a specially crafted request. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-05-26",
-    "cve": "CVE-2026-43935",
-    "descripcion": "e107 is a content management system (CMS). Prior to 2.3.4, a Host Header Injection vulnerability in the password reset page allows attackers to manipulate the Host header to generate password reset links pointing to attacker-controlled domains. This can lead to phishing attacks, account takeover, or other security risks. The severity is high, as the vulnerability affects a critical function related to user authentication. This vulnerability is fixed in 2.3.4. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-8620",
+    "descripcion": "IBM Web Server Plug-ins for WebSphere Application Server and WebSphere Liberty 8.5, 9.0 IBM WebSphere Application Server and WebSphere Application Server Liberty are vulnerable to HTTP request smuggling in the Web Server Plug-ins through a specially crafted request. 26/05/2026 26/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
