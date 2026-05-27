@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-26",
+    "cve": "CVE-2026-9607",
+    "descripcion": "A vulnerability was found in itsourcecode Courier Management System 1.0. The affected element is an unknown function of the file /parcel_list.php. Performing a manipulation of the argument s results in sql injection. It is possible to initiate the attack remotely. The exploit has been made public and could be used. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-9606",
+    "descripcion": "A vulnerability has been found in itsourcecode Courier Management System 1.0. Impacted is an unknown function of the file /manage_user.php. Such manipulation of the argument ID leads to sql injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-9605",
+    "descripcion": "A flaw has been found in GNU libredwg up to 0.13.4.8160. This issue affects the function bit_read_RC of the file bits.c of the component Dwgbmp Utility. This manipulation causes heap-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been published and may be used. Patch name: 8f03865f37f5d4ffd616fef802acc980be54d300. Applying a patch is the recommended action to fix this issue. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-9312",
+    "descripcion": "A server-side request forgery (SSRF) vulnerability was identified in GitHub Enterprise Server that allowed an unauthenticated attacker to send crafted requests to internal services by exploiting insufficient input validation in an upload endpoint. By injecting path traversal content into request parameters, an attacker could bypass the intended request flow and redirect internal API calls, potentially accessing internal services and exposing sensitive credentials. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.22 and was fixed in versions 3.16.20, 3.17.17, 3.18.11, 3.19.8, 3.20.4, and 3.21.1. This vulnerability was reported via the GitHub Bug Bounty program. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-8606",
+    "descripcion": "A Server-Side Request Forgery (SSRF) vulnerability was identified in GitHub Enterprise Server that allowed an attacker to cause the server to issue HTTP requests to internal services via the security advisories package lookup feature. By directing requests to an internal management service and measuring response timing, an attacker could infer the values of sensitive environment variables, including signing secrets and private keys. Exploitation required GitHub Packages to be enabled; on instances not running in private mode the vulnerability was exploitable without authentication, otherwise any authenticated user could exploit it. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.21.1 and was fixed in versions 3.20.3, 3.19.7, 3.18.10, 3.17.16, and 3.16.19. This vulnerability was reported via the GitHub Bug Bounty program. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-9604",
+    "descripcion": "A vulnerability was detected in JeecgBoot up to 3.9.1. This vulnerability affects unknown code of the component AiragModelController. The manipulation of the argument list/queryById results in improper access controls. The attack can be executed remotely. The exploit is now public and may be used. Upgrading to version 3.9.2 is able to resolve this issue. The affected component should be upgraded. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:N/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-8680",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 27/05/2026 27/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-8647",
+    "descripcion": "Crypt::ScryptKDF versions through 0.010 for Perl uses insecure random number source when no CSPRNG module is available. The random_bytes function fell back to using the built-in rand() function when none of the Perl modules Crypt::PRNG, Crypt::OpenSSL::Random, Net::SSLeay, Crypt::Random, or Bytes::Random::Secure were available. 27/05/2026 27/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-26",
+    "cve": "CVE-2026-46740",
+    "descripcion": "Mojolicious::Plugin::Statsd versions through 0.04 for Perl allowed metric injections. The metric names and set values were not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics. Version 0.06 changes the module from being a statsd client to using a separate statsd client. It defaults to using a version of Net::Statsd::Tiny that fixes a similar issue (CVE-2026-46720). 27/05/2026 27/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-26",
     "cve": "CVE-2026-9603",
     "descripcion": "A security vulnerability has been detected in SourceCodester eDoc Doctor Appointment System 1.0. This affects an unknown part of the file /admin/delete-session.php. The manipulation of the argument ID leads to missing authorization. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-9584",
-    "descripcion": "A security vulnerability has been detected in code-projects Project Management System 1.0. Affected is an unknown function of the file chk.php of the component Login. The manipulation leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-5260",
-    "descripcion": "A flaw was found in libgnutls. A remote attacker, by sending an extremely short premaster secret during an RSA key exchange to a server using an RSA key backed by a PKCS#11 token, could trigger a short heap overread. This memory corruption vulnerability could lead to information disclosure. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-48710",
-    "descripcion": "Starlette is a lightweight ASGI framework/toolkit. Prior to version 1.0.1, the HTTP `Host` request header was not validated before being used to reconstruct `request.url`. Because the routing algorithm relies on the raw HTTP path while `request.url` is rebuilt from the `Host` header, a malformed header could make `request.url.path` differ from the path that was actually requested. Middleware and endpoints that apply security restrictions based on `request.url` (rather than the raw `scope` path) could therefore be bypassed. Users should upgrade to a version greater than or equal to version 1.0.1, which validates the `Host` header against the grammar of RFC 9112 §3.2 / RFC 3986 §3.2.2 when constructing `request.url` and falls back to `scope[&#34;server&#34;]` for malformed values. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-45574",
-    "descripcion": "epa4all-client is the Java Client for epa4all / ePA 3.0 in the Telematik Infrastruktur. Prior to 1.2.2, an attacker on the network path between the ePA service and the Konnektor can present any TLS certificate (self-signed, expired, wrong CN) and intercept all SOAP traffic. This includes patient identifiers (KVNR), SMC-B card operations (authentication, signing), document content, and credential exchanges. This vulnerability is fixed in 1.2.2. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-45298",
-    "descripcion": "Dozzle is a realtime log viewer for docker containers. Prior to 10.5.2, in a default dozzle deploy (the documented quickstart, no DOZZLE_AUTH_PROVIDER set), POST /api/notifications/test-webhook is reachable without authentication and forwards an attacker-controlled URL into a WebhookDispatcher that sends an HTTP POST to the supplied URL with attacker-controlled request headers, and returns the response status code AND up to 1MB of the response body to the caller, when the target replies non-2xx. This vulnerability is fixed in 10.5.2. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-44985",
-    "descripcion": "Dozzle is a realtime log viewer for docker containers. Prior to 10.5.2, he WebSocket upgrader for the /exec and /attach endpoints uses CheckOrigin: func(r *http.Request) bool { return true }, accepting upgrade requests from any origin. Combined with the JWT cookie using SameSite: Lax, this enables Cross-Site WebSocket Hijacking (CSWSH). An attacker hosting a page on a same-site origin (e.g., a sibling subdomain, or another service on localhost) can initiate a WebSocket connection to the exec endpoint that carries the victim&#39;s valid JWT cookie, gaining interactive shell access in any container the victim is authorized to access. This vulnerability is fixed in 10.5.2. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-44983",
-    "descripcion": "smallbitvec is a growable bit-vector for Rust, optimized for size. From 1.0.1 to 2.6.0, an integer overflow in the internal capacity calculation of smallbitvec can lead to an undersized heap allocation, resulting in a heap buffer overflow through safe APIs only. This allows memory corruption without requiring unsafe code from the caller. This vulnerability is fixed in 2.6.1. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-44966",
-    "descripcion": "Velocity.js is a JavaScript implementation of the Apache Velocity template engine. In 2.1.5 and earlier, a prototype pollution vulnerability was discovered in velocityjs. This issue occurs during the processing of #set directives in Velocity templates. If an application renders a template controlled by an attacker, it is possible to modify Object.prototype, potentially leading to Denial of Service (DoS) or Remote Code Execution (RCE) depending on the server environment. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-26",
-    "cve": "CVE-2026-44905",
-    "descripcion": "Vanetza is an open-source implementation of the ETSI C-ITS protocol suite. In 26.02 and earlier, a denial-of-service vulnerability was identified in the cryptographic verification pipeline of Vanetza. When processing incoming V2X messages, the ASN.1 decoder accepts the structure as syntactically valid. However, this reveals a logic-based protocol failure where semantic constraints on specific fields are only strictly enforced during OER re-encoding. Specifically, if a crafted packet contains a certificate where the Psid (Provider Service Identifier) sub-type violates subtype constraints (e.g., out-of-range or invalid CHOICE variant), it is accepted during initial parsing, where subtype constraints are not enforced. Later, when StraightVerifyService attempts to calculate a message hash for cryptographic verification, it must re-encode the signing certificate. The underlying ASN.1 wrapper (asn1c_wrapper.cpp) detects the semantic violation during encoding and raises a std::runtime_error. This exception is not caught within the encoding path and propagates to std::terminate, resulting in immediate process termination. This vulnerability is fixed with commit e1a2e2709210d309458c3d77f98d50dec26c0df0. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
