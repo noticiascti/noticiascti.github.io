@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-48735",
-    "descripcion": "pypdf is a free and open-source pure-python PDF library. Prior to 6.12.1, an attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires parsing large XMP metadata, possibly with lots of unnecessary elements. This vulnerability is fixed in 6.12.1. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47337",
+    "descripcion": "Ubuntu Linux 6.8, 6.17 and 7.0 contain SAUCE patches with a possible NULL pointer dereference in the handling of AF_INET/AF_INET6 socket mediation. The bug can be triggered by an unprivileged local user. This can lead to a kernel oops. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-48156",
-    "descripcion": "pypdf is a free and open-source pure-python PDF library. Prior to 6.12.0, an attacker who uses this vulnerability can craft a PDF which leads to long runtimes. This requires cross-reference streams with /W [0 0 0] values and large /Size values. This vulnerability is fixed in 6.12.0. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47336",
+    "descripcion": "Ubuntu Linux 6.8 contains SAUCE patches with a possible use of an uninitialized variable in AppArmor AF_INET/AF_INET6 socket mediation code. The bug can be triggered by an unprivileged local user and could result in incorrect fine-grained mediation of network sockets. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-48155",
-    "descripcion": "pypdf is a free and open-source pure-python PDF library. Prior to 6.12.0, an attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires extracting text in layout mode with large character offsets. This vulnerability is fixed in 6.12.0. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47335",
+    "descripcion": "Ubuntu Linux 6.8 contains SAUCE patches with a possible NULL pointer dereference in the handling of AppArmor notifications. The bug can be triggered by an unprivileged local user. This can lead to a kernel panic. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-47762",
-    "descripcion": "TinyMCE is an open source rich text editor. Prior to 5.11.1, 7.9.3, and 8.5.1, there is a stored XSS vulnerability via forged mce:protected comments. Allows attackers to bypass sanitization and inject scripts that execute when content is restored. Impacts users who utilize the protect option. This vulnerability is fixed in 5.11.1, 7.9.3, and 8.5.1. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-47334",
+    "descripcion": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which incorrectly sleep while holding a spinlock in notification handling code. The bug can be triggered by an unprivileged local user and can result in kernel panic or deadlock. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-47761",
-    "descripcion": "TinyMCE is an open source rich text editor. Prior to 5.11.1, 7.9.3, and 8.5.1, there is a stored XSS vulnerability in the media plugin. Attackers can inject malicious scripts via crafted data-mce-* attributes, which are executed when content is rendered. Impacts users of TinyMCE with the media plugin enabled. This vulnerability is fixed in 5.11.1, 7.9.3, and 8.5.1. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-47333",
+    "descripcion": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which can potentially incorrectly compute the size of an internal buffer, leading to a heap memory out-of-bounds read in notification handling code. The bug can be triggered by an unprivileged local user and can result in invalid data being processed by the AppArmor DFA policy engine. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-47760",
-    "descripcion": "TinyMCE is an open source rich text editor. From 6.8.0 to before 7.1.0, TinyMCE contains an XSS vulnerability caused by improper SVG namespace scope handling in the sanitizer. A crafted payload using nested elements can bypass attribute sanitization and execute arbitrary JavaScript. This vulnerability is fixed in 7.1.0. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-47332",
+    "descripcion": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which incorrectly validate the size of an internal structure, leading to an out-of-bounds read in notification handling code. The bug can be triggered by an unprivileged local user and can result in information disclosure from adjacent slab objects. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-47759",
-    "descripcion": "TinyMCE is an open source rich text editor. Prior to 5.11.1, 7.9.3, and 8.5.1, there is a stored XSS vulnerability via unsanitized data-mce-* attributes (data-mce-href, data-mce-src, data-mce-style). Allows attackers to inject malicious values that override safe attributes during serialization, bypassing validation. This vulnerability is fixed in 5.11.1, 7.9.3, and 8.5.1. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-47331",
+    "descripcion": "Ubuntu Linux 6.8 contains AppArmor SAUCE patches which fail to acquire a lock when modifying a linked list. An unprivileged local user could trigger the race condition that can lead to a use-after-free (UAF) and, theoretically, arbitrary code execution. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-45017",
-    "descripcion": "Python Liquid is a Python engine for the Liquid template language. Prior to 2.2.0, the built-in FileSystemLoader and CachingFileSystemLoader do not guard against reading files outside their search paths when given an absolute path to resolve. This allows malicious template authors to load and render arbitrary files via the {% include %} and {% render %} tags. Targeted files would need to contain valid Liquid markup and be readable by the application process. This vulnerability is fixed in 2.2.0. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47330",
+    "descripcion": "Ubuntu Linux 6.8, 7.17 and 7.0 contain AppArmor SAUCE patches which can, under certain circumstances, use an uninitialized variable in notification handling code. The bug can be triggered by an unprivileged local user and can result in the incorrect caching of AppArmor notification responses. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-44672",
-    "descripcion": "mapfish-print is a component of MapFish for printing templated cartographic maps. From 3.23.0 to before 3.28.28, 3.30.30, 3.31.22, 3.33.14, and 4.0.3, the attacker can execute arbitrary code in Dynamic table without being authenticated. This vulnerability is fixed in 3.28.28, 3.30.30, 3.31.22, 3.33.14, and 4.0.3. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47329",
+    "descripcion": "Ubuntu Linux 6.8, 6.17 and 7.0 contain SAUCE patches which fail to validate invalid sizes of the name field in AppAmor notification responses. The bug can be triggered by an unprivileged local user and could result in handling of crafted responses. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-05-28",
-    "cve": "CVE-2026-44593",
-    "descripcion": "esm.sh is a no-build content delivery network (CDN) for web development. In 137 and earlier, the legacy router first retrieves a response from legacyServer, parses the incoming request path, and ultimately writes the data to storage via buildStorage.Put. The router concatenates the path components without sanitizing them, producing a storage key. When this key is used, the underlying file system resolves the relative segments and writes the file to the specified path. Thus an attacker can craft a request that writes data to arbitrary locations on the server. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47328",
+    "descripcion": "Ubuntu Linux 6.8, 6.17 and 7.0 contain AppArmor SAUCE patches which incorrectly attempt to free a pointer which was not previously kmalloc()d, while at the same time leaking allocated memory. The bug can be triggered by an unprivileged local user and can result in the corruption of slab metadata and could lead to resource exhaustion. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
