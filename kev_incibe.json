@@ -1,5 +1,10 @@
 [
   {
+    "fecha": "2026-05-28",
+    "cve": "CVE-2026-9789",
+    "descripcion": "A Local Privilege Escalation (LPE) vulnerability affects Acer NitroSense software versions prior to 3.01.3052. The vulnerability stems from the the PSAdminAgent service, which creates a Named Pipe with a weak Access Control List (ACL). This allows any authenticated local user to connect and send commands. Because the service does not check the caller&#39;s privileges before running file deletion commands, a low-privileged local user can exploit this to delete arbitrary files with system authority. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
     "fecha": "2026-05-27",
     "cve": "CVE-2026-8915",
     "descripcion": "Out-of-bounds write vulnerability in Samsung Open Source Escargot allows Overflow Buffers. This issue affects Escargot: 36f5fb58366a67b713c02f6fd985e924fcc09e31. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
@@ -43,10 +48,5 @@
     "fecha": "2026-05-27",
     "cve": "CVE-2026-45322",
     "descripcion": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Microsoft UFO tagged releases up to and including v3.0.0 contain an OS command injection vulnerability in the shell action replay path. In affected releases, ShellReceiver.run_shell() passes a command string from action parameters directly to subprocess.Popen() with shell=True and executable=powershell.exe. The same shell-execution behavior is also reachable through ShellReceiver.execute_command(). The shell receiver is invoked by action classes such as RunShellCommand.execute() and ExecuteCommand.execute(), which forward stored action parameters to the shell receiver. Because UFO stores planned and executed actions in per-session JSON records, an attacker who can write or modify a session/action JSON file can plant a shell action. When the session is resumed or replayed, UFO executes the attacker&#39;s command as the UFO process user. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-9208",
-    "descripcion": "Tanium addressed an unauthorized code execution vulnerability in Connect. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
