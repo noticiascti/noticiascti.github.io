@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-05-27",
+    "cve": "CVE-2026-9739",
+    "descripcion": "Vulnerable to DNS rebinding attacks when using SSE (http://b/499408790). During the beta phase, we implemented `allowed-origins` and `allowed-hosts` flags to align with MCP security guidelines. However, the hardcoded `Access-Control-Allow-Origin: *` header in the SSE initialization handler was inadvertently retained. This vulnerability specifically impacts users connecting via Toolbox using SSE under specification v2024-11-05. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-27",
+    "cve": "CVE-2026-46544",
+    "descripcion": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO accepts client-supplied session_id values in WebSocket task messages and reuses an existing in-memory session object if that session_id already exists. If a prior session has completed and remains in memory with populated results, a different authenticated client can send a new TASK message using the same session_id. The server re-enters the existing session object and sends the stale stored result to the new requester through the normal send_task_end() callback path. This is an authenticated cross-client stale result replay issue. The issue requires that the attacker knows or can predict a live or recently completed session_id. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-27",
+    "cve": "CVE-2026-46538",
+    "descripcion": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO&#39;s constellation client tracks pending task responses by session_id only and does not verify that a TASK_END message came from the device that originally received the task. When the constellation sends a task to a target device, it records a pending Future under a session key. The pending task record stores the expected device ID, but the completion path ignores that binding. If another authenticated peer device sends a forged TASK_END with the same session_id, the constellation accepts the response and completes the victim device&#39;s pending Future with attacker-controlled result data. This is an authenticated cross-device task-result injection issue. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-27",
+    "cve": "CVE-2026-46416",
+    "descripcion": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO creates one shared UFOWebSocketHandler instance and reuses it for multiple authenticated WebSocket connections. The handler stores per-connection protocol objects in mutable instance fields. Each new WebSocket connection overwrites those fields. Later, message handlers send responses through the shared fields instead of through protocol objects bound to the originating connection. As a result, the most recently connected authenticated client can receive protocol responses that belong to another authenticated client. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-27",
+    "cve": "CVE-2026-46414",
+    "descripcion": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO&#39;s WebSocket control plane trusts client-supplied identity and role fields in task messages. A client connection can register as a normal device, but later send a TASK message claiming client_type=&#34;constellation&#34; and target_id=. The server trusts the role and target values from the wire message rather than enforcing the role registered for that WebSocket connection. As a result, any authenticated WebSocket client with the shared server token can spoof the higher-privilege constellation role and dispatch attacker-controlled tasks to another connected device. The same client registry also allows duplicate client_id registration, overwriting an existing live client&#39;s stored websocket, role, and task protocol. This is an authenticated WebSocket role/identity spoofing issue leading to peer task hijacking. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-27",
+    "cve": "CVE-2026-46402",
+    "descripcion": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO uses the user-controlled task_name value directly when constructing session log paths. An authenticated client can supply path traversal sequences in task_name and cause UFO to create log directories and log files outside the intended logs/ directory. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-27",
+    "cve": "CVE-2026-45322",
+    "descripcion": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Microsoft UFO tagged releases up to and including v3.0.0 contain an OS command injection vulnerability in the shell action replay path. In affected releases, ShellReceiver.run_shell() passes a command string from action parameters directly to subprocess.Popen() with shell=True and executable=powershell.exe. The same shell-execution behavior is also reachable through ShellReceiver.execute_command(). The shell receiver is invoked by action classes such as RunShellCommand.execute() and ExecuteCommand.execute(), which forward stored action parameters to the shell receiver. Because UFO stores planned and executed actions in per-session JSON records, an attacker who can write or modify a session/action JSON file can plant a shell action. When the session is resumed or replayed, UFO executes the attacker&#39;s command as the UFO process user. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-05-27",
     "cve": "CVE-2026-9208",
     "descripcion": "Tanium addressed an unauthorized code execution vulnerability in Connect. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-05-27",
     "cve": "CVE-2026-45083",
     "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From 4.8.0 to before 26.04.1, the Goobi viewer REST endpoint POST /api/v1/index/stream accepted an arbitrary Solr streaming expression from unauthenticated network clients and forwarded it to the backend Solr server without restriction. An attacker could read the complete Solr index and, in default Solr deployments, also modify or delete indexed records. This vulnerability is fixed in 26.04.1. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-44720",
-    "descripcion": "OpenLearnX is an open-source, decentralized learning and assessment platform. Prior to 2.0.4, a critical authentication vulnerability was identified in OpenLearnX that could allow unauthorized access to user accounts under specific conditions. This vulnerability is fixed in 2.0.4. 28/05/2026 28/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-44247",
-    "descripcion": "Volcano is a Kubernetes-native batch scheduling system. Prior to v1.14.2, v1.13.3, and v1.12.4, the Volcano webhook server does not enforce a size limit on incoming HTTP request bodies. Any in-cluster pod that can reach the webhook endpoint may send an arbitrarily large request body, potentially causing the webhook server to be killed by OOM. All Volcano deployments with the webhook server exposed to in-cluster traffic are affected. This vulnerability is fixed in v1.14.2, v1.13.3, and v1.12.4. 28/05/2026 28/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-47270",
-    "descripcion": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.0, pam_usb is a PAM module loaded into the host process (sudo, login, GDM, GNOME Shell). Display managers such as GDM run multiple concurrent authentication threads. Three functions used by the deny_remote feature called the non-reentrant strtok(), which stores state in a single global pointer. If two authentications race, one thread&#39;s strtok() call can overwrite the other&#39;s in-progress tokenisation pointer, causing incorrect parsing of the tmux session data or the /proc environ scan that backs the remote-session detection logic. Additionally, pusb_tmux_get_client_tty() passed the raw pointer returned by getenv(TMUX) directly to strtok(). getenv() returns a pointer into the live process environment block; strtok() inserts NUL bytes into that block, permanently corrupting the TMUX variable for subsequent code running in the same process. In long-lived display managers this affects all future authentications in that process. The combined effect can cause deny_remote=true to return an incorrect decision for a remote session, or an incorrect decision for a local session, depending on thread interleaving. This vulnerability is fixed in 0.9.0. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-47269",
-    "descripcion": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.9.0, pam_usb&#39;s deny_remote feature checks utmpx ut_addr_v6 to detect whether an authentication request originates from a remote session. The outer guard was if (utent->ut_addr_v6[0] != 0), which only tests the first 32-bit word of the 128-bit address field. IPv4-mapped IPv6 addresses (::ffff:x.x.x.x) store the IPv4 address in ut_addr_v6[3] with ut_addr_v6[0] == 0. On systems where the SSH daemon listens on :: (IPv6 wildcard) with AddressFamily any -- common on Ubuntu and Debian -- incoming IPv4 connections are recorded in utmpx as IPv4-mapped IPv6 addresses. The outer check evaluates to false, the remote-detection block is skipped entirely, and the session is treated as local. deny_remote=true does not block the authentication. An attacker with physical access to a registered USB device can authenticate over SSH on an affected system as if they were sitting at a local terminal, bypassing the deny_remote restriction. This vulnerability is fixed in 0.9.0. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-45137",
-    "descripcion": "Anchor is a framework providing several convenient developer tools for writing Solana programs. From 1.0.0 to before 1.0.2, an logic error causes anchor programs to accept any program id when requiring the system program id, causing false assumptions resulting in potential arbitrary cpi in programs that invoke system program instructions. In the TryFrom implementation for Program, the id of T is compared with Pubkey::default() to check whether anchor should allow any executable account, or a specific account, because when no T is supplied, T defaults to (), which implements Id::id() by returning Pubkey::default(). This results in T = () and T = System (which has Pubkey::default() as the id) having the same behavior, both allow any executable account. Programs built with anchor assume that the anchor runtime verifies passed in programs of type Program are in fact the system program. This false assumption can lead to arbitrary CPI or payment bypassing when programs try making CPI calls to the system program using the passed in system program due to the fact that the attacker can pass in any program instead of the system program. This vulnerability is fixed in 1.0.2. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-45136",
-    "descripcion": "claude-code-cache-fix is a cache optimization proxy for Claude Code. From 3.5.0 to before 3.5.2, tools/quota-statusline.sh (introduced in v3.5.0) interpolates Claude Code&#39;s hook stdin payload directly into a Python triple-quoted string literal. A &#39;&#39;&#39; byte sequence in any user-controlled field of the payload closes the literal early and lets following bytes execute as Python in the user&#39;s Claude Code process. This vulnerability is fixed in 3.5.2. 27/05/2026 27/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-05-27",
-    "cve": "CVE-2026-44713",
-    "descripcion": "pam_usb provides hardware authentication for Linux using ordinary removable media. Prior to 0.8.7, src/tmux.c reads the user&#39;s $TMUX environment variable, splits it on commas, and interpolates the socket-path component directly into a shell command passed to popen(). Because the value is placed inside double-quotes without sanitisation, any value containing &#34; terminates the quoted string and injects arbitrary shell syntax. popen() runs as root inside the PAM stack. This vulnerability is fixed in 0.8.7. 27/05/2026 27/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
