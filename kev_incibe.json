@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-05-29",
+    "cve": "CVE-2026-9509",
+    "descripcion": "An unhandled exception in Suprema BioStar 2 (Server), versions 2.9.8, 2.9.10, and 2.9.11, that allows an unauthenticated remote attacker to cause a denial of service (DoS) by sending HTTP POST requests to the ‘/api/migration’ endpoint. This request triggers a failure that halts critical processes, leaving the system offline until the services or server are manually restarted. As a result, access control readers cease to function, and potential failures may occur in third-party integrations. Since the exploit requires no privileges or user interaction and is trivial to automate, the impact on availability is high, and the effect extends to interconnected systems. 29/05/2026 29/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-29",
+    "cve": "CVE-2026-9508",
+    "descripcion": "Incorrect permission settings on a critical resource in Suprema BioStar 2 (versions 2.9.3 through 2.9.11) that allow backup files to be publicly exposed when the administrator configures their path within the NGINX webroot. This vulnerability allows an attacker with network access to directly download backup ZIP files via ‘http(s)://[server]/download/…’ without requiring authentication. This exposes highly sensitive information that can lead to server impersonation, unauthorized access to databases, and lateral movement. 29/05/2026 29/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-29",
+    "cve": "CVE-2026-8326",
+    "descripcion": "Path traversal vulnerability in Remote Spark (https://www.Remotespark.Com/) SparkView allows reading and writing arbitrary files in all directories as root. This leads to RCE. The affected component is the RDP drive redirection. Depending on implementation, the vulnerability can be exploited by an unauthenticated attacker. This issue affects SparkView: before build 1127. 29/05/2026 29/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-29",
+    "cve": "CVE-2026-45611",
+    "descripcion": "Rejected reason: Further research determined the issue is not a vulnerability. 29/05/2026 29/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-29",
+    "cve": "CVE-2026-45312",
+    "descripcion": "RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine. In 0.24.0 and earlier, a Jinja2 template injection in the prompt generator (rag/prompts/generator.py) allows any authenticated user to execute arbitrary OS commands on the server. Any normal user can register, create a Canvas workflow with a DuckDuckGo + LLM component chain, and trigger the SSTI. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-05-29",
     "cve": "CVE-2026-9811",
     "descripcion": "A stored Cross-Site Scripting (XSS) vulnerability exists in the project selector component of Mautic 7. When rendering selection menus for associating projects with system entities, the application fails to sanitize project names returned via AJAX before injecting them into the DOM as option fields. An authenticated user with permissions to create projects can exploit this to store a malicious script payload in the project&#39;s name. When another administrative user subsequently opens an entity editor containing the project selector, the injected script executes within the context of their active browser session. This could allow an attacker to hijack the session, perform unauthorized state coordination, or access organizational data within the dashboard. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -21,32 +46,7 @@
   },
   {
     "fecha": "2026-05-29",
-    "cve": "CVE-2026-9558",
-    "descripcion": "A Server-Side Template Injection (SSTI) vulnerability exists in Mautic&#39;s theme engine. The platform renders uploaded Twig templates without a sandbox or strict function restrictions. Authenticated users with permissions to create or upload themes can abuse this to execute arbitrary code on the hosting server (Remote Code Execution) or access restricted system files and configuration settings. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-29",
-    "cve": "CVE-2026-9557",
-    "descripcion": "A Server-Side Request Forgery (SSRF) vulnerability exists in Mautic&#39;s Focus component. Due to insufficient validation of user-supplied URLs, an authenticated user can trigger outbound HTTP requests from the hosting server, enabling internal network reconnaissance or forcing requests to arbitrary internal or external destinations. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-29",
-    "cve": "CVE-2025-12714",
-    "descripcion": "The Rank Math SEO – AI SEO Tools to Dominate SEO Rankings plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the update_site_editor_homepage function in all versions up to, and including, 1.0.271. This makes it possible for unauthenticated attackers to modify several plugin settings including homepage title, meta description, breadcrumbs label, and social media metadata, which can have severe impact on SEO rankings and display malicious content across all site pages where breadcrumbs are used. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-29",
-    "cve": "CVE-2026-9189",
-    "descripcion": "The Contact Form 7 – PayPal & Stripe Add-on plugin for WordPress is vulnerable to Payment Bypass via Insufficient Verification of Data Authenticity in all versions up to, and including, 2.4.9. Although `cf7pp_paypal_ipn_handler()` correctly validates IPN authenticity by posting back to PayPal with `cmd=_notify-validate`, it fails to compare the IPN payload&#39;s `mc_gross` (payment amount), `mc_currency`, or `receiver_email` fields against the corresponding stored order values before passing the attacker-controlled `invoice` field directly to `cf7pp_complete_payment()`, which marks the order completed after only an integer cast with no amount verification. This makes it possible for unauthenticated attackers to mark arbitrary high-value pending orders as fully paid by making a minimal real PayPal payment and crafting an IPN whose `invoice` parameter references the targeted order, effectively completing purchases without tendering the required payment amount. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-05-29",
-    "cve": "CVE-2026-6075",
-    "descripcion": "The Media Library Assistant plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 3.35 This is due to missing nonce verification on the bulk action handlers in the settings tab handlers. This makes it possible for unauthenticated attackers to trick an administrator into performing bulk delete, edit, or purge operations on plugin settings and attachment metadata via a forged request. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-29",
-    "cve": "CVE-2026-49200",
-    "descripcion": "The acer_cgi.log file in the device firmware is accessible without authentication via the web interface. This file contains cleartext login credentials (for web and Telnet), leading to unauthorized system access. 29/05/2026 29/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-41281",
+    "descripcion": "Nozomi Networks Labs identified a CWE-78: Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) in Waterfall WF-500 RX Host in version 7.9.1.0 R2502171040 that allows attackers with access to the TX Host to execute code on the RX Host when a MySQL connector is configured. 29/05/2026 29/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
