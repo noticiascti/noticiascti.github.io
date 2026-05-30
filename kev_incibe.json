@@ -1,5 +1,10 @@
 [
   {
+    "fecha": "2026-05-30",
+    "cve": "CVE-2026-48840",
+    "descripcion": "Exim 4.88 before 4.99.4, in some proxy configurations, mishandles certain short payloads, leading to disclosure of uninitialized stack memory values to a client. 30/05/2026 30/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
     "fecha": "2026-05-29",
     "cve": "CVE-2026-9831",
     "descripcion": "A race condition in the shared Extreme Platform ONE IAM Gateway API-key authentication path could, under specific high-concurrency traffic conditions, intermittently allow requests authenticated with an Extreme Platform ONE /IAM-issued API key to receive response data for another tenant. The issue was observed through ExtremeCloud IQ/XIQ API endpoints and validated against both XIQ/XAPI and Extreme Platform ONE /Common Services API paths. XIQ-native tokens and standard OAuth/Bearer JWT authentication were not affected. 30/05/2026 30/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -43,10 +48,5 @@
     "fecha": "2026-05-29",
     "cve": "CVE-2026-47123",
     "descripcion": "FreeScout is a free help desk and shared inbox built with PHP&#39;s Laravel framework. Prior to 1.8.220, the email processing pipeline in FreeScout&#39;s FetchEmails command has two code paths for identifying agent (user) replies based on In-Reply-To / References headers. The notification reply path (notify-{thread_id}-{user_id}-...) extracts thread_id and user_id directly from the Message-ID without HMAC verification. An external attacker who can spoof the From address of a helpdesk agent can inject messages that FreeScout processes as legitimate agent replies — which are then automatically forwarded to customers via the legitimate SMTP server. This vulnerability is fixed in 1.8.220. 29/05/2026 29/05/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-29",
-    "cve": "CVE-2026-46599",
-    "descripcion": "The TIFF decoder does not place a limit on the size of PackBits-compressed data. A maliciously-crafted image can exploit this to cause a small image (both in terms of pixel width/height and encoded size) to make the decoder decode large amounts of compressed data. 29/05/2026 29/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
