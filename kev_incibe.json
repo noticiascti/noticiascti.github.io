@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-05-31",
+    "cve": "CVE-2026-48210",
+    "descripcion": "An improper default configuration in OTRS 2026.3.1 causes ticket article forwarding actions to enforce the “Is visible for customer” flag by default and prevent users from disabling it via the UI. This leads to unintended exposure of internal ticket information to the External Frontend This issue affects OTRS 2026.3.1 01/06/2026 01/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-05-31",
+    "cve": "CVE-2026-10197",
+    "descripcion": "A vulnerability was detected in Assimp up to 6.0.4. Affected is the function glTF2Importer::ImportEmbeddedTextures in the library code/AssetLib/glTF2/glTF2Importer.cpp of the component TF File Handler. The manipulation results in null pointer dereference. The attack is only possible with local access. The exploit is now public and may be used. It is advisable to implement a patch to correct this issue. The pull request to fix this issue awaits acceptance. 01/06/2026 01/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-05-31",
+    "cve": "CVE-2026-8796",
+    "descripcion": "Sereal::Decoder versions before 5.005 for Perl allow heap out-of-bounds read via crafted input. In Perl/Decoder/srl_decoder.c, srl_read_object() and srl_read_hash() process a COPY tag, a back-reference whose target byte the decoder re-decodes as a fresh tag. When that target byte matches the SHORT_BINARY pattern (an inline string whose length is encoded in the low bits of the tag), the resulting read is not bounded to precede the COPY tag&#39;s own offset and can run past the end of the input buffer. An attacker controlled COPY offset can land inside a previously decoded value rather than on a tag boundary, planting a byte that the decoder reads as a SHORT_BINARY tag and consuming up to 31 following bytes from the heap as a class name (OBJECT path) or hash key (HASH path). 31/05/2026 31/05/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-05-31",
     "cve": "CVE-2026-10194",
     "descripcion": "A weakness has been identified in OFFIS DCMTK 3.7.0. This affects the function DcmQueryRetrieveIndexDatabaseHandle::deleteOldestImages of the file dcmqrdb/libsrc/dcmqrdbi.cc of the component dcmqrscp. Executing a manipulation can lead to heap-based buffer overflow. The attack may be launched remotely. This patch is called 0f78a4ef6f645ea5530166e445e5436a5de58e75. A patch should be applied to remediate this issue. 31/05/2026 31/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-05-31",
     "cve": "CVE-2026-10188",
     "descripcion": "A flaw has been found in Tenda W12 3.0.0.7(4763). This affects the function cgistaKickOff of the file /bin/httpd. Executing a manipulation of the argument staMac can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been published and may be used. 31/05/2026 31/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-31",
-    "cve": "CVE-2026-10187",
-    "descripcion": "A vulnerability was detected in Totolink N300RH 6.1c.1353_B20190305. Affected by this issue is the function setWiFiBasicConfig of the file wireless.so of the component Web Management Interface. Performing a manipulation of the argument KeyStr results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used. 31/05/2026 31/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-05-31",
-    "cve": "CVE-2026-10186",
-    "descripcion": "A security vulnerability has been detected in code-projects Online Hospital Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /patient.php. Such manipulation of the argument editid leads to sql injection. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. 31/05/2026 31/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-05-31",
-    "cve": "CVE-2026-10185",
-    "descripcion": "A weakness has been identified in SourceCodester Hospitals Patient Records Management System 1.0. Affected is an unknown function of the file /classes/Users.php?f=save. This manipulation of the argument ID causes sql injection. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. 31/05/2026 31/05/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
