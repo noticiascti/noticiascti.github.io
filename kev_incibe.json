@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-06-03",
+    "cve": "CVE-2026-50052",
+    "descripcion": "In Vinyl Cache before 9.0.1 and Varnish Cache before 9.0.3, a deficiency in HTTP/2 request parsing can be exploited to launch a backend request desync attack (request smuggling), which in turn can be used for cache poisoning, authentication bypass, or possibly even information disclosure and manipulation. The attack vector only exists if HTTP/2 support is enabled by setting the feature parameter to contain +http2. HTTP/2 support is disabled by default. 03/06/2026 03/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:A/V:D/RE:L/U:Green Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-03",
+    "cve": "CVE-2026-50031",
+    "descripcion": "ipmi-oem in FreeIPMI before 1.6.18 has exploitable buffer overflows on response messages. The Intelligent Platform Management Interface (IPMI) specification defines a set of interfaces for platform management. It is implemented by a large number of hardware manufacturers to support system management. It is most commonly used for sensor reading (e.g., CPU temperatures through the ipmi-sensors command within FreeIPMI) and remote power control (the ipmipower command). The ipmi-oem client command implements a set of a IPMI OEM commands for specific hardware vendors. If a user has supported hardware, they may wish to use the ipmi-oem command to send a request to a server to retrieve specific information. Two subcommands &#34;ipmi-oem dell get-active-directory-config&#34; and &#34;ipmi-oem fujitsu get-sel-entry-long-text&#34; were found to have exploitable buffer overflows on response messages. 03/06/2026 03/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-03",
     "cve": "CVE-2026-10705",
     "descripcion": "A flaw has been found in dask up to 3.0. Affected by this issue is the function nunique_approx of the file dask/dataframe/hyperloglog.py of the component HLL Handler. This manipulation causes resource consumption. The attack is possible to be carried out remotely. A high degree of complexity is needed for the attack. The exploitation is known to be difficult. The pull request to fix this issue awaits acceptance. 03/06/2026 03/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:H/Au:S/C:N/I:N/A:P Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-06-02",
     "cve": "CVE-2026-9732",
     "descripcion": "The EmergencyWP – Dead Man&#39;s switch & legacy deliverance plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.4.2. This is due to missing or incorrect nonce validation on the form_settings_ui (settings save handler, procedural include scope) function. This makes it possible for unauthenticated attackers to modify plugin settings including the minimum access role (altering WordPress role capabilities via add_cap/remove_cap), the data-erasure-on-uninstall flag, life-check timing values, the mandator email address, the confirmation page ID, and date/time formats via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. 03/06/2026 03/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-02",
-    "cve": "CVE-2026-7421",
-    "descripcion": "The Passeum Ticketing plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 1.0. This is due to the `get_shop_url()` method returning the `shop_name` setting value without sanitization when it begins with &#34;http&#34;, combined with insufficient validation in the `validate_shop_name()` function which only checks for empty values and string type. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject arbitrary external scripts by setting the `shop_name` to an attacker-controlled URL (e.g., `https://attacker.com`), which causes the plugin to enqueue external JavaScript and CSS from the attacker-controlled domain via `wp_register_script()` and `wp_register_style()`. The injected scripts execute on every frontend page containing any Passeum Ticketing shortcode, affecting all site visitors. Please note that this does not affect single-site installations as administrators already have the `unfiltered_html` capability. 03/06/2026 03/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-02",
-    "cve": "CVE-2026-10692",
-    "descripcion": "A weakness has been identified in johnhuang316 code-index-mcp up to 2.14.0. Affected is the function is_safe_regex_pattern of the component search_code_advanced. Executing a manipulation of the argument regex can lead to inefficient regular expression complexity. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 2.14.1 is able to address this issue. This patch is called 25bc02fac74051ddae15ce79e952f00211b1ea6b. Upgrading the affected component is recommended. 03/06/2026 03/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:N/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
