@@ -1,5 +1,25 @@
 [
   {
+    "fecha": "2026-06-04",
+    "cve": "CVE-2026-8653",
+    "descripcion": "The MasterStudy LMS Pro Plus plugin for WordPress is vulnerable to generic SQL Injection via the &#39;columns&#39; parameter in all versions up to, and including, 4.8.20 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with instructor-level access or above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 04/06/2026 04/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-04",
+    "cve": "CVE-2026-7764",
+    "descripcion": "An out-of-bounds read vulnerability in the morse.ko HaLow Wi-Fi kernel driver in Morse Micro HaLowLink 2 software versions prior to 2.11.12 allows an unauthenticated attacker within radio range to disclose a small amount of kernel heap memory or cause a Denial of Service (kernel oops/panic) via a crafted 802.11ah beacon or probe response frame containing a malformed Vendor Information Element. The function morse_vendor_find_vendor_ie() does not validate the IE length against the expected structure size before its result is passed to morse_vendor_rx_caps_ops_ie() and morse_vendor_fill_sta_vendor_info(), which read at fixed offsets into the IE data. Because the length check only requires the IE to be longer than 3 bytes, an attacker can supply an undersized IE, causing a heap out-of-bounds read of up to 9 bytes. No authentication, association, or user interaction is required. 04/06/2026 04/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-04",
+    "cve": "CVE-2026-10737",
+    "descripcion": "The SP Project & Document Manager plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the view_file function in all versions up to, and including, 4.71. This makes it possible for unauthenticated attackers to read file metadata and obtain download links for arbitrary files stored inside project folders on the server, which can contain sensitive information. The authorization gate uses a negated nonce check OR-chained with permission checks, meaning a missing or invalid nonce causes the entire condition to evaluate to true and bypass all preceding capability and ownership checks. The secondary fallback check only denies access for root-level files (pid == 0), leaving all files stored inside project folders fully exposed to unauthenticated users who supply only a valid file ID in a POST request to admin-ajax.php. 04/06/2026 04/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-03",
+    "cve": "CVE-2026-8722",
+    "descripcion": "Net::Async::Statsd::Client versions through 0.005 for Perl allow metric injections. The metric names are not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics. 04/06/2026 04/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
     "fecha": "2026-06-03",
     "cve": "CVE-2026-10783",
     "descripcion": "A security flaw has been discovered in gradio-app gradio 6.14.0. This affects the function save_audio_to_cache of the component Audio Cache Key Handler. Performing a manipulation results in use of weak hash. The attack must be initiated from a local position. The attack is considered to have high complexity. It is indicated that the exploitability is difficult. The exploit has been released to the public and may be used for attacks. The patch is named 13394. To fix this issue, it is recommended to deploy a patch. 04/06/2026 04/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:L/AC:H/Au:S/C:P/I:N/A:N Gravedad 4.0 1.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 2.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
@@ -28,25 +48,5 @@
     "fecha": "2026-06-03",
     "cve": "CVE-2026-22055",
     "descripcion": "Active IQ OneCollect version 2.7.3 contains hard-coded credentials that could allow an authenticated attacker with low privileges to perform unauthorized AutoSupport operations. 04/06/2026 04/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-03",
-    "cve": "CVE-2026-22054",
-    "descripcion": "Active IQ Config Advisor version 6.7.3 contains hard-coded credentials that could allow an authenticated attacker with low privileges to perform unauthorized AutoSupport operations. 04/06/2026 04/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-03",
-    "cve": "CVE-2026-10771",
-    "descripcion": "A vulnerability was found in crmeb crmeb_java 1.4. Affected is the function RestTemplate.getForEntity of the file crmeb-common/src/main/java/com/zbkj/common/utils/RestTemplateUtil.java of the component base64 Qrcode Endpoint. The manipulation of the argument url results in server-side request forgery. The attack can be executed remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet. 04/06/2026 04/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-03",
-    "cve": "CVE-2026-50033",
-    "descripcion": "Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.15051.93227. 03/06/2026 03/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-03",
-    "cve": "CVE-2026-44682",
-    "descripcion": "Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis DeviceLock DLP (Windows) before build 9.0.15051.93227. 03/06/2026 03/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
