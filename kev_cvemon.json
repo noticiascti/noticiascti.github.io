@@ -6,8 +6,8 @@
   },
   {
     "fecha": "2026-06-07",
-    "cve": "CVE-2026-20245",
-    "descripcion": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system. This vulnerability is due to insufficient validation of ..."
+    "cve": "CVE-2026-50260",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
   },
   {
     "fecha": "2026-06-07",
@@ -16,18 +16,18 @@
   },
   {
     "fecha": "2026-06-07",
-    "cve": "CVE-2026-50257",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
-  },
-  {
-    "fecha": "2026-06-07",
     "cve": "CVE-2026-50261",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
   },
   {
     "fecha": "2026-06-07",
-    "cve": "CVE-2026-46243",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: smb: client: reject userspace cifs.spnego descriptions cifs.spnego key descriptions contain authority-bearing fields such as pid, uid, creduid, and upcall_target that cifs.upcall treats as kernel-originating ..."
+    "cve": "CVE-2026-50257",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
+  },
+  {
+    "fecha": "2026-06-07",
+    "cve": "CVE-2026-50258",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. The X server has multiple stack buffers sized XkbMaxShiftLevel * XkbNumKbdGroups but CheckKeyTypes() does not verify or clamp non-canonical key types to XkbMaxShiftLevel. A client can change key ..."
   },
   {
     "fecha": "2026-06-07",
@@ -41,12 +41,12 @@
   },
   {
     "fecha": "2026-06-07",
-    "cve": "CVE-2026-20230",
-    "descripcion": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected ..."
+    "cve": "CVE-2026-20245",
+    "descripcion": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system. This vulnerability is due to insufficient validation of ..."
   },
   {
     "fecha": "2026-06-07",
-    "cve": "CVE-2022-0492",
-    "descripcion": "A vulnerability was found in the Linux kernel’s cgroup_release_agent_write in the kernel/cgroup/cgroup-v1.c function. This flaw, under certain circumstances, allows the use of the cgroups v1 release_agent feature to escalate privileges and bypass the namespace isolation ..."
+    "cve": "CVE-2026-20230",
+    "descripcion": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected ..."
   }
 ]
