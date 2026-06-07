@@ -16,6 +16,11 @@
   },
   {
     "fecha": "2026-06-07",
+    "cve": "CVE-2026-50257",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
+  },
+  {
+    "fecha": "2026-06-07",
     "cve": "CVE-2026-50261",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
   },
@@ -23,6 +28,11 @@
     "fecha": "2026-06-07",
     "cve": "CVE-2026-50259",
     "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
+  },
+  {
+    "fecha": "2026-06-07",
+    "cve": "CVE-2026-50262",
+    "descripcion": "An out-of-bounds read flaw was found in the X.Org X server and Xwayland in __glXDisp_ChangeDrawableAttributes(). A wrong size validation check can read a client-controlled number of bytes, exceeding the request buffer, leading to information disclosure. A write path also exists ..."
   },
   {
     "fecha": "2026-06-07",
@@ -36,17 +46,7 @@
   },
   {
     "fecha": "2026-06-07",
-    "cve": "CVE-2025-48595",
-    "descripcion": "In multiple locations, there is a possible way to achieve code execution due to an integer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
-  },
-  {
-    "fecha": "2026-06-07",
     "cve": "CVE-2022-0492",
     "descripcion": "A vulnerability was found in the Linux kernel’s cgroup_release_agent_write in the kernel/cgroup/cgroup-v1.c function. This flaw, under certain circumstances, allows the use of the cgroups v1 release_agent feature to escalate privileges and bypass the namespace isolation ..."
-  },
-  {
-    "fecha": "2026-06-07",
-    "cve": "CVE-2024-21182",
-    "descripcion": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core). Supported versions that are affected are 12.2.1.4.0 and 14.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via T3, IIOP to ..."
   }
 ]
