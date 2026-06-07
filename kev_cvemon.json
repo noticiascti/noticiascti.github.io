@@ -21,8 +21,8 @@
   },
   {
     "fecha": "2026-06-07",
-    "cve": "CVE-2026-50257",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
+    "cve": "CVE-2026-50259",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
   },
   {
     "fecha": "2026-06-07",
