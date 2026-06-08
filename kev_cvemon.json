@@ -6,13 +6,13 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50256",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
+    "cve": "CVE-2026-50260",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50260",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
+    "cve": "CVE-2026-50256",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
   },
   {
     "fecha": "2026-06-08",
@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-06-08",
+    "cve": "CVE-2026-23631",
+    "descripcion": "Redis is an in-memory data structure store. In all versions of redis-server with Lua scripting, an authenticated attacker can exploit the master-replica synchronization mechanism to trigger a use-after-free on replicas where replica-read-only is disabled or can be disabled, ..."
+  },
+  {
+    "fecha": "2026-06-08",
     "cve": "CVE-2026-50262",
     "descripcion": "An out-of-bounds read flaw was found in the X.Org X server and Xwayland in __glXDisp_ChangeDrawableAttributes(). A wrong size validation check can read a client-controlled number of bytes, exceeding the request buffer, leading to information disclosure. A write path also exists ..."
   },
@@ -38,11 +43,6 @@
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50263",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in CreateSaverWindow(). A client can trigger a use-after-free read after changing window attributes and forcing the screen saver, leading to information disclosure."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-23631",
-    "descripcion": "Redis is an in-memory data structure store. In all versions of redis-server with Lua scripting, an authenticated attacker can exploit the master-replica synchronization mechanism to trigger a use-after-free on replicas where replica-read-only is disabled or can be disabled, ..."
   },
   {
     "fecha": "2026-06-08",
