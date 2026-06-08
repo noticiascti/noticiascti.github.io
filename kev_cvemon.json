@@ -1,28 +1,8 @@
 [
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50258",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. The X server has multiple stack buffers sized XkbMaxShiftLevel * XkbNumKbdGroups but CheckKeyTypes() does not verify or clamp non-canonical key types to XkbMaxShiftLevel. A client can change key ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-50260",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
-  },
-  {
-    "fecha": "2026-06-08",
     "cve": "CVE-2026-50256",
     "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-50261",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-50259",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
   },
   {
     "fecha": "2026-06-08",
@@ -31,13 +11,33 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50263",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in CreateSaverWindow(). A client can trigger a use-after-free read after changing window attributes and forcing the screen saver, leading to information disclosure."
+    "cve": "CVE-2026-50258",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. The X server has multiple stack buffers sized XkbMaxShiftLevel * XkbNumKbdGroups but CheckKeyTypes() does not verify or clamp non-canonical key types to XkbMaxShiftLevel. A client can change key ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50259",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50260",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50261",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
   },
   {
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50262",
     "descripcion": "An out-of-bounds read flaw was found in the X.Org X server and Xwayland in __glXDisp_ChangeDrawableAttributes(). A wrong size validation check can read a client-controlled number of bytes, exceeding the request buffer, leading to information disclosure. A write path also exists ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50263",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in CreateSaverWindow(). A client can trigger a use-after-free read after changing window attributes and forcing the screen saver, leading to information disclosure."
   },
   {
     "fecha": "2026-06-08",
