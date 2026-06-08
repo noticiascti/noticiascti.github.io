@@ -1,18 +1,28 @@
 [
   {
     "fecha": "2026-06-08",
+    "cve": "CVE-2024-32114",
+    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
+  },
+  {
+    "fecha": "2026-06-08",
     "cve": "CVE-2026-50258",
     "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. The X server has multiple stack buffers sized XkbMaxShiftLevel * XkbNumKbdGroups but CheckKeyTypes() does not verify or clamp non-canonical key types to XkbMaxShiftLevel. A client can change key ..."
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50260",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
+    "cve": "CVE-2026-50257",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
   },
   {
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50261",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50260",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
   },
   {
     "fecha": "2026-06-08",
@@ -23,11 +33,6 @@
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50259",
     "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-50257",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
   },
   {
     "fecha": "2026-06-08",
@@ -43,10 +48,5 @@
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50263",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in CreateSaverWindow(). A client can trigger a use-after-free read after changing window attributes and forcing the screen saver, leading to information disclosure."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2024-32114",
-    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
   }
 ]
