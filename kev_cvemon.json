@@ -11,11 +11,6 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50260",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
-  },
-  {
-    "fecha": "2026-06-08",
     "cve": "CVE-2026-50261",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
   },
@@ -28,6 +23,11 @@
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50257",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50260",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
   },
   {
     "fecha": "2026-06-08",
