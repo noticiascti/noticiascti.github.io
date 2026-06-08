@@ -16,6 +16,11 @@
   },
   {
     "fecha": "2026-06-08",
+    "cve": "CVE-2026-50260",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
+  },
+  {
+    "fecha": "2026-06-08",
     "cve": "CVE-2026-50259",
     "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
   },
@@ -23,11 +28,6 @@
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50257",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-50260",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
   },
   {
     "fecha": "2026-06-08",
@@ -41,8 +41,8 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-20245",
-    "descripcion": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system. This vulnerability is due to insufficient validation of ..."
+    "cve": "CVE-2026-23631",
+    "descripcion": "Redis is an in-memory data structure store. In all versions of redis-server with Lua scripting, an authenticated attacker can exploit the master-replica synchronization mechanism to trigger a use-after-free on replicas where replica-read-only is disabled or can be disabled, ..."
   },
   {
     "fecha": "2026-06-08",
