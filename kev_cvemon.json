@@ -6,8 +6,8 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50256",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
+    "cve": "CVE-2026-50259",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
   },
   {
     "fecha": "2026-06-08",
@@ -16,18 +16,18 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50260",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-50259",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
+    "cve": "CVE-2026-50256",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
   },
   {
     "fecha": "2026-06-08",
     "cve": "CVE-2026-50257",
     "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in miSyncDestroyFence(). A client that sets up multiple fence triggers can trigger a use-after-free function pointer call. An attacker would connect to the X server to set up a fence and await that fence, then a ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50260",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in FreeCounter(). A client that sets up multiple SyncCounters and awaits on those triggers can trigger a use-after-free when destroying those counters via a second client connection. This may be used to crash the ..."
   },
   {
     "fecha": "2026-06-08",
