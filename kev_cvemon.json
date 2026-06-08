@@ -11,13 +11,8 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50256",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-50261",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
+    "cve": "CVE-2026-50259",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
   },
   {
     "fecha": "2026-06-08",
@@ -26,8 +21,13 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50259",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. _XkbSetMapChecks() declares a fixed-size stack buffer mapWidths[256] indexed by key type index. The helper function CheckKeyTypes() writes to this buffer at a client-controlled offset, allowing a ..."
+    "cve": "CVE-2026-50261",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2026-50256",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
   },
   {
     "fecha": "2026-06-08",
@@ -46,7 +46,7 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-46243",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: smb: client: reject userspace cifs.spnego descriptions cifs.spnego key descriptions contain authority-bearing fields such as pid, uid, creduid, and upcall_target that cifs.upcall treats as kernel-originating ..."
+    "cve": "CVE-2024-32114",
+    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
   }
 ]
