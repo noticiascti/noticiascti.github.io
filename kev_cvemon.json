@@ -11,13 +11,13 @@
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50261",
-    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
+    "cve": "CVE-2026-50256",
+    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50256",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. A mismatch between the X server and the libXfont2 library's maximum font name length can cause a stack buffer overflow during font alias resolution. The server allocates a 256 byte stack buffer but ..."
+    "cve": "CVE-2026-50261",
+    "descripcion": "A use-after-free flaw was found in the X.Org X server and Xwayland in SyncChangeCounter(). A client that sets up multiple SyncCounters can trigger a use-after-free when destroying those counters via a second client connection while changing those counters. This may be used to ..."
   },
   {
     "fecha": "2026-06-08",
