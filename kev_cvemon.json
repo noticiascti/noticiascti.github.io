@@ -1,16 +1,6 @@
 [
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2024-32114",
-    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
-  },
-  {
-    "fecha": "2026-06-08",
-    "cve": "CVE-2026-23631",
-    "descripcion": "Redis is an in-memory data structure store. In all versions of redis-server with Lua scripting, an authenticated attacker can exploit the master-replica synchronization mechanism to trigger a use-after-free on replicas where replica-read-only is disabled or can be disabled, ..."
-  },
-  {
-    "fecha": "2026-06-08",
     "cve": "CVE-2023-46604",
     "descripcion": "The Java OpenWire protocol marshaller is vulnerable to Remote Code Execution. This vulnerability may allow a remote attacker with network access to either a Java-based OpenWire broker or client to run arbitrary shell commands by manipulating serialized class types in the ..."
   },
@@ -41,12 +31,22 @@
   },
   {
     "fecha": "2026-06-08",
+    "cve": "CVE-2024-32114",
+    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
+  },
+  {
+    "fecha": "2026-06-08",
     "cve": "CVE-2026-42588",
     "descripcion": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ All, Apache ActiveMQ. Apache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default ..."
   },
   {
     "fecha": "2026-06-08",
-    "cve": "CVE-2026-50258",
-    "descripcion": "A stack-based buffer overflow flaw was found in the X.Org X server and Xwayland. The X server has multiple stack buffers sized XkbMaxShiftLevel * XkbNumKbdGroups but CheckKeyTypes() does not verify or clamp non-canonical key types to XkbMaxShiftLevel. A client can change key ..."
+    "cve": "CVE-2026-23631",
+    "descripcion": "Redis is an in-memory data structure store. In all versions of redis-server with Lua scripting, an authenticated attacker can exploit the master-replica synchronization mechanism to trigger a use-after-free on replicas where replica-read-only is disabled or can be disabled, ..."
+  },
+  {
+    "fecha": "2026-06-08",
+    "cve": "CVE-2025-8088",
+    "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
   }
 ]
