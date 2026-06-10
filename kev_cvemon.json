@@ -36,13 +36,13 @@
   },
   {
     "fecha": "2026-06-10",
-    "cve": "CVE-2022-41678",
-    "descripcion": "Once an user is authenticated on Jolokia, he can potentially trigger arbitrary code execution. In details, in ActiveMQ configurations, jetty allows org.jolokia.http.AgentServlet to handler request to /api/jolokia org.jolokia.http.HttpRequestHandler#handlePostRequest is able ..."
+    "cve": "CVE-2024-32114",
+    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
   },
   {
     "fecha": "2026-06-10",
-    "cve": "CVE-2024-32114",
-    "descripcion": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located). It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the ..."
+    "cve": "CVE-2026-42588",
+    "descripcion": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ All, Apache ActiveMQ. Apache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default ..."
   },
   {
     "fecha": "2026-06-10",
