@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-06-11",
+    "cve": "CVE-2026-49482",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #141, ClipBucket v5 contains an improper neutralization of SQL wildcard characters in the subtitle editing endpoint. An authenticated user can send a % character as the number parameter to overwrite all subtitle titles of any video they own in a single HTTP request. This issue has been patched in version 5.5.3 - #141. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-11",
+    "cve": "CVE-2026-10676",
+    "descripcion": "Rejected reason: This CVE Record has been rejected by the Zephyr Project CNA. Subsequent analysis determined that the addressed defect is not reachable in any released version of Zephyr: on every supported release branch the affected value is corrected before it is used, and the change that exposes the defect exists only in unreleased development code. As no released version is affected, this identifier is withdrawn. 12/06/2026 12/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-11",
+    "cve": "CVE-2026-47238",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #133, a normal authenticated user can edit another user&#39;s video subtitles because of a lack of authorization. They can upload subtitles, edit their name or delete them. This issue has been patched in version 5.5.3 - #133. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-11",
+    "cve": "CVE-2026-45418",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #132, any authenticated user who can upload videos can add multiple subtitles from different files and change their title (English, Spanish...). The POST /actions/subtitle_edit.php request used to change their title includes a number parameter which is vulnerable to SQL Injection. A boolean-based blind SQL injection can be used to exfiltrate sensitive data. This issue has been patched in version 5.5.3 - #132. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-11",
+    "cve": "CVE-2026-45060",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #129, the actions/progress_video.php endpoint is vulnerable to blind SQL injection. Any unauthenticated user can exploit the ids parameter to execute SQL queries and exfiltrate sensitive data. This issue has been patched in version 5.5.3 - #129. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-06-11",
+    "cve": "CVE-2026-42846",
+    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #140, ClipBucket&#39;s Remote Play feature allows any authenticated user to add a video by importing an external URL as the source. Some shell commands are run with the URL as a parameter. The URL is concatenated directly into shell commands without escaping then executed, so any shell metacharacter in the URL is interpreted. This results in arbitrary command execution. This issue has been patched in version 5.5.3 - #140. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-06-11",
     "cve": "CVE-2026-6250",
     "descripcion": "An authenticated format string vulnerability exists in the ONVIF service of Tapo C110 v2 due to improper handling of user-controlled input. Externally controlled data is interpreted as a format string, which can be used to manipulate stack memory, including control flow data such as return addresses. A remote authenticated attacker may redirect execution flow to existing internal functions, triggering an unauthorized factory reset, leading to loss of configuration, deletion of stored credentials and service disruption. 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-06-11",
     "cve": "CVE-2026-45173",
     "descripcion": "Idira Identity Browser Extension (Chrome, Firefox, and Edge builds) versions prior to 26.8.1 exhibit an origin validation flaw within its internal web-page verification routines. If an authenticated user navigates to a specially crafted webpage, this interaction could potentially allow a remote attacker to trigger unauthorized application interaction or execution parameters within the context of that authenticated browser session. CyberArk Security Bulletin: CA26-21 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:L/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-45172",
-    "descripcion": "Due to incomplete input validation in Idira Privileged Session Manager for SSH (PSMP) versions prior to 15.0.2, 14.6.3, 14.2.5, and 14.0.6, an authenticated, low-privileged user could potentially execute arbitrary commands on the PSMP host. CyberArk Security Bulletins: CA26-17 and CA26-18 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-45171",
-    "descripcion": "Incomplete input validation and improperly configured folder permissions within Idira Privileged Session Manager (PSM) versions prior to 15.0.3, 14.6.3, 14.2.5, and 14.0.5, an authenticated, low-privileged user could potentially execute arbitrary code. CyberArk Security Bulletin: CA26-17 and CA26-18 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-44890",
-    "descripcion": "Netty is a network application framework for development of protocol servers and clients. In netty-codec-redis prior to versions 4.1.135.Final and 4.2.15.Final, an attacker can cause DoS by sending crafted Redis payloads across multiple connections without `\\r\\n`. This exhausts the server&#39;s direct memory pool (OutOfDirectMemoryError), preventing legitimate connections from being processed. Versions 4.1.135.Final and 4.2.15.Final patch the issue. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-44250",
-    "descripcion": "Netty is a network application framework for development of protocol servers and clients. In netty-codec-redis prior to versions 4.1.135.Final and 4.2.15.Final, an attacker can cause DoS by sending a crafted Redis payload with deeply nested arrays. This forces the server to allocate a massive number of state objects and collections, leading to memory exhaustion and an OutOfMemoryError. Versions 4.1.135.Final and 4.2.15.Final patch the issue. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-44249",
-    "descripcion": "Netty is a network application framework for development of protocol servers and clients. In netty-handler prior to versions 4.1.135.Final and 4.2.15.Final, an attacker can bypass IPv6 subnet rules due to an incorrect masking operation in IpSubnetFilterRule.compareTo(). Valid public IP addresses can bypass the restrictions. Versions 4.1.135.Final and 4.2.15.Final patch the issue. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-42653",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in iova.Mihai SliceWP allows Stored XSS. This issue affects SliceWP: from n/a through 1.2.6. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
