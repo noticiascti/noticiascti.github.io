@@ -1,5 +1,20 @@
 [
   {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-9125",
+    "descripcion": "The Presto Player plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;link_url&#39; parameter of the [presto_player_overlay] shortcode in versions up to, and including, 4.2.0 This is due to insufficient input sanitization and output escaping in the getOverlays() function, which copies the link_url shortcode attribute directly into the overlay configuration without scheme validation, allowing javascript: URIs to survive and be rendered as the href of a clickable anchor element by the presto-dynamic-overlay-ui web component. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-45170",
+    "descripcion": "Idira Privilege Cloud Connector versions prior 1.1.100504 under specific conditions and configuration scenarios, TLS certificate validation may not be fully enforced. CyberArk Security Bulletin: CA26-17 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-11933",
+    "descripcion": "A use-after-free vulnerability exists in MongoDB Server&#39;s server-side JavaScript engine when converting BSON documents to JavaScript arrays. An authenticated user with read privileges who is able to run server-side JavaScript (for example, via $where or $function) can cause the server to access memory that has already been freed. This may result in disclosure of information from the mongod process memory or a denial of service through a server crash. 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2026-06-11",
     "cve": "CVE-2026-49482",
     "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #141, ClipBucket v5 contains an improper neutralization of SQL wildcard characters in the subtitle editing endpoint. An authenticated user can send a % character as the number parameter to overwrite all subtitle titles of any video they own in a single HTTP request. This issue has been patched in version 5.5.3 - #141. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -33,20 +48,5 @@
     "fecha": "2026-06-11",
     "cve": "CVE-2026-6250",
     "descripcion": "An authenticated format string vulnerability exists in the ONVIF service of Tapo C110 v2 due to improper handling of user-controlled input. Externally controlled data is interpreted as a format string, which can be used to manipulate stack memory, including control flow data such as return addresses. A remote authenticated attacker may redirect execution flow to existing internal functions, triggering an unauthorized factory reset, leading to loss of configuration, deletion of stored credentials and service disruption. 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-49060",
-    "descripcion": "Incorrect Privilege Assignment vulnerability in Hippoo Mobile App for WooCommerce allows Privilege Escalation. This issue affects Hippoo Mobile App for WooCommerce: from n/a through 1.9.4. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-45174",
-    "descripcion": "Idira Endpoint Privilege Manager Linux Agent versions prior to 26.5 allow a local attacker to potentially compromise the agent daemon initialization. CyberArk Security Bulletin: CA26-19 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-45173",
-    "descripcion": "Idira Identity Browser Extension (Chrome, Firefox, and Edge builds) versions prior to 26.8.1 exhibit an origin validation flaw within its internal web-page verification routines. If an authenticated user navigates to a specially crafted webpage, this interaction could potentially allow a remote attacker to trigger unauthorized application interaction or execution parameters within the context of that authenticated browser session. CyberArk Security Bulletin: CA26-21 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:L/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
