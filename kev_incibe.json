@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-06-12",
-    "cve": "CVE-2026-9125",
-    "descripcion": "The Presto Player plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;link_url&#39; parameter of the [presto_player_overlay] shortcode in versions up to, and including, 4.2.0 This is due to insufficient input sanitization and output escaping in the getOverlays() function, which copies the link_url shortcode attribute directly into the overlay configuration without scheme validation, allowing javascript: URIs to survive and be rendered as the href of a clickable anchor element by the presto-dynamic-overlay-ui web component. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-9271",
+    "descripcion": "Vulnerability Title 12/06/2026 12/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-06-12",
-    "cve": "CVE-2026-45170",
-    "descripcion": "Idira Privilege Cloud Connector versions prior 1.1.100504 under specific conditions and configuration scenarios, TLS certificate validation may not be fully enforced. CyberArk Security Bulletin: CA26-17 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-9269",
+    "descripcion": "The Secure Copy Content Protection and Content Locking WordPress plugin before 5.1.5 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup). 12/06/2026 12/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-06-12",
-    "cve": "CVE-2026-11933",
-    "descripcion": "A use-after-free vulnerability exists in MongoDB Server&#39;s server-side JavaScript engine when converting BSON documents to JavaScript arrays. An authenticated user with read privileges who is able to run server-side JavaScript (for example, via $where or $function) can cause the server to access memory that has already been freed. This may result in disclosure of information from the mongod process memory or a denial of service through a server crash. 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-12060",
+    "descripcion": "Heptabase developed by Hepta Platforms has a Exposed Dangerous Method or Function vulnerability, allowing unauthenticated remote attackers to leverage social engineering techniques to trick a victim into opening or loading a malicious webpage within the Heptabase application, thereby gaining unauthorized access to camera and microphone permissions. 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-49482",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #141, ClipBucket v5 contains an improper neutralization of SQL wildcard characters in the subtitle editing endpoint. An authenticated user can send a % character as the number parameter to overwrite all subtitle titles of any video they own in a single HTTP request. This issue has been patched in version 5.5.3 - #141. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-12059",
+    "descripcion": "The SSH service of CelloOS developed by Cellopoint has an Improper Access Control vulnerability, allowing authenticated remote attackers to bypass the enforced command restrictions and execute operating system commands outside the originally authorized scope. 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-10676",
-    "descripcion": "Rejected reason: This CVE Record has been rejected by the Zephyr Project CNA. Subsequent analysis determined that the addressed defect is not reachable in any released version of Zephyr: on every supported release branch the affected value is corrected before it is used, and the change that exposes the defect exists only in unreleased development code. As no released version is affected, this identifier is withdrawn. 12/06/2026 12/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-45169",
+    "descripcion": "Idira Privileged Access Manager (PAM) Self-Hosted Vault versions prior to 15.0.3, 14.6.5, 14.2.7, and 14.0.8 exhibit a validation vulnerability. Under specific circumstances and configuration scenarios, processing unexpected input could potentially lead to an unexpected service termination, resulting in a localized denial of service (DoS). CyberArk Security Bulletin: CA26-17 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-47238",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #133, a normal authenticated user can edit another user&#39;s video subtitles because of a lack of authorization. They can upload subtitles, edit their name or delete them. This issue has been patched in version 5.5.3 - #133. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-44892",
+    "descripcion": "Netty is a network application framework for development of protocol servers and clients. Prior to version 4.2.15.Final, the default configuration of the `Http3ConnectionHandler` in the Netty HTTP/3 codec lacks an enforced maximum header size limit. When a peer does not explicitly specify `HTTP3_SETTINGS_MAX_FIELD_SECTION_SIZE`, the implementation defaults to an unbounded limit. This insecure default configuration allows a malicious client or server to send an enormous number of headers, leading to a memory exhaustion Denial of Service via an `OutOfMemoryError`. Version 4.2.15.Final contains a patch. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-45418",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #132, any authenticated user who can upload videos can add multiple subtitles from different files and change their title (English, Spanish...). The POST /actions/subtitle_edit.php request used to change their title includes a number parameter which is vulnerable to SQL Injection. A boolean-based blind SQL injection can be used to exfiltrate sensitive data. This issue has been patched in version 5.5.3 - #132. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-48613",
+    "descripcion": "SQL injection vulnerability in phpBB profile field migration due to improper handling of user-supplied profile field data during migration, allowing execution of arbitrary SQL queries. Only applies to phpBB forums that had been updated from versions prior to phpBB 3.3.8 and have not been updated to 3.3.11 or newer yet. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-45060",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #129, the actions/progress_video.php endpoint is vulnerable to blind SQL injection. Any unauthenticated user can exploit the ids parameter to execute SQL queries and exfiltrate sensitive data. This issue has been patched in version 5.5.3 - #129. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-48612",
+    "descripcion": "Improper state verification in the OAuth implementation could allow an attacker to manipulate the authentication flow and cause a victim’s account to be linked to an attacker-controlled account. This can result in unauthorized account linking and potential account takeover. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-42846",
-    "descripcion": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #140, ClipBucket&#39;s Remote Play feature allows any authenticated user to add a video by importing an external URL as the source. Some shell commands are run with the URL as a parameter. The URL is concatenated directly into shell commands without escaping then executed, so any shell metacharacter in the URL is interpreted. This results in arbitrary command execution. This issue has been patched in version 5.5.3 - #140. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-48611",
+    "descripcion": "Improper authentication checks in the OAuth implementation allow account hijacking even when OAuth is not configured or enabled leading to unauthorized access in default installations. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2026-06-11",
-    "cve": "CVE-2026-6250",
-    "descripcion": "An authenticated format string vulnerability exists in the ONVIF service of Tapo C110 v2 due to improper handling of user-controlled input. Externally controlled data is interpreted as a format string, which can be used to manipulate stack memory, including control flow data such as return addresses. A remote authenticated attacker may redirect execution flow to existing internal functions, triggering an unauthorized factory reset, leading to loss of configuration, deletion of stored credentials and service disruption. 12/06/2026 12/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-48610",
+    "descripcion": "Under certain network configurations, a malicious actor with access to network could exploit an Improper Access Control vulnerability found in certain devices running UniFi OS to make unauthorized changes to such UniFi OS devices. 12/06/2026 12/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
