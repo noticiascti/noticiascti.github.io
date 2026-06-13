@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-06-13",
+    "cve": "CVE-2026-9134",
+    "descripcion": "The FooGallery plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;custom_attribute_key&#39; shortcode parameter in versions up to, and including, 3.1.31 This is due to an incomplete JavaScript event handler blacklist in the foogallery_sanitize_javascript() function, which blocks only a subset of HTML event attributes (onmouseover, onmouseout, onpointerenter, onclick, onload, onchange, onerror) while permitting others such as &#39;onmouseenter&#39;, combined with the failure to escape the attribute key when building the gallery container HTML in foogallery_build_container_attributes_safe(). This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-13",
+    "cve": "CVE-2026-9109",
+    "descripcion": "The GPTranslate – Multilingual AI Translation for WordPress: Automatically Translate Websites plugin for WordPress is vulnerable to Stored Cross-Site Scripting via REST API Translation Storage in all versions up to, and including, 2.31 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The deterministically derived API key (sha256 of the site URL) is printed in the HTML source of every page via the JavaScript variable gptApiKey, meaning any unauthenticated visitor can retrieve the key and submit malicious translation payloads to the /wp-json/gptranslate/v1/request endpoint without any additional precondition. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-13",
+    "cve": "CVE-2026-9062",
+    "descripcion": "The Store Locator WordPress plugin before 1.6.9 does not validate a parameter before using it in a file path, allowing high-privileged users such as administrators to read arbitrary `.php` files from the server, including configuration files that contain database credentials and authentication keys. 13/06/2026 13/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-13",
+    "cve": "CVE-2026-9061",
+    "descripcion": "The Store Locator WordPress plugin before 1.6.9 does not sanitize and escape store logo metadata before storing it and outputting it on the Store Locator WordPress plugin before 1.6.9 admin page, allowing high-privileged users such as administrators to perform Stored Cross-Site Scripting attacks even when the `unfiltered_html` capability is disallowed (e.g. in a multisite network). 13/06/2026 13/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-13",
+    "cve": "CVE-2026-11769",
+    "descripcion": "We have released version 5.24.0 of the Grafana Operator. This patch includes a CRITICAL severity security fix for a path traversal/privilege escalation vulnerability in the Grafana Operator. ### Summary The Grafana Operator supports loading dashboards & library panels using the jsonnet data templating language. The jsonnet expression is evaluated in the context of the operator manager pod. ### Impact It is possible for a malicious user who can create Dashboard or LibraryPanel resources for a Grafana instance to obtain the Kubernetes service account token of the Grafana Operator manager. ### Affected versions All Grafana Operator versions 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-13",
     "cve": "CVE-2026-9848",
     "descripcion": "The WP Ticket plugin for WordPress is vulnerable to SQL Injection via the WordPress search query parameter (`s`) in versions up to, and including, 6.0.4 The plugin hooks WordPress&#39;s `posts_request` filter with `wp_ticket_com_posts_request()`, which calls `emd_author_search_results()` when the current request is an unauthenticated front-end search. That function reads `$query->query_vars[&#39;s&#39;]` — already wp_unslash()&#39;d by `WP_Query::parse_query()`, so wp_magic_quotes protection has been stripped — and concatenates the raw value into a SQL `LIKE` clause inside a UNION sub-SELECT appended to the main query, with no `$wpdb->prepare()` or escaping. This makes it possible for unauthenticated attackers to append additional SQL queries into already-existing queries that can be used to extract sensitive information from the database. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-06-13",
     "cve": "CVE-2026-54228",
     "descripcion": "A time-of-check time-of-use (TOCTOU) race condition was found in the abrt-dbus D-Bus service&#39;s SetElement method. Between dump directory creation and post-create event execution, any local user can call SetElement to write arbitrary text files into the root-owned dump directory, bypassing package validation and allowing crashes of unpackaged binaries to survive post-create processing. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-13",
-    "cve": "CVE-2026-12089",
-    "descripcion": "The LWS Optimize – All-in-One Speed Booster & Cache Tools plugin for WordPress is vulnerable to Arbitrary File Read in versions up to, and including, 3.3.19. This is due to the combine_current_css() function trusting values harvested from page HTML and converting same-site URLs to absolute filesystem paths before reading them with file_get_contents()/Minify\\CSS::add(), without enforcing that the resolved path stay within ABSPATH or have a .css extension. This makes it possible for authenticated attackers, with Editor-level access and above, to read arbitrary files. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-11443",
-    "descripcion": "Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to execute arbitrary script on affected installations of Allegra. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The specific flaw exists within the downloadAttachment method. The issue results from the lack of proper validation of user-supplied data, which can lead to the injection of arbitrary script. An attacker can leverage this vulnerability to execute script in the context of the current user. Was ZDI-CAN-28236. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-11442",
-    "descripcion": "Allegra exportReport Directory Traversal Information Disclosure Vulnerability. This vulnerability allows remote attackers to disclose sensitive information on affected installations of Allegra. Authentication is required to exploit this vulnerability. The specific flaw exists within the exportReport method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to disclose information in the context of the service account. Was ZDI-CAN-28208. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-6676",
-    "descripcion": "Heap buffer out-of-bounds write vulnerability in Avira Antivirus engine when scanning a malformed POSIX tar archive may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.27.12. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-12068",
-    "descripcion": "Information disclosure vulnerability in Avira Password Manager when used with Mozilla Firefox may allow a remote attacker operating a cross-origin iframe to obtain credentials autofilled for the parent web page via incorrect autofill field selection. This issue affects Avira Password Manager when used with Mozilla Firefox on Windows, macOS, and Linux. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
