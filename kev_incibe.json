@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-06-12",
+    "cve": "CVE-2026-11443",
+    "descripcion": "Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to execute arbitrary script on affected installations of Allegra. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The specific flaw exists within the downloadAttachment method. The issue results from the lack of proper validation of user-supplied data, which can lead to the injection of arbitrary script. An attacker can leverage this vulnerability to execute script in the context of the current user. Was ZDI-CAN-28236. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-11442",
+    "descripcion": "Allegra exportReport Directory Traversal Information Disclosure Vulnerability. This vulnerability allows remote attackers to disclose sensitive information on affected installations of Allegra. Authentication is required to exploit this vulnerability. The specific flaw exists within the exportReport method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to disclose information in the context of the service account. Was ZDI-CAN-28208. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-6676",
+    "descripcion": "Heap buffer out-of-bounds write vulnerability in Avira Antivirus engine when scanning a malformed POSIX tar archive may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.27.12. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2026-12068",
+    "descripcion": "Information disclosure vulnerability in Avira Password Manager when used with Mozilla Firefox may allow a remote attacker operating a cross-origin iframe to obtain credentials autofilled for the parent web page via incorrect autofill field selection. This issue affects Avira Password Manager when used with Mozilla Firefox on Windows, macOS, and Linux. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2025-9033",
+    "descripcion": "Heap buffer out-of-bounds read vulnerability in Avira Antivirus engine when scanning a malformed PDF file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.70.76. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2025-9032",
+    "descripcion": "Heap buffer out-of-bounds read vulnerability in Avira Antivirus engine when scanning a malformed Windows PE file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.70.98. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-12",
+    "cve": "CVE-2025-14098",
+    "descripcion": "Heap buffer out-of-bounds write vulnerability due to integer overflow in Avira Antivirus engine when scanning a malformed MS-DOS executable file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process. This issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.70.104. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-12",
     "cve": "CVE-2026-54398",
     "descripcion": "An authorization flaw in MISP’s object add/edit handling allowed an authenticated user with object editing permissions to assign a MISP object, or attributes contained within an object, to a sharing group that the user was not authorized to use or view. When editing objects, the sharing group validation was performed against the wrong request data structure after object fields had been merged to the top level, causing the check to be bypassed. In addition, attributes embedded in objects were not individually validated for authorized sharing group use. An attacker could craft a request with distribution set to 4 and an arbitrary sharing_group_id, potentially disclosing the existence or name of otherwise non-visible sharing groups and improperly modifying the distribution metadata of objects or contained attributes. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-06-12",
     "cve": "CVE-2026-53868",
     "descripcion": "Capgo before 12.128.2 contains a denial of service vulnerability allowing attackers to register accounts using arbitrary email addresses without verification, then initiate deletion to lock emails in pending deletion state. Attackers can permanently lock legitimate users out of the platform for 30 days by exploiting unverified email ownership in account lifecycle operations. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-53867",
-    "descripcion": "Capgo before 12.128.2 fails to delete previously uploaded profile images from backend storage when users replace or remove them. Attackers can access orphaned image files through previously generated URLs, allowing unauthorized retrieval of user-uploaded content. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-53839",
-    "descripcion": "OpenClaw before 2026.5.7 contains a hostname validation vulnerability in retry endpoint checks that allows matching hostname prefixes instead of exact hostnames. Attackers can exploit this by crafting a hostname prefix resembling a trusted host to send authentication material to untrusted endpoints. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-53838",
-    "descripcion": "OpenClaw before 2026.5.27 contains a state mutation vulnerability in node pairing reconnection that allows paired nodes to confuse approval scope decisions. Attackers can exploit reconnection logic to restore or present broader node authority than intended, potentially bypassing approval restrictions. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-53837",
-    "descripcion": "OpenClaw before 2026.5.6 contains an improper access control vulnerability in Mattermost event handlers that fails to validate channel type metadata. Attackers can bypass intended DM policy decisions by sending crafted Mattermost events missing channel type information to process restricted content. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-53836",
-    "descripcion": "OpenClaw before 2026.5.12 contains an allowlist bypass vulnerability in PowerShell encoded-command handling that allows attackers to execute encoded commands using abbreviated flag aliases not recognized by the allowlist parser. Remote authenticated operators can bypass execution allowlist checks by using unrecognized encoded-command alias forms to execute arbitrary PowerShell content. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-53835",
-    "descripcion": "OpenClaw before 2026.5.6 contains a configuration enforcement bypass vulnerability in Feishu dynamic-agent bindings that allows authenticated senders to create or update bindings without honoring configured config-write controls. Attackers can exploit this by leveraging the dynamic-agent binding feature to change sender-agent binding state beyond intended policy, potentially enabling unauthorized binding modifications. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-12",
-    "cve": "CVE-2026-53834",
-    "descripcion": "OpenClaw before 2026.4.27 contains an authorization bypass vulnerability in QQBot pre-dispatch slash commands that allows authenticated senders to skip allowFrom policy checks. Attackers can invoke slash commands before configured access control policies are applied, potentially triggering command handling from blocked senders depending on operator configuration. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
