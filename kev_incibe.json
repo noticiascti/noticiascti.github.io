@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-06-13",
+    "cve": "CVE-2026-5513",
+    "descripcion": "The Online Scheduling and Appointment Booking System – Bookly plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;bookly-customer-full-name&#39; cookie in versions up to, and including, 27.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires &#39;Remember personal information in cookies&#39; setting to be enabled (disabled by default). 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-06-13",
     "cve": "CVE-2026-1291",
     "descripcion": "The Meow Gallery plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the REST API endpoint /wp-json/meow-gallery/v1/save_shortcode in all versions up to, and including, 5.4.4 This makes it possible for authenticated attackers, with Author-level access and above, to arbitrarily create or overwrite existing gallery shortcode records by supplying a user-controlled id value. The endpoint performs database update operations without verifying that the requesting user is authorized to modify the referenced gallery record or create their own. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-06-13",
     "cve": "CVE-2026-9061",
     "descripcion": "The Store Locator WordPress plugin before 1.6.9 does not sanitize and escape store logo metadata before storing it and outputting it on the Store Locator WordPress plugin before 1.6.9 admin page, allowing high-privileged users such as administrators to perform Stored Cross-Site Scripting attacks even when the `unfiltered_html` capability is disallowed (e.g. in a multisite network). 13/06/2026 13/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-13",
-    "cve": "CVE-2026-11769",
-    "descripcion": "We have released version 5.24.0 of the Grafana Operator. This patch includes a CRITICAL severity security fix for a path traversal/privilege escalation vulnerability in the Grafana Operator. ### Summary The Grafana Operator supports loading dashboards & library panels using the jsonnet data templating language. The jsonnet expression is evaluated in the context of the operator manager pod. ### Impact It is possible for a malicious user who can create Dashboard or LibraryPanel resources for a Grafana instance to obtain the Kubernetes service account token of the Grafana Operator manager. ### Affected versions All Grafana Operator versions 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
