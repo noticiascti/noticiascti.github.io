@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-06-14",
+    "cve": "CVE-2026-11527",
+    "descripcion": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle. Config::IniFiles::_make_filehandle opens a filename argument with Perl&#39;s 2-arg open(), so a filename that begins or ends with a pipe (&#34;| cmd&#34;, &#34;cmd |&#34;) or begins with a redirect (&#34;> path&#34;, &#34;>> path&#34;) is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected. Any caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID. 14/06/2026 14/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-14",
+    "cve": "CVE-2026-11526",
+    "descripcion": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle. GD::Image::_make_filehandle opens a filename argument with Perl&#39;s 2-arg open(), so a filename that begins or ends with a pipe (&#34;| cmd&#34;, &#34;cmd |&#34;) or begins with a redirect (&#34;> path&#34;, &#34;>> path&#34;) is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected. Any caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID. 14/06/2026 14/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-06-14",
     "cve": "CVE-2025-15546",
     "descripcion": "The Iptanus File Upload WordPress plugin before 5.1.7 does not implement proper file handling when the duplicatepolicy setting is configured to &#34;maintain both.&#34; Due to a Time-of-Check to Time-of-Use (TOCTOU) race condition between the file existence check and the actual file write operation, an authenticated attacker can overwrite files uploaded by other users. 14/06/2026 14/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-06-13",
     "cve": "CVE-2026-6428",
     "descripcion": "SQL Injection in reports/catalogue_out.pl in Koha Community Koha through 22.11.37, 23.x, 24.x before 24.11.16, 25.05.x before 25.05.11, 25.11.x before 25.11.05, 26.05.x before 26.05.01, and 26.11.x before 26.11.00 allows an authenticated staff user with the Reports module flag to read arbitrary data from the Koha application database via the Filter URL parameter when the Criteria parameter matches /branchcode/. The vulnerable sink in sub calculate concatenates the unmodified Filter request parameter directly into a LIKE clause of the auxiliary $strsth2 statement and executes it via DBI without bound parameters: my $f = @$filters[0]; $f =~ s/\\*/%/g; $strsth2 .= &#34; AND $column LIKE &#39;$f&#39; &#34;; This enables error-based SQL injection (e.g., via EXTRACTVALUE) and full read access to sensitive tables including borrowers (password hashes, 2FA secrets, PII), borrower_password_recovery, api_keys, and sessions. Proof of concept (error-based, single request): GET /cgi-bin/koha/reports/catalogue_out.pl?do_it=1&output=screen&Limit=10&Criteria=branchcode&Filter=x&#39;+AND+EXTRACTVALUE(1,CONCAT(0x7e,VERSION(),0x7c,USER(),0x7c,DATABASE(),0x7e))--+- Cookie: CGISESSID= The response body contains the DBI exception leaking the MariaDB version, database user, client IP, and database name, after which arbitrary data can be paged out using LIMIT n,1 / SUBSTRING(...). The vulnerable sink was introduced in commit 6bb77ae3e4 (2008-07-09); CVE-2015-4633 patched the same class in sibling files but did not generalise the fix to reports/catalogue_out.pl. Fixed in Koha 22.11.38, 24.11.16, 25.05.11, 25.11.05, 26.05.01, and 26.11.00 by replacing the raw concatenation with a parameterised placeholder. 13/06/2026 13/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:Amber Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:N/A:P Gravedad 4.0 5.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-13",
-    "cve": "CVE-2026-5513",
-    "descripcion": "The Online Scheduling and Appointment Booking System – Bookly plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;bookly-customer-full-name&#39; cookie in versions up to, and including, 27.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires &#39;Remember personal information in cookies&#39; setting to be enabled (disabled by default). 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-13",
-    "cve": "CVE-2026-1291",
-    "descripcion": "The Meow Gallery plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the REST API endpoint /wp-json/meow-gallery/v1/save_shortcode in all versions up to, and including, 5.4.4 This makes it possible for authenticated attackers, with Author-level access and above, to arbitrarily create or overwrite existing gallery shortcode records by supplying a user-controlled id value. The endpoint performs database update operations without verifying that the requesting user is authorized to modify the referenced gallery record or create their own. 13/06/2026 13/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
