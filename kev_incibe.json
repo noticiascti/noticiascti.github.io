@@ -26,8 +26,18 @@
   },
   {
     "fecha": "2026-06-15",
+    "cve": "CVE-2025-15659",
+    "descripcion": "Contributor Cross Site Scripting (XSS) in Elizaibots 15/06/2026 15/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-15",
     "cve": "CVE-2026-10634",
     "descripcion": "Zephyr&#39;s native TCP stack iterates the global connection list in net_tcp_foreach() (subsys/net/ip/tcp.c) using the SYS_SLIST_FOR_EACH_CONTAINER_SAFE macro, which caches a pointer to the next list node. Prior to this fix the function released tcp_lock while invoking the per-connection callback and re-acquired it afterwards. During that window a concurrent tcp_conn_release(), running on the dedicated TCP work-queue thread when a connection&#39;s reference count drops to zero (e.g. a remote peer closing or resetting the connection), can remove and k_mem_slab_free() the cached next connection. When the iterator advances it dereferences the freed (and possibly reallocated) slab memory — a use-after-free that can crash the system (denial of service) and, if the slot has been reused, cause the callback to operate on an attacker-influenced object (potential information disclosure or further fault). net_tcp_foreach() is reached in production via the &#39;net conn&#39; network shell command and via net_tcp_close_all_for_iface() on interface-down; the freeing side is driven by ordinary TCP traffic. The fix moves the connection/context teardown in tcp_conn_release() inside the tcp_lock critical section and keeps tcp_lock held across the callback in net_tcp_foreach(). The defect was introduced with the modern (TCP2) stack in 2020 and affects releases up to and including v4.4.0. 15/06/2026 15/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-15",
+    "cve": "CVE-2025-15658",
+    "descripcion": "Administrator Cross Site Scripting (XSS) in WP Emmet 15/06/2026 15/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-06-15",
@@ -38,15 +48,5 @@
     "fecha": "2026-06-15",
     "cve": "CVE-2026-5242",
     "descripcion": "Improper neutralization of formula elements in a CSV file vulnerability in MIA Technology Inc. Pizzy Library allows Code Injection. This issue affects Pizzy Library: from 1.0.0.26250 before 1.3.9.26250. 15/06/2026 15/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-15",
-    "cve": "CVE-2026-5233",
-    "descripcion": "Improper Control of Interaction Frequency vulnerability in MIA Technology Inc. Pizzy Library allows Flooding. This issue affects Pizzy Library: from 1.0.0.26250 before 1.3.9.26250. 15/06/2026 15/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-06-15",
-    "cve": "CVE-2026-5230",
-    "descripcion": "Improper Access Control, Missing Authorization vulnerability in MIA Technology Inc. Pizzy Library allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Pizzy Library: from 1.0.0.26250 before 1.3.9.26250. 15/06/2026 15/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
