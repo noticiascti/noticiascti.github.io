@@ -1,5 +1,30 @@
 [
   {
+    "fecha": "2026-06-16",
+    "cve": "CVE-2026-42014",
+    "descripcion": "A flaw was found in GnuTLS. The `gnutls_pkcs11_token_set_pin` function, used for changing the Security Officer PIN, can lead to a use-after-free vulnerability. This occurs when an attacker attempts to change the PIN with a NULL old PIN for a token that lacks a protected authentication path. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-16",
+    "cve": "CVE-2026-1767",
+    "descripcion": "A flaw was found in the GNOME localsearch (previously known as tracker-miners) MP3 Extractor `tracker-extract-mp3` component. A remote attacker could exploit this heap buffer overflow vulnerability by providing a specially crafted MP3 file containing malformed ID3 tags. This incorrect length calculation during the parsing of performer tags can lead to a read beyond the allocated buffer, potentially causing a Denial of Service (DoS) due to a crash or enabling information disclosure. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-16",
+    "cve": "CVE-2026-1766",
+    "descripcion": "A flaw was found in GNOME localsearch (previously known as tracker-miners) MP3 Extractor, specifically within the tracker-extract-mp3 component. This heap buffer overflow vulnerability occurs when processing specially crafted MP3 files containing malformed ID3v2.3 COMM (Comment) tags. An attacker could exploit this by providing a malicious MP3 file, leading to a denial of service (DoS), which causes an application crash, and potentially disclosing sensitive information from the heap memory. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-16",
+    "cve": "CVE-2026-1765",
+    "descripcion": "A flaw was found in the `tracker-extract-mp3` component of GNOME localsearch (previously known as tracker-miners). This vulnerability, a heap buffer overflow, occurs when processing specially crafted MP3 files. A remote attacker could exploit this by providing a malicious MP3 file, leading to a Denial of Service (DoS) where the application crashes. It may also potentially expose sensitive information from the system&#39;s memory. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-06-16",
+    "cve": "CVE-2026-1764",
+    "descripcion": "A flaw was found in GNOME localsearch (previously known as tracker-miners) MP3 Extractor. When processing specially crafted MP3 files containing ID3v2.4 tags, a missing bounds check in the `extract_performers_tags` function can lead to a heap buffer overflow. This vulnerability allows a remote attacker to cause a Denial of Service (DoS) by triggering a read of unmapped memory. In some cases, it could also lead to information disclosure by reading visible heap data. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
     "fecha": "2026-06-15",
     "cve": "CVE-2026-12162",
     "descripcion": "Improper host validation in the social login autofill feature in Devolutions Remote Desktop Manager 2026.2.8 allows an attacker to disclose stored social login credentials via a crafted web entry pointing to a provider lookalike domain. 16/06/2026 16/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -23,30 +48,5 @@
     "fecha": "2026-06-15",
     "cve": "CVE-2026-9260",
     "descripcion": "Use of hard-coded cryptographic keys in Canon EOS Network Setting Tool Version 1.5.0 or earlier 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-15",
-    "cve": "CVE-2026-9259",
-    "descripcion": "Improper validation of server certificates in Canon EOS Network Setting Tool Version 1.5.0 or earlier 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-15",
-    "cve": "CVE-2026-9258",
-    "descripcion": "Improper validation of SSH host keys in Canon EOS Network Setting Tool Version 1.5.0 or earlier 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-06-15",
-    "cve": "CVE-2026-53430",
-    "descripcion": "Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in elixir-grpc grpc (GRPC.Compressor.Gzip, GRPC.Message modules) allows a denial of service via a gzip decompression bomb. This vulnerability is associated with program files lib/grpc/compressor/gzip.ex, lib/grpc/message.ex and program routines &#39;Elixir.GRPC.Compressor.Gzip&#39;:decompress/1, &#39;Elixir.GRPC.Message&#39;:from_data/2. &#39;Elixir.GRPC.Compressor.Gzip&#39;:decompress/1 calls :zlib.gunzip/1 directly on attacker-controlled bytes with no decompressed-size limit, ratio check, or incremental decoding. Because this module is the registered gzip GRPC.Compressor implementation, it is invoked automatically whenever an incoming gRPC frame carries the grpc-encoding: gzip header. :zlib.gunzip/1 allocates the entire decompressed result as a single binary, so a small highly compressible payload (for example a few kilobytes of zeros, which gzip compresses at roughly 1000:1) expands to multiple gigabytes inside a single call. The max_receive_message_length limit is enforced only against the already-decompressed message, so it provides no protection. An unauthenticated remote peer can send a single crafted frame to exhaust the BEAM node&#39;s heap and trigger an out-of-memory kill. This issue affects grpc: from 0.4.0 before 1.0.0. 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-15",
-    "cve": "CVE-2026-48854",
-    "descripcion": "Allocation of Resources Without Limits or Throttling vulnerability in elixir-grpc grpc allows unauthenticated attackers to exhaust the BEAM&#39;s memory and crash the server by streaming a large or slow-trickle unary request body. &#39;Elixir.GRPC.Server.Adapters.Cowboy.Handler&#39;:read_full_body/3 (lib/grpc/server/adapters/cowboy/handler.ex) accumulates every received chunk into a single growing binary with no size cap. Additionally, when the client omits the grpc-timeout header, the per-chunk read timeout resolves to :infinity, allowing a slow-trickle client to keep the connection alive indefinitely while memory grows. A single connection is sufficient to exhaust server memory and crash the node. This issue affects grpc from 0.3.1 before 1.0.0. 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-06-15",
-    "cve": "CVE-2026-48853",
-    "descripcion": "Deserialization of Untrusted Data and Allocation of Resources Without Limits or Throttling vulnerabilities in elixir-grpc grpc allow unauthenticated attackers to crash the BEAM node via atom table exhaustion and, when a decoded term flows into a call site that invokes it, achieve remote code execution on the server. &#39;Elixir.GRPC.Codec.Erlpack&#39;:decode/2 (lib/grpc/codec/erlpack.ex) calls :erlang.binary_to_term/1 on the raw gRPC message body without the :safe option, no size bound, and no type guard. Any unauthenticated peer that sends a request with Content-Type: application/grpc+erlpack can send a crafted payload that mints arbitrary new atoms (which are never garbage-collected, exhausting the bounded atom table and crashing the VM) or that encodes a fun term which, if applied anywhere downstream, executes attacker-controlled code inside the server process. This issue affects grpc from 0.4.0 before 1.0.0. 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
