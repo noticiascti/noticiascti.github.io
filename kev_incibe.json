@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-9187",
-    "descripcion": "The Abandoned Contact Form 7 plugin for WordPress is vulnerable to unauthorized arbitrary post deletion in versions up to, and including, 2.2. This is due to a missing capability check and missing nonce validation in the action__remove_abandoned() function, which is registered to both the wp_ajax_remove_abandoned and wp_ajax_nopriv_remove_abandoned hooks. The handler takes a user-supplied recover_id parameter from $_POST and passes it directly to wp_delete_post() with the force-delete flag set to true, without verifying that the ID belongs to the plugin&#39;s own cf7af_data post type. This makes it possible for unauthenticated attackers to permanently delete arbitrary posts, pages, or other content on the affected site by sending a single admin-ajax. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-8442",
+    "descripcion": "The WP Review Slider Pro plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to and including 12.6.8. This is due to missing authorization checks on the wpfb_hide_review and wprp_save_review_admin AJAX handlers combined with insufficient path validation in the wpfb_hidereview_ajax() function, which uses strpos() to check that a stored media URL starts with the expected prefix but fails to sanitize path traversal sequences in the remaining relative path before passing it to unlink(). This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the affected site&#39;s server which may make remote code execution possible. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-8443",
-    "descripcion": "The WP Review Slider Pro plugin for WordPress is vulnerable to SQL Injection via the &#39;stypes&#39; and &#39;slocations&#39; parameters of the wppro_get_overall_chart_data AJAX action in versions up to, and including, 12.6.8. This is due to the use of stripslashes() on user-supplied JSON strings prior to json_decode(), which removes the escaping applied by WordPress&#39;s wp_magic_quotes; the resulting decoded array values are then concatenated directly into SQL WHERE clauses without parameterization, and the constructed query is executed via $wpdb->get_results() without $wpdb->prepare(). This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The handler also returns the executed SQL string in its JSON response, which simplifies oracle construction for blind exploitation. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-8176",
+    "descripcion": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to Privilege Escalation to Administrator in versions up to, and including, 5.5.1. The plugin chains three independent flaws that together allow an authenticated Agent (Agent+) to overwrite a WordPress Administrator&#39;s password without ever invoking an Administrator-only API. This makes it possible for authenticated attackers, with Agent access and above, to elevate their privileges to Administrator. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-6933",
-    "descripcion": "The Premmerce Dev Tools plugin for WordPress is vulnerable to Remote Code Execution via missing authorization in versions up to and including 2.0. This is due to the &#39;generatePluginHandler&#39; function lacking any authorization check before processing user-supplied POST data, combined with the &#39;createFromStub&#39; function performing unsanitized string substitution of the &#39;premmerce_plugin_namespace&#39; parameter directly into PHP stub files written to the wp-content/plugins/ directory. An attacker can inject a semicolon followed by arbitrary PHP code into the namespace parameter, causing the generated plugin file to contain and execute that code when accessed via HTTP. This makes it possible for authenticated attackers with Subscriber-level access and above to create arbitrary PHP files on the server and achieve remote code execution. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-5416",
+    "descripcion": "Due to the improper neutralization of special elements used in a name parameter a low privileged remote attacker can exploit a command injection vulnerability in the Managed Ethernet Switch, resulting in full system compromise. 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-5149",
-    "descripcion": "The RTMKit plugin for WordPress is vulnerable to Incorrect Authorization in all versions up to, and including, 2.0.7 This is due to the get_submission_content AJAX endpoint lacking a capability check to verify that a user has permission to access the requested form submission data. This makes it possible for authenticated attackers, with Contributor-level access and above, to view arbitrary form submissions from other users by iterating the entries_id parameter. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54198",
+    "descripcion": "Unauthenticated Cross Site Scripting (XSS) in Media LIbrary Assistant 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-50255",
-    "descripcion": "Incorrect default permissions issue exists in Optical Disc Archive Software for Windows 5.5.3 and earlier. If this vulnerability is exploited, arbitrary code may be executed with SYSTEM privileges. 16/06/2026 16/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 5.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54197",
+    "descripcion": "Unauthenticated Sensitive Data Exposure in GetGenie 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-10780",
-    "descripcion": "The Static Block plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.2. This is due to the static_block_content() shortcode handler retrieving a post via get_post() using an attacker-supplied &#39;id&#39; attribute and outputting its post_content without verifying the post&#39;s status (private, draft, pending) or the requesting user&#39;s capability to view it. This makes it possible for authenticated attackers, with contributor-level access and above, to read the contents of arbitrary posts, including private and draft static blocks (and any other post type) created by administrators, by embedding the [static_block_content id=&#34;X&#34;] shortcode in their own content and previewing it. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54191",
+    "descripcion": "Unauthenticated Cross Site Scripting (XSS) in Pods 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-10635",
-    "descripcion": "On Xtensa targets with CONFIG_USERSPACE and CONFIG_XTENSA_MMU, the page-table code (arch/xtensa/core/ptables.c) maintains a global list, xtensa_domain_list, of active memory domains using a list node embedded inside the caller-owned struct k_mem_domain. When a domain is destroyed via k_mem_domain_deinit() - arch_mem_domain_deinit(), the page tables are torn down and domain-arch.ptables is set to NULL, but the domain&#39;s node was not removed from xtensa_domain_list. The freed/deinitialized domain therefore remained linked into the global list as a dangling pointer into caller-owned storage that may then be freed or reused. Any subsequent arch_mem_map()/arch_mem_unmap() operation (widely invoked by kernel memory-mapping and demand-paging code) traverses the stale node and dereferences domain-ptables: at minimum a NULL pointer dereference causing a fatal MMU exception (denial of service), and if the k_mem_domain storage has been freed or reused, a use-after-free in which a stale/controlled ptables value is dereferenced and written through during the page-table walk (l2_page_table_map writes l1_table[...] and l2_table[...], and xtensa_mmu_compute_domain_regs writes into the domain struct and the L1 table), yielding page-table memory corruption that can undermine userspace isolation. The vulnerable path is reachable only from privileged kernel/supervisor code (k_mem_domain_deinit is not a syscall), not directly from unprivileged user threads or remotely. Affected: Zephyr v4.4.0 (the Xtensa memory-domain de-initialization feature was introduced in commit 3032b58f52d and first shipped in v4.4.0); fixed on main by adding sys_slist_find_and_remove() in arch_mem_domain_deinit(). The Xtensa MPU path is unaffected. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54190",
+    "descripcion": "Unauthenticated Broken Access Control in Envira Photo Gallery 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2025-10262",
-    "descripcion": "Nokia SR Linux is vulnerable to local privilege escalation vulnerability due to unsanitized format validation. Successful exploitation of this vulnerability may allow an authenticated user to execute arbitrary commands with superuser privileges. 16/06/2026 16/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-52715",
+    "descripcion": "Unauthenticated SQL Injection in GEO my WordPress 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-6964",
-    "descripcion": "The Video Conferencing with Zoom plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.6.7. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to obtain the site&#39;s Zoom SDK API key and a freshly-signed JWT that can be used with the Zoom Web SDK to join any Zoom meeting associated with those credentials without a legitimate invitation. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-52714",
+    "descripcion": "Unauthenticated Broken Access Control in SEO Plugin by Squirrly SEO 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-06-16",
-    "cve": "CVE-2026-7273",
-    "descripcion": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through 2.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request. 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-52712",
+    "descripcion": "Subscriber SQL Injection in Attendance Manager 16/06/2026 16/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
