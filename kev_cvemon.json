@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-06-24",
+    "cve": "CVE-2025-67038",
+    "descripcion": "An issue was discovered in Lantronix EDS5000 2.1.0.0R3. The HTTP RPC module executes a shell command to write logs when user's authantication fails. The username is directly concatenated with the command without any sanitization. This allow attackers to inject arbitrary OS ..."
+  },
+  {
+    "fecha": "2026-06-24",
     "cve": "CVE-2026-4282",
     "descripcion": "A flaw was found in Keycloak. The SingleUseObjectProvider, a global key-value store, lacks proper type and namespace isolation. This vulnerability allows an unauthenticated attacker to forge authorization codes. Successful exploitation can lead to the creation of admin-capable ..."
   },
@@ -8,11 +13,6 @@
     "fecha": "2026-06-24",
     "cve": "CVE-2026-9802",
     "descripcion": "A flaw was found in Keycloak. When revokeRefreshToken=true is enabled and persistent session storage is in use, a server restart can reset internal timing mechanisms. This allows a remote attacker, who has previously captured a user's refresh token, to replay that token even ..."
-  },
-  {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2025-67038",
-    "descripcion": "An issue was discovered in Lantronix EDS5000 2.1.0.0R3. The HTTP RPC module executes a shell command to write logs when user's authantication fails. The username is directly concatenated with the command without any sanitization. This allow attackers to inject arbitrary OS ..."
   },
   {
     "fecha": "2026-06-24",
