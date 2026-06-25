@@ -26,11 +26,6 @@
   },
   {
     "fecha": "2026-06-25",
-    "cve": "CVE-2025-32463",
-    "descripcion": "Sudo before 1.9.17p1 allows local users to obtain root access because /etc/nsswitch.conf from a user-controlled directory is used with the --chroot option."
-  },
-  {
-    "fecha": "2026-06-25",
     "cve": "CVE-2026-41947",
     "descripcion": "Dify before version 1.14.2 contains an authorization bypass vulnerability that allows authenticated editor users to set and enable trace configurations for any application regardless of tenant ownership. Attackers can exploit missing tenant ownership checks in the trace ..."
   },
@@ -46,7 +41,12 @@
   },
   {
     "fecha": "2026-06-25",
-    "cve": "CVE-2025-20701",
-    "descripcion": "In the Airoha Bluetooth audio SDK, there is a possible way to pair Bluetooth audio device without user consent. This could lead to remote escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+    "cve": "CVE-2026-55200",
+    "descripcion": "libssh2 through 1.11.1, fixed in commit 7acf3df contains an out-of-bounds write vulnerability in ssh2_transport_read() that fails to enforce upper bounds on packet_length field. Remote attackers can send crafted SSH packets with excessively large packet_length values to corrupt ..."
+  },
+  {
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-44083",
+    "descripcion": "An authorization bypass through user-controlled key vulnerability has been reported to affect QuMagie. The remote attackers can then exploit the vulnerability to gain unintended privileges. We have already fixed the vulnerability in the following version: QuMagie 2.9.1 and later"
   }
 ]
