@@ -26,6 +26,11 @@
   },
   {
     "fecha": "2026-06-28",
+    "cve": "CVE-2026-52806",
+    "descripcion": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, Gogs allows authenticated users to achieve Remote Code Execution (RCE) on the server by creating a pull request with a specially crafted branch name that injects the --exec flag into the git rebase command during ..."
+  },
+  {
+    "fecha": "2026-06-28",
     "cve": "CVE-2026-52811",
     "descripcion": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, (*Repository).UploadRepoFiles checks for symlinks only on the leaf of the upload target (osx.IsSymlink(targetPath)). The siblings UpdateRepoFile, DeleteRepoFile, and GetDiffPreview use hasSymlinkInPath, which ..."
   },
@@ -33,11 +38,6 @@
     "fecha": "2026-06-28",
     "cve": "CVE-2025-67038",
     "descripcion": "An issue was discovered in Lantronix EDS5000 2.1.0.0R3. The HTTP RPC module executes a shell command to write logs when user's authantication fails. The username is directly concatenated with the command without any sanitization. This allow attackers to inject arbitrary OS ..."
-  },
-  {
-    "fecha": "2026-06-28",
-    "cve": "CVE-2026-12569",
-    "descripcion": "A critical remote code execution (RCE) vulnerability has been reported in PTC Windchill PDMlink and PTC FlexPLM. The vulnerability may be exploited through the deserialization of untrusted data. * This advisory also applies to all CPS versions * The identified ..."
   },
   {
     "fecha": "2026-06-28",
