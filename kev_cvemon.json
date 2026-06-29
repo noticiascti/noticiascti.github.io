@@ -16,11 +16,6 @@
   },
   {
     "fecha": "2026-06-29",
-    "cve": "CVE-2026-43503",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: propagate shared-frag marker through frag-transfer helpers Two frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail to propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags ..."
-  },
-  {
-    "fecha": "2026-06-29",
     "cve": "CVE-2026-52813",
     "descripcion": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, organization names containing path traversal sequences (../) are accepted by Gogs, and repositories under them are written to paths following these path traversals. This allows storing/retrieving data for ..."
   },
@@ -33,6 +28,11 @@
     "fecha": "2026-06-29",
     "cve": "CVE-2026-52811",
     "descripcion": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, (*Repository).UploadRepoFiles checks for symlinks only on the leaf of the upload target (osx.IsSymlink(targetPath)). The siblings UpdateRepoFile, DeleteRepoFile, and GetDiffPreview use hasSymlinkInPath, which ..."
+  },
+  {
+    "fecha": "2026-06-29",
+    "cve": "CVE-2026-43503",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: propagate shared-frag marker through frag-transfer helpers Two frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail to propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags ..."
   },
   {
     "fecha": "2026-06-29",
