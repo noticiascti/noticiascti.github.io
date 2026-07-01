@@ -1,13 +1,13 @@
 [
   {
     "fecha": "2026-07-01",
-    "cve": "CVE-2026-39938",
-    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have unauthenticated LFI through graph_theme and rrdtool IPC serialization hardening. This issue has been resolved in version 1.2.31."
+    "cve": "CVE-2026-39955",
+    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have pre-authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php. This issue has been fixed in version 1.2.31."
   },
   {
     "fecha": "2026-07-01",
-    "cve": "CVE-2026-39955",
-    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have pre-authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php. This issue has been fixed in version 1.2.31."
+    "cve": "CVE-2026-39938",
+    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have unauthenticated LFI through graph_theme and rrdtool IPC serialization hardening. This issue has been resolved in version 1.2.31."
   },
   {
     "fecha": "2026-07-01",
@@ -21,18 +21,18 @@
   },
   {
     "fecha": "2026-07-01",
+    "cve": "CVE-2026-43503",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: propagate shared-frag marker through frag-transfer helpers Two frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail to propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags ..."
+  },
+  {
+    "fecha": "2026-07-01",
+    "cve": "CVE-2026-46331",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/sched: fix pedit partial COW leading to page cache corruption tcf_pedit_act() computes the COW range for skb_ensure_writable() once before the key loop using tcfp_off_max_hint, but the hint does not ..."
+  },
+  {
+    "fecha": "2026-07-01",
     "cve": "CVE-2025-60727",
     "descripcion": "Out-of-bounds read in Microsoft Office Excel allows an unauthorized attacker to execute code locally."
-  },
-  {
-    "fecha": "2026-07-01",
-    "cve": "CVE-2026-48277",
-    "descripcion": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed."
-  },
-  {
-    "fecha": "2026-07-01",
-    "cve": "CVE-2026-48281",
-    "descripcion": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed."
   },
   {
     "fecha": "2026-07-01",
