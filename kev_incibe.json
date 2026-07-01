@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-56054",
-    "descripcion": "Subscriber Arbitrary File Deletion in JS Help Desk 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-55838",
+    "descripcion": "RustFS is a distributed object storage system built in Rust. In 1.0.0-beta.7 and earlier, the real-time metrics endpoint at /rustfs/admin/v3/metrics is accessible to any valid IAM user regardless of their assigned policy. Every other admin handler in the codebase calls validate_admin_request to enforce admin-action IAM checks; the MetricsHandler skips this call entirely. A restricted IAM user whose policy grants only access to their own bucket can read server-wide operational metrics including disk I/O statistics, network throughput, scanner cycle timing, and cluster RPC state. 27/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-56050",
-    "descripcion": "Improper Access Control vulnerability in Themeisle PPOM for WooCommerce allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects PPOM for WooCommerce: from n/a through 33.0.18. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-55188",
+    "descripcion": "RustFS is a distributed object storage system built in Rust. From 1.0.0-alpha.1 until 1.0.0-beta.9, RustFS contains an authorization bypass in the bucket replication admin API. The ListRemoteTargetHandler handler for listing remote replication targets only checks whether request credentials exist, but does not verify that the caller has replication or administrator permissions. As a result, an authenticated user with no effective bucket or admin permissions can list remote replication target configuration for a bucket. Because the returned BucketTarget objects include remote target credentials, this can disclose replication access keys and secret keys. This vulnerability is fixed in 1.0.0-beta.9. 27/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-56049",
-    "descripcion": "Contributor Remote Code Execution (RCE) in Post Snippets 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-52780",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.3.3 and 17.4.1, cache store poisoning leads to Remote Code Execution (RCE). This vulnerability is fixed in 17.3.3 and 17.4.1. 27/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-56006",
-    "descripcion": "Unauthenticated Cross Site Scripting (XSS) in H5P 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-52784",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.3.3 and 17.4.1, there is a CSRF on TARGET through /users/:id via POST parameter &#34;user[admin]&#34;. This vulnerability is fixed in 17.3.3 and 17.4.1. 26/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-56005",
-    "descripcion": "Subscriber Cross Site Scripting (XSS) in WP Activity Log 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-47193",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.3.3 and 17.4.1, the journal diff endpoint discloses hidden historical field values without enforcing object and field visibility. This vulnerability is fixed in 17.3.3 and 17.4.1. 26/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-54848",
-    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in Saad Iqbal APIExperts Square for WooCommerce allows Retrieve Embedded Sensitive Data. This issue affects APIExperts Square for WooCommerce: from n/a through 4.7.3. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-44736",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.4.0, the GET /api/v3/relations endpoint allows any authenticated user to retrieve relations — and the subject (title) of work packages they have no permission to view — by supplying an arbitrary work package ID in the involved, fromId, or toId filter. This bypasses the Relation.visible scope due to a flawed performance optimization in RelationQuery. This vulnerability is fixed in 17.4.0. 27/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-54843",
-    "descripcion": "Unauthenticated SQL Injection in MDTF 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-44734",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.3.2 and 17.4.0, a Missing Authorization vulnerability exists in OpenProject&#39;s CostReportsController. The rename and update actions allow any authenticated user to modify the name, filters, and grouping of any Public cost report in the system without verifying ownership or permission level. An attacker who discovers or guesses a public report&#39;s numeric ID can rename or overwrite its filter configuration without any warning to the report&#39;s owner. This vulnerability is fixed in 17.3.2 and 17.4.0. 27/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-54842",
-    "descripcion": "Missing Authorization vulnerability in Royal Plugins Royal MCP allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Royal MCP: from n/a through 1.4.25. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-44696",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.4.0, OpenProject&#39;s rich text (markdown) rendering pipeline uses Sanitize::Config::RELAXED[:css] for inline style sanitization. This configuration permits essentially all CSS properties in style attributes on permitted HTML elements (figure, img, table, th, tr, td). This allows any authenticated user with write access to formattable text fields (work package descriptions, comments, project descriptions, news) to inject CSS This vulnerability is fixed in 17.4.0. 27/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-54829",
-    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Jacob N. Breetvelt WP Photo Album Plus allows Blind SQL Injection. This issue affects WP Photo Album Plus: from n/a through 9.1.13.005. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-29509",
+    "descripcion": "Patool before 4.0.5 contains a path traversal vulnerability in the safe_extract() function in patoolib/programs/py_tarfile.py when running on Python before 3.12, where the is_within_directory() helper uses os.path.commonprefix() for character-level string comparison instead of path-level comparison, allowing a crafted archive member path to bypass the containment check. Attackers can supply a malicious archive with specially crafted member paths to write arbitrary files. 27/06/2026 26/06/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-25",
-    "cve": "CVE-2026-54828",
-    "descripcion": "Unauthenticated Broken Access Control in Motors 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-06-26",
+    "cve": "CVE-2026-54753",
+    "descripcion": "Nx is a monorepo solution for TypeScript and polyglot codebases. From 17.0.4 until 22.7.2 and 23.0.0-beta.2, the local HTTP server started by nx graph sent Access-Control-Allow-Origin: * on every response, letting any website a developer visited read the server&#39;s responses cross-origin — including the full project graph and the output of the /help endpoint, which runs a target&#39;s configured help command. The practical impact is typically cross-origin information disclosure, but can be arbitrary command injection in rare cases. This vulnerability is fixed in 22.7.2 and 23.0.0-beta.2. 26/06/2026 26/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
