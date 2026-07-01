@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2025-8106",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 25/06/2026 25/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-56054",
+    "descripcion": "Subscriber Arbitrary File Deletion in JS Help Desk 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-47093",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 25/06/2026 25/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-56050",
+    "descripcion": "Improper Access Control vulnerability in Themeisle PPOM for WooCommerce allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects PPOM for WooCommerce: from n/a through 33.0.18. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53127",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: block: fix zones_cond memory leak on zone revalidation error paths When blk_revalidate_disk_zones() fails after disk_revalidate_zone_resources() has allocated args.zones_cond, the memory is leaked because no error path frees it. 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-56049",
+    "descripcion": "Contributor Remote Code Execution (RCE) in Post Snippets 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53126",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: blk-cgroup: fix disk reference leak in blkcg_maybe_throttle_current() Add the missing put_disk() on the error path in blkcg_maybe_throttle_current(). When blkcg lookup, blkg lookup, or blkg_tryget() fails, the function jumps to the out label which only calls rcu_read_unlock() but does not release the disk reference acquired by blkcg_schedule_throttle() via get_device(). Since current->throttle_disk is already set to NULL before the lookup, blkcg_exit() cannot release this reference either, causing the disk to never be freed. Restore the reference release that was present as blk_put_queue() in the original code but was inadvertently dropped during the conversion from request_queue to gendisk. 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-56006",
+    "descripcion": "Unauthenticated Cross Site Scripting (XSS) in H5P 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53125",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: md: fix array_state=clear sysfs deadlock When &#34;clear&#34; is written to array_state, md_attr_store() breaks sysfs active protection so the array can delete itself from its own sysfs store method. However, md_attr_store() currently drops the mddev reference before calling sysfs_unbreak_active_protection(). Once do_md_stop(..., 0) has made the mddev eligible for delayed deletion, the temporary kobject reference taken by sysfs_break_active_protection() can become the last kobject reference protecting the md kobject. That allows sysfs_unbreak_active_protection() to drop the last kobject reference from the current sysfs writer context. kobject teardown then recurses into kernfs removal while the current sysfs node is still being unwound, and lockdep reports recursive locking on kn->active with kernfs_drain() in the call chain. Reproducer on an existing level: 1. Create an md0 linear array and activate it: mknod /dev/md0 b 9 0 echo none > /sys/block/md0/md/metadata_version echo linear > /sys/block/md0/md/level echo 1 > /sys/block/md0/md/raid_disks echo &#34;$(cat /sys/class/block/sdb/dev)&#34; > /sys/block/md0/md/new_dev echo &#34;$(($(cat /sys/class/block/sdb/size) / 2))&#34; > \\ /sys/block/md0/md/dev-sdb/size echo 0 > /sys/block/md0/md/dev-sdb/slot echo active > /sys/block/md0/md/array_state 2. Wait briefly for the array to settle, then clear it: sleep 2 echo clear > /sys/block/md0/md/array_state The warning looks like: WARNING: possible recursive locking detected bash/588 is trying to acquire lock: (kn->active#65) at __kernfs_remove+0x157/0x1d0 but task is already holding lock: (kn->active#65) at sysfs_unbreak_active_protection+0x1f/0x40 ... Call Trace: kernfs_drain __kernfs_remove kernfs_remove_by_name_ns sysfs_remove_group sysfs_remove_groups __kobject_del kobject_put md_attr_store kernfs_fop_write_iter vfs_write ksys_write Restore active protection before mddev_put() so the extra sysfs kobject reference is dropped while the mddev is still held alive. The actual md kobject deletion is then deferred until after the sysfs write path has fully returned. 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-56005",
+    "descripcion": "Subscriber Cross Site Scripting (XSS) in WP Activity Log 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53124",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ublk: reset per-IO canceled flag on each fetch If a ublk server starts recovering devices but dies before issuing fetch commands for all IOs, cancellation of the fetch commands that were successfully issued may never complete. This is because the per-IO canceled flag can remain set even after the fetch for that IO has been submitted - the per-IO canceled flags for all IOs in a queue are reset together only once all IOs for that queue have been fetched. So if a nonempty proper subset of the IOs for a queue are fetched when the ublk server dies, the IOs in that subset will never successfully be canceled, as their canceled flags remain set, and this prevents ublk_cancel_cmd from actually calling io_uring_cmd_done on the commands, despite the fact that they are outstanding. Fix this by resetting the per-IO cancel flags immediately when each IO is fetched instead of waiting for all IOs for the queue (which may never happen). 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-54848",
+    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in Saad Iqbal APIExperts Square for WooCommerce allows Retrieve Embedded Sensitive Data. This issue affects APIExperts Square for WooCommerce: from n/a through 4.7.3. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53123",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: md: wake raid456 reshape waiters before suspend During raid456 reshape, direct IO across the reshape position can sleep in raid5_make_request() waiting for reshape progress while still holding an active_io reference. If userspace then freezes reshape and writes md/suspend_lo or md/suspend_hi, mddev_suspend() kills active_io and waits for all in-flight IO to drain. This can deadlock: the IO needs reshape progress to continue, but the reshape thread is already frozen, so the active_io reference is never dropped and suspend never completes. raid5_prepare_suspend() already wakes wait_for_reshape for dm-raid. Do the same for normal md suspend when reshape is already interrupted, so waiting raid456 IO can abort, drop its reference, and let suspend finish. The mdadm test tests/25raid456-reshape-deadlock reproduces the hang. 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-54843",
+    "descripcion": "Unauthenticated SQL Injection in MDTF 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53122",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: btrfs: fix deadlock between reflink and transaction commit when using flushoncommit When using the flushoncommit mount option, we can have a deadlock between a transaction commit and a reflink operation that copied an inline extent to an offset beyond the current i_size of the destination node. The deadlock happens like this: 1) Task A clones an inline extent from inode X to an offset of inode Y that is beyond Y&#39;s current i_size. This means we copied the inline extent&#39;s data to a folio of inode Y that is beyond its EOF, using a call to copy_inline_to_page(); 2) Task B starts a transaction commit and calls btrfs_start_delalloc_flush() to flush delalloc; 3) The delalloc flushing sees the new dirty folio of inode Y and when it attempts to flush it, it ends up at extent_writepage() and sees that the offset of the folio is beyond the i_size of inode Y, so it attempts to invalidate the folio by calling folio_invalidate(), which ends up at btrfs&#39; folio invalidate callback - btrfs_invalidate_folio(). There it tries to lock the folio&#39;s range in inode Y&#39;s extent io tree, but it blocks since it&#39;s currently locked by task A - during a reflink we lock the inodes and the source and destination ranges after flushing all delalloc and waiting for ordered extent completion - after that we don&#39;t expect to have dirty folios in the ranges, the exception is if we have to copy an inline extent&#39;s data (because the destination offset is not zero); 4) Task A then attempts to start a transaction to update the inode item, and then it&#39;s blocked since the current transaction is in the TRANS_STATE_COMMIT_START state. Therefore task A has to wait for the current transaction to become unblocked (its state >= TRANS_STATE_UNBLOCKED). So task A is waiting for the transaction commit done by task B, and the later waiting on the extent lock of inode Y that is currently held by task A. Syzbot recently reported this with the following stack traces: INFO: task kworker/u8:7:1053 blocked for more than 143 seconds. Not tainted syzkaller #0 &#34;echo 0 > /proc/sys/kernel/hung_task_timeout_secs&#34; disables this message. task:kworker/u8:7 state:D stack:23520 pid:1053 tgid:1053 ppid:2 task_flags:0x4208060 flags:0x00080000 Workqueue: writeback wb_workfn (flush-btrfs-46) Call Trace: context_switch kernel/sched/core.c:5298 [inline] __schedule+0x1553/0x5240 kernel/sched/core.c:6911 __schedule_loop kernel/sched/core.c:6993 [inline] schedule+0x164/0x360 kernel/sched/core.c:7008 wait_extent_bit fs/btrfs/extent-io-tree.c:811 [inline] btrfs_lock_extent_bits+0x59c/0x700 fs/btrfs/extent-io-tree.c:1914 btrfs_lock_extent fs/btrfs/extent-io-tree.h:152 [inline] btrfs_invalidate_folio+0x43d/0xc40 fs/btrfs/inode.c:7704 extent_writepage fs/btrfs/extent_io.c:1852 [inline] extent_write_cache_pages fs/btrfs/extent_io.c:2580 [inline] btrfs_writepages+0x12ff/0x2440 fs/btrfs/extent_io.c:2713 do_writepages+0x32e/0x550 mm/page-writeback.c:2554 __writeback_single_inode+0x133/0x11a0 fs/fs-writeback.c:1750 writeback_sb_inodes+0x995/0x19d0 fs/fs-writeback.c:2042 wb_writeback+0x456/0xb70 fs/fs-writeback.c:2227 wb_do_writeback fs/fs-writeback.c:2374 [inline] wb_workfn+0x41a/0xf60 fs/fs-writeback.c:2414 process_one_work kernel/workqueue.c:3276 [inline] process_scheduled_works+0xb6e/0x18c0 kernel/workqueue.c:3359 worker_thread+0xa53/0xfc0 kernel/workqueue.c:3440 kthread+0x388/0x470 kernel/kthread.c:436 ret_from_fork+0x51e/0xb90 arch/x86/kernel/process.c:158 ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:245 INFO: task syz.4.64:6910 blocked for more than 143 seconds. Not tainted syzkaller #0 &#34;echo 0 > /proc/sys/kernel/hung_task_timeout_secs&#34; disables this message. task:syz.4.64 state:D stack:22752 pid:6910 tgid: ---truncated--- 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-54842",
+    "descripcion": "Missing Authorization vulnerability in Royal Plugins Royal MCP allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Royal MCP: from n/a through 1.4.25. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53121",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: amd-pstate: Fix memory leak in amd_pstate_epp_cpu_init() On failure to set the epp, the function amd_pstate_epp_cpu_init() returns with an error code without freeing the cpudata object that was allocated at the beginning of the function. Ensure that the cpudata object is freed before returning from the function. This memory leak was discovered by Claude Opus 4.6 with the aid of Chris Mason&#39;s AI review-prompts (https://github.com/masoncl/review-prompts/tree/main/kernel). 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-54829",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Jacob N. Breetvelt WP Photo Album Plus allows Blind SQL Injection. This issue affects WP Photo Album Plus: from n/a through 9.1.13.005. 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-06-24",
-    "cve": "CVE-2026-53120",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: PCI: use generic driver_override infrastructure When a driver is probed through __driver_attach(), the bus&#39; match() callback is called without the device lock held, thus accessing the driver_override field without a lock, which can cause a UAF. Fix this by using the driver-core driver_override infrastructure taking care of proper locking internally. Note that calling match() from __driver_attach() without the device lock held is intentional. [1] 24/06/2026 24/06/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-06-25",
+    "cve": "CVE-2026-54828",
+    "descripcion": "Unauthenticated Broken Access Control in Motors 25/06/2026 25/06/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
