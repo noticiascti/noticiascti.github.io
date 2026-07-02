@@ -6,6 +6,11 @@
   },
   {
     "fecha": "2026-07-02",
+    "cve": "CVE-2024-6387",
+    "descripcion": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time ..."
+  },
+  {
+    "fecha": "2026-07-02",
     "cve": "CVE-2026-43503",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: propagate shared-frag marker through frag-transfer helpers Two frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail to propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags ..."
   },
@@ -13,11 +18,6 @@
     "fecha": "2026-07-02",
     "cve": "CVE-2026-46331",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/sched: fix pedit partial COW leading to page cache corruption tcf_pedit_act() computes the COW range for skb_ensure_writable() once before the key loop using tcfp_off_max_hint, but the hint does not ..."
-  },
-  {
-    "fecha": "2026-07-02",
-    "cve": "CVE-2024-6387",
-    "descripcion": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time ..."
   },
   {
     "fecha": "2026-07-02",
@@ -36,13 +36,13 @@
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-39955",
-    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have pre-authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php. This issue has been fixed in version 1.2.31."
+    "cve": "CVE-2026-39938",
+    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have unauthenticated LFI through graph_theme and rrdtool IPC serialization hardening. This issue has been resolved in version 1.2.31."
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-39938",
-    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have unauthenticated LFI through graph_theme and rrdtool IPC serialization hardening. This issue has been resolved in version 1.2.31."
+    "cve": "CVE-2026-39955",
+    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have pre-authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php. This issue has been fixed in version 1.2.31."
   },
   {
     "fecha": "2026-07-02",
