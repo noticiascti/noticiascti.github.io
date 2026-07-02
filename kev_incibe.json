@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-07-02",
+    "cve": "CVE-2026-58455",
+    "descripcion": "Dockwatch through 0.6.567 contains an unauthenticated OS command injection vulnerability that allows remote attackers to execute arbitrary shell commands by exploiting a missing exit() after an authentication redirect in loader.php combined with unsanitized input passed to shell_exec() in ajax/compose.php. Attackers can seed the required session flag through the incomplete auth check, then inject arbitrary commands via the composePath POST parameter in the composePull action to achieve full host compromise, facilitated by the standard deployment mounting of the Docker socket. 02/07/2026 02/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-07-02",
     "cve": "CVE-2026-56842",
     "descripcion": "A malicious actor with access to the network and under certain conditions could exploit an Incorrect Authorization vulnerability found in UniFi Network Application to persist privileges within UniFi Network Application after such access had been removed. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-02",
     "cve": "CVE-2026-55113",
     "descripcion": "A malicious actor with access to the network could exploit a Server-Side Request Forgery (SSRF) vulnerability found in UniFi Talk Application to execute a Denial of Service (DoS) attack and bypass authentication in certain UniFi Talk API endpoints. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-02",
-    "cve": "CVE-2026-55112",
-    "descripcion": "A malicious actor with access to the network and low privileges and under certain conditions could exploit an Improper Access Control vulnerability found in UniFi OS with UniFi Protect Application to escalate privileges on the host device. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
