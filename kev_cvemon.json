@@ -16,8 +16,8 @@
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-39955",
-    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have pre-authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php. This issue has been fixed in version 1.2.31."
+    "cve": "CVE-2026-39948",
+    "descripcion": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request parameter is retrieved via the raw accessor grv() (rather than gfrv() with FILTER_VALIDATE_IS_REGEX validation) and concatenated directly into RLIKE SQL clauses ..."
   },
   {
     "fecha": "2026-07-02",
@@ -26,13 +26,13 @@
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-39893",
-    "descripcion": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request variable was concatenated into a RLIKE SQL clause without sanitization. The endpoint does not require authentication (graph viewing supports guest access via the ..."
+    "cve": "CVE-2026-39955",
+    "descripcion": "Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior have pre-authentication SQL Injection via unanchored FILTER_VALIDATE_REGEXP in graph_view.php. This issue has been fixed in version 1.2.31."
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-39948",
-    "descripcion": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request parameter is retrieved via the raw accessor grv() (rather than gfrv() with FILTER_VALIDATE_IS_REGEX validation) and concatenated directly into RLIKE SQL clauses ..."
+    "cve": "CVE-2026-39893",
+    "descripcion": "Cacti is an open source performance and fault management framework. In versions 1.2.30 and prior, the rfilter request variable was concatenated into a RLIKE SQL clause without sanitization. The endpoint does not require authentication (graph viewing supports guest access via the ..."
   },
   {
     "fecha": "2026-07-02",
