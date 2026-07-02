@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-53358",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: L2CAP: use chan timer to close channels in cleanup_listen() l2cap_chan_close() removes the channel from conn->chan_l, which must be done under conn->lock. cleanup_listen() runs under the parent sk_lock, so acquiring conn->lock would invert the established conn->lock -> chan->lock -> sk_lock order. Instead of calling l2cap_chan_close() directly, schedule l2cap_chan_timeout with delay 0 to close the channel asynchronously. The timeout handler already acquires conn->lock and chan->lock in the correct order. The timer is only armed when chan->conn is still set: if it is already NULL, l2cap_conn_del() has already processed this channel (l2cap_chan_del + l2cap_sock_teardown_cb + l2cap_sock_close_cb), so there is nothing left to do. If l2cap_conn_del() races in after the timer is armed, __clear_chan_timer() inside l2cap_chan_del() cancels it; if the timer has already fired, the handler returns harmlessly because chan->conn was cleared. 02/07/2026 02/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-56842",
+    "descripcion": "A malicious actor with access to the network and under certain conditions could exploit an Incorrect Authorization vulnerability found in UniFi Network Application to persist privileges within UniFi Network Application after such access had been removed. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-53357",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: fix UAF in l2cap_sock_cleanup_listen() vs l2cap_conn_del() bt_accept_dequeue() unlinks a not-yet-accepted child from the parent accept queue and release_sock()s it before returning, so the returned sk has no caller reference and is unlocked. l2cap_sock_cleanup_listen() walks these children on listening-socket close. A concurrent HCI disconnect drives hci_rx_work -> l2cap_conn_del() which runs l2cap_chan_del() + l2cap_sock_kill() and frees the child sk and its l2cap_chan; cleanup_listen() then uses both: BUG: KASAN: slab-use-after-free in l2cap_sock_kill l2cap_sock_kill / l2cap_sock_cleanup_listen / __x64_sys_close Freed by: l2cap_conn_del -> l2cap_sock_close_cb -> l2cap_sock_kill This is distinct from the two fixes already in this area: commit e83f5e24da741 (&#34;Bluetooth: serialize accept_q access&#34;) serialises the accept_q list/poll and takes temporary refs inside bt_accept_dequeue(), and CVE-2025-39860 serialises the userspace close()/accept() race by calling cleanup_listen() under lock_sock() in l2cap_sock_release(). Neither covers l2cap_conn_del() running from hci_rx_work, so this UAF still reproduces on current bluetooth/master. Take the reference at the source: bt_accept_dequeue() does sock_hold() while sk is still locked, before release_sock(); callers sock_put(). cleanup_listen() pins the chan with l2cap_chan_hold_unless_zero() under a brief child sk lock (serialising vs l2cap_sock_teardown_cb()), drops it before l2cap_chan_lock(), and skips a duplicate l2cap_sock_kill() on SOCK_DEAD. conn->lock is not taken here: cleanup_listen() runs under the parent sk lock and that would invert conn->lock -> chan->lock -> sk_lock (lockdep). KASAN/SMP: an unprivileged listen/close vs HCI-disconnect race produced 12 use-after-free reports per run before this change; 0, and no lockdep report, over 1600+ raced iterations after it on bluetooth/master. 02/07/2026 02/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-56841",
+    "descripcion": "A malicious actor with access to the network and low privileges could exploit an authenticated SQL Injection vulnerability found in UniFi Protect Application to escalate privileges on the host device. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-4767",
-    "descripcion": "Missing authentication for critical function vulnerability in TR7 Cyber ​​Defense Inc. WAF-ASP allows Authentication Abuse. This issue affects WAF-ASP: from v1.0.324.900 before v1.4.0.117. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-55119",
+    "descripcion": "A malicious actor with access to the network and low privileges could exploit an Improper Access Control vulnerability found in UniFi Talk Application to escalate privileges within the UniFi Talk Application. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-5524",
-    "descripcion": "The Divi Form Builder plugin for WordPress is vulnerable to Arbitrary File Upload leading to Remote Code Execution in all versions up to and including 5.1.8. This is due to insufficient file extension validation in the do_image_upload() function where user-supplied input from the acceptFileTypes POST parameter is directly interpolated into a regular expression used to validate uploaded files. Attackers can specify PHP-executable extensions such as .phtml, .phar, .php5, or .php7 to bypass the plugin&#39;s .htaccess protection which only blocks .php files specifically. Additionally, on Nginx-based servers, the .htaccess protection is completely ineffective as Nginx does not process .htaccess files. This makes it possible for unauthenticated attackers (who can obtain a nonce from any public page containing a form) to upload executable PHP files to the publicly accessible /wp-content/uploads/de_fb_uploads/ directory and achieve Remote Code Execution by accessing the uploaded file via HTTP. The vulnerability was partially patched in version 5.1.3. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-55118",
+    "descripcion": "A malicious actor with access to the network,low privileges and under certain conditions could exploit an Improper Access Control vulnerability found in UniFi Network Application to escalate privileges within the UniFi Network Application. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-4772",
-    "descripcion": "Improper neutralization of input during web page generation (&#39;cross-site scripting&#39;) vulnerability in TR7 Cyber ​​Defense Inc. WAF-ASP allows Stored XSS. This issue affects WAF-ASP: from v1.0.324.900 before v1.4.0.117. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-55117",
+    "descripcion": "A malicious actor with access to the network could exploit a Path Traversal vulnerability found in UniFi Access Application to access files on the host device. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-4770",
-    "descripcion": "Improper neutralization of input during web page generation (&#39;cross-site scripting&#39;) vulnerability in TR7 Cyber ​​Defense Inc. Web Application Firewall allows DOM-Based XSS. This issue affects Web Application Firewall: from v1.0.42.239 before v1.4.0.117. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-55116",
+    "descripcion": "A malicious actor with access to the network and under certain network configurations could exploit an Improper Access Control vulnerability found in certain devices running UniFi OS to make unauthorized changes to such UniFi OS devices. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-57766",
-    "descripcion": "Unauthenticated Cross Site Request Forgery (CSRF) in WPIDE – File Manager & Code Editor 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-55115",
+    "descripcion": "A malicious actor with access to the network and low privileges could exploit a Server-Side Request Forgery (SSRF) in UniFi Protect Application to escalate privileges on the host device. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-57765",
-    "descripcion": "Contributor SQL Injection in WP EasyCart 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-55114",
+    "descripcion": "A malicious actor with access to the network and low privileges could exploit an Improper Access Control vulnerability found in UniFi Network Application to escalate privileges within the UniFi Network Application. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-57764",
-    "descripcion": "Contributor Cross Site Scripting (XSS) in Surbma | Yoast SEO Breadcrumb Shortcode 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-55113",
+    "descripcion": "A malicious actor with access to the network could exploit a Server-Side Request Forgery (SSRF) vulnerability found in UniFi Talk Application to execute a Denial of Service (DoS) attack and bypass authentication in certain UniFi Talk API endpoints. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-02",
-    "cve": "CVE-2026-57763",
-    "descripcion": "Contributor Cross Site Scripting (XSS) in Structured Content 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-55112",
+    "descripcion": "A malicious actor with access to the network and low privileges and under certain conditions could exploit an Improper Access Control vulnerability found in UniFi OS with UniFi Protect Application to escalate privileges on the host device. 02/07/2026 02/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
