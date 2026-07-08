@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-07-08",
+    "cve": "CVE-2026-14454",
+    "descripcion": "Imager versions before 1.033 for Perl treat unsigned EXIF IFD entry counts as signed. Imager mishandled large EXIF IFD entry count values, treating them as negative numbers. This could lead to an attempt to allocate a block nearly the size of the address space, which fails and kills the process. An attacker could craft an image with EXIF data that terminates a worker process. 08/07/2026 08/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-08",
     "cve": "CVE-2026-56003",
     "descripcion": "A heap buffer overflow due to missing size checking in the property buffer when parsing PCF files in libXfont2 ComputeScaledProperties() before libXfont2 before 2.0.8 could be used by attackers using authenticated X clients to execute code within the X server. 08/07/2026 08/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-08",
     "cve": "CVE-2026-57255",
     "descripcion": "The application opens a PDF containing an abnormal color space whose attributes reference a valid but semantically malformed function. The function&#39;s output is not validated; when subsequently read, it produces an illegal pointer that accesses an out-of-bounds region, crashing the application. 08/07/2026 08/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-08",
-    "cve": "CVE-2026-57254",
-    "descripcion": "There is an abnormal annotation within the PDF that is referenced by other objects. When the application parses the PDF, it fails to perform proper type checking, ultimately causing the application to crash. 08/07/2026 08/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
