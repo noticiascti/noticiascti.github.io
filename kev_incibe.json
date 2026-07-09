@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-07-08",
+    "cve": "CVE-2026-15138",
+    "descripcion": "A security vulnerability has been detected in tumf mcp-text-editor up to 1.0.2. This issue affects the function _validate_file_path of the file mcp_text_editor/text_editor.py. Such manipulation of the argument file_path leads to path traversal. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor closed the GitHub issue for this vulnerability without any explanation. 09/07/2026 09/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-07-08",
     "cve": "CVE-2026-47646",
     "descripcion": "Improper neutralization of input during web page generation (&#39;cross-site scripting&#39;) in Dynamics 365 Customer Voice allows an unauthorized attacker to perform spoofing over a network. 09/07/2026 09/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-08",
     "cve": "CVE-2026-54781",
     "descripcion": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF SAML token validation does not enforce SubjectConfirmation method URIs or holder-of-key proof keys in SamlSecurityTokenHandler, allowing holder-of-key downgrade or custom confirmation method assertions to authenticate a subject without proving authority over the assertion. This issue is fixed in versions 1.8.1 and 1.9.1. 09/07/2026 09/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-08",
-    "cve": "CVE-2026-54780",
-    "descripcion": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, the CoreWCF WS-Security 1.0 receive pipeline validates ds:SignedInfo SignatureMethod against the configured SecurityAlgorithmSuite but does not validate each ds:Reference DigestMethod, allowing a sender to use a rejected digest algorithm such as SHA-1 while the message is still accepted. This issue is fixed in versions 1.8.1 and 1.9.1. 09/07/2026 09/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   }
 ]
