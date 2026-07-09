@@ -6,6 +6,11 @@
   },
   {
     "fecha": "2026-07-09",
+    "cve": "CVE-2026-31694",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: fuse: reject oversized dirents in page cache fuse_add_dirent_to_cache() computes a serialized dirent size from the server-controlled namelen field and copies the dirent into a single page-cache page. The ..."
+  },
+  {
+    "fecha": "2026-07-09",
     "cve": "CVE-2026-46331",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/sched: fix pedit partial COW leading to page cache corruption tcf_pedit_act() computes the COW range for skb_ensure_writable() once before the key loop using tcfp_off_max_hint, but the hint does not ..."
   },
@@ -13,11 +18,6 @@
     "fecha": "2026-07-09",
     "cve": "CVE-2026-46242",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: eventpoll: fix ep_remove struct eventpoll / struct file UAF ep_remove() (via ep_remove_file()) cleared file->f_ep under file->f_lock but then kept using @file inside the critical section (is_file_epoll(), ..."
-  },
-  {
-    "fecha": "2026-07-09",
-    "cve": "CVE-2026-31694",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: fuse: reject oversized dirents in page cache fuse_add_dirent_to_cache() computes a serialized dirent size from the server-controlled namelen field and copies the dirent into a single page-cache page. The ..."
   },
   {
     "fecha": "2026-07-09",
