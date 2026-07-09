@@ -11,13 +11,13 @@
   },
   {
     "fecha": "2026-07-09",
-    "cve": "CVE-2026-46242",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: eventpoll: fix ep_remove struct eventpoll / struct file UAF ep_remove() (via ep_remove_file()) cleared file->f_ep under file->f_lock but then kept using @file inside the critical section (is_file_epoll(), ..."
+    "cve": "CVE-2026-31694",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: fuse: reject oversized dirents in page cache fuse_add_dirent_to_cache() computes a serialized dirent size from the server-controlled namelen field and copies the dirent into a single page-cache page. The ..."
   },
   {
     "fecha": "2026-07-09",
-    "cve": "CVE-2026-31694",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: fuse: reject oversized dirents in page cache fuse_add_dirent_to_cache() computes a serialized dirent size from the server-controlled namelen field and copies the dirent into a single page-cache page. The ..."
+    "cve": "CVE-2026-46242",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: eventpoll: fix ep_remove struct eventpoll / struct file UAF ep_remove() (via ep_remove_file()) cleared file->f_ep under file->f_lock but then kept using @file inside the critical section (is_file_epoll(), ..."
   },
   {
     "fecha": "2026-07-09",
@@ -41,12 +41,12 @@
   },
   {
     "fecha": "2026-07-09",
-    "cve": "CVE-2024-30326",
-    "descripcion": "Foxit PDF Reader Doc Object Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must ..."
+    "cve": "CVE-2026-56290",
+    "descripcion": "The Joomla extension Page Builder CK is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE."
   },
   {
     "fecha": "2026-07-09",
-    "cve": "CVE-2026-26128",
-    "descripcion": "Improper authentication in Windows SMB Server allows an authorized attacker to elevate privileges locally."
+    "cve": "CVE-2024-30326",
+    "descripcion": "Foxit PDF Reader Doc Object Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must ..."
   }
 ]
