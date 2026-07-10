@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-40454",
-    "descripcion": "Out-of-bounds Read, Improper Input Validation vulnerability in Apache IoTDB C++ client. Out-of-bounds reads in IoTDB C++ client TsBlock deserializer crash client process on malformed server data. This issue affects Apache IoTDB C++ client: from 1.3.5 before 1.3.8, from 2.0.5 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-9857",
+    "descripcion": "The Invoice123 plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.7.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to overwrite the plugin&#39;s API key stored in wp_options, modify invoice plugin settings, and alter WooCommerce tax rate data in the wp_woocommerce_tax_rates table. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-40452",
-    "descripcion": "Incorrect Authorization, Improper Access Control vulnerability in Apache IoTDB. Authorization bypass in /rest/v2/fastLastQuery exposes last-value data to unauthorized authenticated users. This issue affects Apache IoTDB: from 1.3.5 before 1.3.8, from 2.0.5 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41880",
+    "descripcion": "R-SOFT DMS is vulnerable to OS Command Injection in the Optical Character Recognition (OCR) module. Multiple command execution functions accept user-controllable file paths without proper sanitization before passing them to the system shell via SSH. In current infrastructure the URL encoding neutralizes the injection during the standard web upload flow. An authenticated attacker who is able to trigger the OCR functionality for the uploaded file can execute OS commands within the context of a root user. This issue was fixed in version v3.19-2862 and v3.17-2580. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-40009",
-    "descripcion": "Improper Privilege Management, Improper Access Control vulnerability in Apache IoTDB. Authenticated users can escalate to full tree-path access by renaming themselves to __internal_auditor. This issue affects Apache IoTDB: from 2.0.8 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41879",
+    "descripcion": "R-SOFT DMS stores superadmin credentials using a non-salted nested MD5 hash. This allows an attacker who obtain password hash to decode superadmin credentials. Critically, this password cannot be changed except by modifying the configuration file. This issue was fixed in version v3.17-2000. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-40008",
-    "descripcion": "Use of Externally-Controlled Input to Select Classes or Code (&#39;Unsafe Reflection&#39;) vulnerability in Apache IoTDB. The pipe processor reads a fully qualified Java class name and instantiates it using Class.forName().newInstance() without any validation or allowlisting. This issue affects Apache IoTDB: from 1.0.0 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41878",
+    "descripcion": "R-SOFT DMS is vulnerable to Insecure Direct Object Reference (IDOR) attack in multiple file download endpoints. The application fetches files from the database by ID and serves them to whoever requests them, relying only on session authentication, meaning any valid user can access any file. This issue was fixed in version v3.19-2862 and v3.17-2580. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-40007",
-    "descripcion": "Uncontrolled Recursion, Uncontrolled Resource Consumption vulnerability in Apache IoTDB. When pipe_air_gap_receiver_enabled=true, the IoTDB AirGap receiver&#39;s readLength method calls itself recursively each time it recognises the E-language prefix in socket data, with no depth limit. An unauthenticated attacker can send a stream of repeated E-language prefixes that drives the recursion arbitrarily deep, exhausting the receiver thread&#39;s JVM stack and raising StackOverflowError. This issue affects Apache IoTDB: from 1.0.0 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41877",
+    "descripcion": "R-SOFT DMS is vulnerable to Stored XSS in file upload functionality. Authenticated attacker can inject arbitrary HTML and JS into the name of the file being uploaded, which will be executed when visiting file list or upload status by other users. This issue was fixed in version v3.19-2832 and v3.17-2580. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-40006",
-    "descripcion": "Memory Allocation with Excessive Size Value, Allocation of Resources Without Limits or Throttling, Missing Authentication for Critical Function vulnerability in Apache IoTDB. When pipe_air_gap_receiver_enabled=true, the IoTDB AirGap pipe receiver accepts raw TCP connections on port 9780 with no authentication. The readLength method reads an attacker-controlled 32-bit integer from the socket and readData passes it directly to new byte[length] with no upper-bound check. An unauthenticated attacker can cause the JVM to attempt an allocation of up to 2,147,483,647 bytes per connection, exhausting heap memory and crashing or severely degrading the DataNode process. This issue affects Apache IoTDB: from 1.0.0 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-41876",
+    "descripcion": "R-SOFT DMS is vulnerable to OS Command Injection in konwertujAction() function. The document converter executes shell commands using unsanitized file paths and format parameters. This allows an authenticated attacker to execute arbitrary system commands with the privileges of the web server user. This issue was fixed in version v3.19-2752 and v3.17-2580. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-40005",
-    "descripcion": "Improper Limitation of a Pathname to a Restricted Directory (&#39;Path Traversal&#39;) vulnerability in Apache IoTDB. An attacker can write arbitrary files anywhere the IoTDB process has write permissions with unsafe API. This issue affects Apache IoTDB: from 1.0.0 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-15378",
+    "descripcion": "A flaw was found in the `guardrails-detectors` component. This vulnerability allows a remote attacker to perform a blind Server-Side Request Forgery (SSRF) by submitting a specially crafted XML Schema Definition (XSD) string. This can lead to unauthorized access to sensitive information, including credentials from cloud metadata services, Kubernetes API, internal MinIO, and other internal network endpoints. Additionally, it enables local file reads of critical data such as service account tokens and pod secrets. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-28564",
-    "descripcion": "Insufficient Session Expiration, Authentication Bypass by Capture-replay vulnerability in Apache IoTDB. REST Basic Authentication Accepts Stale Cached Credentials This issue affects Apache IoTDB: from 1.0.0 before 2.0.10. Users are recommended to upgrade to version 2.0.10, which fixes the issue. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-15028",
+    "descripcion": "A flaw was found in libarchive. This vulnerability allows a remote attacker to trigger a heap overflow by providing a specially crafted tar archive. The issue occurs during the parsing of a PAX extended header containing a malformed SUN.holesdata sparse-file attribute. Successful exploitation could lead to a denial of service, making the system unavailable, or potentially allow for arbitrary code execution, giving the attacker control over the affected system. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-13347",
-    "descripcion": "The Hide My WP Lite plugin for WordPress is vulnerable to Arbitrary File Read in versions up to and including 1.3 via the he_wrapper_js and he_wrapper_css query parameters processed by the elementor_assets_filter() function. This is due to the function concatenating user-supplied input directly onto ABSPATH and passing the result to file_get_contents() without any path traversal validation, allow-list, realpath containment, or extension check; the result is then echoed in the HTTP response. Although the output is passed through wp_kses_post(), that function only filters HTML tags and does not prevent disclosure of arbitrary file contents. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the affected site&#39;s server (such as wp-config). Note: The exploit requires the Elementor plugin and the &#39;Hide Elementor&#39; feature to be enabled. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-13710",
+    "descripcion": "The Jeg Kit for Elementor – Powerful Addons for Elementor, Widgets & Templates for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Image Box widget&#39;s &#39;sg_body_description&#39; parameter in versions up to, and including, 3.2.6. This is due to insufficient input sanitization and output escaping on the description attribute in the render_body() method of the Image_Box_View class — every other attribute used by the method is wrapped in esc_attr(), but the description value is concatenated directly into HTML body context. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-12685",
-    "descripcion": "The EscortWP escortwp WordPress theme through 3.6.2 was distributed with a vendor-authored, obfuscated backdoor that lets an unauthenticated attacker who supplies a hard-coded, per-build key permanently delete all of the site&#39;s content, and that covertly transmits the site URL, administrator email address, and license key to a third-party server. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-13247",
+    "descripcion": "The Logo Slider – Logo Carousel, Client Logo Slider & Brand Showcase for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;lgx_tooltip_position&#39; parameter in all versions up to, and including, 5.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
