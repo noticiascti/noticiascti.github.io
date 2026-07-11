@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-11",
-    "cve": "CVE-2026-13756",
-    "descripcion": "The WP Grid Builder plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.3.3. This is due to missing authorization and meta key validation in the `update()` handler for the `/wp-json/wpgb/v2/metadata` REST endpoint. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator by updating their own `wp_capabilities` user meta with a crafted nested array payload. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-9738",
+    "descripcion": "The Print, PDF, Email by PrintFriendly plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;content_position_css&#39; parameter in all versions up to, and including, 5.5.10 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-11",
-    "cve": "CVE-2026-11426",
-    "descripcion": "The UnderConstructionPage PRO plugin for WordPress is vulnerable to Arbitrary File Read in all versions up to, and including, 5.76. This is due to the plugin accepting arbitrary local file paths in the template_thumbnail parameter and copying their contents into a publicly accessible uploads file. This makes it possible for authenticated attackers, with Subscriber-level access and above, to read arbitrary files on the server, which can contain sensitive information. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-7620",
+    "descripcion": "The Notification for Telegram plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.5.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to create, modify, or reschedule the nftb_cron_hook WordPress cron event, enabling unauthorized manipulation of the plugin&#39;s background task scheduling logic. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-55175",
-    "descripcion": "Spinnaker is an open source, multi-cloud continuous delivery platform. Prior to versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4 on their respective release lines, Kustomize bake operations allow unsafe YAML tag processing in rosco manifests. This can lead to remote code execution on rosco pods when performing Kustomize bakes. This issue is fixed in versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-7559",
+    "descripcion": "The Affilia – Affiliate Program & Referral Tracking for WordPress plugin for WordPress is vulnerable to unauthorized access in all versions up to, and including, 3.3.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to approve or reject affiliate referrals, credit commissions to affiliate wallets, delete referral records, and modify custom banner plugin options, enabling financial fraud. The nonce required to pass the only authentication check is embedded in every frontend page load via rtwalwm_global_params.rtwalwm_nonce, making it trivially accessible to any authenticated user regardless of role. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-44383",
-    "descripcion": "Multiple connections to the backend using the same charging station ID are allowed, which could allow an attacker to deploy multiple instances of malicious OCPP clients to overwhelm the backend. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-6804",
+    "descripcion": "The AI Chatbot & Workflow Automation by AIWU plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.4.12. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to publish draft WordPress posts, exposing unpublished content, or unpublish live content, causing service disruption, by supplying arbitrary scenario IDs. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-42952",
-    "descripcion": "Previously, there was no throttling on repeated authentication attempts to the charging station backend, which could allow an attacker to execute a denial-of-service attack. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-6803",
+    "descripcion": "The AI Chatbot & Workflow Automation by AIWU plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 1.4.12. This is due to missing capability checks and nonce verification on AJAX actions registered under both wp_ajax_ and wp_ajax_nopriv_ hooks, as the base controller&#39;s getPermissions() returns an empty array and neither removeGroup nor clear are added to getNoncedMethods(), causing the authorization gate to unconditionally return true for these actions. This makes it possible for unauthenticated attackers to delete specific records by ID or delete all records from any module&#39;s database table by unauthenticated attackers. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-20744",
-    "descripcion": "The charging station websocket endpoint accepts connections without proper authentication, which could lead to privilege escalation. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-3576",
+    "descripcion": "The Planyo Online Reservation System plugin for WordPress is vulnerable to Server-Side Request Forgery leading to Local File Inclusion in all versions up to, and including, 3.0. The ulap.php file acts as an AJAX proxy and is directly accessible without WordPress bootstrapping or any authentication. The send_http_post() function validates the host of the provided URL against an allowlist that includes &#39;localhost&#39;, but critically fails to validate the URL scheme/protocol. This makes it possible for unauthenticated attackers to supply a file:// URL (e.g., file://localhost/etc/passwd) which bypasses the host allowlist check because parse_url() returns &#39;localhost&#39; as the host. The URL is then passed to curl_init() or fopen(), both of which support the file:// protocol, allowing the attacker to read arbitrary local files on the server and have their contents returned in the HTTP response. This can lead to disclosure of sensitive files such as /etc/passwd, wp-config.php (containing database credentials and authentication keys), and other server-side files. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-15089",
-    "descripcion": "vulnerability in Drupal Commerce guest registration allows . This issue affects Commerce guest registration versions: *.*. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-3552",
+    "descripcion": "The SurfLink - Ultimate Link Manager plugin for WordPress is vulnerable to unauthorized data modification due to a missing capability check on the ajax_import_410() function in all versions up to 2.6.0. This is due to a missing capability check (current_user_can()) and missing nonce verification (check_ajax_referer()) in the ajax_import_410() function, while all other AJAX handlers in the same class (ajax_add_single_410, ajax_save_editted_410, ajax_delete_410, ajax_bulk_410_delete, ajax_empty_410, ajax_export_410) properly implement both authorization and nonce checks. This makes it possible for authenticated attackers, with Subscriber-level access and above, to import arbitrary URLs into the 410 Gone database table via the surfl_import_410 AJAX action. Injected URLs will cause the site to return HTTP 410 Gone responses to all visitors accessing those paths, potentially causing denial of service for legitimate pages and SEO damage through search engine delisting. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-15087",
-    "descripcion": "vulnerability in Drupal Clean RESTful allows . This issue affects Clean RESTful versions: *.*. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-2354",
+    "descripcion": "The Swiss Toolkit For WP plugin for WordPress is vulnerable to arbitrary file upload due to a flawed file type validation bypass in the `upload_extension_files()` function in all versions up to, and including, 1.4.6. The `upload_extension_files()` function hooks into WordPress&#39;s `wp_check_filetype_and_ext` filter and uses `strpos()` to check if a filename contains a configured extension string, rather than verifying the actual file extension. This makes it possible for authenticated attackers, with Author-level access and above, to upload arbitrary files (including PHP) on the affected site&#39;s server which may make remote code execution possible, granted the &#34;Enhanced Multi-Format Image Support&#34; feature is enabled with at least one extension (e.g., avif) in the allowed formats. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-15086",
-    "descripcion": "vulnerability in Drupal Raw Formatter [Meta Tag Formatter] allows . This issue affects Raw Formatter [Meta Tag Formatter] versions: *.*. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-1832",
+    "descripcion": "The ThriveDesk – Live Chat, AI Chatbot, Helpdesk & Knowledge Base plugin for WordPress is vulnerable to unauthorized cache deletion due to a missing capability check on the &#39;thrivedesk_clear_cache&#39; AJAX action in all versions up to, and including, 2.1.7. This makes it possible for authenticated attackers, with Subscriber-level access and above, to clear the plugin&#39;s cache. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-14480",
-    "descripcion": "OpenPLC Runtime v3 contains an authenticated arbitrary file write vulnerability in the legacy web UI program‑upload workflow. The application stores an attacker‑supplied filename (prog_file) directly into the Programs.File database field and later uses this value as the destination path for an uploaded file without validating or restricting the path. Because Python os.path.join() honors attacker‑controlled absolute paths, an authenticated user can write arbitrary files anywhere writable by the OpenPLC webserver process. In the default build pipeline, all C++ source files within the OpenPLC runtime core directory are automatically compiled into the executable runtime binary. By writing a malicious .cpp file into this directory, an authenticated attacker can escalate the arbitrary file write into arbitrary native code execution when the operator triggers a normal program compilation and runtime start. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-15335",
+    "descripcion": "The Booking Package plugin for WordPress is vulnerable to generic SQL Injection via &#39;email&#39; Form Parameter (form) in all versions up to, and including, 1.7.20 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The vulnerable REST API endpoint /wp-json/booking-package/v1/request is registered with permission_callback: __return_true and wp_magic_quotes does not apply to REST-sourced $_POST values, meaning single quotes in the payload reach the SQL sink intact without any authentication requirement. The impact of this is severely limited as the vulnerable parameter goes through is_email. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
