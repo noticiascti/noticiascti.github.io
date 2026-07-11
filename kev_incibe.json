@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-59155",
-    "descripcion": "Nezha Monitoring is a self-hostable, lightweight, servers and websites monitoring and O&M tool. Prior to 2.2.5, the GET /api/v1/ddns and GET /api/v1/notification endpoints return full resource objects including plaintext third-party API credentials, including Cloudflare API tokens, TencentCloud SecretKeys, Slack, Discord, and Telegram webhook URLs with embedded bot tokens, and Authorization header values, without any field-level redaction. Any authenticated admin or PAT with nezha:ddns:read or nezha:notification:read scope can receive stored credentials through the listDDNS and listNotification handlers in a single API response. This issue is fixed in version 2.2.5. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-13756",
+    "descripcion": "The WP Grid Builder plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.3.3. This is due to missing authorization and meta key validation in the `update()` handler for the `/wp-json/wpgb/v2/metadata` REST endpoint. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator by updating their own `wp_capabilities` user meta with a crafted nested array payload. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-11",
+    "cve": "CVE-2026-11426",
+    "descripcion": "The UnderConstructionPage PRO plugin for WordPress is vulnerable to Arbitrary File Read in all versions up to, and including, 5.76. This is due to the plugin accepting arbitrary local file paths in the template_thumbnail parameter and copying their contents into a publicly accessible uploads file. This makes it possible for authenticated attackers, with Subscriber-level access and above, to read arbitrary files on the server, which can contain sensitive information. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-58591",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Colorbox allows Cross-Site Scripting (XSS). This issue affects Colorbox versions: from 0.0.0 to 2.1.5, from 0.0.0 to 2.2.0. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-55175",
+    "descripcion": "Spinnaker is an open source, multi-cloud continuous delivery platform. Prior to versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4 on their respective release lines, Kustomize bake operations allow unsafe YAML tag processing in rosco manifests. This can lead to remote code execution on rosco pods when performing Kustomize bakes. This issue is fixed in versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-58590",
-    "descripcion": "Missing Authorization vulnerability in Drupal FlowDrop allows Forceful Browsing. This issue affects FlowDrop versions: from 0.0.0 to 1.6.0. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-44383",
+    "descripcion": "Multiple connections to the backend using the same charging station ID are allowed, which could allow an attacker to deploy multiple instances of malicious OCPP clients to overwhelm the backend. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-58589",
-    "descripcion": "Missing Authorization vulnerability in Drupal FlowDrop allows Forceful Browsing. This issue affects FlowDrop versions: from 0.0.0 to 1.6.0. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-42952",
+    "descripcion": "Previously, there was no throttling on repeated authentication attempts to the charging station backend, which could allow an attacker to execute a denial-of-service attack. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-58588",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Drupal Canvas allows Cross-Site Scripting (XSS). This issue affects Drupal Canvas versions: from 0.0.0 to 1.4.2, from 1.5.0 to 1.5.2, from 1.6.0 to 1.6.1, from 1.7.0 to 1.7.1. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-20744",
+    "descripcion": "The charging station websocket endpoint accepts connections without proper authentication, which could lead to privilege escalation. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-58587",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Drupal Canvas allows Cross-Site Scripting (XSS). This issue affects Drupal Canvas versions: from 0.0.0 to 1.4.2, from 1.5.0 to 1.5.2, from 1.6.0 to 1.6.1, from 1.7.0 to 1.7.1. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-15089",
+    "descripcion": "vulnerability in Drupal Commerce guest registration allows . This issue affects Commerce guest registration versions: *.*. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-58503",
-    "descripcion": "Frappe is a full-stack web application framework. Prior to 16.16.0 and 15.106.0, user enumeration could be performed via the reset_password endpoint. This issue is fixed in versions 16.16.0 and 15.106.0. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-15087",
+    "descripcion": "vulnerability in Drupal Clean RESTful allows . This issue affects Clean RESTful versions: *.*. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-57584",
-    "descripcion": "Phalcon is a high-performance, full-stack PHP framework. Prior to 5.15.0, every Phalcon MVC application built with a default router registers a built-in route whose compiled PCRE pattern contains the nested quantifier (/.), and the same construct is produced by the /:params placeholder and the CLI router. Phalcon\\Mvc\\Router::handle() matches this pattern against the attacker-controlled request URI on every request, so a crafted path such as one containing repeated slashes followed by decoded newlines can trigger catastrophic backtracking and cause CPU exhaustion or route-matching failure. This issue is fixed in version 5.15.0. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-15086",
+    "descripcion": "vulnerability in Drupal Raw Formatter [Meta Tag Formatter] allows . This issue affects Raw Formatter [Meta Tag Formatter] versions: *.*. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-55884",
-    "descripcion": "Tilt defines dev environments as code for microservice apps on Kubernetes. From 0.20.8 through 0.37.3, the Tilt HUD HTTP server registers handlers on a gorilla/mux router with no authenticating middleware. When the HUD is bound to a non-loopback address, an unauthenticated network caller can trigger developer-defined resources, tamper with Tiltfile arguments, read full engine state including the session token, and invoke apiserver resources through the token-attaching /proxy handler. This issue is fixed in version 0.37.4. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-10",
-    "cve": "CVE-2026-55883",
-    "descripcion": "Tilt defines dev environments as code for microservice apps on Kubernetes. From 0.24.0 through 0.37.3, the Tilt HUD WebSocket at /ws/view is gated by a CSRF token, but the token is served by the unauthenticated /api/websocket_token endpoint and the upgrader accepts clients that omit an Origin header. When the HUD is network-exposed, an attacker who can reach the listener can open the HUD WebSocket and receive the full view stream, including session state, Tiltfile contents, resource statuses, and continued updates. This issue is fixed in version 0.37.4. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-14480",
+    "descripcion": "OpenPLC Runtime v3 contains an authenticated arbitrary file write vulnerability in the legacy web UI program‑upload workflow. The application stores an attacker‑supplied filename (prog_file) directly into the Programs.File database field and later uses this value as the destination path for an uploaded file without validating or restricting the path. Because Python os.path.join() honors attacker‑controlled absolute paths, an authenticated user can write arbitrary files anywhere writable by the OpenPLC webserver process. In the default build pipeline, all C++ source files within the OpenPLC runtime core directory are automatically compiled into the executable runtime binary. By writing a malicious .cpp file into this directory, an authenticated attacker can escalate the arbitrary file write into arbitrary native code execution when the operator triggers a normal program compilation and runtime start. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
