@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-61459",
-    "descripcion": "MCP Server Kubernetes before 3.9.0 contains an argument injection vulnerability in structured tools (kubectl_get, kubectl_describe, kubectl_delete) that allows attackers to bypass the assertNoDangerousFlags security check by supplying resourceType and name parameters with leading dashes. Attackers can inject the --server flag to redirect kubectl commands to an attacker-controlled API server, causing the operator&#39;s bearer token to be transmitted externally and enabling full cluster compromise. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-59155",
+    "descripcion": "Nezha Monitoring is a self-hostable, lightweight, servers and websites monitoring and O&M tool. Prior to 2.2.5, the GET /api/v1/ddns and GET /api/v1/notification endpoints return full resource objects including plaintext third-party API credentials, including Cloudflare API tokens, TencentCloud SecretKeys, Slack, Discord, and Telegram webhook URLs with embedded bot tokens, and Authorization header values, without any field-level redaction. Any authenticated admin or PAT with nezha:ddns:read or nezha:notification:read scope can receive stored credentials through the listDDNS and listNotification handlers in a single API response. This issue is fixed in version 2.2.5. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-6872",
-    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 10/07/2026 10/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-58591",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Colorbox allows Cross-Site Scripting (XSS). This issue affects Colorbox versions: from 0.0.0 to 2.1.5, from 0.0.0 to 2.2.0. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-59151",
-    "descripcion": "Prowler is a cloud security platform. Prior to 5.30.3, Prowler&#39;s SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token, and the ACS finish logic in api/src/backend/api/v1/views.py recalculated the tenant from user.email instead of binding token issuance to the validated SAML configuration. An authenticated attacker with a controlled SAML IdP could complete a valid SAML flow for an attacker-controlled domain while asserting an email address from another configured domain, causing a SAMLToken and tenant-scoped JWT to be issued for the wrong tenant and enabling cross-tenant account takeover. This issue is fixed in version 5.30.3. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-58590",
+    "descripcion": "Missing Authorization vulnerability in Drupal FlowDrop allows Forceful Browsing. This issue affects FlowDrop versions: from 0.0.0 to 1.6.0. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-53449",
-    "descripcion": "Coturn is a free open source implementation of TURN and STUN Server. Prior to 4.13.0, the psd print sessions dump CLI command in coturn takes a filename argument and directly passes it to fopen with no path validation. An authenticated admin with CLI access can overwrite arbitrary files writable by the coturn process because the command string is used as-is after stripping the psd prefix and leading spaces, allowing truncation and overwrite with session dump data. This issue is fixed in version 4.13.0. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-58589",
+    "descripcion": "Missing Authorization vulnerability in Drupal FlowDrop allows Forceful Browsing. This issue affects FlowDrop versions: from 0.0.0 to 1.6.0. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-53448",
-    "descripcion": "Coturn is a free open source implementation of TURN and STUN Server. Prior to 4.12.0, the coturn HTTPS admin panel passes HTTP query parameters directly into SQL queries via snprintf string interpolation without sanitization. The is_secure_string filter that protects the STUN protocol path is not applied to the admin panel&#39;s delete-user, delete-secret, and delete-IP operations, so an authenticated admin can inject arbitrary SQL through the du, ds, and dip parameters, gaining full database control and potentially OS-level access via PostgreSQL COPY TO PROGRAM. This issue is fixed in version 4.12.0. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-58588",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Drupal Canvas allows Cross-Site Scripting (XSS). This issue affects Drupal Canvas versions: from 0.0.0 to 1.4.2, from 1.5.0 to 1.5.2, from 1.6.0 to 1.6.1, from 1.7.0 to 1.7.1. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2025-30007",
-    "descripcion": "HestiaCP before 1.9.5 contains an authenticated OS command injection vulnerability that allows low-privilege authenticated users to execute arbitrary commands as root by injecting a single-quote character into unvalidated DNS record types. Attackers can exploit insufficient input validation in is_dns_record_format_valid() combined with unsafe eval-based parsing in update_domain_zone() to prematurely close a variable assignment string and achieve full root code execution on the underlying host in a single DNS record creation step. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-58587",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#34;Cross-site Scripting&#34;) vulnerability in Drupal Drupal Canvas allows Cross-Site Scripting (XSS). This issue affects Drupal Canvas versions: from 0.0.0 to 1.4.2, from 1.5.0 to 1.5.2, from 1.6.0 to 1.6.1, from 1.7.0 to 1.7.1. 11/07/2026 11/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-56665",
-    "descripcion": "ZITADEL is an open source identity management platform. Prior to 3.4.12 and 4.15.2, ZITADEL is an open source identity management platform. From 3.0.0-rc.1 through 3.4.11 and from 4.0.0-rc.1 through 4.15.1, ZITADEL&#39;s external JWT Identity Provider validation in internal/idp/providers/jwt/session.go skips expiration handling when an incoming token omits the exp claim, allowing a token from a trusted issuer to be treated as valid without an automatic expiration window. This issue is fixed in versions 3.4.12 and 4.15.2. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-58503",
+    "descripcion": "Frappe is a full-stack web application framework. Prior to 16.16.0 and 15.106.0, user enumeration could be performed via the reset_password endpoint. This issue is fixed in versions 16.16.0 and 15.106.0. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-56668",
-    "descripcion": "ZITADEL is an open source identity management platform. Prior to 4.15.3, ZITADEL&#39;s OAuth2 Token Exchange endpoint for urn:ietf:params:oauth:grant-type:token-exchange does not verify that the subject token belongs to the requesting client or that requested scopes remain within the original token&#39;s scopes, allowing a low-privilege token to be exchanged for elevated permissions at another application. This issue is fixed in version 4.15.3. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-57584",
+    "descripcion": "Phalcon is a high-performance, full-stack PHP framework. Prior to 5.15.0, every Phalcon MVC application built with a default router registers a built-in route whose compiled PCRE pattern contains the nested quantifier (/.), and the same construct is produced by the /:params placeholder and the CLI router. Phalcon\\Mvc\\Router::handle() matches this pattern against the attacker-controlled request URI on every request, so a crafted path such as one containing repeated slashes followed by decoded newlines can trigger catastrophic backtracking and cause CPU exhaustion or route-matching failure. This issue is fixed in version 5.15.0. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-56666",
-    "descripcion": "ZITADEL is an open source identity management platform. Prior to 4.15.3, ZITADEL&#39;s external identity provider handler checks that the local user&#39;s email is verified but does not verify that the external IdP confirmed ownership of the same email before auto-linking by email, allowing a permissive provider account with a victim email address to be linked to the victim&#39;s local account. This issue is fixed in version 4.15.3. 10/07/2026 10/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-55884",
+    "descripcion": "Tilt defines dev environments as code for microservice apps on Kubernetes. From 0.20.8 through 0.37.3, the Tilt HUD HTTP server registers handlers on a gorilla/mux router with no authenticating middleware. When the HUD is bound to a non-loopback address, an unauthenticated network caller can trigger developer-defined resources, tamper with Tiltfile arguments, read full engine state including the session token, and invoke apiserver resources through the token-attaching /proxy handler. This issue is fixed in version 0.37.4. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-10",
-    "cve": "CVE-2026-57476",
-    "descripcion": "Deloitte AI Assist for Customer exposed unauthenticated API endpoints that allowed an attacker with knowledge of additional parameters to read from or inject content into the retrieval-augmented generation (RAG) corpus. On 2026-03-25, AI Assist for Customer restricted network access and enforced authentication for the previously exposed endpoints. 10/07/2026 10/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-55883",
+    "descripcion": "Tilt defines dev environments as code for microservice apps on Kubernetes. From 0.24.0 through 0.37.3, the Tilt HUD WebSocket at /ws/view is gated by a CSRF token, but the token is served by the unauthenticated /api/websocket_token endpoint and the upgrader accepts clients that omit an Origin header. When the HUD is network-exposed, an attacker who can reach the listener can open the HUD WebSocket and receive the full view stream, including session state, Tiltfile contents, resource statuses, and continued updates. This issue is fixed in version 0.37.4. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
