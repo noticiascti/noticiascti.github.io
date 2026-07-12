@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-07-11",
+    "cve": "CVE-2026-58281",
+    "descripcion": "Deserialization of untrusted data in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-11",
     "cve": "CVE-2026-10660",
     "descripcion": "The Bluetooth BAP Broadcast Assistant GATT client in subsys/bluetooth/audio/bap_broadcast_assistant.c reassembled remote Broadcast Receive State data into a single file-static net_buf_simple (att_buf, BT_ATT_MAX_ATTRIBUTE_LEN = 512 bytes) shared by all connection instances, while the BUSY flag, long-read handle, and reset/offset state were per-connection. When the device acts as a Broadcast Assistant connected to multiple Scan Delegator peripherals, notification and long-read callbacks from different connections interleave on the shared buffer: the append in notify_handler (net_buf_simple_add_mem at the not-busy branch) performs no tailroom check, so receive-state notifications from two or more delegators accumulate on the same 512-byte buffer and, with a sufficiently large configured ATT MTU (BT_L2CAP_TX_MTU up to 2000) and two-to-three concurrent connections, write past the buffer into adjacent .bss (net_buf_simple_add only asserts in debug builds). Even below the overflow threshold, one connection&#39;s net_buf_simple_reset zeroes the shared length while another connection&#39;s reassembly and GATT read offset are in flight, mixing one peer&#39;s data into another&#39;s parse. A malicious or compromised Scan Delegator (or two colluding peers) over BLE can trigger this, causing out-of-bounds writes (memory corruption / denial of service) and cross-connection data corruption. The fix moves the buffer into the per-connection instance struct so each connection reassembles into its own buffer. Affects Zephyr releases shipping the Broadcast Assistant with the shared buffer, including v4.4.0 and earlier. 11/07/2026 11/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-11",
     "cve": "CVE-2026-61447",
     "descripcion": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAgent._execute_python() that executes LLM-generated Python code without AST validation, import restrictions, or sandbox enforcement. Attackers can influence LLM output through prompt injection to exfiltrate all environment secrets and execute arbitrary code on the host system. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-07-11",
-    "cve": "CVE-2026-61445",
-    "descripcion": "PraisonAI before 4.6.78 contains arbitrary file write and command execution vulnerabilities in the AICoder component due to missing path validation and command sanitization in LLM tool calls. Attackers can inject malicious prompts through the chat interface to write files to arbitrary filesystem locations and execute arbitrary shell commands with root privileges. 11/07/2026 11/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
