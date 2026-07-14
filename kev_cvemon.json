@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-07-14",
+    "cve": "CVE-2025-3248",
+    "descripcion": "Langflow versions prior to 1.3.0 are susceptible to code injection in the /api/v1/validate/code endpoint. A remote and unauthenticated attacker can send crafted HTTP requests to execute arbitrary code."
+  },
+  {
+    "fecha": "2026-07-14",
     "cve": "CVE-2026-55255",
     "descripcion": "Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to 1.9.1, an Insecure Direct Object Reference (IDOR) vulnerability in /api/v1/responses endpoint allows an authenticated attacker to execute any flow belonging to another user by specifying the ..."
   },
@@ -38,11 +43,6 @@
     "fecha": "2026-07-14",
     "cve": "CVE-2026-5174",
     "descripcion": "Improper input validation vulnerability in Progress Software MOVEit Automation allows Privilege Escalation. This issue affects MOVEit Automation: from 2025.1.0 before 2025.1.5, from 2025.0.0 before 2025.0.9, from 2024.0.0 before 2024.1.8, versions prior to 2024.0.0."
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-59939",
-    "descripcion": "httplib2 is a comprehensive HTTP client library for Python. Prior to 0.32.0, httplib2 performs unbounded decompression of HTTP response bodies encoded with Content-Encoding: gzip or deflate in _decompressContent in httplib2/init.py, allowing a malicious or compromised HTTP ..."
   },
   {
     "fecha": "2026-07-14",
