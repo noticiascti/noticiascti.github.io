@@ -1,5 +1,30 @@
 [
   {
+    "fecha": "2026-07-15",
+    "cve": "CVE-2026-15030",
+    "descripcion": "Out-of-bounds Read in ASUS System Control Interface v3, ASUS System Control Interface, and ASUS Business Manager allows a local administrator to read memory regions beyond the intended firmware boundary by supplying a crafted IOCTL request that bypasses the validation. Refer to the &#39; Security Update for ASUS System Control Interface &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-15",
+    "cve": "CVE-2026-15029",
+    "descripcion": "Untrusted Pointer Dereference in ASUS System Control Interface v3, ASUS System Control Interface, and ASUS Business Manager allows a local administrator to perform arbitrary physical memory read and write operations via crafted IOCTL requests to the driver, bypassing OS-enforced memory protections. Refer to the &#39; Security Update for ASUS System Control Interface &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-15",
+    "cve": "CVE-2026-13585",
+    "descripcion": "Allocation of Resources Without Limits and Throttling and Sensitive Information in Resource Not Removed Before Reuse in the ASUS System Control Interface driver and ASUS Business Manager allow a local administrator to disclose sensitive information via crafted IOCTL requests, which, in severe cases, may lead to a Denial of Service (DoS) on the system. Refer to the &#39; Security Update for ASUS System Control Interface &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:H/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-15",
+    "cve": "CVE-2026-13385",
+    "descripcion": "An Improper Validation of Integrity Check Value and Improper Certificate Validation in certain ASUS router models allows a remote man-in-the-middle(MITM) user to make the router download and execute arbitrary command via a spoofed server. Refer to the &#39; Security Update for ASUS Router Firmware &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.50 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-15",
+    "cve": "CVE-2026-11851",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#34;SQL Injection&#34;) in the web management interface of certain ASUS router models allows a remote authenticated user to disclose confidential information via a crafted request that bypasses existing input validation Refer to the &#39; Security Update for ASUS Router Firmware &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
     "fecha": "2026-07-14",
     "cve": "CVE-2026-9770",
     "descripcion": "Kasa EC71 v4 and EC70 v4 firmware contains a static cryptographic private key stored in a read-only filesystem that is shared across devices. An attacker with access to the firmware image can extract the embedded key. Successful exploitation may allow an unauthenticated attacker on the same network to use this key in the web management service, compromising the confidentiality of encrypted communications. This may enable passive decryption of traffic or active man-in-the-middle (MITM) attacks 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -23,30 +48,5 @@
     "fecha": "2026-07-14",
     "cve": "CVE-2026-51808",
     "descripcion": "Buffer Overflow vulnerability in OpenHTJ2K v.0.18.4 and before allows an attacker to execute arbitrary code via the openhtj2k_decoder_impl::invoke, invoke_line_based, invoke_line_based_stream, and invoke_line_based_predecoded function in source/core/interface/decoder.cpp 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-51807",
-    "descripcion": "Buffer Overflow vulnerability in OpenHTJ2K v.0.18.4 and before allows an attacker to execute arbitrary code via the j2k_precinct_subband::parse_packet_header() in source/core/coding/coding_units.cpp 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-36035",
-    "descripcion": "Incorrect access control in the /api/License/deactivateOffline endpoint of CAXPerts UniversalPlantViewer WebServices Server v2.7.6 allows authenticated attackers with low-level privileges to cause a Denial of Service (DoS) via removing the license from the webserver. 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-15753",
-    "descripcion": "A vulnerability was determined in zhinianboke xianyu-auto-reply on Server. Affected by this vulnerability is an unknown functionality of the file /api/v1/payment/withdraw/review?action=approve. Executing a manipulation can lead to trusting http permission methods on the server side. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. This patch is called 19fc3282a1bb78a05c34945c088525d20e081cbd. It is best practice to apply a patch to resolve this issue. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-15752",
-    "descripcion": "A vulnerability was found in zhinianboke xianyu-auto-reply up to dcb445ad97816ad65299a7580ee0c8c8f929da84. Affected is an unknown function of the file /api/v1/users/ of the component Backend User Endpoint. Performing a manipulation results in missing authorization. The attack may be initiated remotely. The exploit has been made public and could be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The patch is named 19fc3282a1bb78a05c34945c088525d20e081cbd. Applying a patch is the recommended action to fix this issue. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-15751",
-    "descripcion": "A security vulnerability has been detected in mastergo-design mastergo-magic-mcp up to 0.2.0. The affected element is the function execute of the file mastergo/component-workflow.md of the component mcp__getComponentGenerator. The manipulation of the argument rootPath leads to path traversal. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
