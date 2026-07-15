@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-07-14",
+    "cve": "CVE-2026-9770",
+    "descripcion": "Kasa EC71 v4 and EC70 v4 firmware contains a static cryptographic private key stored in a read-only filesystem that is shared across devices. An attacker with access to the firmware image can extract the embedded key. Successful exploitation may allow an unauthenticated attacker on the same network to use this key in the web management service, compromising the confidentiality of encrypted communications. This may enable passive decryption of traffic or active man-in-the-middle (MITM) attacks 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-14",
     "cve": "CVE-2026-13230",
     "descripcion": "An information disclosure vulnerability was identified in TP-Link Kasa EC70 v4 and EC71 v4 in the local discovery mechanism, which exposes sensitive geolocation information without requiring authentication. This issue allows an attacker on the same local network to retrieve geolocation-related data through crafted responses. The vulnerability impacts confidentiality only, with no evidence of integrity of availability impact. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-14",
     "cve": "CVE-2026-15751",
     "descripcion": "A security vulnerability has been detected in mastergo-design mastergo-magic-mcp up to 0.2.0. The affected element is the function execute of the file mastergo/component-workflow.md of the component mcp__getComponentGenerator. The manipulation of the argument rootPath leads to path traversal. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2025-56365",
-    "descripcion": "A reachable assertion vulnerability exists in the Matter SDK (connectedhomeip) before 1.4.0, in the interaction model command processing logic. When an InvokeCommandRequest is sent to a nonexistent endpoint and cluster (e.g., 0x34), the code incorrectly treats the endpoint as valid due to missing checks in CodegenDataModelProvider::Invoke. This causes a VerifyOrDie failure in ProcessCommandDataIB and results in a crash (SIGABRT). The issue has been acknowledged and fixed in a later revision (PR #37207). 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
