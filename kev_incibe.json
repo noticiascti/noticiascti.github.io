@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-5040",
-    "descripcion": "TP-Link Deco M5 v1 uses a weak password hashing mechanism to store user credentials. An attacker who obtains the password hash through system compromise or privileged access could perform brute-force or dictionary attacks. Successful exploitation may result in disclosure of authentication credentials, enabling unauthorized access to device management functions, depending on the privileges associated with the recovered password. The primary security impact is loss of confidentiality. 14/07/2026 14/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-13230",
+    "descripcion": "An information disclosure vulnerability was identified in TP-Link Kasa EC70 v4 and EC71 v4 in the local discovery mechanism, which exposes sensitive geolocation information without requiring authentication. This issue allows an attacker on the same local network to retrieve geolocation-related data through crafted responses. The vulnerability impacts confidentiality only, with no evidence of integrity of availability impact. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-15720",
-    "descripcion": "In Open5GS through version 2.7.7 a pre-authentication heap out-of-bounds read in the AMF NAS 5GS mobile-identity handler may result in subscriber-wide denial of service. 14/07/2026 14/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-5270",
+    "descripcion": "An authentication bypass vulnerability exists in certain releases of Ciena Navigator Network Control Suite (NCS), Manage Control Plan (MCP), and Blue Planet products. The issue is caused by improper handling of HTTP request paths and headers, which allows an unauthenticated attacker to manipulate requests in a manner that bypasses authentication and associated audit logging controls. 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-62659",
-    "descripcion": "A security flaw was discovered in the NETGEAR WAX333 Access Point that could allow someone already logged in and connected to the local network to make unauthorized changes to the device&#39;s settings 14/07/2026 14/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:D/RE:L/U:Amber Gravedad 4.0 4.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-5269",
+    "descripcion": "In Ciena&#39;s Navigator Network Control Suite (NCS) and Manage Control Plan (MCP), there are hidden system accounts used for internal software operations. Some of these accounts have default passwords that may be predictable. While these accounts have very limited permissions on their own, an attacker could combine an attack using one of these accounts with other potential weaknesses to launch a more significant attack, possibly leading to escalation of privilege on the system. 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-62658",
-    "descripcion": "A security flaw was discovered in certain NETGEAR Nighthawk RAX series routers that could allow someone already logged in to the device to run unauthorized commands or code on the router. 14/07/2026 14/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-51808",
+    "descripcion": "Buffer Overflow vulnerability in OpenHTJ2K v.0.18.4 and before allows an attacker to execute arbitrary code via the openhtj2k_decoder_impl::invoke, invoke_line_based, invoke_line_based_stream, and invoke_line_based_predecoded function in source/core/interface/decoder.cpp 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-62657",
-    "descripcion": "A security flaw in the router&#39;s certificate validation process was discovered in the NETGEAR XR1000 Gaming Router and certain Nighthawk models that could allow an unauthorized person to remotely access and take control of the device. 14/07/2026 14/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber Gravedad 4.0 4.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-51807",
+    "descripcion": "Buffer Overflow vulnerability in OpenHTJ2K v.0.18.4 and before allows an attacker to execute arbitrary code via the j2k_precinct_subband::parse_packet_header() in source/core/coding/coding_units.cpp 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-62656",
-    "descripcion": "A security flaw was found in certain NETGEAR RAX models that could allow a logged-in user to send specially crafted requests to the router and run unauthorized commands. This could enable the user to make unauthorized changes to the router and affect its security and operation. 14/07/2026 14/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-36035",
+    "descripcion": "Incorrect access control in the /api/License/deactivateOffline endpoint of CAXPerts UniversalPlantViewer WebServices Server v2.7.6 allows authenticated attackers with low-level privileges to cause a Denial of Service (DoS) via removing the license from the webserver. 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-62655",
-    "descripcion": "A security flaw was found in certain NETGEAR Orbi models that could allow an unauthorized user to cause the device to stop responding or restart unexpectedly, disrupting network connectivity and making the device temporarily unavailable. 14/07/2026 14/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.70 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-15753",
+    "descripcion": "A vulnerability was determined in zhinianboke xianyu-auto-reply on Server. Affected by this vulnerability is an unknown functionality of the file /api/v1/payment/withdraw/review?action=approve. Executing a manipulation can lead to trusting http permission methods on the server side. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. This patch is called 19fc3282a1bb78a05c34945c088525d20e081cbd. It is best practice to apply a patch to resolve this issue. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-4018",
-    "descripcion": "TOCTOU Race Condition in specific trace commands of the TraceEvent() system call could allow an attacker with local access and with the PROCMGR_AID_TRACE ability, to cause information disclosure, data tampering or a crash of the QNX Neutrino kernel. 14/07/2026 14/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-15752",
+    "descripcion": "A vulnerability was found in zhinianboke xianyu-auto-reply up to dcb445ad97816ad65299a7580ee0c8c8f929da84. Affected is an unknown function of the file /api/v1/users/ of the component Backend User Endpoint. Performing a manipulation results in missing authorization. The attack may be initiated remotely. The exploit has been made public and could be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The patch is named 19fc3282a1bb78a05c34945c088525d20e081cbd. Applying a patch is the recommended action to fix this issue. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-4017",
-    "descripcion": "Buffer Overflow in the entry handler of the TraceEvent() system call could allow an attacker with local access to cause information disclosure, data tampering or a crash of the QNX Neutrino kernel. 14/07/2026 14/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-15751",
+    "descripcion": "A security vulnerability has been detected in mastergo-design mastergo-magic-mcp up to 0.2.0. The affected element is the function execute of the file mastergo/component-workflow.md of the component mcp__getComponentGenerator. The manipulation of the argument rootPath leads to path traversal. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-14",
-    "cve": "CVE-2026-15757",
-    "descripcion": "A security flaw was discovered in the NETGEAR DGND3700v1 that could allow someone on the same local WiFi network to send unauthorized commands to the device. This issue was identified through testing in a controlled research environment using a simulated version of the router&#39;s software and has not been confirmed on physical production devices. 14/07/2026 14/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:D/RE:L/U:Amber Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2025-56365",
+    "descripcion": "A reachable assertion vulnerability exists in the Matter SDK (connectedhomeip) before 1.4.0, in the interaction model command processing logic. When an InvokeCommandRequest is sent to a nonexistent endpoint and cluster (e.g., 0x34), the code incorrectly treats the endpoint as valid due to missing checks in CodegenDataModelProvider::Invoke. This causes a VerifyOrDie failure in ProcessCommandDataIB and results in a crash (SIGABRT). The issue has been acknowledged and fixed in a later revision (PR #37207). 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
