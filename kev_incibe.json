@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-07-15",
+    "cve": "CVE-2026-8920",
+    "descripcion": "Improper Restriction of Communication Channel to Intended Endpoints and External Control of File Name or Path in Aura Wallpaper Service allow a local user to perform file operations by sending crafted commands containing an arbitrary file path and bypassing the service’s path restrictions . On specific models , this can also cause a single feature to become unavailable . Refer to the &#39; Security Update for Aura Wallpaper Service &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-15",
+    "cve": "CVE-2026-8919",
+    "descripcion": "Permissive Cross-domain Security Policy with Untrusted Domains in ASUS GameSDK allows a remote user to obtain a local user’s NTLM hash by convincing the user to visit a crafted web page that sends a request containing a UNC path to the application’s local service endpoint. This can result in information disclosure or data tampering, may cause GameSDK to become unavailable, and may also enable access to the victim’s information on other services. Refer to the &#39; Security Update for ASUS GameSDK &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-15",
     "cve": "CVE-2026-15030",
     "descripcion": "Out-of-bounds Read in ASUS System Control Interface v3, ASUS System Control Interface, and ASUS Business Manager allows a local administrator to read memory regions beyond the intended firmware boundary by supplying a crafted IOCTL request that bypasses the validation. Refer to the &#39; Security Update for ASUS System Control Interface &#39; section on the ASUS Security Advisory for more information. 15/07/2026 15/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-07-14",
     "cve": "CVE-2026-5270",
     "descripcion": "An authentication bypass vulnerability exists in certain releases of Ciena Navigator Network Control Suite (NCS), Manage Control Plan (MCP), and Blue Planet products. The issue is caused by improper handling of HTTP request paths and headers, which allows an unauthenticated attacker to manipulate requests in a manner that bypasses authentication and associated audit logging controls. 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-5269",
-    "descripcion": "In Ciena&#39;s Navigator Network Control Suite (NCS) and Manage Control Plan (MCP), there are hidden system accounts used for internal software operations. Some of these accounts have default passwords that may be predictable. While these accounts have very limited permissions on their own, an attacker could combine an attack using one of these accounts with other potential weaknesses to launch a more significant attack, possibly leading to escalation of privilege on the system. 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-14",
-    "cve": "CVE-2026-51808",
-    "descripcion": "Buffer Overflow vulnerability in OpenHTJ2K v.0.18.4 and before allows an attacker to execute arbitrary code via the openhtj2k_decoder_impl::invoke, invoke_line_based, invoke_line_based_stream, and invoke_line_based_predecoded function in source/core/interface/decoder.cpp 15/07/2026 15/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
