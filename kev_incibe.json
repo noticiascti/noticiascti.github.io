@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-15458",
-    "descripcion": "The SEO Booster plugin for WordPress is vulnerable to generic SQL Injection via the &#39;sort_field&#39; parameter in all versions up to, and including, 7.3.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-15925",
+    "descripcion": "Improper TLS hostname verification in Snowflake Connector for Python versions prior to 4.7.1 may have allowed a network-positioned attacker to bypass certificate hostname validation on HTTPS connections made by the connector. An attacker with on-path network access could exploit this by intercepting or redirecting network traffic and presenting a certificate signed by any trusted CA for any domain, causing the connector to accept connections without validating that the certificate matched the requested hostname. Successful exploitation requires an on-path traffic interception capability (e.g. ARP/DNS poisoning, rogue access point, BGP hijacking, or malicious proxy/exit node). This vulnerability may have exposed credentials, query data, and staged file contents to interception and tampering, and may have enabled the attacker to issue arbitrary SQL within the context of the victim&#39;s connector session. Impact is limited by the privileges of the affected Snowflake role. The fix is available in Snowflake Connector for Python version 4.7.1. Users must manually upgrade. 16/07/2026 16/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-15445",
-    "descripcion": "The SEO Booster plugin for WordPress is vulnerable to time-based SQL Injection via the &#39;orderby&#39; parameter in all versions up to, and including, 7.3.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Although esc_sql() and sanitize_text_field() are applied, neither neutralizes SQL keywords, commas, parentheses, or subquery syntax in an unquoted ORDER BY context, leaving the clause fully attacker-controlled. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-12979",
+    "descripcion": "The FunnelKit WordPress plugin before 3.15.0.6 does not validate a user-supplied path before deleting a file during a template-import operation, allowing users with administrator privileges to delete arbitrary .json files outside the intended directory through path traversal, which can disable other FunnelKit WordPress plugin before 3.15.0.6 or (denial of service). 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-15306",
-    "descripcion": "The Product Feed Manager For WooCommerce – Sell on 200+ Online Marketplaces plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via &#39;s&#39; Search Parameter in all versions up to, and including, 7.6.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-12978",
+    "descripcion": "The FunnelKit WordPress plugin before 3.15.0.6 does not escape a user-supplied parameter before reflecting it into the HTML response of one of its page-builder AJAX actions, allowing unauthenticated attackers to perform Reflected Cross-Site Scripting against logged-in users who open a crafted page. The affected action is only registered when the Divi /builder is active. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-15013",
-    "descripcion": "The SAML Single Sign On – SSO Login plugin for WordPress is vulnerable to Authentication Bypass via SAML Signature Algorithm Confusion in all versions up to, and including, 5.4.3. The vulnerability exists because `Mo_SAML_Utilities::mo_saml_cast_key()` reads the `SignatureMethod` Algorithm attribute directly from the attacker-controlled `SAMLResponse` parameter rather than enforcing the locally configured algorithm, causing the plugin to recast the IdP&#39;s RSA public key as an HMAC-SHA1 shared secret and validate the forged signature against it. This makes it possible for unauthenticated attackers to forge a SAML assertion targeting any WordPress account — including administrators — obtain valid WordPress authentication cookies, and achieve full administrator-level account takeover. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-12907",
+    "descripcion": "The RTMKit WordPress plugin before 2.0.9 does not perform a proper capability check on one of its -builder AJAX actions, allowing users with at least the Author role to create and activate a site-wide template that overrides the header, footer or other global areas displayed to all visitors, which is normally restricted to administrators. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-13042",
-    "descripcion": "The RPB Chessboard plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content in all versions up to, and including, 8.1.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. WordPress&#39;s save-time kses sanitization does not mitigate this issue because the crafted payload uses only kses-allowed tags and attributes (such as an &lt;a&gt; element with title and href), and the dangerous attribute-breaking HTML is synthesized entirely at render time by the plugin&#39;s own comment_text filter. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-12906",
+    "descripcion": "The RTMKit WordPress plugin before 2.0.9 does not perform a capability check in one of its AJAX actions and resolves a request-supplied post identifier directly, allowing users with at least the Contributor role to read the titles of other users&#39; private, draft, pending, scheduled and trashed posts. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-21729",
-    "descripcion": "Loki queries with large limits can cause large memory allocations which can impact the availability of the service, depending on its deployment strategy. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-12869",
+    "descripcion": "The Header Footer Builder for Elementor WordPress plugin before 1.2.1 does not require an administrative capability for its dashboard template-import action (it allows any edit_posts user), so a Contributor can import a template containing an Elementor HTML widget configured to display site-wide, injecting JavaScript that executes in the session of any visitor or administrator who loads the site. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-15652",
-    "descripcion": "The Easy Accordion – AI-Powered FAQ & Accordion Blocks, Product FAQ plugin for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;align&#39; Block Attribute in all versions up to, and including, 3.1.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-12684",
+    "descripcion": "The Customer Reviews for WooCommerce WordPress plugin before 5.113.0 does not perform authentication, capability, or nonce checks on one of its media upload AJAX actions when the review media attachment feature is enabled, allowing unauthenticated users to upload media files (bounded to an image and video allowlist) to the Media Library and create attachment posts, leading to media library pollution and disk space exhaustion. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-15336",
-    "descripcion": "The Catch Themes Demo Import plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 3.3. This is due to the catch_themes_demo_import_activate_plugin() function, hooked on admin_init when the activate_plugin GET parameter is present, calling Plugin_Upgrader::install() to download and install a plugin from WordPress.org before performing the current_user_can(&#39;activate_plugins&#39;) capability check. This makes it possible for authenticated attackers, with subscriber-level access and above, to install the hardcoded &#39;essential-content-types&#39; plugin from the WordPress. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-12585",
+    "descripcion": "The Abandoned Cart Lite for WooCommerce WordPress plugin before 6.8.2 does not protect the integrity of its cart-recovery tokens or bind them to the requesting account, allowing unauthenticated attackers to forge a recovery link that logs them in as another user when the automatic-login option is enabled. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-14987",
-    "descripcion": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;twitter_message&#39; Sequoia Template Setting in all versions up to, and including, 4.16.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with give worker-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected script executes specifically when a donor clicks the Share on Twitter button on the Sequoia donation confirmation view, as that is when the unescaped twitter_message value is evaluated inside the JavaScript template literal. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-12525",
+    "descripcion": "The Redux Framework WordPress plugin before 4.5.13 does not restrict which user meta keys can be written when saving custom profile fields, allowing users with at least the Subscriber role to escalate their privileges to Administrator by submitting a crafted value while updating their own profile, on sites where the Redux Framework WordPress plugin before 4.5.13&#39;s user-profile (Users extension) feature is enabled. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-16",
-    "cve": "CVE-2026-13005",
-    "descripcion": "The MxChat – AI Chatbot & Content Generation for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 3.2.10 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. 16/07/2026 16/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-12510",
+    "descripcion": "The AI Engine WordPress plugin before 3.5.5 does not verify that a user owns the chatbot conversation referenced by a client-supplied identifier, allowing users with subscriber-level access to read other users&#39; private conversations and take over their conversation records when the discussions feature is enabled. 16/07/2026 16/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
