@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-07-17",
+    "cve": "CVE-2026-16072",
+    "descripcion": "A flaw was found in the organization management component of Keycloak. A delegated administrator with permission to manage organizations can create an invitation for a non-existent email address and then retrieve the secret registration link directly through the application programming interface. By using this link, the administrator can create new user accounts and add them to the organization without having the required user management permissions or access to the invited email account. This allows an administrator to bypass security boundaries and add unauthorized members to an organization. 17/07/2026 17/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-07-17",
+    "cve": "CVE-2024-23567",
+    "descripcion": "HCL Aftermarket EPC is affected by Sensitive Information in GET method & in URL which allows application to pass sensitive data via URL parameters during normal usage. Data passed in this manner can be exposed because it may end up stored in unintended locations, including server logs, local browser history and proxy logs. 17/07/2026 17/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-07-17",
+    "cve": "CVE-2024-23564",
+    "descripcion": "HCL Aftermarket EPC is affected by Business Logic Vulnerability using which a non valid user of the application can obtain passwords from the server and redirect them to their own email address by manipulating the server&#39;s response. The application includes checks in the initial requests to verify the validity of the provided UserId, but similar validation is not applied to Email requests when sending passwords to user emails. 17/07/2026 17/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-07-17",
+    "cve": "CVE-2026-59695",
+    "descripcion": "Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to drain the fee-payer wallet in a single request by naming an arbitrarily high gas price. When the mpp Elixir library is configured as fee payer (fee_payer: true), MPP.Tempo.Transaction.cosign_fee_payer/3 re-signs the client-supplied base fields of the 0x76 AASigned envelope verbatim, including max_fee_per_gas and max_priority_fee_per_gas, without validating that they are within reasonable bounds. A malicious client embeds arbitrarily large values for these fields in the signed envelope. The server co-signs and broadcasts the transaction. The effective_gas_price billed against the fee-payer wallet is derived from the attacker-supplied ceilings, so the server pays those inflated per-gas rates out of its own wallet. A single crafted request can drain the wallet entirely, after which the server can no longer sponsor gas for legitimate payment requests. This issue affects mpp: from 0.2.0 before 0.6.0. 17/07/2026 17/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-17",
+    "cve": "CVE-2026-59694",
+    "descripcion": "Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to inflate the fee-payer&#39;s gas cost per payment by a large multiplier, degrading the sponsor&#39;s operating margin. When the mpp Elixir library is configured as fee payer (fee_payer: true), MPP.Tempo.Transaction.cosign_fee_payer/3 re-signs the client-supplied base fields of the 0x76 AASigned envelope verbatim, including the EIP-2930 access list, without validating its length or contents. EIP-2930 access list entries incur intrinsic gas (~2,400 gas per address, plus 1,900 gas per storage key) charged before any opcode executes, regardless of whether the listed addresses are ever touched. A malicious client submits a valid transferWithMemo call alongside a large number of fabricated access-list entries. The server co-signs and broadcasts the transaction. The intended transfer executes normally, but the fee-payer wallet pays a large multiple of the expected gas cost with no corresponding on-chain work. At the maintainer&#39;s default of 137 access-list entries (fitting within Bandit&#39;s 10,000-byte per-header-field limit) and 100 Gwei max_fee_per_gas, per-payment gas cost rises from ~51,287 to ~380,087 gas, a 7.4x multiplier. Sustained abuse destroys the sponsor&#39;s operating margin on low-cost payments and, over time, drains the fee-payer wallet. This issue affects mpp: from 0.2.0 before 0.6.0. 17/07/2026 17/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-17",
+    "cve": "CVE-2026-59252",
+    "descripcion": "Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to drain the fee-payer wallet, resulting in denial of service for legitimate clients. When the mpp Elixir library is configured as fee payer (fee_payer: true), the MPP.Methods.Tempo payment method co-signs and broadcasts a client-supplied EVM transaction without first validating that the client-supplied gas_limit is sufficient to complete the intended call. A malicious client can submit a signed transferWithMemo transaction with gas_limit deliberately set just below the amount required for successful execution. The server co-signs the transaction and broadcasts it via rpc_broadcast_sync. The transaction runs out of gas during EVM execution and reverts, but the fee-payer wallet is still charged for the burned gas while the client pays nothing and receives no resource. Repeated requests from one or more malicious clients drain the fee-payer wallet at near-zero cost to the attacker, ultimately preventing the server from sponsoring gas for legitimate payment requests. The wait_for_confirmation = false (optimistic) path is also affected: it invokes simulate_payment_call via eth_call, but that simulation omits the gas parameter and therefore does not catch out-of-gas conditions. This issue affects mpp: from 0.2.0 before 0.6.0. 17/07/2026 17/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-17",
     "cve": "CVE-2026-22104",
     "descripcion": "Improper access control in Hashtopolis server web-interface chunk activity component for versions prior to 0.14.8 allows any created account to read all cracked hashes of a Hashtopolis server instance. 17/07/2026 17/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:I/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-07-17",
     "cve": "CVE-2026-15380",
     "descripcion": "A non-administrator interactive user can obtain full SYSTEM code execution through a DCOM/task scheduler logic chain — no network access, no memory corruption required (ITMS 8.7.3) 17/07/2026 17/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:A/V:C/RE:M/U:Red Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-17",
-    "cve": "CVE-2026-15379",
-    "descripcion": "The Altiris WMI provider exposes a class (AltirisAgent_Stream) that allows any local standard user to read the contents of any file accessible to the SYSTEM account, bypassing filesystem ACLs. No admin privileges required. The provider reverts to the LocalSystem context when servicing WMI queries without re-impersonating the caller. Any local standard user can therefore read SYSTEM-readable files — including configuration files, service logs, and secrets stored with SYSTEM/Administrator-only ACLs — by querying the provider directly. 17/07/2026 17/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:A/V:C/RE:M/U:Red Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-17",
-    "cve": "CVE-2026-9810",
-    "descripcion": "The AI Copilot WordPress plugin before 1.5.4 does not bind OAuth access tokens to a WordPress user, and accepts any valid token as an administrator session, allowing unauthenticated attackers who complete the public OAuth flow to execute privileged MCP tools as an administrator, including arbitrary user creation and role escalation. 17/07/2026 17/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-17",
-    "cve": "CVE-2026-13402",
-    "descripcion": "The Royal Addons for Elementor WordPress plugin before 1.7.1063 does not check the post status of menu items or the templates they reference in one of its REST endpoints, allowing unauthenticated users to retrieve the rendered HTML content of private or draft Elementor templates linked from non-public navigation menu items. 17/07/2026 17/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-17",
-    "cve": "CVE-2026-12393",
-    "descripcion": "The WPS Bookings for WooCommerce WordPress plugin before 3.11.7 does not verify that a booking order belongs to the requesting user before cancelling it, allowing any authenticated user, such as a Subscriber or Customer, to cancel and void other customers&#39; booking orders. 17/07/2026 17/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-17",
-    "cve": "CVE-2026-11966",
-    "descripcion": "The User Registration & Membership WordPress plugin before 5.2.3 does not perform a capability check for unauthenticated callers on one of its membership payment actions and acts on a caller-supplied user identifier, allowing unauthenticated attackers to delete recently-registered, payment-pending user accounts. 17/07/2026 17/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-17",
-    "cve": "CVE-2026-11961",
-    "descripcion": "The User Registration & Membership WordPress plugin before 5.2.3 does not validate that the membership tier submitted during public registration is one of the tiers allowed by the registration form before assigning that tier&#39;s associated user role, allowing unauthenticated users to register into an arbitrary published membership tier and obtain its role — up to administrator when such a tier exists. 17/07/2026 17/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
