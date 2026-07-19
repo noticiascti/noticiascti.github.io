@@ -16,6 +16,11 @@
   },
   {
     "fecha": "2026-07-19",
+    "cve": "CVE-2026-43499",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rtmutex: Use waiter::task instead of current in remove_waiter() remove_waiter() is used by the slowlock paths, but it is also used for proxy-lock rollback in rt_mutex_start_proxy_lock() when invoked ..."
+  },
+  {
+    "fecha": "2026-07-19",
     "cve": "CVE-2026-42980",
     "descripcion": "Integer underflow (wrap or wraparound) in Windows NT OS Kernel allows an authorized attacker to elevate privileges locally."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-19",
     "cve": "CVE-2026-58644",
     "descripcion": "Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network."
-  },
-  {
-    "fecha": "2026-07-19",
-    "cve": "CVE-2026-13230",
-    "descripcion": "An information disclosure vulnerability was identified in TP-Link Kasa EC70 v4 and EC71 v4 in the local discovery mechanism, which exposes sensitive geolocation information without requiring authentication. This issue allows an attacker on the same local network to retrieve ..."
   }
 ]
