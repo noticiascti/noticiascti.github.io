@@ -26,6 +26,11 @@
   },
   {
     "fecha": "2026-07-19",
+    "cve": "CVE-2026-9770",
+    "descripcion": "Kasa EC71 v4 and EC70 v4 firmware contains a static cryptographic private key stored in a read-only filesystem that is shared across devices. An attacker with access to the firmware image can extract the embedded key. Successful exploitation may allow an ..."
+  },
+  {
+    "fecha": "2026-07-19",
     "cve": "CVE-2026-13230",
     "descripcion": "An information disclosure vulnerability was identified in TP-Link Kasa EC70 v4 and EC71 v4 in the local discovery mechanism, which exposes sensitive geolocation information without requiring authentication. This issue allows an attacker on the same local network to retrieve ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-19",
     "cve": "CVE-2026-39808",
     "descripcion": "A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiSandbox 4.4.0 through 4.4.8 may allow attacker to execute unauthorized code or commands via"
-  },
-  {
-    "fecha": "2026-07-19",
-    "cve": "CVE-2026-56434",
-    "descripcion": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_ssi_module module. This vulnerability may exist when the Server-Side Includes (SSI), proxy_pass, and proxy_buffering off directives are configured. With this configuration, an unauthenticated attacker with ..."
   }
 ]
