@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-21",
+    "cve": "CVE-2026-64609",
+    "descripcion": "Out-of-bounds read via sun.misc.Unsafe in Apache Fory. When out-of-band zero-copy deserialization is used, readAlignedVarUint() can read beyond the bounds of the underlying buffer. Out-of-band zero-copy deserialization is an opt-in feature; applications that do not use it are not affected. This issue affects Apache Fory (formerly Apache Fury): from 0.5.0 before 1.4.0. Versions before 0.11.0 were published under the Maven coordinates org.apache.fury:fury-core. Users are recommended to upgrade to version 1.4.0, which fixes the issue. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-64608",
+    "descripcion": "Heap type confusion and out-of-bounds read/write in the Apache Fory C++ implementation. When deserializing data in compatible mode, the field-skip paths do not correctly validate the declared field types against the actual data, so input with an inconsistent schema can cause type confusion and out-of-bounds memory access. Only the C++ implementation is affected; other language implementations of Apache Fory are not. This issue affects Apache Fory C++: from 0.14.0 before 1.4.0. Users are recommended to upgrade to version 1.4.0, which fixes the issue. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-62415",
+    "descripcion": "The Joomla extension Membership Pro prior version 4.6.2 did by default allow unauthenticated users to upload media assets. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-1771",
+    "descripcion": "The MapSVG plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the SVGFile constructor in all versions up to, and including, 8.14.0 This is due to an incorrect conditional check that prevents file validation from taking place. This makes it possible for authenticated attackers, with Administrator-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 21/07/2026 21/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-1372",
+    "descripcion": "The Tutor LMS Elementor Addons plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 4.0.0 This is due to missing capability checks on the `activate_tutor_free()` and `activate_elementor_free()` functions registered as `admin_action_*` handlers. This makes it possible for authenticated attackers, with Subscriber-level access and above, to activate the Tutor LMS and Elementor plugins without proper authorization. 21/07/2026 21/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-15370",
+    "descripcion": "A flaw was found in libssh. During SFTP server directory listing, the longname field is constructed with unsafe concatenation into a fixed-size stack buffer. When a client causes the server to list attacker-controlled filenames, sufficiently long names can overflow that stack buffer and may lead to crashes or possible code execution on the server. 21/07/2026 21/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-15145",
+    "descripcion": "The Essential Addons for Elementor – Popular Elementor Templates & Widgets plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Fancy Text Widget in all versions up to, and including, 6.6.11 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 21/07/2026 21/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-8593",
+    "descripcion": "Improper permission enforcement in Checkmk versions 2.5.0 before 2.5.0p9, 2.4.0 before 2.4.0p34, 2.3.0 before 2.3.0p49, and 2.2.0 (EOL) allows users without permissions to view and modify BI packs and rules 21/07/2026 21/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-21",
+    "cve": "CVE-2026-3183",
+    "descripcion": "Zohocorp ManageEngine ADSelfService Plus versions before 6524 are vulnerable to Multi Factor Authentication Bypass. 21/07/2026 21/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-21",
     "cve": "CVE-2026-8082",
     "descripcion": "The bpost-shipping-platform WordPress plugin before 3.2.3 does not properly sanitize a parameter before using it in a SQL query during WooCommerce order submission, allowing unauthenticated attackers to perform time-based blind SQL injection on stores running this bpost-shipping-platform WordPress plugin before 3.2.3. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-14185",
-    "descripcion": "The WPBot WordPress plugin before 8.2.0 does not perform a capability or nonce check in one of its retrieval-augmented-generation settings handlers, allowing authenticated users with subscriber-level access to modify the WPBot WordPress plugin before 8.2.0&#39;s configuration. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-14184",
-    "descripcion": "The Academy LMS WordPress plugin before 3.8.1 does not verify ownership of a user-supplied user identifier in several of its lesson AJAX handlers, allowing authenticated users with subscriber-level access to read and modify other users&#39; lesson notes and mark other users&#39; lesson content as completed. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-14183",
-    "descripcion": "The Classified Listing WordPress plugin before 5.3.9 does not verify that the order targeted by its payment-receipt handler belongs to the requesting user, allowing authenticated users with subscriber-level access to read the payment receipt details of any other user&#39;s order. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-13694",
-    "descripcion": "The Bit Form WordPress plugin before 3.1.0 does not properly validate its workflow-trigger token once the associated transient has expired, allowing unauthenticated attackers to re-trigger a form&#39;s configured workflow actions such as notification emails and integrations. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-13693",
-    "descripcion": "The Bit Form WordPress plugin before 3.1.0 does not restrict a form file-field value to a safe path before reading the file and attaching it to a notification email, allowing unauthenticated attackers to read arbitrary server files such as the WordPress configuration file. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-11767",
-    "descripcion": "The Free Builder for Elementor WordPress plugin before 1.6.7 does not sanitise submitted contact form field values before storing them and outputting them in the admin dashboard, allowing unauthenticated attackers to perform Stored Cross-Site Scripting attacks that execute when a logged-in administrator views the form submissions. 21/07/2026 21/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-3182",
-    "descripcion": "Zohocorp ManageEngine Endpoint Central versions before 11.4.2528.34 are affected by cleartext transmission of sensitive information vulnerability. 21/07/2026 21/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-16266",
-    "descripcion": "Versions of the package mongo-object before 3.0.3 are vulnerable to Prototype Pollution via the expandKey() function in util.js. An attacker can modify the JavaScript prototype chain by supplying a crafted property path containing special keys such as __proto__. 21/07/2026 21/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-15927",
-    "descripcion": "A flaw was found in Red Hat Quay&#39;s repository-level mirror configuration feature. The POST and PUT handlers in endpoints/api/mirror.py accept an external_reference parameter without SSRF validation, unlike the organization-level mirror handlers which apply validate_external_registry_url(). A repository administrator can supply a crafted hostname that causes the Quay mirror worker to make requests via Skopeo to internal network services, cloud metadata endpoints, or other resources not intended to be reachable from the Quay application. 21/07/2026 21/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
