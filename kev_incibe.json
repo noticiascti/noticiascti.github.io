@@ -1,5 +1,30 @@
 [
   {
+    "fecha": "2026-07-22",
+    "cve": "CVE-2026-3821",
+    "descripcion": "Supermicro (SMC) SMASH services contain an Arbitrary code execution issue in X14DBG-DAP and X14DBI. An authorized attacker can exploit SMASH’s input capability to compromise data integrity or launch a Denial-of-Service (DoS) attack against the BMC. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-22",
+    "cve": "CVE-2026-14322",
+    "descripcion": "The Timetics WordPress plugin before 1.0.57 does not enforce a pending or unpaid status for new bookings created through a payment method other than its recognised gateways, allowing unauthenticated users to create fully-approved bookings for priced appointments without making any payment. 22/07/2026 22/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-22",
+    "cve": "CVE-2026-12987",
+    "descripcion": "The Events Manager WordPress plugin before 7.3.7 does not safely handle booking-registration data on sites using No-User-Account Booking Mode: a booker-supplied registration field is stored as booking meta and later deserialized without restricting allowed classes, enabling PHP object injection. The resulting gadget chain reaches a database query that is built without parameterisation, so an unauthenticated attacker can read arbitrary database data (e.g. user password hashes, secret keys) when the booking is later loaded. 22/07/2026 22/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-22",
+    "cve": "CVE-2026-12968",
+    "descripcion": "The Product Addons and Product Options With Custom Fields WordPress plugin before 1.6.15 does not restrict an unauthenticated file-upload endpoint and accepts SVG files that are stored and served inline, allowing an unauthenticated attacker to upload a malicious SVG whose embedded script executes in the session of any user (such as an administrator) who later opens the file. 22/07/2026 22/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-22",
+    "cve": "CVE-2026-15802",
+    "descripcion": "The WP Foodbakery plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the &#39;delete_locations_backup_file_callback&#39; function in all versions up to, and including, 4.9. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2026-07-21",
     "cve": "CVE-2026-56844",
     "descripcion": "A vulnerability in the Veeam Updater component of the Veeam Software Appliance that could allow a local user to elevate their privileges and gain root-level access to the underlying operating system. 22/07/2026 22/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -23,30 +48,5 @@
     "fecha": "2026-07-21",
     "cve": "CVE-2026-63262",
     "descripcion": "Missing Authorization (CWE-862) in Kibana can lead to unauthorized cross-space information disclosure via user-supplied input that circumvents space-level access control. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-16489",
-    "descripcion": "A vulnerability was identified in jsforce up to 3.10.16. This issue affects the function _execCommand in the library lib/registry/sfdx.js of the component SFDX Connection Registry. The manipulation leads to os command injection. The attack can only be performed from a local environment. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet. 22/07/2026 22/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-16488",
-    "descripcion": "A vulnerability was determined in QUSETIONS MiniCode-Python 0.1.0. This vulnerability affects the function subprocess.Popen of the file minicode/config.py of the component Project File Handler. Executing a manipulation can lead to os command injection. The attack may be launched remotely. A high complexity level is associated with this attack. It is stated that the exploitability is difficult. The exploit has been publicly disclosed and may be utilized. Upgrading to version 0.1.0-rc1 is able to resolve this issue. This patch is called 9d868dc2550f426c6ddf8ee98f30ffe450ca5e32. It is suggested to upgrade the affected component. 22/07/2026 22/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:P/A:P Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-63261",
-    "descripcion": "Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to denial of service via Excessive Allocation (CAPEC-130). A low-privileged authenticated user can send a specially crafted request to a Kibana machine learning feature, causing the server to exhaust available memory and become unavailable to all users. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-63260",
-    "descripcion": "Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to denial of service via Excessive Allocation (CAPEC-130). An authenticated attacker with low-privilege access can trigger a denial of service condition in Kibana by sending a specially crafted, oversized request payload. Processing this user-supplied input requires resource-intensive memory allocation that can exhaust the available heap memory in the Kibana process, causing it to crash and become unavailable to all users. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-63259",
-    "descripcion": "Authorization Bypass Through User-Controlled Key (CWE-639) in Kibana can lead to information disclosure via user-supplied identifiers that reference scheduled query result data from Kibana Spaces the requester is not authorized to access. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
