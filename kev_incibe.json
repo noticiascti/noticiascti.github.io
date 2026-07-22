@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-07-22",
+    "cve": "CVE-2026-45820",
+    "descripcion": "fflate through 0.8.2 is vulnerable to denial of service via an infinite loop in unzipSync(). A crafted ZIP archive with a central directory entry declaring compressed_size=0xFFFFFFFF (ZIP64 sentinel) but missing the required ZIP64 extra field tag 0x0001 causes z64e() to loop indefinitely due to out-of-bounds reads returning undefined, which coerces to 0, keeping the loop condition permanently true. 22/07/2026 22/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:U/V:D/RE:M/U:Amber Gravedad 4.0 6.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-22",
     "cve": "CVE-2026-3821",
     "descripcion": "Supermicro (SMC) SMASH services contain an Arbitrary code execution issue in X14DBG-DAP and X14DBI. An authorized attacker can exploit SMASH’s input capability to compromise data integrity or launch a Denial-of-Service (DoS) attack against the BMC. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-07-21",
     "cve": "CVE-2026-63263",
     "descripcion": "Uncontrolled Resource Consumption (CWE-400) in Elasticsearch can lead to denial of service via Exponential Data Expansion (CAPEC-197). An authenticated user may submit a specially crafted query to the ES|QL engine that causes exponential CPU consumption during query evaluation. Because the resource exhaustion persists beyond query completion, repeated requests can fully exhaust the available query worker resources, rendering ES|QL queries unavailable until the node is restarted. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-21",
-    "cve": "CVE-2026-63262",
-    "descripcion": "Missing Authorization (CWE-862) in Kibana can lead to unauthorized cross-space information disclosure via user-supplied input that circumvents space-level access control. 22/07/2026 22/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
