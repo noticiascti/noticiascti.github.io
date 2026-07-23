@@ -36,11 +36,6 @@
   },
   {
     "fecha": "2026-07-23",
-    "cve": "CVE-2026-53362",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv6: account for fraggap on the paged allocation path In __ip6_append_data(), when the paged-allocation branch is taken (MSG_MORE / NETIF_F_SG / large fraglen), alloclen and pagedlen are computed ..."
-  },
-  {
-    "fecha": "2026-07-23",
     "cve": "CVE-2026-63801",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: tipc: fix slab-use-after-free Read in tipc_aead_decrypt_done tipc_aead_decrypt() goes straight from tipc_bearer_hold(b) to crypto_aead_decrypt(req) without taking a reference on the netns, unlike the encrypt ..."
   },
@@ -48,5 +43,10 @@
     "fecha": "2026-07-23",
     "cve": "CVE-2026-53383",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ksmbd: reject non-VALID session in compound request branch smb2_check_user_session() takes a shortcut for any operation that is not the first in a COMPOUND request: it reuses work->sess (the session bound ..."
+  },
+  {
+    "fecha": "2026-07-23",
+    "cve": "CVE-2026-53362",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv6: account for fraggap on the paged allocation path In __ip6_append_data(), when the paged-allocation branch is taken (MSG_MORE / NETIF_F_SG / large fraglen), alloclen and pagedlen are computed ..."
   }
 ]
