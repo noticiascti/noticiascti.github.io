@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-07-23",
+    "cve": "CVE-2026-7534",
+    "descripcion": "The SUMO Reward Points plugin for WordPress is vulnerable to Unauthenticated Stored Cross-Site Scripting via the REST API endpoint `/wp-json/wc-srp/v1/earning` in versions up to, and including, 32.7.0. This is due to the `user_has_cap` filter in the `SRP_REST_Earning_Controller` class unconditionally granting the custom `rs_earning_read` capability to all users — including unauthenticated visitors — combined with missing sanitization of the `reason` parameter in the `create_items()` function and missing output escaping in the `column_default()` method of `SRP_Master_Log`. This makes it possible for unauthenticated attackers to inject arbitrary web scripts into the reward points log that will execute whenever an administrator accesses the Master Log or User Reward Points admin pages. 23/07/2026 23/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-23",
+    "cve": "CVE-2026-7232",
+    "descripcion": "The FormCraft plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;[parameter name]&#39; parameter in all versions up to, and including, 3.9.14 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit chain combines a server-side gap — where composite matrix sub-field keys such as field2_0 and field2_1 are never passed through the sanitization loop and are stored raw via $wpdb->insert() — with a client-side gap where DOMPurify is only invoked when typeof field.value === &#39;string&#39;, but matrix values arrive from the server as arrays, bypassing the check before being mapped to strings and injected into the DOM. Additionally, the same sink is reachable via a second attack vector: array-typed field values are passed through htmlentities() on submission but later reversed by html_entity_decode() at formcraft-main.php:2608 and :2122, restoring the malicious payload before storage and rendering. 23/07/2026 23/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-23",
+    "cve": "CVE-2026-63226",
+    "descripcion": "Printers and Multifunction Printers (MFPs) provided by Ricoh Company, Ltd. do not implement restrictions on SSH port forwarding, allowing to connect to arbitrary destinations. When SSH is enabled on an affected product, SSH port forwarding may be leveraged to connect to other node on the LAN. 23/07/2026 23/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-07-23",
     "cve": "CVE-2026-6390",
     "descripcion": "A flaw was found in GNU nano&#39;s multi-buffer error message handling. When a user opens multiple files at startup and one triggers an ALERT-level error, a specially crafted filename containing printf format specifiers can be reinterpreted. This format string vulnerability may allow an attacker to achieve stack information disclosure, cause a denial of service (crash), or potentially perform arbitrary memory writes. 23/07/2026 23/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-07-22",
     "cve": "CVE-2026-16631",
     "descripcion": "A vulnerability was detected in publint up to 0.1.4. This impacts the function child_process.exec of the file src/node/pack.js of the component package-manager Command Handler. The manipulation results in os command injection. Attacking locally is a requirement. The exploit is now public and may be used. The patch is identified as adf2d9a09945fc98c85a2520a89f441d78b2dbd8. It is advisable to implement a patch to correct this issue. The project maintainer explains: &#34;I think it&#39;s very rare for someone to use this package with untrusted input&#34;. 23/07/2026 23/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-22",
-    "cve": "CVE-2026-61246",
-    "descripcion": "Vulnerability in the Oracle Platform Security for Java product of Oracle Fusion Middleware (component: Centralized Thirdparty Jars). Supported versions that are affected are 12.2.1.4.0 and 14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Platform Security for Java. Successful attacks of this vulnerability can result in takeover of Oracle Platform Security for Java. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H). 23/07/2026 23/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-22",
-    "cve": "CVE-2026-60455",
-    "descripcion": "Vulnerability in the Oracle Platform Security for Java product of Oracle Fusion Middleware (component: Centralized Thirdparty Jars). Supported versions that are affected are 12.2.1.4.0 and 14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Platform Security for Java. Successful attacks of this vulnerability can result in takeover of Oracle Platform Security for Java. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H). 23/07/2026 23/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-22",
-    "cve": "CVE-2026-60439",
-    "descripcion": "Vulnerability in the Oracle Platform Security for Java product of Oracle Fusion Middleware (component: Centralized Thirdparty Jars). Supported versions that are affected are 12.2.1.4.0 and 14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Platform Security for Java. Successful attacks of this vulnerability can result in takeover of Oracle Platform Security for Java. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H). 23/07/2026 23/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
