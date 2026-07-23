@@ -1,8 +1,8 @@
 [
   {
     "fecha": "2026-07-23",
-    "cve": "CVE-2026-16381",
-    "descripcion": "Same-origin policy bypass in the Networking: DNS component. This vulnerability was fixed in Firefox 153, Firefox ESR 140.13, Thunderbird 153, and Thunderbird 140.13."
+    "cve": "CVE-2026-50522",
+    "descripcion": "Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network."
   },
   {
     "fecha": "2026-07-23",
@@ -13,6 +13,16 @@
     "fecha": "2026-07-23",
     "cve": "CVE-2026-16406",
     "descripcion": "Mitigation bypass in the Networking component. This vulnerability was fixed in Firefox 153 and Thunderbird 153."
+  },
+  {
+    "fecha": "2026-07-23",
+    "cve": "CVE-2026-16381",
+    "descripcion": "Same-origin policy bypass in the Networking: DNS component. This vulnerability was fixed in Firefox 153, Firefox ESR 140.13, Thunderbird 153, and Thunderbird 140.13."
+  },
+  {
+    "fecha": "2026-07-23",
+    "cve": "CVE-2026-16232",
+    "descripcion": "An authentication bypass vulnerability in the Check Point SmartConsole login process allows an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges. Successful exploitation allows the attacker to ..."
   },
   {
     "fecha": "2026-07-23",
@@ -28,16 +38,6 @@
     "fecha": "2026-07-23",
     "cve": "CVE-2026-60137",
     "descripcion": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter."
-  },
-  {
-    "fecha": "2026-07-23",
-    "cve": "CVE-2026-63801",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: tipc: fix slab-use-after-free Read in tipc_aead_decrypt_done tipc_aead_decrypt() goes straight from tipc_bearer_hold(b) to crypto_aead_decrypt(req) without taking a reference on the netns, unlike the encrypt ..."
-  },
-  {
-    "fecha": "2026-07-23",
-    "cve": "CVE-2026-53383",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ksmbd: reject non-VALID session in compound request branch smb2_check_user_session() takes a shortcut for any operation that is not the first in a COMPOUND request: it reuses work->sess (the session bound ..."
   },
   {
     "fecha": "2026-07-23",
