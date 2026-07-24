@@ -1,6 +1,46 @@
 [
   {
     "fecha": "2026-07-24",
+    "cve": "CVE-2026-14603",
+    "descripcion": "The WowOptin: Next-Gen Popup Maker WordPress plugin before 1.4.38 does not have proper authorization on a REST endpoint, allowing unauthenticated users to disable all of the site&#39;s opt-in forms and insert new template-based opt-in rows into the database. 24/07/2026 24/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-24",
+    "cve": "CVE-2026-14172",
+    "descripcion": "Rapid7 InsightVM, Nexpose, and the Insight Agent execute discovered executables during authenticated assessment without validating file ownership, allowing a local low-privileged user to run code as the scan credential (Scan Engine) or as root/SYSTEM (Insight Agent). Fixed in Scan Engine content 1.1.3935 and Insight Agent content component 0.0.245.0. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-07-24",
+    "cve": "CVE-2026-12981",
+    "descripcion": "The CAFEHAUS API WordPress plugin through 1.0.0 does not have any authentication or authorisation when updating user passwords, allowing unauthenticated attackers to set the password of any user, including administrators, and fully take over their accounts. 24/07/2026 24/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-24",
+    "cve": "CVE-2026-12877",
+    "descripcion": "The Project Management, Bug and Issue Tracking Plugin WordPress plugin before 5.1.0 does not sanitise and escape user supplied input before using it in a SQL query, allowing unauthenticated attackers to perform SQL injection attacks. This is exploitable in the Project Management, Bug and Issue Tracking Plugin WordPress plugin before 5.1.0&#39;s standard front-end issue-tracker configuration. 24/07/2026 24/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-24",
+    "cve": "CVE-2026-12690",
+    "descripcion": "The ProfileGrid WordPress plugin before 5.9.9.7 does not perform a capability check on its license management actions, relying only on a nonce that is exposed to any logged-in user, allowing authenticated users with Subscriber-level access and above to overwrite the site&#39;s premium license settings. 24/07/2026 24/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-24",
+    "cve": "CVE-2026-12689",
+    "descripcion": "The ProfileGrid WordPress plugin before 5.9.9.7 does not perform any authorization or ownership check on some of its private-message thread actions, allowing authenticated users with Subscriber-level access and above to soft-delete, tamper with the metadata of, and mark as read other users&#39; private message threads. 24/07/2026 24/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-24",
+    "cve": "CVE-2026-12688",
+    "descripcion": "The ProfileGrid WordPress plugin before 5.9.9.7 does not verify PayPal IPN notifications before granting paid group membership, allowing unauthenticated attackers to forge a payment notification and mark any user as a paid member of any group without any payment being made. 24/07/2026 24/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-24",
+    "cve": "CVE-2026-12497",
+    "descripcion": "The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content WordPress plugin before 4.16.18 does not consistently enforce the role restriction configured on its front-end registration role-selection field. The set of roles offered to the visitor and the set of roles the registration handler accepts are derived by two different parsers, and for some valid ways of configuring the offered roles the handler ignores the restriction and falls back to accepting any non-administrator role. Combined with the absence of a nonce on the public registration handler, this allows an unauthenticated visitor to register an account with a higher role, such as Editor or Author, than the form was configured to offer. 24/07/2026 24/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-24",
     "cve": "CVE-2026-16870",
     "descripcion": "Multiple security vulnerabilities in Snowflake libsnowflakeclient versions prior to 2.9.2 could allow remote code execution and credential exfiltration. A stack-based buffer overflow in the file download path could allow remote code execution on a victim host. An attacker could exploit this by uploading a file with a crafted encryption metadata field to a shared internal stage that a victim process later downloads, and impact would be limited to deployments where principals with different privilege levels share the same internal stage. A related out-of-bounds write in the same download path could allow memory corruption with attacker-controlled write primitives. An attacker may exploit this through a crafted initialization vector metadata field on a shared stage, and impact would be limited by the same stage-write precondition. Improper validation of connection parameters could allow an attacker-controlled input to redirect outbound authentication requests — including credentials and tokens — to an attacker-controlled endpoint. Impact is limited to embedding deployments where a lower-privileged principal can influence connection configuration while higher-privileged service credentials are in use. The fix is available in Snowflake libsnowflakeclient version 2.9.2. Users must manually upgrade. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -8,45 +48,5 @@
     "fecha": "2026-07-24",
     "cve": "CVE-2026-66141",
     "descripcion": "Exim before 4.99.5 allows .forward privilege escalation because force_command for a pipe transport is mishandled. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-66140",
-    "descripcion": "Exim before 4.99.5 allows directory traversal to access files outside of the spool area, and consequently gain privileges, because arguments related to queue-name are mishandled. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-66139",
-    "descripcion": "OpenStack Zaqar through 22.0.0 allows authentication bypass via an EXTRA-SPEC header when a UUID is known. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-66138",
-    "descripcion": "In OpenStack Ironic Python Agent through 11.6.0, a project-scoped user with the manager role can achieve arbitrary code execution on a running Ironic-Python-Agent via a maliciously constructed configuration, because the value of ntp_server is passed to a shell. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-54422",
-    "descripcion": "In OpenStack Ironic Python Agent through 11.5.0, a malicious bootc container, when deployed using ironic-python-agent, may be able to extract the credentials used to download it. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-6454",
-    "descripcion": "The Firelight Lightbox plugin for WordPress is vulnerable to Stored DOM Cross-Site Scripting in versions up to and including 2.3.20. This is due to insufficient sanitization of the href attribute value within the FancyBox V2 PDF beforeLoad JavaScript callback generated in inc/fancybox-2.php, where this.href is string-concatenated directly into an HTML string without escaping, allowing a stored href containing entity-encoded double-quotes to break out of the data attribute and inject arbitrary event handlers into the DOM. This makes it possible for authenticated attackers with contributor-level access and above to inject arbitrary web scripts into pages that execute whenever a user clicks the malicious PDF link. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-15420",
-    "descripcion": "The Nexter Blocks – Gutenberg Blocks, Page Builder & AI Website Builder plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 5.0.0 via the &#39;plus_name&#39; parameter. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary JS/CSS files on the server, which can lead to denial of service or destruction of critical plugin and theme assets. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-15100",
-    "descripcion": "The Post Grid Gutenberg Blocks – PostX plugin for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;searchnoresult&#39; Block Attribute in all versions up to, and including, 5.0.32 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is particularly concerning in a cross-privilege scenario where a Contributor creates a pending or draft post containing the malicious block attribute, which then executes arbitrary JavaScript in the browser session of an Editor or Administrator who previews that post. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-07-24",
-    "cve": "CVE-2026-13464",
-    "descripcion": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.0.14 via the &#39;context&#39; parameter due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to read the full title, content, and excerpt of any WordPress post — including drafts, pending, privately published, password-protected, and trashed posts — regardless of author, by supplying an arbitrary post ID via the context parameter alongside an attacker-controlled block template. 24/07/2026 24/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
