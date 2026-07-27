@@ -1,6 +1,31 @@
 [
   {
     "fecha": "2026-07-27",
+    "cve": "CVE-2026-57917",
+    "descripcion": "proCertum SmartSign parses external XML entities from arbitrary crafted signature files, enabling SSRF and potentially allowing the reading of local files, depending on the parser&#39;s configuration. The XML External Entity (XXE) vulnerability is triggered simply by previewing a file in the file selection window, before the victim clicks “Open”. This issue was fixed in version 9.4.3.90. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-27",
+    "cve": "CVE-2026-57916",
+    "descripcion": "proCertum SmartSign opens Certificate Practice Statement (CPS) URI without schema validation. An attacker can prepare arbitrary certificate with CPS URI pointing to a local executable file or any URL, sign a document with it, and send it to the victim. When the victim opens the document in the application, the specified file will be executed (or webpage will be opened). This issue was fixed in version 9.4.3.90. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-27",
+    "cve": "CVE-2026-41608",
+    "descripcion": "Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in Apache Thrift Python bindings. This issue affects Apache Thrift: before 0.24.0. Users are recommended to upgrade to version 0.24.0, which fixes the issue. 27/07/2026 27/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-27",
+    "cve": "CVE-2026-14856",
+    "descripcion": "A stored Cross-Site Scripting (XSS) vulnerability in the file upload functionality of the Media Manager in TastyIgniter v4.3.0, caused by insufficient validation and sanitization of SVG files. An authenticated user with low privileges can upload a malicious SVG file containing JavaScript code. When an administrator views that file, the code executes in the context of their browser. By chaining this vulnerability with a Cross-Site Request Forgery (CSRF) attack, an attacker can extract the administrator’s CSRF token and perform unauthorized actions—such as modifying credentials—thereby gaining full control of the administrative account. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-27",
+    "cve": "CVE-2026-12495",
+    "descripcion": "Denial-of-service (DoS) vulnerability due to a stack buffer overflow in the http_gdpr_decrypt function of the Mercusys MB115-4G device&#39;s web interface. An unauthenticated attacker could exploit this vulnerability by sending a specially crafted request to the /cgi/login endpoint, causing memory corruption and the httpd process to crash, resulting in a denial of service for the web administration service. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-07-27",
     "cve": "CVE-2026-40000",
     "descripcion": "The Activity zte.com.cn.filer/zte.com.cn.filer.FilePreViewActivity within ZTE File Manager is designed to preview compressed files. Third-party applications can launch this Activity and supply arbitrary file paths (e.g., content://zte.com.cn.filer.fileprovider/root_path), enabling file access with the privilege level of ZTE File Manager. This allows unrooted devices to read files under certain system directories such as /data/data and /data/local/tmp. If access restrictions do not block untrusted applications, additional directories may also be accessible. 27/07/2026 27/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 1.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
@@ -23,30 +48,5 @@
     "fecha": "2026-07-27",
     "cve": "CVE-2026-65765",
     "descripcion": "Joomla Extension - phoca.cz - Path Traversal vulnerability in Phoca Commander 1.0.0-6.1.1 - Improper limitation of paths for save and download actions lead to path traversal vulnerabilities. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-27",
-    "cve": "CVE-2026-65764",
-    "descripcion": "Joomla Extension - phoca.cz - Reflected XSS vulnerability in Phoca Commander 5.0.0-6.1.1 - Improper validation of user inputs lead to a reflective XSS vulnerability. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-27",
-    "cve": "CVE-2026-16554",
-    "descripcion": "cJSON library is vulnerable to an integer overflow in the print_string_ptr() function in cJSON.c on 32-bit platforms. The escape_characters counter, a 32-bit size_t, can wrap around when processing strings containing approximately 858,993,460 or more control characters, causing the output buffer to be allocated based on an underestimated length. When cJSON_PrintBuffered() is used with a pre-allocated buffer, the subsequent write loop overflows the heap allocation. An attacker supplying a crafted JSON string to an application using cJSON on a 32-bit platform can cause a heap buffer overflow, potentially leading to remote code execution, information disclosure, or denial of service. Because project creator contact attempts were unsuccessful, the vulnerability has only been confirmed in version 1.7.19 but may also affect other versions. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-27",
-    "cve": "CVE-2026-15799",
-    "descripcion": "Rejected reason: duplicate 27/07/2026 27/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-27",
-    "cve": "CVE-2026-65894",
-    "descripcion": "This vulnerability exists in CP PLUS EZ-P21 IP Camera due to improper authentication of HTTP endpoints. A remote attacker could exploit this vulnerability by conducting brute-force attacks against HTTP endpoint on the targeted device. Successful exploitation of this vulnerability could allow an attacker to gain unauthorized access to live video snapshots from the targeted device. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-07-27",
-    "cve": "CVE-2026-65893",
-    "descripcion": "This vulnerability exists in CP PLUS EZ-P21 IP Camera due to an insecure debug feature enabled in the firmware. An attacker with physical access could exploit this vulnerability by placing arbitrary code on removable media and triggering their execution through the debug mechanism. Successful exploitation of this vulnerability could allow an attacker to execute arbitrary code with elevated privileges on the targeted device. 27/07/2026 27/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
