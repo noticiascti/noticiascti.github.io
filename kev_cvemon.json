@@ -11,11 +11,6 @@
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-49176",
-    "descripcion": "Improper privilege management in Windows WalletService allows an authorized attacker to elevate privileges locally."
-  },
-  {
-    "fecha": "2026-07-29",
     "cve": "CVE-2024-1813",
     "descripcion": "The Simple Job Board plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.11.0 via deserialization of untrusted input in the job_board_applicant_list_columns_value function. This makes it possible for unauthenticated attackers to ..."
   },
@@ -26,13 +21,13 @@
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-9256",
-    "descripcion": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when a rewrite directive uses a regex pattern with distinct, overlapping Perl-Compatible Regular Expression (PCRE) captures (for example, ^/((.*))$) and a ..."
+    "cve": "CVE-2026-42533",
+    "descripcion": "A vulnerability exists in NGINX Plus and NGINX Open Source when a map directive uses regex matching and a string expression references the map's regex capture variables before referencing the map output variable. Alternatively, the same result could be achieved by using a ..."
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-42533",
-    "descripcion": "A vulnerability exists in NGINX Plus and NGINX Open Source when a map directive uses regex matching and a string expression references the map's regex capture variables before referencing the map output variable. Alternatively, the same result could be achieved by using a ..."
+    "cve": "CVE-2026-9256",
+    "descripcion": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when a rewrite directive uses a regex pattern with distinct, overlapping Perl-Compatible Regular Expression (PCRE) captures (for example, ^/((.*))$) and a ..."
   },
   {
     "fecha": "2026-07-29",
@@ -48,5 +43,10 @@
     "fecha": "2026-07-29",
     "cve": "CVE-2026-43773",
     "descripcion": "An out-of-bounds read was addressed with improved bounds checking. This issue is fixed in macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6. Mounting a maliciously crafted disk image may cause unexpected system termination or corrupt kernel memory."
+  },
+  {
+    "fecha": "2026-07-29",
+    "cve": "CVE-2026-28981",
+    "descripcion": "A buffer overflow was addressed with improved bounds checking. This issue is fixed in macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6. Processing a maliciously crafted image may lead to arbitrary code execution."
   }
 ]
