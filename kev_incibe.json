@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-5626",
-    "descripcion": "The Survey Form Block plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the get_all_data() function in all versions up to, and including, 1.0.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to export all survey submission data and column metadata. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63242",
+    "descripcion": "A business logic vulnerability in Koollab LMS allowed an authenticated learner to set their lesson completion status to completed via the SCORM commit endpoint without viewing the lesson material, compromising training and completion records. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-15344",
-    "descripcion": "The WP Photo Album Plus plugin for WordPress is vulnerable to generic SQL Injection via the &#39;table&#39; parameter in all versions up to, and including, 9.2.04.002 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The export-table endpoint lacks a nonce check, meaning this vulnerability can also be triggered via CSRF by tricking an authenticated administrator into visiting a malicious page. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63241",
+    "descripcion": "An insecure direct object reference vulnerability in Koollab LMS allowed an authenticated user to query the course completion progress of any other user without authorisation, disclosing private learning progress information. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-12476",
-    "descripcion": "The Easy Digital Downloads plugin for WordPress is vulnerable to Arbitrary File Upload in versions up to and including 3.6.9. This is due to insufficient file type validation in the edd_do_ajax_import_file_upload() function , which only checks the client-supplied $_FILES[&#39;edd-import-file&#39;][&#39;type&#39;] Content-Type header against an allow-list of CSV mime types, then uses raw move_uploaded_file() (bypassing wp_handle_upload()&#39;s core MIME enforcement) to write the file under its original extension into the web-accessible wp-content/uploads/edd/exports/ directory. This makes it possible for authenticated attackers, with Shop Manager-level access and above, to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-63240",
+    "descripcion": "An information disclosure vulnerability in Koollab LMS allowed an authenticated learner to obtain correct quiz answers from the course status endpoint without completing the assessment legitimately, compromising the integrity of assessments. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-17166",
-    "descripcion": "The Event Booking Manager for WooCommerce – Sell Tickets, Event Registration, RSVP & Event Calendar plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 5.3.7. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with contributor-level access and above, to modify site-wide payment settings — including WooCommerce payment enablement, cart redirect behavior, login requirements for checkout, confirmation page ID, and confirmed ticket statuses — that govern how all event bookings are processed. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63239",
+    "descripcion": "A hard-coded AWS IAM credentials vulnerability in Koollab LMS allowed an attacker to access shared multi-tenant S3 buckets and SQS queues, exposing sensitive data and enabling malicious content injection, job manipulation, or email interception. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-17162",
-    "descripcion": "The WowStore – Store Builder & Product Blocks for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;currentPostId&#39; Block Attribute in all versions up to, and including, 4.4.24 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63238",
+    "descripcion": "An authentication bypass vulnerability in Koollab LMS allowed an unauthenticated attacker to take over any account, including administrator accounts, by supplying a valid user UUID without providing primary credentials via the 2FA validation endpoint. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-17161",
-    "descripcion": "The WowStore – Store Builder & Product Blocks for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;filterMobileText&#39; Block Attribute in all versions up to, and including, 4.4.24 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The save-time wp_kses_post sanitization is ineffective because the payload is stored inside a Gutenberg block delimiter comment as JSON, which wp_kses_post preserves, allowing an attribute-breakout string to survive to the server-side render_callback. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63237",
+    "descripcion": "A TOTP two-factor authentication bypass vulnerability in Koollab LMS allowed an attacker to supply a client-controlled seed to generate a matching one-time password and bypass the second authentication factor, potentially enabling unauthorised access to administrator accounts. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-15735",
-    "descripcion": "The Contact Form to Any API plugin for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;cf7anyapi_form_field&#39; Post Meta in all versions up to, and including, 3.0.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63236",
+    "descripcion": "An improper access control vulnerability in Koollab LMS allowed an unauthenticated attacker to read another user&#39;s name, internal identifier, scores, lesson status, lesson position, and cached lesson state via the SCORM API endpoint. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-12939",
-    "descripcion": "The Newsletters Lite plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;link&#39; attribute of the post_thumbnail (and newsletters_post_thumbnail) shortcodes in versions up to and including 4.15. This is due to insufficient input sanitization and output escaping in the post_thumbnail() method in helpers/shortcode.php, which concatenates the user-controlled $link shortcode attribute directly into an href attribute without esc_url() or esc_attr(). This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63235",
+    "descripcion": "An improper access control vulnerability in Koollab LMS allowed an unauthenticated attacker to forcibly terminate the session of any user given their email address via the login kickout endpoint, resulting in a denial of service. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-12938",
-    "descripcion": "The Newsletters Lite plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;target&#39; attribute of the [newsletters_post] shortcode in versions up to and including 4.15. This is due to insufficient input sanitization and output escaping in the posts_single() function which propagates the attacker-controlled &#39;target&#39; attribute into the global $wpml_target, and in the shortcode_posts() &#39;post_thumbnail&#39; handler which concatenates $wpml_target into a target=&#34;...&#34; HTML attribute without esc_attr(). This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-63234",
+    "descripcion": "A SQL injection and unsafe deserialisation vulnerability in Koollab LMS allowed an authenticated attacker to inject through the manual mark assessment endpoint, control data passed to unserialize(), write a webshell to a publicly accessible location, and execute arbitrary code on the server. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-12144",
-    "descripcion": "The Wholesale for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.0.5. This is due to the `save_requests_meta()` function applying only `sanitize_text_field()` to the `user_role_set` POST parameter before passing it directly to `WP_User::add_role()`, with no allowlist validation against permitted wholesale roles and no capability check such as `current_user_can(&#39;promote_users&#39;)` or `current_user_can(&#39;manage_options&#39;)`. This makes it possible for authenticated attackers with author-level access and above to escalate their privileges to administrator by supplying `administrator` as the `user_role_set` value in a crafted request. The function is gated only by a nonce (`request_user_role_nonce`) that is rendered in the meta box on the `wwp_requests` post edit screen; because the post type is registered with `capability_type => &#39;post&#39;`, any author-level user who has authored a `wwp_requests` post — such as one created via the wholesale registration form — can access this nonce and submit the role-assignment request. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-63233",
+    "descripcion": "A SQL injection and unsafe deserialisation vulnerability in Koollab LMS allowed an authenticated attacker to inject through the assessment overall answer endpoint, control data passed to unserialize(), write a webshell to a publicly accessible location, and execute arbitrary code on the server. 29/07/2026 29/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
