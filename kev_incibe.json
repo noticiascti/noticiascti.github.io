@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-18369",
-    "descripcion": "A flaw was found in Dogtag PKI&#39;s ACME responder where the HTTP-01 challenge validator accepts IP address literals as dns identifiers and follows HTTP redirects without validating that the target is a public address. An unauthenticated ACME account holder can exploit this to perform server-side request forgery (SSRF), making the Dogtag server send HTTP GET requests to internal network services. With the InMemory database backend, the response body of internal targets is disclosed to the attacker through the ACME challenge error. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-9322",
+    "descripcion": "IBM WebSphere Application Server 9.0, and 8.5 and IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.7 are vulnerable to a denial of service via a crafted HTTP request. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-18361",
-    "descripcion": "The IRIS web application in version 2.4.26 and possibly others is vulnerable to stored cross-site scripting (XSS) in the datastore upload function. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-66414",
+    "descripcion": "Leantime 3.6.2 contains an open redirect vulnerability in the Login controller that allows unauthenticated attackers to redirect authenticated users to arbitrary external sites by manipulating the redirectUrl POST parameter. Attackers can craft a malicious login URL with a tampered redirectUrl value that bypasses FILTER_SANITIZE_URL validation to redirect victims to attacker-controlled sites for phishing or credential theft. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-18360",
-    "descripcion": "The IRIS web application in version 2.4.26 and possibly others is vulnerable to stored cross-site scripting (XSS) in the custom attributes function. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-62663",
+    "descripcion": "Banks generates meaningful LLM prompts using a simple template language. In versions prior to 2.4.4, all four media filters (image, audio, video, document) in banks accept untrusted user input as file paths via Path(value) and pass them directly to open(file_path, &#34;rb&#34;) without any path sanitization, canonicalization, or directory restriction. An attacker who controls template variables passed to a banks Prompt can use path traversal (../) to read arbitrary files accessible to the Python process—including .env files, SSH keys, cloud credentials, source code, /etc/passwd, and /etc/shadow—with the content returned base64-encoded in the rendered prompt output, making exfiltration trivial. This is particularly dangerous for applications that use banks to process user-provided template variables before sending prompts to an LLM. This issue has been fixed in version 2.4.4. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-16971",
-    "descripcion": "The IRIS web application in version 2.4.26 and possibly others does not protect its MFA validation against brute-force attacks. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54722",
+    "descripcion": "DSSRF is a Node.js library that provides a wide range of utilities and advanced SSRF defense checks. Prior to 1.0.4, is_url_safe in src/helpers.ts strips the @ userinfo delimiter with remove_at_symbol_in_string before new URL parses the URL, allowing an attacker-controlled URL to bypass internal-IP validation and cause a client using the original URL to reach an internal service. This issue is fixed in version 1.0.4. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-16970",
-    "descripcion": "The IRIS web application in version 2.4.26 and possibly others contains a logout functionality which is ineffective. Stolen session cookies can therefore be misused for a long time. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54522",
+    "descripcion": "MessagePack for Ruby is an implementation of the MessagePack binary serialization format. Prior to 1.8.2, MessagePack::Buffer#clear in ext/msgpack/buffer.c leaves rmem_last, rmem_end, and rmem_owner stale after _msgpack_buffer_shift_chunk returns an rmem page to the shared pool, allowing a subsequent Buffer#write and a second MessagePack::Buffer to alias the page and disclose or corrupt cross-buffer data. This issue is fixed in version 1.8.2. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-16969",
-    "descripcion": "The IRIS web application in version 2.4.26 and possibly others is vulnerable to stored cross-site scripting (XSS) in the assets function. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-51295",
+    "descripcion": "SQLite 3.41 is vulnerable to use after free in the jsonExtractFunc function. Premature release of parsed JSON object memory leads to subsequent illegal access of freed pointer. Remote attackers can trigger this flaw via specially crafted SQL queries, resulting in service crash and sensitive memory information leakage. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2022-4994",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: KVM: x86: wean fast IN from emulator_pio_in Use __emulator_pio_in() directly for fast PIO instead of bouncing through emulator_pio_in() now that __emulator_pio_in() fills &#34;val&#34; when handling in-kernel PIO. vcpu->arch.pio.count is guaranteed to be &#39;0&#39;, so this a pure nop. emulator_pio_in_emulated is now the last caller of emulator_pio_in. No functional change intended. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-51294",
+    "descripcion": "SQLite 3.41 is vulnerable to use after free in the jsonArrayLengthFunc function. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-18353",
-    "descripcion": "PIA&#39;s `POST /v1/upload/sbom` endpoint accepts a Bearer JWT and checks its **unverified** `iss` claim against an issuer allowlist using Python&#39;s `urlparse` before performing OIDC discovery with `requests`. Because `urlparse` and `requests`/`urllib3` parse an authority string containing a backslash (e.g. `https://attacker-host\\@ci.eclipse.org/`) into *different* hostnames, an attacker can craft an issuer that passes the allowlist check yet drives `requests` — and subsequently `urllib.request.urlopen` for JWKS retrieval — to connect to an arbitrary attacker-chosen host, port, and scheme. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-51293",
+    "descripcion": "A use-after-free vulnerability exists in SQLite 3.41 when the jsonBlobAppendNode() function is invoked subsequent to sqlite3DbFree() being called on the aBlob member of the Parse structure. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-7849",
-    "descripcion": "Due to improper neutralization of special elements, an unauthenticated remote attacker is able to inject a command into the system configuration which is subsequently executed as root. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-51292",
+    "descripcion": "sqlite 3.41 has a use-after-free vulnerability in the memory buffer processing logic. Remote attackers can exploit this flaw via specially crafted input to cause arbitrary code execution, sensitive information leakage, or service denial. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-44108",
-    "descripcion": "Due to a flaw in the execution order of scripts during shutdown, the firewall is terminated prematurely during system shutdown. This creates a temporary window in which internal services may become externally accessible, potentially allowing an unauthenticated remote attacker to connect to these services, resulting in full system compromise. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-51291",
+    "descripcion": "sqlite 3.41 is vulnerable to use after free in the json.c jsonCacheInsert function of the JSON cache management module. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
