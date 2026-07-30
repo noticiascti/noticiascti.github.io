@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-67595",
-    "descripcion": "VaahCMS versions 2.0.0 through 2.3.4 contain a malicious obfuscated JavaScript payload embedded in the Blade template responsible for rendering security OTP emails, allowing remote attackers to execute unauthorized code in any browser that renders the affected email template with JavaScript enabled. The payload establishes a WebSocket connection to a hardcoded command-and-control endpoint, installs a password-field keylogger using MutationObserver to capture dynamically added inputs, scrapes WhatsApp Web DOM content, and accepts remote commands to redirect or overwrite the rendered page. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-59952",
+    "descripcion": "Valibot helps validate data using a schema. Versions prior to 1.4.2 can throw a TypeError inside its flatten() helper when validation issues contain attacker-controlled object keys such as toString, valueOf, or hasOwnProperty. The issue is reachable through normal record() validation. record() intentionally filters __proto__, prototype, and constructor, but it still accepts other own keys that collide with inherited Object.prototype properties. If the record key schema or value schema rejects such an entry, Valibot creates an issue path containing that key. Passing the resulting issues to Valibot&#39;s documented flatten() helper causes flatErrors.nested[dotPath] to resolve to the inherited method instead of an own error array, and the helper calls .push(...) on that function. This is not a global prototype pollution issue. The impact is availability/error handling: applications that validate user-controlled objects with record() and flatten validation errors for API responses can crash the request path with a TypeError instead of returning structured validation errors. This issue has been fixed in version 1.4.2. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-18060",
-    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18019",
+    "descripcion": "Side-channel information leakage in Media in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-15157",
-    "descripcion": "undici does not validate the type property of a duck-typed blob-like request body before using it as the Content-Type header on the HTTP/1.1 dispatcher. In undici before 6.28.0, from 7.0.0 up to before 7.29.0, and from 8.0.0 up to before 8.9.0, an application that passes a hand-rolled blob-like body (via request, stream, pipeline, or dispatch) whose type is derived from untrusted input allows an attacker to inject CRLF sequences and append arbitrary HTTP headers, potentially smuggling a second request past the upstream. Native Blob objects are safe because their constructor strips CRLF from the type, and fetch is unaffected because it validates headers, but ecosystem libraries that build duck-typed blob shapes from user input can reach the vulnerable path. This is the same defect class as CVE-2022-35948 and CVE-2026-1527, on a header sink that the earlier fixes did not cover. The issue is fixed in undici 6.28.0, 7.29.0, and 8.9.0. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-18018",
+    "descripcion": "Inappropriate implementation in Updater in Google Chrome on Windows prior to 151.0.7922.72 allowed a local attacker to perform UI spoofing via a malicious file. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2026-14643",
-    "descripcion": "undici&#39;s cache interceptor mishandles optional whitespace placed around the equals sign of a qualified no-cache or private Cache-Control directive. In undici from 7.0.0 up to before 7.29.0 and from 8.0.0 up to before 8.9.0, the parser either drops the directive or stores a field name with literal quote characters, so the cache decision fails to recognize the qualification and the response is stored. In shared-cache mode, this lets a response containing one user&#39;s authenticated data be served from cache to a later caller, including an unauthenticated one, when both requests resolve to the same cache key. It affects applications that enable the cache interceptor in shared mode, forward Authorization headers upstream, and receive cacheable responses with qualified directives padded with whitespace around the equals sign. This is the whitespace-around-equals variant that the fix for CVE-2026-9678 did not normalize, and it is fixed in undici 7.29.0 and 8.9.0. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-18017",
+    "descripcion": "Use after free in Dawn in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2025-69949",
-    "descripcion": "kishan0725 Hospital Management System 4.0 is vulnerable to SQL Injection in check_availability.php via the parameters emailid and email. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18016",
+    "descripcion": "Insufficient policy enforcement in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2025-69945",
-    "descripcion": "kishan0725 Hospital Management System 4.0 is vulnerable to SQL Injection in /doctor/edit-patient.php?editid=1. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18015",
+    "descripcion": "Inappropriate implementation in Tint in Google Chrome on Mac prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2025-69944",
-    "descripcion": "kishan0725 Hospital Management System 4.0 is vulnerable to SQL Injection in the view-medhistory.php endpoint via the viewid parameter. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18014",
+    "descripcion": "Insufficient validation of untrusted input in DevTools in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to bypass navigation restrictions via a malicious file. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2025-69943",
-    "descripcion": "kishan0725 Hospital Management System 4.0 is vulnerale to SQL Injection in get_doctor.php via the parameters doctor and specilizationid. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18013",
+    "descripcion": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2025-69942",
-    "descripcion": "kishan0725 Hospital Management System 4.0 is vulnerable to SQL Injection in /hms/doctor/view-patient.php?viewid=1. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18012",
+    "descripcion": "Use after free in PDFium in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted PDF file. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-29",
-    "cve": "CVE-2025-67408",
-    "descripcion": "Sourcecodester CASAP Automated Enrollment System 1.0 is vulnerable to SQL Injection in /save_user.php via the parameter status. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18011",
+    "descripcion": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a local attacker to obtain potentially sensitive information from process memory via physical access to the device. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
