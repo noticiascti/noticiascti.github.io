@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-59952",
-    "descripcion": "Valibot helps validate data using a schema. Versions prior to 1.4.2 can throw a TypeError inside its flatten() helper when validation issues contain attacker-controlled object keys such as toString, valueOf, or hasOwnProperty. The issue is reachable through normal record() validation. record() intentionally filters __proto__, prototype, and constructor, but it still accepts other own keys that collide with inherited Object.prototype properties. If the record key schema or value schema rejects such an entry, Valibot creates an issue path containing that key. Passing the resulting issues to Valibot&#39;s documented flatten() helper causes flatErrors.nested[dotPath] to resolve to the inherited method instead of an own error array, and the helper calls .push(...) on that function. This is not a global prototype pollution issue. The impact is availability/error handling: applications that validate user-controlled objects with record() and flatten validation errors for API responses can crash the request path with a TypeError instead of returning structured validation errors. This issue has been fixed in version 1.4.2. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-67244",
+    "descripcion": "A format string vulnerability was found in the Notification OAuth settings of ADM. The vulnerability occurs because user-controlled notification configuration input may be processed through an unsafe format string operation. An authenticated administrator can exploit this issue to disclose memory information or cause denial of service of the affected component. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RUN1 as well as from ADM 5.0.0 through ADM 5.1.3.RI81. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18019",
-    "descripcion": "Side-channel information leakage in Media in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-48449",
+    "descripcion": "Adobe Campaign Classic (ACC) is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18018",
-    "descripcion": "Inappropriate implementation in Updater in Google Chrome on Windows prior to 151.0.7922.72 allowed a local attacker to perform UI spoofing via a malicious file. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-48448",
+    "descripcion": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to gain file system read access. Exploitation of this issue does not require user interaction. Scope is changed. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18017",
-    "descripcion": "Use after free in Dawn in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-1982",
+    "descripcion": "The Persian Elementor (المنتور فارسی) plugin for WordPress is vulnerable to Price Manipulation in all versions up to, and including, 2.8.1. This is due to the plugin trusting a user-supplied payment amount without server-side validation against the configured ZarinPal widget price. This makes it possible for unauthenticated attackers to submit arbitrary payment amounts to the ZarinPal gateway via the &#39;amount&#39; parameter. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18016",
-    "descripcion": "Insufficient policy enforcement in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-18188",
+    "descripcion": "A format string vulnerability was found in the Rsync Backup on the ADM. The vulnerability occurs because user-controlled rsync backup configuration or log data may be processed through an unsafe format string operation. An authenticated attacker can exploit this issue to disclose memory information or cause denial of service of the affected backup component. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RUN1 as well as from ADM 5.0.0 through ADM 5.1.3.RI81. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18015",
-    "descripcion": "Inappropriate implementation in Tint in Google Chrome on Mac prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-18187",
+    "descripcion": "A format string vulnerability was found in the Internal Backup on the ADM. The vulnerability occurs because user-controlled task input may be included in an error response and processed through an unsafe format string operation. An authenticated attacker can exploit this issue to disclose memory information or cause denial of service of the affected CGI process. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RUN1 as well as from ADM 5.0.0 through ADM 5.1.3.RI81. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18014",
-    "descripcion": "Insufficient validation of untrusted input in DevTools in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to bypass navigation restrictions via a malicious file. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-18186",
+    "descripcion": "A stored format string vulnerability was found in the FTP Backup on the ADM. The vulnerability occurs because user-controlled backup configuration data may be written into a task log and later processed through an unsafe format string operation. An authenticated attacker can exploit this issue to disclose memory information or cause denial of service of the affected CGI process. Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RUN1 as well as from ADM 5.0.0 through ADM 5.1.3.RI81. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18013",
-    "descripcion": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-16092",
+    "descripcion": "The Improved Save Button plugin for WordPress is vulnerable to second-order SQL Injection via &#39;meta_key&#39; Custom Field via &#39;Save and Duplicate&#39; Action in all versions up to, and including, 1.2.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with author-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18012",
-    "descripcion": "Use after free in PDFium in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted PDF file. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-16727",
+    "descripcion": "Concurrent Execution using Shared Resource with Improper Synchronization (“Race Condition”) in ASUS Armoury Crate allows a local user to execute arbitrary code with elevated privileges via a crafted file replacement. Refer to the &#39; Security Update for ASUS Armoury Crate &#39; section on the ASUS Security Advisory for more information. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-07-29",
-    "cve": "CVE-2026-18011",
-    "descripcion": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to 151.0.7922.72 allowed a local attacker to obtain potentially sensitive information from process memory via physical access to the device. (Chromium security severity: Low) 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-07-30",
+    "cve": "CVE-2026-15929",
+    "descripcion": "Improper neutralization of special elements used in an SQL command (&#39;SQL injection&#39;) vulnerability in LG Electronics SmartShare allows SQL Injection. This issue affects SmartShare: through 2.3.1712.1202, which is supported on Microsoft Windows 10 and earlier versions. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
