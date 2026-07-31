@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-9322",
-    "descripcion": "IBM WebSphere Application Server 9.0, and 8.5 and IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.7 are vulnerable to a denial of service via a crafted HTTP request. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-67594",
+    "descripcion": "Spikster through commit e1cdf8c contains a missing authentication vulnerability that allows unauthenticated remote attackers to access all API routes by exploiting the unattached CipiAuth middleware, which is registered but never applied to any route in the API routing configuration. Attackers can invoke approximately 50 unprotected API endpoints to enumerate and provision servers, reset root passwords, read and write arbitrary files on the host, and create database users. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-66414",
-    "descripcion": "Leantime 3.6.2 contains an open redirect vulnerability in the Login controller that allows unauthenticated attackers to redirect authenticated users to arbitrary external sites by manipulating the redirectUrl POST parameter. Attackers can craft a malicious login URL with a tampered redirectUrl value that bypasses FILTER_SANITIZE_URL validation to redirect victims to attacker-controlled sites for phishing or credential theft. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-67550",
+    "descripcion": "re2 provides Node.js bindings for Google&#39;s RE2 regular expression engine. Prior to 1.25.2, re2 validates lastIndex against the UTF-8 byte length of a subject but uses it as a UTF-16 code-unit offset in exec, test, match, replace, and split, allowing an attacker-influenced lastIndex on a non-ASCII subject to trigger an out-of-bounds heap read and an uncatchable process crash, with limited heap information disclosure in some cases. This issue is fixed in 1.25.2. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-62663",
-    "descripcion": "Banks generates meaningful LLM prompts using a simple template language. In versions prior to 2.4.4, all four media filters (image, audio, video, document) in banks accept untrusted user input as file paths via Path(value) and pass them directly to open(file_path, &#34;rb&#34;) without any path sanitization, canonicalization, or directory restriction. An attacker who controls template variables passed to a banks Prompt can use path traversal (../) to read arbitrary files accessible to the Python process—including .env files, SSH keys, cloud credentials, source code, /etc/passwd, and /etc/shadow—with the content returned base64-encoded in the rendered prompt output, making exfiltration trivial. This is particularly dangerous for applications that use banks to process user-provided template variables before sending prompts to an LLM. This issue has been fixed in version 2.4.4. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-67530",
+    "descripcion": "WACRM is a self-hostable CRM template for WhatsApp. In 0.7.0 and earlier, the automation send_webhook action in src/lib/automations/engine.ts and its validation in src/lib/automations/validate.ts allowed an authenticated user with automation privileges to submit an arbitrary webhook URL that the server fetched without the existing isDeliverableUrl SSRF guard in src/lib/webhooks/ssrf.ts, allowing requests to private, loopback, link-local, or cloud metadata addresses such as the cloud metadata endpoint at 169.254.169.254. This vulnerability is fixed with commit 23838a9959550e975d732ae08a44a3a2f0cc084b. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-54722",
-    "descripcion": "DSSRF is a Node.js library that provides a wide range of utilities and advanced SSRF defense checks. Prior to 1.0.4, is_url_safe in src/helpers.ts strips the @ userinfo delimiter with remove_at_symbol_in_string before new URL parses the URL, allowing an attacker-controlled URL to bypass internal-IP validation and cause a client using the original URL to reach an internal service. This issue is fixed in version 1.0.4. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67529",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.6.0, GET /api/v3/time_entries and GET /api/v3/cost_entries rendered _links.workPackage.title and _links.workPackage.href through associated_resource in modules/costs/lib/api/v3/time_entries/time_entry_representer.rb and modules/costs/lib/api/v3/cost_entries/cost_entry_representer.rb without checking WorkPackage.visible or view_work_packages, allowing users with view_time_entries or view_cost_entries to read private work package subjects and ids. This issue is fixed in 17.6.0. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-54522",
-    "descripcion": "MessagePack for Ruby is an implementation of the MessagePack binary serialization format. Prior to 1.8.2, MessagePack::Buffer#clear in ext/msgpack/buffer.c leaves rmem_last, rmem_end, and rmem_owner stale after _msgpack_buffer_shift_chunk returns an rmem page to the shared pool, allowing a subsequent Buffer#write and a second MessagePack::Buffer to alias the page and disclose or corrupt cross-buffer data. This issue is fixed in version 1.8.2. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67528",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.6.0, GET /api/v3/custom_options/:id resolved CustomOption records by global numeric id and allowed UserCustomField and GroupCustomField options without checking visible(current_user), so authenticated non-admin users could enumerate sequential custom option ids and read labels belonging to admin_only user or group custom fields. This issue is fixed in 17.6.0. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-51295",
-    "descripcion": "SQLite 3.41 is vulnerable to use after free in the jsonExtractFunc function. Premature release of parsed JSON object memory leads to subsequent illegal access of freed pointer. Remote attackers can trigger this flaw via specially crafted SQL queries, resulting in service crash and sensitive memory information leakage. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67527",
+    "descripcion": "OpenProject is open-source, web-based project management software. Prior to 17.6.0, PATCH /api/v3/work_packages/{id} accepted _links.fileLinks and allowed authenticated users with edit_work_packages but without manage_file_links to resolve Storages::FileLink records by raw id, detach or hard-delete existing FileLinks, and re-parent FileLinks from other projects to an attacker-controlled work package, exposing origin filename, origin id, and MIME type metadata. This issue is fixed in 17.6.0. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-51294",
-    "descripcion": "SQLite 3.41 is vulnerable to use after free in the jsonArrayLengthFunc function. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67208",
+    "descripcion": "Juggle through 1.6.0 contains a remote code execution vulnerability that allows unauthenticated remote attackers to execute arbitrary OS commands by connecting to the exposed H2 database web console using default shipped credentials. Attackers can access the unprotected /h2-console endpoint, authenticate with default credentials, and leverage the H2 CREATE ALIAS Runtime.exec() technique to execute arbitrary commands, resulting in root-level code execution when running the stock Docker image. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-51293",
-    "descripcion": "A use-after-free vulnerability exists in SQLite 3.41 when the jsonBlobAppendNode() function is invoked subsequent to sqlite3DbFree() being called on the aBlob member of the Parse structure. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67207",
+    "descripcion": "Wolf CMS through 0.8.3.1 contains an authorization bypass vulnerability in BackupRestoreController that allows authenticated non-administrative users to access restricted backup functionality due to a PHP operator precedence flaw in the permission check expression. Attackers can exploit the incorrect evaluation of the access control expression to create, download, and restore backups without administrative privileges. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-51292",
-    "descripcion": "sqlite 3.41 has a use-after-free vulnerability in the memory buffer processing logic. Remote attackers can exploit this flaw via specially crafted input to cause arbitrary code execution, sensitive information leakage, or service denial. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67206",
+    "descripcion": "Wolf CMS through 0.8.3.1 contains a remote code execution vulnerability in FileManagerController that allows authenticated attackers to create arbitrary PHP files by exploiting missing file extension validation in the create_file() and save() functions. Attackers with the file_manager_mkfile capability can write malicious PHP content into the web-accessible FILES_DIR directory and trigger execution by requesting the file over HTTP. 30/07/2026 30/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-30",
-    "cve": "CVE-2026-51291",
-    "descripcion": "sqlite 3.41 is vulnerable to use after free in the json.c jsonCacheInsert function of the JSON cache management module. 30/07/2026 30/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-65835",
+    "descripcion": "Capsule is a multi-tenancy and policy-based framework for Kubernetes. From 0.13.0 until 0.13.8, after the incomplete CVE-2026-22872 fix, TenantResource RawItems and Generators in internal/controllers/resources/collect.go, including handleRawItem and handleGeneratorItem, did not apply the ResourceReference.LoadResources and IsNamespacedGVK cluster-scoped resource rejection guard used by NamespacedItems, allowing a Tenant Owner to create cluster-scoped resources such as ClusterRole or ValidatingWebhookConfiguration through the cluster-admin controller client. This issue is fixed in version 0.13.8. 30/07/2026 30/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
