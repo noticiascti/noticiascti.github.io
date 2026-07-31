@@ -16,23 +16,8 @@
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-43773",
-    "descripcion": "An out-of-bounds read was addressed with improved bounds checking. This issue is fixed in macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6. Mounting a maliciously crafted disk image may cause unexpected system termination or corrupt kernel memory."
-  },
-  {
-    "fecha": "2026-07-31",
-    "cve": "CVE-2026-28981",
-    "descripcion": "A buffer overflow was addressed with improved bounds checking. This issue is fixed in macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6. Processing a maliciously crafted image may lead to arbitrary code execution."
-  },
-  {
-    "fecha": "2026-07-31",
     "cve": "CVE-2026-66066",
     "descripcion": "Action Pack is a framework for handling and responding to web requests. In versions prior to 7.2.3.2, 8.0.5.1 and 8.1.3.1, Active Storage does not disable libvips operations marked unsafe for untrusted content, allowing a crafted upload to invoke such an operation. Consuming ..."
-  },
-  {
-    "fecha": "2026-07-31",
-    "cve": "CVE-2026-43729",
-    "descripcion": "The issue was addressed with improved memory handling. This issue is fixed in iOS 26.6 and iPadOS 26.6, macOS Sequoia 15.7.8, macOS Tahoe 26.6, tvOS 26.6, visionOS 26.6. Processing a maliciously crafted image may corrupt process memory."
   },
   {
     "fecha": "2026-07-31",
@@ -41,12 +26,27 @@
   },
   {
     "fecha": "2026-07-31",
+    "cve": "CVE-2026-43729",
+    "descripcion": "The issue was addressed with improved memory handling. This issue is fixed in iOS 26.6 and iPadOS 26.6, macOS Sequoia 15.7.8, macOS Tahoe 26.6, tvOS 26.6, visionOS 26.6. Processing a maliciously crafted image may corrupt process memory."
+  },
+  {
+    "fecha": "2026-07-31",
     "cve": "CVE-2026-43780",
     "descripcion": "An integer overflow was addressed with improved input validation. This issue is fixed in iOS 26.6 and iPadOS 26.6, macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6, tvOS 26.6, visionOS 26.6, watchOS 26.6. Processing a maliciously crafted texture may lead to unexpected ..."
   },
   {
     "fecha": "2026-07-31",
+    "cve": "CVE-2026-0153",
+    "descripcion": "In Write of msg_to_host_buffer.cc, there is a possible out of bounds write due to an incorrect bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+  },
+  {
+    "fecha": "2026-07-31",
     "cve": "CVE-2026-0150",
     "descripcion": "In ExecuteGraph command handler of EdgeTPU firmware, there is a possible out of bounds write due to an integer overflow. This could lead to local escalation of privilege with root privileges needed. User interaction is not needed for exploitation."
+  },
+  {
+    "fecha": "2026-07-31",
+    "cve": "CVE-2024-4142",
+    "descripcion": "An Improper input validation vulnerability that could potentially lead to privilege escalation was discovered in JFrog Artifactory. Due to this vulnerability, users with low privileges may gain administrative access to the system. This issue can also be exploited in ..."
   }
 ]
