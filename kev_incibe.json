@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-65636",
-    "descripcion": "Improper Neutralization of CRLF Sequences vulnerability in ufirstgroup ymlr (Elixir.Ymlr module) allows attackers to inject arbitrary content into generated YAML documents through document comments. Ymlr.document!/2 interpolates each caller-supplied comment string into the output behind a single # prefix without validating it or escaping line breaks. Because a YAML comment is terminated by a line break, the first carriage return or line feed in the comment string ends the comment context and everything after it is emitted at column 0 of the document body. An attacker who controls text that the host application passes as a comment can forge top-level mapping keys, override values the application itself set, and emit --- or ... markers that split the output into additional documents. Downstream consumers of the generated YAML, such as configuration loaders, deployment manifests, CI pipelines and data importers, parse the injected content as legitimate data. The same clause backs Ymlr.document/2, Ymlr.documents!/2 and Ymlr.documents/2, so every document encoding entry point is affected. This vulnerability is associated with program files lib/ymlr.ex and program routines &#39;Elixir.Ymlr&#39;:document!/2, &#39;Elixir.Ymlr&#39;:documents!/2. This issue affects ymlr from 0.0.1 before 5.1.6. 31/07/2026 31/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67822",
+    "descripcion": "Tenda W6-S 1.0.0.4(510) contains a stack-based buffer overflow vulnerability in the /goform/wifiSSIDset endpoint. The function formwrlSSIDset uses sprintf to copy user-controlled &#39;GO&#39; and &#39;index&#39; parameters into a 64-byte stack buffer without length restriction, leading to stack overflow. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-28145",
-    "descripcion": "Insufficient Verification of Data Authenticity vulnerability in StylemixThemes MasterStudy LMS allows Manipulating User State. This issue affects MasterStudy LMS: from n/a through 3.7.39. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54707",
+    "descripcion": "OnionShare is an open source tool that lets you securely and anonymously share files, host websites, and chat with friends using the Tor network. Prior to 2.6.4, OnionShare CLI/Desktop does not enforce the Receive mode disable_files setting in cli/onionshare_cli/web/receive_mode.py, where ReceiveModeRequest._get_file_stream() writes multipart file[] data to disk despite the text-only setting. This issue is fixed in version 2.6.4. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-28144",
-    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in Flipper Code WP Maps allows Retrieve Embedded Sensitive Data. This issue affects WP Maps: from n/a through 4.9.6. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-54706",
+    "descripcion": "OnionShare is an open source tool that lets you securely and anonymously share files, host websites, and chat with friends using the Tor network. Prior to 2.6.4, OnionShare CLI/Desktop follows symbolic links in cli/onionshare_cli/web/send_base_mode.py through SendBaseModeWeb.set_file_info() and stream_individual_file(), allowing remote recipients of Share or Website mode to read local files outside the selected directory. This issue is fixed in version 2.6.4. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-9611",
-    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-52856",
+    "descripcion": "Wings is the server control plane for Pterodactyl, a free, open-source game server management panel. Prior to 1.13.0, a malformed packet received during the SFTP connection handshake causes a Go panic. This issue is fixed in version 1.13.0. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-68577",
-    "descripcion": "Rejected reason: Reserved via standalone CLI outside the OSIM flaw workflow; releasing so the CVE ID can be properly reserved and linked through OSIM when the flaw is worked. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-52855",
+    "descripcion": "Wings is the server control plane for Pterodactyl, a free, open-source game server management panel. Prior to 1.12.3, {{config.}} placeholders in egg configuration-file templates allow a low-privileged user to read {{config.token}}, {{config.token_id}}, and {{config.docker.registries}} from the full daemon configuration. This issue is fixed in version 1.12.3. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-68576",
-    "descripcion": "Rejected reason: Reserved via standalone CLI outside the OSIM flaw workflow; releasing so the CVE ID can be properly reserved and linked through OSIM when the flaw is worked. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67607",
+    "descripcion": "LightFTP 2.3.1 contains a race condition vulnerability that allows remote attackers to crash the server by racing a fresh connection that reuses the FTP context against an in-progress ABRT cleanup. Attackers can exploit the unprotected re-check of WorkerThreadId between worker_thread_cleanup() and pthread_join() outside of MTLock to cause pthread_join() to operate on an invalid thread ID, resulting in a server crash. CVE-2024-11144 identifies an incomplete fix of this vulnerability. 31/07/2026 31/07/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-68575",
-    "descripcion": "Rejected reason: Reserved via standalone CLI outside the OSIM flaw workflow; releasing so the CVE ID can be properly reserved and linked through OSIM when the flaw is worked. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-52857",
+    "descripcion": "Wings is the server control plane for Pterodactyl, a free, open-source game server management panel. Prior to 1.13.0, unbounded json, yaml, and xml configuration-file parsers in parser.go can process an oversized non-file parser configuration file and exhaust Wings process memory. This issue is fixed in version 1.13.0. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-68574",
-    "descripcion": "Rejected reason: Reserved via standalone CLI outside the OSIM flaw workflow; releasing so the CVE ID can be properly reserved and linked through OSIM when the flaw is worked. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18141",
+    "descripcion": "A flaw was found in aap-gateway, a component of Ansible Automation Platform&#39;s Event-Driven Ansible (EDA). An unauthenticated remote attacker can bypass mutual Transport Layer Security (mTLS) authentication for event streams. This is achieved by manipulating the event stream URL and forging the HTTP Subject header. The system also inadvertently discloses the expected certificate subject in error messages, which simplifies the attack. This vulnerability allows an attacker to inject arbitrary events into EDA, potentially triggering automated workflows. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-18358",
-    "descripcion": "A flaw was found in gnome-remote-desktop as shipped in Red Hat Enterprise Linux. When the daemon is running in system mode with RDP enabled, the incoming connection handler bypasses the connection throttler, allowing an unauthenticated remote attacker to open many parallel pre-authentication connections to the RDP listener. This can accumulate accepted sockets and pending routing-token operations until timeout, exhausting resources and preventing legitimate users from establishing RDP sessions. This issue does not affect the upstream version. 31/07/2026 31/07/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-16504",
+    "descripcion": "Deployment of the VPS.org one-click Zulip template deploys a hardcoded application signing key, a default database password (&#34;zulip&#34;), and DISABLE_HTTPS=True. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-07-31",
-    "cve": "CVE-2026-17592",
-    "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-16503",
+    "descripcion": "Deployment of the VPS.org one-click Supabase template deploys a PostgreSQL instance that is published on all interfaces (0.0.0.0:5432) with a default database password set to &#34;postgres&#34;. Because Docker installs its own iptables rules, this exposure bypasses a standard host UFW configuration. 31/07/2026 31/07/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
