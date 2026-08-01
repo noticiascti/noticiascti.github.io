@@ -6,13 +6,13 @@
   },
   {
     "fecha": "2026-08-01",
-    "cve": "CVE-2026-59309",
-    "descripcion": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service. A malicious actor with network access to vCenter may exploit this issue to bypass authentication and gain unauthorized access to the system."
+    "cve": "CVE-2026-59310",
+    "descripcion": "VMware vCenter contains a directory traversal vulnerability in the Syslog server. A malicious actor with network access to vCenter may exploit this issue to execute arbitrary code."
   },
   {
     "fecha": "2026-08-01",
-    "cve": "CVE-2026-59310",
-    "descripcion": "VMware vCenter contains a directory traversal vulnerability in the Syslog server. A malicious actor with network access to vCenter may exploit this issue to execute arbitrary code."
+    "cve": "CVE-2026-59309",
+    "descripcion": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service. A malicious actor with network access to vCenter may exploit this issue to bypass authentication and gain unauthorized access to the system."
   },
   {
     "fecha": "2026-08-01",
@@ -23,6 +23,11 @@
     "fecha": "2026-08-01",
     "cve": "CVE-2026-47876",
     "descripcion": "VMware ESX contains an out-of-bounds write vulnerability in the VMXNET3 virtual network adapter. A malicious actor with local administrative privileges on a virtual machine with VMXNET3 virtual network adapter may exploit this issue to execute code on the host. Non VMXNET3 ..."
+  },
+  {
+    "fecha": "2026-08-01",
+    "cve": "CVE-2026-52751",
+    "descripcion": "Ghidra before 12.1 contains an unsafe deserialization vulnerability in client-side Shared-Project RMI connection code that allows unauthenticated remote code execution. Attackers can craft a malicious project file with a ghidra:// URL that, when opened via File → Open Project, ..."
   },
   {
     "fecha": "2026-08-01",
@@ -43,10 +48,5 @@
     "fecha": "2026-08-01",
     "cve": "CVE-2026-20316",
     "descripcion": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems. This ..."
-  },
-  {
-    "fecha": "2026-08-01",
-    "cve": "CVE-2026-41703",
-    "descripcion": "VMware ESX, Workstation, and Fusion contain an out-of-bounds read vulnerability. A malicious actor with VM deployment privileges could trigger an out-of-bounds read, potentially leading to information disclosure or more likely a Denial-of-Service (DoS) condition of the host ..."
   }
 ]
