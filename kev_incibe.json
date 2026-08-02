@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-08-02",
+    "cve": "CVE-2026-12231",
+    "descripcion": "The Exclusive Addons for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘ exad_infobox_image’ parameter in all versions up to, and including, 2.7.9.8 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 02/08/2026 02/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-02",
     "cve": "CVE-2026-18573",
     "descripcion": "A flaw was found in the keycloak-services component of Keycloak, which is used for managing authentication and authorization flows. The issue occurs when a realm administrator configures client policies to enforce specific authentication requirements on confidential clients. Due to improper evaluation of the client state during an update operation, an attacker with client management permissions can bypass these security policies by first creating a public client and then updating it to a confidential client with weaker authentication. This can result in the persistence of clients that do not comply with the intended security hardening of the realm. 02/08/2026 02/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-08-02",
     "cve": "CVE-2026-16273",
     "descripcion": "The Narrative Publisher WordPress plugin through 1.0.7 does not restrict write access to a REST-exposed post meta field or escape it when rendering, allowing users with contributor-level access and above to store JavaScript that executes in the browser of any higher-privileged user who views the affected post. 02/08/2026 02/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-02",
-    "cve": "CVE-2026-16261",
-    "descripcion": "The login-social WordPress plugin through 1.0.4 does not validate password-reset requests against a reset key or the requester&#39;s identity, and it issues authentication sessions from unverified third-party sign-in data, allowing unauthenticated attackers to reset any user&#39;s password or log in as any existing account, including administrators, and take over the site. 02/08/2026 02/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
