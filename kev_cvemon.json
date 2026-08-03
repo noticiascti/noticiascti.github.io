@@ -11,6 +11,11 @@
   },
   {
     "fecha": "2026-08-03",
+    "cve": "CVE-2026-61511",
+    "descripcion": "vBulletin 5.x through 5.7.5 and 6.x through 6.2.1 contains an eval injection vulnerability in the vB5_Template_Runtime::runMaths() method within the template runtime that allows unauthenticated remote attackers to execute arbitrary PHP code by supplying crafted input through the ..."
+  },
+  {
+    "fecha": "2026-08-03",
     "cve": "CVE-2026-32202",
     "descripcion": "Protection mechanism failure in Windows Shell allows an unauthorized attacker to perform spoofing over a network."
   },
@@ -21,8 +26,8 @@
   },
   {
     "fecha": "2026-08-03",
-    "cve": "CVE-2026-61511",
-    "descripcion": "vBulletin 5.x through 5.7.5 and 6.x through 6.2.1 contains an eval injection vulnerability in the vB5_Template_Runtime::runMaths() method within the template runtime that allows unauthenticated remote attackers to execute arbitrary PHP code by supplying crafted input through the ..."
+    "cve": "CVE-2025-66516",
+    "descripcion": "Critical XXE in Apache Tika tika-core (1.13-3.2.1), tika-pdf-module (2.0.0-3.2.1) and tika-parsers (1.13-1.28.5) modules on all platforms allows an attacker to carry out XML External Entity injection via a crafted XFA file inside of a PDF. This CVE covers the same ..."
   },
   {
     "fecha": "2026-08-03",
@@ -43,10 +48,5 @@
     "fecha": "2026-08-03",
     "cve": "CVE-2026-52750",
     "descripcion": "Ghidra before 12.1 contains a command injection vulnerability in URL annotation handling on Windows where cmd.exe metacharacters are not properly escaped. Attackers can execute arbitrary commands under the Ghidra user's privileges by embedding malicious URLs in program comments ..."
-  },
-  {
-    "fecha": "2026-08-03",
-    "cve": "CVE-2026-66373",
-    "descripcion": "Redis before 8.8.0, in the unusual case where an authenticated attacker can execute RESTORE, allows remote code execution via a RESTORE payload where the same NACK (pending entry) is referenced by more than one consumer, because deleting both consumers via XGROUP DELCONSUMER ..."
   }
 ]
