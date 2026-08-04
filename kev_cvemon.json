@@ -11,6 +11,11 @@
   },
   {
     "fecha": "2026-08-04",
+    "cve": "CVE-2026-18556",
+    "descripcion": "Authentication bypass using an alternate path or channel vulnerability in N-able N-central allows Authentication Bypass. This issue affects N-central: through 2026.1."
+  },
+  {
+    "fecha": "2026-08-04",
     "cve": "CVE-2026-61511",
     "descripcion": "vBulletin 5.x through 5.7.5 and 6.x through 6.2.1 contains an eval injection vulnerability in the vB5_Template_Runtime::runMaths() method within the template runtime that allows unauthenticated remote attackers to execute arbitrary PHP code by supplying crafted input through the ..."
   },
@@ -31,22 +36,17 @@
   },
   {
     "fecha": "2026-08-04",
+    "cve": "CVE-2026-9198",
+    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments"
+  },
+  {
+    "fecha": "2026-08-04",
     "cve": "CVE-2025-71399",
     "descripcion": "Better Auth relies on better-call, which uses the rou3 router library. In affected versions of rou3, paths are normalized by removing empty segments, so /path, //path, and ///path resolve to the same route. In Better Auth versions prior to 1.4.5 (which bundles the fixed rou3), ..."
   },
   {
     "fecha": "2026-08-04",
-    "cve": "CVE-2026-18577",
-    "descripcion": "An incomplete patch for CVE-2026-18556 allows for authentication bypass and account takeover in N-central Versions through 2026.3.1"
-  },
-  {
-    "fecha": "2026-08-04",
-    "cve": "CVE-2025-15673",
-    "descripcion": "The Import and export users and customers WordPress plugin before 2.4.3 does not restrict the path of a file it reads and displays during a CSV import, allowing high-privileged users to read arbitrary files on the server."
-  },
-  {
-    "fecha": "2026-08-04",
-    "cve": "CVE-2025-71400",
-    "descripcion": "better-auth passkey versions before 1.4.0 contain an insecure direct object reference vulnerability in the passkey deletion endpoint that allows authenticated users to delete arbitrary passkeys by ID. Attackers with valid sessions can submit crafted requests to the ..."
+    "cve": "CVE-2026-34486",
+    "descripcion": "Missing Encryption of Sensitive Data vulnerability in Apache Tomcat due to the fix for CVE-2026-29146 allowing the bypass of the EncryptInterceptor. This issue affects Apache Tomcat: 11.0.20, 10.1.53, 9.0.116. Users are recommended to upgrade to version 11.0.21, 10.1.54 or ..."
   }
 ]
