@@ -36,11 +36,6 @@
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-61511",
-    "descripcion": "vBulletin 5.x through 5.7.5 and 6.x through 6.2.1 contains an eval injection vulnerability in the vB5_Template_Runtime::runMaths() method within the template runtime that allows unauthenticated remote attackers to execute arbitrary PHP code by supplying crafted input through the ..."
-  },
-  {
-    "fecha": "2026-08-05",
     "cve": "CVE-2026-16347",
     "descripcion": "MikroTik RouterOS contains a weakness in its API authentication handling that lacks effective safeguards against excessive login attempts. The system does not enforce meaningful rate-limiting, account lockout, or source-based restrictions, allowing repeated authentication ..."
   },
@@ -48,5 +43,10 @@
     "fecha": "2026-08-05",
     "cve": "CVE-2026-30623",
     "descripcion": "LiteLLM 1.18.10 contains a remote code execution vulnerability in its MCP server creation functionality. The application allows users to add MCP servers via a JSON configuration specifying arbitrary command and args values. LiteLLM executes these values on the host without ..."
+  },
+  {
+    "fecha": "2026-08-05",
+    "cve": "CVE-2025-71399",
+    "descripcion": "Better Auth relies on better-call, which uses the rou3 router library. In affected versions of rou3, paths are normalized by removing empty segments, so /path, //path, and ///path resolve to the same route. In Better Auth versions prior to 1.4.5 (which bundles the fixed rou3), ..."
   }
 ]

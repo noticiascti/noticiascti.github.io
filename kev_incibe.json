@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-08-05",
+    "cve": "CVE-2026-7529",
+    "descripcion": "The wiseCampaign – WooCommerce Conversions Made Easy plugin for WordPress is vulnerable to unauthorized modification and disclosure of data due to every one of its REST API endpoints being registered with `permission_callback => &#39;__return_true&#39;` in all versions up to, and including, 1.1.16. This makes it possible for unauthenticated attackers to read and modify the plugin&#39;s banner, stockbar, and core settings — including saving/updating banner records, toggling stockbar/feature flags, changing the active banner, and uploading background-image files via wp_handle_upload() — without any nonce or capability check. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-05",
+    "cve": "CVE-2026-17506",
+    "descripcion": "The Independent Analytics plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 404 not_found_url tracking parameter in versions up to, and including, 2.15.0. This is due to the get_cell_content() function applying urldecode() after esc_url() when rendering the URL column for 404 entries — a sequence that allows percent-encoded HTML to pass URL validation and then be reconstructed as raw markup, which wp_kses_post() does not strip because it retains img elements and data-* attributes, and because the public REST endpoint /iawp/search accepts unauthenticated requests as long as they carry a signature that is itself embedded in public page HTML. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-05",
+    "cve": "CVE-2026-16443",
+    "descripcion": "A flaw was found in the SAML metadata import functionality of the keycloak-services component, which is the core engine for identity brokering in Red Hat Build of Keycloak. When importing identity provider metadata that lacks specific usage attributes for keys, the system incorrectly disables signature validation for SAML responses even if a signing certificate is provided. This issue allows an unauthenticated attacker to forge a SAML response and gain unauthorized access to a user account by knowing their external identifier. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-05",
+    "cve": "CVE-2026-15979",
+    "descripcion": "The Content Egg – Affiliate Product Importer & Price Comparison plugin for WordPress is vulnerable to Arbitrary File Deletion via Path Traversal in versions up to and including 11.3.0. This is due to insufficient validation of the &#39;img_file&#39; field within the cegg_data post metadata: the value passes only through wp_strip_all_tags() (which does not strip path traversal sequences), is stored directly in post meta, and is later concatenated without normalization into a filesystem path in getFullImgPath() before being passed to PHP&#39;s unlink(). This makes it possible for authenticated attackers, with author-level access and above, to delete arbitrary files on the affected site&#39;s server which may make remote code execution possible. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-05",
     "cve": "CVE-2025-70962",
     "descripcion": "Zosi C519M V4.2.8.823C01450BA is vulnerable to Incorrect Access Control. The application contains hardcoded credentials in the RTSP authentication mechanism. An attacker with network access can use the unchangeable default credentials to access the RTSP video stream, resulting in unauthorized viewing of camera footage. 05/08/2026 05/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-08-05",
     "cve": "CVE-2026-71289",
     "descripcion": "The NASA-AMMOS Asynchronous Network Management System (ANMS) reference implementation&#39;s default docker-compose.yml publishes the amp-manager service&#39;s REST API directly to the host network interface (port 8089, e.g. &#34;${ION_MGR_PORT:-8089}:8089/tcp&#34;) with cap_add: NET_ADMIN, NET_RAW, SYS_NICE, bypassing the CAM (Configuration and Access Manager) gateway that is otherwise the system&#39;s sole authentication boundary. The underlying REST server, implemented with CivetWeb in JHUAPL/dtnma-tools (src/refdm/nm_rest.c), is configured with enable_auth_domain_check set to &#34;no&#34; and registers every route, including the DTNMA agent command-dispatch endpoints (.../agents/{eid|idx}/send, which accept and forward EXECSET-encoded command sets to a registered DTNMA agent), with a null authentication callback. Any network-reachable client can therefore enumerate registered agents, submit arbitrary command sets to them, and clear stored reports, entirely without credentials. This affects NASA-AMMOS/anms and JHUAPL-DTNMA/dtnma-tools as published; both repositories present this as a reference/ground DTN network-management implementation and testbed, and the affected components communicate with DTNMA agents (which may represent simulated or real spacecraft/ground nodes depending on deployment) rather than being flight software running onboard a spacecraft. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-08-05",
-    "cve": "CVE-2026-71288",
-    "descripcion": "Koha&#39;s guided report builder (reports/guided_reports.pl) reads the `order_by` CGI parameter and, for each value, a dynamically-named `{order}_ovalue` parameter, and concatenates both directly into an SQL ORDER BY clause with no allowlist or validation: `my @order_by = $input->multi_param(&#39;order_by&#39;); foreach my $order (@order_by) { my $value = $input->param($order . &#34;_ovalue&#34;); $query_orderby = &#34; ORDER BY $order $value&#34;; }`. The resulting string is appended verbatim to the final query in C4::Reports::Guided (`$query .= $orderby;`) with no escaping. Since ORDER BY columns cannot be bound via prepared-statement placeholders, this requires an explicit allowlist, which does not exist. Any staff account with the low-privilege create_reports or execute_reports permission (commonly granted to non-admin library staff) can perform time-based blind SQL injection against the Koha database, which stores patron PII and staff/LDAP credentials. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-05",
-    "cve": "CVE-2026-71287",
-    "descripcion": "Cacti&#39;s sanitize_sql_column() (lib/functions.php) sanitizes user-supplied ORDER BY column names using the regex `preg_replace(&#39;/[^a-zA-Z0-9_().]/&#39;, &#39;&#39;, $column)`. Because this allowlist retains letters, digits, underscore, parentheses, and dot (intended to support expressions like COUNT(id) and table.column), a payload such as `SLEEP(5)` passes through completely unmodified. The sanitized value is concatenated directly into raw SQL ORDER BY clauses (which cannot be parameterized) driven by a `sort_column` GET parameter in at least user_log.php, utilities.php, user_domains.php, and user_group_admin.php, allowing any authenticated Cacti user, regardless of privilege level, to perform time-based blind SQL injection against the Cacti database. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-05",
-    "cve": "CVE-2026-71286",
-    "descripcion": "The render-template component of ember-dynamic-render-template (addon/components/render-template.js) passes its `templateString` property directly into Ember/Glimmer&#39;s compileTemplate() (from @ember/template-compilation) with no sanitization, allow-listing, or validation of the input. Because compileTemplate() dynamically compiles and renders the supplied string as a live Handlebars/Glimmer template, any application that renders attacker-influenced data through this component&#39;s templateString property is exposed to client-side template injection: an attacker-controlled Handlebars expression is compiled and executed in the context of the rendering component, which can be leveraged for cross-site scripting depending on what helpers/context are exposed to the compiled template. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-05",
-    "cve": "CVE-2026-71285",
-    "descripcion": "Uptime Kuma&#39;s Matomo analytics integration (server/analytics/matomo-analytics.js) injects the admin-configurable Matomo `siteId` value as a bare, unquoted JavaScript expression inside a block rendered on every public status page: `_paq.push([&#39;setSiteId&#39;, ${escapedSiteIdHTMLAttribute}]);`. The escaping pipeline used (jsesc with isScriptContext:true, then html-escaper.escape()) does not escape the characters `]`, `)`, `;`, `(`, which are sufficient to break out of the array/push expression context. A siteId value such as `1]);alert(document.cookie)//`, once saved by an editor/admin, executes arbitrary JavaScript for every unauthenticated visitor of the public /status/ page, enabling session-cookie theft and full page takeover. 05/08/2026 05/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
