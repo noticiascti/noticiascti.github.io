@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-67867",
-    "descripcion": "Buffer Overflow vulnerability in Systerel S2OPC 1.7.3 allows a remote attacker to cause a denial of service via the Alarm/Conditions wrapper when processing PublishResponse EventNotificationList data 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67873",
+    "descripcion": "A heap-based buffer overflow exists in lib60870-C 2.4.0 in the server-side FileSegment ASDU encoding path. The issue occurs because FileSegment_encode() validates only the standalone segment length via FileSegment_GetMaxDataSize() and does not verify the residual capacity of the current ASDU frame before encoding object fields and segment data 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-67866",
-    "descripcion": "Buffer Overflow vulnerability in Systerel S2OPC 1.7.3 allows a remote attacker to cause a denial of service via the LockedStaMac_ProcessMsg_DeleteMonitoredItemsResponse and SOPC_StaMac_NewDeleteMonitoredItems in the client wrapper DeleteMonitoredItems path 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67872",
+    "descripcion": "An issue in Systerel S2OPC 1.7.3 allows a remote attacker to cause a denial of service via the event monitored-item queue resize handling 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-67863",
-    "descripcion": "In open62541 1.5.5, a server-side use-after-free exists in the local MonitoredItem callback path. The issue occurs when UA_Subscription_localPublish continues to use the current UA_Notification after a callback invokes UA_Server_deleteMonitoredItem for the current local MonitoredItem. This allows a remote attacker to cause a denial of service. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-67871",
+    "descripcion": "Buffer Overflow vulnerability in Systerel S2OPC 1.7.3 allows a remote attacker to cause a denial of service via the AddNodes, address_space_bs.c, sopc_node_mgt_helper_internal.c, and toolkit_test_server 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-19026",
-    "descripcion": "H5Z__filter_nbit in H5Znbit.c in HDF5 through 2.3.0 dereferences cd_values[0] through cd_values[4] without validating that cd_values is non-NULL or that cd_nelmts is at least 5, the fixed size of the filter&#39;s header. This allows attackers to cause a denial of service via a crafted HDF5 file that stores the N-Bit filter pipeline message with zero client-data values, opened and read via H5Dread, e.g. by the h5ls or h5repack tools. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67870",
+    "descripcion": "In open62541 v1.5.5, the server-side AddReferences implementation contains an incomplete validation flaw for non-local ExpandedNodeId targets. A remote attacker can send a crafted AddReferencesRequest with an empty targetServerUri and a non-zero targetNodeId.serverIndex, causing the target node pointer to remain NULL while execution continues. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-19025",
-    "descripcion": "H5O__layout_decode in H5Olayout.c in HDF5 through 2.3.0 does not validate that a chunked dataset&#39;s stored chunk-layout dimensionality matches its dataspace rank when an existing dataset is opened, whereas this check is performed only at dataset-creation time. This allows attackers to cause a denial of service (divide-by-zero and application crash in H5S__hyper_iter_get_seq_list in src/H5Shyper.c) via a crafted HDF5 file with mismatched chunk/dataspace ranks that is opened and read via H5Dopen2 and H5Dread, e.g. by the h5repack tool. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67869",
+    "descripcion": "Buffer Overflow vulnerability in open62541 v1.5.5 allows a remote attacker to cause a denial of service via the Service_Call validates input arguments against runtime-resolved InputArguments metadata 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-19024",
-    "descripcion": "NULL pointer dereference in H5Pget_fill_value in HDF5 before 2.1.1 allows attackers to cause a denial of service via a dataset whose version 1 or 2 fill value message has the &#34;defined&#34; flag set together with a negative size field, which is not normalized to the library&#39;s &#34;undefined&#34; sentinel and reaches H5T_path_find with a NULL datatype. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-67531",
+    "descripcion": "FrontMCP is a TypeScript-first framework for the Model Context Protocol (MCP). Prior to 1.5.7, the sandboxed codecall:execute tool exposes live host Zod schema instances to the script via getTool(), and because Zod v4 defines _zod as a non-configurable, non-writable own property, the ECMAScript Proxy invariants force the security membrane to hand back the raw host object, letting a script reach _zod.constr.constructor (the host Function constructor) and execute arbitrary code in the server process. A single tools/call is sufficient to escape the sandbox and achieve remote code execution as the server user, exposing everything the process holds such as OAuth client secrets, JWT_SECRET, session keys, database credentials, and cloud instance metadata. Because the framework&#39;s DEFAULT_AUTH_OPTIONS is public mode, an unconfigured server serves this to unauthenticated callers, and on authenticated servers an indirect prompt injection in tool output or fetched content can trigger it without a human attackerThis issue is fixed in version 1.5.7. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-19023",
-    "descripcion": "Untrusted pointer dereference in the render_bin_output function in the h5dump tool in HDF5 before 2.1.1 allows attackers to cause a denial of service via a variable-length string dataset with more than one element dumped in binary mode, which corrupts the per-element stride calculation and causes subsequent elements to be read from a misaligned offset and dereferenced as a pointer. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.00 Gravedad 4.0 txt NONE Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-52466",
+    "descripcion": "Open Library Foundation VuFind v11.0.3 and v4.1 is vulnerable to toInorrect Access Control. The application fails to stop processing an incoming request in VuFind\\Controller\\AbstractBase::validateAccessPermission after it has found that controller level access permissions do not allow access to the requested function. The requester receives a response indicating that access was denied, but the actual function is executed regardless of that. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-71321",
-    "descripcion": "Nuxt is an open-source web development framework for Vue.js. From 3.1.0 until 3.21.10 and 4.5.1, the internal island renderer endpoint `/__nuxt_island/...` decodes and hashes attacker-controlled JSON body input with destr and ohash before validating the URL-resident hash. An unauthenticated `POST /__nuxt_island/_.json` with a large JSON body is fully read, parsed, hashed, and then rejected, which wastes CPU on Nitro single event loop and delays concurrent requests. No valid hash and no authentication are required. This issue is fixed in 3.21.10 and 4.5.1. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-19028",
+    "descripcion": "H5Z__filter_fletcher32 in H5Zfletcher32.c in HDF5 through 2.3.0 computes the data length to checksum by subtracting the 4-byte trailing checksum size from the input buffer size without checking that the buffer is at least 4 bytes, allowing a size_t underflow. This allows attackers to cause a denial of service (massively out-of-bounds read and application crash in H5_checksum_fletcher32) via a crafted HDF5 file with a Fletcher32-filtered chunk smaller than 4 bytes, triggered via H5Dread, e.g. by the h5ls or h5dump tools. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-71320",
-    "descripcion": "Nuxt is an open-source web development framework for Vue.js. From 3.4.0 until 3.21.10 and 4.5.1, an attacker can inject a template key through /__nuxt_island/ props into a dynamic component when `vue.runtimeCompiler: true` is enabled, causing template execution in the Nitro process. This issue is fixed in 3.21.10 and 4.5.1. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-19027",
+    "descripcion": "The H5Z__nbit_decompress_one_byte, H5Z__nbit_decompress_one_nooptype, and H5Z__nbit_decompress_one_atomic functions in H5Znbit.c in HDF5 through 2.3.0 advance a read index into the compressed chunk buffer without bounding it against the buffer&#39;s actual size. This allows attackers to cause an out-of-bounds heap read, and in constrained cases disclosure of adjacent heap memory into decompressed dataset values, via a crafted HDF5 file whose N-Bit filter parameters describe more decompressed data than the stored compressed chunk actually contains, triggered via H5Dread, e.g. by the h5ls or h5repack tools. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-05",
-    "cve": "CVE-2026-71319",
-    "descripcion": "Nuxt is an open-source web development framework for Vue.js. Prior to 3.3.1, Nuxt DevTools (development mode only) exposes a bidirectional RPC channel over the Vite HMR WebSocket via the nuxt:devtools:rpc plugin. On affected versions the channel has no authentication: any client that can reach the Vite HMR endpoint (ws://:/, subprotocol vite-hmr) can call RPC methods, with no token, handshake, or origin check before the channel is established. The updateOptions(), clearOptions(), and openInEditor() methods do not enforce the ensureDevAuthToken check that the other mutating methods use. openInEditor() reads the persisted behavior.openInEditor value and passes it to the launch-editor package, which spawns it as a child process. That value is settable through the equally unauthenticated updateOptions(). An attacker who can reach the HMR port can therefore chain updateOptions(&#39;behavior&#39;, { openInEditor: &#39;&#39; }) then openInEditor(&#39;&#39;) to execute an arbitrary program on the developer&#39;s machine. This issue is fixed in 3.3.1. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-18970",
+    "descripcion": "A flaw has been found in Rongzhitong Visual Integrated Command and Dispatch Platform up to 20260617. The affected element is an unknown function of the file /dm/dispatch/user/findAll. Executing a manipulation of the argument Name can lead to sql injection. It is possible to launch the attack remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
