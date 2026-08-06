@@ -31,22 +31,22 @@
   },
   {
     "fecha": "2026-08-06",
+    "cve": "CVE-2026-67192",
+    "descripcion": "Xlight FTP Server before 3.9.5 contains a pre-authentication stack buffer overflow vulnerability that allows unauthenticated attackers to corrupt stack memory by sending malformed SSH packets when a GCM cipher is negotiated. Attackers can craft packets with an unvalidated length ..."
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-66014",
+    "descripcion": "JFrog Artifactory contains an authentication handling weakness in internal request processing that, under specific conditions, may allow an attacker to escalate privileges beyond the intended access level."
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-65617",
+    "descripcion": "A deserialization weakness in JFrog Artifactory package handling could allow a low-privileged user to impact confidentiality, integrity, and availability under specific repository conditions."
+  },
+  {
+    "fecha": "2026-08-06",
     "cve": "CVE-2026-58374",
     "descripcion": "In hostapd before 2.12, a missing bounds check in AP-mode Wi-Fi 7 (IEEE 802.11be) Multi-Link Operation (MLO) association request processing allows an unauthenticated attacker within wireless range to send a crafted management frame containing a malformed Multi-Link Element or ..."
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-16347",
-    "descripcion": "MikroTik RouterOS contains a weakness in its API authentication handling that lacks effective safeguards against excessive login attempts. The system does not enforce meaningful rate-limiting, account lockout, or source-based restrictions, allowing repeated authentication ..."
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-30623",
-    "descripcion": "LiteLLM 1.18.10 contains a remote code execution vulnerability in its MCP server creation functionality. The application allows users to add MCP servers via a JSON configuration specifying arbitrary command and args values. LiteLLM executes these values on the host without ..."
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-47876",
-    "descripcion": "VMware ESX contains an out-of-bounds write vulnerability in the VMXNET3 virtual network adapter. A malicious actor with local administrative privileges on a virtual machine with VMXNET3 virtual network adapter may exploit this issue to execute code on the host. Non VMXNET3 ..."
   }
 ]
