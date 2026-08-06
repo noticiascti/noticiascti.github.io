@@ -31,22 +31,22 @@
   },
   {
     "fecha": "2026-08-06",
-    "cve": "CVE-2026-67191",
-    "descripcion": "Xlight FTP Server before 3.9.5 contains a pre-authentication heap buffer overflow vulnerability that allows remote unauthenticated attackers to write past the end of a heap buffer by sending a malformed SSH client identification string. A logic error in the recv loop's ..."
+    "cve": "CVE-2026-64633",
+    "descripcion": "A vulnerability allowing remote unauthenticated code execution on the agent host."
   },
   {
     "fecha": "2026-08-06",
-    "cve": "CVE-2026-67192",
-    "descripcion": "Xlight FTP Server before 3.9.5 contains a pre-authentication stack buffer overflow vulnerability that allows unauthenticated attackers to corrupt stack memory by sending malformed SSH packets when a GCM cipher is negotiated. Attackers can craft packets with an unvalidated length ..."
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-66014",
-    "descripcion": "JFrog Artifactory contains an authentication handling weakness in internal request processing that, under specific conditions, may allow an attacker to escalate privileges beyond the intended access level."
+    "cve": "CVE-2026-58075",
+    "descripcion": "A vulnerability allowing an unauthenticated attacker to read arbitrary files from the host, which can be further leveraged toescalate privileges locally."
   },
   {
     "fecha": "2026-08-06",
     "cve": "CVE-2026-65617",
     "descripcion": "A deserialization weakness in JFrog Artifactory package handling could allow a low-privileged user to impact confidentiality, integrity, and availability under specific repository conditions."
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-66014",
+    "descripcion": "JFrog Artifactory contains an authentication handling weakness in internal request processing that, under specific conditions, may allow an attacker to escalate privileges beyond the intended access level."
   }
 ]
