@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-08-06",
+    "cve": "CVE-2026-19041",
+    "descripcion": "A vulnerability has been found in MissionSquad mcp-api up to 1.11.8. The impacted element is the function this.packageService.installPackage of the file src/controllers/packages.ts of the component NPM Package Version Handler. The manipulation leads to command injection. It is possible to initiate the attack remotely. Upgrading to version 1.11.9 is sufficient to resolve this issue. The identifier of the patch is a40f54d4533ba6618e1749383a245900eeb024c1. The affected component should be upgraded. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-18501",
+    "descripcion": "The UsersWP – Front-end login form, User Registration, User Profile & Members Directory plugin for WP plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Badge Widget Variable Substitution in all versions up to, and including, 1.2.69 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-06",
     "cve": "CVE-2026-66733",
     "descripcion": "Sonic 3 A.I.R. before commit 2492d18 contains an unbounded memory allocation vulnerability in ReceivedPacketCache::enqueuePacket() that allows unauthenticated remote attackers to crash the server process by sending a crafted UDP packet with mUniquePacketID set to the maximum uint32 value. The mUniquePacketID field is read directly from the UDP wire-format packet header without bounds checking, causing the server to allocate one CacheItem per missing packet ID gap, exhausting available host memory and propagating an uncaught std::bad_alloc exception to std::terminate(). 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,6 +23,11 @@
     "fecha": "2026-08-06",
     "cve": "CVE-2026-19036",
     "descripcion": "A security flaw has been discovered in Shibby Tomato 1.28.0000. This affects the function sub_40F88C of the file /tmp/ppp/wanoptions. The manipulation of the argument ppp_custom results in os command injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. This project is superseded by FreshTomato. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:M/C:C/I:C/A:C Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-8166",
+    "descripcion": "Improper neutralization of input during web page generation (&#39;cross-site scripting&#39;) vulnerability in Logo Software Industry and Trade Inc. E-Logo Purchasing Portal allows Stored XSS. This issue affects e-Logo Purchasing Portal: before 1.52. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-06",
@@ -33,20 +48,5 @@
     "fecha": "2026-08-06",
     "cve": "CVE-2026-66909",
     "descripcion": "Apache CXF&#39;s JMS transport deserializes the body of any inbound JMS ObjectMessage using native Java deserialization, with no type restrictions in place. Any attacker able to place a message on the service&#39;s JMS destination can submit a malicious serialized object, leading to denial of service or, if a suitable gadget class is on the classpath, remote code execution. The fix disables ObjectMessage deserialization by default, with a configuration switch to re-enable it if needed. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-65432",
-    "descripcion": "Apache CXF reads a top-level WSDL through its hardened StaxUtils path, which disables XML DTDs and external entities. However, any or referenced from that top-level WSDL is handed off to WSDL4J, which does not disable DOCTYPE declarations or external entities. As a result, the protections applied to the top-level document do not extend to imported documents, leaving imported WSDL/XSD content vulnerable to XML External Entity (XXE) attacks. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-64958",
-    "descripcion": "An incomplete fix for CVE-2026-50645 means that it is still possible to perform a denial of service attack on Apache CXF by sending a message with many attachment headers. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-57819",
-    "descripcion": "Apache CXF allows to set a limit on the number of form parameters in a JAX-RS message via the &#34;maxFormParameterCount&#34; configuration option. However, no default limit is set which may lead to denial of service attacks when processing requests with very large numbers of form parameters. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue by using a default limit of 500 parameters. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
