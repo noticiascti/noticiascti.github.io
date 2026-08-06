@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-08-06",
+    "cve": "CVE-2026-66733",
+    "descripcion": "Sonic 3 A.I.R. before commit 2492d18 contains an unbounded memory allocation vulnerability in ReceivedPacketCache::enqueuePacket() that allows unauthenticated remote attackers to crash the server process by sending a crafted UDP packet with mUniquePacketID set to the maximum uint32 value. The mUniquePacketID field is read directly from the UDP wire-format packet header without bounds checking, causing the server to allocate one CacheItem per missing packet ID gap, exhausting available host memory and propagating an uncaught std::bad_alloc exception to std::terminate(). 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-66732",
+    "descripcion": "Sonic 3 A.I.R. before commit 2492d18 contains a missing source address validation vulnerability in ConnectionManager where established connections are resolved by a two-byte local connection handle alone without verifying that the datagram source address matches the registered remote address for the connection. An on-path attacker who can observe cleartext UDP traffic can inject arbitrary packets into any established session by forging the two-byte connection identifier, enabling session termination via TerminateConnectionPacket, arbitrary channel message forgery, and forged request responses without requiring IP address spoofing. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-19036",
+    "descripcion": "A security flaw has been discovered in Shibby Tomato 1.28.0000. This affects the function sub_40F88C of the file /tmp/ppp/wanoptions. The manipulation of the argument ppp_custom results in os command injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. This project is superseded by FreshTomato. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:M/C:C/I:C/A:C Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-5158",
+    "descripcion": "The Post Grid Gutenberg Blocks for News, Magazines, Blog Websites – PostX plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;inputPlaceHolder&#39; parameter in all versions up to, and including, 5.0.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-5391",
+    "descripcion": "The LatePoint plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;btn_wrapper_classes&#39; attribute of the &#39;latepoint_resources&#39; shortcode in all versions up to, and including, 5.3.2. This is due to insufficient input sanitization and output escaping in the &#39;locations&#39; branch of the &#39;shortcode_latepoint_resources&#39; function. This makes it possible for authenticated attackers, with contributor level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2025-9266",
+    "descripcion": "The Accelerate theme for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the enqueue_scripts() function in all versions up to, and including, 1.5.3. This makes it possible for authenticated attackers, with Subscriber-level access and above, to install and activate the ThemeGrill Demo Importer plugin. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-06",
     "cve": "CVE-2026-66909",
     "descripcion": "Apache CXF&#39;s JMS transport deserializes the body of any inbound JMS ObjectMessage using native Java deserialization, with no type restrictions in place. Any attacker able to place a message on the service&#39;s JMS destination can submit a malicious serialized object, leading to denial of service or, if a suitable gadget class is on the classpath, remote code execution. The fix disables ObjectMessage deserialization by default, with a configuration switch to re-enable it if needed. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-08-06",
     "cve": "CVE-2026-57819",
     "descripcion": "Apache CXF allows to set a limit on the number of form parameters in a JAX-RS message via the &#34;maxFormParameterCount&#34; configuration option. However, no default limit is set which may lead to denial of service attacks when processing requests with very large numbers of form parameters. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue by using a default limit of 500 parameters. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-57817",
-    "descripcion": "The OpenID Connect Core 1.0 specification mandates that the RP MUST validate the `c_hash` parameter when operating in the Hybrid Flow. If an Apache CXF RP is integrated with a non-compliant or misconfigured Identity Provider (IdP) that omits the `c_hash`, the RP becomes vulnerable to Authorization Code Substitution/Injection attacks. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-54225",
-    "descripcion": "Apache CXF allows to control the maximum attachment size via the &#34;attachment-max-size&#34;. Prior to Apache CXF 4.2.3 and 4.1.8 and 3.6.12, there was no default placed on this size, meaning that a denial of service attack is possible if the user doesn&#39;t explicitly set the limit. Users should update to Apache CXF 4.2.3 or 4.1.8 or 3.6.12 which fixes this problem by imposing a default attachment size limit of 50mb. 06/08/2026 06/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-55980",
-    "descripcion": "A denial-of-service vulnerability in CatchPulse could allow an attacker to conduct a stack buffer overrun attack, leading to a denial-of-service condition. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-55979",
-    "descripcion": "An improper access control check in CatchPulse&#39;s named pipe communication interface could allow an attacker to invoke CatchPulse functions. This is limited to operations that enforce more restrictive security policies. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-55978",
-    "descripcion": "An improper access control vulnerability in CatchPulse could allow a non-administrative local attacker to connect to an unrestricted kernel filter communication port and bypass CatchPulse&#39;s security policy enforcement. 06/08/2026 06/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-64640",
-    "descripcion": "Apache Polaris did not consistently validate storage locations supplied during table and view registration. An authenticated principal with permission to register a table or view could, depending on the affected release and registration path, cause Polaris to use the catalog&#39;s storage credentials to read a caller-selected Iceberg metadata file before verifying that the file was within the catalog&#39;s allowed storage locations. If the catalog&#39;s underlying credentials could read an object outside that boundary, this could disclose limited information from the object. Polaris could also accept registration metadata located within an allowed location that contained references to storage locations outside the allowed boundary. This second condition did not itself cause Polaris to read the referenced external locations during registration. The demonstrated impact is limited to confidentiality. No unauthorized data modification or availability impact has been demonstrated. The server-side read requires a deployment using S3 credential vending and an object outside the allowed locations that the catalog&#39;s underlying storage credentials can read. Exploitation requires an authenticated principal with table- or view-registration privileges. 06/08/2026 06/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:X/R:X/V:X/RE:X/U:Clear Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
