@@ -21,6 +21,16 @@
   },
   {
     "fecha": "2026-08-07",
+    "cve": "CVE-2026-67191",
+    "descripcion": "Xlight FTP Server before 3.9.5 contains a pre-authentication heap buffer overflow vulnerability that allows remote unauthenticated attackers to write past the end of a heap buffer by sending a malformed SSH client identification string. A logic error in the recv loop's ..."
+  },
+  {
+    "fecha": "2026-08-07",
+    "cve": "CVE-2026-67192",
+    "descripcion": "Xlight FTP Server before 3.9.5 contains a pre-authentication stack buffer overflow vulnerability that allows unauthenticated attackers to corrupt stack memory by sending malformed SSH packets when a GCM cipher is negotiated. Attackers can craft packets with an unvalidated length ..."
+  },
+  {
+    "fecha": "2026-08-07",
     "cve": "CVE-2026-66014",
     "descripcion": "JFrog Artifactory contains an authentication handling weakness in internal request processing that, under specific conditions, may allow an attacker to escalate privileges beyond the intended access level."
   },
@@ -31,11 +41,6 @@
   },
   {
     "fecha": "2026-08-07",
-    "cve": "CVE-2026-34486",
-    "descripcion": "Missing Encryption of Sensitive Data vulnerability in Apache Tomcat due to the fix for CVE-2026-29146 allowing the bypass of the EncryptInterceptor. This issue affects Apache Tomcat: 11.0.20, 10.1.53, 9.0.116. Users are recommended to upgrade to version 11.0.21, 10.1.54 or ..."
-  },
-  {
-    "fecha": "2026-08-07",
     "cve": "CVE-2026-64633",
     "descripcion": "A vulnerability allowing remote unauthenticated code execution on the agent host."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-08-07",
     "cve": "CVE-2026-58073",
     "descripcion": "A vulnerability in Veeam Service Provider Console allowing an unauthenticated attacker to impersonate a managed agent andobtain that agent's credentials."
-  },
-  {
-    "fecha": "2026-08-07",
-    "cve": "CVE-2026-18556",
-    "descripcion": "Authentication bypass using an alternate path or channel vulnerability in N-able N-central allows Authentication Bypass. This issue affects N-central: through 2026.1."
   }
 ]
