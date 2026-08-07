@@ -1,6 +1,46 @@
 [
   {
     "fecha": "2026-08-06",
+    "cve": "CVE-2026-63508",
+    "descripcion": "Missing authentication for critical function in Microsoft Planetary Computer Pro allows an unauthorized attacker to elevate privileges over a network. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-62836",
+    "descripcion": "Improper restriction of communication channel to intended endpoints in Azure SQL Managed Instance allows an unauthorized attacker to elevate privileges over a network. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-62830",
+    "descripcion": "Missing authorization in Azure SRE Agent allows an authorized attacker to elevate privileges over a network. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-56162",
+    "descripcion": "Improper authentication in Azure SQL Database allows an unauthorized attacker to elevate privileges over a network. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-50515",
+    "descripcion": "Deserialization of untrusted data in Azure Service Bus allows an authorized attacker to execute code over a network. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-49163",
+    "descripcion": "Improper limitation of a pathname to a restricted directory (&#39;path traversal&#39;) in Application Insights Profiler allows an authorized attacker to elevate privileges over a network. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-17264",
+    "descripcion": "Opening a crafted DICOM file containing malicious JPEG-compressed pixel data triggers an attacker-controlled heap out-of-bounds write, which may allow an attacker to remotely execute arbitrary code. 07/08/2026 07/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-06",
+    "cve": "CVE-2026-15805",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 07/08/2026 07/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-06",
     "cve": "CVE-2026-8325",
     "descripcion": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an Out-of-Bounds Write vulnerability. A malicious actor may leverage this vulnerability to cause a crash, cause data corruption, or execute arbitrary code in the context of the current process. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -8,45 +48,5 @@
     "fecha": "2026-08-06",
     "cve": "CVE-2026-7867",
     "descripcion": "A flaw was found in udisks2. A local attacker with an active console session can exploit insufficient authorization checking on the &#39;as-user&#39; option in the org.freedesktop.UDisks2.Filesystem.Mount() D-Bus method. This allows the attacker to spoof the &#39;as-user&#39; parameter, mounting filesystems on behalf of arbitrary users, including privileged accounts. This can lead to local privilege escalation through mount point injection and manipulation of the mount namespace visible to privileged users. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-7406",
-    "descripcion": "A maliciously crafted BMP file, when parsed through certain Autodesk products, can force a Untrusted Pointer Dereference vulnerability. A malicious actor can leverage this vulnerability to execute arbitrary code in the context of the current process. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-7405",
-    "descripcion": "A maliciously crafted TIF file, when parsed through certain Autodesk products during image import, can cause an Out-of-Bounds Read in the image handling library. A malicious actor can leverage this vulnerability to cause a denial of service 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-71555",
-    "descripcion": "PILOS (Platform for Interactive Live-Online Seminars) is a frontend for BigBlueButton. From 2.1.0 until 4.14.1, PILOS does not send a Cross-Origin-Opener-Policy response header, so pages opened by PILOS via a link that opens a new browsing context (e.g., target=&#34;_blank&#34;) retain a window.opener reference back to the originating PILOS tab. A malicious destination page reached this way can use window.opener to navigate or manipulate the original PILOS tab, a technique known as reverse tabnabbing, potentially redirecting an authenticated user to a phishing page that mimics PILOS. This issue is fixed in version 4.14.1. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-71554",
-    "descripcion": "h2 is a pure-Python implementation of a HTTP/2 protocol stack. Versions up to and including 4.4.0 accept request header blocks containing more than one Host header, and forward every Host header to the consuming application. Where the consumer downgrades HTTP/2 to HTTP/1.1, the resulting request carries two Host header lines, providing a request smuggling primitive. This issue is fixed in version 4.4.1. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-71498",
-    "descripcion": "node-re2 provides RE2 regular expression bindings for Node.js. Prior to version 1.26.1, passing a Buffer whose final bytes form a truncated (incomplete) multi-byte UTF-8 sequence could cause the native binding to read past the end of the allocated buffer while attempting to decode the final, incomplete code point. This could result in an out-of-bounds read and potential disclosure of adjacent memory contents. This issue is fixed in version 1.26.1. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-71497",
-    "descripcion": "jsoup is a Java library for working with real-world HTML. From 1.14.3 until 1.23.1, jsoup&#39;s HTML parser could incorrectly handle a malformed tag name ending in a control character, causing the tag to acquire the parsing behavior of a different element. When a custom Safelist permits certain raw-text elements, this misparsing can cause content that should remain inert text to be emitted as active markup after serialization, potentially resulting in cross-site scripting. jsoup&#39;s built-in Safelists are not affected. This issue is fixed in version 1.23.1. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-71488",
-    "descripcion": "league/commonmark is a PHP library for parsing and rendering CommonMark Markdown. From 0.6.0 until 2.9.0, specially crafted Markdown lines can cause the parser to have quadratic time complexity when converting, because several parsing paths repeatedly rescan growing portions of a line to translate between character positions and byte positions, and the Autolink extension can also copy and validate the remaining line at every URL-like prefix, allowing an attacker who can submit Markdown for conversion to consume disproportionate CPU time with a comparatively small request. This issue is fixed in 2.9.0. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-06",
-    "cve": "CVE-2026-71478",
-    "descripcion": "league/commonmark is a PHP library for parsing and rendering CommonMark Markdown. From 1.5.0 until 2.9.0, the AttributesExtension&#39;s href and src unsafe-link filter can be bypassed by embedding control bytes, such as a tab, carriage return, line feed, or leading C0 control character, in a javascript: URL that browsers discard before parsing the scheme, causing the browser to still execute the script even when the unsafe-link filter is enabled. This issue is fixed in 2.9.0. 07/08/2026 07/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
