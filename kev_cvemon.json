@@ -31,13 +31,13 @@
   },
   {
     "fecha": "2026-08-11",
-    "cve": "CVE-2026-33001",
-    "descripcion": "Jenkins 2.554 and earlier, LTS 2.541.2 and earlier does not safely handle symbolic links during the extraction of .tar and .tar.gz archives, allowing crafted archives to write files to arbitrary locations on the filesystem, restricted only by file system access permissions of ..."
+    "cve": "CVE-2026-19429",
+    "descripcion": "Jenkins FilePath.untarFrom() does not validate symlink targets in extracted TAR archives, even in versions patched for CVE-2026-33001 and CVE-2026-70427. An authenticated attacker with job configuration privileges can include a malicious archive in a build step that creates ..."
   },
   {
     "fecha": "2026-08-11",
-    "cve": "CVE-2026-19429",
-    "descripcion": "Jenkins FilePath.untarFrom() in all versions, including those with the CVE-2026-33001 and CVE-2026-70427 patches applied, contains two distinct symlink validation weaknesses that independently allow arbitrary file read. 1. SYMLINK TARGET NOT VALIDATED (all versions): The ..."
+    "cve": "CVE-2026-33001",
+    "descripcion": "Jenkins 2.554 and earlier, LTS 2.541.2 and earlier does not safely handle symbolic links during the extraction of .tar and .tar.gz archives, allowing crafted archives to write files to arbitrary locations on the filesystem, restricted only by file system access permissions of ..."
   },
   {
     "fecha": "2026-08-11",
