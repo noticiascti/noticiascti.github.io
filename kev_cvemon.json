@@ -37,7 +37,7 @@
   {
     "fecha": "2026-08-11",
     "cve": "CVE-2026-19429",
-    "descripcion": "Jenkins FilePath.untarFrom() in all versions, including those with the CVE-2026-33001 patch applied, validates symlink destinations but not targets. The CVE-2026-33001 fix enforces that the symlink file is created within the workspace boundary, but the symlink target — the path ..."
+    "descripcion": "Jenkins FilePath.untarFrom() in all versions, including those with the CVE-2026-33001 and CVE-2026-70427 patches applied, contains two distinct symlink validation weaknesses that independently allow arbitrary file read. 1. SYMLINK TARGET NOT VALIDATED (all versions): The ..."
   },
   {
     "fecha": "2026-08-11",
