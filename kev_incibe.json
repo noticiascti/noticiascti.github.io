@@ -1,5 +1,30 @@
 [
   {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-73122",
+    "descripcion": "A flaw was found in the multicloud-operators-channel component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows a compromised agent from a managed cluster to gain unauthorized access to sensitive information. Specifically, the agent can read all Secrets and ConfigMaps within any Channel namespace on the hub, potentially exposing credentials for other tenants&#39; Git and Helm repositories. This could lead to significant information disclosure. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-72526",
+    "descripcion": "A flaw was found in the multicloud-integrations component. The Application propagation controller processes the `ocm-managed-cluster` annotation from an Application Custom Resource (CR) without proper validation. A tenant with permissions to create Applications on the hub cluster can exploit this to target arbitrary managed clusters. This can force ArgoCD on the spoke clusters to synchronize attacker-controlled manifests, leading to arbitrary code execution or privilege escalation on those clusters. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-70398",
+    "descripcion": "A flaw was found in multicloud-integrations, a component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows an authenticated user, referred to as a tenant, to manipulate the GitOpsCluster controller. By exploiting this, a tenant can redirect sensitive spoke cluster bearer tokens from secure locations to a namespace they control. This unauthorized access to tokens can lead to the disclosure of critical information and bypass security policies within ArgoCD AppProjects. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-66878",
+    "descripcion": "A flaw was found in multicloud-operators-subscription. A privileged user, specifically a namespace administrator capable of creating Channel and Subscription resources, can exploit this vulnerability. By manipulating the Channel.Spec.SecretRef.Namespace field, the user can cause the system to copy sensitive Secret contents from other namespaces into their own, leading to information disclosure. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-64927",
+    "descripcion": "A flaw was found in the multicloud-operators-channel component. This vulnerability allows a user with specific permissions to manipulate how the system handles sensitive information, known as Secrets, across different parts of the system (namespaces). By exploiting this, an attacker can modify these Secrets in unauthorized areas. This could lead to unauthorized access to information or elevated privileges within the system. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
     "fecha": "2026-08-11",
     "cve": "CVE-2026-6484",
     "descripcion": "In an UEFI, Lack of verified boot to certain FV may cause arbitrary code execution. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
@@ -23,30 +48,5 @@
     "fecha": "2026-08-11",
     "cve": "CVE-2026-68447",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/amdkfd: clamp v9 CRIU control stack checkpoint copy to BO size CRIU checkpoint copies the MQD control stack using cp_hqd_cntl_stack_size from hardware without bounding it to the allocated BO region. If the HW field is larger than the queue&#39;s control stack allocation, memcpy reads past the BO into adjacent GTT memory and can leak kernel data to userspace. Store the page-aligned control stack BO size in mqd_manager and clamp checkpoint copies and reported checkpoint sizes to min(cp_hqd_cntl_stack_size, mm->ctl_stack_size). Apply the same bound for multi-XCC v9.4.3 checkpoint layout. (cherry picked from commit 6c2abd0ec09e86c6323010673766f76050e28aa3) 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2024-14044",
-    "descripcion": "A vulnerability was identified in Open5GS up to 2.7.1. This issue affects the function pcrf_rx_aar_cb of the file src/pcrf/pcrf-rx-path.c of the component Diameter Rx Handler. The manipulation of the argument num_of_media_component/num_of_sub leads to buffer overflow. The attack can be initiated remotely. The exploit is publicly available and might be used. Upgrading to version 2.7.2 is capable of addressing this issue. The identifier of the patch is 87b4e4535c77ded627cdb6f4e4e2e3ea761f40b7. It is recommended to upgrade the affected component. 12/08/2026 12/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68446",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/vmwgfx: Validate vmw_surface_metadata::array_size This field comes from userspace and should be validated against specific limits depending on which Shader Model (SM) is available. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68445",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/vc4: Prevent shader BO mappings from becoming writable vc4_gem_object_mmap() rejects a writable mapping of a validated shader BO, but leaves VM_MAYWRITE set. Userspace can map the BO read-only and then turn it writable with mprotect(). Validated shader BOs must stay read-only: the validator checks the instructions once and the GPU trusts them afterwards. A writable mapping lets userspace rewrite the code after validation, bypassing the validator. Clear VM_MAYWRITE on the read-only path so the mapping cannot be upgraded, as i915 already does for its read-only objects. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68444",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: firmware: arm_ffa: Fix NULL dereference in ffa_partition_info_get() ffa_partition_info_get() passes uuid_str directly to uuid_parse() without a NULL check. When a caller passes NULL, uuid_parse() -> __uuid_parse() -> uuid_is_valid() dereferences the pointer, causing a kernel panic: | Unable to handle kernel NULL pointer dereference at virtual address | 0000000000000040 | pc : uuid_parse+0x40/0xac | lr : ffa_partition_info_get+0x1c/0x94 [arm_ffa] Add a NULL guard before uuid_parse() so a NULL argument returns -ENODEV instead of crashing. Callers are expected to always supply a valid partition UUID, so NULL is not a supported input. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68443",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: hwmon: (gigabyte_waterforce) Stop device IO before calling hid_hw_stop Calling hid_hw_stop() does not stop the device IO. This results in a race condition between hid_input_report() and the point immediately following the execution of hid_device_io_start() within the driver probe function. If the probe operation fails after &#34;io start&#34; has been initiated, this race condition will result in a UAF vulnerability. Fix the problem by calling hid_device_io_stop() before calling hid_hw_stop(). 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
