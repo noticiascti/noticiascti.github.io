@@ -26,11 +26,6 @@
   },
   {
     "fecha": "2026-08-12",
-    "cve": "CVE-2026-71320",
-    "descripcion": "Nuxt is an open-source web development framework for Vue.js. From 3.4.0 until 3.21.10 and 4.5.1, an attacker can inject a template key through /__nuxt_island/ props into a dynamic component when `vue.runtimeCompiler: true` is enabled, causing template execution in the Nitro ..."
-  },
-  {
-    "fecha": "2026-08-12",
     "cve": "CVE-2026-50656",
     "descripcion": "Microsoft is aware of an elevation of privilege in the Microsoft Malware Protection Engine in Microsoft Defender publicly referred to as \"RoguePlanet \"."
   },
@@ -48,5 +43,10 @@
     "fecha": "2026-08-12",
     "cve": "CVE-2026-19429",
     "descripcion": "Jenkins FilePath.untarFrom() does not validate symlink targets in extracted TAR archives, even in versions patched for CVE-2026-33001 and CVE-2026-70427. An authenticated attacker with job configuration privileges can include a malicious archive in a build step that creates ..."
+  },
+  {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-33001",
+    "descripcion": "Jenkins 2.554 and earlier, LTS 2.541.2 and earlier does not safely handle symbolic links during the extraction of .tar and .tar.gz archives, allowing crafted archives to write files to arbitrary locations on the filesystem, restricted only by file system access permissions of ..."
   }
 ]

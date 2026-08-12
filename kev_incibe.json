@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-12",
-    "cve": "CVE-2026-73122",
-    "descripcion": "A flaw was found in the multicloud-operators-channel component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows a compromised agent from a managed cluster to gain unauthorized access to sensitive information. Specifically, the agent can read all Secrets and ConfigMaps within any Channel namespace on the hub, potentially exposing credentials for other tenants&#39; Git and Helm repositories. This could lead to significant information disclosure. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-19426",
+    "descripcion": "POS System developed by FitSoft has a Missing Authentication vulnerability. Unauthenticated remote attackers can directly access and operate the system. 12/08/2026 12/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-12",
-    "cve": "CVE-2026-72526",
-    "descripcion": "A flaw was found in the multicloud-integrations component. The Application propagation controller processes the `ocm-managed-cluster` annotation from an Application Custom Resource (CR) without proper validation. A tenant with permissions to create Applications on the hub cluster can exploit this to target arbitrary managed clusters. This can force ArgoCD on the spoke clusters to synchronize attacker-controlled manifests, leading to arbitrary code execution or privilege escalation on those clusters. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-41771",
+    "descripcion": "An authenticated attacker with low privileges can access an endpoint in the controller’s web interface that is vulnerable to SQL injection. The vulnerability affects a SQLite database used only for storing notification messages. Therefore, the impact is limited to the system’s notification functionality. 12/08/2026 12/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-12",
-    "cve": "CVE-2026-70398",
-    "descripcion": "A flaw was found in multicloud-integrations, a component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows an authenticated user, referred to as a tenant, to manipulate the GitOpsCluster controller. By exploiting this, a tenant can redirect sensitive spoke cluster bearer tokens from secure locations to a namespace they control. This unauthorized access to tokens can lead to the disclosure of critical information and bypass security policies within ArgoCD AppProjects. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2025-41770",
+    "descripcion": "An unauthenticated denial-of-service vulnerability in the device&#39;s PLCnext Engineer communication interface allow an remote attacker to interrupt access via the client application. Successful exploitation prevents communication until the PLCnext service is manually restarted. 12/08/2026 12/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-12",
-    "cve": "CVE-2026-66878",
-    "descripcion": "A flaw was found in multicloud-operators-subscription. A privileged user, specifically a namespace administrator capable of creating Channel and Subscription resources, can exploit this vulnerability. By manipulating the Channel.Spec.SecretRef.Namespace field, the user can cause the system to copy sensitive Secret contents from other namespaces into their own, leading to information disclosure. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2025-41769",
+    "descripcion": "The device&#39;s PROFINET service is affected by a buffer overflow vulnerability that exists in the default configuration. An unauthenticated remote attacker could exploit this vulnerability to reboot the device or execute arbitrary code. 12/08/2026 12/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-08-12",
-    "cve": "CVE-2026-64927",
-    "descripcion": "A flaw was found in the multicloud-operators-channel component. This vulnerability allows a user with specific permissions to manipulate how the system handles sensitive information, known as Secrets, across different parts of the system (namespaces). By exploiting this, an attacker can modify these Secrets in unauthorized areas. This could lead to unauthorized access to information or elevated privileges within the system. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-66659",
+    "descripcion": "Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;) vulnerability in Essekia Tablesome Table allows Blind SQL Injection. This issue affects Tablesome Table: from n/a through 1.2.9. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-6484",
-    "descripcion": "In an UEFI, Lack of verified boot to certain FV may cause arbitrary code execution. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-19594",
+    "descripcion": "Insufficient input sanitization in Snowflake Python API (`snowflake.core`) versions prior to 1.13.0 allowed confused-deputy privilege escalation through two related weaknesses: path traversal (CWE-22) via unencoded `..` identifier path segments, and HTTP parameter pollution (CWE-141) via unencoded `&`/`#`/`=` characters in query string values. An attacker with access to a downstream application built on snowflake.core could exploit the path traversal by supplying `..` as an object name, causing `snowflake.core` to issue REST requests against a parent resource or exploit the parameter pollution by injecting `&`/`#`/`=` into a free-form name field to override constraints on swap, clone, or rename operations — all executed under the application&#39;s privileged session. Successful exploitation requires the attacker to control an identifier or object-name string in an application built on snowflake.core that passes it to `snowflake.core` under a higher-privileged Snowflake session (e.g., an EXECUTE AS OWNER stored procedure, Streamlit app, or Native App). The fix is available in Snowflake Python API version 1.13.0, which also addresses several additional security findings. Users must manually upgrade. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68450",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: btrfs: free mapping node on duplicate reloc root insert __add_reloc_root() allocates a mapping_node before inserting it into rc->reloc_root_tree. If rb_simple_insert() finds an existing entry, it returns the existing rb_node and leaves the newly allocated node unlinked. The error path then returns -EEXIST without freeing the new node. Since the node was never inserted into reloc_root_tree, the later cleanup in put_reloc_control() cannot find it either. Free the newly allocated node before returning -EEXIST. The callers currently assert that -EEXIST should not happen, so this is a defensive cleanup for an unexpected duplicate insert path. If the path is ever reached, the local allocation should still be released. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-19217",
+    "descripcion": "The Royal Addons for Elementor WordPress plugin before 1.7.1065 does not validate a widget setting used to build an HTML tag before outputting it, which could allow users with the Contributor role and above to perform Stored Cross-Site Scripting attacks. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68449",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ata: sata_dwc_460ex: fix infinite loop in NCQ tag completion bit-scanning The hand-rolled bit-scanning loop in the NCQ completion path has an infinite loop bug. When tag_mask has only high bits set (e.g. 0x80000000), the inner while loop left-shifts tag_mask until it overflows to 0. At that point !(0 & 1) is always true and 0 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-19073",
+    "descripcion": "The Order Sync with Zendesk for WooCommerce WordPress plugin before 2.2.3 does not perform any capability check on one of its REST API endpoints, and does not verify that the requester owns the account being queried, allowing unauthenticated attackers to retrieve the order history and purchase totals of any customer whose email address they know or can enumerate. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68448",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ovl: check access to copy_file_range source with src mounter creds Commit 5dae222a5ff0c (&#34;vfs: allow copy_file_range to copy across devices&#34;) allowed filesystems that implement the copy_file_range() f_op to decide if they want to access cross-sb copy from/to the same fs type. The same commit added checks to verify same sb copy for filesystems that implement ->copy_file_range() and do not support cross-sb copy at the time, namely, to ceph, fuse and nfs. The two remaining fs which implement ->copy_file_range(), cifs and overlayfs started to support cross-sb copy from this time. While overlayfs does support cross-sb copy when the two underlying files are on the same base fs, the copy operation on the two real files from two different overalyfs filesystems is performed with the mounter creds of the destination overlayfs and the read permission access hook for the source file was called with the wrong creds. This could cause either deny of access to copy which would otherwise be allowed (e.g. with splice) or allow read access to file which would otherwise be denied. Fix the latter case by explicitly verifying read access to source file with the source overlayfs mounter creds. The former case remains a quirk of cross-sb overlayfs copy, but userspace could fall back to regular copy so no harm done. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-19052",
+    "descripcion": "The ProSolution WP Client WordPress plugin before 2.0.9 does not perform capability checks on two administrative AJAX actions, and the nonce they rely on is published on its public frontend, allowing any authenticated user, such as a subscriber, to trigger an administrative data synchronisation and to clear the ProSolution WP Client WordPress plugin before 2.0.9&#39;s activity records. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-11",
-    "cve": "CVE-2026-68447",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: drm/amdkfd: clamp v9 CRIU control stack checkpoint copy to BO size CRIU checkpoint copies the MQD control stack using cp_hqd_cntl_stack_size from hardware without bounding it to the allocated BO region. If the HW field is larger than the queue&#39;s control stack allocation, memcpy reads past the BO into adjacent GTT memory and can leak kernel data to userspace. Store the page-aligned control stack BO size in mqd_manager and clamp checkpoint copies and reported checkpoint sizes to min(cp_hqd_cntl_stack_size, mm->ctl_stack_size). Apply the same bound for multi-XCC v9.4.3 checkpoint layout. (cherry picked from commit 6c2abd0ec09e86c6323010673766f76050e28aa3) 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-19050",
+    "descripcion": "The ProSolution WP Client WordPress plugin before 2.0.9 does not validate a user-supplied URL, and does not check the capability or nonce of the requester, before performing a server-side HTTP request with it, allowing any authenticated user, such as a subscriber, to make the site issue arbitrary requests to internal hosts and services, including requests with an attacker-chosen method, headers and body. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
