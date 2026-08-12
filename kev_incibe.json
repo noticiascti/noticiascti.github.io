@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-08-12",
+    "cve": "CVE-2026-68868",
+    "descripcion": "The Google Cloud Secret Manager secrets backend in Apache Airflow&#39;s Google provider never applied the team scope when resolving Connections and Variables: the caller&#39;s `team_name` was accepted by the backend but dropped at the internal call boundary, so every lookup resolved against the team-agnostic secret name. In a deployment running multi-team mode with this backend, a task or Dag belonging to one team resolved another team&#39;s Connection or Variable, obtaining its credentials in full. No unusual configuration is required beyond enabling multi-team mode and using this backend. Users are advised to upgrade to apache-airflow-providers-google 22.3.0 or later, which builds and applies the team-scoped secret name. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-18663",
+    "descripcion": "A flaw was found in 389-ds-base. The get_ldapmessage_controls_ext() function frees the parsed controls array on the Session Tracking critical-control rejection path without clearing the SLAPI_REQCONTROLS pblock slot. Operation teardown then frees the same pointer again, causing a double-free. An unauthenticated remote attacker can trigger this with a single BIND request carrying a critical Session Tracking control, resulting in heap corruption and potential denial of service. 12/08/2026 12/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-12",
+    "cve": "CVE-2026-19566",
+    "descripcion": "Net::CIDR::Set versions before 0.23 for Perl allow memory exhaustion and malformed set ranges via unbounded IPv6 prefix lengths. The _encode method accepts any prefix length matching `(0|[1-9][0-9]*)` and passes it to _width2bits(), which builds the mask as `&#39;1&#39; x ($width + 8)`, one character per bit. The _inc() method then unpacks the packed mask into a Perl array of one scalar per byte, so the prefix length alone sets the allocation size: `::/100000000` builds a 100 MB string and a 12.5 million element array. The value being tested is parsed, not just the configured ranges: contains() builds a set from its argument, and _guess_coder() tries the IPv4 coder and then the IPv6 coder, so an IPv4-only set expands an oversized IPv6 prefix length before the mixed address width check rejects it. Any caller that passes untrusted input to contains() or add() can exhaust process memory. A prefix length above 128 is also stored as a range that does not match the requested block: 2001:db8::/129 stringifies back unchanged, contains() of its own base address returns false, and removing it from a set drops the base address while the set still prints as covering it. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-12",
     "cve": "CVE-2026-19426",
     "descripcion": "POS System developed by FitSoft has a Missing Authentication vulnerability. Unauthenticated remote attackers can directly access and operate the system. 12/08/2026 12/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-08-12",
     "cve": "CVE-2026-19217",
     "descripcion": "The Royal Addons for Elementor WordPress plugin before 1.7.1065 does not validate a widget setting used to build an HTML tag before outputting it, which could allow users with the Contributor role and above to perform Stored Cross-Site Scripting attacks. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-12",
-    "cve": "CVE-2026-19073",
-    "descripcion": "The Order Sync with Zendesk for WooCommerce WordPress plugin before 2.2.3 does not perform any capability check on one of its REST API endpoints, and does not verify that the requester owns the account being queried, allowing unauthenticated attackers to retrieve the order history and purchase totals of any customer whose email address they know or can enumerate. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-12",
-    "cve": "CVE-2026-19052",
-    "descripcion": "The ProSolution WP Client WordPress plugin before 2.0.9 does not perform capability checks on two administrative AJAX actions, and the nonce they rely on is published on its public frontend, allowing any authenticated user, such as a subscriber, to trigger an administrative data synchronisation and to clear the ProSolution WP Client WordPress plugin before 2.0.9&#39;s activity records. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-12",
-    "cve": "CVE-2026-19050",
-    "descripcion": "The ProSolution WP Client WordPress plugin before 2.0.9 does not validate a user-supplied URL, and does not check the capability or nonce of the requester, before performing a server-side HTTP request with it, allowing any authenticated user, such as a subscriber, to make the site issue arbitrary requests to internal hosts and services, including requests with an attacker-chosen method, headers and body. 12/08/2026 12/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
