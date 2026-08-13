@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-3835",
-    "descripcion": "The Prevent Direct Access – Protect WordPress Files plugin for WordPress is vulnerable to unauthorized access of protected files due to insufficient token validation in the `get_advance_file_by_url()` method in all versions up to, and including, 2.8.8.8 The method uses a SQL `LIKE` operator for token lookup without escaping wildcard characters via `$wpdb->esc_like()`. This makes it possible for unauthenticated attackers to bypass the private token requirement by supplying SQL wildcard characters (such as `%`) as the token value, matching any record in the plugin&#39;s file table and downloading any protected file. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-19696",
+    "descripcion": "Ixia IxVeriWave and Vector Informatik BLF file parser crashes in 4.6.0 to 4.6.7 allows denial of service on Windows 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-19088",
-    "descripcion": "The ShopEngine Elementor WooCommerce Builder Addon WordPress plugin before 4.9.3 does not protect one of its authentication endpoints against CSRF, allowing an attacker to log a victim into an attacker-controlled account, so that the billing and shipping details the victim then enters at checkout are stored under and readable by the attacker. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-19695",
+    "descripcion": "Gammu DCT3 trace file parser crash in 4.6.0 to 4.6.7 allows denial of service 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-18945",
-    "descripcion": "The WP Helper Premium WordPress plugin before 4.7.6 does not verify the order key when rendering its custom order confirmation page or when handling the related AJAX actions, allowing unauthenticated users to view other customers&#39; order details, including personal information, as well as change the state of arbitrary orders. Exploitation requires WooCommerce to be active and the WP Helper Premium WordPress plugin before 4.7.6&#39;s optional order confirmation page module to be enabled. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-19694",
+    "descripcion": "TTX Logger file parser crash in 4.6.0 to 4.6.7 allows denial of service 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-14213",
-    "descripcion": "The Booking for Appointments and Events Calendar WordPress plugin before 2.4.6 does not verify that an authenticated employee (provider) is assigned to the appointment being accessed, allowing any employee to read any appointment by its identifier and disclose the booked customer&#39;s personal data. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-19481",
+    "descripcion": "@fastify/busboy is a multipart form-data parser. In versions 1.0.0 through 3.2.0, an attacker who can submit multipart form-data can crash the parser by sending a part header whose name is a prototype-inherited property such as __proto__ or constructor. The internal header parser stores headers in a plain JavaScript object and assumes each value is an array, so an inherited property name resolves to a truthy non-array value and triggers a TypeError. In the common pipe integration the failure surfaces as an error event, but in direct write or end usage the exception is thrown synchronously and can terminate the Node.js process, causing an unauthenticated denial of service. The issue is fixed in @fastify/busboy 3.2.1, which creates the header object with a null prototype. Users should upgrade to 3.2.1. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-14182",
-    "descripcion": "The Customer Email Verification for WooCommerce WordPress plugin before 3.2.6 does not correctly validate the email-verification activation code, relying on a loose comparison that an attacker can satisfy with a crafted value type, allowing unauthenticated users to verify and take over the account of any registered user who has not yet confirmed their email address. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-16459",
+    "descripcion": "Padding oracle attack vulnerability in Oberon microsystem AG’s Oberon PSA Crypto library in all versions since 1.0.0 and prior to 2.1.1 allows an attacker to recover plaintexts via timing measurements of RSA PKCS#1 v1.5 decrypt operations. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-13610",
-    "descripcion": "The KiviCare WordPress plugin before 4.5.2 does not restrict the roles assignable through its unauthenticated registration endpoint, allowing unauthenticated attackers to create an active, privileged clinic-staff (doctor) account with full access to patient records, billing and clinic data. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-16458",
+    "descripcion": "Padding oracle attack vulnerability in Oberon microsystem AG’s ocrypto library in all versions since 3.0.0 and prior to 4.0.1 allows an attacker to recover plaintexts via timing measurements of RSA PKCS#1 v1.5 decrypt operations. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-13328",
-    "descripcion": "The Food Menu WordPress plugin before 6.0.2 does not perform any capability or ownership check on its reservation-status update action, which is also exposed to unauthenticated users and gated only by a nonce that is publicly available to visitors, allowing unauthenticated attackers to change the status of arbitrary reservations. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-15413",
+    "descripcion": "The Link Factory WordPress plugin is a backdoor. Distributed as a &#34;homepage sentence publisher&#34;, it exposes an operator-controlled REST API under /wp-json/link-factory/v1/ - authenticated by a detached Ed25519 signature verified against a hardcoded operator public key (except for the health check). 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-72506",
-    "descripcion": "VoiceTra provided by National Institute of Information and Communications Technology (NICT) contains an incorrectly specified destination in a communication channel vulnerability. Users may be directed to a server (or service) controlled by an attacker, potentially resulting in the theft of input data or the display of incorrect results. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-14332",
+    "descripcion": "The Ecwid by Lightspeed Ecommerce Shopping Cart WordPress plugin before 7.0.9 does not perform a capability check or nonce verification on one of its store-management actions, allowing any authenticated user, such as a subscriber, to disconnect the store and take the storefront offline until an administrator reconnects it. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-19182",
-    "descripcion": "An incorrect authorization check in the v2 Alarm REST API in OpenNMS Meridian and Horizon allows a low-privileged authenticated user (ROLE_REST) to acknowledge, escalate, or clear alarms recorded as an arbitrary username, and, when also assigned ROLE_READONLY, to modify alarm state despite the read-only restriction. A credential check that should restrict these operations is guarded by an inverted condition, so it never executes for a real (non-blank) username. This can potentially allow an attacker to compromise the integrity of alarm state and audit records. The solution is to upgrade to Meridian 2024.3.12, 2025.0.9 and Horizon 36.0.3 or newer. Meridian and Horizon installation instructions state that they are intended for installation within an organization&#39;s private networks and should not be directly accessible from the Internet. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-14298",
+    "descripcion": "Mattermost versions 11.9.x 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-19135",
-    "descripcion": "A JEXL expression sandbox bypass exists in multiple versions of OpenNMS Meridian and Horizon. A low-privileged authenticated user can submit a crafted expression to the Measurements REST API that escapes the sandbox and loads arbitrary Java classes on the server. This can potentially allow an attacker to gain access to confidential information and compromise integrity. The solution is to upgrade to Meridian 2024.3.12, 2025.0.9 and Horizon 36.0.3 or newer. Meridian and Horizon installation instructions state that they are intended for installation within an organization&#39;s private networks and should not be directly accessible from the Internet. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3639",
+    "descripcion": "The PPWP – Password Protect Pages plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s `ppwp` shortcode attributes in all versions up to, and including, 1.9.21 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
