@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-18728",
-    "descripcion": "A flaw was found in open-iscsi. An integer underflow vulnerability in the `iscsiuio` component, specifically during IPv4 Dynamic Host Configuration Protocol (DHCP) parsing, allows a remote attacker on the same local network segment to cause a denial of service. By sending a specially crafted IPv4/UDP DHCP reply, the attacker can trigger an out-of-bounds read, leading to the `iscsiuio` process crashing. This issue affects systems where `iscsiuio` is actively handling IPv4 DHCP traffic. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-3835",
+    "descripcion": "The Prevent Direct Access – Protect WordPress Files plugin for WordPress is vulnerable to unauthorized access of protected files due to insufficient token validation in the `get_advance_file_by_url()` method in all versions up to, and including, 2.8.8.8 The method uses a SQL `LIKE` operator for token lookup without escaping wildcard characters via `$wpdb->esc_like()`. This makes it possible for unauthenticated attackers to bypass the private token requirement by supplying SQL wildcard characters (such as `%`) as the token value, matching any record in the plugin&#39;s file table and downloading any protected file. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0301",
-    "descripcion": "An information disclosure vulnerability in the URL Filtering feature of Palo Alto Networks PAN-OS® software enables an unauthenticated user with network access to obtain sensitive information. Panorama is not impacted by this vulnerability. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Amber Gravedad 4.0 1.70 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-19088",
+    "descripcion": "The ShopEngine Elementor WooCommerce Builder Addon WordPress plugin before 4.9.3 does not protect one of its authentication endpoints against CSRF, allowing an attacker to log a victim into an attacker-controlled account, so that the billing and shipping details the victim then enters at checkout are stored under and readable by the attacker. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0296",
-    "descripcion": "Improper certificate validation vulnerabilities in Palo Alto Networks GlobalProtect™ app enable an unauthenticated attacker with man-in-the-middle (MitM) access to intercept and modify application communications. VPN tunnel traffic is not impacted. The GlobalProtect app on iOS, Android, and Chrome OS is not affected. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Amber Gravedad 4.0 4.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-18945",
+    "descripcion": "The WP Helper Premium WordPress plugin before 4.7.6 does not verify the order key when rendering its custom order confirmation page or when handling the related AJAX actions, allowing unauthenticated users to view other customers&#39; order details, including personal information, as well as change the state of arbitrary orders. Exploitation requires WooCommerce to be active and the WP Helper Premium WordPress plugin before 4.7.6&#39;s optional order confirmation page module to be enabled. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0294",
-    "descripcion": "A privilege escalation (PE) vulnerability in the Palo Alto Networks Prisma® Access Agent app on Windows and macOS devices enables a local user to execute code with elevated privileges. The Prisma Access Agent on Linux, iOS, Android, and ChromeOS is not affected. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:A/V:C/RE:M/U:Amber Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-14213",
+    "descripcion": "The Booking for Appointments and Events Calendar WordPress plugin before 2.4.6 does not verify that an authenticated employee (provider) is assigned to the appointment being accessed, allowing any employee to read any appointment by its identifier and disclose the booked customer&#39;s personal data. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0293",
-    "descripcion": "A vulnerability in Palo Alto Networks Prisma® Access Agent on Windows enables a local attacker with administrator privileges to bypass the anti-tamper protection, enabling unauthorized access to protected processes and files. The Prisma Access Agent on Linux, macOS, iOS, Android, and Chrome OS is not affected. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:X/V:D/RE:M/U:Amber Gravedad 4.0 5.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-14182",
+    "descripcion": "The Customer Email Verification for WooCommerce WordPress plugin before 3.2.6 does not correctly validate the email-verification activation code, relying on a loose comparison that an attacker can satisfy with a crafted value type, allowing unauthenticated users to verify and take over the account of any registered user who has not yet confirmed their email address. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0292",
-    "descripcion": "An authentication bypass vulnerability in the network driver of Palo Alto Networks Prisma® Access Agent on Windows enables a local administrator to bypass security inspection, subsequently allowing them to inject and intercept arbitrary network traffic. The Prisma Access Agent on Linux, macOS, iOS, Android, and Chrome OS is not affected. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:N/VI:L/VA:L/SC:H/SI:H/SA:L/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:A/V:C/RE:M/U:Amber Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-13610",
+    "descripcion": "The KiviCare WordPress plugin before 4.5.2 does not restrict the roles assignable through its unauthenticated registration endpoint, allowing unauthenticated attackers to create an active, privileged clinic-staff (doctor) account with full access to patient records, billing and clinic data. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0291",
-    "descripcion": "An improper link resolution before file access vulnerability exists in the Palo Alto Networks Prisma® Access Agent on Linux platforms that enables a local low privileged user to delete system files in a limited scope and disable Prisma Access Agent. The Prisma Access Agent on macOS, Windows, iOS, Android, and Chrome OS is not affected. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Amber Gravedad 4.0 1.10 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-13328",
+    "descripcion": "The Food Menu WordPress plugin before 6.0.2 does not perform any capability or ownership check on its reservation-status update action, which is also exposed to unauthenticated users and gated only by a nonce that is publicly available to visitors, allowing unauthenticated attackers to change the status of arbitrary reservations. 13/08/2026 13/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0290",
-    "descripcion": "An information disclosure vulnerability in the Account Protection feature of Palo Alto Networks Prisma® Browser enables a local attacker to view sensitive data. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Amber Gravedad 4.0 0.50 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-72506",
+    "descripcion": "VoiceTra provided by National Institute of Information and Communications Technology (NICT) contains an incorrectly specified destination in a communication channel vulnerability. Users may be directed to a server (or service) controlled by an attacker, potentially resulting in the theft of input data or the display of incorrect results. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-0289",
-    "descripcion": "A security bypass vulnerability in the Account Protection feature of Palo Alto Networks Prisma® Browser enables a user to bypass intended security controls. 13/08/2026 13/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Amber Gravedad 4.0 0.50 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-19182",
+    "descripcion": "An incorrect authorization check in the v2 Alarm REST API in OpenNMS Meridian and Horizon allows a low-privileged authenticated user (ROLE_REST) to acknowledge, escalate, or clear alarms recorded as an arbitrary username, and, when also assigned ROLE_READONLY, to modify alarm state despite the read-only restriction. A credential check that should restrict these operations is guarded by an inverted condition, so it never executes for a real (non-blank) username. This can potentially allow an attacker to compromise the integrity of alarm state and audit records. The solution is to upgrade to Meridian 2024.3.12, 2025.0.9 and Horizon 36.0.3 or newer. Meridian and Horizon installation instructions state that they are intended for installation within an organization&#39;s private networks and should not be directly accessible from the Internet. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-08-12",
-    "cve": "CVE-2026-50544",
-    "descripcion": "NortheBridge/luminalshine is a Sunshine-compatible game stream host for Moonlight. Prior to version 26.05.0-rc4, a latent gap exists on a default install, the file at `src/platform/windows/misc.cpp` lives at `C:\\ProgramData\\LuminalShine\\config\\apps.json` and is created by the `SYSTEM` service. Under Windows&#39; default `C:\\ProgramData` inheritance, that gives `BUILTIN\\Users` only Read+Execute — not writable — so the canonical EoP doesn&#39;t actually trigger on a vanilla install. Version 26.05.0-rc4 contains a patch for the issue. As a workaround, use default condition DACLs for `ProgramData`. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-08-13",
+    "cve": "CVE-2026-19135",
+    "descripcion": "A JEXL expression sandbox bypass exists in multiple versions of OpenNMS Meridian and Horizon. A low-privileged authenticated user can submit a crafted expression to the Measurements REST API that escapes the sandbox and loads arbitrary Java classes on the server. This can potentially allow an attacker to gain access to confidential information and compromise integrity. The solution is to upgrade to Meridian 2024.3.12, 2025.0.9 and Horizon 36.0.3 or newer. Meridian and Horizon installation instructions state that they are intended for installation within an organization&#39;s private networks and should not be directly accessible from the Internet. 13/08/2026 13/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
