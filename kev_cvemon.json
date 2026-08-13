@@ -31,11 +31,6 @@
   },
   {
     "fecha": "2026-08-13",
-    "cve": "CVE-2026-64561",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: KVM: x86: Check for invalid/obsolete root *after* making MMU pages available Check for a \"stale\" page fault, i.e. for an invalid and/or obsolete root, after making MMU pages available for the shadow MMU. If ..."
-  },
-  {
-    "fecha": "2026-08-13",
     "cve": "CVE-2026-58231",
     "descripcion": "SAP Commerce Cloud allows an unauthenticated attacker to abuse a default authentication client and submit specially crafted input to certain functions lacking sufficient validation. Successful exploitation could enable arbitrary code execution and compromise internal components, ..."
   },
@@ -48,5 +43,10 @@
     "fecha": "2026-08-13",
     "cve": "CVE-2026-18125",
     "descripcion": "An out-of-bounds read in the Agent of Ivanti Endpoint Manager before version 2024 SU7 allows a remote unauthenticated attacker to crash an agent service."
+  },
+  {
+    "fecha": "2026-08-13",
+    "cve": "CVE-2026-19429",
+    "descripcion": "Jenkins FilePath.untarFrom() does not validate symlink targets in extracted TAR archives, even in versions patched for CVE-2026-33001 and CVE-2026-70427. An authenticated attacker with job configuration privileges can include a malicious archive in a build step that creates ..."
   }
 ]
