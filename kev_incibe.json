@@ -1,6 +1,46 @@
 [
   {
     "fecha": "2026-08-15",
+    "cve": "CVE-2026-73635",
+    "descripcion": "Allocation of resources without limits or throttling vulnerability in Apache Struts. When no fixed locale is configured, the locale used for localized-text lookups is taken from the incoming request, allowing an unauthenticated remote client to cause the framework&#39;s internal localized-text caches to grow without bound and exhaust the Java heap, denying service to other users. Applications that configure a fixed locale are not affected. This issue affects Apache Struts: from 2.0.0 through 2.3.37, from 2.5.0 through 2.5.33, from 6.0.0 through 6.10.0, from 7.0.0 through 7.2.1. Users are recommended to upgrade to version 6.11.0 or 7.3.0, which fixes the issue. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-15",
+    "cve": "CVE-2026-73634",
+    "descripcion": "Uncontrolled resource consumption vulnerability in Apache Struts. An application that exposes an endpoint collecting Content Security Policy violation reports reads the submitted report into memory without bounding how much it will accept, so a single request can exhaust the heap and deny service to other users. Such endpoints are ordinarily reachable without authentication. The core distribution maps no such endpoint by default; applications that do not collect violation reports are not affected. This issue affects Apache Struts: from 6.0.0 through 6.10.0, from 7.0.0 through 7.2.1. Users are recommended to upgrade to version 6.11.0 or 7.3.0, which fixes the issue. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-15",
+    "cve": "CVE-2026-73632",
+    "descripcion": "Exposure of data element to wrong session vulnerability in the JSON plugin of Apache Struts. Per-response serialization state could be shared across concurrent requests, allowing response content associated with one request to become observable in another. Only the SMD / JSON-RPC handling of the JSON interceptor is affected, which is not enabled by default; applications using the json result type are not affected. This issue affects Apache Struts: 7.2.1. Users are recommended to upgrade to version 7.3.0, which fixes the issue. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-15",
+    "cve": "CVE-2026-73631",
+    "descripcion": "Exposure of data element to wrong session vulnerability in the JSON plugin of Apache Struts. Per-request parsing state could be shared across concurrent requests, allowing data associated with one request to become observable in another, and configured parsing limits not to be enforced as intended. Populating actions from a JSON request body is not enabled by default; applications that do not use the JSON plugin are not affected. This issue affects Apache Struts: 7.2.1. Users are recommended to upgrade to version 7.3.0, which fixes the issue. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-15",
+    "cve": "CVE-2026-19891",
+    "descripcion": "A vulnerability was determined in TRENDnet TEW-WLC100 2.05b02. This affects an unknown function of the file /etc/racoon.conf of the component IKE Phase 1 Aggressive Mode. This manipulation of the argument exchange_mode causes missing encryption of sensitive data. It is possible to initiate the attack remotely. The complexity of an attack is rather high. The exploitability is reported as difficult. The vendor was contacted early about this disclosure. 15/08/2026 15/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:N/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-08-15",
+    "cve": "CVE-2026-18438",
+    "descripcion": "The Templately – Elementor & Gutenberg Template Library: 6500+ Free & Pro Ready Templates And Cloud! plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.7.1 via the fetch_remote_file function. This is due to a filename validation/destination mismatch in fetch_remote_file, where file type validation is performed against the attacker-controlled Content-Disposition filename rather than the URL-path-derived destination filename. This makes it possible for authenticated attackers, with contributor-level access and above, to execute code on the server. A GIF+PHP polyglot file passes wp_check_filetype_and_ext validation as image/gif via the Content-Disposition filename, while the actual destination path is written with a .php extension derived from the URL path, bypassing the unfiltered_upload capability gate entirely. The affected endpoints are reachable at this privilege level because Templately&#39;s entire REST API — including the cloud import endpoints used in this attack (/templately/v1/clouds/upload and /templately/v1/insert) — is authorized only by a current_user_can(&#39;delete_posts&#39;) check, with no administrator or manage_options capability requirement. The same permission gate also allows a contributor to overwrite the site&#39;s global Templately cloud connection via the /templately/v1/login endpoint with global_signin set to true. A complete remediation should both correct fetch_remote_file to validate the file type against the actual destination filename rather than the Content-Disposition header (and avoid deriving the write path from the request URL), and restrict state-changing Templately REST routes to an appropriate administrator-level capability. 15/08/2026 15/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-15",
+    "cve": "CVE-2026-16142",
+    "descripcion": "The TrueBooker plugin for WordPress is vulnerable to Account Takeover in all versions up to, and including, 1.2.6. This is due to the add_front_user_update() AJAX handler being registered for unauthenticated users and accepting an arbitrary truebooker_wp_user_id value, which is passed directly to wp_update_user() without verifying authentication or ownership. This makes it possible for unauthenticated attackers to change any WordPress user account email address, including an administrator, by submitting the target user ID and an attacker-controlled email address. An attacker can then use the native WordPress password reset flow to receive the reset link at the attacker-controlled email address and take over the account. 15/08/2026 15/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-15",
+    "cve": "CVE-2026-15142",
+    "descripcion": "The Real Estate Manager Pro plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 12.8.6. This is due to improper capability handling in the allow_attachment_actions() function, which can treat a target user ID as a media attachment ID during user capability checks. This makes it possible for authenticated attackers, with Subscriber-level access and above, to edit an administrator account and escalate their privileges to Administrator when the targeted user ID matches the ID of an existing media attachment. 15/08/2026 15/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-15",
     "cve": "CVE-2026-15826",
     "descripcion": "The User Profile Builder plugin for WordPress is vulnerable to Authentication Bypass via Type Confusion in versions up to, and including, 3.16.4. This is due to the wppb_log_in_user() function calling absint() on the return value of wp_insert_user() before performing an is_wp_error() check — when a registration is submitted with a 61–70 character username, WordPress core rejects it with a WP_Error object, but absint() coerces that object to the integer 1 before the error check can short-circuit execution, causing the plugin to bind and return a transient-backed autologin nonce tied to user ID 1. This makes it possible for unauthenticated attackers to log in as the site&#39;s Administrator account (user ID 1), resulting in full administrative takeover of the site. 15/08/2026 15/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
@@ -8,45 +48,5 @@
     "fecha": "2026-08-15",
     "cve": "CVE-2026-14279",
     "descripcion": "The Wholesale Market plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 2.2.2 via the ced_wholesale_request_send AJAX action. The ced_wholesale_request_send_callback() handler only verifies a nonce (which is exposed to any authenticated user through wp_localize_script on the frontend) and that the caller has a positive user ID, then calls WP_User::add_role() with the client-supplied role_required POST parameter without restricting the value to an allowlist of wholesale roles. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator when the site administrator has enabled the &#39;Assigning requested role directly&#39; option. 15/08/2026 15/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74439",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: iommu/vt-d: Clear Present bit before tearing down scalable-mode context entry device_pasid_table_teardown() zeroes the 128-bit scalable-mode context entry with context_clear_entry() while the Present bit is still set. This creates a window where the hardware can fetch a torn entry, with some fields already zeroed while Present is still set, leading to unpredictable behavior or spurious faults. The context-cache invalidation is issued only after the entry has been zeroed, and intel_pasid_free_table() then frees the PASID directory pages, so the IOMMU can keep walking a stale Present=1 entry that points at freed memory. While x86 provides strong write ordering, the compiler may reorder the two 64-bit writes to the entry, and the hardware fetch is not guaranteed to be atomic with respect to multiple CPU writes. Commit c1e4f1dccbe9d (&#34;iommu/vt-d: Clear Present bit before tearing down context entry&#34;) fixed this exact pattern in domain_context_clear_one() and the copied-context path, but device_pasid_table_teardown() was not converted. Align it with the &#34;Guidance to Software for Invalidations&#34; in the VT-d spec, Section 6.5.3.3, using the same ownership handshake as the sibling fix: clear only the Present bit, flush it to the IOMMU, perform the context-cache invalidation, and only then zero the rest of the entry. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74438",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: sun4i-ss - Remove insecure and unused rng_alg Remove sun4i_ss_rng, as it is insecure and unused: - It has multiple vulnerabilities. sun4i_ss_prng_seed() is missing locking and has a buffer overflow. sun4i_ss_prng_generate() fails to fill the entire buffer with cryptographic random bytes, because it rounds the destination length down and also doesn&#39;t actually wait for the hardware to be ready before pulling bytes from it. - No user of this code is known. It&#39;s usable only theoretically via the &#34;rng&#34; algorithm type of AF_ALG. But userspace actually just uses the actual Linux RNG (/dev/random etc) instead. And rng_algs don&#39;t contribute entropy to the actual Linux RNG either. (This may have been confused with hwrng, which does contribute entropy.) The sun4i_ss_prng_seed() buffer overflow was reported by Tianchu Chen and discovered by Atuin - Automated Vulnerability Discovery Engine There&#39;s no point in fixing all these vulnerabilities individually when this is unused code, so let&#39;s just remove it. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74437",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: media: uvcvideo: Fix deadlock if uvc_status_stop is called from async_ctrl.work If a UVC camera has an asynchronous control, uvc_status_stop may be called from async_ctrl.work: uvc_ctrl_status_event_work() uvc_ctrl_status_event() uvc_ctrl_clear_handle() uvc_pm_put() uvc_status_put() uvc_status_stop() cancel_work_sync() This will cause a deadlock, since cancel_work_sync will wait for uvc_ctrl_status_event_work to complete before returning. Fix this by returning early from uvc_status_stop if we are currently in the work function. flush_status now remains false until uvc_status_start is called again, ensuring that uvc_ctrl_status_event_work won&#39;t resubmit the URB. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74436",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: serialize kernel accept preallocation with socket teardown rxrpc_kernel_charge_accept() reads rx->backlog without any socket/backlog synchronization and passes that raw pointer into rxrpc_service_prealloc_one(). A concurrent rxrpc_discard_prealloc() sets rx->backlog = NULL and frees the backlog rings, so a kernel preallocation worker can keep using a freed struct rxrpc_backlog while updating *_backlog_head/tail and array slots. Serialize the state check and backlog lookup with the socket lock, and reject kernel preallocation once teardown has disabled listening or discarded the service backlog. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74435",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: rxrpc_verify_data ensure rx_dec_buffer alloc rxrpc_recvmsg_data() calls rxrpc_verify_data() whenever the rxrpc_call.rx_dec_buffer is unallocated and assumes that upon successful return that rx_dec_buffer must be allocated. However, rxrpc_verify_data() does not request an allocation if the rxrpc_skb_priv.len is zero. In addition, failure to allocate rx_dec_buffer will result in a call to skb_copy_bits() with a NULL destination which can trigger a NULL pointer dereference. To prevent these issues rxrpc_verify_data() is modified to always attempt to allocate the rxrpc_call.rx_dec_buffer if it is NULL. This issue was identified with assistance of a private sashiko instance. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74434",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Don&#39;t move a peeked OOB message onto the pending queue rxrpc_recvmsg_oob() takes a received oob message off recvmsg_oobq and, if a response is needed, moves it onto the pending_oobq tree. However, only the unlink from recvmsg_oobq is guarded by MSG_PEEK; the move onto pending_oobq always runs. As a result, reading a challenge with MSG_PEEK leaves the skb on recvmsg_oobq while also adding it to pending_oobq. Since struct sk_buff&#39;s rbnode shares storage with its next and prev pointers, rb_insert_color() overwrites the list linkage, and the skb, which holds a single reference, becomes reachable from both queues at once. When the socket is closed both queues are drained in turn. While draining recvmsg_oobq, __skb_unlink() follows the next and prev pointers that rbnode has overwritten and writes to a bad address. Also, as the skb holds a single reference but is freed from each queue, both the skb and the connection reference it holds are released twice. This leads to memory corruption and to a use-after-free caused by the connection refcount underflow. MSG_PEEK does not consume the message from the queue, so only unlink it from recvmsg_oobq and then move it onto pending_oobq or free it when the message is actually consumed. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74433",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix UAF in rxgk_issue_challenge() Fix rxgk_issue_challenge() to free the page containing the challenge content after invoking the tracepoint as the whdr passed to the tracepoint points into the page just freed. 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-15",
-    "cve": "CVE-2026-74432",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rxrpc: Fix leak of released call in recvmsg(MSG_PEEK) Fix rxrpc_recvmsg() to also drop the ref it holds on an already-released call if MSG_PEEK is in force (the function holds a ref on the call irrespective of whether MSG_PEEK is specified or not). 15/08/2026 15/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
