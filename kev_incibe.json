@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-08-18",
+    "cve": "CVE-2026-18929",
+    "descripcion": "Carbone is vulnerable to Denial of Service due to lack of protection against zip bombs when processing .docx files. The library uses yazl for zip decompression without validating entry sizes, allowing an attacker to supply a malicious .docx file containing a zip bomb that decompresses to a significantly larger size, causing excessive memory consumption and crashing the application server. The issue was fixed in versions: 3.8.2, 4.26.3 and 5.4.4. The fix is available across all distribution types. 18/08/2026 18/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-18",
     "cve": "CVE-2026-43971",
     "descripcion": "Improper Encoding or Escaping of Output vulnerability in ninenines cowlib allows Link header directive smuggling via unescaped special characters in cow_link:link/1. cow_link:do_link/1 in cowlib interpolates the target URI, rel value, and attribute keys directly into the serialized Link: header value without escaping or token-grammar validation. A > byte in target prematurely closes the URI slot, allowing an attacker to append additional link entries with attacker-chosen rel directives. A &#34; or \\ in rel escapes the quoted string and opens new parameters. Any byte — including whitespace, =, and &#34; — in an attribute key is emitted verbatim. Because browsers act on Link: directives such as rel=&#34;preconnect&#34;, rel=&#34;preload&#34;, and rel=&#34;prerender&#34;, an attacker who can influence these fields in an application that round-trips parsed Link headers through cow_link:link/1 can force victim browsers to make out-of-band connections to attacker-controlled origins. This issue affects cowlib: from 2.9.0 onward. 18/08/2026 18/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-08-18",
     "cve": "CVE-2026-75094",
     "descripcion": "A flaw has been found in COMFAST CF-N1-S 2.6.0.1. This impacts the function sub_44B438 of the file /cgi-bin/mbox-config?method=SET&section=ptest_ssid of the component CGI Interface. This manipulation of the argument ssid causes os command injection. Remote exploitation of the attack is possible. The exploit has been published and may be used. 18/08/2026 18/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:M/C:C/I:C/A:C Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-75093",
-    "descripcion": "A security vulnerability has been detected in sonos tract up to 0.23.4. This impacts the function Tensor::from_raw_dt_align of the file data/src/tensor.rs of the component ONNX Initializer Loader. Such manipulation leads to incorrect calculation of buffer size. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. The name of the patch is 66b10bda8895f4bfaf8c205361f0125cdf51f99b. It is best practice to apply a patch to resolve this issue. 18/08/2026 18/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:N/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
