@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-70667",
-    "descripcion": "Lemur manages TLS certificate creation. Prior to 1.9.3, _validate_revocation_url in lemur/certificates/verify.py checked the original CRL or OCSP URL but the later request could reach a different destination. The CRL requests.get call followed HTTP redirects without validating each Location target, so a public attacker-controlled URL could redirect to loopback, RFC1918, link-local, or instance-metadata addresses. Validation and connection also performed separate DNS resolutions, creating a time-of-check time-of-use window for DNS rebinding on both CRL and OCSP paths. An operator uploading a certificate through POST /api/1/certificates/upload could therefore induce blind internal requests despite the earlier mitigation. The fix disables redirects and pins validated addresses while preserving the correct Host value. This issue is fixed in version 1.9.3. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-75900",
+    "descripcion": "An out-of-bounds read vulnerability was found in swtpm&#39;s SWTPM_NVRAM_CheckHeader() function. The entry guard checks the buffer length against sizeof(bh), where bh is a pointer, instead of sizeof(*bh), the actual struct size. This allows an undersized buffer to pass validation, causing a 2-byte heap overread on 64-bit systems (6 bytes on 32-bit) when accessing the totlen field. This may cause daemon termination on some platforms and leaks heap data to the log. 19/08/2026 19/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-65959",
-    "descripcion": "Vitess is a database clustering system for horizontal scaling of MySQL. In 24.0.2 and earlier, the /debug/vrlog endpoint registered by addHttpEndpoint() in go/vt/vttablet/tabletmanager/vreplication/vrlog.go invokes vrlogStatsHandler() without acl.CheckAccessHTTP(r, acl.DEBUGGING), unlike comparable debug endpoints. A remote caller who can reach the vttablet debug HTTP port can bypass the configured security policy and stream VrLogStats data produced from NewVrLogStats().Send(), including literal SQL statements and bound application values from MoveTables, Reshard, Materialize, and vitess-strategy Online DDL workflows 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-75589",
+    "descripcion": "Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify. Each of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as soon as the two strings differ. The time taken to reject a signature varies with the length of the matching prefix. RSA-SHA1 is not affected, as it verifies through the RSA key object rather than by comparing strings. A client that can submit messages and time the replies may recover a valid signature one byte at a time rather than searching the whole signature space. Under PLAINTEXT the value compared against is the signature key itself, so the search recovers consumer_secret and token_secret. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-55163",
-    "descripcion": "Lemur manages TLS certificate creation. Prior to 1.9.2, PUT /api/1/roles/ in lemur/roles/views.py:298 authorized updates with RoleMemberPermission(role_id), which allowed either an administrator or any existing member of the target role. The handler passed data[&#34;users&#34;] and data[&#34;name&#34;] to service.update, allowing a non-admin member to add or remove other users and rename the role. This enabled lateral privilege grants within roles that control certificate and authority access and could deny access by removing legitimate members. The DELETE handler already required admin_permission, confirming that the weaker PUT authorization was inconsistent. The fix applies the same administrator-only requirement to the PUT handler. This issue is fixed in version 1.9.2. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-72889",
+    "descripcion": "Net::OAuth versions before 0.33 for Perl allow the sender to choose the signature algorithm in verify. verify resolves the signature method class from the signature_method parameter of the incoming message. signature_method is required on every request, so the algorithm used to check a signature is chosen by whoever sent it, and nothing lets the verifying party pin the method instead. When a message names HMAC-SHA1 or HMAC-SHA256, the key is derived from consumer_secret and token_secret rather than from the key the provider deployed. A provider deployed on RSA-SHA1 holds only the consumer public key, and RFC 5849 does not use consumer_secret for that method, so the required parameter is filled with a placeholder. A client that names HMAC-SHA1 instead has its signature checked against that placeholder, so a guessable one is enough to forge requests for any consumer key and token. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-55162",
-    "descripcion": "Lemur manages TLS certificate creation. Prior to 1.9.2, lemur/certificates/verify.py accepted CRL Distribution Point and OCSP responder URLs from uploaded certificate extensions and used them in crl_verify and ocsp_verify without adequate destination validation. An authenticated operator could submit a certificate through POST /api/1/certificates/upload and cause verify_string to reach loopback, RFC1918, link-local, or instance-metadata destinations such as 169.254.169.254. The requests could probe internal services and create side effects from the Lemur host network position. The CRL path also used an unbounded cache, allowing attacker-controlled entries to persist and consume memory. The fix validates destinations, supports explicit trusted-host allowlists, and bounds the CRL cache. This issue is fixed in version 1.9.2. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-58088",
+    "descripcion": "The ELF core dump code counted the number of dumpable VM map entries, allocated a buffer for the corresponding program headers, then iterated over the map a second time to populate them. A process sharing the address space via rfork(2) can mutate the map between the two passes, causing the second pass to write program headers past the end of the buffer. An unprivileged local user sharing an address space with a process that dumps core can trigger an out-of-bounds write on the kernel heap, potentially leading to privilege escalation. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-47630",
-    "descripcion": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an absolute path traversal. A successful exploit might lead to code execution. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-58087",
+    "descripcion": "The GETALL and SETALL commands in semctl(2) recorded the number of semaphores in the target set, dropped the lock protecting the set, allocated a buffer sized for that count, and reacquired the lock. A sequence-number check was used to verify that the set had not been replaced in the interim, but the sequence number wraps after 0x8000 create/destroy cycles. By rapidly destroying and recreating semaphore sets at the same index, another process can cause the sequence number to wrap, allowing a set with a different number of semaphores to pass validation. The subsequent copy then reads or writes past the end of the allocated buffer. An unprivileged local user can trigger out-of-bounds reads and writes on kernel heap memory, potentially leading to privilege escalation. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-47629",
-    "descripcion": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause improper input validation. A successful exploit might lead to denial of service. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-58086",
+    "descripcion": "As an inadvertent side effect of an unrelated code change, PRIV_KTRACE was always denied to a jailed root user. Tracing configured by a jailed root user was therefore not flagged as privileged. An unprivileged user in a jail that has permission to debug the target process can modify the jailed root user&#39;s ktrace(2) flags, or disable tracing outright. A jailed root user therefore cannot reliably trace unprivileged processes. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-47628",
-    "descripcion": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an allocation of resources without limits. A successful exploit might lead to denial of service. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-58085",
+    "descripcion": "After dispatching a decrypt operation to OCF and receiving the result, the wg(4) driver failed to check whether the MAC verification step succeeded. The driver thus silently accepted packets with an invalid Poly1305 authentication tag. A remote attacker who can send UDP packets to a WireGuard endpoint, and who can guess the bounds of the receiver&#39;s replay window, can inject forged or modified transport data packets into the tunnel. A remote attacker who can intercept WireGuard packets bound for a FreeBSD host can modify the ciphertext and authenticated data without detection by the receiver. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-47627",
-    "descripcion": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause path traversal. A successful exploit might lead to denial of service. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-58084",
+    "descripcion": "To retrieve the previous timer value, the kernel calls realtimer_gettime(), which obtains the current time for the timer&#39;s clock. For a timer using CLOCK_TAI this can fail when no TAI offset has been configured, but the error return was not checked, so the uninitialized output buffer was copied to userspace. An unprivileged local user can obtain uninitialized kernel stack memory by creating a POSIX timer with CLOCK_TAI and calling timer_settime(2), potentially disclosing sensitive kernel data. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-47606",
-    "descripcion": "NVIDIA Triton Inference Server for Linux contains a vulnerability where an attacker could cause an absolute path traversal. A successful exploit might lead to code execution and information disclosure. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-58083",
+    "descripcion": "While the kernel was copying knotes during fork, a knote with a timer-based filter could fire and be enqueued on the kqueue&#39;s active list before the copy was complete. The copy routine did not account for this and could enqueue the new knote a second time, corrupting the active list. In addition, the copy routine did not hold the appropriate locks while reading knote state, allowing further races. An unprivileged local user can trigger a use-after-free in the kernel, potentially leading to privilege escalation. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-18",
-    "cve": "CVE-2026-24185",
-    "descripcion": "NVIDIA NVOS for network switches contains a vulnerability in the secure shell (SSH) server configuration component while PKA-only mode is enabled, where an administrator could inadvertently enable an alternative authentication path. If best practices for replacing the default password as recommended by NVIDIA are not followed, this alternative authentication path might lead to unauthorized access. A successful exploit of this vulnerability might lead to escalation of privileges. 18/08/2026 18/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-08-19",
+    "cve": "CVE-2026-58082",
+    "descripcion": "The ISO-2022 encoding module used a stack buffer sized to MB_LEN_MAX (6 bytes) for intermediate character output. Some ISO-2022 variants can require up to 10 bytes per character, in which case conversions can trigger a stack buffer overflow of up to four bytes. An application that uses iconv(3) to convert untrusted input to or from one of the affected encodings may be vulnerable to buffer overflows if it uses one of the affected encoding modules. 19/08/2026 19/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
