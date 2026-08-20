@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-08-20",
+    "cve": "CVE-2026-77067",
+    "descripcion": "The setWebhookResolver in packages/api/src/resolvers/webhooks/index.ts stores the caller-supplied url without any address validation, and the file imports no validation helper. When a subscribed event fires, callWebhook in packages/api/src/jobs/call_webhook.ts issues axios.request with that url, the method and Content-Type recorded on the webhook, and a JSON body carrying the event data, so an authenticated user can make the server send repeated attacker-shaped requests to internal endpoints, including link-local metadata addresses. The request is blind: callWebhook discards the result and writes only a success line or the axios error to the server log, so the response is not returned through the API. 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-20",
+    "cve": "CVE-2026-77066",
+    "descripcion": "The scanFeedsResolver in packages/api/src/resolvers/subscriptions/index.ts passes the caller-supplied url straight to axios.get(url, rssParserConfig()) with no address validation. The same file guards the subscribe path with validateUrl(), which rejects private and reserved ranges through the private-ip library, and createPageSaveRequest applies the same check, so the omission is specific to this resolver. An authenticated user can direct the server to request arbitrary internal endpoints. The response is parsed as a feed or as HTML and the resolver returns the resulting url, title, description and type fields, so disclosure is limited to feed-shaped metadata and to link elements advertising RSS or Atom feeds; requests that do not parse still distinguish reachable ports from unreachable ones through the resulting error. 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-20",
+    "cve": "CVE-2026-77026",
+    "descripcion": "Joomla Extension - tassos.gr - Client-controlled validation bypass in Convert Forms extension 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-20",
     "cve": "CVE-2026-76610",
     "descripcion": "Joomla Extension - yootheme.com - Unauthenticated tag modifications in Zoo 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-08-20",
     "cve": "CVE-2026-14948",
     "descripcion": "A low privileged remote attacker can hijack an active administrative session without needing to know the administrator password by extracting live plaintext session identifiers for authenticated users from downloadable error log archives. 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-14947",
-    "descripcion": "A high-privileged remote attacker can upload malicious ZIP archive containing directory traversal sequences such as ../ can escape the intended extraction directory and write files to arbitrary locations on the server, potentially achieve arbitrary code execution due to improper validation of archive entry paths before writing files to disk which could result in full system compromise. 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-14946",
-    "descripcion": "A high privileged remote attacker can upload a .php file and then request it directly from /uploads/.php to achieve arbitrary code execution due to improper file type validation which could result in full system compromise. 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-76569",
-    "descripcion": "Joomla Extension - phoca.cz - Reflected XSS via the search GET parameter in Phoca Download 5.0.0-6.1.4 20/08/2026 20/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
