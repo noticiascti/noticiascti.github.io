@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-21",
+    "cve": "CVE-2026-71493",
+    "descripcion": "Infracost provides cloud cost intelligence for engineers, AI coding agents, and CI/CD. Prior to 0.10.45, the readFile, pathExists, isDir, and matchPaths template functions in internal/config/template/parser.go use a lexical filepath.Rel check and a leaf-only os.Lstat check that do not resolve an intermediate directory symlink. A repository can contain a path such as evil/file where evil points outside the checkout, causing os.ReadFile and related operations to follow the symlink and read runner-accessible files. The resulting content is rendered into generated configuration and can be surfaced through the Infracost dashboard or pull request comment, with greater impact in workflows that provide repository secrets. This issue is fixed in version 0.10.45. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-62676",
+    "descripcion": "Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, the shared shell-command parser in omnigent/policies/builtins/_shell.py fails to recognize combined interpreter flags, the timeout, nice, setsid, and stdbuf wrappers, command substitutions, and a single background control operator. A gated git push or gh write hidden with these forms produces no parsed operation, causing the github.py write_repos and write_branches allowlist and the working_dir.py workspace confinement policies to abstain and allow the command. An authenticated or prompt-injected agent can therefore push to an unauthorized repository or branch or escape the intended workspace. This issue is fixed in version 0.3.0. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-62674",
+    "descripcion": "Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, PUT /sessions/{session_id}/agent checks LEVEL_EDIT permission for a session but does not reject a bound shared or template agent whose agent.session_id is None. An authenticated user with edit access to a session can replace that shared agent bundle through omnigent/server/routes/sessions.py, add a stdio MCP server, and cause later sessions that use the shared agent to launch an attacker-controlled command through omnigent/tools/mcp.py. The command executes with the Omnigent runner process permissions and can expose files, credentials, workspace data, internal services, and runner availability. This issue is fixed in version 0.3.0. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-55241",
+    "descripcion": "Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Prior to 3.9.1, the public POST /api/v1/auth/register route in server/src/api/routes/authRoutes.ts passes multipart profileImage uploads through in-memory Multer parsing before registration validation, without file-size, file-count, or MIME-type limits in server/src/api/middleware/upload.ts. An unauthenticated attacker can submit concurrent oversized files that are buffered before invalid registration or invite-token checks reject the request, exhausting memory and crashing or destabilizing the backend. This issue is fixed in version 3.9.1. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-41451",
+    "descripcion": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the user substitution logic within parse_artifact.sh where usernames and home directories from /etc/passwd are substituted directly into command strings without escaping before execution via eval. Attackers can inject shell metacharacters such as command substitution syntax or semicolons through crafted usernames or home directory paths in /etc/passwd entries to execute arbitrary commands on the analyst&#39;s host system. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-41450",
+    "descripcion": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the _command_collector function where foreach command output lines are substituted directly into command strings via sed without proper escaping before being evaluated with eval. Attackers can exploit this by crafting malicious filenames or artifact definitions containing shell metacharacters such as command substitution syntax or semicolons to execute arbitrary commands on the analyst&#39;s host system. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-17252",
+    "descripcion": "A stack-based out-of-bounds write vulnerability exists in the login request handling functionality of the administrative web interface of TP-Link TL-MR6400 v7 routers. An unauthenticated adjacent attacker can trigger the vulnerability by sending a specially crafted malformed HTTP request. Successful exploitation may cause the web service process to crash, resulting in a denial-of-service condition and temporary loss of access to the router&#39;s web management interface. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-17251",
+    "descripcion": "A NULL pointer dereference vulnerability exists in the HTTP request parsing functionality of TL-MR6400 v7. An unauthenticated remote attacker can trigger the vulnerability by sending a specially crafted HTTP request containing a malformed session cookie header. Successful exploitation may cause the HTTP service process to crash, resulting in a denial-of-service condition and temporary loss of management or CGI functionality until service recovery. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-17250",
+    "descripcion": "A stack-based buffer overflow vulnerability exists in the firmware update functionality of TL-MR6400 v7 due to unsafe processing of attacker-controlled metadata within a firmware image. Successful exploitation may allow an authenticated attacker to trigger memory corruption and execute arbitrary code on the affected device. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-21",
     "cve": "CVE-2026-9324",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-9321",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-9244",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-9012",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-74583",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/sched: cls_route: fix fastmap use-after-free on filter The route4 classifier maintains a 16-slot fastmap cache that stores raw struct route4_filter pointers indexed by (id, iif). The reader (route4_classify) populates this cache via route4_set_fastmap() for every classified packet that hits a filter. The writer (route4_delete, route4_change) clears the cache via route4_reset_fastmap() before RCU-deferred kfree of the filter. This creates a UAF race: 1. Reader walks the RCU-protected bucket chain, finds filter f 2. Writer unlinks f, calls route4_reset_fastmap(), then tcf_queue_work() 3. Reader calls route4_set_fastmap() and writes f into the cache *after* the writer&#39;s reset, caching a pointer about to be freed 4. After the RCU grace period, kfree(f) executes 5. Next classified packet on the same (id, iif) tuple hits the stale fastmap entry and reads f->res from freed memory Reproduced with an mdelay(100) accelerator in route4_set_fastmap() and a concurrent add/delete stress test (provided by both zdi and Santosh). Both triggered KASAN slab-use-after-free reports in the route4 fastmap paths. Fix: Introduce a per-filter boolean dying flag to suppress stale fastmap republishing by in-flight readers. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-74582",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: packet: use consistent hard_header_len in non-ring send paths packet_snd() reads dev->hard_header_len multiple times while allocating and constructing an skb. Device reconfiguration can change this value concurrently, for example through bonding device type changes. For SOCK_RAW, packet_snd() can save a larger value in reserve and later allocate headroom using a smaller value. Moving skb->data back by reserve then places it before skb->head, and the following copy from userspace can attempt an out-of-bounds write. packet_sendmsg_spkt() has the same issue because it calculates its reservation and header offset from separate reads before dropping the RCU read lock to allocate the skb. Add LL_RESERVED_SPACE_EX() for callers that already saved a header length. Read hard_header_len once in packet_snd() and use it for allocation and construction. In packet_sendmsg_spkt(), preserve the allocation-time value through the device lookup retry. The separate SOCK_DGRAM consistency problem between hard_header_len and header_ops->create is not addressed here. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-74581",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: ipv6: clear suppressed fib6 rule result fib6_rule_suppress() drops a suppressed route with ip6_rt_put_flags(), but leaves res->rt6 pointing at the released rt6_info. If no later rule supplies a replacement, fib6_rule_lookup() still sees res.rt6 and returns that stale dst to its caller. A suppressing rule can therefore leak a released route back to rt6_lookup(), and the next put hits rcuref_put_slowpath() from dst_release(). Clear res->rt6 when suppressing the route so suppressed lookups fall through to the null dst instead of reusing the released one. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-74580",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: vhost: reset the vring metadata cache on vring reconfiguration vq->meta_iotlb[] caches the vhost_iotlb_map that backs each vring metadata region, and iotlb_access_ok() returns early on a cache hit, taking the hit as proof that the region has already been validated: if (vhost_vq_meta_fetch(vq, addr, len, type)) return true; The cache is reset on VHOST_IOTLB_UPDATE and VHOST_IOTLB_INVALIDATE, on device IOTLB (re)initialisation and on vq reset, but not when VHOST_SET_VRING_ADDR replaces vq->desc, vq->avail and vq->used, nor when VHOST_SET_VRING_NUM changes the region sizes. With a device IOTLB attached both ioctls are accepted while the vq is live, and neither validates the addresses at ioctl time: vq_access_ok() and vq_log_used_access_ok() return true early because the addresses are GIOVAs, deferring validation to prefetch time. Once the cache has been populated that deferred validation no longer runs -- vq_meta_prefetch() hits the stale entry and returns true -- and vhost_vq_meta_fetch() keeps translating through the old mapping as map->addr + addr - map->start for an address the mapping no longer covers. vhost_copy_to_user() and vhost_copy_from_user() consume the result with __copy_to_user() and __copy_from_user(), which do not check it either, so a subsequent used ring update or descriptor fetch accesses memory outside the region the IOTLB actually maps. Reset the metadata cache whenever the vring is reconfigured, so the new addresses are pushed back through iotlb_access_ok()&#39;s slow path. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-69701",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-21",
-    "cve": "CVE-2026-69099",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
