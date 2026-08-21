@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2025-3127",
+    "cve": "CVE-2026-9324",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2025-2795",
+    "cve": "CVE-2026-9321",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-77815",
-    "descripcion": "to_abs_path in scripts/iib/tool.py normalised the requested path with os.path.normpath, which collapses dot segments but does not resolve symbolic links. A symlink placed inside a scanned directory therefore satisfies the containment comparison performed by is_path_trusted in scripts/iib/api.py while pointing outside that directory, and FileResponse follows the link when serving the response, so a link created in an image directory and targeting a file such as /etc/passwd discloses that file. Whether the check applies depends on get_enable_access_control in scripts/iib/tool.py: it returns true when IIB_ACCESS_CONTROL is set to enable, false when set to disable, and otherwise true when the host Stable Diffusion WebUI was started with share, ngrok, listen or server_name, falling back to false. Confinement is therefore active in the network-exposed WebUI deployments that rely on it, while a standalone run with no such option serves every readable file regardless of this flaw. The fix resolves the path with os.path.realpath. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-9244",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-62940",
-    "descripcion": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, when migrating an instance to another cluster member, user-supplied configuration overrides (including security-critical keys like `security.privileged` and `raw.lxc`) are applied without any project restriction enforcement, allowing a restricted project user to escalate to a privileged container and escape to the host. Version 7.3.0 patches the issue. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-9012",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-63343",
-    "descripcion": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, a malicious image containing a `metadata.yaml` symlink pointing to an arbitrary host path allows an authenticated Incus user to read or overwrite any file on the host as root via the instance metadata API. The `exec-output` and `templates/` paths were patched in a prior release using `Lstat` rejection and `os.OpenRoot` confinement; `metadata.yaml` was not included in either patch and remains exploitable. Version 7.3.0 patches the issue. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-74583",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net/sched: cls_route: fix fastmap use-after-free on filter The route4 classifier maintains a 16-slot fastmap cache that stores raw struct route4_filter pointers indexed by (id, iif). The reader (route4_classify) populates this cache via route4_set_fastmap() for every classified packet that hits a filter. The writer (route4_delete, route4_change) clears the cache via route4_reset_fastmap() before RCU-deferred kfree of the filter. This creates a UAF race: 1. Reader walks the RCU-protected bucket chain, finds filter f 2. Writer unlinks f, calls route4_reset_fastmap(), then tcf_queue_work() 3. Reader calls route4_set_fastmap() and writes f into the cache *after* the writer&#39;s reset, caching a pointer about to be freed 4. After the RCU grace period, kfree(f) executes 5. Next classified packet on the same (id, iif) tuple hits the stale fastmap entry and reads f->res from freed memory Reproduced with an mdelay(100) accelerator in route4_set_fastmap() and a concurrent add/delete stress test (provided by both zdi and Santosh). Both triggered KASAN slab-use-after-free reports in the route4 fastmap paths. Fix: Introduce a per-filter boolean dying flag to suppress stale fastmap republishing by in-flight readers. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-63125",
-    "descripcion": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, an unprivileged, project-confined Incus user (a non-admin TLS/RBAC identity with `can_create_images` and `can_create_instances`) can execute arbitrary code as root on the host. A crafted image ships `backup.yaml` as a symlink to a host file. When the root daemon writes the instance&#39;s backup file, it follows the symlink. Version 7.3.0 patches the issue. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-74582",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: packet: use consistent hard_header_len in non-ring send paths packet_snd() reads dev->hard_header_len multiple times while allocating and constructing an skb. Device reconfiguration can change this value concurrently, for example through bonding device type changes. For SOCK_RAW, packet_snd() can save a larger value in reserve and later allocate headroom using a smaller value. Moving skb->data back by reserve then places it before skb->head, and the following copy from userspace can attempt an out-of-bounds write. packet_sendmsg_spkt() has the same issue because it calculates its reservation and header offset from separate reads before dropping the RCU read lock to allocate the skb. Add LL_RESERVED_SPACE_EX() for callers that already saved a header length. Read hard_header_len once in packet_snd() and use it for allocation and construction. In packet_sendmsg_spkt(), preserve the allocation-time value through the device lookup retry. The separate SOCK_DGRAM consistency problem between hard_header_len and header_ops->create is not addressed here. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-62867",
-    "descripcion": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, improper validation of user-provided `block.create_options` in storage volume configuration leads to argument injection in the constructed filesystem creation command line. This allows a project-scoped user to inject arbitrary arguments into the binary executed as root. Version 7.3.0 patches the issue. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-74581",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: ipv6: clear suppressed fib6 rule result fib6_rule_suppress() drops a suppressed route with ip6_rt_put_flags(), but leaves res->rt6 pointing at the released rt6_info. If no later rule supplies a replacement, fib6_rule_lookup() still sees res.rt6 and returns that stale dst to its caller. A suppressing rule can therefore leak a released route back to rt6_lookup(), and the next put hits rcuref_put_slowpath() from dst_release(). Clear res->rt6 when suppressing the route so suppressed lookups fall through to the null dst instead of reusing the released one. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-62313",
-    "descripcion": "Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configured to forbid them. The restriction only rejects an explicitly set `security.idmap.isolated=false` (or empty) and fails to enforce anything when the key is omitted entirely. Because an unset `security.idmap.isolated` defaults to `false` (non-isolation), a user simply leaves the key out and obtains exactly the container state the restriction is meant to forbid. This defeats the tenant-isolation guarantee the restriction exists to provide. Containers in the project share the host uid/gid map instead of receiving unique, non-overlapping ranges, weakening the isolation boundary between co-tenant containers and the host. Version 7.3.0 patches the issue. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-74580",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: vhost: reset the vring metadata cache on vring reconfiguration vq->meta_iotlb[] caches the vhost_iotlb_map that backs each vring metadata region, and iotlb_access_ok() returns early on a cache hit, taking the hit as proof that the region has already been validated: if (vhost_vq_meta_fetch(vq, addr, len, type)) return true; The cache is reset on VHOST_IOTLB_UPDATE and VHOST_IOTLB_INVALIDATE, on device IOTLB (re)initialisation and on vq reset, but not when VHOST_SET_VRING_ADDR replaces vq->desc, vq->avail and vq->used, nor when VHOST_SET_VRING_NUM changes the region sizes. With a device IOTLB attached both ioctls are accepted while the vq is live, and neither validates the addresses at ioctl time: vq_access_ok() and vq_log_used_access_ok() return true early because the addresses are GIOVAs, deferring validation to prefetch time. Once the cache has been populated that deferred validation no longer runs -- vq_meta_prefetch() hits the stale entry and returns true -- and vhost_vq_meta_fetch() keeps translating through the old mapping as map->addr + addr - map->start for an address the mapping no longer covers. vhost_copy_to_user() and vhost_copy_from_user() consume the result with __copy_to_user() and __copy_from_user(), which do not check it either, so a subsequent used ring update or descriptor fetch accesses memory outside the region the IOTLB actually maps. Reset the metadata cache whenever the vring is reconfigured, so the new addresses are pushed back through iotlb_access_ok()&#39;s slow path. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-55622",
-    "descripcion": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, missing authorization checks exist for instance copying where an attacker knowing the name of a project that they don&#39;t have access to and the name of an instance in that project can copy the instance to a new project. This issue could allow an attacker to access secrets in instances they are not authorized to access. Version 7.2.0 patches the issue. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-69701",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-48769",
-    "descripcion": "Incus is a system container and virtual machine manager. Prior to version 7.2.0, an arbitrary file write exists in the Incus client when a malicious image server returns a crafted `Incus-Image-Hash` header. This can lead to arbitrary command execution as root on the server. Version 7.2.0 patches the issue. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-69099",
+    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
