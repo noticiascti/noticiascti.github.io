@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-77392",
-    "descripcion": "A weakness has been identified in SourceCodester Dynamic Input Field Generator Using HTML, CSS, and PHP 1.0. This impacts the function saveUser of the file /public/submit.php. This manipulation of the argument Researcher causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-65645",
+    "descripcion": "Rocket.Chat in versions before 8.8.0, 8.7.1, 8.6.2, 8.5.3, 8.4.6. 8.3.8, 8.2.8, 8.1.8, and 7.10.15, the Meteor DDP methods getThreadsList and getThreadMessages accept rid / tmid as raw, untyped parameters with no schema validation. A MongoDB operator object (e.g. {&#34;$gt&#34;: &#34;4&#34;}) can be substituted for a string room-id or message-id. The authorization check resolves to a room the attacker already has access to, while the downstream data query fans out across all rooms - disclosing private thread parents and their full reply content to any low-privilege authenticated user. The REST route chat.getThreadsList was patched in v5.0 (HackerOne report #1446767) by adding rid: {type:&#39;string&#39;} AJV validation. The equivalent DDP method was never given the same fix and remains exploitable 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-77391",
-    "descripcion": "A security flaw has been discovered in SourceCodester Dynamic Input Field Generator Using HTML, CSS, and PHP 1.0. This affects an unknown function. The manipulation results in cross-site request forgery. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-65644",
+    "descripcion": "Rocket.Chat in versions before 8.8.0, 8.7.1, 8.6.2, 8.5.3, 8.4.6, 8.3.8, 8.2.8, 8.1.8, and 7.10.15 has a REST API endpoint POST /api/v1/livechat/visitor that accepts an unauthenticated, unsanitized name field for Livechat visitors. This name is stored raw and later rendered via dangerouslySetInnerHTML in the Omnichannel Queue side panel (InquireSidePanelItem.tsx), injecting a real, clickable HTML link - pointing to any attacker-controlled domain, with arbitrary social-engineering text - into the DOM of any agent viewing the queue. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-76157",
-    "descripcion": "Missing authentication for a critical function in the upload API endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows an unauthenticated remote attacker to upload arbitrary files to the server&#39;s configured upload directory. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-45202",
+    "descripcion": "Software installed and run as a non-privileged user may conduct GPU system calls which cause GPU memory leaks and possible kernel heap corruption. Scenario caused by memory free paths not maintaining state data of upgraded higher order allocations. This could cause memory leak or double free event. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-76156",
-    "descripcion": "OS command injection in the api endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows an authenticated administrator to execute arbitrary operating system commands as root. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-45201",
+    "descripcion": "Software installed and run as a non-privileged user may conduct improper GPU system calls to pass invalid log2 page size when allocating physical pages leading to OOB read and/or write due to improper validation of the said value. Such crafted log2 page size could lead to 4K pages being treated as higher order pages and allowing read and/or write access to the memory beyond 4K threshold. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-21",
-    "cve": "CVE-2026-76155",
-    "descripcion": "Use of default credentials in Datiphy Data Management Center from v8.3.0 through v8.5.1 allows a remote attacker to gain administrative access to the management platform by logging in with default administrator credentials. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-45199",
+    "descripcion": "Kernel software installed and running inside a Guest VM may post improper commands to the GPU Firmware to trigger a write of data outside the Guest&#39;s virtualised GPU memory. Software installed and run under a Guest VM can send commands to the GPU which result in out of bounds memory accesses. These can be used to escalate privileges. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-77651",
-    "descripcion": "The arrayref crate 0.3.10 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-18409",
+    "descripcion": "The WPForms Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Single Line Text and Paragraph Text Field Values in all versions up to, and including, 2.0.0.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit relies on the plugin&#39;s own wp_kses_allowed_html filter widening the &#39;post&#39; allowlist to permit iframe elements with a data-src attribute, which is not on WordPress&#39;s URI-attribute sanitization list, allowing a javascript: URI stored in data-src to survive kses processing and subsequently be promoted to a live src attribute by the bundled admin script view-entry.min.js. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-77650",
-    "descripcion": "The append-only-vec crate 0.1.9 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-76158",
+    "descripcion": "External Control of File Name or Path in the upload API endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows a remote attacker to write files to arbitrary locations outside the intended upload directory via relative or absolute path sequences. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-77649",
-    "descripcion": "The internment crate 0.8.7 for Rust can trigger execution of malicious code when compiling a project that uses the crate, because it has a rogue dependency that registers with a command-and-control server to offer arbitrary code execution. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-76137",
+    "descripcion": "Missing authentication for critical function vulnerability exists in VOCALOID6. Any process running under the same local user account as a running VOCALOID6 Editor instance may escalate privileges via a local named pipe. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-43679",
-    "descripcion": "This issue was addressed with improved permissions checking. This issue is fixed in watchOS 26.4. An attacker with physical access to a locked Apple Watch may be able to view user contacts. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-76131",
+    "descripcion": "Use of hard-coded credentials issue exists in VOCALOID6 , which may allow an attacker to impersonate a legitimate VOCALOID6 Editor and gain access to Yamaha&#39;s activation and content servers. 21/08/2026 21/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-08-20",
-    "cve": "CVE-2026-20679",
-    "descripcion": "The issue was addressed with improved checks. This issue is fixed in macOS Sequoia 15.7.5, macOS Sonoma 14.8.5, macOS Tahoe 26.4. Processing a maliciously crafted file may lead to unexpected app termination. 21/08/2026 21/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-08-21",
+    "cve": "CVE-2026-73267",
+    "descripcion": "A flaw was found in the clusterclaims-controller component of multicluster engine (MCE). A tenant with standard permissions to create and delete ClusterClaim resources can exploit this by manipulating the `spec.namespace` field. This allows the tenant to specify and delete any ManagedCluster, including the hub&#39;s local-cluster or other tenants&#39; clusters, due to a missing ownership check. This vulnerability can lead to a denial of service by enabling unauthorized deletion of ManagedClusters. 21/08/2026 21/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
