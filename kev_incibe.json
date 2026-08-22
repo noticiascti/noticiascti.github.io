@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-08-22",
+    "cve": "CVE-2026-74614",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: vsock/virtio: read virtqueues under worker locks Commit bd50c5dc182b (&#34;vsock/virtio: add support for device suspend/resume&#34;) made the *_run flags transition from false to true when restore installs replacement virtqueues. The RX, TX and event workers read their virtqueue before locking and checking the corresponding flag, so a worker delayed across freeze and restore can observe the replacement queue&#39;s running state while retaining a pointer to the deleted queue. Read each virtqueue under its mutex after checking the run flag, keeping the pointer and state in the same queue generation. 22/08/2026 22/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-22",
     "cve": "CVE-2026-74613",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: vsock/virtio: avoid refilling the RX queue after teardown Commit b917507e5ad9 (&#34;vsock/virtio: stop workers during the .remove()&#34;) made the RX worker jump to its common exit when rx_run is clear. That exit still refills the RX queue when the buffer count is low, so work queued across virtio_vsock_vqs_del() can add buffers after the virtqueues have been deleted. BUG: KASAN: slab-use-after-free in virtqueue_add_sgs Read of size 4 by task kworker/0:1 Workqueue: virtio_vsock virtio_transport_rx_work Call Trace: virtqueue_add_sgs (drivers/virtio/virtio_ring.c:2796) virtio_vsock_rx_fill (net/vmw_vsock/virtio_transport.c:332) virtio_transport_rx_work (net/vmw_vsock/virtio_transport.c:701) process_one_work (kernel/workqueue.c:3314) worker_thread (kernel/workqueue.c:3478) kthread (kernel/kthread.c:436) ret_from_fork (arch/x86/kernel/process.c:158) ret_from_fork_asm (arch/x86/entry/entry_64.S:245) ... Freed by task 141: kfree (mm/slub.c:6566) vp_del_vq (drivers/virtio/virtio_pci_common.c:259) vp_del_vqs (drivers/virtio/virtio_pci_common.c:285) virtio_vsock_freeze (net/vmw_vsock/virtio_transport.c:912) virtio_device_freeze (drivers/virtio/virtio.c:658) virtio_pci_freeze (drivers/virtio/virtio_pci_common.c:601) pci_pm_freeze (drivers/pci/pci-driver.c:1098) device_suspend (drivers/base/power/main.c:1968) Kernel panic - not syncing: KASAN: panic_on_warn set ... Jump to a no-refill exit when rx_run is clear, leaving the normal exit to replenish a running queue. 22/08/2026 22/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-08-22",
     "cve": "CVE-2026-74605",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: eventfs: Use children field for rcu head and add memory barriers When an eventfs inode is freed, it sets ei->is_freed and then uses its ei->list to add it to the srcu link list as the list field is a union with the rcu list head. As the ei->list is used to iterate over an SRCU protected list without taking the eventfs_mutex, there&#39;s nothing stopping the iteration over that list to see the ei->rcu instead of the ei->list and it will read a corrupt target. To fix this, change the union of the rcu list head with the children list. On freeing the eventfs inode, set the is_free and execute a smp_wmb() before adding the eventfs inode to the SRCU list. On iteration of the ei->children list, at the start, execute a smp_rmb() and then read the is_freed of the ei to see if the children list is still valid. If is_freed is set, then the ei_child read is not valid and the loop should exit immediately. 22/08/2026 22/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-22",
-    "cve": "CVE-2026-74604",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: Revert &#34;thermal/drivers/hwmon: Cleanup coding style a bit&#34; Revert commit 030a48b0f6ce (&#34;thermal/drivers/hwmon: Cleanup coding style a bit&#34;) that introduced a use-after-free into the error path of thermal_add_hwmon_sysfs() by removing a valid check from it. 22/08/2026 22/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
