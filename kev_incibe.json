@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-08-23",
+    "cve": "CVE-2026-77116",
+    "descripcion": "Brave Popup Builder (slug: brave-popup-builder) has a broken access control issue in versions through 0.8.5. Any logged-in user - Subscriber or WooCommerce Customer is enough — can read popup content they shouldn&#39;t have access to by passing a post ID in the URL. 23/08/2026 23/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-23",
+    "cve": "CVE-2026-77115",
+    "descripcion": "Brave Popup Builder (brave-popup-builder) up to version 0.8.5 reflects UTM query parameters into popup form HTML without escaping them. 23/08/2026 23/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-23",
+    "cve": "CVE-2026-77003",
+    "descripcion": "The Content Mask WordPress plugin before 1.8.5.5 does not check the capability required to publish the post type being created, allowing users with a role as low as Contributor to publish posts and pages on the site without holding the publish capability. 23/08/2026 23/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-23",
+    "cve": "CVE-2026-14853",
+    "descripcion": "The WooCommerce Bookings WordPress plugin before 3.9.0 does not perform a capability check on one of its AJAX actions, and its nonce check can be bypassed by omitting the token, allowing users with Subscriber-level access and above to create draft bookable products. 23/08/2026 23/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-23",
+    "cve": "CVE-2026-13598",
+    "descripcion": "The RestrictMate WordPress plugin before 1.3.0 does not restrict the user role supplied during account registration, allowing unauthenticated attackers to create a new administrator account and gain a logged-in administrator session, leading to full site takeover. 23/08/2026 23/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-23",
+    "cve": "CVE-2026-78063",
+    "descripcion": "A security flaw has been discovered in Tenda CH22 1.0.0.1. The impacted element is the function formeditFileName of the file /goform/editFileName. The manipulation of the argument editNameMit results in command injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-23",
+    "cve": "CVE-2026-78062",
+    "descripcion": "A vulnerability was identified in vas3k TaxHacker up to 0.8.2. The affected element is the function envSchema.parse of the file lib/config.ts of the component JWT Secret Handler. The manipulation of the argument BETTER_AUTH_SECRET leads to hard-coded credentials. The attack can be initiated remotely. The project was informed of the problem early through an issue report but has not responded yet. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-23",
     "cve": "CVE-2026-78061",
     "descripcion": "A vulnerability was determined in vas3k TaxHacker up to 0.8.2. Impacted is the function buildImapConfig of the file lib/email-sync/imap-client.ts of the component Email Sync. Executing a manipulation of the argument host/port can lead to server-side request forgery. It is possible to launch the attack remotely. The pull request to fix this issue awaits acceptance. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-08-23",
     "cve": "CVE-2026-78059",
     "descripcion": "A vulnerability has been found in SourceCodester Stock Management System 1.0. This vulnerability affects unknown code of the file /php_action/printOrder.php. Such manipulation of the argument clientName/clientContact leads to cross site scripting. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-23",
-    "cve": "CVE-2026-78057",
-    "descripcion": "A flaw has been found in sambitraj Student-Management-System up to 56ba287f2e9031523ccb4244cb6e3fe530e4e5d5. This affects an unknown part of the component Management Mutation Handler. This manipulation of the argument roll_no/name/father_name/class/mobile/email/password/remark causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-23",
-    "cve": "CVE-2026-78056",
-    "descripcion": "A vulnerability was detected in sambitraj Student-Management-System up to 56ba287f2e9031523ccb4244cb6e3fe530e4e5d5. Affected by this issue is some unknown functionality of the component Dashboard. The manipulation of the argument roll_no/teacher_name results in sql injection. The attack can be executed remotely. The exploit is now public and may be used. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The project was informed of the problem early through an issue report but has not responded yet. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-23",
-    "cve": "CVE-2026-78055",
-    "descripcion": "A security vulnerability has been detected in SourceCodester Class and Exam Timetabling System 1.0. Affected by this vulnerability is an unknown functionality of the file /BSIT2.php. The manipulation of the argument course leads to cross site scripting. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-22",
-    "cve": "CVE-2026-78136",
-    "descripcion": "chirpmyradio CHIRP before 39178db allows eval injection via crafted CSV data. This occurs in _clean_tmode in drivers/kenwood_itm.py. 23/08/2026 23/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-22",
-    "cve": "CVE-2026-78054",
-    "descripcion": "A weakness has been identified in SourceCodester Class and Exam Timetabling System 1.0. Affected is an unknown function of the file /BSIS1.php. Executing a manipulation of the argument course can lead to cross site scripting. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-22",
-    "cve": "CVE-2026-78051",
-    "descripcion": "A vulnerability was determined in alexta69 MeTube up to 2026.06.10. The impacted element is an unknown function of the file /download/.metube/cookies.txt of the component Cookie File Handler. This manipulation causes files or directories accessible. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. Upgrading to version 2026.06.20 is sufficient to resolve this issue. Patch name: ce897ee00903bf7ded406f0d7852d95dd4164add. You should upgrade the affected component. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:N/A:N Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-08-22",
-    "cve": "CVE-2026-78050",
-    "descripcion": "A vulnerability was found in Comfast CF-N1-S 2.6.0.1. The affected element is the function sub_41AD7C of the file /cgi-bin/mbox-config?method=SET&section=ntp_timezone of the component Web Management. The manipulation of the argument timestr/ntp_client_enabled results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used. 23/08/2026 23/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
