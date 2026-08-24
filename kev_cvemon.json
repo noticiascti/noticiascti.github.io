@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-08-24",
+    "cve": "CVE-2026-5388",
+    "descripcion": "justhtml before 1.15.0 contains multiple security issues in URL sanitization helpers (clean_url_value/clean_url_in_js_string), HTML serialization, Markdown passthrough (html_passthrough=True), and several custom sanitization-policy edge cases. Depending on configuration, an ..."
+  },
+  {
+    "fecha": "2026-08-24",
     "cve": "CVE-2026-77003",
     "descripcion": "The Content Mask WordPress plugin before 1.8.5.5 does not check the capability required to publish the post type being created, allowing users with a role as low as Contributor to publish posts and pages on the site without holding the publish capability."
   },
@@ -41,12 +46,7 @@
   },
   {
     "fecha": "2026-08-24",
-    "cve": "CVE-2026-5388",
-    "descripcion": "justhtml before 1.15.0 contains multiple security issues in URL sanitization helpers (clean_url_value/clean_url_in_js_string), HTML serialization, Markdown passthrough (html_passthrough=True), and several custom sanitization-policy edge cases. Depending on configuration, an ..."
-  },
-  {
-    "fecha": "2026-08-24",
-    "cve": "CVE-2026-77001",
-    "descripcion": "The Social Login & Sharing buttons with Analytics By SoClever WordPress plugin through 1.2.0 does not perform any authentication, authorisation or nonce checks in one of its publicly accessible login handlers, allowing unauthenticated attackers to obtain a valid session as any ..."
+    "cve": "CVE-2026-75922",
+    "descripcion": "Reverse::Proxy versions before 0.04 for Perl allow HTTP request smuggling via a percent-decoded PATH_INFO written unencoded to the upstream request line. PSGI hands PATH_INFO to an application percent-decoded, so a %XX sequence in the client URL has become a raw byte by the ..."
   }
 ]
