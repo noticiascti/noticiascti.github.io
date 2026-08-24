@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-08-24",
+    "cve": "CVE-2026-33824",
+    "descripcion": "Double free in Windows IKE Extension allows an unauthorized attacker to execute code over a network."
+  },
+  {
+    "fecha": "2026-08-24",
     "cve": "CVE-2026-5388",
     "descripcion": "justhtml before 1.15.0 contains multiple security issues in URL sanitization helpers (clean_url_value/clean_url_in_js_string), HTML serialization, Markdown passthrough (html_passthrough=True), and several custom sanitization-policy edge cases. Depending on configuration, an ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-08-24",
     "cve": "CVE-2026-77003",
     "descripcion": "The Content Mask WordPress plugin before 1.8.5.5 does not check the capability required to publish the post type being created, allowing users with a role as low as Contributor to publish posts and pages on the site without holding the publish capability."
-  },
-  {
-    "fecha": "2026-08-24",
-    "cve": "CVE-2026-74705",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: udp: fix potential use-after-free in tunnel segmentation __skb_udp_tunnel_segment() gets the UDP header before ensuring the tunnel header is in the skb head. If the pull reallocates skb->head, the saved UDP ..."
   }
 ]
