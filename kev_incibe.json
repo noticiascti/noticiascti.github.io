@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-08-25",
+    "cve": "CVE-2026-78576",
+    "descripcion": "The Readabler plugin for WordPress is vulnerable to SQL Injection in all versions up to 2.0.18 (exclusive) due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-25",
+    "cve": "CVE-2026-78572",
+    "descripcion": "The Kalles Addons plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.0.6 via deserialization of untrusted input. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-25",
+    "cve": "CVE-2026-78570",
+    "descripcion": "The Total Donations plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.0.5. This makes it possible for unauthenticated attackers to elevate their privileges to that of an adminsitrator. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-08-25",
+    "cve": "CVE-2026-76128",
+    "descripcion": "The eCommerce Product Catalog plugin for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;style&#39; Shortcode Attribute in all versions up to, and including, 3.5.10 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload bypasses WordPress&#39;s save-time wp_kses_post sanitization because the malicious content is stored inside shortcode brackets with no HTML tags; the tainted HTML output is only generated at render time by the shortcode handler. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-25",
+    "cve": "CVE-2026-75038",
+    "descripcion": "UNIX symbolic link (symlink) following vulnerability in ilya-zlobintsev/LACT allows for local denial-of-service. This issue affects LACT: through 0.10.0. 25/08/2026 25/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-25",
+    "cve": "CVE-2026-75037",
+    "descripcion": "Polkit Authentication Based on UnixProcessSubject / Peer PID in LACT on Linux allows an Authentication Bypass. This issue affects LACT through 0.10.0. Fixed by commit d0478fe42c2219454e272f96b1cbd29ab37ee566. 25/08/2026 25/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-08-25",
+    "cve": "CVE-2026-49050",
+    "descripcion": "General user can mint admin access tokens via /access-tokens This issue affects Apache DolphinScheduler: before 3.4.2. Users are recommended to upgrade to version 3.4.2, which fixes the issue. 25/08/2026 25/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-08-25",
     "cve": "CVE-2026-16231",
     "descripcion": "hbs is an Express view engine that wraps Handlebars. Its registerAsyncHelper API bypasses Handlebars&#39; automatic HTML escaping: an async helper returns an opaque placeholder during the first render pass, so the double-brace expression escapes only the placeholder, and after rendering hbs substitutes the placeholder with the raw callback return value without escaping it, across the cached, uncached, and layout render paths. An application that passes attacker-influenced data, for example user-supplied content from a database, into an async helper callback can therefore have arbitrary HTML and JavaScript injected into the server-rendered page, resulting in stored or reflected cross-site scripting. Versions 2.1.0 through 4.2.1 are affected, and the issue is fixed in 4.3.0, which HTML-escapes async helper output. Applications that intentionally emit raw HTML from an async helper can opt in explicitly with hbs.SafeString. Users should upgrade to 4.3.0. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-08-25",
     "cve": "CVE-2026-78568",
     "descripcion": "The Total Donations plugin for WordPress is vulnerable to SQL Injection in all versions up to, and including, 2.0.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-08-25",
-    "cve": "CVE-2026-78566",
-    "descripcion": "The Shuffle theme for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.8. This makes it possible for unauthenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-25",
-    "cve": "CVE-2026-78563",
-    "descripcion": "The NotificationX Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 3.1.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-25",
-    "cve": "CVE-2026-78562",
-    "descripcion": "The Verdure Core plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.2. This makes it possible for unauthenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included. 25/08/2026 25/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-25",
-    "cve": "CVE-2026-77146",
-    "descripcion": "The extension&#39;s invitation controller fails to stop processing after redirecting on invalid input (missing hash, non-existent, disabled, or deleted users), allowing an unauthenticated attacker to set a new password for and re-enable an arbitrary existing frontend user account. This vulnerability is only present in the 8.x versions of the extension. 25/08/2026 25/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-25",
-    "cve": "CVE-2026-77145",
-    "descripcion": "The permission check for the frontend management update flow verified a different event than the one the request went on to modify. A user with frontend event management access could therefore modify events belonging to other organizers. 25/08/2026 25/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-25",
-    "cve": "CVE-2026-77144",
-    "descripcion": "The frontend management plugin attributed a newly created event to the submitting user&#39;s organizer record only when the request supplied no organizer of its own. The accompanying permission check confirmed only that the submitting user held any organizer role. A user with frontend event management access could therefore create an event that is attributed to another organizer. 25/08/2026 25/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-25",
-    "cve": "CVE-2026-77143",
-    "descripcion": "The frontend topic editing flow does not verify on the server side that the requesting visitor owns the topic being modified. As a result, a visitor who knows the identifier of a topic from the public forum can submit a modified update request for that topic directly and overwrite its content, without the application confirming ownership. Topic identifiers are visible in the public forum listing, and exploitation requires no privileged access or non-default configuration. 25/08/2026 25/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
