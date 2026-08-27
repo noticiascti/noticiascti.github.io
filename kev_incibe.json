@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-79940",
-    "descripcion": "Dell iDRAC9, 14G versions prior to 7.00.00.182 and 15G/16G versions prior to 7.20.30.50, contains an Improper Access Control vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to gaining access to unauthorized data. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-47848",
+    "descripcion": "In specific scenarios involving WebSocket handshake redirects to a different origin, the Reactor Netty WebSocket client may leak credentials. In order for this to happen, the HTTP client must have been explicitly configured to follow redirects. Reactor Netty 1.3.0 - 1.3.6 Reactor Netty 1.1.0 - 1.2.18 Reactor Netty 1.0.52 and earlier 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-75466",
-    "descripcion": "libjpeg-turbo 3.2.0 contains an integer division-by-zero vulnerability in the PNG loader. When processing a valid indexed-color PNG image with a non-gray palette through tj3LoadImage12() or tj3LoadImage16() using the default pixel format, the application may trigger a division-by-zero in alloc_sarray(), causing a SIGFPE and denial of service. 26/08/2026 26/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47844",
+    "descripcion": "In specific scenarios, the Reactor Netty HTTP Server may leak exception details across unrelated requests. In order for this to happen, the server must be configured with Brave Tracing. Reactor Netty 1.3.0 - 1.3.6 Reactor Netty 1.1.0 - 1.2.18 Reactor Netty 1.0.52 and earlier 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-75325",
-    "descripcion": "DWSurvey v6.14.0 is is vulnerable to authentication bypass via the &#39;/api/dwsurvey/none/&#39; and &#39;/api/dwsurvey/up/**&#39; parameters. 26/08/2026 26/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-47843",
+    "descripcion": "In specific scenarios involving multiple clients with different DNS resolver configurations, Reactor Netty may incorrectly reuse a previously configured DNS resolver. Reactor Netty 1.3.0 - 1.3.6 Reactor Netty 1.1.0 - 1.2.18 Reactor Netty 1.0.52 and earlier 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-71171",
-    "descripcion": "Dell Cloud Disaster Recovery, versions 20.2 and prior, contain an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability in the REST API. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Remote execution. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-47842",
+    "descripcion": "Applications using AesBytesEncryptor with the two-argument constructor or when passing a null IV generator and CBC as the encryption mode encrypt data with AES/CBC using a null (all-zero) initialization vector. Spring Security 7.1.0 Spring Security 7.0.0 - 7.0.6 Spring Security 6.5.0 - 6.5.11 Spring Security 6.4.0 - 6.4.18 Spring Security 5.8.0 - 5.8.27 Spring Security 5.7.0 - 5.7.25 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-70419",
-    "descripcion": "Dell Cloud Disaster Recovery, versions 20.2 and prior, contain an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Command execution. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-47834",
+    "descripcion": "Spring Data JPA&#39;s Sort validation can be bypassed when parameters containing crafted payload are accepted from untrusted sources. Spring Data JPA 4.1.0 Spring Data JPA 4.0.0 - 4.0.6 Spring Data JPA 3.5.0 - 3.5.13 Spring Data JPA 3.0.0 - 3.4.15 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-63179",
-    "descripcion": "Winter CMS is a content management system built on the Laravel PHP framework. In versions up to and including 1.2.12, authenticated backend users can disclose arbitrary files readable by the PHP process by injecting @import (inline) directives into LESS source that the backend compiles, because the LESS parser was instantiated without a safe import resolver and fell back to the raw attacker-supplied path when no allowed root matched. The flaw is reachable through four entry points that share the same root cause: the Brand Settings custom_css field, the Editor Settings html_custom_styles field, the Mail Brand Settings colour-picker fields whose values are concatenated into LESS source without escaping, and theme .less, .sass, and .scss assets compiled when served. Both absolute paths and .. traversal outside the asset&#39;s own tree were accepted, so an attacker could read any file the web process can access, most significantly the application .env file and the APP_KEY and database credentials it contains. Exploitation requires a backend account holding one of the associated permissions, which are assigned by default to the built-in Developer role. This issue is fixed in version 1.2.13. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-46371",
+    "descripcion": "Fleet is an open-source device management platform built on osquery. In versions up to and including 4.84.1, the Apple MDM commands listing endpoint (GET /api/v1/fleet/mdm/apple/commands) allowed an authenticated user with the lowest-privilege Observer role to extract sensitive values from joined database tables, including host enrollment secrets and Apple Push Notification Service tokens, through a sort-order oracle. The endpoint accepted a user-supplied order_key parameter that was not validated against a column allowlist, and because the underlying query joins the hosts and nano_enrollments tables, an attacker could set the sort column to a sensitive field and combine it with the cursor-based after parameter to binary-search the value one character at a time, with the presence or absence of results revealing each character even though the value never appeared in the response. With extracted node_key or orbit_node_key values an attacker could impersonate enrolled hosts to Fleet&#39;s osquery and Orbit endpoints, submit fabricated host data, and retrieve pending scripts and commands. This issue is fixed in version 4.84.2. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-51106",
-    "descripcion": "An issue in TokTok qTox v1.18.4 allows a local attacker to cause a denial of service via the src/persistence/serialize.cpp component 26/08/2026 26/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-46370",
+    "descripcion": "Fleet is an open-source device management platform built on osquery. In versions up to and including 4.84.1, the labels host-listing endpoint (GET /api/v1/fleet/labels/{id}/hosts) allowed an authenticated user with the lowest-privilege Observer role to extract host enrollment secrets through a sort-order oracle. The endpoint accepted a user-supplied order_key parameter that was not validated against a column allowlist, so an attacker with Global or Team Observer access could set the sort column to a sensitive field such as h.node_key and combine it with the cursor-based after parameter to binary-search the value one character at a time; the targeted value never appeared in the response, but the presence or absence of results revealed each character. Because node_key and orbit_node_key are the long-lived shared secrets that osquery and Orbit agents use to authenticate to the Fleet server, an attacker who reconstructed them could impersonate enrolled hosts, submit fabricated query results and inventory, retrieve pending scripts and MDM commands, and poison compliance and policy results across the deployment. This issue is fixed in version 4.84.2. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-48786",
-    "descripcion": "Fleet is an open-source device management platform built on osquery. In versions prior to 4.87.0, the target search endpoint (POST /api/latest/fleet/targets) returned unmasked team enroll secrets and full team configuration, including credential-bearing agent options, to low-privilege observer-class users. Other team-facing endpoints mask these fields for observers, but the target search endpoint did not apply the same sanitization, so an authenticated user with the Observer, Observer+, or Technician role, whether global or team-scoped, could retrieve the secrets and agent options by performing a target search against an observer-runnable query. With a leaked team enroll secret an attacker could enroll unauthorized hosts into the affected team, and if the team&#39;s agent options contained credentials such as AWS secret access keys or proxy passwords, those values were disclosed as well. This issue is fixed in version 4.87.0. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-46369",
+    "descripcion": "Nimiq is a Rust implementation of the Nimiq Proof-of-Stake protocol based on the Albatross consensus algorithm. Through 1.5.0, the validity store uses a strict lower-bound comparison that expires a stored transaction too early relative to Transaction::is_valid_at, allowing a remote attacker to replay the same signed transaction during a blocks_per_batch minus one block window and cause the sender and recipient balances to be updated twice. This issue is fixed in version 1.5.1. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-41262",
-    "descripcion": "Fleet is an open-source device management platform built on osquery. In versions prior to 4.85.0, the global policy read endpoint (GET /api/latest/fleet/policies/{policy_id}) fails to verify team ownership of the requested policy, allowing an authenticated user with observer-level access on any single team to read the full details of policies belonging to any other team and bypass Fleet&#39;s team isolation model. The handler authorizes the request against an empty policy object whose TeamID is nil, which an authorization rule permits for any user holding a role on any team, and then fetches the policy by ID with no team filter and returns it without any post-fetch scope check. Because policy IDs are sequential integers, an attacker can enumerate them to read other teams&#39; policy SQL queries, host pass and fail counts, and associated software-installer and script metadata, exposing security-monitoring strategies and compliance posture across team boundaries. This issue is fixed in version 4.85.0. 26/08/2026 26/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-26449",
+    "descripcion": "In Stomper 5e2741e when a client sends a SEND frame missing the destination header field, the server triggers a null pointer dereference (or access to invalid memory) while processing the frame, causing the process to crash. 26/08/2026 26/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-08-26",
-    "cve": "CVE-2026-36851",
-    "descripcion": "Path traversal vulnerability in UnPoller 2.33.0 password field allows arbitrary file read and network exfiltration. 26/08/2026 26/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-26448",
+    "descripcion": "Stomper 5e2741e is vulnerable to Use-After-Free. When a client sends multiple CONNECT frames on the same TCP connection, and subsequently another client (or a later connection) sends SEND frames to a destination previously subscribed on that connection, the broker may dereference a pointer to a StompStreamSocket object that has already been freed. This results in a heap use-after-free and process crash. Because the protocol does not authenticate or restrict such sequences by default. 26/08/2026 26/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
