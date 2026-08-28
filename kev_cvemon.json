@@ -1,13 +1,13 @@
 [
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-72137",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: nat_keepalive: avoid double free on send error nat_keepalive_send() frees the keepalive skb whenever the IPv4 or IPv6 send helper reports an error. That cleanup is only correct before the skb is handed ..."
+    "cve": "CVE-2024-6387",
+    "descripcion": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time ..."
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2024-6387",
-    "descripcion": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time ..."
+    "cve": "CVE-2026-72137",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: nat_keepalive: avoid double free on send error nat_keepalive_send() frees the keepalive skb whenever the IPv4 or IPv6 send helper reports an error. That cleanup is only correct before the skb is handed ..."
   },
   {
     "fecha": "2026-08-28",
@@ -31,22 +31,22 @@
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2025-58434",
-    "descripcion": "Flowise is a drag & drop user interface to build a customized large language model flow. In version 3.0.5 and earlier, the `forgot-password` endpoint in Flowise returns sensitive information including a valid password reset `tempToken` without authentication or verification. ..."
+    "cve": "CVE-2026-82078",
+    "descripcion": "An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an ..."
+  },
+  {
+    "fecha": "2026-08-28",
+    "cve": "CVE-2026-81578",
+    "descripcion": "An improper access control vulnerability exists in the web management interface of PaperCut MF and PaperCut NG. Under specific conditions, unauthenticated remote requests targeting administrative functions can trigger backend actions prior to the completion of access validation ..."
+  },
+  {
+    "fecha": "2026-08-28",
+    "cve": "CVE-2025-61622",
+    "descripcion": "Deserialization of untrusted data in python in pyfory versions 0.12.0 through 0.12.2, or the legacy pyfury versions from 0.1.0 through 0.10.3: allows arbitrary code execution. An application is vulnerable if it reads pyfory serialized data from untrusted sources. An attacker can ..."
   },
   {
     "fecha": "2026-08-28",
     "cve": "CVE-2026-23630",
     "descripcion": "Docmost is open-source collaborative wiki and documentation software. In versions 0.3.0 through 0.23.2, Mermaid code block rendering is vulnerable to stored Cross-Site Scripting (XSS). The frontend can render attacker-controlled Mermaid diagrams using mermaid.render(), then ..."
-  },
-  {
-    "fecha": "2026-08-28",
-    "cve": "CVE-2025-62228",
-    "descripcion": "Apache Flink CDC version 3.4.0 was vulnerable to a SQL injection via maliciously crafted identifiers eg. crafted database name or crafted table name. Even through only the logged-in database user can trigger the attack, we recommend users update Flink CDC version to 3.5.0 which ..."
-  },
-  {
-    "fecha": "2026-08-28",
-    "cve": "CVE-2026-55040",
-    "descripcion": "Weak authentication in Microsoft Office SharePoint allows an unauthorized attacker to bypass a security feature over a network."
   }
 ]
