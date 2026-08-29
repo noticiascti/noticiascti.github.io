@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-08-29",
+    "cve": "CVE-2026-82364",
+    "descripcion": "A security vulnerability has been detected in macrozheng mall up to 1.0.3. This impacts an unknown function of the file /order/submit of the component Order Submission. The manipulation leads to race condition. It is possible to initiate the attack remotely. The attack is considered to have high complexity. The exploitability is said to be difficult. The vendor deleted the GitHub issue for this vulnerability without and explanation. 29/08/2026 29/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:H/Au:S/C:N/I:P/A:P Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-08-29",
     "cve": "CVE-2026-80725",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: gro: properly validate BIG TCP aggregation criteria When GRO attempts to aggregate packets beyond GRO_LEGACY_MAX_SIZE (64KB), BIG TCP should only be permitted for plain IPv4 TCP and plain IPv6 TCP (with sufficient MAC header room to insert the temporary HBH jumbo header). However, commit b1a78b9b9886 (&#34;net: add support for ipv4 big tcp&#34;) loosened the check in skb_gro_receive(), leading to several issues: 1. skb_gro_receive() checked skb_headroom(p) instead of the actual space before the MAC header (p->mac_header). Because skb_headroom(p) includes mac_len, crafted frames (e.g. injected via AF_PACKET) can pass the check with p->mac_header head, causing an out-of-bounds write and wrapping skb->mac_header. 2. It allowed non-IP protocols such as software VLAN (ETH_P_8021Q / ETH_P_8021AD) to aggregate beyond 64KB because p->protocol != ETH_P_IPV6 was true. 3. It checked p->encapsulation instead of NAPI_GRO_CB(skb)->encap_mark, allowing encapsulated flows (e.g. SIT / IPv6-in-IPv4) to aggregate beyond 64KB. Fix skb_gro_receive() to strictly enforce: - NAPI_GRO_CB(skb)->proto == IPPROTO_TCP - Not encapsulated (!NAPI_GRO_CB(skb)->encap_mark && !p->encapsulation) - Protocol must be either ETH_P_IP or ETH_P_IPV6 - If ETH_P_IPV6, p->mac_header must be at least sizeof(struct hop_jumbo_hdr) Returning -E2BIG from skb_gro_receive() ensures that packets which cannot become BIG TCP are cleanly flushed at 29/08/2026 29/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-08-29",
     "cve": "CVE-2026-77704",
     "descripcion": "The Booking for Appointments and Events Calendar WordPress plugin before 2.4.9 does not check that a user holds the required capability before letting them change an appointment&#39;s status, allowing customers to set arbitrary statuses on appointments they are booked on, including approving their own bookings that were left awaiting approval and overwriting another customer&#39;s booking status on a shared appointment. 29/08/2026 29/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-08-29",
-    "cve": "CVE-2026-77012",
-    "descripcion": "The 爱采集数据采集和发布插件 WordPress plugin through 1.0.0 does not require a per-install secret for one of its unauthenticated endpoints, relying on a hardcoded default, and does not validate the URLs or destination paths it is given, allowing unauthenticated attackers to read arbitrary files from the server, force it to issue arbitrary requests and retrieve the responses, and write attacker-supplied content outside the uploads directory. 29/08/2026 29/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
