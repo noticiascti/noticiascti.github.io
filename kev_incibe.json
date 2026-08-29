@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-82324",
-    "descripcion": "A flaw was found in the file-iff (IFF/ILBM) plugin in GIMP. When processing a specially crafted IFF/ILBM image file, the plugin does not properly validate the HAM row size and improperly handles cases where the number of color planes (nPlanes) is zero. This causes a row size mismatch that bypasses memory bounds checking, resulting in heap out-of-bounds reads. This issue can result in an application crash, leading to a denial of service or a limited information disclosure of heap memory contents. 28/08/2026 28/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-82306",
+    "descripcion": "StarRocks through 4.0.13 contains an information disclosure vulnerability in the query_detail endpoint that returns unfiltered query history for all users. Authenticated attackers with low privileges can access full SQL text, execution plans, and profiling data from every query executed by other users, including statements containing credentials. 28/08/2026 28/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-56854",
-    "descripcion": "The source-address critical option in the Permissions returned by an authentication callback was only enforced for the PublicKeyCallback and VerifiedPublicKeyCallback paths, extending the fix for CVE-2026-46595. Permissions returned by the PasswordCallback, KeyboardInteractiveCallback, NoClientAuthCallback, and GSSAPIWithMICConfig.AllowLogin callbacks were not validated against the client&#39;s remote address, so a source-address restriction set by those callbacks was silently ignored. The check is now applied to the Permissions returned by any authentication callback. 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82291",
+    "descripcion": "HeyForm before 3.0.0-rc.8 reflects the request Origin header in CORS responses while allowing credentials, enabling cross-origin requests with authentication. Attackers can execute authenticated GraphQL queries from malicious pages visited by logged-in users to access workspaces, projects, forms, submissions, and respondent data, or modify account settings. 28/08/2026 28/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-38638",
-    "descripcion": "An issue in the with_argv function (/unistd/mod.rs) of relibc commit 61f42d allows attackers to cause a Denial of Service (DoS) via a crafted input. 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82290",
+    "descripcion": "Chainlit through 2.12.0 fails to validate ownership of feedback records in PUT and DELETE endpoints. Authenticated attackers can delete or modify other users&#39; feedback by supplying arbitrary feedback identifiers, corrupting human-rating data used for model evaluation. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-38636",
-    "descripcion": "An issue in the seekdir() function (/dirent/mod.rs) of relibc commit 61f42d allows attackers to cause a Denial of Service (DoS) via a crafted input. 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82289",
+    "descripcion": "Gitingest through 0.3.1 fails to properly validate hostnames in _validate_host, accepting any host with a git., gitlab., or github. prefix regardless of known-hosts list membership. Attackers can submit URLs with attacker-controlled hostnames to trigger outbound connections to arbitrary hosts and disclose GitHub personal access tokens via HTTP basic credentials. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-37751",
-    "descripcion": "An OS command injection vulnerability in the killSessionSync function (lib/agent-runtime.ts) of 23blocks-OS ai-maestro v0.24.17 allows attackers to execute arbitrary commands via a crafted input. 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82288",
+    "descripcion": "Stable Diffusion WebUI through 1.10.1 contains a credential disclosure vulnerability in the /sdapi/v1/cmd-flags endpoint that returns parsed command-line arguments including gradio_auth and api_auth values in cleartext. Unauthenticated attackers can access this endpoint to retrieve configured usernames and passwords, then use them to authenticate to the interface and access the application. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-37710",
-    "descripcion": "Cross Site Scripting vulnerability in Omeka S v.4.2.0 allows a remote attacker to execute arbitrary code via the site navigation custom URL function 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82287",
+    "descripcion": "Rybbit before 2.7.0 contains a CORS misconfiguration vulnerability that allows attackers to bypass origin restrictions by reflecting any request origin in Access-Control-Allow-Origin responses while credentials are enabled. Attackers can issue credentialed cross-origin requests from any website to read analytics data, account information, and perform authenticated state-changing operations as the victim user. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-37237",
-    "descripcion": "vLLM up to and including 0.17.0 allows remote attackers to cause a Denial of Service via memory exhaustion. The AsyncMediaIO.fetch_audio and AsyncMediaIO.fetch_image functions in multimodal/inputs.py fetch user-supplied media URLs using aiohttp and call r.read() without enforcing a maximum response size, allowing an attacker to exhaust server memory by providing a URL to an arbitrarily large file. 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82286",
+    "descripcion": "gpt-crawler through 1.5.1 fails to validate the outputFileName parameter in the POST /crawl endpoint, allowing unauthenticated attackers to write arbitrary files to any filesystem path. Attackers can supply absolute paths or parent-directory segments to overwrite existing files with content sourced from attacker-controlled URLs. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-37236",
-    "descripcion": "grpc-gateway v2.28.0 is vulnerable to Incorrect Access Control. The application processes the X-HTTP-Method-Override header in ServeMux.ServeHTTP without restricting allowed methods. When a POST request with Content-Type application/x-www-form-urlencoded includes this header, the request method is rewritten to an arbitrary attacker-supplied value before routing. This allows bypassing method-based access controls enforced by upstream proxies or WAFs. 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82285",
+    "descripcion": "bisheng through 2.6.0-fix2 contains a server-side request forgery vulnerability in the POST /api/v1/workflow/report/callback endpoint that lacks authentication and applies no URL scheme restrictions or host filtering. Unauthenticated attackers can supply arbitrary URLs to enumerate internal network services and cloud metadata endpoints, then retrieve captured responses from object storage using caller-supplied object names. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-14942",
-    "descripcion": "Rejected reason: This CVE ID was assigned to a reported vulnerability in the Customer Reviews for WooCommerce WordPress plugin and was never published. The report was withdrawn: the precondition it depends on, an attacker obtaining a review form identifier belonging to a customer they do not already have access to, could not be demonstrated. No advisory was issued for this ID. 28/08/2026 28/08/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-82284",
+    "descripcion": "Quivr versions through 0.0.322 fail to validate chat ownership in the GET /chat/{chat_id}/history, DELETE /chat/{chat_id}, and POST /chat/{chat_id}/question/answer endpoints. Authenticated attackers can read other users&#39; conversation histories including private knowledge base content, delete arbitrary chats, and inject fabricated messages into other users&#39; conversations. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-08-28",
-    "cve": "CVE-2026-82261",
-    "descripcion": "SvelteKit (@sveltejs/kit) versions >=2.49.0 and 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-82283",
+    "descripcion": "VoltAgent through 2.1.20 fails to validate conversation ownership in memory API handlers, allowing authenticated users to access other users&#39; conversations. Attackers can read, modify, and delete arbitrary conversations and messages by supplying caller-controlled identifiers to memory endpoints. 28/08/2026 28/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
