@@ -6,11 +6,6 @@
   },
   {
     "fecha": "2026-08-30",
-    "cve": "CVE-2026-72137",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: nat_keepalive: avoid double free on send error nat_keepalive_send() frees the keepalive skb whenever the IPv4 or IPv6 send helper reports an error. That cleanup is only correct before the skb is handed ..."
-  },
-  {
-    "fecha": "2026-08-30",
     "cve": "CVE-2026-82078",
     "descripcion": "An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an ..."
   },
@@ -31,13 +26,8 @@
   },
   {
     "fecha": "2026-08-30",
-    "cve": "CVE-2026-53362",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv6: account for fraggap on the paged allocation path In __ip6_append_data(), when the paged-allocation branch is taken (MSG_MORE / NETIF_F_SG / large fraglen), alloclen and pagedlen are computed ..."
-  },
-  {
-    "fecha": "2026-08-30",
-    "cve": "CVE-2026-66384",
-    "descripcion": "An authenticated user may write data outside the intended Docker cache path under specific remote-repository conditions."
+    "cve": "CVE-2025-64756",
+    "descripcion": "Glob matches files using patterns the shell uses. Starting in version 10.2.0 and prior to versions 10.5.0 and 11.1.0, the glob CLI contains a command injection vulnerability in its -c/--cmd option that allows arbitrary command execution when processing files with malicious ..."
   },
   {
     "fecha": "2026-08-30",
@@ -48,5 +38,15 @@
     "fecha": "2026-08-30",
     "cve": "CVE-2023-49105",
     "descripcion": "An issue was discovered in ownCloud owncloud/core before 10.13.1. An attacker can access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured. This occurs because pre-signed URLs can be accepted ..."
+  },
+  {
+    "fecha": "2026-08-30",
+    "cve": "CVE-2026-53362",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv6: account for fraggap on the paged allocation path In __ip6_append_data(), when the paged-allocation branch is taken (MSG_MORE / NETIF_F_SG / large fraglen), alloclen and pagedlen are computed ..."
+  },
+  {
+    "fecha": "2026-08-30",
+    "cve": "CVE-2026-66384",
+    "descripcion": "An authenticated user may write data outside the intended Docker cache path under specific remote-repository conditions."
   }
 ]
