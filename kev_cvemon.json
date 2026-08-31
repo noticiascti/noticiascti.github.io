@@ -1,11 +1,6 @@
 [
   {
     "fecha": "2026-08-31",
-    "cve": "CVE-2024-6387",
-    "descripcion": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time ..."
-  },
-  {
-    "fecha": "2026-08-31",
     "cve": "CVE-2026-82222",
     "descripcion": "Deserialization of Untrusted Data vulnerability in Liquid Web / StellarWP GiveWP allows Object Injection. This issue affects GiveWP: from n/a through 4.16.7.1."
   },
@@ -31,6 +26,11 @@
   },
   {
     "fecha": "2026-08-31",
+    "cve": "CVE-2026-72898",
+    "descripcion": "Metabase allows a remote, unauthenticated attacker to inject arbitrary SQL via the '/reset_password' database endpoint and gain administrator access to the connected Metabase instance."
+  },
+  {
+    "fecha": "2026-08-31",
     "cve": "CVE-2026-15369",
     "descripcion": "The Custom User Registration Fields for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.3. This is due to the plugin accepting an attacker-controlled afreg_select_user_role value from the unauthenticated WooCommerce ..."
   },
@@ -41,12 +41,12 @@
   },
   {
     "fecha": "2026-08-31",
-    "cve": "CVE-2026-18885",
-    "descripcion": "ServiceNow has remediated a code injection vulnerability that was identified in the ServiceNow AI platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to execute arbitrary code in the ServiceNow platform and gain access to, or modify, ..."
+    "cve": "CVE-2026-18886",
+    "descripcion": "ServiceNow has remediated an improper access control vulnerability that was identified in the ServiceNow AI platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to create or modify instance data beyond what was intended, resulting in ..."
   },
   {
     "fecha": "2026-08-31",
-    "cve": "CVE-2026-18886",
-    "descripcion": "ServiceNow has remediated an improper access control vulnerability that was identified in the ServiceNow AI platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to create or modify instance data beyond what was intended, resulting in ..."
+    "cve": "CVE-2026-18885",
+    "descripcion": "ServiceNow has remediated a code injection vulnerability that was identified in the ServiceNow AI platform. This vulnerability could enable an unauthenticated user, in certain circumstances, to execute arbitrary code in the ServiceNow platform and gain access to, or modify, ..."
   }
 ]
