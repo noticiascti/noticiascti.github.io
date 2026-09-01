@@ -21,32 +21,32 @@
   },
   {
     "fecha": "2026-09-01",
+    "cve": "CVE-2026-84147",
+    "descripcion": "This vulnerability exists in the ERP system due to improper authentication controls and inadequate file type validation at the API endpoint. An unauthenticated remote attacker could exploit this vulnerability by uploading arbitrary files to a web accessible directory on the ..."
+  },
+  {
+    "fecha": "2026-09-01",
+    "cve": "CVE-2026-84148",
+    "descripcion": "This vulnerability exists in the ERP system due to improper authentication and authorization controls in the API endpoint. An unauthenticated remote attacker could exploit this vulnerability by manipulating parameter which could lead to exposure of sensitive information ..."
+  },
+  {
+    "fecha": "2026-09-01",
+    "cve": "CVE-2026-84149",
+    "descripcion": "This vulnerability exists in the ERP system due to exposure of repository information through a publicly accessible .git directory. An unauthenticated remote attacker could exploit this vulnerability by accessing the exposed .git directory and retrieving repository metadata and ..."
+  },
+  {
+    "fecha": "2026-09-01",
     "cve": "CVE-2026-62735",
     "descripcion": "Heap-based buffer overflow in Windows HTTP.sys allows an authorized attacker to elevate privileges locally."
   },
   {
     "fecha": "2026-09-01",
-    "cve": "CVE-2026-72137",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: nat_keepalive: avoid double free on send error nat_keepalive_send() frees the keepalive skb whenever the IPv4 or IPv6 send helper reports an error. That cleanup is only correct before the skb is handed ..."
-  },
-  {
-    "fecha": "2026-09-01",
-    "cve": "CVE-2026-68162",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: sctp: avoid auth_enable sysctl UAF during netns teardown proc_sctp_do_auth() updates the SCTP control socket after changing net.sctp.auth_enable. The handler gets the per-net SCTP state from ctl->data, so an ..."
-  },
-  {
-    "fecha": "2026-09-01",
-    "cve": "CVE-2026-82553",
-    "descripcion": "A vulnerability was detected in sambitraj Student Management System up to 56ba287f2e9031523ccb4244cb6e3fe530e4e5d5. Affected by this issue is the function mysqli_query of the file student_dashboard.php of the component Student Dashboard. The manipulation of the argument roll_no ..."
+    "cve": "CVE-2026-62911",
+    "descripcion": "Authentication bypass by capture-replay in Microsoft Exchange Server allows an authorized attacker to elevate privileges over a network."
   },
   {
     "fecha": "2026-09-01",
     "cve": "CVE-2026-82222",
     "descripcion": "Deserialization of Untrusted Data vulnerability in Liquid Web / StellarWP GiveWP allows Object Injection. This issue affects GiveWP: from n/a through 4.16.7.1."
-  },
-  {
-    "fecha": "2026-09-01",
-    "cve": "CVE-2026-15369",
-    "descripcion": "The Custom User Registration Fields for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.3. This is due to the plugin accepting an attacker-controlled afreg_select_user_role value from the unauthenticated WooCommerce ..."
   }
 ]
