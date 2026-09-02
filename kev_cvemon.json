@@ -41,8 +41,8 @@
   },
   {
     "fecha": "2026-09-02",
-    "cve": "CVE-2026-72137",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: nat_keepalive: avoid double free on send error nat_keepalive_send() frees the keepalive skb whenever the IPv4 or IPv6 send helper reports an error. That cleanup is only correct before the skb is handed ..."
+    "cve": "CVE-2026-68162",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: sctp: avoid auth_enable sysctl UAF during netns teardown proc_sctp_do_auth() updates the SCTP control socket after changing net.sctp.auth_enable. The handler gets the per-net SCTP state from ctl->data, so an ..."
   },
   {
     "fecha": "2026-09-02",
