@@ -1,5 +1,10 @@
 [
   {
+    "fecha": "2026-09-01",
+    "cve": "CVE-2023-54356",
+    "descripcion": "Kyverno versions 1.9.4 and earlier support insecure 3DES cipher suites (TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA and TLS_RSA_WITH_3DES_EDE_CBC_SHA) on their TLS endpoints. These 64-bit block ciphers are vulnerable to the Sweet32 attack (CVE-2016-2183), which, over very long-lived TLS connections carrying large volumes of traffic, could allow an attacker to recover small amounts of plaintext. The issue is fixed in Kyverno 1.9.5 and 1.10.0. 01/09/2026 01/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
     "fecha": "2026-08-31",
     "cve": "CVE-2026-4560",
     "descripcion": "Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage. 01/09/2026 01/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
@@ -43,10 +48,5 @@
     "fecha": "2026-08-31",
     "cve": "CVE-2026-81889",
     "descripcion": "elFinder is an open-source file manager for web, written in JavaScript using jQuery UI. Prior to 2.1.70, elFinder URL uploads in php/elFinder.class.php can bypass server-side request forgery protections when PHP cURL is unavailable because validate_address() validates $info[&#39;ip&#39;], but get_remote_contents() selects fsock_get_contents(), which connects to $arr[&#39;host&#39;] and performs a second DNS resolution. An attacker able to submit a URL upload can use DNS rebinding to have the first resolution return a public address and the connection resolution return a loopback or private address, causing the internal HTTP response body to be stored as an uploaded file and made readable through elFinder. After a successful fetch, get_headers($url, true) separately requests the original hostname without reusing the validated and pinned connection, creating an additional blind server-side request forgery path even when curl_get_contents() is selected. This issue is fixed in version 2.1.70. 31/08/2026 31/08/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-08-31",
-    "cve": "CVE-2026-81887",
-    "descripcion": "Livewire is a full-stack framework for Laravel. From 3.0.0-beta.1 until 3.8.3 and 4.3.4, the dot-notated query-string parser in js/plugins/history/index.js, including fromQueryString() and insertDotNotatedValueIntoData(), accepts the __proto__, constructor, and prototype path segments and creates inherited objects. Client-side state handlers then access effects.html, effects.js, effects.xjs, and effects.scripts without Object.prototype.hasOwnProperty.call(), allowing inherited attacker-controlled state to be treated as trusted effects. An unauthenticated attacker can craft a URL that, when opened by a user, executes arbitrary JavaScript in the affected application&#39;s origin. Exploitation requires user interaction and does not bypass server-side authorization or grant privileges beyond the affected user. This issue is fixed in versions 3.8.3 and 4.3.4. 31/08/2026 31/08/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
