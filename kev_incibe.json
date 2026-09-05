@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-86100",
-    "descripcion": "Camaleon CMS versions 2.7.5 through 2.9.1 fail to validate redirect targets when fetching remote files in the Upload from URL media feature. Authenticated attackers can supply URLs that pass initial validation but redirect to internal network addresses, allowing server-side request forgery to internal services. 05/09/2026 05/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84937",
+    "descripcion": "The Video Player for YouTube WordPress plugin before 2.1.0 does not properly sanitise and escape user-supplied input before using it in a SQL statement, allowing users with the Contributor role and above to perform SQL injection attacks and read arbitrary data from the database. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52777",
-    "descripcion": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, there is an authenticated PHP object injection vulnerability in BazarImportAction via unserialize. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84936",
+    "descripcion": "The EmbedPress WordPress plugin before 4.6.4 does not have proper authorization on a public review-loading action, allowing unauthenticated users to force the site to make repeated billable third-party API requests using the site&#39;s own configured API key, and to create an unbounded number of attacker-controlled rows in the database. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52775",
-    "descripcion": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki through the latest development branch contains a SQL injection vulnerability in ReactionManager::deleteUserReaction() that allows any authenticated user to inject arbitrary SQL via the {idreaction} and {id} URL path parameters. The parameters are concatenated directly into a SQL LIKE clause without escaping or parameterization. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84935",
+    "descripcion": "The HT Menu WordPress plugin before 1.2.7 does not perform any capability or object-ownership check when saving navigation menu-item settings, and does not escape those stored settings when the menu is rendered, allowing users with minimal permissions such as Subscribers to store JavaScript that executes in the browser of any visitor, administrators included, who views the affected menu. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52774",
-    "descripcion": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki&#39;s Bazar widget handler reflects the id GET parameter into HTML attributes using strip_tags() only. Because strip_tags() does not escape double quotes, an attacker can break out of the attribute value, inject an event handler such as onmouseover, and execute arbitrary JavaScript in the victim&#39;s browser. This issue is reachable without authentication. During validation, the vulnerable widget route returned the injected HTML for both /HomePage/widget?id=... and /NoSuchPage/widget?id=..., which shows that no login, no page ownership, no edit rights, and not even a valid page tag were required. The only routing prerequisite observed was that the Bazar extension is enabled and the request includes an id parameter. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84934",
+    "descripcion": "The JCH Optimize WordPress plugin before 6.0.1 does not perform a capability check on one of its authenticated AJAX actions and lets the request choose which internal action runs, allowing any authenticated users such as Subscribers to import arbitrary JCH Optimize WordPress plugin before 6.0.1 settings and store a script that executes in the browser of any visitor or administrator viewing the site. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52773",
-    "descripcion": "YesWiki is a wiki system written in PHP. From version 4.1.0 to before version 4.6.6, YesWiki&#39;s archived-revision view reflects the time GET parameter into a hidden HTML input in handlers/page/show.php without escaping. Because MySQL coerces malformed DATETIME strings, an attacker can append HTML or JavaScript to a valid archived revision timestamp, still load that archived revision, and execute arbitrary JavaScript in the victim&#39;s browser. The vulnerable form is only rendered when the victim can both read and edit the target page. In restricted deployments this requires a victim with read and write access to that page. On a default doryphore 4.6.5 install, public pages such as PagePrincipale were editable anonymously during validation, so the issue can also affect unauthenticated visitors in that configuration. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84931",
+    "descripcion": "The Joli Table Of Contents WordPress plugin before 3.0.3 does not sanitise or escape a shortcode attribute value before outputting it inside an HTML element&#39;s attribute, allowing users with the Author role and above to inject arbitrary HTML attributes and JavaScript that execute in the browser of any user who views the post, including higher-privileged users such as administrators. This crosses a privilege boundary even on multisite, where such users are not permitted to post unfiltered HTML. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52772",
-    "descripcion": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, Bazar form-field templates still apply |raw(&#39;html&#39;) to field.label / field.hint in attribute and label-body contexts, resulting stored XSS in form renders. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84930",
+    "descripcion": "The CatFolders Document Gallery & PDF Library WordPress plugin before 2.0.7 does not properly validate a block attribute before using it as an HTML tag name in its gallery output, allowing users with the Author role and above to inject arbitrary web scripts that execute in the browser of anyone who views the affected post. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52771",
-    "descripcion": "YesWiki is a wiki system written in PHP. From version 4.2.0 to before version 4.6.6, ApiController::deletePage() interpolates a page tag retrieved from the database into a DELETE FROM …_links WHERE to_tag = &#39;$tag&#39; query without escaping. The page tag is attacker-controlled — the POST /api/pages/{tag} API accepts arbitrary URL-encoded values, including single quotes, and stores them. A low-privilege authenticated user can therefore create a page whose tag is a SQL fragment, make the page non-orphaned via the standard {{include page=&#34;…&#34;}} link mechanism, and then invoke the delete endpoint to execute arbitrary SQL inside the wiki database - including time-based blind data exfiltration from any table. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84927",
+    "descripcion": "The EmbedPress WordPress plugin before 4.6.4 does not perform a sufficient authorization check on one of its Google Reviews REST API routes, allowing users with the Contributor role and above to modify a site-wide store, deleting entries an administrator configured and injecting their own, which are rendered publicly across the site. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52770",
-    "descripcion": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki’s public Bazar entry-listing APIs are vulnerable to unauthenticated SQL injection in numeric query / queries filters. For Bazar fields whose value structure is numeric, YesWiki escapes the attacker-controlled filter value but inserts it into SQL without quotes or numeric validation. An unauthenticated attacker can inject boolean SQL expressions and infer database contents from whether entries are returned. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84926",
+    "descripcion": "The EmbedPress WordPress plugin before 4.6.4 does not correctly restrict access to one of its Google Reviews REST routes to administrators, allowing any authenticated user with contributor-level access or above to read the site administrator&#39;s email address, a value WordPress core withholds from that role. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52769",
-    "descripcion": "YesWiki is a wiki system written in PHP. From version 4.6.2 to before version 4.6.6, the POST /api/forms/{formId}/actor/inbox route - exposed publicly with acl:&#34;public&#34; - accepts an HTTP Signature header whose keyId parameter is a URL. HttpSignatureService::verifySignature() parses the header and immediately makes a server-side HTTP GET to that URL, before any cryptographic verification or URL validation. An unauthenticated remote attacker can therefore make YesWiki issue arbitrary outbound HTTP requests to any host the server can reach - internal services, cloud-metadata endpoints (169.254.169.254), intranet-only admin panels, etc. - and read enough back via timing and error-message oracles to scan ports, enumerate services, and (on a real cloud instance) reach IAM metadata. The only deployment-side precondition is that ActivityPub be enabled on at least one Bazar form. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84901",
+    "descripcion": "The Eventin WordPress plugin before 4.1.22 does not properly check authorization on several of its event-management REST routes, allowing users with contributor-level access and above to change the site&#39;s front-page setting to an event they do not own and to create, edit and delete global event and speaker taxonomy terms they should not be able to manage. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-09-04",
-    "cve": "CVE-2026-52767",
-    "descripcion": "YesWiki is a wiki system written in PHP. From version 4.6.2 to before version 4.6.6, HttpSignatureService::verifySignature() checks the result of PHP&#39;s openssl_verify() with a loose boolean negation - if (!openssl_verify(...)) { throw ... }. PHP&#39;s openssl_verify has four possible return values: 1, 0, -1, and &#34;false&#34;. The -1 row is the bypass: PHP&#39;s truthiness rules make -1 a truthy value, so !(-1) === false, the throw is skipped, and the controller proceeds to processActivity(). Any condition that makes OpenSSL&#39;s EVP_VerifyFinal() return -1 triggers the bypass. The reachable consequence is the controller silently treats a failed verification as success and processes the attacker&#39;s payload. This issue has been patched in version 4.6.6. 05/09/2026 05/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-09-05",
+    "cve": "CVE-2026-84899",
+    "descripcion": "The VikWidgetsLoader WordPress plugin before 1.12.0 does not sanitise or escape a block attribute before outputting it inside an inline script, allowing users with the Contributor role to store arbitrary JavaScript that executes in the browser of any user viewing the affected post, including the administrator who reviews the pending submission. 05/09/2026 05/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
