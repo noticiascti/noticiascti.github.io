@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-09-08",
+    "cve": "CVE-2026-18090",
+    "descripcion": "A flaw was found in gdk-pixbuf. This vulnerability allows a remote attacker to cause a heap out-of-bounds read by providing a specially crafted Apple Icon Image (.icns) file. The uncompress() function, which handles RLE-encoded ICNS icon data, fails to validate the source buffer&#39;s boundaries during decompression. This can lead to a denial of service, where the application crashes, or to information disclosure, potentially revealing sensitive data from adjacent memory. 09/09/2026 09/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-08",
     "cve": "CVE-2026-86996",
     "descripcion": "n8n is an open source workflow automation platform. Prior to 2.37.7 and 2.38.2, the workflow setting named This workflow can be called by was enforced by the Execute Workflow node but not when a workflow was attached to an Agent as a tool. A user able to build an Agent could invoke a restricted workflow and read its returned data. The affected path is packages/cli/src/modules/agents/tools/workflow-tool-factory.ts, where executeWorkflow omitted SubworkflowPolicyChecker.checkForProject. This issue is fixed in versions 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-09-08",
     "cve": "CVE-2026-86081",
     "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the Git node clone operation matched an attacker-controlled destination path against the default N8N_BLOCK_FILE_PATTERNS regular expression. The pattern ^(./).git(/.)$ allowed catastrophic backtracking and ran synchronously in the main n8n process. An authenticated workflow editor could therefore freeze the instance with one workflow execution; the affected default is declared in packages/@n8n/config/src/configs/security.config.ts. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-08",
-    "cve": "CVE-2026-86080",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the GitHub Trigger generated a webhook secret but discarded it when GitHub returned HTTP 422 and the node reused an existing webhook. Workflow static data then retained webhookId without webhookSecret, and X-Hub-Signature-256 verification accepted deliveries without a stored secret. The affected logic includes packages/nodes-base/nodes/Github/GithubTriggerHelpers.ts and the 422 webhook reuse path. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
