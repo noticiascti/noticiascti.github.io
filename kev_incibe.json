@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-18090",
-    "descripcion": "A flaw was found in gdk-pixbuf. This vulnerability allows a remote attacker to cause a heap out-of-bounds read by providing a specially crafted Apple Icon Image (.icns) file. The uncompress() function, which handles RLE-encoded ICNS icon data, fails to validate the source buffer&#39;s boundaries during decompression. This can lead to a denial of service, where the application crashes, or to information disclosure, potentially revealing sensitive data from adjacent memory. 09/09/2026 09/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-87658",
+    "descripcion": "Information leak in Extensions in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to obtain cross-origin data via a crafted Chrome extension. (Chromium security severity: Medium) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86996",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 2.37.7 and 2.38.2, the workflow setting named This workflow can be called by was enforced by the Execute Workflow node but not when a workflow was attached to an Agent as a tool. A user able to build an Agent could invoke a restricted workflow and read its returned data. The affected path is packages/cli/src/modules/agents/tools/workflow-tool-factory.ts, where executeWorkflow omitted SubworkflowPolicyChecker.checkForProject. This issue is fixed in versions 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87657",
+    "descripcion": "Use after free in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker who had compromised the renderer process to read memory inside the sandbox via a crafted HTML page. (Chromium security severity: Medium) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86995",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the Git node validated the repository parameter for fetch or pull, but setUpstream wrote a branch..remote value into repository configuration without validating it. A later fetch or pull resolved the remote from that configuration instead of the checked parameter. An authenticated workflow editor could therefore point Git at any local repository readable by the n8n process and receive its contents through packages/nodes-base/nodes/Git/GenericFunctions.ts. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87656",
+    "descripcion": "Improper state validation in Safebrowsing in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to bypass system access restrictions via a crafted HTML page. (Chromium security severity: Low) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86994",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the /rest/active-workflows endpoint returned every active workflow ID on the instance to any member regardless of sharing. Workflow activation, deactivation, and publication push events were also broadcast to clients that could not access the affected workflow, disclosing workflow IDs, version IDs, and activation error details. The affected paths include packages/cli/src/services/active-workflows.service.ts and packages/cli/src/workflows/workflow-push-notifier.service.ts. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87655",
+    "descripcion": "Clickjacking in Downloads in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to spoof UI elements via a crafted HTML page. (Chromium security severity: Medium) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86993",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, a Log Streaming event destination could reference a generic HTTP credential and decrypt whichever credential ID it named without an ownership check. A user with a custom global role carrying Log Streaming scopes could select a credential belonging to another project and send its decrypted secret to an attacker-controlled endpoint. The affected authorization boundary is packages/cli/src/modules/log-streaming.ee/destinations/destination-credentials-access.ts and the credential:read scope. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87654",
+    "descripcion": "Buffer overflow in ANGLE in Google Chrome on on Windows prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86085",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 2.37.7 and 2.38.2, the /rest/roles/:slug/assignments and /rest/roles/:slug/assignments/:projectId/members endpoints checked only whether the caller could manage the role type. A caller with role:manageProject could name a project the caller could not list and obtain member names and email addresses. The affected controller is packages/cli/src/controllers/role.controller.ts, which omitted the project:list scope check. This issue is fixed in versions 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87653",
+    "descripcion": "UI misrepresentation in FullScreen in Google Chrome on on Windows prior to 153.0.8010.36 allowed a remote attacker to spoof UI elements via a crafted HTML page. (Chromium security severity: Low) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86084",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the public OIDC login and callback endpoints completed authentication even when OIDC was not the enabled active authentication method. An Enterprise administrator who had configured and later disabled an identity provider still exposed a working route that could issue valid sessions. The affected logic is packages/cli/src/modules/sso-oidc/oidc.service.ee.ts, including generateLoginUrl and the callback flow that lacked assertOidcLoginEnabled. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.00 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87652",
+    "descripcion": "Incorrect authorization in PushAPI in Google Chrome prior to 153.0.8010.36 allowed a remote attacker who had compromised the renderer process to bypass web origin policy via a crafted HTML page. (Chromium security severity: Medium) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86083",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the legacy expression engine generated source text by calling the mutable global JSON.stringify while printing synthetic string literals and interpolating timezone data. An expression could replace JSON.stringify and cause later generated source to contain executable attacker-controlled code. The affected code-generation paths include packages/@n8n/expression-runtime/src/bridge/isolated-vm-bridge.ts and packages/@n8n/tournament/src/ExpressionBuilder.ts, and the issue does not affect the vm expression engine. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87651",
+    "descripcion": "Incorrect authorization in Paint in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to obtain cross-origin data via a crafted HTML page. (Chromium security severity: High) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86082",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the OpenAI Chat Model node enforced credential allowed-domain restrictions for normal calls but not for the model-search dropdown. A workflow editor could set options.baseURL to an arbitrary host and make the searchModels path send the openAiApi credential there. The affected implementation is packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/methods/loadModels.ts, which omitted assertOpenAiCredentialAllowsUrl. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87650",
+    "descripcion": "Out of bounds read in WebGL in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-08",
-    "cve": "CVE-2026-86081",
-    "descripcion": "n8n is an open source workflow automation platform. Prior to 1.123.76, 2.37.7, and 2.38.2, the Git node clone operation matched an attacker-controlled destination path against the default N8N_BLOCK_FILE_PATTERNS regular expression. The pattern ^(./).git(/.)$ allowed catastrophic backtracking and ran synchronously in the main n8n process. An authenticated workflow editor could therefore freeze the instance with one workflow execution; the affected default is declared in packages/@n8n/config/src/configs/security.config.ts. This issue is fixed in versions 1.123.76, 2.37.7 and 2.38.2. 09/09/2026 09/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-87649",
+    "descripcion": "UI misrepresentation in Downloads in Google Chrome prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to bypass system access restrictions via a crafted HTML page. (Chromium security severity: Medium) 09/09/2026 09/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
