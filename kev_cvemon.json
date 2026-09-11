@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-09-11",
+    "cve": "CVE-2025-61481",
+    "descripcion": "An issue in MikroTik RouterOS v.7.14.2 and SwOS v.2.18 exposes the WebFig management interface over cleartext HTTP by default, allowing an on-path attacker to execute injected JavaScript in the administrator’s browser and intercept credentials."
+  },
+  {
+    "fecha": "2026-09-11",
     "cve": "CVE-2026-87491",
     "descripcion": "Out of bounds write in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-09-11",
     "cve": "CVE-2026-81963",
     "descripcion": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally."
-  },
-  {
-    "fecha": "2026-09-11",
-    "cve": "CVE-2026-67276",
-    "descripcion": "RouterOS does not compare the complete RSA public key when matching an SSH authentication request to an authorized user key, checking the key type and modulus but omitting the exponent. Because signature verification uses the client-supplied key, an attacker knowing an ..."
   }
 ]
