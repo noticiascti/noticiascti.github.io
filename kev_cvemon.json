@@ -1,13 +1,8 @@
 [
   {
     "fecha": "2026-09-12",
-    "cve": "CVE-2026-86060",
-    "descripcion": "RouterOS contains an argument-handling flaw in the SSH login path involving usernames that begin with a prohibited character, allowing for the trusted RouterOS policy mask to be changed, leading to privilege escalation. Exploitation requires an unauthenticated SSH session to ..."
-  },
-  {
-    "fecha": "2026-09-12",
-    "cve": "CVE-2026-67277",
-    "descripcion": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet ..."
+    "cve": "CVE-2026-84869",
+    "descripcion": "A condition in the ScreenConnect client may allow files to be transferred and executed through an active remote session without authorization or Host confirmation in certain circumstances. ScreenConnect servers are not impacted."
   },
   {
     "fecha": "2026-09-12",
@@ -18,21 +13,6 @@
     "fecha": "2026-09-12",
     "cve": "CVE-2026-42018",
     "descripcion": "JFrog Artifactory could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources."
-  },
-  {
-    "fecha": "2026-09-12",
-    "cve": "CVE-2026-84869",
-    "descripcion": "A condition in the ScreenConnect client may allow files to be transferred and executed through an active remote session without authorization or Host confirmation in certain circumstances. ScreenConnect servers are not impacted."
-  },
-  {
-    "fecha": "2026-09-12",
-    "cve": "CVE-2026-85102",
-    "descripcion": "Improper certificate trust validation during VPN negotiation in Check Point Quantum Security Gateway may allow an unauthenticated remote attacker to execute arbitrary code on the Gateway."
-  },
-  {
-    "fecha": "2026-09-12",
-    "cve": "CVE-2026-85103",
-    "descripcion": "A heap-based buffer overflow in VPN certificate ASN.1 decoding may allow an unauthenticated remote attacker to execute arbitrary code on Check Point Quantum Security Management and Quantum Security Gateway systems."
   },
   {
     "fecha": "2026-09-12",
@@ -48,5 +28,25 @@
     "fecha": "2026-09-12",
     "cve": "CVE-2026-20079",
     "descripcion": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating ..."
+  },
+  {
+    "fecha": "2026-09-12",
+    "cve": "CVE-2026-85102",
+    "descripcion": "Improper certificate trust validation during VPN negotiation in Check Point Quantum Security Gateway may allow an unauthenticated remote attacker to execute arbitrary code on the Gateway."
+  },
+  {
+    "fecha": "2026-09-12",
+    "cve": "CVE-2026-85103",
+    "descripcion": "A heap-based buffer overflow in VPN certificate ASN.1 decoding may allow an unauthenticated remote attacker to execute arbitrary code on Check Point Quantum Security Management and Quantum Security Gateway systems."
+  },
+  {
+    "fecha": "2026-09-12",
+    "cve": "CVE-2026-86060",
+    "descripcion": "RouterOS contains an argument-handling flaw in the SSH login path involving usernames that begin with a prohibited character, allowing for the trusted RouterOS policy mask to be changed, leading to privilege escalation. Exploitation requires an unauthenticated SSH session to ..."
+  },
+  {
+    "fecha": "2026-09-12",
+    "cve": "CVE-2026-67277",
+    "descripcion": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet ..."
   }
 ]
