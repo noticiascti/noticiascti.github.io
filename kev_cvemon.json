@@ -11,13 +11,18 @@
   },
   {
     "fecha": "2026-09-21",
+    "cve": "CVE-2026-53266",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks ..."
+  },
+  {
+    "fecha": "2026-09-21",
     "cve": "CVE-2026-74469",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: sctp: prevent peer transport count overflow sctp_assoc_add_peer() increments the association's 16-bit transport_count for every new unique peer. Adding the 65,536th transport wraps the count to zero. SCTP ..."
   },
   {
     "fecha": "2026-09-21",
-    "cve": "CVE-2026-53266",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks ..."
+    "cve": "CVE-2026-43786",
+    "descripcion": "This issue was addressed with additional entitlement checks. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. An app may be able to gain root privileges."
   },
   {
     "fecha": "2026-09-21",
@@ -28,11 +33,6 @@
     "fecha": "2026-09-21",
     "cve": "CVE-2026-81000",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
-  },
-  {
-    "fecha": "2026-09-21",
-    "cve": "CVE-2026-43786",
-    "descripcion": "This issue was addressed with additional entitlement checks. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. An app may be able to gain root privileges."
   },
   {
     "fecha": "2026-09-21",
