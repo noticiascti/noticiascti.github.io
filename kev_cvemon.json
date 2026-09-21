@@ -21,18 +21,23 @@
   },
   {
     "fecha": "2026-09-21",
-    "cve": "CVE-2026-81000",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
-  },
-  {
-    "fecha": "2026-09-21",
     "cve": "CVE-2026-68121",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: pppoe: reload header pointer after dev_hard_header() pppoe_sendmsg() saves a pointer to the PPPoE header before calling dev_hard_header(). Device header callbacks are allowed to reallocate the skb head, ..."
   },
   {
     "fecha": "2026-09-21",
+    "cve": "CVE-2026-81000",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
+  },
+  {
+    "fecha": "2026-09-21",
     "cve": "CVE-2026-80844",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: ah6: validate routing header segments_left AH6 rearranges routing-header addresses before computing or verifying the ICV. ipv6_rearrange_rthdr() assumes that segments_left is not larger than the number ..."
+  },
+  {
+    "fecha": "2026-09-21",
+    "cve": "CVE-2026-53266",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks ..."
   },
   {
     "fecha": "2026-09-21",
@@ -43,10 +48,5 @@
     "fecha": "2026-09-21",
     "cve": "CVE-2026-13684",
     "descripcion": "An improper encoding or escaping of output vulnerability in SCGI in Synology DiskStation Manager (DSM) before 7.2.1-69057-12, 7.2.2-72806-9, 7.3.2-86009-4 and 7.4-90075 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks."
-  },
-  {
-    "fecha": "2026-09-21",
-    "cve": "CVE-2026-91843",
-    "descripcion": "A stack overflow during the unauthenticated login process may allow an attacker to run arbitrary code remotely with root privileges."
   }
 ]
