@@ -21,13 +21,13 @@
   },
   {
     "fecha": "2026-09-21",
-    "cve": "CVE-2026-68121",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: pppoe: reload header pointer after dev_hard_header() pppoe_sendmsg() saves a pointer to the PPPoE header before calling dev_hard_header(). Device header callbacks are allowed to reallocate the skb head, ..."
+    "cve": "CVE-2026-81000",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
   },
   {
     "fecha": "2026-09-21",
-    "cve": "CVE-2026-81000",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
+    "cve": "CVE-2026-68121",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: pppoe: reload header pointer after dev_hard_header() pppoe_sendmsg() saves a pointer to the PPPoE header before calling dev_hard_header(). Device header callbacks are allowed to reallocate the skb head, ..."
   },
   {
     "fecha": "2026-09-21",
