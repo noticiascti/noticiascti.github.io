@@ -1,11 +1,6 @@
 [
   {
     "fecha": "2026-09-21",
-    "cve": "CVE-2026-81657",
-    "descripcion": "IBM Guardium Data Protection 12.2 could allow a remote unauthenticated attacker to execute arbitrary code on the system due to the deserialization of untrusted data."
-  },
-  {
-    "fecha": "2026-09-21",
     "cve": "CVE-2026-90817",
     "descripcion": "An unauthenticated Remote Code Execution vulnerability was found in the survey passthrough routing and Data Import processing logic, in which a malicious user could potentially exploit it by manipulating HTTP requests to access an unintended controller route from a public survey ..."
   },
@@ -21,13 +16,18 @@
   },
   {
     "fecha": "2026-09-21",
-    "cve": "CVE-2026-81000",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
+    "cve": "CVE-2026-53266",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks ..."
   },
   {
     "fecha": "2026-09-21",
     "cve": "CVE-2026-68121",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: pppoe: reload header pointer after dev_hard_header() pppoe_sendmsg() saves a pointer to the PPPoE header before calling dev_hard_header(). Device header callbacks are allowed to reallocate the skb head, ..."
+  },
+  {
+    "fecha": "2026-09-21",
+    "cve": "CVE-2026-81000",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
   },
   {
     "fecha": "2026-09-21",
