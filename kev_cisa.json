@@ -1,5 +1,47 @@
 [
   {
+    "fecha": "2026-09-18",
+    "cve": "CVE-2025-39964",
+    "vendor": "Linux",
+    "producto": "Kernel",
+    "descripcion": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state."
+  },
+  {
+    "fecha": "2026-09-18",
+    "cve": "CVE-2026-53266",
+    "vendor": "Linux",
+    "producto": "Kernel",
+    "descripcion": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version."
+  },
+  {
+    "fecha": "2026-09-18",
+    "cve": "CVE-2025-39682",
+    "vendor": "Linux",
+    "producto": "Kernel",
+    "descripcion": "Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potentially causing subsequent TLS records to be processed using incorrect zero-copy and queuing assumptions. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version."
+  },
+  {
+    "fecha": "2026-09-16",
+    "cve": "CVE-2026-58704",
+    "vendor": "Google",
+    "producto": "Pixel",
+    "descripcion": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges."
+  },
+  {
+    "fecha": "2026-09-16",
+    "cve": "CVE-2026-76460",
+    "vendor": "Cisco",
+    "producto": "Identity Services Engine",
+    "descripcion": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface."
+  },
+  {
+    "fecha": "2026-09-16",
+    "cve": "CVE-2026-87886",
+    "vendor": "Acronis",
+    "producto": "Backup",
+    "descripcion": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation."
+  },
+  {
     "fecha": "2026-09-14",
     "cve": "CVE-2026-76461",
     "vendor": "Cisco",
@@ -11,14 +53,14 @@
     "cve": "CVE-2026-84869",
     "vendor": "ConnectWise",
     "producto": "ScreenConnect",
-    "descripcion": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation."
+    "descripcion": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confirmation."
   },
   {
     "fecha": "2026-09-11",
     "cve": "CVE-2026-42016",
     "vendor": "JFrog",
     "producto": "Artifactory",
-    "descripcion": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope."
+    "descripcion": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope."
   },
   {
     "fecha": "2026-09-11",
@@ -39,14 +81,14 @@
     "cve": "CVE-2026-86060",
     "vendor": "MikroTik",
     "producto": "RouterOS",
-    "descripcion": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation."
+    "descripcion": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacker to change the trusted RouterOS policy mask, leading to privilege escalation."
   },
   {
     "fecha": "2026-09-10",
     "cve": "CVE-2026-67277",
     "vendor": "MikroTik",
     "producto": "RouterOS",
-    "descripcion": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service."
+    "descripcion": "MikroTik RouterOS contains a missing authentication for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service."
   },
   {
     "fecha": "2026-09-09",
