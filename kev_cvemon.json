@@ -31,13 +31,13 @@
   },
   {
     "fecha": "2026-09-22",
-    "cve": "CVE-2026-32741",
-    "descripcion": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and below contain a heap buffer overflow in MaskImageCodec::decode_mask_image(). When decoding a HEIF file containing a mask image (mski), the function copies the full iloc extent data into a pixel ..."
+    "cve": "CVE-2026-32882",
+    "descripcion": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and prior contain a heap buffer over-read in HeifPixelImage::overlay() in libheif/pixelimage.cc. When compositing an overlay image (iovl) whose child image has a different bit depth for the alpha channel ..."
   },
   {
     "fecha": "2026-09-22",
-    "cve": "CVE-2026-32882",
-    "descripcion": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and prior contain a heap buffer over-read in HeifPixelImage::overlay() in libheif/pixelimage.cc. When compositing an overlay image (iovl) whose child image has a different bit depth for the alpha channel ..."
+    "cve": "CVE-2026-32741",
+    "descripcion": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and below contain a heap buffer overflow in MaskImageCodec::decode_mask_image(). When decoding a HEIF file containing a mask image (mski), the function copies the full iloc extent data into a pixel ..."
   },
   {
     "fecha": "2026-09-22",
