@@ -6,8 +6,8 @@
   },
   {
     "fecha": "2026-09-22",
-    "cve": "CVE-2026-53266",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks ..."
+    "cve": "CVE-2026-85880",
+    "descripcion": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally."
   },
   {
     "fecha": "2026-09-22",
@@ -21,8 +21,8 @@
   },
   {
     "fecha": "2026-09-22",
-    "cve": "CVE-2026-85880",
-    "descripcion": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally."
+    "cve": "CVE-2026-53266",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks ..."
   },
   {
     "fecha": "2026-09-22",
@@ -31,22 +31,22 @@
   },
   {
     "fecha": "2026-09-22",
-    "cve": "CVE-2026-74469",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: sctp: prevent peer transport count overflow sctp_assoc_add_peer() increments the association's 16-bit transport_count for every new unique peer. Adding the 65,536th transport wraps the count to zero. SCTP ..."
+    "cve": "CVE-2026-84383",
+    "descripcion": "libheif is a HEIF and AVIF file format decoder and encoder. From 1.22.0 until 1.23.2, a crafted HEIF, HEIC, or AVIF item graph using nested iden and auxl references can make HeifPixelImage::transfer_channel_from_image_as() append duplicate Alpha planes with different bit depths ..."
+  },
+  {
+    "fecha": "2026-09-22",
+    "cve": "CVE-2026-32882",
+    "descripcion": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and prior contain a heap buffer over-read in HeifPixelImage::overlay() in libheif/pixelimage.cc. When compositing an overlay image (iovl) whose child image has a different bit depth for the alpha channel ..."
+  },
+  {
+    "fecha": "2026-09-22",
+    "cve": "CVE-2026-32741",
+    "descripcion": "libheif is a HEIF and AVIF file format decoder and encoder. Versions 1.21.2 and below contain a heap buffer overflow in MaskImageCodec::decode_mask_image(). When decoding a HEIF file containing a mask image (mski), the function copies the full iloc extent data into a pixel ..."
   },
   {
     "fecha": "2026-09-22",
     "cve": "CVE-2025-25249",
     "descripcion": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 ..."
-  },
-  {
-    "fecha": "2026-09-22",
-    "cve": "CVE-2026-81000",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: tun: bound receive headroom tun_get_user() uses tun->align both as skb headroom and when choosing how much packet data to keep linear. OVS can propagate an oversized headroom request from another port to ..."
-  },
-  {
-    "fecha": "2026-09-22",
-    "cve": "CVE-2026-80844",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfrm: ah6: validate routing header segments_left AH6 rearranges routing-header addresses before computing or verifying the ICV. ipv6_rearrange_rthdr() assumes that segments_left is not larger than the number ..."
   }
 ]
