@@ -6,18 +6,8 @@
   },
   {
     "fecha": "2026-09-22",
-    "cve": "CVE-2025-25249",
-    "descripcion": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 ..."
-  },
-  {
-    "fecha": "2026-09-22",
     "cve": "CVE-2026-53266",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: netfilter: bridge: make ebt_snat ARP rewrite writable The ebtables SNAT target keeps the Ethernet source address rewrite behind skb_ensure_writable(skb, 0). This is intentional: at the bridge ebtables hooks ..."
-  },
-  {
-    "fecha": "2026-09-22",
-    "cve": "CVE-2026-85880",
-    "descripcion": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally."
   },
   {
     "fecha": "2026-09-22",
@@ -31,13 +21,23 @@
   },
   {
     "fecha": "2026-09-22",
+    "cve": "CVE-2026-85880",
+    "descripcion": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally."
+  },
+  {
+    "fecha": "2026-09-22",
     "cve": "CVE-2026-43786",
     "descripcion": "This issue was addressed with additional entitlement checks. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. An app may be able to gain root privileges."
   },
   {
     "fecha": "2026-09-22",
-    "cve": "CVE-2026-68121",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: pppoe: reload header pointer after dev_hard_header() pppoe_sendmsg() saves a pointer to the PPPoE header before calling dev_hard_header(). Device header callbacks are allowed to reallocate the skb head, ..."
+    "cve": "CVE-2026-74469",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: sctp: prevent peer transport count overflow sctp_assoc_add_peer() increments the association's 16-bit transport_count for every new unique peer. Adding the 65,536th transport wraps the count to zero. SCTP ..."
+  },
+  {
+    "fecha": "2026-09-22",
+    "cve": "CVE-2025-25249",
+    "descripcion": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 ..."
   },
   {
     "fecha": "2026-09-22",
