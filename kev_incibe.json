@@ -1,13 +1,33 @@
 [
   {
     "fecha": "2026-09-24",
+    "cve": "CVE-2026-97311",
+    "descripcion": "A flaw was found in the Admin REST API of Keycloak, an identity and access management solution. The endpoints used to retrieve groups associated with a specific role do not properly check for individual group visibility permissions. This allows a delegated administrator with basic search privileges to view detailed information about all groups assigned to a role, bypassing intended security restrictions that should limit their view to specific groups. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-19532",
+    "descripcion": "Improper Limitation of a Pathname to a Restricted Directory (&#39;Path Traversal&#39;) vulnerability in HAVELSAN Inc. Liman MYS allows Path Traversal. This issue affects Liman MYS: from 2.3.2 before 2.3.4-1124. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-79680",
+    "descripcion": "Authentication bypass vulnerability in the password authentication mechanism of the Qt VNC Server module. An attacker using a specially modified VNC client that violates the RFB protocol can bypass Qt VNC Server&#39;s password authentication and gain unauthorized remote access to the shared application, compromising the confidentiality and integrity of the session. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:D/RE:L/U:X Gravedad 4.0 4.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-4638",
+    "descripcion": "PRTG Network Monitor before version 26.2.120.1449 ships a demo EXE/Script sensor that multiplies two integer parameters using cscript.exe. If a non-numeric value is passed instead, cscript.exe raises a &#39;Type mismatch&#39; runtime error that includes the offending parameter value in plaintext. PRTG provides a documented placeholder variable, %windowspassword, which resolves to the configured Windows/domain password used by PRTG and can be passed as a sensor parameter. Any PRTG user who is not restricted to read-only access and is permitted to create sensors (the default for non-read-only users) can pass %windowspassword as an argument to the demo VBScript sensor, triggering the type-mismatch error and causing PRTG to display the plaintext password in the sensor&#39;s error output. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-24",
     "cve": "CVE-2026-92905",
     "descripcion": "ZohoCorp ManageEngine EventLog Analyzer and Log360 before build 13071 were vulnerable to a DoS vulnerability that allowed attackers to crash the log collector using malformed syslog packets. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-24",
     "cve": "CVE-2026-57590",
-    "descripcion": "A missing authorization vulnerability exists in the Task Group APIs of Apache DolphinScheduler. The affected APIs do not properly verify whether the authenticated user has permission to access the project associated with the target Task Group. This issue affects Apache DolphinScheduler: before 3.4.3. Users are recommended to upgrade to version 3.4.3, which fixes the issue. 24/09/2026 24/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "descripcion": "A missing authorization vulnerability exists in the Task Group APIs of Apache DolphinScheduler. The affected APIs do not properly verify whether the authenticated user has permission to access the project associated with the target Task Group. This issue affects Apache DolphinScheduler: before 3.4.3. Users are recommended to upgrade to version 3.4.3, which fixes the issue. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-24",
@@ -28,25 +48,5 @@
     "fecha": "2026-09-24",
     "cve": "CVE-2026-12227",
     "descripcion": "The Visual Composer Website Builder plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 45.16.0 via the `vcv-template` parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-97185",
-    "descripcion": "A flaw was found in GIMP. When processing a specially crafted GIMPressionist preset file, the plug-in does not properly validate vector indices before writing into fixed-size arrays. This can lead to an out-of-bounds write, corrupting memory. An attacker could exploit this by convincing a user to load a malicious preset file, potentially causing a crash or enabling arbitrary code execution. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-85682",
-    "descripcion": "The YOP Poll plugin for WordPress is vulnerable to Origin Validation Error in all versions up to, and including, 7.0.10. This is due to the plugin transmitting a wp_rest nonce to window.opener via postMessage() with a wildcard targetOrigin. This makes it possible for unauthenticated attackers to steal a REST nonce scoped to a logged-in Administrator and use it to change the Administrator&#39;s email address and password, resulting in full account takeover. The Administrator must open an attacker-controlled page in order to exploit this vulnerability. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-78313",
-    "descripcion": "Improper Access Control in DIAEnergie. This issue affects DIAEnergie: before 1.11.00.022. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-78312",
-    "descripcion": "Path Traversal in DIAEnergie. This issue affects DIAEnergie: before 1.11.00.022. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
