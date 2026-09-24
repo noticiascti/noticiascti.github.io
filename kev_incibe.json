@@ -1,8 +1,43 @@
 [
   {
     "fecha": "2026-09-24",
+    "cve": "CVE-2026-97359",
+    "descripcion": "HFS2 version 2.4.0 and earlier contains a template injection vulnerability in the multipart upload handler that allows unauthenticated attackers to achieve remote code execution by embedding malicious template syntax in a filename. Attackers can craft a filename containing a closing template quoting sequence followed by an exec macro, which bypasses the authorization check in the dispatcher to execute arbitrary commands on the underlying host system. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-97061",
+    "descripcion": "Black Candy through 3.2.1 fails to scope playlist search queries to the authenticated session user, allowing any authenticated user to enumerate all playlists on the instance. Attackers can query the SearchController or Search::PlaylistsController endpoints with blank or targeted search parameters to retrieve playlist names belonging to other users without authorization. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-97059",
+    "descripcion": "DCMTK through 3.7.0 contains a heap over-read vulnerability in ConcatenationLoader that copies pixel data frames without validating the PixelData buffer length against the declared NumberOfFrames. Attackers can craft malicious DICOM instances declaring more frames than the buffer contains to trigger heap over-reads that crash the application or leak adjacent heap memory. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-95519",
+    "descripcion": "A flaw was found in rpm. An attacker can supply a crafted manifest file that, when processed by a user or automation using `rpm -q -p` or similar manifest-processing flows, leads to arbitrary code execution. This occurs because manifest entries are unexpectedly macro-expanded before being opened, allowing embedded shell commands to run with the privileges of the `rpm` process. Successful exploitation can lead to a full compromise of confidentiality, integrity, and availability for the affected account. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-88360",
+    "descripcion": "libvips 8.19.0 contains a memory access vulnerability when processing little-endian PFM images. If the PFM text header length is not a multiple of four bytes, the mmap-based loader can expose pixel data at an address that is not properly aligned for float access. vips_avg_scan() subsequently dereferences the buffer through a float pointer, resulting in undefined behavior and process termination on strict-alignment architectures or UBSan-instrumented builds, leading to denial of service. 24/09/2026 24/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-88359",
+    "descripcion": "libfyaml 0.9.6 contains a stack exhaustion vulnerability in fy_atom_iter_format(). When processing a specially crafted YAML document containing a very large literal or folded block scalar, the function repeatedly grows an internal buffer using alloca() inside a loop. The allocated stack memory is not released until the function returns, causing cumulative stack growth that can exceed the process stack limit and result in SIGSEGV and denial of service. 24/09/2026 24/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-24",
     "cve": "CVE-2026-97311",
     "descripcion": "A flaw was found in the Admin REST API of Keycloak, an identity and access management solution. The endpoints used to retrieve groups associated with a specific role do not properly check for individual group visibility permissions. This allows a delegated administrator with basic search privileges to view detailed information about all groups assigned to a role, bypassing intended security restrictions that should limit their view to specific groups. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-24",
+    "cve": "CVE-2026-7169",
+    "descripcion": "a vulnerability involving an unchecked search path element in Evope Collector, versions prior to 1.1.7.13, allows a local attacker without privileges to load a malicious DLL by placing a ‘wtsapi32.dll’ file in the ‘C:\\ProgramData\\Evope\\’ directory. The ‘Evope.Service.exe’ component, which runs with ‘NT AUTHORITY\\SYSTEM’ privileges, loads this DLL without properly verifying its integrity or origin. Successful exploitation could allow code execution with SYSTEM privileges and result in local privilege escalation. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-24",
@@ -11,42 +46,7 @@
   },
   {
     "fecha": "2026-09-24",
-    "cve": "CVE-2026-79680",
-    "descripcion": "Authentication bypass vulnerability in the password authentication mechanism of the Qt VNC Server module. An attacker using a specially modified VNC client that violates the RFB protocol can bypass Qt VNC Server&#39;s password authentication and gain unauthorized remote access to the shared application, compromising the confidentiality and integrity of the session. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:D/RE:L/U:X Gravedad 4.0 4.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-4638",
-    "descripcion": "PRTG Network Monitor before version 26.2.120.1449 ships a demo EXE/Script sensor that multiplies two integer parameters using cscript.exe. If a non-numeric value is passed instead, cscript.exe raises a &#39;Type mismatch&#39; runtime error that includes the offending parameter value in plaintext. PRTG provides a documented placeholder variable, %windowspassword, which resolves to the configured Windows/domain password used by PRTG and can be passed as a sensor parameter. Any PRTG user who is not restricted to read-only access and is permitted to create sensors (the default for non-read-only users) can pass %windowspassword as an argument to the demo VBScript sensor, triggering the type-mismatch error and causing PRTG to display the plaintext password in the sensor&#39;s error output. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-92905",
-    "descripcion": "ZohoCorp ManageEngine EventLog Analyzer and Log360 before build 13071 were vulnerable to a DoS vulnerability that allowed attackers to crash the log collector using malformed syslog packets. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-57590",
-    "descripcion": "A missing authorization vulnerability exists in the Task Group APIs of Apache DolphinScheduler. The affected APIs do not properly verify whether the authenticated user has permission to access the project associated with the target Task Group. This issue affects Apache DolphinScheduler: before 3.4.3. Users are recommended to upgrade to version 3.4.3, which fixes the issue. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-4637",
-    "descripcion": "Paessler PRTG Network Monitor before version 26.2.120.1449 is affected by a reflected Cross-Site Scripting (XSS) vulnerability. When a request is made for a non-existent resource ending in \\&#34;.htm\\&#34;, the web interface returns an HTTP 403 \\&#34;Forbidden Path\\&#34; error page that echoes the requested URL path into the HTML response body without proper output encoding or sanitization. An unauthenticated, remote attacker can craft a URL containing an HTML/JavaScript payload in the path (e.g. https:////welcome.htm) and, once a victim with an active PRTG session opens the crafted link, execute arbitrary JavaScript in the security context of the PRTG web interface. Because the PRTG session cookie is not protected with the HttpOnly attribute, successful exploitation allows the attacker to read and exfiltrate the victim&#39;s session cookie, potentially leading to session hijacking. 24/09/2026 24/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-18335",
-    "descripcion": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Blind Server-Side Request Forgery in all versions up to, and including, 6.2.0 via the &#39;kirki_data&#39; Parameter. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-15731",
-    "descripcion": "The WP Multilang – Translation and Multilingual Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the post content in all versions up to, and including, 2.4.31 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-24",
-    "cve": "CVE-2026-12227",
-    "descripcion": "The Visual Composer Website Builder plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 45.16.0 via the `vcv-template` parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-16302",
+    "descripcion": "The Spectra Legacy – Gutenberg Blocks plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.20.0 via the editor_assets function, which exposes the uag_insta_linked_accounts option through the uagb_blocks_info object without a capability check. This makes it possible for authenticated attackers, with Contributor-level access and above, to extract sensitive data including raw Instagram Graph API access tokens configured by an administrator. Exploitation requires the Spectra Pro plugin to be active with a linked Instagram account. 24/09/2026 24/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
