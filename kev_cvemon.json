@@ -16,18 +16,8 @@
   },
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-87899",
-    "descripcion": "Execution with unnecessary privileges in cPanel allows remote authenticated users to execute arbitrary code with root privileges."
-  },
-  {
-    "fecha": "2026-09-25",
     "cve": "CVE-2026-43503",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: propagate shared-frag marker through frag-transfer helpers Two frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail to propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags ..."
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-64600",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfs: resample the data fork mapping after cycling ILOCK xfs_reflink_fill_{cow_hole,delalloc} are both presented with an inode, a data fork mapping, and a cow fork mapping. Unfortunately, these two helpers ..."
   },
   {
     "fecha": "2026-09-25",
@@ -41,12 +31,22 @@
   },
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-94127",
-    "descripcion": "When a BIG-IP APM access policy and an OAuth profile are configured on a virtual server, specific malicious traffic can lead to remote code execution (RCE). This vulnerability is only present when BIG-IP APM is configured as an OAuth Authorization Server. Deployments using APM ..."
+    "cve": "CVE-2026-64600",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfs: resample the data fork mapping after cycling ILOCK xfs_reflink_fill_{cow_hole,delalloc} are both presented with an inode, a data fork mapping, and a cow fork mapping. Unfortunately, these two helpers ..."
   },
   {
     "fecha": "2026-09-25",
     "cve": "CVE-2026-67279",
     "descripcion": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling ..."
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-87899",
+    "descripcion": "Execution with unnecessary privileges in cPanel allows remote authenticated users to execute arbitrary code with root privileges."
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-94127",
+    "descripcion": "When a BIG-IP APM access policy and an OAuth profile are configured on a virtual server, specific malicious traffic can lead to remote code execution (RCE). This vulnerability is only present when BIG-IP APM is configured as an OAuth Authorization Server. Deployments using APM ..."
   }
 ]
