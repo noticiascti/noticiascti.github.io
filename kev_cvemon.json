@@ -1,28 +1,13 @@
 [
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-93577",
-    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to an integer ..."
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-89078",
-    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to a double free ..."
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-84502",
-    "descripcion": "A flaw was found in Red Hat Ansible Automation Platform's automation- controller. The Project scm_url field is not validated against values that begin with a dash and is stored and passed verbatim to the git SCM module. Because the module runs git ls-remote with the URL as a ..."
+    "cve": "CVE-2025-39964",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: af_alg - Disallow concurrent writes in af_alg_sendmsg Issuing two writes to the same af_alg socket is bogus as the data will be interleaved in an unpredictable fashion. Furthermore, concurrent writes ..."
   },
   {
     "fecha": "2026-09-25",
     "cve": "CVE-2026-43503",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: propagate shared-frag marker through frag-transfer helpers Two frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail to propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags ..."
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2025-39964",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: af_alg - Disallow concurrent writes in af_alg_sendmsg Issuing two writes to the same af_alg socket is bogus as the data will be interleaved in an unpredictable fashion. Furthermore, concurrent writes ..."
   },
   {
     "fecha": "2026-09-25",
@@ -36,13 +21,28 @@
   },
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-64600",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: xfs: resample the data fork mapping after cycling ILOCK xfs_reflink_fill_{cow_hole,delalloc} are both presented with an inode, a data fork mapping, and a cow fork mapping. Unfortunately, these two helpers ..."
+    "cve": "CVE-2026-91769",
+    "descripcion": "PHP's OpenSSL stream peer verification checks the certificate's subjectAltName entries first and, whenever no entry matches, falls back to the Common Name. RFC 6125 requires the CN to be ignored once the certificate presents any service identity, so a certificate carrying a ..."
   },
   {
     "fecha": "2026-09-25",
     "cve": "CVE-2025-1218",
+    "descripcion": "The mysqlnd wire protocol parser reads fields out of server packets before checking that the packet still holds enough bytes for them. A malicious or compromised MySQL server can send a truncated packet and make the client read past the end of the packet buffer, which is ..."
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-91768",
     "descripcion": "Currently trending CVE - Hype Score: 11"
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-93577",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to an integer ..."
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-89078",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to a double free ..."
   },
   {
     "fecha": "2026-09-25",
