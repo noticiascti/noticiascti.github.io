@@ -1,11 +1,6 @@
 [
   {
     "fecha": "2026-09-26",
-    "cve": "CVE-2025-1218",
-    "descripcion": "The mysqlnd wire protocol parser reads fields out of server packets before checking that the packet still holds enough bytes for them. A malicious or compromised MySQL server can send a truncated packet and make the client read past the end of the packet buffer, which is ..."
-  },
-  {
-    "fecha": "2026-09-26",
     "cve": "CVE-2026-91768",
     "descripcion": "The IPv6 branch of the FastCGI client access check compares only the first 12 bytes of a 16-byte IPv6 address, so listen.allowed_clients matches on a /96 prefix instead of the exact address. An attacker who can source an address sharing the first 96 bits with an allowed one ..."
   },
@@ -13,6 +8,11 @@
     "fecha": "2026-09-26",
     "cve": "CVE-2026-91769",
     "descripcion": "PHP's OpenSSL stream peer verification checks the certificate's subjectAltName entries first and, whenever no entry matches, falls back to the Common Name. RFC 6125 requires the CN to be ignored once the certificate presents any service identity, so a certificate carrying a ..."
+  },
+  {
+    "fecha": "2026-09-26",
+    "cve": "CVE-2025-1218",
+    "descripcion": "The mysqlnd wire protocol parser reads fields out of server packets before checking that the packet still holds enough bytes for them. A malicious or compromised MySQL server can send a truncated packet and make the client read past the end of the packet buffer, which is ..."
   },
   {
     "fecha": "2026-09-26",

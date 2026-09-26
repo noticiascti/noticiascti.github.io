@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-45238",
+    "cve": "CVE-2026-96795",
+    "descripcion": "Horilla is an HR and CRM software. Prior to 2.0.0, HorillaListView.export_data in horilla_views/generic/cbv/views.py accepts an authenticated user&#39;s columns POST parameter, takes field_tuple[1], interpolates it into dynamic_fn_str as Python source, and passes the generated function definition to exec(). A crafted string that remains valid under ast.literal_eval can inject Python syntax into a default argument evaluated during function definition, allowing arbitrary operating-system commands to execute with the application process privileges, including root privileges in the shipped Docker image. This issue is fixed in version 2.0.0. 26/09/2026 26/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-86066",
+    "descripcion": "Horilla is an HR and CRM software. Prior to 2.0.0, approve_validate_attendance_request at /attendance/approve-validate-attendance-request/ changes attendance_validated, is_validate_request_approved, approved_by, and related pending-request state through an HTTP GET before calling attendance.save(), so Django does not require CSRF validation for the action. An unauthenticated attacker can cause a logged-in manager with attendance.change_attendance to make a top-level request that carries the manager&#39;s SameSite=Lax session cookie, silently approving attendance with the victim&#39;s privileges and attributing the approval to the victim in the audit trail. This issue is fixed in version 2.0.0. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-57449",
+    "descripcion": "Actual is a local-first personal finance tool. Prior to 26.7.0, Actual Sync Server&#39;s CORS proxy is intended to let authenticated users fetch resources only from repositories listed in the official plugin allowlist. When `ACTUAL_GITHUB_TOKEN` is configured, the proxy automatically attaches the server&#39;s GitHub token to GitHub requests. The GitHub API allowlist check uses a raw `startsWith()` prefix test for `/repos/{owner}/{repo}` without requiring a path boundary after the repository name. If an allowlisted public plugin repository is `https://github.com/acme/plugin`, the proxy also accepts GitHub API URLs. Those URLs are outside the allowlisted repository but still pass because their API path starts with `/repos/acme/plugin`. The proxy then forwards the request with the server&#39;s `ACTUAL_GITHUB_TOKEN`, allowing any authenticated Actual user to read private GitHub resources reachable by that token. Version 26.7.0 fixes the issue. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-9655",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 26/09/2026 26/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-45237",
+    "cve": "CVE-2026-9652",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 26/09/2026 26/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-45236",
+    "cve": "CVE-2026-92842",
+    "descripcion": "The convert.base64-encode, convert.quoted-printable-encode and convert.quoted-printable-decode stream filters accept a line-break-chars option whose length is tracked separately from the string itself. The filter constructors duplicate the value with pestrdup(), which stops at the first NUL byte, while keeping the original length. When the filter later emits a line break it copies the recorded length out of the truncated allocation, reading past its end and placing adjacent heap bytes into the filter output. 26/09/2026 26/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-91768",
+    "descripcion": "The IPv6 branch of the FastCGI client access check compares only the first 12 bytes of a 16-byte IPv6 address, so listen.allowed_clients matches on a /96 prefix instead of the exact address. An attacker who can source an address sharing the first 96 bits with an allowed one passes the check and reaches the FastCGI endpoint. 26/09/2026 26/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-88003",
+    "descripcion": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2, InvoicePlane fails to revoke administrative privileges after a role downgrade because Admin_Controller trusts the user_type snapshot stored in an existing session instead of revalidating ip_users.user_type. When one administrator downgrades another account, the target&#39;s active session continues to authorize administrative requests. The downgraded user can use Users::form() to set user_type back to 1, restoring the database role and making the privilege escalation persistent. This vulnerability is fixed in 1.7.2. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-25",
+    "cve": "CVE-2026-7800",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 26/09/2026 26/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-25",
-    "cve": "CVE-2026-45235",
+    "cve": "CVE-2026-7799",
     "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 26/09/2026 26/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-45234",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 26/09/2026 26/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-100502",
-    "descripcion": "Flame through 2.4.0 contains an insufficient session expiration vulnerability in the login endpoint that allows attackers with former admin access to obtain tokens with arbitrary lifespans by supplying unvalidated duration parameters. Attackers can mint near-permanent administrator tokens that survive password changes, retaining full control of the dashboard since tokens are verified only against a static JWT secret that is never rotated. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:N Gravedad 4.0 5.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-100501",
-    "descripcion": "Flame through 2.4.0 contains an improper restriction of excessive authentication attempts vulnerability in the POST /api/auth login endpoint that allows unauthenticated attackers to brute-force the admin password. Attackers can submit unlimited password guesses without rate limiting, attempt counters, lockouts, or delays to gain full administrator access and modify application configuration. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-100419",
-    "descripcion": "gitoxide gix-fs before 0.23.0 contains a path validation bypass vulnerability in the worktree checkout mechanism that allows attackers to escape the worktree directory via symlink manipulation. During forced checkout with overwrite_existing enabled, attackers can craft malicious repository trees where symlink entries replace validated directories, causing subsequent files to be written outside the worktree through the symlink for code execution or file manipulation. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-100418",
-    "descripcion": "Flame through 2.4.0 contains an information exposure vulnerability in the unauthenticated GET /api/config endpoint that returns the entire configuration object without field redaction. Attackers can retrieve the stored weather API key and internal operational settings by sending a single unauthenticated request to consume provider quota or access sensitive configuration data. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-25",
-    "cve": "CVE-2026-100383",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (XSS or &#39;Cross-site Scripting&#39;) vulnerability in Wikimedia Foundation Mediawiki - WikiLambda Extension allows Cross-Site Scripting (XSS). This issue affects Mediawiki - WikiLambda Extension: 1.47.0-alpha. The issue has been remediated on the `master` branch. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
