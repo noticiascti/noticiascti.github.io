@@ -1,51 +1,51 @@
 [
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2025-39964",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: af_alg - Disallow concurrent writes in af_alg_sendmsg Issuing two writes to the same af_alg socket is bogus as the data will be interleaved in an unpredictable fashion. Furthermore, concurrent writes ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-91768",
     "descripcion": "The IPv6 branch of the FastCGI client access check compares only the first 12 bytes of a 16-byte IPv6 address, so listen.allowed_clients matches on a /96 prefix instead of the exact address. An attacker who can source an address sharing the first 96 bits with an allowed one ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-91769",
     "descripcion": "PHP's OpenSSL stream peer verification checks the certificate's subjectAltName entries first and, whenever no entry matches, falls back to the Common Name. RFC 6125 requires the CN to be ignored once the certificate presents any service identity, so a certificate carrying a ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2025-1218",
     "descripcion": "The mysqlnd wire protocol parser reads fields out of server packets before checking that the packet still holds enough bytes for them. A malicious or compromised MySQL server can send a truncated packet and make the client read past the end of the packet buffer, which is ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-43503",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: propagate shared-frag marker through frag-transfer helpers Two frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail to propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-8933",
     "descripcion": "A local privilege escalation vulnerability exists in snap-confine, a set-capabilities core component used internally by Canonical snapd to construct the secure execution environment for snap applications. This vulnerability uniquely affects versions of snap-confine configured ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-23268",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: apparmor: fix unprivileged local user can do privileged policy management An unprivileged local user can load, replace, and remove profiles by opening the apparmorfs interfaces, via a confused deputy attack, ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-93577",
     "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to an integer ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-89078",
     "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to a double free ..."
   },
   {
-    "fecha": "2026-09-25",
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-87899",
     "descripcion": "Execution with unnecessary privileges in cPanel allows remote authenticated users to execute arbitrary code with root privileges."
   }
