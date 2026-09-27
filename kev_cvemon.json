@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-09-27",
+    "cve": "CVE-2026-88773",
+    "descripcion": "Inconsistent interpretation of HTTP requests ('HTTP Request/Response smuggling') vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1-37.279 and NDcPP; Gateway: ..."
+  },
+  {
+    "fecha": "2026-09-27",
     "cve": "CVE-2026-65660",
     "descripcion": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-09-27",
     "cve": "CVE-2026-91769",
     "descripcion": "PHP's OpenSSL stream peer verification checks the certificate's subjectAltName entries first and, whenever no entry matches, falls back to the Common Name. RFC 6125 requires the CN to be ignored once the certificate presents any service identity, so a certificate carrying a ..."
-  },
-  {
-    "fecha": "2026-09-27",
-    "cve": "CVE-2025-39964",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: crypto: af_alg - Disallow concurrent writes in af_alg_sendmsg Issuing two writes to the same af_alg socket is bogus as the data will be interleaved in an unpredictable fashion. Furthermore, concurrent writes ..."
   }
 ]
