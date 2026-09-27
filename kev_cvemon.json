@@ -16,13 +16,18 @@
   },
   {
     "fecha": "2026-09-27",
+    "cve": "CVE-2026-91769",
+    "descripcion": "PHP's OpenSSL stream peer verification checks the certificate's subjectAltName entries first and, whenever no entry matches, falls back to the Common Name. RFC 6125 requires the CN to be ignored once the certificate presents any service identity, so a certificate carrying a ..."
+  },
+  {
+    "fecha": "2026-09-27",
     "cve": "CVE-2025-1218",
     "descripcion": "The mysqlnd wire protocol parser reads fields out of server packets before checking that the packet still holds enough bytes for them. A malicious or compromised MySQL server can send a truncated packet and make the client read past the end of the packet buffer, which is ..."
   },
   {
     "fecha": "2026-09-27",
-    "cve": "CVE-2026-91769",
-    "descripcion": "PHP's OpenSSL stream peer verification checks the certificate's subjectAltName entries first and, whenever no entry matches, falls back to the Common Name. RFC 6125 requires the CN to be ignored once the certificate presents any service identity, so a certificate carrying a ..."
+    "cve": "CVE-2025-13032",
+    "descripcion": "Double fetch in sandbox kernel driver in Avast/AVG Antivirus <25.3 on windows allows local attacker to escalate privelages via pool overflow."
   },
   {
     "fecha": "2026-09-27",
@@ -31,18 +36,13 @@
   },
   {
     "fecha": "2026-09-27",
-    "cve": "CVE-2026-84719",
-    "descripcion": "A flaw was found in the Ansible Automation Platform automation-controller. When a WorkflowJobTemplate is copied, the deep-copy permission sanitizer validates only the inventory, unified_job_template, and credentials of each cloned node and fails to check the instance_groups (and ..."
-  },
-  {
-    "fecha": "2026-09-27",
     "cve": "CVE-2026-84502",
     "descripcion": "A flaw was found in Red Hat Ansible Automation Platform's automation- controller. The Project scm_url field is not validated against values that begin with a dash and is stored and passed verbatim to the git SCM module. Because the module runs git ls-remote with the URL as a ..."
   },
   {
     "fecha": "2026-09-27",
-    "cve": "CVE-2026-71362",
-    "descripcion": "Adobe Commerce is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could leverage this vulnerability to gain elevated access to sensitive resources. Exploitation of this issue does not require user interaction."
+    "cve": "CVE-2026-84719",
+    "descripcion": "A flaw was found in the Ansible Automation Platform automation-controller. When a WorkflowJobTemplate is copied, the deep-copy permission sanitizer validates only the inventory, unified_job_template, and credentials of each cloned node and fails to check the instance_groups (and ..."
   },
   {
     "fecha": "2026-09-27",
