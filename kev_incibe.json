@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-09-26",
+    "cve": "CVE-2026-82901",
+    "descripcion": "The Ultra Addons for Contact Form 7 plugin for WordPress is vulnerable to Arbitrary File Upload due to insufficient file type validation in the &#39;uacf7_wpcf7_mail_components&#39; function in all versions up to, and including, 3.5.50. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site&#39;s server which may make remote code execution possible. Note: This is only exploitable when the plugin&#39;s PDF Generator module is enabled, which is disabled by default. 26/09/2026 26/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-09-26",
+    "cve": "CVE-2026-85984",
+    "descripcion": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass via the mo_wp_login_intent parameter in all versions up to, and including, 5.5.5. This is due to a missing password-intent guard in the skip_pass_fallback-enabled configuration branch of the mo_by_pass_login() function, which treats administrator role membership alone as sufficient authentication whenever the unauthenticated, unverified POST parameter mo_wp_login_intent is submitted with the value otp, causing mo_get_user() to skip wp_authenticate_username_password() and resolve a WP_User purely from a username lookup. This makes it possible for unauthenticated attackers to log in as any existing administrator account by supplying only a known username and an empty password alongside mo_wp_login_intent=otp, with no password or OTP verification required. Exploitation is conditional on a site administrator having simultaneously enabled the following plugin options: WP Login OTP, Login with Only OTP, Allow Users to Login with Username and Password, and Admin OTP Bypass. 26/09/2026 26/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-09-26",
+    "cve": "CVE-2026-77203",
+    "descripcion": "The Groups – Memberships and Access Control plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.6.0. This is due to the groups_join() function deriving group-join eligibility from the ambient post&#39;s author capabilities via the global $post->post_author rather than from the currently authenticated user&#39;s own capabilities, while simultaneously minting and returning a valid groups-join-data hash and WordPress nonce for the caller in the same response — eliminating all authorization barriers to self-enrollment. This makes it possible for authenticated attackers, with Subscriber-level access and above, to enroll themselves into any group including privileged groups carrying the groups_admin_groups capability, and to subsequently create and join a group containing every registered WordPress capability, effectively escalating their privileges to Administrator. Exploitation requires the attacker to supply an Administrator-authored post ID via the post_ID parameter of the authenticated wp_ajax_parse_media_shortcode handler in order to establish the privileged ambient post context used by the flawed authorization check. 26/09/2026 26/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-09-26",
     "cve": "CVE-2026-97163",
     "descripcion": "Joomla Extension - lomart.fr - Unauthenticated remote code installation in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 10.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-09-26",
     "cve": "CVE-2026-94130",
     "descripcion": "Joomla Extension - joomlaboat.com - Unauthenticated SQL injection in YouTube Gallery extension 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-26",
-    "cve": "CVE-2026-100720",
-    "descripcion": "Froxlor 2.0.0 through 2.3.10 is vulnerable to stored cross-site scripting. When a customer (the lowest-privileged authenticated role) uploads an SSL certificate for one of their own domains, the Certificates API add()/update() methods parse it with openssl_x509_parse() and store the issuer organization (issuer[&#39;O&#39;]) value verbatim without sanitization. Froxlor&#39;s table-listing renderer then emits scalar cells through Twig&#39;s `raw` filter, disabling HTML auto-escaping, so when an administrator or reseller opens Domains > SSL certificates the attacker-supplied issuer value executes as script in the privileged user&#39;s session. This crosses a privilege boundary from customer to admin and can result in full administrator account takeover; because a Froxlor admin controls webserver, DNS, and PHP configuration applied by a cron job running as root, the issue can be further escalated to command execution as root on the managed server. The issue is fixed in Froxlor 2.3.12. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-09-26",
-    "cve": "CVE-2026-100719",
-    "descripcion": "Froxlor versions before 2.3.12 contain a credential disclosure vulnerability in the DirProtections.listing API command that returns htpasswd password hashes. Authenticated API users can retrieve bcrypt password hashes for protected-directory users, enabling offline cracking attempts and exposure of reused credentials. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-09-26",
-    "cve": "CVE-2026-100718",
-    "descripcion": "Froxlor through 2.3.10 does not enforce the mail.allow_external_domains policy in the EmailSender.add API command. When an administrator has enabled the allowed-sender feature but disabled external allowed-sender domains (mail.enable_allow_sender = 1, mail.allow_external_domains = 0), an authenticated customer with API access can still use EmailSender.add to register an arbitrary external sender address for their mailbox, which is stored despite the policy. This creates a bypass between the UI/administrator configuration and the API, and — where the generated mail configuration consumes the allowed-sender table — allows a customer to authorize sender identities outside their hosted domains, facilitating sender spoofing. Fixed in 2.3.12. 26/09/2026 26/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
