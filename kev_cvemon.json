@@ -1,23 +1,23 @@
 [
   {
     "fecha": "2026-09-27",
-    "cve": "CVE-2026-67279",
-    "descripcion": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling ..."
-  },
-  {
-    "fecha": "2026-09-27",
     "cve": "CVE-2026-86060",
     "descripcion": "RouterOS contains an argument-handling flaw in the SSH login path involving usernames that begin with a prohibited character, allowing for the trusted RouterOS policy mask to be changed, leading to privilege escalation. Exploitation requires an unauthenticated SSH session to ..."
   },
   {
     "fecha": "2026-09-27",
-    "cve": "CVE-2026-91768",
-    "descripcion": "The IPv6 branch of the FastCGI client access check compares only the first 12 bytes of a 16-byte IPv6 address, so listen.allowed_clients matches on a /96 prefix instead of the exact address. An attacker who can source an address sharing the first 96 bits with an allowed one ..."
+    "cve": "CVE-2026-67279",
+    "descripcion": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling ..."
   },
   {
     "fecha": "2026-09-27",
     "cve": "CVE-2025-1218",
     "descripcion": "The mysqlnd wire protocol parser reads fields out of server packets before checking that the packet still holds enough bytes for them. A malicious or compromised MySQL server can send a truncated packet and make the client read past the end of the packet buffer, which is ..."
+  },
+  {
+    "fecha": "2026-09-27",
+    "cve": "CVE-2026-91768",
+    "descripcion": "The IPv6 branch of the FastCGI client access check compares only the first 12 bytes of a 16-byte IPv6 address, so listen.allowed_clients matches on a /96 prefix instead of the exact address. An attacker who can source an address sharing the first 96 bits with an allowed one ..."
   },
   {
     "fecha": "2026-09-27",
