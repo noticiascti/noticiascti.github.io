@@ -16,16 +16,6 @@
   },
   {
     "fecha": "2026-09-28",
-    "cve": "CVE-2026-67279",
-    "descripcion": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling ..."
-  },
-  {
-    "fecha": "2026-09-28",
-    "cve": "CVE-2026-86060",
-    "descripcion": "RouterOS contains an argument-handling flaw in the SSH login path involving usernames that begin with a prohibited character, allowing for the trusted RouterOS policy mask to be changed, leading to privilege escalation. Exploitation requires an unauthenticated SSH session to ..."
-  },
-  {
-    "fecha": "2026-09-28",
     "cve": "CVE-2026-88773",
     "descripcion": "Inconsistent interpretation of HTTP requests ('HTTP Request/Response smuggling') vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1-37.279 and NDcPP; Gateway: ..."
   },
@@ -36,17 +26,27 @@
   },
   {
     "fecha": "2026-09-28",
-    "cve": "CVE-2026-91768",
-    "descripcion": "The IPv6 branch of the FastCGI client access check compares only the first 12 bytes of a 16-byte IPv6 address, so listen.allowed_clients matches on a /96 prefix instead of the exact address. An attacker who can source an address sharing the first 96 bits with an allowed one ..."
+    "cve": "CVE-2026-88775",
+    "descripcion": "Memory overflow vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading Memory ..."
   },
   {
     "fecha": "2026-09-28",
-    "cve": "CVE-2026-91769",
-    "descripcion": "PHP's OpenSSL stream peer verification checks the certificate's subjectAltName entries first and, whenever no entry matches, falls back to the Common Name. RFC 6125 requires the CN to be ignored once the certificate presents any service identity, so a certificate carrying a ..."
+    "cve": "CVE-2026-88774",
+    "descripcion": "Vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to a feature policy bypass ..."
   },
   {
     "fecha": "2026-09-28",
-    "cve": "CVE-2025-1218",
-    "descripcion": "The mysqlnd wire protocol parser reads fields out of server packets before checking that the packet still holds enough bytes for them. A malicious or compromised MySQL server can send a truncated packet and make the client read past the end of the packet buffer, which is ..."
+    "cve": "CVE-2026-65660",
+    "descripcion": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
+  },
+  {
+    "fecha": "2026-09-28",
+    "cve": "CVE-2026-86060",
+    "descripcion": "RouterOS contains an argument-handling flaw in the SSH login path involving usernames that begin with a prohibited character, allowing for the trusted RouterOS policy mask to be changed, leading to privilege escalation. Exploitation requires an unauthenticated SSH session to ..."
+  },
+  {
+    "fecha": "2026-09-28",
+    "cve": "CVE-2026-67279",
+    "descripcion": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling ..."
   }
 ]
