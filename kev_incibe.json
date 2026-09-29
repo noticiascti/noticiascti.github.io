@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-97711",
-    "descripcion": "Serialize JavaScript serializes JavaScript values to a superset of JSON that includes regular expressions and functions. From 7.1.1 until 7.1.2, function values serialized by serialize-javascript are not fully protected against script-closing tags in attacker-influenced function source because SCRIPT_CLOSE_REGEXP can consume a second closing tag inside one match. When the serialized function is embedded in a script element, the surviving closing tag terminates the element early and causes the remaining output to be parsed as HTML, enabling cross-site scripting in the page origin. Only function values are affected; ordinary data values and options.isJSON output are unaffected. This issue is fixed in version 7.1.2. 29/09/2026 29/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-95385",
+    "descripcion": "Inappropriate implementation in PlatformIntegration in Google Chrome on on Windows prior to 154.0.8037.57 allowed a remote attacker leveraging social engineering to bypass system access restrictions via a crafted HTML page. (Chromium security severity: Low) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-97689",
-    "descripcion": "urllib3 is an HTTP client library for Python. From 1.10.3 until 2.8.0, the HTTPResponse.read_chunked and HTTPResponse.stream methods can allocate unbounded memory because the streaming chunk parser buffers the chunk-size field until newline or EOF without a length bound. The trigger is that a malicious server returns Transfer-Encoding: chunked followed by a very long run of bytes without a newline. The attack mechanism is that a malicious HTTP server sends a very long unterminated chunk-size line. The impact is that unbounded memory allocation can exhaust the client process. This issue is fixed in version 2.8.0. 29/09/2026 29/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-95384",
+    "descripcion": "Race condition in Transactions Platform in Google Chrome prior to 154.0.8037.57 allowed a remote attacker to potentially leak sensitive information via a crafted HTML page. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-97688",
-    "descripcion": "urllib3 is an HTTP client library for Python. From 2.6.2 until 2.8.0, HTTPResponse.stream and HTTPResponse.read_chunked can enter an infinite loop because the Deflate decoder retains trailing bytes as unconsumed input after reaching end-of-stream and repeatedly decodes them without progress. The issue occurs when an untrusted server sends a chunked Deflate response whose decoded body exceeds a positive finite chunk size and whose encoded body has trailing bytes, specifically a response with Transfer-Encoding: chunked and Content-Encoding: deflate, content decoding enabled, and the positive finite amt=N streaming chunk size. The attack mechanism is that a malicious server returns a compressed chunked response with trailing bytes after the Deflate stream. The impact is excessive CPU usage and a request that does not complete, and network read timeouts do not interrupt the loop because no further socket read occurs. This issue is fixed in version 2.8.0. 29/09/2026 29/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-95376",
+    "descripcion": "Externally controlled reference in DevTools in Google Chrome prior to 154.0.8037.57 allowed an adjacent attacker leveraging social engineering to bypass system access restrictions via crafted network traffic. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-97687",
-    "descripcion": "urllib3 is an HTTP client library for Python. From 1.26.0 until 2.8.0, the proxy_ssl_context, proxy_assert_hostname, proxy_assert_fingerprint, ssl_context, cert_reqs, verify_mode, use_forwarding_for_https=True, and CERT_NONE configuration paths fail to remain separated because target-server TLS settings are incorrectly applied to the HTTPS proxy connection. The trigger is that an application uses an HTTPS proxy and configures target-server TLS settings that must remain separate from the proxy TLS handshake, including HTTPS forwarding with target-specific identity or credentials. Applying cert_reqs=CERT_NONE can overwrite proxy_ssl_context.verify_mode in place, and the mutation persists so later connections reusing the same context may connect to the HTTPS proxy without certificate verification. The attack mechanism is that an attacker intercepts and impersonates the HTTPS proxy after the effective proxy policy accepts the attacker&#39;s certificate. The impact is that the attacker can observe or modify forwarded traffic or receive a target TLS client certificate, while CONNECT tunneling still preserves the separate end-to-end target TLS connection. This issue is fixed in version 2.8.0. 29/09/2026 29/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-95375",
+    "descripcion": "Incorrect authorization in BrowserTag in Google Chrome prior to 154.0.8037.57 allowed a remote attacker who had compromised the renderer process to bypass web origin policy via a crafted HTML page. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-93332",
-    "descripcion": "Improper access control in the partial connection API in Devolutions Server 2026.3.5.0 and earlier allows an authenticated low-privileged user to read, create, modify, and delete System Vault entries via a crafted API request. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-95374",
+    "descripcion": "Incorrect authorization in Network in Google Chrome prior to 154.0.8037.57 allowed a remote attacker to bypass web origin policy via a crafted HTML page. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-93330",
-    "descripcion": "Improper rule enforcement in the PAM Active Directory provider in Devolutions Server 2026.3.5 allows a user with PAM edit permissions to bypass the Devolutions Gateway host ruleset. 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-95370",
+    "descripcion": "Inappropriate implementation in NFC in Google Chrome prior to 154.0.8037.57 allowed a remote attacker to bypass system access restrictions via a crafted HTML page. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-92371",
-    "descripcion": "TeamViewer Full Client and Host for Linux prior version 15.82 contains an improper path validation vulnerability in the Cloud Session Recording (CSR) functionality. By exploiting a race condition during path validation and subsequent file access, a local authenticated attacker may cause privileged file operations in unintended locations on the affected system. 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-95366",
+    "descripcion": "Use of released resource in Core in Google Chrome prior to 154.0.8037.57 allowed a remote attacker who had compromised the renderer process to bypass web origin policy via a crafted HTML page. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-92370",
-    "descripcion": "An improper access control vulnerability in TeamViewer Full Client, Host, and related affected modules on Windows, Linux, and macOS allows an authenticated remote attacker to bypass user-configured permission settings during session establishment. By modifying access control parameters for restricted features, an attacker can perform actions that were explicitly denied by the victim&#39;s configuration. This may result in unauthorized actions and potentially lead to remote code execution on the target system. 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-95362",
+    "descripcion": "Cross-site request forgery in DevTools in Google Chrome prior to 154.0.8037.57 allowed a remote attacker leveraging social engineering to bypass web origin policy via a crafted HTML page. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-92369",
-    "descripcion": "TeamViewer Full Client and Host prior to version 15.82 on Windows contain a TOCTOU race condition in the installer rollback mechanism. A local low-privileged attacker can replace rollback backup files stored in a user-writable temporary directory before they are restored by an elevated installer, resulting in privilege escalation to NT AUHORITY/SYSTEM. Exploitation requires successful timing of the race condition and a rollback during installation or update. 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-95361",
+    "descripcion": "Confused deputy in DevTools in Google Chrome prior to 154.0.8037.57 allowed a remote attacker leveraging social engineering to bypass web origin policy via a crafted HTML page. (Chromium security severity: Low) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-92368",
-    "descripcion": "TeamViewer Full Client and Host for Linux and macOS prior version 15.82 contain a heap-based buffer overflow vulnerability in the processing of .tvs session recording files. A size mismatch during decompression of recorded session data can result in out-of-bounds heap writes. By convincing a user to open a specially crafted session recording through the &#34;Play or convert recorded session…&#34; feature, an attacker may achieve arbitrary code execution with the privileges of the current user 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-95359",
+    "descripcion": "Uninitialized resource in GPU in Google Chrome on on Android prior to 154.0.8037.57 allowed a remote attacker who had compromised the renderer process to read memory outside the sandbox via a crafted HTML page. (Chromium security severity: Medium) 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
