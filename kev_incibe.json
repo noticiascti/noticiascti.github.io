@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96423",
-    "descripcion": "X11 protocol dissector crash in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-98164",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: KVM: x86/mmu: Check write tracking in all address spaces kvm_gfn_is_write_tracked() checks only the supplied memslot, but page tracking is per-address-space and shadow pages are shared across all address spaces. With SMM, a GFN can therefore be write-tracked in one address space and appear untracked through the other. Check the supplied slot first, then the slot for the other address space. This ensures all callers honor write tracking regardless of the active address space. In particular, it prevents mmu_try_to_unsync_pages() from marking an upper-level shadow page unsync and eventually triggering the BUG in pte_list_remove(). [invert direction of the conditional. - Paolo] 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96422",
-    "descripcion": "Frame protocol metadissector crash in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-76875",
+    "descripcion": "PyPy before versions 3.11.16 and 3.12.14 contains a use-after-free vulnerability in the pyexpat module&#39;s ExternalEntityParserCreate function that allows attackers to corrupt memory by supplying a crafted XML document to applications that create external-entity sub-parsers without retaining a reference to the parent parser. The child parser retains a raw C back-pointer to the parent parser struct while PyPy&#39;s tracing garbage collector can free the parent&#39;s C struct, causing bundled libexpat to dereference the freed pointer on every parsed token, producing memory corruption. 29/09/2026 29/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96421",
-    "descripcion": "USB HID protocol dissector infinite loop and memory leak in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100830",
+    "descripcion": "Mitigation bypass in the DOM: Navigation component. This vulnerability was fixed in Firefox ESR 153.4 and Firefox 157. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96420",
-    "descripcion": "Toshiba file parser crash in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100829",
+    "descripcion": "Mitigation bypass in the DOM: Security component. This vulnerability was fixed in Firefox ESR 153.4 and Firefox 157. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96419",
-    "descripcion": "Profile import crash in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service and possible code execution 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100828",
+    "descripcion": "Mitigation bypass in the Bookmarks & History component. This vulnerability was fixed in Firefox ESR 153.4 and Firefox 157. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96418",
-    "descripcion": "TIFF protocol dissector infinite loop in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100823",
+    "descripcion": "Spoofing issue in the Downloads component in Firefox for Android. This vulnerability was fixed in Firefox 157. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96417",
-    "descripcion": "RF4CE protocol dissector crash in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100822",
+    "descripcion": "Spoofing issue in the Networking: HTTP component. This vulnerability was fixed in Firefox ESR 153.4 and Firefox 157. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96416",
-    "descripcion": "IEEE 802.11 protocol dissector crash in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100821",
+    "descripcion": "Site isolation issue in the Panning and Zooming component. This vulnerability was fixed in Firefox ESR 153.4, Firefox 157, Firefox ESR 115.42, and Firefox ESR 140.17. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-96415",
-    "descripcion": "Catapult DCT2000 protocol dissector crash in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100817",
+    "descripcion": "Other issue in the JavaScript: WebAssembly component. This vulnerability was fixed in Firefox 157. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-29",
-    "cve": "CVE-2026-95395",
-    "descripcion": "IEEE C37.118 Synchrophasor protocol dissector memory leak in 4.6.0 to 4.6.8 and 4.4.0 to 4.4.18 allows denial of service 29/09/2026 29/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-100816",
+    "descripcion": "Site isolation issue in the DOM: Networking component. This vulnerability was fixed in Firefox ESR 153.4 and Firefox 157. 29/09/2026 29/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
