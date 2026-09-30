@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-96342",
-    "descripcion": "Missing Authorization vulnerability in Amauri.IO WPMobile.App wpappninja allows Retrieve Embedded Sensitive Data.This issue affects WPMobile.App: from n/a through 11.83. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-97302",
+    "descripcion": "Unauthenticated Sensitive Data Exposure in MPG 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-76992",
-    "descripcion": "The CODESYS Gateway Client allocates memory based on a size field in a gateway response without enforcing an appropriate upper limit. An unauthenticated remote attacker controlling a malicious gateway can exploit this behavior to trigger excessive memory consumption, resulting in a denial-of-service condition thus leading to a total loss of availablity. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-97301",
+    "descripcion": "Contributor Cross Site Scripting (XSS) in Cool Formkit Lite 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-13720",
-    "descripcion": "An Editor can set file-provisioning metadata (the grafana.app/managedBy, grafana.app/managerId and grafana.app/sourcePath annotations) when creating a dashboard through the dashboard API, because these fields were stored without an authorization check. The dashboard then appears file-provisioned, and administrators can no longer update or delete it through Grafana. The impact is limited to the same organization and no data is exposed. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97299",
+    "descripcion": "Unauthenticated Cross Site Request Forgery (CSRF) in Razorpay Payment Links for WooCommerce 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-13719",
-    "descripcion": "An authenticated user can list alert rules stored in folders they are not allowed to read through the alert rules API list endpoint. When the set of folders the user may read was empty, the folder restriction was dropped and every alert rule in the organization was returned. From Grafana 13.1.0, any user can trigger this with a folder filter. The exposed data is rule configuration; data source credentials are not exposed. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97298",
+    "descripcion": "Contributor Cross Site Scripting (XSS) in King Addons for Elementor 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-103239",
-    "descripcion": "MISP contains a privilege escalation vulnerability in the tag collection creation and editing functionality. The affected actions accepted the full HTTP request payload and passed it to a bulk-association save operation, which writes not only the intended tag collection record but also any associated model data present in the payload. A user holding the tag editor permission could craft a request that includes additional model data (such as User or Organisation records) alongside the tag collection fields. Because the save operation processed all associated models indiscriminately, the injected sibling records were written to the database, enabling the attacker to modify or create privileged accounts and escalate to site administrator. Preconditions: - An authenticated account with the tag editor permission (perm_tag_editor) - Network access to the MISP instance Impact: - Unauthorized creation or modification of User and Organisation records - Privilege escalation from tag editor to site administrator Affected versions: 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-97293",
+    "descripcion": "Contributor SQL Injection in Media LIbrary Assistant 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-103113",
-    "descripcion": "A vulnerability was determined in OS4ED openSIS-Classic up to 9.3. The affected element is the function save action of the file modules/students/Student.php of the component General Information Tab. Executing a manipulation of the argument students can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. The project was informed of the problem early through an issue report but has not responded yet. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 2.00 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97292",
+    "descripcion": "Author Cross Site Scripting (XSS) in YITH WooCommerce Tab Manager 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-94053",
-    "descripcion": "Authentication bypass via LDAP injection in component sshd-ldap in Apache MINA SSHD versions 1.2.0 to 2.19.0 and 3.0.0-M1 to 3.0.0-M5. Apache MINA SSHD is a Java library for client-side and server-side SSH. The optional sshd-ldap component provides support for integrating password and publickey authentication on the server side with an LDAP server. sshd-ldap is an optional component. SSH servers implemented with Apache MINA SSHD are affected only if they use sshd-ldap and do configure it to be used for password of public key authentication. Other Apache MINA SSHD servers are not affected. Lack of escaping LDAP filter metacharacters enabled successful authentication with username &#34;*&#34; and password &#34;*&#34;. Users are recommended to upgrade affected applications to version 2.20.0 or 3.0.0-M6, which fix this issue by properly escaping filter parameters according to RFC 4515. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-97289",
+    "descripcion": "Unauthenticated Cross Site Scripting (XSS) in Quiz And Survey Master 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-94052",
-    "descripcion": "A missing check in LdapPasswordAuthenticator in component sshd-ldap in Apache MINA SSHD versions 1.2.0 to 2.19.0 or 3.0.0-M1 to 3.0.0-M5 bypassed authentication checks. Apache MINA SSHD is a Java library for client-side and server-side SSH. The optional sshd-ldap component provides support for integrating password and publickey authentication on the server side with an LDAP server. sshd-ldap is an optional component. SSH servers implemented with Apache MINA SSHD are affected only if they use sshd-ldap and do configure an LdapPasswordAuthenticator to be used for password authentication. Normal password authentication via the built-in mechanisms in sshd-core is _not_ affected by this vulnerability, which concerns only LdapPasswordAuthenticator. Users are recommended to upgrade affected applications to version 2.20.0 or 3.0.0-M6, which fix this issue. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-97288",
+    "descripcion": "Contributor Cross Site Scripting (XSS) in OAuth Server 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-94029",
-    "descripcion": "Server-side memory exhaustion in Apache MINA SSHD 1.0.0 to 2.19.0 and 3.0.0-M1 to 3.0.0-M5, component sshd-sftp, in the SFTP v6 check-file-name/check-file-handle extension. Apache MINA SSHD is a Java library for client-side and server-side SSH. Using a very small &#34;block size&#34; (for instance 256, which is the minimum) on a huge file generates many (file size / block size) hashes. The resulting SFTP reply message was accumulated fully in memory server-side, which could, with a suitably large (possibly sparse) file exhaust the server-side memory, taking down the server. Users are recommended to upgrade to version 2.20.0 or 3.0.0-M6, which fix this issue by imposing a maximum limit on the size of the reply. Many SFTP implementations have a general limit on the size of SFTP messages anyway; typically 256kB as in OpenSSH or also in Apache MINA SSHD. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97287",
+    "descripcion": "Contributor SQL Injection in Event Tickets 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-94002",
-    "descripcion": "Possible memory exhaustion in SFTP clients (DefaultSftpClient) in component sshd-sftp in Apache MINA SSHD versions 0.9.0 to 2.19.0 and 3.0.0-M1 to 3.0.0-M5. Apache MINA SSHD is a Java library for client-side and server-side SSH. The sshd-sftp component provides support for SFTP. The SFTP client implementation, when receiving a reply, did not check that this reply corresponded to a request sent earlier. Unsolicited replies would be stored but never consumed. A malicious server could keep sending unsolicited replies until available memory in the client was exhausted. Users are recommended to upgrade to version 2.20.0 or 3.0.0-M6, which fix this issue. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-97286",
+    "descripcion": "Contributor Cross Site Scripting (XSS) in Strong Testimonials 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
