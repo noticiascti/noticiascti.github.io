@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-86134",
-    "descripcion": "A NULL pointer dereference vulnerability in the WatchGuard Fireware OS authentication process allows a remote, unauthenticated attacker to crash the management daemon by sending a specially request to the login interface, resulting in a denial of service. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-97196",
+    "descripcion": "Improper Validation of Unsafe Equivalence in Input vulnerability in Liquid Web / StellarWP GiveWP allows Authentication Bypass. This issue affects GiveWP: from n/a through 4.16.9. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-103110",
-    "descripcion": "Pexip Infinity before 38.2, plus 39.0, 39.1 and 40.0, is affected by improper input validation that allows a remote attacker to execute code remotely as an unprivileged user on a Pexip Infinity Conferencing Node. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-89294",
+    "descripcion": "The Simply Schedule Appointments plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.6.12.27 via the &#39;ssa_locale&#39; parameter parameter. This makes it possible for authenticated attackers, with subscriber-level access and above, to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. Notably, exploitation does not require authentication in practice, as the locale filter is installed unconditionally on every request during plugins_loaded and the callback performs no nonce or capability check before returning the raw GET parameter value. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-102912",
-    "descripcion": "A vulnerability was identified in SourceCodester Online Leave Management System 1.0. This issue affects some unknown processing of the file /admin/?page=reports. The manipulation of the argument date_start/date_end leads to sql injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 2.00 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97316",
+    "descripcion": "The Broken Link Notifier WordPress plugin before 2.0.0.1 does not re-validate the destination of redirects when checking links, allowing unauthenticated attackers to bypass its internal-address filter and make the server send requests to internal services. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-102911",
-    "descripcion": "A flaw has been found in zosmaai pi-llm-wiki up to 0.11.7. Affected is an unknown function of the file mcp/index.ts of the component wiki_capture_source MCP tool. Executing a manipulation of the argument url can lead to os command injection. The attack can be executed remotely. The exploit has been published and may be used. Upgrading to version 0.11.8 is able to address this issue. This patch is called 360867034e79175b45c8e04a98e4ca712bbaca35. Upgrading the affected component is advised. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-96886",
+    "descripcion": "The Course Booking System WordPress plugin before 7.0.9 does not restrict access to its booking export, allowing unauthenticated users to download the name, email address and billing address of every customer who has booked a course. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-102910",
-    "descripcion": "A security flaw has been discovered in SourceCodester Online Reviewer Management System 1.0. The affected element is an unknown function of the file /reviewer_0/admins/assessments/examproper/exam-delete.php. The manipulation of the argument test_id results in sql injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-94297",
+    "descripcion": "The Media Library Organizer WordPress plugin before 2.1.4 does not verify that the requesting user holds the target taxonomy&#39;s management capability before creating a new term, allowing users with contributor-level access and above to create publicly visible terms in any taxonomy registered on the site. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-96649",
-    "descripcion": "The Frontend Post Submission Manager Lite – Frontend Posting WordPress Plugin plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via post_content Parameter (data-label DOM Sink) in all versions up to, and including, 1.3.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the site operator to have enabled guest post submission via the [fpsm] shortcode, which registers a publicly accessible AJAX handler gated only by a nonce emitted on every page containing the shortcode. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-94274",
+    "descripcion": "The YayReviews WordPress plugin before 1.4.1 does not restrict access to an API route that returns individual customer review records, including reviews still pending moderation, allowing unauthenticated attackers to harvest reviewers&#39; email addresses and other non-public review content. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-86556",
-    "descripcion": "There is an information disclosure vulnerability in ZTE U30 Air. Due to improper permission control, attackers can exploit the vulnerability to obtain relevant information. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-93580",
+    "descripcion": "The InPost PL WordPress plugin before 1.9.8 does not verify the authenticity of incoming shipment webhook requests, relying only on a non-secret identifier and an IP check that is not enforced, allowing unauthenticated attackers who know a target order&#39;s parcel tracking number to forge its shipment status and prematurely mark the order completed. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-103109",
-    "descripcion": "Pexip Infinity before 38.2, plus 39.0, 39.1 and 40.0, is affected by improper input validation in the media implementation that allows a remote attacker to trigger memory corruption or a software abort resulting in a denial of service. A crafted media stream may result in a controlled abort during processing, and has the potential to achieve memory corruption. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-92994",
+    "descripcion": "The Verge3D Publishing and E-Commerce WordPress plugin before 4.13.1 does not validate the contents of files uploaded through its file storage feature and serves them back with an attacker-controlled content type, allowing unauthenticated attackers to store a file containing malicious JavaScript that executes in the browser of any user who opens it. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-103108",
-    "descripcion": "Pexip Infinity before 38.2, plus 39.0, 39.1, and 40.0, is affected by improper input validation in the media implementation that allows a remote attacker to trigger a software abort resulting in a denial of service 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-92424",
+    "descripcion": "The Content Egg WordPress plugin before 11.9.0 does not verify that a user running its bulk content-import feature is authorized for the import preset they select, and switches to the preset author&#39;s identity before creating the resulting post, allowing users with contributor-level access and above to store arbitrary web scripts unfiltered under a privileged user&#39;s account, executing in the context of anyone who later views that content. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-103106",
-    "descripcion": "Pexip Infinity before 38.2, plus 39.0, 39.1, and 40.0, is affected by improper input validation within an internal Pexip Infinity service that allows an attacker with local access to escalate privileges to root. Exploitation requires an attacker to be able to run arbitrary code on a node by either achieving remote code execution via some other vulnerability or having administrative access to the operating system. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-91832",
+    "descripcion": "The WP Mobile Menu WordPress plugin before 2.9 does not correctly verify the nonce on its settings import, so an attacker can import arbitrary WP Mobile Menu WordPress plugin before 2.9 settings through a cross-site request in an administrator&#39;s session, and the imported values are then output unescaped to every visitor, resulting in Stored Cross-Site Scripting. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
