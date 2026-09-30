@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-80490",
-    "descripcion": "Algorithm::AhoCorasick::XS versions through 0.04 for Perl read the haystack string length before the scalar is stringified. The matches, first_match and match_details methods use the T_STD_STRING typemap to translate Perl scalars (SVs) into strings via the std::string constructor, using the SvPV macro to stringify the haystack input, and the SvCUR macro to determine the length of the SV. When the input SVs are references, integers (IVs) or floats (NVs), the SvCUR macro will return an invalid length if it is run before the input is stringified, leading to an out-of-bounds read which can abort the process. Note that the evaluation order of arguments to std::string is unspecified. Depending on the compiler, SvCUR may be run first and lead to an abort that cannot be caught within Perl. This can be triggered when the haystack is a numeric value, for example, my $ac = Algorithm::AhoCorasick::XS->new( [ &#34;11&#34;, &#34;22&#34; ] ); $ac->matches( 211 ); This can occur when the haystack is the result of reading data from decoded JSON or a numeric database column. It can also be triggered when using a blessed object as a haystack. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-97291",
+    "descripcion": "Contributor PHP Object Injection in Schema & Structured Data for WP & AMP 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47604",
-    "descripcion": "NVIDIA GPU Display Driver for Windows and Linux contains a vulnerability in the kernel mode driver where a local user may access another process&#39;s GPU channel state due to missing authorization checks. A successful exploit of this vulnerability might lead to information disclosure. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97290",
+    "descripcion": "Unauthenticated Cross Site Scripting (XSS) in Photonic Gallery & Lightbox for Flickr, SmugMug & Others 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-55174",
-    "descripcion": "UltrafastSecp256k1 is a high-performance, multi-backend secp256k1 engine with reproducible audit evidence, compatibility shims, and profile-based review scopes. Prior to version 4.2.0, UltrafastSecp256k1&#39;s ECDSA adaptor pre-signature verification accepts forged adaptor pre-signatures whose &#34;r&#34; value is not cryptographically bound to the adaptor point &#34;T&#34;. This issue has been patched in version 4.2.0. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97265",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Crocoblock. Jetimpex Inc. JetEngine allows Stored XSS. This issue affects JetEngine: from n/a through 3.8.15.3. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47603",
-    "descripcion": "NVIDIA GPU Display Driver for Windows and Linux contains a vulnerability in the kernel mode driver where a local user may access another process&#39;s GPU channel state due to missing authorization checks. A successful exploit of this vulnerability might lead to information disclosure. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-97256",
+    "descripcion": "Editor PHP Object Injection in Page Builder by SiteOrigin 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47602",
-    "descripcion": "NVIDIA GPU Display Driver for Windows and Linux contains a vulnerability in the kernel mode driver where a local user can cause the driver to dereference an untrusted pointer. A successful exploit of this vulnerability might lead to denial of service and information disclosure. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-94171",
+    "descripcion": "Unauthenticated Cross Site Scripting (XSS) in CURCY 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47601",
-    "descripcion": "NVIDIA GPU Display Driver for Windows and Linux contains a vulnerability in the open-source kernel module DMA-BUF import path where an unprivileged local user could cause improper preservation of memory access permissions when importing a read-only buffer from another device&#39;s DMA-BUF exporter. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, denial of service, information disclosure, and data tampering. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-103500",
+    "descripcion": "An attacker could cause a heap buffer overflow by getting a user to open an email that is greater than or equal to 2GB in size. This vulnerability was fixed in Thunderbird 157, Thunderbird 140.17, and Thunderbird 153.4. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47600",
-    "descripcion": "NVIDIA GPU Display Driver for Windows and Linux contains a vulnerability in the kernel mode layer where an error-handling path could operate on an improperly initialized resource. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, denial of service, information disclosure, and data tampering. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-103476",
+    "descripcion": "yii2-starter-kit through 4.2.0 fails to validate article publication status in the attachment-download endpoint, allowing unauthenticated attackers to download files from draft articles. Attackers can enumerate sequential attachment identifiers to retrieve files from unpublished articles without authentication or authorization checks. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47599",
-    "descripcion": "NVIDIA GPU Display Driver for Linux contains a vulnerability in the open-source kernel module where an unprivileged local user could cause improper preservation of memory access permissions during DMA mapping. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, denial of service, information disclosure, and data tampering. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-103474",
+    "descripcion": "yii2-starter-kit through 4.2.0 fails to validate file types in the backend storage upload actions, allowing authenticated managers to upload PHP files. Attackers with manager role can upload PHP scripts to the web-accessible storage directory and request them to execute arbitrary code on the server. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47598",
-    "descripcion": "NVIDIA GPU Display Driver for Linux contains a vulnerability in the open-source kernel module event delivery path where an unprivileged local user could cause a use-after-free through a race between asynchronous event delivery and file close. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, denial of service, information disclosure, and data tampering. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-103472",
+    "descripcion": "restbed through 5.0.0 accepts WebSocket frames with declared payload lengths up to 2^63 bytes and buffers the payload without size limits in an unbounded stream buffer. Remote unauthenticated attackers can declare large frame sizes and stream payload data to exhaust server memory, causing denial of service through process crash. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47597",
-    "descripcion": "NVIDIA GPU Display Driver for Windows and Linux contains a vulnerability in the open-source kernel module Resource Server where an unprivileged local user could cause a use-after-free through a missing self-reference guard in the map cleanup path. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, denial of service, information disclosure, and data tampering. 30/09/2026 30/09/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-103473",
+    "descripcion": "Deno versions 2.7.0 through 2.9.7 on Windows contain a command injection vulnerability in node:child_process where shell arguments are escaped for the wrong shell type. Attackers can inject OS commands by passing untrusted arguments with the shell option, allowing arbitrary command execution with Deno process privileges. 30/09/2026 30/09/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
