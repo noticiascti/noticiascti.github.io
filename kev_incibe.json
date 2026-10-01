@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-103592",
-    "descripcion": "simple-php-router through 5.4.1.7 contains an IP restriction bypass vulnerability in the IpRestrictAccess middleware that allows remote unauthenticated attackers to bypass IP whitelist and blacklist protections. Attackers can spoof X-Forwarded-For, CF-Connecting-IP, or Client-IP headers to impersonate whitelisted addresses or evade blacklists, gaining access to IP-restricted routes. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-01",
+    "cve": "CVE-2026-93495",
+    "descripcion": "Improper initialization in an ASUS certain motherboard allows an physically proximate user to read or write arbitrary memory by inserting a specially crafted device. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-10-01",
+    "cve": "CVE-2026-14157",
+    "descripcion": "Use of an Externally Controlled Format String in the ASUS Router modules allow a remote authenticated user to execute arbitrary commands via a crafted file uploaded through the web management interface. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-10-01",
+    "cve": "CVE-2026-13313",
+    "descripcion": "An Active Debug Code vulnerability in certain ASUS router models allows a remote authenticated user, via a crafted HTTP request, to bypass security mechanisms and enable the Telnet service, thereby executing arbitrary commands with root privileges and potentially affecting other devices connected to the router. Refer to the &#39; Security Update for ASUS Router Firmware &#39; section on the ASUS Security Advisory for more information. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-10-01",
+    "cve": "CVE-2026-103532",
+    "descripcion": "A vulnerability has been found in immich-app Immich up to 2.7.5. This affects the function checkSharedLinkAccess of the file server/src/utils/access.ts of the component Shared Link Preview Handler. The manipulation of the argument Password leads to improper authorization. The attack may be initiated remotely. The reported GitHub issue was closed with the label &#34;duplicate&#34;. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-47096",
-    "descripcion": "AJA HELO Plus firmware before 2.1.7 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers with network access to inject malicious JavaScript by setting an unsanitized eParamID_SystemName value through the /config?action=set web configuration API. Attackers can exploit this flaw when device authentication is disabled to persistently execute arbitrary script in the browser of any administrator who opens the web management interface, enabling theft of stored secrets such as web UI credentials, RTMP stream keys, publish URLs, and NFS/SMB share credentials, as well as hijacking of the authenticated session. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-103531",
+    "descripcion": "A flaw has been found in OpenSC up to 0.27.1. The impacted element is the function setcos_construct_fci_44 of the file src/libopensc/card-setcos.c. Executing a manipulation of the argument type_attr can lead to stack-based buffer overflow. The attack can be launched remotely. This patch is called ad730304052937c32b4eb489a06835ac6123632c. It is best practice to apply a patch to resolve this issue. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-103001",
-    "descripcion": "PyJWT is a Python implementation of JSON Web Token standards. From 2.11.0 through 2.13.0, PyJWT&#39;s PyJWT._merge_options() method can modify a caller-supplied mutable options mapping when verify_signature is false. If an application reuses that same mapping for a later decode() or decode_complete() call and changes verify_signature to true, the mapping can retain false values for expiration, not-before, issued-at, audience, issuer, subject, and JWT ID checks. A signed token with invalid registered claims can then be accepted without disabling signature verification, but applications that create a fresh options mapping for each call are not affected. 01/10/2026 01/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-103530",
+    "descripcion": "A vulnerability was detected in decolua 9Router up to 0.5.55. The affected element is the function fetch of the file src/shared/utils/ssrfGuard.js of the component Search Endpoint. Performing a manipulation of the argument provider_options.baseUrl results in server-side request forgery. The attack can be initiated remotely. Applying a patch is the recommended action to fix this issue. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-101283",
-    "descripcion": "iperf3 3.20–3.21 (esnet/iperf) has a pre-auth heap buffer overflow in decrypt_rsa_message(): a 256-byte RSA buffer is BIO_read with the attacker-controlled ciphertext length (guard warns only), so an unauthenticated client overflows the heap via an oversized authtoken; fixed in 3.22 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-103591",
+    "descripcion": "DeepWiki-Open through commit d92819a contains an unauthenticated arbitrary file read vulnerability in the GET /codemap/file endpoint via the repo_url parameter. Attackers can supply a non-URL repo_url value to bypass path containment checks and read any file accessible to the API process by specifying absolute file paths. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-92173",
-    "descripcion": "Prior to v74.0.0.878.1682 of Meta Horizon OS, MediaSyncJobReceiver could be induced to send a privileged PendingIntent including a com.oculus.vrshell CallerIdentity to an arbitrary application listening via NotificationListenerService. That would allow the application to impersonate the com.oculus.vrshell package, as well as packages signed with the same key, towards any endpoint within the OS that uses CallerIdentity authentication. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-103590",
+    "descripcion": "QloApps through 1.7.0 contains a reflected cross-site scripting vulnerability in the back-office room type editor&#39;s length of stay fields. Attackers can induce authenticated administrators to submit crafted POST requests with malicious payloads in restriction_min_los and restriction_max_los parameters, executing arbitrary JavaScript in the victim&#39;s administrative session. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-92172",
-    "descripcion": "Prior to v66.0.0.733.524 of Meta Horizon OS, OVRMediaService could be induced to send a privileged PendingIntent including a com.oculus.horizon CallerIdentity to an arbitrary application registering for com.oculus.systemactivities.SCREENSHOT via a broadcast receiver. That would allow the application to impersonate the com.oculus.horizon package towards any endpoint within the OS that uses CallerIdentity authentication. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-103589",
+    "descripcion": "QloApps through 1.7.0 contains a reflected cross-site scripting vulnerability in the back-office room type editor that fails to escape room_num, floor, and comment field values in input attributes. Attackers can induce authenticated back-office users to submit crafted POST requests with malicious payloads to execute arbitrary JavaScript in the victim&#39;s administrative session. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-09-30",
-    "cve": "CVE-2026-51872",
-    "descripcion": "Devika v1.0 is vulnerable to Code Injection via the Runner.run_code function in src/agents/runner/runner.py. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-51871",
-    "descripcion": "Devika v1.0 is vulnerable to Code Injection in the Runner.execute function in src/agents/runner/runner.py which allows an attacker to achieve arbitrary code execution by exploiting the direct execution of LLM-generated content. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-51870",
-    "descripcion": "DeepTutor v1.4.0 is vulnerable to command execution in /tutorbot/agent/tools/shell.py:ExecTool.execute. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-51869",
-    "descripcion": "DB-GPT v0.8.0 sandbox API silently falls back to LocalRuntime and executes code on host. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-103588",
+    "descripcion": "QloApps through 1.7.0 contains a reflected cross-site scripting vulnerability in the exceptions field of the back-office Transplant a module form. Attackers can craft a malicious link containing JavaScript payload in the exceptions parameter that executes in an authenticated administrator&#39;s session when the victim follows the link. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
