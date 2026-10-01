@@ -41,12 +41,12 @@
   },
   {
     "fecha": "2026-10-01",
-    "cve": "CVE-2026-27962",
-    "descripcion": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to version 1.6.9, a JWK Header Injection vulnerability in authlib's JWS implementation allows an unauthenticated attacker to forge arbitrary JWT tokens that pass signature verification. When ..."
+    "cve": "CVE-2026-96760",
+    "descripcion": "Authlib (v1.7.2 and below) contains a signature verification bypass vulnerability. The JsonWebSignature.deserialize_json() method accepts a JSON Serialization JWS object and returns the payload as successfully verified without checking for a signature and without requiring a ..."
   },
   {
     "fecha": "2026-10-01",
-    "cve": "CVE-2026-28802",
-    "descripcion": "Authlib is a Python library which builds OAuth and OpenID Connect servers. From version 1.6.5 to before version 1.6.7, previous tests involving passing a malicious JWT containing alg: none and an empty signature was passing the signature verification step without any changes to ..."
+    "cve": "CVE-2026-27962",
+    "descripcion": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to version 1.6.9, a JWK Header Injection vulnerability in authlib's JWS implementation allows an unauthenticated attacker to forge arbitrary JWT tokens that pass signature verification. When ..."
   }
 ]
