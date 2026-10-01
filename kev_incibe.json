@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-09-30",
+    "cve": "CVE-2026-103592",
+    "descripcion": "simple-php-router through 5.4.1.7 contains an IP restriction bypass vulnerability in the IpRestrictAccess middleware that allows remote unauthenticated attackers to bypass IP whitelist and blacklist protections. Attackers can spoof X-Forwarded-For, CF-Connecting-IP, or Client-IP headers to impersonate whitelisted addresses or evade blacklists, gaining access to IP-restricted routes. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-30",
+    "cve": "CVE-2026-47096",
+    "descripcion": "AJA HELO Plus firmware before 2.1.7 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers with network access to inject malicious JavaScript by setting an unsanitized eParamID_SystemName value through the /config?action=set web configuration API. Attackers can exploit this flaw when device authentication is disabled to persistently execute arbitrary script in the browser of any administrator who opens the web management interface, enabling theft of stored secrets such as web UI credentials, RTMP stream keys, publish URLs, and NFS/SMB share credentials, as well as hijacking of the authenticated session. 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-30",
+    "cve": "CVE-2026-103001",
+    "descripcion": "PyJWT is a Python implementation of JSON Web Token standards. From 2.11.0 through 2.13.0, PyJWT&#39;s PyJWT._merge_options() method can modify a caller-supplied mutable options mapping when verify_signature is false. If an application reuses that same mapping for a later decode() or decode_complete() call and changes verify_signature to true, the mapping can retain false values for expiration, not-before, issued-at, audience, issuer, subject, and JWT ID checks. A signed token with invalid registered claims can then be accepted without disabling signature verification, but applications that create a fresh options mapping for each call are not affected. 01/10/2026 01/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-09-30",
+    "cve": "CVE-2026-101283",
+    "descripcion": "iperf3 3.20–3.21 (esnet/iperf) has a pre-auth heap buffer overflow in decrypt_rsa_message(): a 256-byte RSA buffer is BIO_read with the attacker-controlled ciphertext length (guard warns only), so an unauthenticated client overflows the heap via an oversized authtoken; fixed in 3.22 01/10/2026 01/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-09-30",
     "cve": "CVE-2026-92173",
     "descripcion": "Prior to v74.0.0.878.1682 of Meta Horizon OS, MediaSyncJobReceiver could be induced to send a privileged PendingIntent including a com.oculus.vrshell CallerIdentity to an arbitrary application listening via NotificationListenerService. That would allow the application to impersonate the com.oculus.vrshell package, as well as packages signed with the same key, towards any endpoint within the OS that uses CallerIdentity authentication. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-09-30",
     "cve": "CVE-2026-51869",
     "descripcion": "DB-GPT v0.8.0 sandbox API silently falls back to LocalRuntime and executes code on host. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-51867",
-    "descripcion": "agentgpt v.1.0.0 is vulnerable to Incorrect Access Control in next/src/server/api/routers/agentRouter.ts. An externally reachable path accepts a caller-selected object or tenant identifier and reaches a data-access operation without a visible owner, tenant, workspace, or membership binding on that object. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-51866",
-    "descripcion": "In DB-GPT 0.7.5 and 0.8.0, a skill uploaded through the real /api/v1/skills/upload route can later be executed through the real /api/v1/chat/react-agent flow. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-51864",
-    "descripcion": "DB-GPT v0.7.5 and v0.8.0 contains directory traversal in python_file_upload (packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/python_upload_api.py:42). A remote attacker can use the validated exploitation path to write files outside the intended workspace or storage boundary. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-09-30",
-    "cve": "CVE-2026-51862",
-    "descripcion": "DB-GPT 0.8.0 contains directory traversal in skill_upload (packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/agentic_data_api.py:40). A remote attacker can use the validated exploitation path to write files outside the intended workspace or storage boundary. 30/09/2026 30/09/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
