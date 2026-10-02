@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-10-02",
+    "cve": "CVE-2026-19660",
+    "descripcion": "The Divi Membership plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 2.3.0. The `process_paypal_callback` function, hooked to the `init` action, accepts a base64-encoded `paypal_param` GET parameter with no IPN validation, no cryptographic signature check, no ownership verification, and no nonce, allowing it to trust an entirely attacker-controlled user ID value that is passed directly to `wp_set_current_user()` and `wp_set_auth_cookie()`. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by supplying an arbitrary user ID in the `paypal_param` GET parameter, resulting in full site takeover. The vulnerability is further compounded by the fact that the PayPal gateway class is instantiated unconditionally regardless of whether PayPal is enabled or configured, ensuring the vulnerable hook is always registered on every front-end request. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-10026",
+    "descripcion": "The CTX Feed Pro plugin for WordPress is vulnerable to Code Injection in all versions up to, and including, 7.6.12. This is due to insufficient input validation on the &#39;Feed Config&#39; field which is passed directly to the eval() function. This makes it possible for authenticated attackers, with Administrator-level access and above, to execute arbitrary PHP code on the server. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-93367",
+    "descripcion": "The Visitors Traffic Real Time Statistics Pro plugin for WordPress is vulnerable to unauthenticated stored Cross-Site Scripting in all versions up to, and including, 11.22 via the page_title parameter of the ahcpro_track_visitor AJAX action. The action is registered for logged-out callers (wp_ajax_nopriv_ahcpro_track_visitor) and stores $_POST[&#39;page_title&#39;] with NO sanitization, keeping it raw in the ahc_title_traffic.til_page_title column. When an administrator opens the plugin&#39;s dashboard, the &#39;Traffic by Title&#39; DataTable renders that stored value as innerHTML without output escaping, executing arbitrary JavaScript. This makes it possible for unauthenticated attackers to inject web scripts that run in an administrator&#39;s session. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-14378",
+    "descripcion": "The DevKit Pro plugin for WordPress is vulnerable to Authentication Bypass Leading to Administrator Account Takeover in all versions up to, and including, 2.3.0 This is due to the `revert_switch` handler trusting the attacker-controlled `original_user_id` cookie as the privileged identity: `verify_nonce_and_capability()` incorrectly checks the `manage_options` capability on the user identified by the cookie rather than on the actual requester via `current_user_can()`, while the switch-back form and a valid session-bound nonce are emitted publicly via `wp_footer` to any visitor — including unauthenticated users — whenever that cookie is present. This makes it possible for unauthenticated attackers to set the `original_user_id` cookie to any administrator&#39;s user ID, collect the rendered nonce, and POST it back to the `revert_switch` handler, causing `wp_set_auth_cookie()` to be called with the administrator&#39;s ID and granting the attacker a full administrator-level authenticated session and complete site takeover. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-104123",
+    "descripcion": "A vulnerability was detected in SourceCodester Online Reviewer Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /reviewer_0/admins/assessments/activities/btn_functions.php?action=activity. The manipulation of the argument Title results in sql injection. The attack may be launched remotely. The exploit is now public and may be used. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-104120",
+    "descripcion": "A security vulnerability has been detected in modelcontextprotocol mcp-server-fetch and mcp-server-everything up to 2026.6.4. Affected is the function fetch_url of the file mcp_server_fetch/server.py of the component Fetch Tool. The manipulation of the argument url/path leads to server-side request forgery. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. The pull request to fix this issue awaits acceptance. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-02",
     "cve": "CVE-2026-21140",
     "descripcion": "Improper access control in ManagedProvisioning prior to SMR Sep-2026 Release 1 allows local attackers to install arbitrary applications. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-10-02",
     "cve": "CVE-2026-104053",
     "descripcion": "A vulnerability was identified in itsourcecode Pet Shop Management System 1.0. The impacted element is an unknown function of the file admin_reservefilter.php. Such manipulation of the argument filter leads to sql injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-10-02",
-    "cve": "CVE-2026-104052",
-    "descripcion": "A vulnerability was determined in itsourcecode Pet Shop Management System 1.0. The affected element is an unknown function of the file admin_reject_completed.php. This manipulation of the argument ID causes sql injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-103098",
-    "descripcion": "Transmission of a sensitive key in the URL over an unencrypted HTTP connection. The request is sent over HTTP rather than HTTPS, meaning the key is transmitted in plaintext across the network. An attacker with the ability to monitor network traffic could intercept the request and obtain the key 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-103097",
-    "descripcion": "An API key is hardcoded and retrievable from the application package. Since Android applications can be reverse engineered, embedding sensitive API credentials directly in the client application may allow unauthorized users to extract and misuse the key. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-103096",
-    "descripcion": "API key is hardcoded and retrievable from the application package. Since Android applications can be reverse engineered, embedding sensitive API credentials directly in the client application may allow unauthorized users to extract and misuse the key. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-86345",
-    "descripcion": "A flaw was found in 389-ds-base. The server does not discard plaintext bytes already buffered from a client connection when negotiating StartTLS, allowing an on-path attacker to inject a crafted LDAP message that is processed after the TLS upgrade and whose response is delivered to the client in place of the client&#39;s own pending operation&#39;s response, due to messageID collision. This can cause a client application to treat a failed authentication (bind) attempt as successful. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-103766",
-    "descripcion": "ClipBucket v5 through 5.5.3-#197 contains an sql injection vulnerability that allows authenticated users with ad_manager_access permission to inject SQL via the delete parameter in admin_area/ads_manager.php. Attackers can supply time-based blind payloads concatenated into AdsManager::DeleteAd queries to extract user credentials and emails or modify and delete arbitrary records. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
