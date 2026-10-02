@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-103761",
-    "descripcion": "Mooncake transfer engine through 0.3.13.post1 contains a memory exhaustion vulnerability in TransferMetadata::receivePeerNotify that allows unauthenticated attackers to grow process memory without limit. Attackers can repeatedly send notify frames up to 1 MB to the handshake RPC port, filling the uncapped notifys vector until the out-of-memory killer terminates the engine. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-21140",
+    "descripcion": "Improper access control in ManagedProvisioning prior to SMR Sep-2026 Release 1 allows local attackers to install arbitrary applications. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-104480",
+    "descripcion": "Discord libdave before 1.2.0 did not reject an MLS Welcome message when the resulting group roster contained an unrecognized participant. An attacker in control of the DAVE signaling path (the voice gateway, or an equivalent position able to add, alter, or withhold signaling messages to a client) could cause affected clients to accept an unauthorized member into the end-to-end encrypted media session, compromising the confidentiality and integrity of audio and video. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-104054",
+    "descripcion": "A security flaw has been discovered in calcom cal.diy up to 6.2.0. This affects the function doesUserIdHaveAccessToBooking of the file BookingAccessService.ts of the component PBAC Permission Engine. Performing a manipulation results in missing authorization. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The pull request to fix this issue awaits acceptance. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-104053",
+    "descripcion": "A vulnerability was identified in itsourcecode Pet Shop Management System 1.0. The impacted element is an unknown function of the file admin_reservefilter.php. Such manipulation of the argument filter leads to sql injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-02",
+    "cve": "CVE-2026-104052",
+    "descripcion": "A vulnerability was determined in itsourcecode Pet Shop Management System 1.0. The affected element is an unknown function of the file admin_reject_completed.php. This manipulation of the argument ID causes sql injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-10-01",
-    "cve": "CVE-2026-103760",
-    "descripcion": "Mooncake transfer engine through 0.3.13.post1 contains a denial of service vulnerability that allows unauthenticated remote attackers to block the handshake daemon by never reading replies. Attackers can send a Metadata request to the handshake RPC port and stall SocketHandShakePlugin&#39;s single listener thread in writeFully(), breaking all subsequent handshakes, metadata fetches, notify and probe requests. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-103098",
+    "descripcion": "Transmission of a sensitive key in the URL over an unencrypted HTTP connection. The request is sent over HTTP rather than HTTPS, meaning the key is transmitted in plaintext across the network. An attacker with the ability to monitor network traffic could intercept the request and obtain the key 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-01",
-    "cve": "CVE-2025-71427",
-    "descripcion": "Office-PowerPoint-MCP-Server through 2.0.7 contains a path traversal vulnerability that allows MCP callers to write and read files outside the working directory by supplying absolute paths or ../ sequences. Attackers can steer an AI agent via prompt injection to abuse save_presentation, open_presentation, or manage_image output_path to overwrite any server-writable file or load external files. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-103097",
+    "descripcion": "An API key is hardcoded and retrievable from the application package. Since Android applications can be reverse engineered, embedding sensitive API credentials directly in the client application may allow unauthorized users to extract and misuse the key. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-01",
-    "cve": "CVE-2026-86344",
-    "descripcion": "A flaw was found in 389-ds-base. An unauthenticated remote attacker can send a complete LDAP operation followed by the first bytes of an incomplete LDAPMessage on the same connection, causing the server to hand that connection to a second worker thread before the first worker&#39;s result is flushed. The second worker blocks until nsslapd-ioblocktimeout while holding the connection mutex, preventing delivery of the completed operation&#39;s result. Repeating this across a small number of connections proportional to the configured worker-thread pool size exhausts the entire pool under default configuration, denying service to all clients (anonymous and authenticated, plaintext and TLS) for as long as the attacker maintains the connections. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-103096",
+    "descripcion": "API key is hardcoded and retrievable from the application package. Since Android applications can be reverse engineered, embedding sensitive API credentials directly in the client application may allow unauthorized users to extract and misuse the key. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-01",
-    "cve": "CVE-2026-71454",
-    "descripcion": "Improper neutralization of input during web page generation (&#39;cross-site scripting&#39;) vulnerability in CWE-79 - Cross-site Scripting CAPEC-63 allows Cross-Site Scripting (XSS). This issue affects CAPEC-63: before 3.0b63. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-86345",
+    "descripcion": "A flaw was found in 389-ds-base. The server does not discard plaintext bytes already buffered from a client connection when negotiating StartTLS, allowing an on-path attacker to inject a crafted LDAP message that is processed after the TLS upgrade and whose response is delivered to the client in place of the client&#39;s own pending operation&#39;s response, due to messageID collision. This can cause a client application to treat a failed authentication (bind) attempt as successful. 02/10/2026 02/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-01",
-    "cve": "CVE-2026-71453",
-    "descripcion": "- External Control of File Name or Path vulnerability in Johnson Controls EasyIO FS32 allows - traversal attack. This issue affects EasyIO FS32: before 3.0b63. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:P/PR:H/UI:N/VC:L/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-71452",
-    "descripcion": "- OS Command Injection vulnerability in Johnson Controls EasyIO FS32 allows OS Command Injection. This issue affects EasyIO FS32: before 3.0b63. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-71449",
-    "descripcion": ": Use of Hard-coded Cryptographic Key vulnerability in Johnson Controls EasyIO FS32 allows : Retrieve Embedded Sensitive Data. This issue affects EasyIO FS32: before 3.0b63. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-71448",
-    "descripcion": ": Insecure Default Initialization of Resource vulnerability in Johnson Controls EasyIO FS32 allows : Authentication Abuse. This issue affects EasyIO FS32: before 3.0b63. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:H/AT:P/PR:H/UI:N/VC:L/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.60 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-10-01",
-    "cve": "CVE-2026-64893",
-    "descripcion": "- Cleartext Transmission of Sensitive Information vulnerability in Johnson Controls EasyIO NEO allows - Man In the Middle Attack. This issue affects EasyIO NEO: before 3.3b25. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:P/VC:H/VI:L/VA:L/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-103766",
+    "descripcion": "ClipBucket v5 through 5.5.3-#197 contains an sql injection vulnerability that allows authenticated users with ad_manager_access permission to inject SQL via the delete parameter in admin_area/ads_manager.php. Attackers can supply time-based blind payloads concatenated into AdsManager::DeleteAd queries to extract user credentials and emails or modify and delete arbitrary records. 02/10/2026 02/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
