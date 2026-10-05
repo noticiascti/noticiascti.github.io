@@ -1,13 +1,13 @@
 [
   {
     "fecha": "2026-10-05",
-    "cve": "CVE-2026-100520",
-    "descripcion": "Laranode versions before 1.2.1 contain a path traversal vulnerability in the POST /filemanager/upload-file endpoint that allows authenticated users to write arbitrary files outside their home directory. Attackers can supply directory traversal sequences in the path parameter to ..."
+    "cve": "CVE-2026-40281",
+    "descripcion": "Gotenberg is a Docker-powered stateless API for PDF files. In versions 8.30.1 and earlier, the metadata write endpoint validates metadata keys for control characters but leaves metadata values unsanitized. A newline character in a metadata value splits the ExifTool stdin line ..."
   },
   {
     "fecha": "2026-10-05",
-    "cve": "CVE-2026-40281",
-    "descripcion": "Gotenberg is a Docker-powered stateless API for PDF files. In versions 8.30.1 and earlier, the metadata write endpoint validates metadata keys for control characters but leaves metadata values unsanitized. A newline character in a metadata value splits the ExifTool stdin line ..."
+    "cve": "CVE-2026-100520",
+    "descripcion": "Laranode versions before 1.2.1 contain a path traversal vulnerability in the POST /filemanager/upload-file endpoint that allows authenticated users to write arbitrary files outside their home directory. Attackers can supply directory traversal sequences in the path parameter to ..."
   },
   {
     "fecha": "2026-10-05",
@@ -36,6 +36,11 @@
   },
   {
     "fecha": "2026-10-05",
+    "cve": "CVE-2026-63030",
+    "descripcion": "WordPress 6.9.x before 6.9.5 and 7.0.x before 7.0.2 is affected by a REST API batch endpoint route confusion issue which, combined with the author__not_in WP_Query SQL Injection (CVE-2026-60137), could allow an attacker to perform SQL Injection and achieve Remote Code Execution."
+  },
+  {
+    "fecha": "2026-10-05",
     "cve": "CVE-2026-104286",
     "descripcion": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-10-05",
     "cve": "CVE-2026-88772",
     "descripcion": "Vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to Remote Code Execution or ..."
-  },
-  {
-    "fecha": "2026-10-05",
-    "cve": "CVE-2026-88771",
-    "descripcion": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading ..."
   }
 ]
