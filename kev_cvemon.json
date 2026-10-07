@@ -6,8 +6,18 @@
   },
   {
     "fecha": "2026-10-07",
-    "cve": "CVE-2026-63277",
-    "descripcion": "LibreOffice Calc can link a cell range to an external data source, and the link is saved in the document. A document could name a Java database driver for such a link to be loaded from a remote location, so opening the document could run Java code from that location. In fixed ..."
+    "cve": "CVE-2026-107102",
+    "descripcion": "This vulnerability exists in the ERP system due to improper validation of payment callback parameters and inadequate authentication controls in API endpoint. An unauthenticated remote attacker could exploit this vulnerability by manipulating the parameter to cause the ..."
+  },
+  {
+    "fecha": "2026-10-07",
+    "cve": "CVE-2026-107103",
+    "descripcion": "This vulnerability exists in the ERP system due to insufficient validation and parameterization of user supplied input in an API endpoint. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted input to the vulnerable ..."
+  },
+  {
+    "fecha": "2026-10-07",
+    "cve": "CVE-2026-107104",
+    "descripcion": "This vulnerability exists in the ERP system due to unsafe deserialization of user controlled data in the affected functionality. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted data to the vulnerable functionality of the ..."
   },
   {
     "fecha": "2026-10-07",
@@ -16,13 +26,13 @@
   },
   {
     "fecha": "2026-10-07",
-    "cve": "CVE-2026-55420",
-    "descripcion": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, under certain non-default configurations, processing of PDF uploads could be exploited to obtain RCE on the server. This issue is patched in 2026.6.0, 2026.5.1, 2026.4.2, and ..."
+    "cve": "CVE-2026-63277",
+    "descripcion": "LibreOffice Calc can link a cell range to an external data source, and the link is saved in the document. A document could name a Java database driver for such a link to be loaded from a remote location, so opening the document could run Java code from that location. In fixed ..."
   },
   {
     "fecha": "2026-10-07",
-    "cve": "CVE-2026-86360",
-    "descripcion": "Dell System Update, versions prior to 2.3.0.0, contains an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Filesystem access for ..."
+    "cve": "CVE-2026-55420",
+    "descripcion": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, under certain non-default configurations, processing of PDF uploads could be exploited to obtain RCE on the server. This issue is patched in 2026.6.0, 2026.5.1, 2026.4.2, and ..."
   },
   {
     "fecha": "2026-10-07",
@@ -36,17 +46,7 @@
   },
   {
     "fecha": "2026-10-07",
-    "cve": "CVE-2026-63030",
-    "descripcion": "WordPress 6.9.x before 6.9.5 and 7.0.x before 7.0.2 is affected by a REST API batch endpoint route confusion issue which, combined with the author__not_in WP_Query SQL Injection (CVE-2026-60137), could allow an attacker to perform SQL Injection and achieve Remote Code Execution."
-  },
-  {
-    "fecha": "2026-10-07",
     "cve": "CVE-2026-42589",
     "descripcion": "Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.31.0, Gotenberg's /forms/pdfengines/metadata/write HTTP endpoint accepts a JSON metadata object and passes its keys directly to ExifTool via the go-exiftool library. No validation is performed on key ..."
-  },
-  {
-    "fecha": "2026-10-07",
-    "cve": "CVE-2026-60137",
-    "descripcion": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter."
   }
 ]
