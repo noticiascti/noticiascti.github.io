@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-96589",
-    "descripcion": "When a private repository is transferred to a user who lacks access, Gitea grants that recipient temporary read access as a collaborator so they can review the repository. Rejecting or cancelling the transfer did not revoke this collaboration, so the named recipient kept persistent read access to the private repository, including its code, issues, pull requests and wiki, and could clone it. The repository owner was not notified. Transfer-granted access is now removed while collaborations that existed before the transfer are preserved. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-97626",
+    "descripcion": "Requesting a user or organization profile page (`GET /{username}`) with an `Accept: application/rss+xml` or `Accept: application/atom+xml` header returned the owner&#39;s activity feed without the visibility check that the profile page and the `.rss` and `.atom` routes apply. Anonymous users, restricted users and non-members could confirm the existence of limited or private users and private organizations and read their profile details and public activity, also when `[other] ENABLE_FEED` was disabled. Activity in private repositories was not included. 07/10/2026 07/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-96580",
-    "descripcion": "Gitea expanded a workflow&#39;s static `strategy.matrix` into its full Cartesian product without a size limit when creating a run, before the fork pull request approval gate applied. A user who can open a pull request from a fork could submit a small workflow file whose matrix expands to a very large number of jobs, consuming server memory and potentially terminating the Gitea process. No runner is required. Static matrices above 256 combinations are now rejected before expansion. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-97208",
+    "descripcion": "The Gitea API endpoint for creating push mirrors (`POST /api/v1/repos/{owner}/{repo}/push_mirrors`) checked only whether mirroring was enabled and not the `[mirror] DISABLE_NEW_PUSH` setting that the web interface enforces. A repository administrator could therefore create new push mirrors on instances where the site administrator had disabled them. A push mirror pushes all refs of the repository to a remote chosen by the caller, on each commit or on a schedule. 07/10/2026 07/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-96404",
-    "descripcion": "When Gitea&#39;s web installer is reachable against a database that already contains users, such as after `INSTALL_LOCK` has been reset to `false`, submitting the install form with an administrator username matching an existing account issued an authenticated session for that account without verifying its password. If the account is an administrator, the session grants full administrative access, including changing the account&#39;s password. Databases with a single user also did not require the reinstall confirmation. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-96594",
+    "descripcion": "The Gitea API endpoint `GET /api/v1/repos/{owner}/{repo}/media/{filepath}` wrote files of up to 1 KiB that are stored directly in Git, not in LFS, to the response without the content type and disposition headers Gitea uses for user content. An HTML file committed to a repository was therefore rendered by the browser on the Gitea origin. A user who can push to a repository could run JavaScript in the session of a victim who opens the media URL and act with the victim&#39;s permissions. 07/10/2026 07/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-96400",
-    "descripcion": "With `[migrations] ALLOWED_DOMAINS` set to a matching entry such as `*` or a hostname wildcard, Gitea&#39;s migration URL validation could permit reserved and link-local addresses, such as `169.254.169.254`, even when `ALLOW_LOCALNETWORKS = false`. The local-network block list did not cover these ranges, and a hostname matching the allow list was accepted regardless of its resolved address. A user who can start migrations on such an instance could reach these addresses from the Gitea server; the default empty `ALLOWED_DOMAINS` configuration is not affected. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-89182",
+    "descripcion": "With `[repository] FORCE_PRIVATE = true`, Gitea creates new repositories as private, but the post-receive hook still applied the `repo.private=false` push option to an empty repository created by push. Any user who can create repositories could make their new repository public in violation of the instance policy. The default configuration is not affected. 07/10/2026 07/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-96399",
-    "descripcion": "A repository&#39;s external issue tracker regular expression containing alternating capture groups could produce invalid slice indexes when Gitea rendered issue references, causing a runtime panic that terminated the Gitea process. A user who can edit a repository&#39;s external issue tracker settings could make any later rendering of matching content, such as viewing a README, crash the instance for all users. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-86684",
+    "descripcion": "The Gitea push mirror API checked whether the repository owner, instead of the requesting user, may use local file system paths. On instances with `[security] IMPORT_LOCAL_PATHS = true`, a repository administrator who is not allowed to import local paths could add a push mirror to a local path on the server when the repository owner has that permission. Gitea then pushed the repository&#39;s refs into an existing Git repository at that path with the permissions of the Gitea process. 07/10/2026 07/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-95112",
-    "descripcion": "When processing issue and comment bodies, Gitea scanned the entire preceding text for action keywords such as &#34;closes&#34; or &#34;fixes&#34; once per Markdown link, giving processing time quadratic in the input size. An authenticated user able to submit issue or comment content could send a crafted body of about 1 MB that keeps a CPU core busy for several minutes while holding a database transaction open. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-65142",
+    "descripcion": "NVIDIA Model-Optimizer contains a vulnerability where an attacker may cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, denial of service, and information disclosure. 07/10/2026 07/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-95106",
-    "descripcion": "Gitea accepted pushed Git trees containing two entries with the same name, which Git&#39;s own consistency checks reject. Gitea&#39;s web views resolved such a path to the first entry, while `git checkout`, Gitea Actions, and release archives use the last. A contributor could open a pull request whose diff and file views show benign content while CI and checkouts at the same commit use different, attacker-controlled content. Incoming objects are now checked for consistency; objects already stored in existing repositories are not rescanned. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-65122",
+    "descripcion": "NVIDIA TensorRT contains a vulnerability where an attacker can cause an out of bounds read. A successful exploit of this vulnerability may lead to denial of service. 07/10/2026 07/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-94205",
-    "descripcion": "Gitea Actions decided whether a fork pull request run needed approval based on the user who triggered the event rather than the pull request author. For `pull_request` activity triggered by a maintainer during ordinary triage, such as adding a label, the run was created without requiring approval, while the workflow definition was still taken from the fork head. Where Actions is enabled and a matching runner is registered, fork-controlled workflow code could run on the base repository&#39;s runners without an explicit approval. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-106589",
+    "descripcion": "In sshd in OpenSSH through 10.6, in certain environments such as QNX 6 and SCO OpenServer 5, sshd-session can unexpectedly have root privileges. This is related to the GatewayPorts and StreamLocalForwarding configuration options, and lack of support for file-descriptor passing and unprivileged allocation of PTY devices. 07/10/2026 07/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-94114",
-    "descripcion": "Symbolic name not mapping to correct object vulnerability in Apache Commons. BCEL caches attacker-controlled classes under their self-declared names without validating the requested name, allowing subsequent lookups and name-keyed verification results to refer to a different class. This issue affects Apache Commons: before 6.13.0. Users are recommended to upgrade to version 6.13.0, which fixes the issue. 06/10/2026 06/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-106588",
+    "descripcion": "In sshd in OpenSSH through 10.6, use of the macOS 27 (or later) SDK has the side effect of loss of sandboxing, which is potentially unexpected. 07/10/2026 07/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-10-06",
-    "cve": "CVE-2026-89430",
-    "descripcion": "Gitea validated a push mirror&#39;s remote address against the `[migrations]` allow and block lists only when the mirror was created. Each synchronization passed the stored address directly to `git push`, so a name that later resolved to a blocked or internal address was still reached. A user with administrator access to a repository, which includes repositories they create themselves, could aim push mirror synchronization at internal Git services and force-push the repository&#39;s contents to them. 06/10/2026 06/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-106587",
+    "descripcion": "In sshd in OpenSSH before 10.6, the value &#34;none&#34; for a configuration option is sometimes interpreted as a filename but was intended to mean that a feature is disabled. 07/10/2026 07/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 3.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   }
 ]
