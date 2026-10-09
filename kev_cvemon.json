@@ -1,8 +1,8 @@
 [
   {
     "fecha": "2026-10-09",
-    "cve": "CVE-2026-107104",
-    "descripcion": "This vulnerability exists in the ERP system due to unsafe deserialization of user controlled data in the affected functionality. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted data to the vulnerable functionality of the ..."
+    "cve": "CVE-2026-107103",
+    "descripcion": "This vulnerability exists in the ERP system due to insufficient validation and parameterization of user supplied input in an API endpoint. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted input to the vulnerable ..."
   },
   {
     "fecha": "2026-10-09",
@@ -11,8 +11,8 @@
   },
   {
     "fecha": "2026-10-09",
-    "cve": "CVE-2026-107103",
-    "descripcion": "This vulnerability exists in the ERP system due to insufficient validation and parameterization of user supplied input in an API endpoint. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted input to the vulnerable ..."
+    "cve": "CVE-2026-107104",
+    "descripcion": "This vulnerability exists in the ERP system due to unsafe deserialization of user controlled data in the affected functionality. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted data to the vulnerable functionality of the ..."
   },
   {
     "fecha": "2026-10-09",
@@ -23,6 +23,11 @@
     "fecha": "2026-10-09",
     "cve": "CVE-2026-55674",
     "descripcion": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, an unauthenticated attacker could send a single request with a crafted color_scheme_id (or dark_scheme_id) cookie to inject arbitrary HTML into a Discourse page. Because the ..."
+  },
+  {
+    "fecha": "2026-10-09",
+    "cve": "CVE-2026-55420",
+    "descripcion": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, under certain non-default configurations, processing of PDF uploads could be exploited to obtain RCE on the server. This issue is patched in 2026.6.0, 2026.5.1, 2026.4.2, and ..."
   },
   {
     "fecha": "2026-10-09",
@@ -43,10 +48,5 @@
     "fecha": "2026-10-09",
     "cve": "CVE-2025-54769",
     "descripcion": "An authenticated, read-only user can upload a file and perform a directory traversal to have the uploaded file placed in a location of their choosing. This can be used to overwrite existing PERL modules within the application to achieve remote code execution (RCE) by an ..."
-  },
-  {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-63277",
-    "descripcion": "LibreOffice Calc can link a cell range to an external data source, and the link is saved in the document. A document could name a Java database driver for such a link to be loaded from a remote location, so opening the document could run Java code from that location. In fixed ..."
   }
 ]
