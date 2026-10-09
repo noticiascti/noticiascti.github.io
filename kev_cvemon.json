@@ -1,13 +1,13 @@
 [
   {
     "fecha": "2026-10-09",
-    "cve": "CVE-2026-107104",
-    "descripcion": "This vulnerability exists in the ERP system due to unsafe deserialization of user controlled data in the affected functionality. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted data to the vulnerable functionality of the ..."
+    "cve": "CVE-2026-107102",
+    "descripcion": "This vulnerability exists in the ERP system due to improper validation of payment callback parameters and inadequate authentication controls in API endpoint. An unauthenticated remote attacker could exploit this vulnerability by manipulating the parameter to cause the ..."
   },
   {
     "fecha": "2026-10-09",
-    "cve": "CVE-2026-107102",
-    "descripcion": "This vulnerability exists in the ERP system due to improper validation of payment callback parameters and inadequate authentication controls in API endpoint. An unauthenticated remote attacker could exploit this vulnerability by manipulating the parameter to cause the ..."
+    "cve": "CVE-2026-107104",
+    "descripcion": "This vulnerability exists in the ERP system due to unsafe deserialization of user controlled data in the affected functionality. An unauthenticated remote attacker could exploit this vulnerability by supplying specially crafted data to the vulnerable functionality of the ..."
   },
   {
     "fecha": "2026-10-09",
@@ -31,22 +31,22 @@
   },
   {
     "fecha": "2026-10-09",
-    "cve": "CVE-2026-106446",
-    "descripcion": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars.compile() and Handlebars.precompile() accept pre-parsed AST objects while validating only selected PathExpression, NumberLiteral, and BooleanLiteral values. This ..."
-  },
-  {
-    "fecha": "2026-10-09",
     "cve": "CVE-2026-86360",
     "descripcion": "Dell System Update, versions prior to 2.3.0.0, contains an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Filesystem access for ..."
   },
   {
     "fecha": "2026-10-09",
-    "cve": "CVE-2026-106445",
-    "descripcion": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. ..."
+    "cve": "CVE-2025-54769",
+    "descripcion": "An authenticated, read-only user can upload a file and perform a directory traversal to have the uploaded file placed in a location of their choosing. This can be used to overwrite existing PERL modules within the application to achieve remote code execution (RCE) by an ..."
   },
   {
     "fecha": "2026-10-09",
-    "cve": "CVE-2025-54769",
-    "descripcion": "An authenticated, read-only user can upload a file and perform a directory traversal to have the uploaded file placed in a location of their choosing. This can be used to overwrite existing PERL modules within the application to achieve remote code execution (RCE) by an ..."
+    "cve": "CVE-2026-106446",
+    "descripcion": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars.compile() and Handlebars.precompile() accept pre-parsed AST objects while validating only selected PathExpression, NumberLiteral, and BooleanLiteral values. This ..."
+  },
+  {
+    "fecha": "2026-10-09",
+    "cve": "CVE-2026-106445",
+    "descripcion": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. ..."
   }
 ]
