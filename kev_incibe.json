@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-42695",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in FolioVision FV Flowplayer Video Player fv-wordpress-flowplayer allows Stored XSS.This issue affects FV Flowplayer Video Player: from n/a through 7.5.54.7212. 09/10/2026 09/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108506",
+    "descripcion": "ZTE Z80 Ultra&#39;s system interfaces do not have robust invocation authentication, with inadequate access control. Third-party apps may call the interfaces through reflection and retrieve relevant information. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-48484",
-    "descripcion": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev101, the API `rpc` function in `api_blueprint.py` handles `multipart/form-data` uploads by reading the whole content of the uploaded file into memory with `file.read()`. This occurs before the data is sent to the underlying function. Since there is no size limit set at this point, a large file upload can exhaust the server&#39;s available memory which led to process termination. Version 0.5.0b3.dev101 contains a patch. 09/10/2026 09/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-106139",
+    "descripcion": "In Progress® Kendo UI for Vue (@progress/kendo-vue-charts) starting with version 2.5.0 and prior to 16.2.0, the default Chart tooltip renders the formatted point value as raw HTML without encoding, in both the single-point and the shared tooltip. An attacker with low privileges who can influence a string value bound to the chart can supply HTML containing event handlers that execute JavaScript in a user&#39;s browser when the user hovers over the affected data point. Successful exploitation can compromise the confidentiality and integrity of data accessible to the affected application. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-75345",
-    "descripcion": "OpENer v2.3.0 / commit 76b95cf contains an out-of-bounds read in the unconnected explicit messaging path. This allows a remote attacker to cause a denial of service. 09/10/2026 09/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-106138",
+    "descripcion": "In Progress® KendoReact (@progress/kendo-react-charts) starting with version 1.1.0 and prior to 16.2.0, the default Chart tooltip renders the formatted point value as raw HTML without encoding, in both the single-point and the shared tooltip. An attacker with low privileges who can influence a string value bound to the chart can supply HTML containing event handlers that execute JavaScript in a user&#39;s browser when the user hovers over the affected data point. Successful exploitation can compromise the confidentiality and integrity of data accessible to the affected application. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-75349",
-    "descripcion": "EIPStackGroup OpENer v2.3.0/master up to commit 76b95cf contains an out-of-bounds read vulnerability in Connection Manager request parsing. This allows a remote attacker to cause a denial of service. 09/10/2026 09/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-91136",
+    "descripcion": "The Divi Plus plugin for WordPress is vulnerable to Arbitrary File Read in versions up to, and including, 2.4.0 via the &#39;svg_image&#39; parameter of the /wp-json/elicus/v1/dipl-modules/svg-animator REST endpoint. This is due to the endpoint&#39;s permission callback (SVGAnimatorController::index_permission) returning true unconditionally combined with insufficient validation of the &#39;svg_image&#39; input — sanitize_text_field() and esc_html() do not restrict filesystem paths, the file:// stream wrapper, or arbitrary URLs — before it is passed to file_get_contents() (with a wp_remote_get() fallback) and the raw response body is returned in the JSON &#39;html&#39; field. This makes it possible for unauthenticated attackers to read arbitrary files on the affected site&#39;s server which may make remote code execution possible. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-107814",
-    "descripcion": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, MariaDB RPM packages created the dedicated mysql service account with the database data directory as its home directory. A database user with the FILE privilege could write startup dot-files such as .bash_profile into $HOME, and those files could execute when an administrator opened a login shell for the mysql account. Debian packages are not affected because they use /nonexistent as the account home. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2. 09/10/2026 09/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-4791",
+    "descripcion": "The PeproDev Ultimate Profile Solutions plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the `logout-url` shortcode&#39;s &#39;button&#39; attribute in all versions up to, and including, 8.2.36 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-108110",
-    "descripcion": "MOVO through 0.2.3 contains an authorization bypass vulnerability in the chat-api document endpoints that allows authenticated users to access other users&#39; stored objects by supplying arbitrary object paths. Attackers who know a target&#39;s object path can send it to /api/documents/fetch or /api/documents/save-blueprint to read private documents and overwrite presentation blueprints. 09/10/2026 09/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108505",
+    "descripcion": "ZTE Z80 Ultra has a local information disclosure vulnerability. Third-party applications can capture data returned by system interfaces to obtain device-related information. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-108112",
-    "descripcion": "ruoyi-ai 3.0.0 through 3.1.0 contains a missing authorization vulnerability that allows authenticated users to delete other users&#39; workflows via POST /workflow/del/{uuid}. Attackers can obtain workflow UUIDs from GET /workflow/search and supply them because softDelete() skips the PrivilegeUtil.checkAndGetByUuid() ownership check, removing owners&#39; workflows. 09/10/2026 09/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-107657",
+    "descripcion": "The HivePress – Business Directory, Listings & Classified Ads Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;&#39; parameter in all versions up to, and including, 1.7.31 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires an administrator to have configured a text-type custom user attribute whose display format places %value% inside an HTML attribute context (e.g., the documented pattern &lt;a href=&#34;%value%&#34;&gt;Custom link&lt;/a&gt;), and for front-end user profiles to be enabled — both of which reflect the plugin&#39;s standard, documented configuration. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-108113",
-    "descripcion": "ILIAS before 9.24, 10.12, and 11.5 contains an unrestricted file upload vulnerability in QTI question import image handling (ilQtiMatImageSecurity) that allows authenticated authors to write executable files. Attackers with question pool import rights can import a crafted archive writing a .htaccess and PHP file to the web-served image directory, achieving remote code execution as the web server user. 09/10/2026 09/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-104722",
+    "descripcion": "The Listdom: AI-powered Business Directory with Classifieds Ads Listings plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the LSD_Menus_IX_CSV::import function in all versions up to, and including, 6.1.2 This makes it possible for authenticated attackers, with administrator-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-107809",
-    "descripcion": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, AuthRequired accepts a browser-managed token cookie as an API credential after the front end stores the JWT in that cookie. Because management endpoints do not universally require a CSRF token or perform Origin or Referer validation, a remote attacker can induce a logged-in administrator&#39;s browser to submit authenticated cross-site state-changing requests, including POST /api/configs. The attack requires an administrator account without OTP/Passkey or a target endpoint that does not require secure-session proof. The attacker cannot read the cross-origin response but can modify Nginx configuration, trigger reloads, or invoke other management operations reachable with the victim&#39;s session. This issue is fixed in version 2.5.0. 09/10/2026 09/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-97396",
+    "descripcion": "The Email Marketing for WordPress and WooCommerce – Retainful plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;data&#39; parameter in all versions up to, and including, 1.0.10 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-09",
-    "cve": "CVE-2026-107811",
-    "descripcion": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, ordinary authenticated users can access /api/nodes and /api/nodes/:id, whose responses serialize the node token field. The same token is accepted as X-Node-Secret by AuthRequired and maps the request to initUser, allowing the user to impersonate a trusted node against a reachable cluster member. This cross-node authentication bypass can expose sensitive management operations, including configuration synchronization and service restart. This issue is fixed in version 2.5.0. 09/10/2026 09/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-97340",
+    "descripcion": "The Avada | Website Builder For WordPress & WooCommerce theme for WordPress is vulnerable to Stored Cross-Site Scripting via the user profile &#39;Author Page&#39; social link contact-method fields (author_facebook, author_twitter, author_linkedin, author_dribble, author_whatsapp, author_email) in versions up to, and including, 7.16.1. Avada registers these fields through the user_contactmethods filter and, on the author archive, emits them inside an anchor href using only esc_attr() in Fusion_Social_Icon::get_markup(), which escapes HTML metacharacters but does not reject dangerous URL schemes such as javascript:. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses their author page and clicks the injected social icon (a click is required, and the site must have &#39;Open Social Icons in a New Window&#39; set to Off so the browser doesn&#39;t block the javascript: URL from opening in a new tab). 10/10/2026 10/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
