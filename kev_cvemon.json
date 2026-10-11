@@ -26,23 +26,23 @@
   },
   {
     "fecha": "2026-10-11",
+    "cve": "CVE-2026-8481",
+    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 contain a critical remote code execution vulnerability in the code validation API endpoint. The POST /api/v1/validate/code endpoint accepts user-supplied Python code and executes it directly using Python's built-in exec() function without ..."
+  },
+  {
+    "fecha": "2026-10-11",
     "cve": "CVE-2026-9198",
     "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments"
   },
   {
     "fecha": "2026-10-11",
+    "cve": "CVE-2026-9103",
+    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN ..."
+  },
+  {
+    "fecha": "2026-10-11",
     "cve": "CVE-2026-100829",
     "descripcion": "Mitigation bypass in the DOM: Security component. This vulnerability was fixed in Firefox ESR 153.4, Thunderbird 157, Thunderbird 153.4, and Firefox 157."
-  },
-  {
-    "fecha": "2026-10-11",
-    "cve": "CVE-2026-100828",
-    "descripcion": "Mitigation bypass in the Bookmarks & History component. This vulnerability was fixed in Firefox ESR 153.4, Thunderbird 157, Thunderbird 153.4, and Firefox 157."
-  },
-  {
-    "fecha": "2026-10-11",
-    "cve": "CVE-2026-100816",
-    "descripcion": "Site isolation issue in the DOM: Networking component. This vulnerability was fixed in Firefox ESR 153.4, Thunderbird 157, Thunderbird 153.4, and Firefox 157."
   },
   {
     "fecha": "2026-10-11",
