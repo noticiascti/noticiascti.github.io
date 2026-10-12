@@ -26,13 +26,13 @@
   },
   {
     "fecha": "2026-10-12",
-    "cve": "CVE-2026-9198",
-    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments"
+    "cve": "CVE-2026-9103",
+    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN ..."
   },
   {
     "fecha": "2026-10-12",
-    "cve": "CVE-2026-9103",
-    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN ..."
+    "cve": "CVE-2026-9198",
+    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments"
   },
   {
     "fecha": "2026-10-12",
@@ -41,12 +41,12 @@
   },
   {
     "fecha": "2026-10-12",
-    "cve": "CVE-2026-0257",
-    "descripcion": "Authentication bypass vulnerabilities in the GlobalProtect portal and gateway of Palo Alto Networks PAN-OS® software allows the attacker to bypass security restrictions and establish an unauthorized VPN connection. Panorama and Cloud NGFW are not impacted by these issues."
+    "cve": "CVE-2026-79992",
+    "descripcion": "A flaw was found in Emacs TRAMP. A local attacker could exploit this vulnerability by processing maliciously crafted filenames. This occurs because TRAMP concatenates login arguments without proper sanitization, which are then passed to a local shell. Successful exploitation ..."
   },
   {
     "fecha": "2026-10-12",
-    "cve": "CVE-2026-8451",
-    "descripcion": "Insufficient input validation in NetScaler ADC and NetScaler Gateway leading to memory overread if NetScaler ADC or NetScaler Gateway is configured as a SAML IDP"
+    "cve": "CVE-2026-0257",
+    "descripcion": "Authentication bypass vulnerabilities in the GlobalProtect portal and gateway of Palo Alto Networks PAN-OS® software allows the attacker to bypass security restrictions and establish an unauthorized VPN connection. Panorama and Cloud NGFW are not impacted by these issues."
   }
 ]
