@@ -21,13 +21,13 @@
   },
   {
     "fecha": "2026-10-12",
-    "cve": "CVE-2026-9198",
-    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments"
+    "cve": "CVE-2026-9103",
+    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN ..."
   },
   {
     "fecha": "2026-10-12",
-    "cve": "CVE-2026-9103",
-    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN ..."
+    "cve": "CVE-2026-9198",
+    "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments"
   },
   {
     "fecha": "2026-10-12",
