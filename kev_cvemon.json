@@ -6,21 +6,6 @@
   },
   {
     "fecha": "2026-10-13",
-    "cve": "CVE-2026-82078",
-    "descripcion": "An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an ..."
-  },
-  {
-    "fecha": "2026-10-13",
-    "cve": "CVE-2026-81578",
-    "descripcion": "An improper access control vulnerability exists in the web management interface of PaperCut MF and PaperCut NG. Under specific conditions, unauthenticated remote requests targeting administrative functions can trigger backend actions prior to the completion of access validation ..."
-  },
-  {
-    "fecha": "2026-10-13",
-    "cve": "CVE-2026-82077",
-    "descripcion": "An improper limitation of a pathname to a restricted directory (path traversal) vulnerability in the Scan-to-Fax component of PaperCut NG and PaperCut MF allows an authenticated administrator to execute arbitrary commands on the underlying host via crafted fax provider settings."
-  },
-  {
-    "fecha": "2026-10-13",
     "cve": "CVE-2026-8481",
     "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 contain a critical remote code execution vulnerability in the code validation API endpoint. The POST /api/v1/validate/code endpoint accepts user-supplied Python code and executes it directly using Python's built-in exec() function without ..."
   },
@@ -48,5 +33,20 @@
     "fecha": "2026-10-13",
     "cve": "CVE-2026-0257",
     "descripcion": "Authentication bypass vulnerabilities in the GlobalProtect portal and gateway of Palo Alto Networks PAN-OS® software allows the attacker to bypass security restrictions and establish an unauthorized VPN connection. Panorama and Cloud NGFW are not impacted by these issues."
+  },
+  {
+    "fecha": "2026-10-13",
+    "cve": "CVE-2026-88771",
+    "descripcion": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading ..."
+  },
+  {
+    "fecha": "2026-10-13",
+    "cve": "CVE-2026-88772",
+    "descripcion": "Vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway. This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to Remote Code Execution or ..."
+  },
+  {
+    "fecha": "2026-10-13",
+    "cve": "CVE-2026-8451",
+    "descripcion": "Insufficient input validation in NetScaler ADC and NetScaler Gateway leading to memory overread if NetScaler ADC or NetScaler Gateway is configured as a SAML IDP"
   }
 ]
