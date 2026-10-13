@@ -6,6 +6,11 @@
   },
   {
     "fecha": "2026-10-13",
+    "cve": "CVE-2026-79992",
+    "descripcion": "A flaw was found in Emacs TRAMP. A local attacker could exploit this vulnerability by processing maliciously crafted filenames. This occurs because TRAMP concatenates login arguments without proper sanitization, which are then passed to a local shell. Successful exploitation ..."
+  },
+  {
+    "fecha": "2026-10-13",
     "cve": "CVE-2026-8481",
     "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 contain a critical remote code execution vulnerability in the code validation API endpoint. The POST /api/v1/validate/code endpoint accepts user-supplied Python code and executes it directly using Python's built-in exec() function without ..."
   },
@@ -18,11 +23,6 @@
     "fecha": "2026-10-13",
     "cve": "CVE-2026-9103",
     "descripcion": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN ..."
-  },
-  {
-    "fecha": "2026-10-13",
-    "cve": "CVE-2026-79992",
-    "descripcion": "A flaw was found in Emacs TRAMP. A local attacker could exploit this vulnerability by processing maliciously crafted filenames. This occurs because TRAMP concatenates login arguments without proper sanitization, which are then passed to a local shell. Successful exploitation ..."
   },
   {
     "fecha": "2026-10-13",
