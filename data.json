@@ -18238,5 +18238,80 @@
     "pais": "USA",
     "sector": "Tecnología",
     "url": "https://thehackernews.com/2026/10/openai-employee-arrested-for-allegedly.html"
+  },
+  {
+    "timestamp": "2026-10-14T02:22:21",
+    "categoria": "Incidentes y Fugas de Datos en Empresas",
+    "resumen": "Se ha descubierto una vulnerabilidad crítica de ejecución remota de código (RCE) en pfSense CE 2.9.0-DEVELOPMENT, con un CVSS de 8.8 (High).\nLa falla, clasificada como CWE-78 (Command Injection), reside en la configuración de interfaces QinQ y permite a un usuario autenticado ejecutar comandos como root.\nAunque aún no tiene un CVE oficial para esta instancia específica, el investigador @abraxas_null ha publicado una prueba de concepto en GitHub.\nEsta vulnerabilidad es relevante para las empresas que utilizan este firewall, dado su potencial impacto corporativo.",
+    "palabras_claves": [
+      "vulnerabilidad",
+      "RCE",
+      "pfSense",
+      "Command Injection",
+      "firewall"
+    ],
+    "pais": "",
+    "sector": "",
+    "url": "https://abraxaslabs.tech/research/pfsense-qinq-parent-if"
+  },
+  {
+    "timestamp": "2026-10-14T02:22:43",
+    "categoria": "Prevención / Innovación en el Sector Financiero",
+    "resumen": "Se ha identificado una vulnerabilidad 0-day de alto riesgo (CVSS 8.8) en pfSense CE 2.9.0-DEVELOPMENT. Un desbordamiento CRLF en el asistente de OpenVPN permite la ejecución remota de código (RCE). La falla se produce al no validar los campos 'Default Domain' o 'NetBIOS scope', permitiendo la inyección de comandos OpenVPN 'up'. La solución implica la sanitización de las entradas para prevenir esta inyección.",
+    "palabras_claves": [
+      "0-day",
+      "pfSense",
+      "OpenVPN",
+      "RCE",
+      "vulnerabilidad"
+    ],
+    "pais": "",
+    "sector": "Tecnología",
+    "url": "https://abraxaslabs.tech/research/pfsense-openvpn-wizard-crlf"
+  },
+  {
+    "timestamp": "2026-10-14T02:23:05",
+    "categoria": "Incidentes y Fugas de Datos en Empresas",
+    "resumen": "Se ha descubierto una vulnerabilidad de día cero (0-day) de ejecución remota de código (RCE) en pfSense CE 2.9.0-DEVELOPMENT. Este fallo permite a un usuario con acceso limitado a la GUI obtener privilegios de root debido a la manipulación de valores CARP VHID no escapados, lo que lleva a la inyección de comandos. La vulnerabilidad, con un riesgo alto (CVSS 8.8 High), afecta a pfSense, una solución de firewall de código abierto ampliamente utilizada.",
+    "palabras_claves": [
+      "0-day",
+      "vulnerabilidad",
+      "Remote Code Execution",
+      "pfSense",
+      "command injection"
+    ],
+    "pais": "",
+    "sector": "Tecnología",
+    "url": "https://abraxaslabs.tech/research/pfsense-carp-vhid"
+  },
+  {
+    "timestamp": "2026-10-14T02:23:34",
+    "categoria": "Prevención / Innovación en el Sector Financiero",
+    "resumen": "Se ha descubierto una vulnerabilidad crítica de ejecución remota de código (RCE, CVSS 8.8 High) en pfSense CE 2.9.0-DEVELOPMENT. La falla (CWE-78) permite la inyección de comandos a través del parámetro 'number' no validado en la función de modelador de tráfico, ejecutándose como root vía PHP-FPM. Aún no se ha asignado un CVE.",
+    "palabras_claves": [
+      "pfSense",
+      "vulnerabilidad",
+      "RCE",
+      "CWE-78",
+      "command injection"
+    ],
+    "pais": "",
+    "sector": "",
+    "url": "https://abraxaslabs.tech/research/pfsense-limiter-number"
+  },
+  {
+    "timestamp": "2026-10-14T02:24:09",
+    "categoria": "Prevención / Innovación en el Sector Financiero",
+    "resumen": "Abraxas Labs ha descubierto una vulnerabilidad 0-day de ejecución remota de código (RCE) de alta gravedad (CVSS 8.8) en pfSense CE 2.9.0-DEVELOPMENT. La falla permite a un atacante autenticado inyectar 'charon.start-scripts' a través del campo 'login_banner' en IPsec Mobile debido a la falta de sanitización de entrada. La divulgación y solución propuesta para esta vulnerabilidad contribuyen a la prevención de futuros ciberataques.",
+    "palabras_claves": [
+      "0-day",
+      "vulnerabilidad",
+      "RCE",
+      "pfSense",
+      "hacking"
+    ],
+    "pais": "",
+    "sector": "",
+    "url": "https://abraxaslabs.tech/research/pfsense-ipsec-login-banner"
   }
 ]
