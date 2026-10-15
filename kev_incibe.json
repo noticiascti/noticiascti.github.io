@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2026-10-12",
+    "cve": "CVE-2026-87765",
+    "descripcion": "In the kernel apsys DVFS driver, there is a possible out-of-bounds read or hardware register corruption due to improper input validation of the frequency index. This could lead to system instability or denial of service with local privileges. 12/10/2026 12/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-12",
+    "cve": "CVE-2026-66086",
+    "descripcion": "In the modem OTA stack, there is a possible stack-based buffer overflow due to improper validation of scheduling information in SIB1 messages. This could lead to remote code execution or denial of service with no additional execution privileges needed. 12/10/2026 12/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-10-12",
+    "cve": "CVE-2026-66085",
+    "descripcion": "In modem, there is a possible information disclosure due to missing filtering of sensitive data in crash dumps. This could lead to local information disclosure with no additional execution privileges needed. 12/10/2026 12/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108585",
+    "descripcion": "argocd-mcp (Argo CD MCP Server) through 0.9.0 contains a path traversal vulnerability in the delete_application tool that allows MCP clients to reach unintended API endpoints via unvalidated applicationName values. Attackers or prompt-injected models can supply dot-segment values like ../repositories/ to send authenticated DELETE requests deleting repositories, clusters, or projects within the token&#39;s RBAC permissions. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108582",
+    "descripcion": "GenOffice through 0.11.505 contains an incorrect permissions vulnerability in its HTTP MCP server file store that allows local unprivileged users to read uploaded and generated documents. Attackers can list the world-readable genoffice-mcp-http directory under the system temporary directory to read client uploads and converted outputs, bypassing the HTTP bearer token. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108581",
+    "descripcion": "TencentCloud Octop through 1.0.2b6 contains a missing authorization vulnerability that allows authenticated low-privileged users to read stored provider API keys via GET /api/providers and GET /api/voice/providers. Attackers can query these endpoints, which only validate the JWT, to obtain plaintext LLM and voice provider API keys and abuse the upstream provider accounts. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108579",
+    "descripcion": "OpenPanel through 2.3.0 contains a CSV formula injection vulnerability that allows unauthenticated attackers to embed spreadsheet formulas by supplying crafted profile IDs to the /track endpoint. Attackers can send tracking events with profile IDs like =HYPERLINK(...) matching a cohort, so exported cohort CSVs execute formulas that exfiltrate adjacent cell data. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108554",
+    "descripcion": "PDFMathTranslate (pdf2zh) through 1.9.11 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make the server fetch arbitrary URLs via the Link input. The translate_file handler passes user URLs to download_with_limit without scheme or address validation, letting attackers reach internal services and cloud metadata endpoints and retrieve returned PDFs. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108553",
+    "descripcion": "OpenRefine through 3.10.1 contains a cross-site request forgery vulnerability in the get-rows command that allows remote attackers to execute Jython facet expressions. Attackers can lure a user to a malicious page issuing a cross-origin GET with a crafted engine parameter, executing operating system commands as the OpenRefine user. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-10",
+    "cve": "CVE-2026-108550",
+    "descripcion": "SkillHub before 0.2.22 contains an incorrect authorization vulnerability in AccountMergeService and AccountMergeController that allows authenticated attackers to take over other accounts by abusing the merge flow. Attackers can call the merge initiate endpoint with a target username or OAuth identity, receive the verification token directly, and confirm the merge to inherit the victim&#39;s API tokens, roles and namespace ownership. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  }
+]
