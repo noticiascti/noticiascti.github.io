@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-10-12",
-    "cve": "CVE-2026-87765",
-    "descripcion": "In the kernel apsys DVFS driver, there is a possible out-of-bounds read or hardware register corruption due to improper input validation of the frequency index. This could lead to system instability or denial of service with local privileges. 12/10/2026 12/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-50218",
+    "descripcion": "Akamai GPA (Guardicore Platform Agent) client on all platforms before 7.4 improperly validates JWT tokens used for seeding. By convincing a user to interact with a malicious link, an attacker can use a spoofed JWT token to inject arbitrary parameters into the client software, resulting in unauthorized reconfiguration and full compromise of the application&#39;s functionality. This attack can also be targeted against an already seeded client if the attacker knows the URL of the IDP that the client used for enrollment. 14/10/2026 14/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-12",
-    "cve": "CVE-2026-66086",
-    "descripcion": "In the modem OTA stack, there is a possible stack-based buffer overflow due to improper validation of scheduling information in SIB1 messages. This could lead to remote code execution or denial of service with no additional execution privileges needed. 12/10/2026 12/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-50215",
+    "descripcion": "A use-after-free exists in the Windows WFP packet-capture driver shipped with Akamai Guardicore Platform Agent (GPA) before 7.4. When an IPv6 proxy/redirect rule is active, a local attacker with Administrator privileges can send a single crafted outbound IPv6 packet via a raw IPV6_HDRINCL socket to trigger this at DISPATCH_LEVEL, resulting in an immediate system crash. 14/10/2026 14/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 4.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-12",
-    "cve": "CVE-2026-66085",
-    "descripcion": "In modem, there is a possible information disclosure due to missing filtering of sensitive data in crash dumps. This could lead to local information disclosure with no additional execution privileges needed. 12/10/2026 12/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-110453",
+    "descripcion": "Nix before 2.35.3, when unsandboxed on macOS or FreeBSD, incorrectly allows connections made by build users from daemon clients. 14/10/2026 14/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-10",
-    "cve": "CVE-2026-108585",
-    "descripcion": "argocd-mcp (Argo CD MCP Server) through 0.9.0 contains a path traversal vulnerability in the delete_application tool that allows MCP clients to reach unintended API endpoints via unvalidated applicationName values. Attackers or prompt-injected models can supply dot-segment values like ../repositories/ to send authenticated DELETE requests deleting repositories, clusters, or projects within the token&#39;s RBAC permissions. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-110450",
+    "descripcion": "Nix before 2.35.3 and Lix before 2.95.4 allow privilege escalation via a repair operation because it could destroy and then replace a store path before content verification. 14/10/2026 14/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-10",
-    "cve": "CVE-2026-108582",
-    "descripcion": "GenOffice through 0.11.505 contains an incorrect permissions vulnerability in its HTTP MCP server file store that allows local unprivileged users to read uploaded and generated documents. Attackers can list the world-readable genoffice-mcp-http directory under the system temporary directory to read client uploads and converted outputs, bypassing the HTTP bearer token. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-105429",
+    "descripcion": "Improper neutralization of special elements in the NetBird client SSH configuration manager (client/ssh/config/manager.go) in NetBird versions 0.60.0 through 0.74.6 allows a malicious or compromised peer to execute arbitrary commands on other NetBird client hosts. The client writes a system-wide OpenSSH drop-in file (/etc/ssh/ssh_config.d/99-netbird.conf, or the equivalent under %PROGRAMDATA%\\ssh\\ssh_config.d on Windows) that embeds each peer FQDN or hostname inside a double-quoted Match host directive without escaping. A peer name containing a double quote breaks out of the quoted context and injects arbitrary SSH configuration directives, including exec commands, which run locally as any user on the host the next time that user runs ssh. Desktop clients on Linux, macOS, Windows and FreeBSD are affected; the Android and iOS apps are not. The issue is fixed in version 0.74.7, which accepts a peer FQDN or hostname only if it is a valid DNS name. 14/10/2026 14/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-10",
-    "cve": "CVE-2026-108581",
-    "descripcion": "TencentCloud Octop through 1.0.2b6 contains a missing authorization vulnerability that allows authenticated low-privileged users to read stored provider API keys via GET /api/providers and GET /api/voice/providers. Attackers can query these endpoints, which only validate the JWT, to obtain plaintext LLM and voice provider API keys and abuse the upstream provider accounts. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-14765",
+    "descripcion": "Epic Games Unreal Engine versions up to and including 5.8.0 ship with an insecure default configuration for the LaunchURL Blueprint node (UKismetSystemLibrary::LaunchURL). The URL scheme filter (FURLRequestFilter) is empty by default, which permits all URL schemes. On Windows, this results in a call to ShellExecuteW() with the open verb, so a supplied file:/// URI causes the referenced file to be executed. Any Unreal Engine game that loads user-generated content containing Blueprints is vulnerable to command execution via a malicious local file or a remote file on a WebDAV share. This is an instance of CWE-1188 (Initialization of a Resource with an Insecure Default). 14/10/2026 14/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-10",
-    "cve": "CVE-2026-108579",
-    "descripcion": "OpenPanel through 2.3.0 contains a CSV formula injection vulnerability that allows unauthenticated attackers to embed spreadsheet formulas by supplying crafted profile IDs to the /track endpoint. Attackers can send tracking events with profile IDs like =HYPERLINK(...) matching a cohort, so exported cohort CSVs execute formulas that exfiltrate adjacent cell data. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-110445",
+    "descripcion": "TeamPlus Messenger developed by Teamplus Technology has a Code Injection vulnerability. Unauthenticated remote attackers can trick users into interacting with crafted content to inject and execute arbitrary JavaScript. After the user confirms a Windows security warning, attackers can execute arbitrary code with the privileges of the current user. 14/10/2026 14/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-10",
-    "cve": "CVE-2026-108554",
-    "descripcion": "PDFMathTranslate (pdf2zh) through 1.9.11 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make the server fetch arbitrary URLs via the Link input. The translate_file handler passes user URLs to download_with_limit without scheme or address validation, letting attackers reach internal services and cloud metadata endpoints and retrieve returned PDFs. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-110444",
+    "descripcion": "TeamPlus Messenger developed by Teamplus Technology has a Code Injection vulnerability. Unauthenticated remote attackers can trick users into opening a crafted link to inject and execute arbitrary JavaScript. After the user confirms a Windows security warning, attackers can execute arbitrary code with the privileges of the current user. 14/10/2026 14/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
-    "fecha": "2026-10-10",
-    "cve": "CVE-2026-108553",
-    "descripcion": "OpenRefine through 3.10.1 contains a cross-site request forgery vulnerability in the get-rows command that allows remote attackers to execute Jython facet expressions. Attackers can lure a user to a malicious page issuing a cross-origin GET with a crafted engine parameter, executing operating system commands as the OpenRefine user. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-86573",
+    "descripcion": "Out-of-bounds write vulnerability in Hitachi Disk Array Driver for AIX and Hitachi Disk Array Driver for Virtual I/O Server. This issue affects Hitachi Disk Array Driver for AIX: from 01-00 before 01-23-/A; Hitachi Disk Array Driver for Virtual I/O Server: from 01-04 before 01-23-/A. 14/10/2026 14/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-10",
-    "cve": "CVE-2026-108550",
-    "descripcion": "SkillHub before 0.2.22 contains an incorrect authorization vulnerability in AccountMergeService and AccountMergeController that allows authenticated attackers to take over other accounts by abusing the merge flow. Attackers can call the merge initiate endpoint with a target username or OAuth identity, receive the verification token directly, and confirm the merge to inherit the victim&#39;s API tokens, roles and namespace ownership. 10/10/2026 10/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-14",
+    "cve": "CVE-2026-82715",
+    "descripcion": "Insecure Temporary File vulnerability in Hitachi Disk Array Driver for AIX and Hitachi Disk Array Driver for Virtual I/O Server. This issue affects Hitachi Disk Array Driver for AIX: from 01-00 before 01-23-/A; Hitachi Disk Array Driver for Virtual I/O Server: from 01-04 before 01-23-/A. 14/10/2026 14/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
