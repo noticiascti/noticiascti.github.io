@@ -36,17 +36,17 @@
   },
   {
     "fecha": "2026-10-20",
-    "cve": "CVE-2026-84568",
-    "descripcion": "A path traversal issue was addressed with improved path validation. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. An attacker with control of a network directory server may be able to execute arbitrary code with root privileges."
+    "cve": "CVE-2026-96654",
+    "descripcion": "Plex Media Server before 1.43.3.10861 does not correctly neutralize URL values included in 'searchOne,' allowing an attacker to call other plugins' functions and supply their own parameters."
+  },
+  {
+    "fecha": "2026-10-20",
+    "cve": "CVE-2026-96652",
+    "descripcion": "Plex Media Server before 1.43.3.10861 allows SSRF via '/player/timeline'. An attacker using any X-Plex-Token value can include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination."
   },
   {
     "fecha": "2026-10-20",
     "cve": "CVE-2026-99999",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: validate checksum_start before completing checksum If a packet with bad checksum metadata gets into the ipv4 stack, skb_checksum_help can corrupt the network header and cause a bunch of mischief. This ..."
-  },
-  {
-    "fecha": "2026-10-20",
-    "cve": "CVE-2024-47575",
-    "descripcion": "A missing authentication for critical function in FortiManager 7.6.0, FortiManager 7.4.0 through 7.4.4, FortiManager 7.2.0 through 7.2.7, FortiManager 7.0.0 through 7.0.12, FortiManager 6.4.0 through 6.4.14, FortiManager 6.2.0 through 6.2.12, Fortinet FortiManager Cloud 7.4.1 ..."
   }
 ]
