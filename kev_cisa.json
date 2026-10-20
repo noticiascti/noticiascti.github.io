@@ -1,5 +1,47 @@
 [
   {
+    "fecha": "2026-10-20",
+    "cve": "CVE-2026-106931",
+    "vendor": "EG Secure Solutions",
+    "producto": "SiteGuard Server Edition",
+    "descripcion": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product."
+  },
+  {
+    "fecha": "2026-10-20",
+    "cve": "CVE-2026-96656",
+    "vendor": "Plex",
+    "producto": "Media Server",
+    "descripcion": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655."
+  },
+  {
+    "fecha": "2026-10-20",
+    "cve": "CVE-2026-96655",
+    "vendor": "Plex",
+    "producto": "Media Server",
+    "descripcion": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656."
+  },
+  {
+    "fecha": "2026-10-20",
+    "cve": "CVE-2026-96654",
+    "vendor": "Plex",
+    "producto": "Media Server",
+    "descripcion": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656."
+  },
+  {
+    "fecha": "2026-10-20",
+    "cve": "CVE-2026-96652",
+    "vendor": "Plex",
+    "producto": "Media Server",
+    "descripcion": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656."
+  },
+  {
+    "fecha": "2026-10-20",
+    "cve": "CVE-2026-110936",
+    "vendor": "Siemens",
+    "producto": "Software Center",
+    "descripcion": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application."
+  },
+  {
     "fecha": "2026-10-16",
     "cve": "CVE-2026-102764",
     "vendor": "BeyondTrust",
