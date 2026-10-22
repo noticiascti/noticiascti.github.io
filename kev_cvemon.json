@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-10-22",
+    "cve": "CVE-2026-81983",
+    "descripcion": "Acrobat Reader is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
+  },
+  {
+    "fecha": "2026-10-22",
     "cve": "CVE-2026-109618",
     "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   },
@@ -8,11 +13,6 @@
     "fecha": "2026-10-22",
     "cve": "CVE-2026-109619",
     "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
-  },
-  {
-    "fecha": "2026-10-22",
-    "cve": "CVE-2026-81983",
-    "descripcion": "Acrobat Reader is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
   },
   {
     "fecha": "2026-10-22",
