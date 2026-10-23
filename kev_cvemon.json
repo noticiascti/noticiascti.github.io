@@ -41,12 +41,12 @@
   },
   {
     "fecha": "2026-10-23",
-    "cve": "CVE-2026-105482",
-    "descripcion": "A flaw in Node.js DNS resolution allows hostnames containing a NUL byte to be silently truncated by the dns.resolve*() functions and dns.reverse(). This is an incomplete fix of CVE-2026-48930, which only covered dns.lookup() and the net/tls host options. Because the name is ..."
+    "cve": "CVE-2026-106069",
+    "descripcion": "A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`. `tls.checkServerIdentity()` ..."
   },
   {
     "fecha": "2026-10-23",
-    "cve": "CVE-2026-106069",
-    "descripcion": "A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`. `tls.checkServerIdentity()` ..."
+    "cve": "CVE-2026-105482",
+    "descripcion": "A flaw in Node.js DNS resolution allows hostnames containing a NUL byte to be silently truncated by the dns.resolve*() functions and dns.reverse(). This is an incomplete fix of CVE-2026-48930, which only covered dns.lookup() and the net/tls host options. Because the name is ..."
   }
 ]
