@@ -11,18 +11,18 @@
   },
   {
     "fecha": "2026-10-23",
-    "cve": "CVE-2026-105481",
-    "descripcion": "Currently trending CVE - Hype Score: 19"
+    "cve": "CVE-2026-106072",
+    "descripcion": "A flaw in Node.js TLS hostname verification allows a certificate with only a DNS SAN to authenticate an IP endpoint when the client connects using a non-canonical IPv4 spelling, such as `0177.0.0.1`, `0x7f.0.0.1`, `2130706433` or `127.1`. `tls.checkServerIdentity()` did not ..."
   },
   {
     "fecha": "2026-10-23",
-    "cve": "CVE-2026-106072",
-    "descripcion": "Currently trending CVE - Hype Score: 19"
+    "cve": "CVE-2026-105481",
+    "descripcion": "A flaw in Node.js HTTP Agent connection reuse can cause a client to accept as valid a response that was sent before the client has sent the request. This is an incomplete fix of CVE-2026-48931. The guard that destroys idle keep-alive sockets when unexpected data arrives only ..."
   },
   {
     "fecha": "2026-10-23",
     "cve": "CVE-2026-106074",
-    "descripcion": "Currently trending CVE - Hype Score: 19"
+    "descripcion": "A flaw in Node.js `crypto` causes the internal entropy caches used by `crypto.randomUUID()`, `crypto.randomUUIDv7()`, and `crypto.randomInt()` to be saved into user-land startup snapshots (`--build-snapshot`) and single executable applications built with `useSnapshot`. If any ..."
   },
   {
     "fecha": "2026-10-23",
@@ -42,11 +42,11 @@
   {
     "fecha": "2026-10-23",
     "cve": "CVE-2026-105482",
-    "descripcion": "Currently trending CVE - Hype Score: 1"
+    "descripcion": "A flaw in Node.js DNS resolution allows hostnames containing a NUL byte to be silently truncated by the dns.resolve*() functions and dns.reverse(). This is an incomplete fix of CVE-2026-48930, which only covered dns.lookup() and the net/tls host options. Because the name is ..."
   },
   {
     "fecha": "2026-10-23",
     "cve": "CVE-2026-106069",
-    "descripcion": "Currently trending CVE - Hype Score: 1"
+    "descripcion": "A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`. `tls.checkServerIdentity()` ..."
   }
 ]
