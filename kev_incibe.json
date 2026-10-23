@@ -1,6 +1,16 @@
 [
   {
     "fecha": "2026-10-23",
+    "cve": "CVE-2026-87901",
+    "descripcion": "Improper sanitization in the registration module allows reflected Cross-Site Scripting. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-115810",
+    "descripcion": "Tandoor Recipes before 2.7.0 contains a server-side request forgery vulnerability in the Pestle importer that allows authenticated low-privileged users to force the server to issue GET requests to arbitrary internal or external hosts by crafting a malicious image URL in a Pestle JSON import file. Attackers can exploit the raw requests.get call in cookbook/integration/pestle.py, which bypasses the application&#39;s centralized requests-hardened SSRF filter, to reach internal-only endpoints, perform port/service discovery, and exfiltrate internal responses via the stored recipe image. 23/10/2026 23/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-23",
     "cve": "CVE-2026-52356",
     "descripcion": "An OS command injection vulnerability in the /htdocs/web/diagnostic.php endpoint of D-Link DAP1160L A1_FW101WWb04 allows attackers to execute arbitrary commands via injecting arbitrary shell metacharacters. 23/10/2026 23/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -38,15 +48,5 @@
     "fecha": "2026-10-23",
     "cve": "CVE-2026-55457",
     "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. Prior to version 26.05, Configuration.getWebApiToken returns the empty string when webapi.authorization.token is not configured. AuthorizationFilter compares the supplied token against this default without first checking that the configured token is non-empty. A request to any @AuthorizationBinding-protected endpoint with an empty ?token= value is therefore accepted. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-55444",
-    "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. Prior to version 26.05, the legacy RSS servlet (RssResolver, GET /rss/) accepts the q and filterQuery parameters and concatenates them into Solr queries without validation. The servlet predates the REST API layer and lacks the input validation present in GET /api/v1/records/rss. q forms the main query body (wrapped only in literal parentheses); filterQuery is passed directly as a Solr fq. An unauthenticated attacker can inject Solr boolean operators to break out of the wrapping and render the trailing access-condition filter-query suffix optional, so that access-restricted records are included in the generated RSS feed. The q and filterQuery parameters are the same underlying vulnerability in the same servlet; q (the main query body) has the broader scope. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-55442",
-    "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 23.03 to before version 26.05, SolrTools.cleanUpQuery() strips Solr local-parameter syntax ({!...}) from user-supplied query strings before they reach Solr. Its regex can be bypassed by wrapping the local parameter in a second pair of curly braces ({{!...}}): the outer braces are stripped, the inner {!...} survives intact, and a valid Solr local parameter is forwarded. The flaw is in the shared sanitizer, so it affects any endpoint that routes user input through cleanUpQuery. The double-brace bypass applies from v23.10 (the greedy \\{(.+)\\} regex); a related bare-!join rewrap path is present. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
