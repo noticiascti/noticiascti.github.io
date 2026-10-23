@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-97635",
-    "descripcion": "The Agent Zero Web UI before 1.15 does not correctly sanitize user-provided input in chat messages or file uploads. When Agent Zero reproduces content in the chat interface, any injected JavaScript is executed in the context of the victim’s authenticated Agent Zero Web UI session. 22/10/2026 22/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-79879",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-93336",
-    "descripcion": "Missing authorization in the unit resources download route in Canonical Juju 4.0 through 4.0.15 allows a controller-authenticated principal (a unit agent, or a user with only login permission) to read any application&#39;s charm resource in any model, including container-registry credentials, via a crafted request naming an arbitrary unit. 22/10/2026 22/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-79878",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-77157",
-    "descripcion": "ast-cli downloads two helper binaries, the Vorpal ASCA real-time engine and the SCA Resolver, from &#34;download.checkmarx.com&#34; as part of its auto-update flow, triggered by the Checkmarx’s &#34;VSCode/JetBrains&#34; extensions and by cx scan &#34;sca-realtime&#34;. Prior to the fix, the downloaded archive was not verified against a checksum before extraction and execution. An attacker able to substitute the served archive could deliver an arbitrary binary that ast-cli would extract and execute the contents of the archive, since no integrity check was performed on the download. Successful exploitation requires compromising &#34;download.checkmarx.com&#34; and replacing the served archive with one containing an attacker-controlled binary. If the served archive had been replaced that way, any developer machine or CI pipeline invoking ASCA (via Checkmarx&#39;s VSCode/JetBrains extensions) or cx scan &#34;sca-realtime&#34; on an affected version would have extracted and executed that binary in place of the intended download. The download is now verified against a published SHA-256 checksum before extraction. 22/10/2026 22/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-79877",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-77156",
-    "descripcion": "Incomplete validation of extracted archive entry paths in ast-cli&#39;s tar extraction logic on Linux and macOS (used when installing the Vorpal ASCA real-time engine and the SCA Resolver) would allow a malicious tar archive containing absolute or traversal path entries to write files outside the install directory. Windows builds were not affected, as the Windows extractor performs this path validation. Exploitation required substituting the archive served at &#34;download.checkmarx.com&#34;. An attacker able to compromise that server and replace the archive could write arbitrary, executable files to arbitrary filesystem paths via this path traversal. Extraction now validates that each entry&#39;s destination path resolves within the working directory and rejects absolute paths. 22/10/2026 22/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-79876",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-54532",
-    "descripcion": "CloudPirates Open Source Helm Charts is a collection of Helm charts. Prior to commit 271d415, pull_request_target workflow is vulnerable to cache poisoning and OIDC token theft. A pull_request_target workflow checks out fork code using github.event.pull_request.head.sha or .head.ref. This gives attacker-controlled code access to base repository secrets and tokens. A pull_request_target workflow writes to a shared Actions cache. A subsequent release or publish workflow restores from the same cache scope, allowing a poisoned cache entry to execute during release. This issue has been patched via commit 271d415. 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:N/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-79875",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-54238",
-    "descripcion": "Supabase Realtime provides Broadcast, Presence, and Postgres Changes via WebSockets. Prior to version 2.103.1, the REST broadcast endpoints accept an expired JWT when the exp claim is encoded as a JSON string instead of a JSON number. The same route rejects an expired integer exp token signed with the same tenant secret. The accepted request returns 202 and emits the broadcast to subscribers. This could allow an unauthenticated attacker can broadcast realtime messages to subscribers. The attack can be performed via the Internet/only from within the supabase project. The impact of broadcasting messages to subscribers is application specific. This issue has been patched in version 2.103.1. 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-79874",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-13599",
-    "descripcion": "Missing authentication for critical function vulnerability in ABB Ability Edgenius. This issue affects Ability Edgenius: through 3.2.3.0. 22/10/2026 22/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:I/V:D/RE:L/U:Amber Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-79873",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-115516",
-    "descripcion": "An incorrect authorization issue exposes basic account information to unauthorized remote users in KNIME Business Hub SaaS before version 1.19.0. A workaround is not possible. The same behaviour is present in on-premise KNIME Business Hub installations but it was designed as such in order to foster collaboration in isolated local environments. No information that is not already know within the company is exposed. If required, basic account information can also be turned off via configuration in on-premise installations. 22/10/2026 22/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-79872",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 9.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-114611",
-    "descripcion": "OCO-Server is a self-hosted endpoint management application for computer inventory, software deployment, and mobile device management. Prior to 1.2.3,the Apple MDM enrollment endpoint `frontend/api-mdm.php` verifies the signed enrollment-request plist with `openssl_pkcs7_verify(..., PKCS7_NOVERIFY, ...)`. `PKCS7_NOVERIFY` disables signer certificate chain and trust validation, so the signature only has to be self-consistent with whatever certificate is embedded in the PKCS#7 blob. A self-signed certificate from an unrelated attacker is accepted. Because the endpoint trusts the `SERIAL` field taken from the unverified payload, anyone who knows a registered device&#39;s serial number can sign a forged plist (`SERIAL` = victim device, attacker-chosen `UDID`) with an arbitrary self-signed certificate; POST it unauthenticated to `/api-mdm.php/profile` (Content-Type: `application/pkcs7-signature`); and receive the victim device&#39;s freshly minted MDM identity: a certificate with `CN=` issued by the server&#39;s internal MDM device CA, bundled with its private key in a PKCS#12 payload inside the returned `.mobileconfig` enrollment profile. Additionally, the victim&#39;s `mobile_device` database row is silently overwritten with the attacker-supplied `UDID` (device-record hijack). With the stolen certificate and key, the attacker can impersonate the victim device on all subsequent MDM traffic (`/checkin`, `/mdm`, `/parameters`), which authenticate callers by the certificate CN (the serial number) via `checkSignature()` in the same file. This yields control over the victim device&#39;s MDM relationship: reading its management data, replacing its push token, and disrupting or redirecting its enrollment. Version 1.2.3 fixes the issue. 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-79871",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-22",
-    "cve": "CVE-2026-114610",
-    "descripcion": "fpdf2 is a PDF creation library for Python. From 2.5.0 until 2.8.8, fpdf2&#39;s SVGObject.build_xref() passes nested SVG references to GraphicsContext.add_item(), whose default clone=True deep-copy behavior copies the complete referenced graphics tree during FPDF.image() processing. Repeating references at each nesting level makes the in-memory object count and processing work grow exponentially, allowing a small user-controlled SVG to consume excessive CPU and memory, raise MemoryError, fail PDF generation jobs, and reduce or exhaust worker capacity. ResourceAccessPolicy does not prevent the issue because the references are inline and require no external resource, XML entity, local file, or permissive network setting. This issue is fixed in version 2.8.8. 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-79870",
+    "descripcion": "No description provided 22/10/2026 22/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   }
 ]
