@@ -6,16 +6,6 @@
   },
   {
     "fecha": "2026-10-23",
-    "cve": "CVE-2026-109618",
-    "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-109619",
-    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
-  },
-  {
-    "fecha": "2026-10-23",
     "cve": "CVE-2026-111497",
     "descripcion": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, ..."
   },
@@ -28,6 +18,16 @@
     "fecha": "2026-10-23",
     "cve": "CVE-2026-106069",
     "descripcion": "Currently trending CVE - Hype Score: 19"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-109618",
+    "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-109619",
+    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
   },
   {
     "fecha": "2026-10-23",
