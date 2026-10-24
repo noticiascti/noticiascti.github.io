@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-10-23",
+    "cve": "CVE-2026-91093",
+    "descripcion": "A potential security vulnerability has been identified in HP One Agent for certain HP PC products, which might allow for escalation of privilege and/or arbitrary code execution. HP is releasing software updates to mitigate the potential vulnerability. 23/10/2026 23/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-115569",
+    "descripcion": "Fallow is a codebase intelligence tool for TypeScript and JavaScript. From 2.68.0 until 3.34.0, Fallow follows attacker-controlled Jest projects paths outside the project root through absolute paths, parent segments, dot-prefixed wildcard globs, or symlinks. In version 3.33.1, the same behavior also affects Vitest test.projects paths, Vitest inline-project extends paths, and symlinked script --config paths. Fallow parses the outside files as test-runner configuration and uses them to credit dependencies, setup files, and JSX import sources, which can change unused dependency and unused file findings in CI or agent analysis. The outside file contents are not printed or sent over the network. This issue is fixed in version 3.34.0. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-115845",
+    "descripcion": "An incomplete list of disallowed inputs in the Python code validator of the run_script tool in AWS MCP Server might allow an authenticated remote user to execute arbitrary code within their own isolated session environment via a crafted script. AWS fixed this issue service-side. No customer action is required. 23/10/2026 23/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-115863",
+    "descripcion": "ConnMan through 2.0 has a stack-based buffer overflow via a DHCPv6 Reply message. This occurs in get_domains in gdhcp/client.c. It copies a fixed NS_MAXDNAME (1025) bytes from a DHCPv6 DOMAIN_LIST (option 24) value into a 1026-byte stack buffer dns_name regardless of the actual option length, then walks DNS labels with an unbounded &#34;c += jump + 1&#34; loop. A crafted DHCPv6 REPLY with a DOMAIN_LIST option of >= 1025 non-zero bytes makes the label walk leave the buffer and read/write &#39;.&#39; past its end in attacker-chosen strides. An on-link attacker can trigger this without authentication via a forged Router Advertisement (O=1) and a forged DHCPv6 REPLY matching xid/CLIENTID with a long DOMAIN_LIST. The impact is unauthenticated on-link crash of connmand (runs as root). This was introduced in bb06c47. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-115567",
+    "descripcion": "Tokio is a runtime for writing applications with Rust. In 1.54.0, a race condition between tokio::time::Interval::poll_tick (including .tick().await) and the multi-threaded runtime&#39;s time driver could drop an internal timer entry without synchronizing with the driver thread that was firing it. The race caused a use-after-free on the timer&#39;s waker and task state in safe Rust, which could produce assertion panics, task reference-count corruption, or heap memory corruption. This issue is fixed in 1.54.1. 23/10/2026 23/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-115813",
+    "descripcion": "Server-side request forgery in the model download path in Amazon Web Services Multi Model Server 1.1.11 and earlier might allow remote actors to send requests to internal network destinations via a crafted model URL. Multi Model Server is end of life and no fixed version is available. Users should discontinue use of Multi Model Server and migrate to a supported model serving solution. 23/10/2026 23/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-23",
+    "cve": "CVE-2026-115812",
+    "descripcion": "Relative path traversal during model archive extraction in Amazon Web Services Multi Model Server 1.1.11 and earlier might allow remote actors to execute arbitrary code via a crafted model archive. Multi Model Server is end of life and no fixed version is available. Users should discontinue use of Multi Model Server and migrate to a supported model serving solution. 23/10/2026 23/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-10-23",
     "cve": "CVE-2026-87901",
     "descripcion": "Improper sanitization in the registration module allows reflected Cross-Site Scripting. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -11,42 +46,7 @@
   },
   {
     "fecha": "2026-10-23",
-    "cve": "CVE-2026-52356",
-    "descripcion": "An OS command injection vulnerability in the /htdocs/web/diagnostic.php endpoint of D-Link DAP1160L A1_FW101WWb04 allows attackers to execute arbitrary commands via injecting arbitrary shell metacharacters. 23/10/2026 23/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-50787",
-    "descripcion": "e-SIC Livre (esiclivre) v0.2.2 and earlier contains an uncontrolled resource consumption vulnerability in restrito/inc/captcha.php. The application uses user-supplied parameters (l, a, tf, ql) without validation to generate CAPTCHA images, allowing remote attackers to cause denial of service via excessive memory and CPU consumption. 23/10/2026 23/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-58497",
-    "descripcion": "Uni-CLI gives people and agents one command interface for websites, browsers, desktop applications, local tools, and MCP. Prior to version 0.225.2, Uni-CLI exposed the legacy JSON-RPC-over-HTTP MCP transport on loopback without validating browser Origin headers before routing requests. A malicious web page could send a CORS simple POST request, such as text/plain, to the local /mcp endpoint and deliver a JSON-RPC body to the dispatcher. If the user had started the local MCP HTTP transport, that page could drive tools/call requests against the user&#39;s local Uni-CLI server. The Streamable HTTP transport already enforced this browser-to-localhost boundary. The legacy stateless HTTP path did not, so the two HTTP transports had drifted. This issue is about the browser-to-localhost boundary; it does not change Uni-CLI&#39;s local-code-execution trust model. This issue has been patched in version 0.225.2. 23/10/2026 23/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-55486",
-    "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 25.08 to before version 26.05, the IIIF Auth 2.0 endpoints auth/login and auth/token in AuthorizationFlowResource accept an origin query parameter without validation and then (1) embed it into the Content-Security-Policy: frame-ancestors response header and (2) embed it into an HTML response body as a JavaScript single-quoted postMessage argument. Because the attacker controls both the login and token calls that initiate the flow, the unescaped value yields reflected XSS. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 9.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-55465",
-    "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 22.04 to before version 26.05, the unauthenticated REST endpoint GET /api/v1/index/{solrField}/spatial/search concatenates the user-supplied region query parameter directly into a Solr query string with no escaping, no local-param stripping, and no runtime schema enforcement (the OpenAPI @Schema(pattern=...) annotation is documentation-only at the JAX-RS layer). An attacker can inject Solr local-param syntax ({!parent ...}, {!join ...}) and boolean operators to make access-restricted georeferenced records match the query, bypassing the access-condition filter. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-55463",
-    "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 4.11.0 to before version 26.05, several Jakarta WebSocket endpoints in goobi-viewer-core (DownloadTaskEndpoint, CampaignEndpoint, AutocompleteEndpoint, UserEndpoint) accept connections without verifying that the associated HttpSession belongs to a logged-in user, and none validate the Origin header against an allowlist. An unauthenticated attacker can therefore connect to these endpoints; through CampaignEndpoint this allows polluting the in-process crowdsourcing page-lock map and broadcasting forged lock messages, disrupting reviewers&#39; work. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-55459",
-    "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 25.01 to before version 26.05, AuthenticationEndpoint.verifyOpenIdToken builds its verifier as JWT.require(algorithm).withIssuer(issuer).build() and does not enforce the aud claim during cryptographic validation. The aud check is performed manually afterwards via a single string-equality call, which only handles single-string aud values. In a multi-RP IdP setup, a token whose single-string aud matches the viewer&#39;s client ID but was issued for a different relying party passes the check and authenticates the attacker as the token&#39;s sub. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-55457",
-    "descripcion": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. Prior to version 26.05, Configuration.getWebApiToken returns the empty string when webapi.authorization.token is not configured. AuthorizationFilter compares the supplied token against this default without first checking that the configured token is non-empty. A request to any @AuthorizationBinding-protected endpoint with an empty ?token= value is therefore accepted. This issue has been patched in version 26.05. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-106074",
+    "descripcion": "A flaw in Node.js `crypto` causes the internal entropy caches used by `crypto.randomUUID()`, `crypto.randomUUIDv7()`, and `crypto.randomInt()` to be saved into user-land startup snapshots (`--build-snapshot`) and single executable applications built with `useSnapshot`. If any of these functions, or an API that relies on them such as `URL.createObjectURL()`, is called while the snapshot is built, every process started from that snapshot returns the same values until the cache is refilled: up to 127 UUIDs and about 1,000 `randomInt()` values. Identifiers expected to be unique can collide across processes, and values issued by one process can be predicted by observing another. This vulnerability affects Node.js **26.x**, **24.x**, and **22.x**. 23/10/2026 23/10/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
