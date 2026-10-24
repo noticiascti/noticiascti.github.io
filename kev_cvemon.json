@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-24",
     "cve": "CVE-2026-81983",
     "descripcion": "Acrobat Reader is affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
   },
   {
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-24",
     "cve": "CVE-2026-96951",
     "descripcion": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network."
   },
   {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-106072",
-    "descripcion": "A flaw in Node.js TLS hostname verification allows a certificate with only a DNS SAN to authenticate an IP endpoint when the client connects using a non-canonical IPv4 spelling, such as `0177.0.0.1`, `0x7f.0.0.1`, `2130706433` or `127.1`. `tls.checkServerIdentity()` did not ..."
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-105481",
-    "descripcion": "A flaw in Node.js HTTP Agent connection reuse can cause a client to accept as valid a response that was sent before the client has sent the request. This is an incomplete fix of CVE-2026-48931. The guard that destroys idle keep-alive sockets when unexpected data arrives only ..."
-  },
-  {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-106074",
-    "descripcion": "A flaw in Node.js `crypto` causes the internal entropy caches used by `crypto.randomUUID()`, `crypto.randomUUIDv7()`, and `crypto.randomInt()` to be saved into user-land startup snapshots (`--build-snapshot`) and single executable applications built with `useSnapshot`. If any ..."
-  },
-  {
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-24",
     "cve": "CVE-2026-109618",
     "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   },
   {
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-24",
     "cve": "CVE-2026-109619",
     "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
   },
   {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-111497",
-    "descripcion": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, ..."
+    "fecha": "2026-10-24",
+    "cve": "CVE-2026-110264",
+    "descripcion": "An issue has been discovered in GitLab CE/EE affecting all versions from 7.0 before 18.11.13, 19.0 before 19.0.10, 19.1 before 19.1.9, 19.2 before 19.2.9, 19.3 before 19.3.6, 19.4 before 19.4.3, and 19.5 before 19.5.1 that, under certain conditions, could have allowed an ..."
   },
   {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-106069",
-    "descripcion": "A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`. `tls.checkServerIdentity()` ..."
+    "fecha": "2026-10-24",
+    "cve": "CVE-2026-97229",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially ..."
   },
   {
-    "fecha": "2026-10-23",
-    "cve": "CVE-2026-105482",
-    "descripcion": "A flaw in Node.js DNS resolution allows hostnames containing a NUL byte to be silently truncated by the dns.resolve*() functions and dns.reverse(). This is an incomplete fix of CVE-2026-48930, which only covered dns.lookup() and the net/tls host options. Because the name is ..."
+    "fecha": "2026-10-24",
+    "cve": "CVE-2026-89078",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to a double free ..."
+  },
+  {
+    "fecha": "2026-10-24",
+    "cve": "CVE-2026-93577",
+    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to an integer ..."
+  },
+  {
+    "fecha": "2026-10-24",
+    "cve": "CVE-2024-4577",
+    "descripcion": "In PHP versions 8.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, when using Apache and PHP-CGI on Windows, if the system is set up to use certain code pages, Windows may use \"Best-Fit\" behavior to replace characters in command line given to Win32 API functions. PHP ..."
+  },
+  {
+    "fecha": "2026-10-24",
+    "cve": "CVE-2025-55182",
+    "descripcion": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code ..."
   }
 ]
