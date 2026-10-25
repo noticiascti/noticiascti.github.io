@@ -31,6 +31,11 @@
   },
   {
     "fecha": "2026-10-25",
+    "cve": "CVE-2026-111943",
+    "descripcion": "On most platforms, Go uses the given system root certificates. However, in some narrower cases, the system trust stores may not be updated without further action. To defend against the narrower set of cases that may remain affected, a denylist was added in crypto/x509 to return ..."
+  },
+  {
+    "fecha": "2026-10-25",
     "cve": "CVE-2026-110264",
     "descripcion": "An issue has been discovered in GitLab CE/EE affecting all versions from 7.0 before 18.11.13, 19.0 before 19.0.10, 19.1 before 19.1.9, 19.2 before 19.2.9, 19.3 before 19.3.6, 19.4 before 19.4.3, and 19.5 before 19.5.1 that, under certain conditions, could have allowed an ..."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-10-25",
     "cve": "CVE-2025-61624",
     "descripcion": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM ..."
-  },
-  {
-    "fecha": "2026-10-25",
-    "cve": "CVE-2026-111943",
-    "descripcion": "On most platforms, Go uses the given system root certificates. However, in some narrower cases, the system trust stores may not be updated without further action. To defend against the narrower set of cases that may remain affected, a denylist was added in crypto/x509 to return ..."
   }
 ]
