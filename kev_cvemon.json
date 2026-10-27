@@ -1,51 +1,51 @@
 [
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2026-109618",
     "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   },
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2026-109619",
     "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
   },
   {
-    "fecha": "2026-10-26",
-    "cve": "CVE-2026-111497",
-    "descripcion": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, ..."
-  },
-  {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2025-24071",
     "descripcion": "Exposure of sensitive information to an unauthorized actor in Windows File Explorer allows an unauthorized attacker to perform spoofing over a network."
   },
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
+    "cve": "CVE-2026-111497",
+    "descripcion": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, ..."
+  },
+  {
+    "fecha": "2026-10-27",
     "cve": "CVE-2026-114509",
     "descripcion": "Laravel is a web application framework. Prior to 12.68.0 and 13.29.0, TokenGuard configured as a standard token-based API guard does not reject a crafted non-string credential. Under affected MySQL or MariaDB configurations, the authentication lookup can match an unintended ..."
   },
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2025-43300",
     "descripcion": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 15.8.5 and iPadOS 15.8.5, iOS 16.7.12 and iPadOS 16.7.12, iOS 18.6.2 and iPadOS 18.6.2, iPadOS 17.7.10, macOS Sequoia 15.6.1, macOS Sonoma 14.7.8, macOS Ventura 13.7.8. ..."
   },
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2025-14174",
     "descripcion": "Out of bounds memory access in ANGLE in Google Chrome on Mac prior to 143.0.7499.110 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)"
   },
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2026-97229",
     "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially ..."
   },
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2026-89078",
     "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to a double free ..."
   },
   {
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "cve": "CVE-2026-93577",
     "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to an integer ..."
   }
