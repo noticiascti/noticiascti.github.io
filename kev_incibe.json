@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-86983",
-    "descripcion": "A remote attacker may be able to terminate a process that passes attacker-controlled input to the P-384 VOPRF API without bounding its length. This vulnerability is addressed in swift-crypto version 5.0.3. 29/10/2026 29/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-117174",
+    "descripcion": "Rejected reason: VUL-2026-008368 為先回報之相同問題 29/10/2026 29/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-85749",
-    "descripcion": "MailWatch for MailScanner is a web-based front-end to MailScanner. Prior to 1.2.27, any authenticated MailWatch user, including the U/user, D/domain-admin, and H/host roles, can release to inbox or permanently delete the quarantined mail of any other user or domain by supplying an arbitrary message `id` to `mailscanner/quarantine_action.php`. The action path calls `quarantine_list_items()` in `mailscanner/functions.php`, which selects from `maillog` by the supplied identifier without the per-role `global_filter` applied by listing and read views. The action requires a valid session and CSRF token, but the caller can submit a token from the caller&#39;s own session; ownership of the requested message is never checked. Message identifiers are enumerable, allowing a low-privilege user to invoke `quarantine_release()` or `quarantine_delete()` for other users&#39; or domains&#39; quarantined messages, force-delivering mail held by the quarantine or permanently deleting it. This issue is fixed in version 1.2.27. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2025-62841",
+    "descripcion": "An use of hard-coded cryptographic key vulnerability has been reported to affect HBS 3 Hybrid Backup Sync and Hybrid Backup Sync. If exploited, the vulnerability could allow remote attackers to compromise the security of the system. We have already fixed the vulnerability in the following version: HBS 3 Hybrid Backup Sync 26.4.0.521 and later Hybrid Backup Sync 26.4.0.521 and later Hybrid Backup Sync 26.4.1.563 and later 29/10/2026 29/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-82411",
-    "descripcion": "Open Object provides an API and admin interface to manage objects and object types. From 2.4.3 until 2.5.1, 3.6.2, 4.0.2, and 4.1.1, a token scoped to read one ObjectType can read the full versioned record of an object of any other ObjectType via the history-detail endpoint `GET /api/v2/objects/{uuid}/{index}`. The `history_detail` action in `src/objects/api/v2/views.py` calls `self.get_queryset()` and `get_object_or_404` directly instead of `self.get_object()`, so `check_object_permissions` and the per-object check in `ObjectTypeBasedPermission.has_object_permission` are not invoked. The queryset&#39;s `filter_for_token` applies only to the list and search actions, while `ObjectTypeBasedPermission.has_permission` allows non-create actions, leaving neither check to constrain history-detail records to the token&#39;s permitted ObjectType. The normal retrieve endpoint returns 403 for the same unauthorized object, and the sibling history action enforces the grant. Any valid non-superuser API token with a read grant on at least one ObjectType can therefore disclose another ObjectType&#39;s complete versioned object `data`, which can include citizen or case records and sensitive identifiers in government deployments. This issue is fixed in versions 2.5.1, 3.6.2, 4.0.2, and 4.1.1. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2025-62839",
+    "descripcion": "An use of hard-coded cryptographic key vulnerability has been reported to affect HBS 3 Hybrid Backup Sync and Hybrid Backup Sync. If exploited, the vulnerability could allow remote attackers to compromise the security of the system. We have already fixed the vulnerability in the following version: HBS 3 Hybrid Backup Sync 26.4.0.521 and later Hybrid Backup Sync 26.4.0.521 and later Hybrid Backup Sync 26.4.1.563 and later 29/10/2026 29/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-75520",
-    "descripcion": "Domoticz is a free, open source home automation system for Linux, Windows, macOS, and Raspberry Pi. Prior to 2026.3, the `udevices` JSON command handler, `Cmd_UpdateDevices` in `main/WebServerCmds.cpp`, performed no `session.rights` check before invoking a Lua parser script, while its sibling command handlers gate access by role. A low-privilege authenticated user could trigger execution of an existing operator-installed Lua parser script with attacker-controlled input through the `GET /json.htm` endpoint with `type=command` and `param=udevices`. The `script` parameter also lacked a `..` path-traversal guard: `CLuaHandler::executeLuaScript` in `main/LuaHandler.cpp` constructed the filename from the parser directory and the supplied script name before passing it to `luaL_loadfile`. Execution is limited to already-installed valid Lua files; this is not arbitrary code execution, and the advisory states that file-write and upload paths require administrator privileges. This issue is addressed in version 2026.3. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-118030",
+    "descripcion": "A flaw was found in the HOTP authentication mechanism of the keycloak-services component, which provides identity and access management services. The issue occurs because the system validates a one-time password and updates its internal counter in two separate steps without proper locking. An attacker with a users password could exploit this timing gap to use a single one-time code to log in multiple times simultaneously. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-55561",
-    "descripcion": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. Prior to 1.7.2-beta-1, guest users can approve or reject quotes belonging to any client, not just their assigned clients. The `approve()` and `reject()` methods in the Guest Quotes controller, `application/modules/guest/controllers/Quotes.php`, call `approve_quote_by_id($quote_id)` and `reject_quote_by_id($quote_id)` directly without the `where_in(&#39;ip_quotes.client_id&#39;, $this->user_clients)` scoping that sibling methods use. A guest user assigned to one client can change another client&#39;s quote status by supplying sequential integer `quote_id` values, and `email_quote_status()` also sends notification emails. Additionally, `generate_pdf()` calls `mark_viewed($quote_id)` before checking the client scope, allowing a guest user to mark another client&#39;s quote as viewed. These issues are fixed in version 1.7.2-beta-1 and the subsequent stable version 1.7.2. 29/10/2026 29/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-117859",
+    "descripcion": "A flaw was found in the Pushed Authorization Request PAR implementation of the keycloak-services component. The issue occurs when an authentication flow is restarted, which incorrectly clears the internal markers used to track PAR consumption while leaving the request active. This allows an attacker to reuse the same authorization request to obtain multiple access tokens, bypassing security requirements for single-use requests. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-118579",
-    "descripcion": "A weakness has been identified in D-Link DIR-505 1.10B02. The impacted element is the function main of the file /secmark1524.cgi of the component Web Management CGI. This manipulation of the argument accu/pass/code/hash/cmds causes backdoor. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. 29/10/2026 29/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 8.90 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-117688",
+    "descripcion": "A flaw was found in the client registration component of Keycloak, an open-source identity and access management solution. When a vault provider is used to store sensitive information, an authenticated client owner can use a specially crafted reference to trick the system into revealing secrets. By updating a client secret to point to a vault entry and then requesting the client configuration, the owner can see the secret value in plain text. This could lead to the exposure of sensitive credentials that the user should not be able to access. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-118578",
-    "descripcion": "A security flaw has been discovered in maotoumao MusicFreeDesktop 0.0.6/0.0.7/0.0.8. The affected element is an unknown function of the component Request Forwarder. The manipulation results in information disclosure. The attack can only be performed from the local network. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet. 29/10/2026 29/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:A/AC:L/Au:N/C:P/I:N/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-117627",
+    "descripcion": "A flaw was found in the JWT Authorization Grant implementation of the keycloak-services component. When an OIDC or Google identity provider is configured with specific login restrictions, such as claim filtering, these checks are correctly applied during standard browser logins but are skipped during the JWT-based grant flow. This allows an authenticated client to obtain access tokens for a user even if their identity provider claims should have blocked the login. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-118577",
-    "descripcion": "A vulnerability was identified in maotoumao MusicFreeDesktop 0.0.6/0.0.7/0.0.8. Impacted is an unknown function of the component Request Forwarder. The manipulation leads to server-side request forgery. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The identifier of the patch is b0d3876247a0a64fa0e430e4b21870e41f503182. It is recommended to apply a patch to fix this issue. 29/10/2026 29/10/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-117548",
+    "descripcion": "A NULL pointer dereference flaw was found in 389-ds-base. This flaw occurs when a ModifyDN (rename) operation uses an attribute&#39;s schema alias name (such as &#34;commonName&#34;) instead of its canonical name (such as &#34;cn&#34;) as the new relative distinguished name. An authenticated attacker with the ModifyDN (rename) permission on the affected entry can use this flaw to crash the directory server, causing a denial of service. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-111575",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 29/10/2026 29/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-19610",
+    "descripcion": "A flaw was found in the platform-mbean component of JBoss EAP, which provides management access to JVM-level metrics and configurations. The issue occurs because the handler for the read-resource operation on the runtime management resource fails to perform required Role-Based Access Control (RBAC) checks. This allows an authenticated user with low-privileged access, such as the Monitor role, to view sensitive system properties and JVM configuration details that should be restricted. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
-    "fecha": "2026-10-28",
-    "cve": "CVE-2026-111486",
-    "descripcion": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority. 29/10/2026 29/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-15564",
+    "descripcion": "Wildfly&#39;s IIOP listener may permit deserialization of input streams before authentication is performed. An attacker who can gain access to the IIOP port may be able to construct and send malicious objects and achieve deserialization, if the target EJB allows untyped method parameters, and depending on the potential gadget chains available in the running classpath. 29/10/2026 29/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
