@@ -1,18 +1,13 @@
 [
   {
     "fecha": "2026-10-29",
-    "cve": "CVE-2026-109618",
-    "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
-  },
-  {
-    "fecha": "2026-10-29",
-    "cve": "CVE-2026-109619",
-    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
-  },
-  {
-    "fecha": "2026-10-29",
     "cve": "CVE-2026-108142",
     "descripcion": "A vulnerability allowing an unauthenticated attacker to bypass authorization on the CDP Coordinator Service."
+  },
+  {
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-109618",
+    "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   },
   {
     "fecha": "2026-10-29",
@@ -28,6 +23,11 @@
     "fecha": "2026-10-29",
     "cve": "CVE-2026-112697",
     "descripcion": "A use-after-free issue was addressed with improved memory management. This issue is fixed in Safari 27.2, iOS 26.7.2 and iPadOS 26.7.2, iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, tvOS 27.2, visionOS 27.2, watchOS 27.2. Processing maliciously crafted web content may lead ..."
+  },
+  {
+    "fecha": "2026-10-29",
+    "cve": "CVE-2026-109619",
+    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
   },
   {
     "fecha": "2026-10-29",
