@@ -11,6 +11,11 @@
   },
   {
     "fecha": "2026-10-30",
+    "cve": "CVE-2026-98432",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq->ireq_opt to the child socket (newinet->inet_opt) without copying it. Another cpu can concurrently ..."
+  },
+  {
+    "fecha": "2026-10-30",
     "cve": "CVE-2026-109618",
     "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   },
@@ -18,11 +23,6 @@
     "fecha": "2026-10-30",
     "cve": "CVE-2026-76418",
     "descripcion": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting ..."
-  },
-  {
-    "fecha": "2026-10-30",
-    "cve": "CVE-2026-98432",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq->ireq_opt to the child socket (newinet->inet_opt) without copying it. Another cpu can concurrently ..."
   },
   {
     "fecha": "2026-10-30",
