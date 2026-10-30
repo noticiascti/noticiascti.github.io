@@ -21,13 +21,18 @@
   },
   {
     "fecha": "2026-10-30",
+    "cve": "CVE-2026-109619",
+    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
+  },
+  {
+    "fecha": "2026-10-30",
     "cve": "CVE-2026-76418",
     "descripcion": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting ..."
   },
   {
     "fecha": "2026-10-30",
-    "cve": "CVE-2026-109619",
-    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
+    "cve": "CVE-2026-112688",
+    "descripcion": "A memory corruption issue was addressed with improved memory handling. This issue is fixed in iOS 26.7 and iPadOS 26.7, iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2. Parsing a file may lead to an unexpected app termination or ..."
   },
   {
     "fecha": "2026-10-30",
@@ -43,10 +48,5 @@
     "fecha": "2026-10-30",
     "cve": "CVE-2026-41709",
     "descripcion": "VMware ESX contains an insufficient logging vulnerability. A malicious administrator could exploit this issue to perform certain operations without them being logged."
-  },
-  {
-    "fecha": "2026-10-30",
-    "cve": "CVE-2026-108142",
-    "descripcion": "A vulnerability allowing an unauthenticated attacker to bypass authorization on the CDP Coordinator Service."
   }
 ]
