@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-10-31",
+    "cve": "CVE-2026-100151",
+    "descripcion": "The Ninja Forms – Contact Form Builder with Calculators, Quizzes, Signatures & AI Form Builder plugin for WordPress is vulnerable to Reflected DOM-Based Cross-Site Scripting via &#39;querystring:&#39; URL Parameter in all versions up to, and including, 3.15.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. This bypass is triggered when an attacker supplies a matching field:&lt;key&gt; URL parameter that causes the server to fully resolve the {field:*} placeholder, forcing the client-side else-branch to abandon the server-sanitized value and reconstruct field content from the raw query string. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-10-31",
     "cve": "CVE-2026-120075",
     "descripcion": "The WP Activity Log plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 5.6.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-10-31",
     "cve": "CVE-2026-109367",
     "descripcion": "The All in One SEO – AI SEO Plugin to Boost SEO Rankings & Traffic (Schema, Local SEO, Sitemap & SEO Insights) plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 5.0.3 via the &#39;s&#39; parameter. This makes it possible for unauthenticated attackers to extract arbitrary non-public post meta values, including sensitive custom fields such as API keys and internal notes, emitted verbatim into the HTML title element and JSON-LD SearchResultsPage schema. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-10-31",
-    "cve": "CVE-2026-103915",
-    "descripcion": "The Booking for Appointments and Events Calendar – Amelia plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.4.12 via the &#39;page&#39; parameter. This makes it possible for unauthenticated attackers to extract staff personally identifiable information — including full name, email address, phone number, gender, and timezone — as well as administrator-authored internal notes for every published event, all serialized into the JSON response because the raw providers array is never stripped before output. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
