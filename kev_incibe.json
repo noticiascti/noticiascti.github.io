@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-94361",
-    "descripcion": "The Payable Payment Gateway for WooCommerce WordPress plugin before 1.3.1 does not verify the authenticity of an incoming payment notification before marking a WooCommerce order paid or failed, allowing unauthenticated attackers to change the payment status of any order in the store regardless of the payment method it was placed with. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-119089",
+    "descripcion": "The ThirstyAffiliates – Affiliate Links, Link Branding, Link Tracking & Marketing Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;comment&#39; parameter in all versions up to, and including, 3.12.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This vulnerability is only exploitable on block themes (such as Twenty Twenty-Five) where the Comment Content block causes comment HTML to flow through render_block, triggering the plugin&#39;s transformer. Additionally, a successful attack requires the attacker to have had one prior comment approved, after which subsequent crafted comments are auto-approved and rendered publicly. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-92294",
-    "descripcion": "The Spectra Gutenberg Blocks – Website Builder for the Block Editor plugin for WordPress is vulnerable to limited file deletion due to insufficient file path validation in the &#39;__construct&#39; function in all versions up to, and including, 2.20.4 This makes it possible for unauthenticated attackers to delete theme files on the server. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-119065",
+    "descripcion": "The Shipping Zones by Drawing for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;szbd-picked&#39; checkout parameter in versions up to, and including, 3.3.0 The szbd_checkout_field_update_order_meta() handler stores stripslashes(sanitize_text_field($_POST[&#39;szbd-picked&#39;])) in order meta without validating the JSON structure or restricting dangerous characters, and the szbd_show_checkout_field_admin_order_meta() handler later concatenates the decoded lat and lng values directly into a double-quoted href attribute without esc_url() or esc_attr(). This makes it possible for unauthenticated attackers, by submitting an ordinary guest-checkout order with a crafted szbd-picked JSON payload, to inject arbitrary attributes (such as onmouseover) onto the Google Maps link in the WooCommerce admin order view that will execute whenever an administrator accesses an injected order. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-82214",
-    "descripcion": "The Quick Event Manager WordPress plugin before 9.19 does not verify the status or type of the requested post before returning its details through a calendar export, allowing unauthenticated users to read the content of draft and private posts. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-118070",
+    "descripcion": "The Welcart e-Commerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;gid&#39; parameter in all versions up to, and including, 2.12.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload is staged by an unauthenticated visitor who forges the ROBOT PAYMENT browser-return request, storing the malicious gid value in order metadata; the script then fires when an administrator opens that order in the WordPress admin panel. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-119977",
-    "descripcion": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-116557",
+    "descripcion": "The WP Booking System - Booking Calendar plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the wpbs_action_ajax_calendar_remove_note() function in versions up to, and including, 2.1.0.5 This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary calendar notes belonging to any calendar. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-118638",
-    "descripcion": "The Mapster WP Maps WordPress plugin before 2.0.6 does not perform any authorization check on a REST API route that writes post data, allowing unauthenticated attackers to overwrite the title of arbitrary posts, create arbitrary published posts, and overwrite the Mapster WP Maps WordPress plugin before 2.0.6&#39;s stored settings. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-116548",
+    "descripcion": "The VikRentCar Car Rental Management System plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;optionals&#39; parameter in all versions up to, and including, 1.4.10 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-118629",
-    "descripcion": "The All-in-One Video Gallery WordPress plugin before 5.0.0 does not check a video&#39;s publication status before rendering it on its player page, allowing unauthenticated users to view the title and source URLs of private, draft, pending, scheduled and trashed videos by their ID. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-116546",
+    "descripcion": "The WP Job Portal – AI-Powered Recruitment System for Company or Job Board website plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;degreetitle&#39; parameter in all versions up to, and including, 2.7.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The plugin&#39;s self-registration flow allows any visitor to create a Subscriber-backed Employer account, meaning this vulnerability is effectively exploitable by any user who can register on the site. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-118438",
-    "descripcion": "The Firelight Lightbox WordPress plugin before 2.3.24 does not properly escape image attribute values before processing them in the browser, which could allow users with contributor-level access and above to inject arbitrary web scripts that execute when another user views or previews the affected content. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-116522",
+    "descripcion": "The Relevanssi – A Better Search plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;comment&#39; parameter in all versions up to, and including, 4.28.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the site to have both the comment indexing and comment highlighting options enabled, and the payload only fires when a visitor reaches a singular page via a Relevanssi search-result permalink carrying the highlight query parameter. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-118437",
-    "descripcion": "The BuddyForms WordPress plugin before 2.10.1 does not properly verify ownership before deleting guest-uploaded attachments, allowing unauthenticated attackers to permanently delete media files uploaded by other unauthenticated visitors. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-115840",
+    "descripcion": "The VikRentCar Car Rental Management System plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;poplink&#39; parameter in all versions up to, and including, 1.4.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The handler requires only a WordPress nonce (vikwp_nonce), which the plugin itself emits to unauthenticated visitors on the public booking-confirmation page, allowing an attacker to obtain a valid token without any account. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-118185",
-    "descripcion": "The Security Optimizer WordPress plugin before 1.6.9 does not limit the number of two-factor authentication codes that can be submitted for a pending login, allowing an attacker who already knows a user&#39;s password to brute force the second factor and take over the account. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-111254",
+    "descripcion": "The W3 Total Cache plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;comment&#39; parameter in all versions up to, and including, 2.10.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires that a Pro license was previously active with REST caching enabled and has since become inactive while Disk Enhanced page caching remains configured, and that the attacker holds a previously approved commenter identity. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2026-118184",
-    "descripcion": "The Premium Packages WordPress plugin before 7.2.2 does not prevent unauthenticated visitors from overwriting the stored price of items in their shopping cart, allowing them to create orders for any product at an arbitrary total of their choosing. 31/10/2026 31/10/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-111109",
+    "descripcion": "The Webmention plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Open Graph og:title meta tag of a webmention source URL in versions up to, and including, 5.10.1. This is due to insufficient input sanitization: Meta::add_properties() maps og:title to the Item::name property, but Item has no concrete set_name() method, so Item::__call() stores the value raw while sibling set_content()/set_summary() paths route through webmention_sanitize_html(); Item::get_content() then falls back to the raw name when content and summary are empty, and Receiver::process() explicitly removes the core wp_filter_kses / wp_filter_post_kses hooks on pre_comment_content before calling wp_new_comment(), so the payload is persisted to comment_content as-is. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page, after an administrator approves the resulting pending webmention comment. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own. 31/10/2026 31/10/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
