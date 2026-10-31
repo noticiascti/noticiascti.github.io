@@ -1,11 +1,6 @@
 [
   {
     "fecha": "2026-10-31",
-    "cve": "CVE-2025-65200",
-    "descripcion": "An issue was discovered in localstack 4.9.2 allowing attackers to execute arbitrary code via crafted content hosted on a web-accessable URL and when passed said URL in the the templateURL to the _localstack/cloudformation/deploy endpoint, the hosted content can get executed in ..."
-  },
-  {
-    "fecha": "2026-10-31",
     "cve": "CVE-2026-98432",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq->ireq_opt to the child socket (newinet->inet_opt) without copying it. Another cpu can concurrently ..."
   },
@@ -43,6 +38,11 @@
     "fecha": "2026-10-31",
     "cve": "CVE-2026-46300",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: net: skbuff: preserve shared-frag marker during coalescing skb_try_coalesce() can attach paged frags from @from to @to. If @from has SKBFL_SHARED_FRAG set, the resulting @to skb can contain the ..."
+  },
+  {
+    "fecha": "2026-10-31",
+    "cve": "CVE-2025-65200",
+    "descripcion": "An issue was discovered in localstack 4.9.2 allowing attackers to execute arbitrary code via crafted content hosted on a web-accessable URL and when passed said URL in the the templateURL to the _localstack/cloudformation/deploy endpoint, the hosted content can get executed in ..."
   },
   {
     "fecha": "2026-10-31",
