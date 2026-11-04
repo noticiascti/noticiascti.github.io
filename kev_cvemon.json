@@ -1,8 +1,13 @@
 [
   {
     "fecha": "2026-11-04",
-    "cve": "CVE-2026-106072",
-    "descripcion": "A flaw in Node.js TLS hostname verification allows a certificate with only a DNS SAN to authenticate an IP endpoint when the client connects using a non-canonical IPv4 spelling, such as `0177.0.0.1`, `0x7f.0.0.1`, `2130706433` or `127.1`. `tls.checkServerIdentity()` did not ..."
+    "cve": "CVE-2024-10441",
+    "descripcion": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via ..."
+  },
+  {
+    "fecha": "2026-11-04",
+    "cve": "CVE-2025-1974",
+    "descripcion": "A security issue was discovered in Kubernetes where under certain conditions, an unauthenticated attacker with access to the pod network can achieve arbitrary code execution in the context of the ingress-nginx controller. This can lead to disclosure of Secrets accessible to the ..."
   },
   {
     "fecha": "2026-11-04",
@@ -31,8 +36,8 @@
   },
   {
     "fecha": "2026-11-04",
-    "cve": "CVE-2026-118331",
-    "descripcion": "Use after free in FileAPI in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
+    "cve": "CVE-2026-118344",
+    "descripcion": "Use after free in Layout in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
   },
   {
     "fecha": "2026-11-04",
@@ -41,12 +46,7 @@
   },
   {
     "fecha": "2026-11-04",
-    "cve": "CVE-2026-118344",
-    "descripcion": "Use after free in Layout in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
-  },
-  {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-81963",
-    "descripcion": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally."
+    "cve": "CVE-2026-118331",
+    "descripcion": "Use after free in FileAPI in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
   }
 ]
