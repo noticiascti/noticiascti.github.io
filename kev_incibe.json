@@ -1,52 +1,52 @@
 [
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-122051",
-    "descripcion": "A flaw has been found in Edimax BR-6208AC 1.32. Affected by this vulnerability is an unknown functionality of the file /goform/mp. Executing a manipulation can lead to command injection. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69068",
+    "descripcion": "Insufficient length validation in the GNSS firmware loader may lead to corruption of kernel memory. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-122050",
-    "descripcion": "A vulnerability was found in Campcodes Complete Sales and Inventory System with Credit Management 1.0. This issue affects some unknown processing of the file /ahira/login.php. Performing a manipulation of the argument branch results in sql injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69066",
+    "descripcion": "Memory corruption in GPU driver due to improper validation of VMID reservation. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-122049",
-    "descripcion": "A flaw has been found in Campcodes Bitcoin Wallet System 1.0. This affects the function random_int of the file core/app/Http/Controllers/Auth/ForgotPasswordController.php. This manipulation causes improper restriction of excessive authentication attempts. Remote exploitation of the attack is possible. The attack&#39;s complexity is rated as high. It is indicated that the exploitability is difficult. The exploit has been published and may be used. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Vector CVSS:2.0 AV:N/AC:H/Au:N/C:P/I:N/A:N Gravedad 4.0 2.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69050",
+    "descripcion": "Out-of-bounds memory access in a device driver due to improper resource state tracking. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-97702",
-    "descripcion": "Open edX Platform enables the authoring and delivery of online learning at any scale. From the Ulmo release until release/ulmo.4 and release/verawood.1, the GET /api/support/v1/manage_course_team/ endpoint in CourseTeamManageAPIView requires only IsAuthenticated and omits the global support-role authorization check intended for this help-desk surface. Any authenticated learner can supply an email, username, or user_id for an arbitrary target and use the 200 and 404 response discrepancy to distinguish an active account from an absent or inactive account. A caller with a course-level or organization-level instructor role can additionally obtain the target user&#39;s staff or instructor assignments within the caller&#39;s course or organization scope. Anonymous callers remain blocked, and the separately authorized PUT behavior is outside this vulnerability. This issue is fixed in release/ulmo.4 and release/verawood.1. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69044",
+    "descripcion": "In the Samsung GPU driver, improper reference count handling during command submission can lead to memory corruption. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-86041",
-    "descripcion": "ezBookkeeping is an open source, self-hosted personal finance application. From 0.10.0 until 1.6.0, ezBookkeeping constructs its Gin router with gin.New() without configuring SetTrustedProxies, causing c.ClientIP() to trust a spoofed X-Forwarded-For value. An unauthenticated remote attacker can supply an allowlisted address to bypass the mcp_allowed_remote_ips or api_token_allowed_remote_ips gate. A valid MCP or API token remains required for protected actions. When such actions occur, the same spoofed value is stored in Transaction.CreatedIp and the request log, attributing activity to the trusted host instead of the attacker. This issue is fixed in version 1.6.0. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69043",
+    "descripcion": "In the Samsung Exynos GPU driver, improper synchronization during buffer object creation and closing can lead to memory corruption 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-77372",
-    "descripcion": "VeraCrypt provides disk encryption with strong security based on TrueCrypt. Prior to 1.26.30, the Unix, macOS, and FreeBSD serialization paths in src/Platform/Serializer.cpp and src/Volume/VolumePassword.cpp accept untrusted length and count values when deserializing data that can cross from the unprivileged GUI or CLI to the root CoreService helper. Serializer::DeserializeWString allocates floor(size / sizeof(wchar_t)) elements but reads size bytes, so a non-aligned size can overflow the heap allocation. VolumePassword::Deserialize accepts PasswordSize values larger than the fixed 128-byte PasswordBuffer, allowing downstream DataPtr() and Size() consumers such as the KDF to read beyond the buffer. DeserializeString, DeserializeWString, and the string and wide-string list readers also lack allocation and collection bounds, which can exhaust memory, and a zero-length DeserializeString can access an empty vector. Windows uses a different path, and the immediate CoreService pipe writer is the same-user parent process, so the documented exposure is a local defense-in-depth boundary rather than a remote attack. This issue is fixed in 1.26.30. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69025",
+    "descripcion": "In the Exynos NPU driver, improper validation of user input in the ioctl handler can lead to an out-of-bounds write, which causes a denial of service 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-76892",
-    "descripcion": "tsParticles is a TypeScript library for creating highly customizable particle animations. Prior to 4.3.1, the HTTP mode of @tsparticles/mcp-server calls JSON.parse outside a request-local error boundary in the POST /mcp handler in integrations/mcp-server/src/index.ts. A single unauthenticated malformed JSON body raises a SyntaxError that terminates the Node.js process, leaving the MCP service unavailable until an external supervisor restarts it. This issue is fixed in version 4.3.1. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69006",
+    "descripcion": "Insufficient validation of length fields in the GNSS firmware loader can result in kernel‑memory corruption. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-76826",
-    "descripcion": "tsParticles is a TypeScript library for creating highly customizable particle animations. From 4.0.0 until 4.3.2, the stable publish workflow interpolates steps.release.outputs.body directly into an echo command in Bash source before writing RAW_RELEASE.md. Contributor-controlled shell metacharacters in generated release-note text can therefore execute when a maintainer starts a stable release, allowing modification of generated artifacts or workspace scripts and affecting later release steps that hold GITHUB_TOKEN and write permissions. This issue is fixed in version 4.3.2. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69005",
+    "descripcion": "Integer overflow in NPU driver parameter processing due to insufficient bounds checking. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-62662",
-    "descripcion": "Pocket ID is an OIDC provider that allows users to authenticate with their passkeys to services. From 1.11.0 until 2.10.0, createTokenFromClientCredentials in backend/internal/service/oidc_service.go accepts the client-controlled resource parameter and embeds it directly in the access token aud claim without validating that the audience is registered or that the requesting client may access it. Any authenticated OIDC client can therefore obtain a Pocket ID-signed token naming another client or an arbitrary audience. The /api/oidc/introspect endpoint cannot distinguish the unauthorized token because it treats a token as active when the introspecting client&#39;s identifier matches the attacker-selected audience. In deployments where resource servers trust Pocket ID access tokens for service-to-service authorization, this bypasses audience-based access controls and can permit unauthorized data access or actions; deployments that do not use these tokens for resource-server authorization have no immediate exploitable impact. This issue is fixed in version 2.10.0. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-69002",
+    "descripcion": "Incorrect authorization in Samsung framework services due to missing permission checks 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
-    "fecha": "2026-11-04",
-    "cve": "CVE-2026-62365",
-    "descripcion": "Wazuh is an open-source security platform providing unified XDR and SIEM protection for endpoints and cloud workloads. DecodeWinevt in src/analysisd/decoders/winevtchannel.c accumulates unnamed Windows EventChannel Data element contents into the fixed 65,535-byte join_data heap buffer but passes the growing content length, rather than the OS_MAXSTR buffer capacity, as the snprintf size. An enrolled agent can submit an EventChannel message containing four maximum-sized unnamed Data elements, causing the fourth accumulation to write beyond join_data and corrupt adjacent heap metadata. The subsequent free of join_data2 causes the wazuh-analysisd process to terminate, stopping log ingestion for all agents handled by that manager. This vulnerability is fixed in 4.14.7. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-68994",
+    "descripcion": "A double free vulnerability in NPU driver due to improper pointer management (941) 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
