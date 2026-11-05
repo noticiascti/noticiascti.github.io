@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-11-05",
+    "cve": "CVE-2026-123036",
+    "descripcion": "A flaw was found in ansible-core. When a task marked `no_log: true` fails, the task result is censored before being emitted, but the `exception` field is retained because it is present in the PRESERVE allow-list in lib/ansible/_internal/_task.py, and the default stdout callback prints it through CallbackBase._handle_exception. As a result, sensitive values the operator explicitly asked to hide can be disclosed: module argument-validation errors echo the argument value, templating errors print an Origin source snippet (the failing line plus the two preceding lines of the variables file, exposing neighbouring secrets from an -e @secrets.yml file), and fail/assert messages are printed in full. Secret material supplied as extra variables or variables files can therefore leak to terminal output, CI logs, and the stdout logs of any automation wrapping ansible-playbook, even though every task touching the secrets is marked no_log: true. This is a regression introduced with the ansible-core 2.19 data-tagging/templating rework; the behaviour does not occur on 2.16, where the error text is correctly censored. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-05",
     "cve": "CVE-2026-118869",
     "descripcion": "An OS command injection vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary OS commands on the system running the product. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-11-05",
     "cve": "CVE-2026-123025",
     "descripcion": "An OS Command Injection vulnerability was discovered in the Google Cloud DNS validation module of the OPNsense os-acme-client plugin through 4.17. The DnsGcloud::prepare() method decodes the dns_gcloud_key model field and directly interpolates the string fields gcloud_account and gcloud_project into a shell command passed to proc_open() via LeUtils::run_shell_command() without any validation or escaping. A remote authenticated user with privileges to issue or renew certificates through the WebGUI/API can achieve arbitrary code execution as root. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-05",
-    "cve": "CVE-2026-123017",
-    "descripcion": "GodotSteam 4.17 through 4.23.2 trusts the peer value of 1 to mean that a player is the server. A grant_gold(1000000) call can be forged. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
