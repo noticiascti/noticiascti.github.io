@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-91049",
-    "descripcion": "The EWWW Image Optimizer WordPress plugin before 8.9.1 does not properly sanitize and restrict a value in post content before using it to dynamically load and execute a script in the page, allowing authenticated attackers with author-level access and above to inject arbitrary web scripts that run in the session of any user who views the affected page, including administrators. This is an incomplete fix of CVE-2026-15446: the origin and path restrictions added from 8.7.4 onward were each bypassable, so versions 8.7.4 through 8.9.0 remain affected. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-118869",
+    "descripcion": "An OS command injection vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary OS commands on the system running the product. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-90967",
-    "descripcion": "The Essential Real Estate WordPress plugin before 5.3.5 does not verify ownership of an invoice before rendering it in one of its AJAX actions, allowing an authenticated low-privileged user to read other users&#39; invoices, including the invoice owner&#39;s name, account email address and financial details. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-117679",
+    "descripcion": "A cross-site scripting vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary script in a user&#39;s web browser when the user accesses a website using the affected product. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-90966",
-    "descripcion": "The Essential Real Estate WordPress plugin before 5.3.5 does not verify, in one of its AJAX actions, that a listing package selected for free activation is genuinely free or that the requesting user is entitled to it, allowing a self-registered customer to activate a paid package without payment and cause the site to record a paid invoice at the package&#39;s full price. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-112072",
+    "descripcion": "vault-java-driver, a Java client for HashiCorp Vault, parses Vault&#39;s JSON responses with a vendored minimal-json parser that has no nesting depth limit. A deeply nested value raises a StackOverflowError, which escapes catch (Exception) handlers and kills the reading thread. A Vault token that can write but not read a KV v2 path can store such a value there, so every later read of that path through the driver fails. This requires Vault 1.19.x or earlier, because 1.20 and later reject values nested deeper than 298 levels. This issue affects io.github.jopenlibs:vault-java-driver 5.2.0 through 6.2.3 and is fixed in 7.0.0. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-90965",
-    "descripcion": "The Essential Real Estate WordPress plugin before 5.3.5 does not perform a publication-status or authorization check in two of its AJAX actions, allowing unauthenticated users to retrieve the images attached to property listings that have not been published. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-109408",
+    "descripcion": "vault-java-driver, a Java client for HashiCorp Vault, silently disables TLS certificate and hostname verification in three states where the caller asked for verification: an SslConfig passed to VaultConfig without calling build(), an SslConfig restored by Java deserialization, and VAULT_SSL_VERIFY set to a truthy value other than &#34;true&#34;, such as 1, yes or on. In each case SslConfig.isVerify() returns false and the driver installs a trust-all SSLContext. An attacker on the network path to the Vault server can then read the Vault token and secrets in transit and forge responses. This issue affects io.github.jopenlibs:vault-java-driver 5.2.0 through 6.2.3. It is fixed in 7.0.0. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-90964",
-    "descripcion": "The Essential Real Estate WordPress plugin before 5.3.5 does not restrict the recipient of one of its contact email actions, allowing unauthenticated users to send emails to arbitrary addresses with an attacker-controlled sender header and message body through the site. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-107776",
+    "descripcion": "The Dokan WordPress plugin before 5.3.3 does not reconcile the amount credited to a vendor&#39;s reverse-withdrawal ledger against the amount actually collected for the payment order, allowing a vendor to clear their outstanding commission debt while paying less than the balance owed when a discount coupon is applied at checkout. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 2.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-90963",
-    "descripcion": "The Essential Real Estate WordPress plugin before 5.3.5 does not perform any authorization or publication-status check in one of its AJAX actions, allowing unauthenticated users to read the full contents of property listings that have not been published, together with the private name, email address, phone number and office address of the listing agent. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-100109",
+    "descripcion": "The Security For WooCommerce WordPress plugin from 1.0.10 to 1.0.16 does not perform capability checks when creating users through an action available to unauthenticated visitors, and lets the caller choose the new account&#39;s role, allowing unauthenticated attackers to create administrator accounts and take over the site. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-88814",
-    "descripcion": "The YITH WooCommerce Gift Cards WordPress plugin before 4.38.1 does not lock or atomically update a gift card&#39;s balance when it is redeemed at checkout, allowing an attacker who holds a gift card code to spend more than its funded value by submitting multiple checkouts for the same code at the same time. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-123033",
+    "descripcion": "Authentication bypass in the HA heartbeat origin check in middlewared in TrueNAS SCALE before 25.10.8 (and in release trains before their respective fixes) allows an attacker on the same network segment to achieve unauthenticated full-administrator API access and execute commands as root. middlewared registers the HA peer-authentication hook (ha_permission) unconditionally, with no failover-licence or heartbeat-interface check. An unauthenticated connection whose TCP peer address is a hardcoded HA heartbeat address (169.254.10.1 or 169.254.10.2) and whose peer port is 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-87856",
-    "descripcion": "The Subscriptions for WooCommerce WordPress plugin before 2.1.1 only enforces its membership content restrictions on standard front-end page views, allowing unauthenticated users to read the full contents of restricted posts and pages through other routes that render the same content. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-123029",
+    "descripcion": "Wowza Streaming Engine before 4.12.2 processes XML external entities, which allows remote attackers to read local files with the privileges of the Wowza Streaming Engine process. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-86795",
-    "descripcion": "The Community Events WordPress plugin before 1.6.0 does not have authorisation or nonce checks in one of its AJAX actions, allowing unauthenticated users to retrieve details of event submissions awaiting moderation, which are not available anywhere on the public site. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-123025",
+    "descripcion": "An OS Command Injection vulnerability was discovered in the Google Cloud DNS validation module of the OPNsense os-acme-client plugin through 4.17. The DnsGcloud::prepare() method decodes the dns_gcloud_key model field and directly interpolates the string fields gcloud_account and gcloud_project into a shell command passed to proc_open() via LeUtils::run_shell_command() without any validation or escaping. A remote authenticated user with privileges to issue or renew certificates through the WebGUI/API can achieve arbitrary code execution as root. 05/11/2026 05/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-86442",
-    "descripcion": "The WP Event Manager WordPress plugin before 3.4.2 does not verify the ownership or the post type of a user supplied post identifier in its front-end event submission flow, allowing unauthenticated attackers to read and overwrite the content of arbitrary unpublished posts and pages, and to convert them into events. 05/11/2026 05/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-123017",
+    "descripcion": "GodotSteam 4.17 through 4.23.2 trusts the peer value of 1 to mean that a player is the server. A grant_gold(1000000) call can be forged. 05/11/2026 05/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]

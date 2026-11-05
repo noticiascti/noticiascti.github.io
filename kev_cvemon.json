@@ -6,18 +6,38 @@
   },
   {
     "fecha": "2026-11-05",
-    "cve": "CVE-2026-97229",
-    "descripcion": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially ..."
+    "cve": "CVE-2025-3699",
+    "descripcion": "Missing Authentication for Critical Function vulnerability in Mitsubishi Electric Corporation G-50 all versions, G-50-W all versions, G-50A all versions, GB-50 all versions, GB-50A all versions, GB-24A all versions, G-150AD all versions, AG-150A-A all versions, AG-150A-J all ..."
+  },
+  {
+    "fecha": "2026-11-05",
+    "cve": "CVE-2025-1974",
+    "descripcion": "A security issue was discovered in Kubernetes where under certain conditions, an unauthenticated attacker with access to the pod network can achieve arbitrary code execution in the context of the ingress-nginx controller. This can lead to disclosure of Secrets accessible to the ..."
+  },
+  {
+    "fecha": "2026-11-05",
+    "cve": "CVE-2025-8088",
+    "descripcion": "A path traversal vulnerability affecting the Windows version of WinRAR allows the attackers to execute arbitrary code by crafting malicious archive files. This vulnerability was exploited in the wild and was discovered by Anton Cherepanov, Peter Košinár, and Peter Strýček ..."
+  },
+  {
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-73697",
+    "descripcion": "Control Web Panel (CWP) before webpanel_version 1.16 contains an arbitrary file write and OS command injection vulnerability in the phpini_editor user panel module that allows attackers with access to the module to write attacker-controlled content to arbitrary paths and execute ..."
+  },
+  {
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-73695",
+    "descripcion": "Control Web Panel (CWP) before webpanel_version 1.16 contains a path traversal vulnerability in services/users/index.php that allows attackers to include arbitrary local PHP files by supplying an unsanitized module name parameter concatenated directly into an include path. ..."
+  },
+  {
+    "fecha": "2026-11-05",
+    "cve": "CVE-2026-73696",
+    "descripcion": "Control Web Panel (CWP) before webpanel_version 1.12 contains an execution after redirect vulnerability in the user panel authentication flow (CWPUserIndex) that allows unauthenticated attackers to bypass authentication by exploiting a missing exit() call after a ..."
   },
   {
     "fecha": "2026-11-05",
     "cve": "CVE-2024-10441",
     "descripcion": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via ..."
-  },
-  {
-    "fecha": "2026-11-05",
-    "cve": "CVE-2026-118306",
-    "descripcion": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
   },
   {
     "fecha": "2026-11-05",
@@ -28,25 +48,5 @@
     "fecha": "2026-11-05",
     "cve": "CVE-2026-109619",
     "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
-  },
-  {
-    "fecha": "2026-11-05",
-    "cve": "CVE-2026-111497",
-    "descripcion": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, ..."
-  },
-  {
-    "fecha": "2026-11-05",
-    "cve": "CVE-2026-118331",
-    "descripcion": "Use after free in FileAPI in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
-  },
-  {
-    "fecha": "2026-11-05",
-    "cve": "CVE-2026-118344",
-    "descripcion": "Use after free in Layout in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
-  },
-  {
-    "fecha": "2026-11-05",
-    "cve": "CVE-2026-118348",
-    "descripcion": "Integer overflow in Skia in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
   }
 ]
