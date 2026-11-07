@@ -16,18 +16,13 @@
   },
   {
     "fecha": "2026-11-07",
-    "cve": "CVE-2025-32433",
-    "descripcion": "Erlang/OTP is a set of libraries for the Erlang programming language. Prior to versions OTP-27.3.3, OTP-26.2.5.11, and OTP-25.3.2.20, a SSH server may allow an attacker to perform unauthenticated remote code execution (RCE). By exploiting a flaw in SSH protocol message handling, ..."
-  },
-  {
-    "fecha": "2026-11-07",
     "cve": "CVE-2024-25600",
     "descripcion": "Improper Control of Generation of Code ('Code Injection') vulnerability in Codeer Limited Bricks Builder allows Code Injection.This issue affects Bricks Builder: from n/a through 1.9.6."
   },
   {
     "fecha": "2026-11-07",
-    "cve": "CVE-2025-3699",
-    "descripcion": "Missing Authentication for Critical Function vulnerability in Mitsubishi Electric Corporation G-50 all versions, G-50-W all versions, G-50A all versions, GB-50 all versions, GB-50A all versions, GB-24A all versions, G-150AD all versions, AG-150A-A all versions, AG-150A-J all ..."
+    "cve": "CVE-2025-32433",
+    "descripcion": "Erlang/OTP is a set of libraries for the Erlang programming language. Prior to versions OTP-27.3.3, OTP-26.2.5.11, and OTP-25.3.2.20, a SSH server may allow an attacker to perform unauthenticated remote code execution (RCE). By exploiting a flaw in SSH protocol message handling, ..."
   },
   {
     "fecha": "2026-11-07",
@@ -36,17 +31,22 @@
   },
   {
     "fecha": "2026-11-07",
-    "cve": "CVE-2026-73098",
-    "descripcion": "Improper control of dynamically-loaded code vulnerability in Apache Juneau. When Apache Juneau parses a value into a property of type java.lang.Class (including parameterized forms), the default class swap loaded the named class with initialization enabled, so input naming a ..."
-  },
-  {
-    "fecha": "2026-11-07",
     "cve": "CVE-2026-121489",
     "descripcion": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Apache Juneau. The microservice DirectoryResource does not keep request paths inside its configured root directory. When an application enables the resource's view, upload or delete ..."
   },
   {
     "fecha": "2026-11-07",
+    "cve": "CVE-2026-73098",
+    "descripcion": "Improper control of dynamically-loaded code vulnerability in Apache Juneau. When Apache Juneau parses a value into a property of type java.lang.Class (including parameterized forms), the default class swap loaded the named class with initialization enabled, so input naming a ..."
+  },
+  {
+    "fecha": "2026-11-07",
     "cve": "CVE-2026-73100",
     "descripcion": "Insertion of Sensitive Information into Log File vulnerability in Apache Juneau. The default REST server call logger records request headers for requests that end in a server error, without redacting them. Any client able to cause a server error gets headers such as ..."
+  },
+  {
+    "fecha": "2026-11-07",
+    "cve": "CVE-2026-73099",
+    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in Apache Juneau. The REST server accepts a \"content\" query parameter that replaces the request body, and this is enabled by default on every HTTP method, including GET. A cross-site link can therefore deliver an attacker-chosen ..."
   }
 ]
