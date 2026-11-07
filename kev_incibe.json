@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-11-07",
+    "cve": "CVE-2026-93754",
+    "descripcion": "The payever – WooCommerce Gateway plugin for WordPress is vulnerable to arbitrary file upload leading to remote code execution in various versions up to, and including, 4.8.0. Three WooCommerce-API callbacks (payever_set_sandbox_api_keys, payever_toggle_subscription, payever_synchronization_incoming) are registered with no authentication, capability check, or nonce, and the upload_image() routine writes a remotely fetched file to the public uploads directory using an attacker-controlled basename() BEFORE validating the file type. This makes it possible for unauthenticated attackers to write an executable PHP file and achieve remote code execution. NOTE: the token-recovery leg of the full chain depends on the plugin&#39;s outbound validateToken() call to Payever&#39;s service; the unauthenticated hard-coded-credential identity overwrite (CWE-862/CWE-798) is independently exploitable. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-11-07",
+    "cve": "CVE-2026-121519",
+    "descripcion": "The Social Slider Feed – Social Media Feed & Gallery Widgets plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;slidespeed&#39; parameter in all versions up to, and including, 2.3.8 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The missing current_user_can() check in the Factory framework&#39;s connect() dispatcher allows Subscriber-level users to bypass the manage_options capability gate and both harvest a valid wis_edit_feed nonce and overwrite any feed&#39;s slidespeed setting, after which the stored payload fires on every public pageview embedding the feed shortcode. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-07",
+    "cve": "CVE-2026-121515",
+    "descripcion": "The FV Flowplayer Video Player plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;comment&#39; parameter in all versions up to, and including, 7.5.56.7212 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the &#39;Parse Vimeo and YouTube links&#39; option to be enabled, and the injected comment must be approved before the script executes for site visitors. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-07",
     "cve": "CVE-2026-120741",
     "descripcion": "The MotoPress Appointment Booking Lite plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 2.4.8 via the public &#39;/motopress/appointment/v1/customers/create&#39; REST endpoint. The route is registered with permission_callback => &#39;__return_true&#39; and the handler&#39;s &#39;name&#39; parameter is not sanitized before being written to the custom wp_mpa_customers table via $wpdb->insert, nor is it escaped on output in the admin bookings list when the viewing user lacks the &#39;mpa_edit_customer&#39; capability (such as the plugin-defined Appointment Employee role). This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-11-07",
     "cve": "CVE-2026-120082",
     "descripcion": "The GeoDirectory – WP Business Directory Plugin and Classified Listings Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;post_content&#39; parameter in all versions up to, and including, 2.8.200 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The nested shortcode payload ([gd_dynamic_conten[gd_tags]t ...]) defeats the plugin&#39;s geodir_strip_shortcodes() guard because WordPress&#39;s strip_shortcodes() performs only a single pass over registered tags, and HTML-entity-encoded attributes in the resulting shortcode survive wp_kses_post() because kses inspects HTML tags rather than shortcode attribute values. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-07",
-    "cve": "CVE-2026-119616",
-    "descripcion": "The Noptin – Newsletter, New Post Notifications & Email Automation plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 4.4.3 via the &#39;noptin_fields[first_name]&#39; parameter parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. The public Manage Preferences page issues a nonce to unauthenticated visitors, meaning there is no effective authorization barrier — an unauthenticated attacker can store the malicious payload as their first_name and have it executed the next time any newsletter is sent by the site operator. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-07",
-    "cve": "CVE-2026-119219",
-    "descripcion": "The Jupiter X Core plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;fields[]&#39; parameter in all versions up to, and including, 4.62.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Execution requires that the attacker-registered account be assigned as the post_author of a page or post whose template includes the Raven Author Box widget, a fixture an administrator can create by reassigning authorship to any user including newly registered Subscribers. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-07",
-    "cve": "CVE-2026-119218",
-    "descripcion": "The Greenshift – animation and page builder blocks plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the &#39;url (comment_author_url)&#39; parameter in all versions up to, and including, 13.2.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the affected page to be configured with a GreenShift Interaction Layer attach-attribute action that copies a comment-author anchor&#39;s href into a Counter block&#39;s data-prefix or data-postfix attribute; given that configuration, the payload executes for every visitor who loads the Counter into the viewport once the comment is published. 07/11/2026 07/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
