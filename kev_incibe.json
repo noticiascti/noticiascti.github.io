@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-11-08",
+    "cve": "CVE-2026-124329",
+    "descripcion": "A vulnerability was found in FlowCI flow-core-x up to 1.23.49. The impacted element is the function FileHelper.unzip of the file common/src/main/java/com/flowci/common/helper/FileHelper.java. The manipulation results in path traversal. The attack may be performed from remote. A high complexity level is associated with this attack. The exploitability is regarded as difficult. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. 08/11/2026 08/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:H/Au:S/C:P/I:P/A:P Gravedad 4.0 1.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-08",
+    "cve": "CVE-2026-124328",
+    "descripcion": "A vulnerability has been found in FlowCI flow-core-x up to 1.23.49. The affected element is the function ConditionManagerImpl.run of the file core/src/main/java/com/flowci/core/common/manager/ConditionManagerImpl.java of the component Groovy Script Evaluation. The manipulation of the argument condition leads to code injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 08/11/2026 08/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-08",
+    "cve": "CVE-2026-124326",
+    "descripcion": "A flaw has been found in DataLinkDC Dinky up to 1.2.5. Impacted is the function file.getOriginalFilename of the file CatalogueController.java of the component Catalogue Upload. Executing a manipulation of the argument filename can lead to path traversal. The attack can be executed remotely. The exploit has been published and may be used. The researcher claims to have submitted a GHSA on the repository of the project. 08/11/2026 08/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-08",
     "cve": "CVE-2026-97195",
     "descripcion": "The Secure Custom Fields WordPress plugin before 6.9.8 does not sanitize a persisted field definition before emitting part of it as an HTML attribute name, allowing a user able to configure its fields to store a payload that executes as JavaScript in the browser of any user who views a page rendering the affected field, which on multisite lets a site administrator who lacks the unfiltered_html capability inject script into other users&#39; sessions. 08/11/2026 08/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-11-08",
     "cve": "CVE-2026-85344",
     "descripcion": "The FV Flowplayer Video Player WordPress plugin before 7.5.57.7212 does not perform any authorization check on an AJAX action that carries out a site-wide content rewrite, so any authenticated user, including subscriber-level, can trigger a bulk modification of posts they should not be able to edit. 08/11/2026 08/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-08",
-    "cve": "CVE-2026-122085",
-    "descripcion": "The Event Tickets Manager for WooCommerce WordPress plugin before 1.6.0 does not perform authorisation or a valid nonce check on its ticket-transfer feature, which is available to unauthenticated users, allowing them to transfer other attendees&#39; guest-checkout tickets to an email address of their choosing, invalidating the legitimate ticket and causing the victim&#39;s ticket PDF, which contains attendee personal data, to be sent to the attacker. 08/11/2026 08/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-08",
-    "cve": "CVE-2026-122062",
-    "descripcion": "The Pronamic Pay WordPress plugin before 11.1.0, Pronamic Pay doneren met Mollie WordPress plugin before 1.7.1 do not restrict access to stored form submissions through the REST API, allowing unauthenticated users to read the messages that visitors submitted through the bundled forms. 08/11/2026 08/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-08",
-    "cve": "CVE-2026-122060",
-    "descripcion": "The WP Recipe Maker WordPress plugin before 10.9.2 does not check whether the post a recipe is embedded in is password protected before returning the recipe through its REST API and structured data output, allowing unauthenticated users to read the full content of recipes in password-protected posts. 08/11/2026 08/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
