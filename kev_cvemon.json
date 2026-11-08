@@ -21,11 +21,6 @@
   },
   {
     "fecha": "2026-11-08",
-    "cve": "CVE-2026-73099",
-    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in Apache Juneau. The REST server accepts a \"content\" query parameter that replaces the request body, and this is enabled by default on every HTTP method, including GET. A cross-site link can therefore deliver an attacker-chosen ..."
-  },
-  {
-    "fecha": "2026-11-08",
     "cve": "CVE-2026-73098",
     "descripcion": "Improper control of dynamically-loaded code vulnerability in Apache Juneau. When Apache Juneau parses a value into a property of type java.lang.Class (including parameterized forms), the default class swap loaded the named class with initialization enabled, so input naming a ..."
   },
@@ -38,6 +33,11 @@
     "fecha": "2026-11-08",
     "cve": "CVE-2026-73100",
     "descripcion": "Insertion of Sensitive Information into Log File vulnerability in Apache Juneau. The default REST server call logger records request headers for requests that end in a server error, without redacting them. Any client able to cause a server error gets headers such as ..."
+  },
+  {
+    "fecha": "2026-11-08",
+    "cve": "CVE-2026-73099",
+    "descripcion": "Cross-Site Request Forgery (CSRF) vulnerability in Apache Juneau. The REST server accepts a \"content\" query parameter that replaces the request body, and this is enabled by default on every HTTP method, including GET. A cross-site link can therefore deliver an attacker-chosen ..."
   },
   {
     "fecha": "2026-11-08",
