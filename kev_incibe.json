@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-124684",
-    "descripcion": "Use after free vulnerability in Samsung Open Source Escargot allows Pointer Manipulation. This issue affects Escargot: before 8bc35b7b88f0f96c66a42aa965a1a710308b61d5. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-19552",
+    "descripcion": "When ca_certs parameter was supplied to ssl.get_server_certificate() function, the identity of the certificate is not checked. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.00 Gravedad 4.0 txt NONE Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-121629",
-    "descripcion": "A flaw was found in GStreamer&#39;s adaptive streaming demuxers (HLS, DASH, MSS). When processing a media playlist or manifest, URIs referenced in the manifest content are fetched without restricting which URI schemes are permitted. An attacker who controls a manifest URL, or who can inject content into an HTTP manifest response, can include file:// URIs pointing to arbitrary local files, causing the affected application to read and process those files. In automated or server-side deployments such as media recorders, proxies, and downloaders, this can lead to disclosure of sensitive local files. Existence of files can also be inferred through differing error responses even when content is not directly observable. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-124959",
+    "descripcion": "The loadIndex function in nmslib hnswlib and Spotify Voyager does not verify that the element count in a serialized HNSW index is within the stored capacity used to allocate the heap buffer. An attacker can supply a crafted index file with an element count greater than the stored capacity, causing the loader to write beyond the allocated buffer and potentially crash the application when it loads the file. 09/11/2026 09/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118468",
-    "descripcion": "XML parsers process attacker-influenced update manifests or network responses with external entity resolution enabled, potentially allowing XML External Entity (XXE) attacks. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-124916",
+    "descripcion": "PrestaShop contains an authenticated PHP code injection vulnerability in the back-office Performance debug-mode configuration. A back-office user with permission to modify debug settings can supply a crafted `debug_cookie_name` or `debug_cookie_value` that is written without sufficient escaping into a PHP configuration file. When PrestaShop subsequently loads the generated file, the injected PHP code is executed with the privileges of the web-server process. 09/11/2026 09/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118467",
-    "descripcion": "Shared telemetry and logging components store or transmit patient and doctor identifiers, clinical information, and low-entropy identifiers without adequate pseudonymization or protection. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-124850",
+    "descripcion": "A SQL injection vulnerability exists in a database migration script in flowintel. The migration process reads stored connector identifier values from the database and interpolates them directly into SQL statements without parameterization. An attacker who has previously written a malicious identifier value into the affected tables can cause arbitrary SQL execution when the migration is subsequently run during an application upgrade. - Requires prior write access to the database to plant a malicious identifier value - Triggered automatically during a migration or upgrade operation - Can result in unauthorized data disclosure, modification, or deletion Affected versions: flowintel prior to 4.0.0 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118465",
-    "descripcion": "Shared components expose hard-coded Access, workgroup, CCBasic, DBISAM, and related database credentials that are identical across installations. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-124636",
+    "descripcion": "A security flaw has been discovered in kevquirk PureBlog up to 3.7.2. The affected element is the function save_page of the file includes/lib/content.php of the component Page Editor. Performing a manipulation of the argument page slug results in path traversal. Remote exploitation of the attack is possible. Upgrading to version 3.7.3 is sufficient to fix this issue. The patch is named 71f5b0de2ecb2bb2934048ed40e1155c107484e3. The affected component should be upgraded. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:N/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118464",
-    "descripcion": "Shared cryptographic services use fixed vendor-wide secrets, deterministic IVs, null salts, and reversible transformations to protect credentials, IPC data, configuration values, and clinical fields. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-124249",
+    "descripcion": "http.cookiejar.CookieJar deleted a stored cookie when a response carried an already expired Set-Cookie header for it, using the Domain and Path attributes from the header without consulting the cookie policy. A server could therefore delete cookies belonging to other domains from a shared cookie jar, such as the one used by urllib&#39;s HTTPCookieProcessor. The fix consults the cookie policy before an expired cookie may delete an existing one, as required by RFC 6265 section 5.3. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118462",
-    "descripcion": "Update components download and execute code without proper authenticity verification, relying on ignored hashes or forgeable checksums. Some update paths also permit archive traversal or script execution. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-119474",
+    "descripcion": "Incorrect Permission Assignment for Critical Resource vulnerability in HAVELSAN Inc. Liman Render Engine allows Privilege Escalation. This issue affects Liman Render Engine: before 1.2-81. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118461",
-    "descripcion": "The shared client accepts caller-controlled doctor identifiers for read and write operations without requiring authentication or authorization credentials. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-104620",
+    "descripcion": "A path traversal attack in simulation of actions in the Zypp backend of PackageKit before 1.4.1 could be used by local attackers to gain root privileges. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118460",
-    "descripcion": "Embedded private keys protected by a shared password can be used to sign practitioner assertions for arbitrary practitioner identifiers, enabling unauthorized practitioner token requests. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-95779",
+    "descripcion": "An exposure of the appliance’s confidential certificate information vulnerability exists in HPE Morpheus manager software. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-118459",
-    "descripcion": "A time-derived emergency password can be derived from publicly available application code, enabling authentication without legitimate credentials. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-95778",
+    "descripcion": "A remote code execution vulnerability exists in HPE Morpheus Software. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   }
 ]
