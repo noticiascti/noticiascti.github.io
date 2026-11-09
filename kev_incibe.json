@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-124621",
-    "descripcion": "A vulnerability was determined in kongxin-github Java_Library_Management_System up to 70a6eb6b96fe64575d8051f1a59055bfc5dc5885. This affects the function UpdateAdmin.deleteuser/UpdateAdmin.updateadmin/UpdateAdmin.updatepass/Book.addbook/Book.modifybook/Book.deletebook/Category.addcategory/Category.setcategory/Landing.sureadmin of the file src/view/MainInterface.java of the component Swing UI Layer. This manipulation causes improper authorization. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The project was informed of the problem early through an issue report but has not responded yet. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-124684",
+    "descripcion": "Use after free vulnerability in Samsung Open Source Escargot allows Pointer Manipulation. This issue affects Escargot: before 8bc35b7b88f0f96c66a42aa965a1a710308b61d5. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-124591",
-    "descripcion": "A vulnerability was detected in Bahleel 0.1.0/0.1.1. Affected is the function fputcsv of the file app/Exporters/CsvExporter.php. The manipulation results in csv injection. The attack may be launched remotely. The project was informed of the problem early through an issue report but has not responded yet. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-121629",
+    "descripcion": "A flaw was found in GStreamer&#39;s adaptive streaming demuxers (HLS, DASH, MSS). When processing a media playlist or manifest, URIs referenced in the manifest content are fetched without restricting which URI schemes are permitted. An attacker who controls a manifest URL, or who can inject content into an HTTP manifest response, can include file:// URIs pointing to arbitrary local files, causing the affected application to read and process those files. In automated or server-side deployments such as media recorders, proxies, and downloaders, this can lead to disclosure of sensitive local files. Existence of files can also be inferred through differing error responses even when content is not directly observable. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-124590",
-    "descripcion": "A security vulnerability has been detected in zhangbw409 library_manager_system f6c9d9c96bf5d2a32ef741daeaa29d80e6db166b/56514767a5207caf5e04c2cea379dfaa8cb5f00b. This impacts the function BookController.addBook of the file src/main/java/com/zbw/controller/UserController.java. The manipulation of the argument userName/userPwd/userEmail/userId leads to improper authorization. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-118468",
+    "descripcion": "XML parsers process attacker-influenced update manifests or network responses with external entity resolution enabled, potentially allowing XML External Entity (XXE) attacks. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.20 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-123779",
-    "descripcion": "Direct Request (&#39;Forced Browsing&#39;) vulnerability in Apache Axis2/Java. The exposeServiceMetadata service parameter was enforced only on the ?wsdl, ?wsdl2 and ?xsd queries. For a service that had disabled it, the packaged .wsdl and .xsd file routes, the named-WSDL ?wsdl=NAME route of the standalone HTTP server, the OpenAPI, Swagger UI and MCP catalog endpoints, the services listing, WS-MetadataExchange GetMetadata and the ping module still disclosed its metadata to anonymous callers, including operation names and request and response schemas. This issue affects Apache Axis2/Java: through 2.0.1. Users are recommended to upgrade to version 2.0.2, which fixes the issue. 09/11/2026 09/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-118467",
+    "descripcion": "Shared telemetry and logging components store or transmit patient and doctor identifiers, clinical information, and low-entropy identifiers without adequate pseudonymization or protection. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-123770",
-    "descripcion": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Axis2/Java. The multipart/form-data and application/x-www-form-urlencoded message builders read the request body directly from the transport stream with no size limit, so the servlet container&#39;s post-size limit did not apply, and multipart temporary files were not deleted. An unauthenticated caller could exhaust memory or disk. Version 2.0.2 bounds these bodies with configurable limits and deletes temporary files. This issue affects Apache Axis2/Java: through 2.0.1. Users are recommended to upgrade to version 2.0.2, which fixes the issue. 09/11/2026 09/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-118465",
+    "descripcion": "Shared components expose hard-coded Access, workgroup, CCBasic, DBISAM, and related database credentials that are identical across installations. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-123766",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (Cross-site Scripting) vulnerability in the OpenAPI module of Apache Axis2/Java. The Swagger UI page served by the OpenAPI module wrote a value derived from the request&#39;s Host header into the page without encoding, allowing script injection in the context of the Axis2 origin. This issue affects Apache Axis2/Java: 2.0.1. Users are recommended to upgrade to version 2.0.2, which fixes the issue. 09/11/2026 09/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-118464",
+    "descripcion": "Shared cryptographic services use fixed vendor-wide secrets, deterministic IVs, null salts, and reversible transformations to protect credentials, IPC data, configuration values, and clinical fields. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-123753",
-    "descripcion": "Server-Side Request Forgery (SSRF) vulnerability in Apache Axis2/Java. An unauthenticated caller could supply a non-anonymous WS-Addressing wsa:ReplyTo or wsa:FaultTo address, and Axis2 would open a connection to that address to deliver the response or fault, allowing requests to internal hosts and delivery of response content to a host of the caller&#39;s choosing. From 2.0.2, decoupled responses are refused unless allowNonAnonymousResponseEndpoints is enabled, and enabled endpoints are restricted by scheme and screened at both the header-parsing and transport-selection layers. This issue affects Apache Axis2/Java: through 2.0.1. Users are recommended to upgrade to version 2.0.2, which fixes the issue. 09/11/2026 09/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-118462",
+    "descripcion": "Update components download and execute code without proper authenticity verification, relying on ignored hashes or forgeable checksums. Some update paths also permit archive traversal or script execution. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-123476",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in fifu.app Featured Image from URL featured-image-from-url allows Stored XSS.This issue affects Featured Image from URL: from n/a through 6.1.4. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-118461",
+    "descripcion": "The shared client accepts caller-controlled doctor identifiers for read and write operations without requiring authentication or authorization credentials. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-123475",
-    "descripcion": "Missing Authorization vulnerability in PT Norther Lights Production MapSVG mapsvg-lite-interactive-vector-maps allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects MapSVG: from n/a through 8.16.3. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-118460",
+    "descripcion": "Embedded private keys protected by a shared password can be used to sign practitioner assertions for arbitrary practitioner identifiers, enabling unauthorized practitioner token requests. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-09",
-    "cve": "CVE-2026-123460",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Nickboss WordPress File Upload wp-file-upload allows Stored XSS.This issue affects WordPress File Upload: from n/a through 5.2.2. 09/11/2026 09/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-118459",
+    "descripcion": "A time-derived emergency password can be derived from publicly available application code, enabling authentication without legitimate credentials. 09/11/2026 09/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
