@@ -1,6 +1,46 @@
 [
   {
     "fecha": "2026-11-10",
+    "cve": "CVE-2026-82509",
+    "descripcion": "V programming language standard library net.http through version 0.5.2 prior to commit 4077484 contains a TLS certificate validation bypass vulnerability that allows on-path attackers to intercept HTTPS traffic by exploiting the default false value of SSLConnectConfig.validate and FetchConfig.validate, which completes TLS handshakes without verifying certificates in both the mbedtls and OpenSSL backends. Attackers can present an expired, self-signed, wrong-hostname, or untrusted-root certificate to successfully complete the handshake via http.get, http.post, or http.fetch, enabling interception or modification of HTTPS traffic unless validate: true is explicitly configured. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 9.10 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-12708",
+    "descripcion": "Summary Cloudflare tokio-quiche was found to contain an uncontrolled resource consumption vulnerability in its HTTP/3 DATAGRAM handling. For every previously unseen flow identifier (quarter stream ID) received in a DATAGRAM frame, tokio-quiche creates and retains new, per-flow state. A remote peer can send DATAGRAMs with many distinct identifiers, causing the per-connection flow map and associated channel state to grow without bound. Impact Exploitation can exhaust process memory and cause a denial of service. The vulnerable code is used in both client and server configurations, so either role can be affected by a malicious peer. QUIC DATAGRAM support in tokio-quiche is enabled by default through QuicSettings::enable_dgram; applications can disable it by setting this field to false. The vulnerable HTTP/3 path is reachable only when DATAGRAM support is negotiated with the peer. Core quiche and HTTP/3 deployments without DATAGRAM support are not affected. Mitigation Disable DATAGRAMs in tokio-quiche’s QuicSettings::enable_dgram. Remediation Upgrade to tokio-quiche version 0.23.0 or later. The fixed code creates flow state only for valid DATAGRAM-capable request streams, which are bounded by QUIC’s stream limits. To tolerate packet reordering, servers retain early DATAGRAMs in a bounded, expiring buffer, while clients discard DATAGRAMs for unknown flows. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-120399",
+    "descripcion": "A flaw was found in flightctl. A TLS handshake is performed synchronously in the HTTP server’s connection-context callback without a deadline. A network-reachable unauthenticated client can stall the handshake and prevent the affected listener from accepting new connections. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-125871",
+    "descripcion": "The sourcecache expansion module in MISP Modules (misp-modules) contains a Server-Side Request Forgery (SSRF) vulnerability. When a user with permission to create or modify attributes of type &#39;link&#39; or &#39;url&#39; submits an attribute value, the module passes the URL directly to its internal archiving function without any validation of the target address. An attacker can therefore craft a URL pointing to loopback addresses (e.g., 127.0.0.1), private network ranges, link-local addresses, or cloud metadata endpoints (e.g., 169.254.169.254). The MISP server will issue an HTTP request to that target and store the response body in the event, effectively exfiltrating data from internal services to the attacker through the MISP interface. Non-HTTP schemes such as file:// are also accepted, potentially allowing local file disclosure. The vulnerability requires an authenticated MISP user with the ability to create or edit attributes of the affected types. The security impact is information disclosure from internal services reachable by the MISP server, including sensitive data such as cloud credentials, internal application data, or local files. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-125745",
+    "descripcion": "Custom Post Types and Custom Fields creator (WCK) before 2.4.1 contains a missing authorization vulnerability that allows authenticated attackers with access to any WCK meta box to read custom-field values on posts they cannot edit by exploiting the wck_show_update_form AJAX handler, which lacks the capability checks enforced by other handlers and relies on a shared, non-unique nonce action. Attackers can send a crafted admin-ajax.php request with a valid wck-edit-entry nonce, a target meta key, and an arbitrary post ID to disclose sensitive post-meta or option values belonging to other users, including private or draft post data. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-125744",
+    "descripcion": "Our API endpoint for changing ticket layouts did not properly check permissions of the requesting user or API token. An attacker with read-only access to an event could use this to change the event&#39;s ticket layout. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 1.20 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-124747",
+    "descripcion": "A flaw was found in BusyBox. When resuming a download over File Transfer Protocol (FTP), the wget utility fails to verify that the resume offset does not exceed the file size reported by the server, resulting in an integer calculation error. A malicious FTP server or an on-path network attacker can exploit this issue by returning crafted file size metadata, triggering a heap-based buffer overflow with attacker-controlled data. Successful exploitation may allow an attacker to execute arbitrary code or crash the application, resulting in a denial of service (DoS). 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-100962",
+    "descripcion": "NVIDIA NeMo Export-Deploy for all platforms contains a vulnerability in multimodal deployment where an attacker could cause a server-side request forgery. A successful exploit of this vulnerability might cause information disclosure. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-10",
     "cve": "CVE-2026-59082",
     "descripcion": "A vulnerability has been identified in SIMATIC WinCC V7.5 (All versions), SIMATIC WinCC V8.0 (All versions), SIMATIC WinCC V8.1 (All versions). Affected devices implicitly execute active content when opening files. This could allow an attacker to make the user execute arbitrary code on the device. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -8,45 +48,5 @@
     "fecha": "2026-11-10",
     "cve": "CVE-2026-58114",
     "descripcion": "A vulnerability has been identified in SIMATIC BATCH V9.1 (All versions), SIMATIC Information Server 2020 (All versions), SIMATIC Information Server 2022 (All versions), SIMATIC PCS 7 V9.1 (All versions), SIMATIC Process Historian 2020 (All versions), SIMATIC Process Historian 2022 (All versions), SIMATIC WinCC Runtime Professional V17 (All versions), SIMATIC WinCC Runtime Professional V18 (All versions), SIMATIC WinCC Runtime Professional V19 (All versions), SIMATIC WinCC Runtime Professional V20 (All versions), SIMATIC WinCC Runtime Professional V21 (All versions), SIMATIC WinCC V7.5 (All versions), SIMATIC WinCC V8.0 (All versions), SIMATIC WinCC V8.1 (All versions). Affected systems do not properly secure their remote user authentication with the deprecated NTLM protocol. This could allow unauthenticated remote attackers, who have achieved a machine in the middle position, to relay NTLM authentication and impersonate a legitimate user. The potential impact depends on the services that are accessible, e.g. a SQL server used by WinCC. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-12574",
-    "descripcion": "Zoho Corporation ManageEngine DDI Central versions 6200 and below are vulnerable to Server-side HTML/JavaScript injection in analytics PDF generation leading to local file disclosure. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-12573",
-    "descripcion": "Zoho Corporation ManageEngine DDI Central versions 6200 and below are vulnerable to Cisco IOS command injection via DHCP pool name leading to arbitrary commands on managed Cisco routers. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-12572",
-    "descripcion": "Zoho Corporation ManageEngine DDI Central version below 6201 is vulnerable to SQL injection in HA replication username handling leading to command execution as the PostgreSQL service account. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-12266",
-    "descripcion": "Zoho Corporation ManageEngine DDI Central versions 6200 and below are vulnerable to LDAP bind password exposure through insufficiently protected LDAP settings API. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-125742",
-    "descripcion": "7-Zip before 26.06 contains a heap out-of-bounds write vulnerability in the LZX decoder that lets attackers corrupt memory when a continuation CAB volume declares a smaller window. Attackers can entice victims to extract crafted multi-volume CAB archives, where a stale _pos value bypasses bounds checks, enabling arbitrary code execution. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-125715",
-    "descripcion": "Samsung mTower lacks access control for TA sessions, allowing a Normal World application to open TA sessions and invoke their commands, or use a close existing sessions if thier identifiers are known, The impact depends on the affected TA. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-125709",
-    "descripcion": "A flaw was found in libstdc++. When a byte-by-byte write operation fails during file stream processing, the library may still append data into the internal memory buffer. An attacker capable of inducing repeated write failures in an affected service can trigger a buffer overflow, potentially resulting in a Denial of Service (DoS) or memory corruption. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 4.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-125706",
-    "descripcion": "A flaw was found in GStreamer&#39;s gst-plugins-bad MPEG Program Stream demuxer and resindvd DVD-playback plugin. The PES header parsers do not adequately check remaining data before reading timestamps and optional header fields. Opening a specially crafted MPEG Program Stream file can cause an out-of-bounds read and potentially crash the application, resulting in a denial of service. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
