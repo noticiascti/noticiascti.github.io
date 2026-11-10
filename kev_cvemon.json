@@ -1,16 +1,6 @@
 [
   {
     "fecha": "2026-11-10",
-    "cve": "CVE-2026-114432",
-    "descripcion": "The Contact Form 7 WordPress plugin before 6.2.4 does not validate the type or extension of files uploaded through a form file field, and a flaw in its temporary-file cleanup leaves the uploaded file on disk, allowing unauthenticated users to upload arbitrary files to the site. ..."
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-110963",
-    "descripcion": "The Userplace WordPress plugin through 1.2.0 does not perform authorization checks on an AJAX action available to unauthenticated users and publicly exposes the nonce that protects it, allowing unauthenticated attackers to create an administrator account or write arbitrary site ..."
-  },
-  {
-    "fecha": "2026-11-10",
     "cve": "CVE-2026-43499",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: rtmutex: Use waiter::task instead of current in remove_waiter() remove_waiter() is used by the slowlock paths, but it is also used for proxy-lock rollback in rt_mutex_start_proxy_lock() when invoked ..."
   },
@@ -36,17 +26,27 @@
   },
   {
     "fecha": "2026-11-10",
-    "cve": "CVE-2025-55182",
-    "descripcion": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code ..."
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-118423",
-    "descripcion": "The WP Libre Form WordPress plugin 1.5.0.1 does not validate the type of files uploaded through its form submissions, allowing unauthenticated attackers to upload PHP files to a web-accessible location and execute them, leading to remote code execution."
+    "cve": "CVE-2026-113970",
+    "descripcion": "A use-after-free issue was addressed with improved memory management. This issue is fixed in iOS 18.7.12 and iPadOS 18.7.12, iOS 26.7.3 and iPadOS 26.7.3, iOS 27.2.1 and iPadOS 27.2.1, macOS Golden Gate 27.2.1, macOS Sequoia 15.8.3, macOS Tahoe 26.7.3, visionOS 27.2.1, watchOS ..."
   },
   {
     "fecha": "2026-11-10",
     "cve": "CVE-2026-123158",
     "descripcion": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 ..."
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-113961",
+    "descripcion": "An authorization issue was addressed with improved validation. This issue is fixed in iOS 26.7.3 and iPadOS 26.7.3, iOS 27.2.1 and iPadOS 27.2.1, macOS Golden Gate 27.2.1, macOS Sequoia 15.8.3, macOS Tahoe 26.7.3, visionOS 27.2.1, watchOS 27.2.1. A remote attacker may be able to ..."
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-114432",
+    "descripcion": "The Contact Form 7 WordPress plugin before 6.2.4 does not validate the type or extension of files uploaded through a form file field, and a flaw in its temporary-file cleanup leaves the uploaded file on disk, allowing unauthenticated users to upload arbitrary files to the site. ..."
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-110963",
+    "descripcion": "The Userplace WordPress plugin through 1.2.0 does not perform authorization checks on an AJAX action available to unauthenticated users and publicly exposes the nonce that protects it, allowing unauthenticated attackers to create an administrator account or write arbitrary site ..."
   }
 ]
