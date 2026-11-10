@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-11-10",
+    "cve": "CVE-2026-115646",
+    "descripcion": "Partial String Comparison Vulnerability in HiRDB. This issue affects HiRDB Server Version 10: from 10-00 before 10-12-01; HiRDB Server Version 9: from 09-50-06 through 09-66-22; HiRDB Server with Additional Function Version 9: from 09-50-/F through 09-66/V; HiRDB Server Version 9(32): from 09-50-06 through 09-66-22; HiRDB Server with Additional Function Version 9(32): from 09-50-/F through 09-66-/V. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-115640",
+    "descripcion": "LimeSurvey Community Edition 7.7.0 contains a stored cross-site scripting vulnerability in the Central Participants Database blocklist control. An authenticated user with only global participantpanel:import permission can import a CSV participant_id containing HTML. The import flow persists that value without model validation. When a CPDB editor opens the participant list, LimeSurvey derives ButtonGroupWidget id and name attributes from participant_id and inserts them without HTML encoding, causing attacker-controlled markup to execute in the victim&#39;s authenticated LimeSurvey origin. Exploitation can access session-exposed data and issue same-origin requests with the victim&#39;s effective permissions. 10/11/2026 10/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-10",
+    "cve": "CVE-2026-112125",
+    "descripcion": "Incorrect Permission Assignment for Critical Resource Vulnerability in HA Monitor. This issue affects HA Monitor: from 01-00 before 01-83-01. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-10",
     "cve": "CVE-2026-125612",
     "descripcion": "Improper neutralization of special elements used in an SQL command (&#39;SQL injection&#39;) vulnerability in Deltaww DIAEnergie allows SQL Injection. This issue affects DIAEnergie: before 1.11.01.032. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-11-10",
     "cve": "CVE-2026-89129",
     "descripcion": "Due to a Server-Side Request Forgery (SSRF) vulnerability in SAP NetWeaver AS Java (Web Services), an unauthenticated attacker could craft a SOAP request that causes the server to return a SOAP fault to a URL under the attacker�s control. Successful exploitation could allow the attacker to disclose information about connected systems, impacting confidentiality, while integrity and availability remain unaffected. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-89128",
-    "descripcion": "Due to Broken Access Control in SAP NetWeaver AS Java, an unauthenticated attacker could invoke affected SOAP operations exposed over HTTP without proper access control. Successful exploitation could allow disclosure of information accessible through the affected service, resulting in a low impact on confidentiality. Integrity and availability remain unaffected. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-89126",
-    "descripcion": "SAP Web Dispatcher does not sufficiently validate certain network input processed by an internal component. An unauthenticated attacker could send specially crafted network traffic to trigger a memory corruption condition in the affected functionality. Successful exploitation could allow the attacker to execute arbitrary code and fully compromise the system, resulting in a high impact on confidentiality, integrity and availability of the system. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
-  },
-  {
-    "fecha": "2026-11-10",
-    "cve": "CVE-2026-89125",
-    "descripcion": "Due to Insecure Storage of Sensitive Information in SAP Web Dispatcher and Internet Communication Manager, an attacker with administrative privileges could obtain sensitive information from stored data. This may allow correlation of credentials across users and deployments, potentially leading to credential exposure and unauthorized access. Successful exploitation could expose credentials and facilitate unauthorized access to affected systems, resulting in a high impact on confidentiality and a low impact on integrity and availability. 10/11/2026 10/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
