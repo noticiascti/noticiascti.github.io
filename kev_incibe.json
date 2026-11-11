@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-63660",
-    "descripcion": "node-fontnik is a library that delivers a range of glyphs rendered as SDFs (signed distance fields) in a protocol buffer. Prior to version 0.7.7, a crafted font could trigger a heap out-of-bounds write in RenderSDF (include/mapbox/glyph_foundry_impl.hpp). RenderSDF computed the SDF bitmap allocation size as buffered_width * buffered_height in 32-bit unsigned int. Glyph dimensions are derived from the uploaded font&#39;s outline bounding box with no upper bound, so a glyph large enough to make that product exceed 2³² wrapped to a small value. The buffer was then under-allocated while the render loop still wrote one byte per pixel, corrupting the heap (CWE-190 → CWE-787) and crashing the process. A 680-byte font is enough to drive FreeType to a 65536×65536 buffered glyph, wrapping the size to 0. This issue has been patched in version 0.7.7. 11/11/2026 11/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-115733",
+    "descripcion": "The Printaura-Woocommerce WordPress plugin through 4.0.2 does not properly restrict access to the WooCommerce REST API, causing every WooCommerce REST route to accept unauthenticated requests, which allows unauthenticated attackers to read and modify store data including customer orders and personal information, store and payment settings, and webhooks. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-63194",
-    "descripcion": "OpenMRS module bahmnicore contains Core OpenMRS modules for Bahmni (including ERP & ELIS Atom Feed Clients). In version 0.93, there is insufficient validation of input paths during the admin CSV import process, allowing for potential arbitrary file write. This issue has been patched in version 0.93.1. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-111597",
+    "descripcion": "The Forminator Forms WordPress plugin before 1.58.4 does not verify that a Stripe Checkout payment has completed before returning a pending submission&#39;s after-payment response, allowing unauthenticated visitors to obtain the post-payment redirect URL and thank-you message of a payment-gated form without paying. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-63192",
-    "descripcion": "OpenMRS module bahmnicore contains Core OpenMRS modules for Bahmni (including ERP & ELIS Atom Feed Clients). In version 0.93, an attacker with authenticated access could potentially exfiltrate sensitive data from the database. This issue has been patched in version 0.93.1. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-111579",
+    "descripcion": "The Forminator Forms WordPress plugin before 1.58.4 does not enforce payment on the server side when a form&#39;s configured payment gateway is unavailable, allowing unauthenticated visitors to complete a payment-gated User Registration form without paying and be assigned the form&#39;s configured role, up to administrator, after the gateway has been connected and later disconnected. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-126571",
-    "descripcion": "Padloc 4.0.0 before 4.3.1 contains an authentication bypass vulnerability in the legacy retrieveMFAToken handler that never counts wrong email verification codes toward the attempt limit. Unauthenticated attackers knowing a victim&#39;s email can brute force the 6-digit code to obtain verification tokens usable in signup, login and account recovery flows. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-110949",
+    "descripcion": "The Download Manager WordPress plugin before 3.3.73, Download Manager WordPress plugin before 7.6.2 does not verify a package&#39;s configured role restriction when validating a package password, allowing an unauthenticated user who knows the password of a role-restricted package to obtain a download key and download the protected file. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-126570",
-    "descripcion": "Padloc 4.0.0 before 4.3.1 contains a prototype pollution vulnerability that allows SCIM token holders to modify Object.prototype by sending crafted SCIM PATCH paths to ScimServer._handleScimUsersPatch(). Attackers can supply paths like __proto__.x or constructor.prototype.x passed to setPath() to pollute the shared server process, disrupting requests for all other organizations. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:L/VA:H/SC:N/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:L/A:H Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-110948",
+    "descripcion": "The Download Manager WordPress plugin before 3.3.73, Download Manager WordPress plugin before 7.6.2 does not verify that a visitor is allowed to access a package before its media-preview renderers issue a download key for it, allowing unauthenticated visitors to download password-locked and role-restricted files by reading the key from a public page. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-126569",
-    "descripcion": "Mbin 1.2.1 before 1.11.1 contains a stored cross-site scripting vulnerability in EmbedElement::buildDestructed() that renders nested Markdown image alt text and URL without HTML escaping. Authenticated users can embed HTML in the alt text of an image inside a link in entries, comments, posts, messages, or bios to run script in viewers&#39; browsers. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-110016",
+    "descripcion": "The Data Tables Generator by Supsystic WordPress plugin before 1.15.8 does not perform any authorization or ownership check before returning the stored contents of a table, relying only on a nonce that is exposed to every anonymous visitor, allowing unauthenticated users to read the full contents of any table by its identifier, including tables that are never published anywhere on the site. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-126567",
-    "descripcion": "Semantic MediaWiki 3.0.0 before 7.4.1 contains a stored cross-site scripting vulnerability in Special:Ask with the ElasticStore backend, allowing users with edit rights to inject script through unescaped native_result and score_set output. Attackers can store markup in a Text property or subobject name, then lure victims including administrators to a crafted Special:Ask link to execute script in their session. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-109873",
+    "descripcion": "The User Registration & Membership WordPress plugin before 5.3.2 does not enforce its payment-before-login restriction when a registration is submitted without a membership selection, allowing unauthenticated users to create an account on a payment-gated registration form and log in without completing payment. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-126566",
-    "descripcion": "Semantic MediaWiki 7.3.1 before 7.4.1 contains an incorrect authorization vulnerability in EditProtectionUpdater::userMayChangeProtection() that checks protection changes against the page&#39;s latest revision author. Editors can add {{#set:Is edit protected=false}} to a transcluded template, removing administrator edit and move protection logged under the administrator&#39;s name. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L Gravedad 4.0 7.10 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-109871",
+    "descripcion": "The User Registration & Membership WordPress plugin before 5.3.2 does not verify that a payment has actually been completed before extending a paid membership subscription, allowing authenticated users with an active paid subscription to renew it indefinitely without paying. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-126565",
-    "descripcion": "Semantic MediaWiki 3.0.0 before 7.4.1 contains a denial of service vulnerability in the ElasticStore and SPARQLStore ConceptDescriptionInterpreter classes, which re-expand concepts without memoization or an expansion budget. Users with page-edit rights can build acyclic chains of Concept: pages that fan out, so queries via concept page views, Special:Ask, or api.php action=ask exhaust CPU and memory. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-109870",
+    "descripcion": "The User Registration & Membership WordPress plugin before 5.3.2 does not verify that a discount coupon applied to a paid membership plan is actually valid for that plan before treating a fully discounted order as paid, allowing unauthenticated users to be granted the role mapped to a paid plan without paying for it, which can lead to privilege escalation up to administrator where a plan is mapped to a privileged role. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-11",
-    "cve": "CVE-2026-126564",
-    "descripcion": "Semantic MediaWiki 2.5.0 before 7.4.1 contains a stored cross-site scripting vulnerability in ValueFormatter::getFormattedSubject() that renders property label segments after a literal &nbsp; as unescaped markup. Users with page-edit rights can set a preferred property label containing an img onerror payload that executes when anyone, including administrators, views Special:Browse or the smwbrowse API. 11/11/2026 11/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-106468",
+    "descripcion": "The Code Snippets WordPress plugin before 4.1.0 does not verify network-level capabilities before honouring a network-scope parameter on its snippet import routes on multisite, allowing an administrator of a single subsite without network-management rights to create, overwrite and deactivate network-wide snippets belonging to the whole network. 11/11/2026 11/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
