@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-8333",
-    "descripcion": "A stored cross-site scripting vulnerability in Microchip the TimePictra platform could allow an authenticated, low-privileged attacker to store malicious script content that executes when another user views the affected page 12/11/2026 12/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.40 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-126643",
+    "descripcion": "A cleartext storage flaw was found in the AAP Gateway Operator. When reconciling an AutomationController, the operator reads the protected resource-server Secret (Secret/-resource-server, key controller_resource_server_secret) and copies its plaintext value into the generated AutomationController custom resource under spec.extra_settings (RESOURCE_SERVER.SECRET_KEY). Although the operator uses no_log to keep the value out of its own logs, serializing it into the custom resource exposes it to any principal able to read the AutomationController CR without permission to read the backing Kubernetes Secret, breaking the expected OpenShift RBAC separation between the two resources. The value may also propagate into Kubernetes API/etcd storage, GitOps and Argo diffs and history, rendered manifests, support bundles, and audit data. The resource-server secret is intended for trusted Gateway-to-Controller service authentication, and its disclosure may allow a user to impersonate a trusted Controller service and reach privileged service-index APIs. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-8332",
-    "descripcion": "A hard-coded root password in Microchip TimePictra platform installation files could allow an attacker with access to those files to obtain privileged credentials 12/11/2026 12/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-126641",
+    "descripcion": "A host key verification flaw was found in ansible-pylibssh and in the ansible.netcommon libssh connection plugin. When trust-on-first-use is enabled (host_key_auto_add on the libssh connection plugin, or AutoAddPolicy in ansible-pylibssh), a host that is already present in known_hosts but now presents a different key is accepted without warning. The pylibssh Session.verify_knownhost() method passes the SSH_KNOWN_HOSTS_CHANGED and SSH_KNOWN_HOSTS_OTHER states to the same missing_host_key() policy hook used for unknown hosts, and the bundled AutoAddPolicy/RejectPolicy classes (as well as ansible.netcommon&#39;s MyAddPolicy, which is modeled on paramiko&#39;s AutoAddPolicy) therefore add the changed key and continue the connection rather than aborting as paramiko&#39;s BadHostKeyException path would. As a result the controller authenticates to the substitute host, runs the play there, and appends the new key to known_hosts, which can disclose connection credentials to an attacker performing a machine-in-the-middle attack. Default configurations (host_key_checking enabled, host_key_auto_add unset) are not affected; non-interactive runs fail closed. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-8331",
-    "descripcion": "An unrestricted upload of files with dangerous type vulnerability in the Microchip TimePictra platform allows functionality not properly constrained by access control lists, potentially resulting in remote code execution. 12/11/2026 12/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-124704",
+    "descripcion": "In Telerik UI for WPF, versions prior to 2026.4.1110, a deserialization of untrusted data vulnerability exists that allows an attacker to perform unauthorized actions in the context of the affected application. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-87772",
-    "descripcion": "Incorrect Authorization vulnerability in TÜBİTAK BİLGEM Software Technologies Research Institute Pardus About allows Privilege Escalation. This issue affects Pardus About: before 1.2.5. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-124703",
+    "descripcion": "In Telerik UI for WPF, versions prior to 2026.4.1110, an improper control of code generation vulnerability exists that allows an attacker to execute unauthorized code in the context of the affected application. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-12591",
-    "descripcion": "Zohocorp ManageEngine M365 Manager Plus versions below 4818 is affected by an authenticated technician may exploit insufficient permission validation in the delegated administration interface to escalate privileges beyond their intended scope, which could result in remote code execution during administrative processing. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-124701",
+    "descripcion": "In Telerik UI for WinForms, versions prior to 2026.4.1111, a deserialization of untrusted data vulnerability exists that allows an attacker to perform unauthorized actions in the context of the affected application. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-12507",
-    "descripcion": "Zohocorp ManageEngine AssetExplorer versions below 7860, ServiceDesk Plus versions below 15290, ServiceDesk Plus MSP versions below 15150, and SupportCenter Plus versions below 15150 are affected by a authenticated remote code execution vulnerability in the Reports module. An authenticated user with the Create Query Reports permission could exploit specially crafted database queries to execute arbitrary commands on the underlying server. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-76173",
+    "descripcion": "Blind SQL injection vulnerability in the public endpoint `public/webhook/receiver.php` of the WhatsApp module for Dolibarr 1.9. The phone number value derived from the `data.key.remoteJid` parameter, received via a JSON request, is incorporated into an SQL query without escaping or parameterization. With the WHATSAPP_WEBHOOK_ALLOW option enabled, an unauthenticated remote attacker could manipulate this parameter to alter the query. Exploitation using a timing-based technique could allow an attacker to extract information from the database and cause service disruption. 12/11/2026 12/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.80 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-113408",
-    "descripcion": "Path traversal in Git allows writing to arbitrary file via cloning and committing to bad repository 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-123765",
+    "descripcion": "Improper neutralization of input during web page generation (&#39;cross-site scripting&#39;) vulnerability in Apache Sling XSS. xssAPI.getStyleToken() accepts markup in unquoted urls. This issue affects Apache Sling XSS: before 2.4.14. Users are recommended to upgrade to version 2.4.14, which fixes the issue. 12/11/2026 12/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-76792",
-    "descripcion": "The User Verification by PickPlugins WordPress plugin before 2.0.49 does not rate limit the verification step of its one-time-password login, and does not expire the generated code, allowing unauthenticated attackers to brute force it and log in as any user, including administrators, where the code is configured to use digits only. 12/11/2026 12/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-127016",
+    "descripcion": "The MISP Modules website component exposes external tool management endpoints (add, delete, change status, and change configuration) that did not enforce the optional administrator authentication policy. When ADMIN_PASSWORD was configured in the application environment, the module configuration endpoints correctly required an authenticated administrator session, but the external tools management handlers processed requests from anonymous users without any authorization check. An unauthenticated attacker with network access to the website could add arbitrary external tools, delete existing tools, toggle their active status, and modify their configurations including API keys and ingestion URLs. This inconsistency allowed bypass of the intended access control for the external tools management functionality. The vulnerability is conditional on ADMIN_PASSWORD being set; installations without an admin password intentionally permit open management access by design. The affected component is the external_tools Flask blueprint within the MISP Modules website application. 12/11/2026 12/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:L/SC:N/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.20 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-124817",
-    "descripcion": "The Clockinator Lite WordPress plugin before 1.1.0 does not check authorisation or ownership when updating leave requests, allowing unauthenticated users to modify any leave record, including approving or rejecting requests and reassigning them to other users. 12/11/2026 12/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-124699",
+    "descripcion": "In Telerik UI for WinForms, versions prior to 2026.4.1111, an improper control of code generation vulnerability exists that allows an attacker to supply a crafted expression and execute unauthorized code in the context of the affected application. 12/11/2026 12/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-12",
-    "cve": "CVE-2026-124815",
-    "descripcion": "The Clockinator Lite WordPress plugin before 1.1.0 does not restrict access to several of its record deletion actions, and uses a user-supplied table name in a SQL query without validating or escaping it, allowing unauthenticated users to perform SQL injection attacks, deleting data from any database table and extracting sensitive information such as password hashes. 12/11/2026 12/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-124617",
+    "descripcion": "Rejected reason: 歸類為 JSONCPP Open Source 之問題 12/11/2026 12/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
