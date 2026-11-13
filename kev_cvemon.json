@@ -31,22 +31,22 @@
   },
   {
     "fecha": "2026-11-13",
-    "cve": "CVE-2026-86950",
-    "descripcion": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 18.7.11 and iPadOS 18.7.11, iOS 26.7.1 and iPadOS 26.7.1, macOS Sequoia 15.8.1, macOS Tahoe 26.7.1. Processing a maliciously crafted file may lead to arbitrary code execution. ..."
+    "cve": "CVE-2026-88218",
+    "descripcion": "Double free in Windows DNS allows an unauthorized attacker to execute code over a network."
   },
   {
     "fecha": "2026-11-13",
-    "cve": "CVE-2026-109618",
-    "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
+    "cve": "CVE-2026-117687",
+    "descripcion": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability in its Dynamic Publishing functionality. By sending a specially crafted request that is processed by the Dynamic Publishing, an attacker may be able to execute arbitrary PHP code on the affected ..."
   },
   {
     "fecha": "2026-11-13",
-    "cve": "CVE-2026-109619",
-    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
+    "cve": "CVE-2025-6224",
+    "descripcion": "Certificate generation in juju/utils using the cert.NewLeaf function could include private information. If this certificate were then transferred over the network in plaintext, an attacker listening on that network could sniff the certificate and trivially extract the private ..."
   },
   {
     "fecha": "2026-11-13",
-    "cve": "CVE-2024-27834",
-    "descripcion": "The issue was addressed with improved checks. This issue is fixed in Safari 17.5, iOS 16.7.8 and iPadOS 16.7.8, iOS 17.5 and iPadOS 17.5, macOS Sonoma 14.5, tvOS 17.5, watchOS 10.5. An attacker with arbitrary read and write capability may be able to bypass Pointer Authentication."
+    "cve": "CVE-2025-62860",
+    "descripcion": "Currently trending CVE - Hype Score: 5"
   }
 ]
