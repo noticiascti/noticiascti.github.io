@@ -21,18 +21,23 @@
   },
   {
     "fecha": "2026-11-14",
-    "cve": "CVE-2026-117687",
-    "descripcion": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability in its Dynamic Publishing functionality. By sending a specially crafted request that is processed by the Dynamic Publishing, an attacker may be able to execute arbitrary PHP code on the affected ..."
-  },
-  {
-    "fecha": "2026-11-14",
     "cve": "CVE-2026-109618",
     "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   },
   {
     "fecha": "2026-11-14",
+    "cve": "CVE-2026-109619",
+    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
+  },
+  {
+    "fecha": "2026-11-14",
     "cve": "CVE-2026-119618",
     "descripcion": "Concurrent Execution using Shared Resource with Improper Synchronization vulnerability in Apache HTTP Server's mod_http2 in assign_headers() can lead to RCE. This issue affects Apache HTTP Server: from 2.4.55 through 2.4.70. Affected releases of mod_h2 from GitHub: from 2.0.8 ..."
+  },
+  {
+    "fecha": "2026-11-14",
+    "cve": "CVE-2026-109163",
+    "descripcion": "Stack-based buffer overflow vulnerability in Apache HTTP Server's mod_vhost_alias (after CVE-2026-63292) This issue affects Apache HTTP Server: 2.4.69."
   },
   {
     "fecha": "2026-11-14",
@@ -43,10 +48,5 @@
     "fecha": "2026-11-14",
     "cve": "CVE-2026-121653",
     "descripcion": "SQL injection in the Core of Ivanti Endpoint Manager before version 2024 SU8 allows a remote unauthenticated attacker to achieve remote code execution."
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2025-62860",
-    "descripcion": "Currently trending CVE - Hype Score: 1"
   }
 ]
