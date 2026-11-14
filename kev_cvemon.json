@@ -21,6 +21,11 @@
   },
   {
     "fecha": "2026-11-14",
+    "cve": "CVE-2026-6460",
+    "descripcion": "Type confusion in PostgreSQL allows an object creator to execute arbitrary code as the operating system user running the database, via ALTER ... SET DATA TYPE primarily. Other DDL attack routes exist, such as \"ALTER TABLE ... ADD COLUMN; ROLLBACK; ALTER TABLE ... ADD COLUMN\". ..."
+  },
+  {
+    "fecha": "2026-11-14",
     "cve": "CVE-2026-109618",
     "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   },
@@ -33,11 +38,6 @@
     "fecha": "2026-11-14",
     "cve": "CVE-2026-119618",
     "descripcion": "Concurrent Execution using Shared Resource with Improper Synchronization vulnerability in Apache HTTP Server's mod_http2 in assign_headers() can lead to RCE. This issue affects Apache HTTP Server: from 2.4.55 through 2.4.70. Affected releases of mod_h2 from GitHub: from 2.0.8 ..."
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-109163",
-    "descripcion": "Stack-based buffer overflow vulnerability in Apache HTTP Server's mod_vhost_alias (after CVE-2026-63292) This issue affects Apache HTTP Server: 2.4.69."
   },
   {
     "fecha": "2026-11-14",
