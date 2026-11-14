@@ -1,6 +1,41 @@
 [
   {
     "fecha": "2026-11-14",
+    "cve": "CVE-2026-129427",
+    "descripcion": "Stored XSS via avatar upload chained with an authentication bypass in /Attachments leads to ATO in Cervantes version v1.3-beta could allow an attacker to execute arbitrary code in another user&#39;s browser with elevated privileges 14/11/2026 14/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 8.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-14",
+    "cve": "CVE-2026-129251",
+    "descripcion": "A vulnerability was detected in hrshadhin CloudSchool up to 3.0.1. This affects an unknown function of the file app/Http/Controllers/Backend/EventController.php of the component Event Description Handler. The manipulation of the argument data results in cross site scripting. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 14/11/2026 14/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:M/C:N/I:P/A:N Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 2.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+  },
+  {
+    "fecha": "2026-11-14",
+    "cve": "CVE-2026-129250",
+    "descripcion": "A security vulnerability has been detected in Edimax BR6478ACV2 1.23. The impacted element is the function formPPTPSetup of the file webs. The manipulation of the argument pptpUserName leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way. 14/11/2026 14/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:S/C:C/I:C/A:C Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-11-14",
+    "cve": "CVE-2026-129115",
+    "descripcion": "JSON::XS versions from 3.0 before 4.05 for Perl read freed stack memory when a FREEZE result&#39;s serialisation grows the Perl stack under allow_tags in encode_rv. With allow_tags, an object&#39;s FREEZE method is called in list context and each returned value is encoded through a saved Perl stack pointer. When encoding a returned value calls back into Perl, through TO_JSON under convert_blessed or another FREEZE, and that callback grows the stack, the stack is reallocated while the saved pointer still refers to the freed block. Encoding such objects reads freed memory, and encode can return undef without an error. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-14",
+    "cve": "CVE-2026-129114",
+    "descripcion": "JSON::XS versions from 3.04 before 4.05 for Perl write one byte past a heap buffer when appending a one-byte chunk in incr_parse. The incremental buffer grows to one and a half times the length it must hold, with no room reserved for the terminating NUL. For an empty buffer and a one-byte chunk that request is one byte, which a buffer whose front was removed by earlier decodes can already have, so nothing is reallocated and the NUL lands one byte past the allocation. A peer streaming data to an incr_parse consumer, choosing how the input is split into reads, can cause a one-byte heap out-of-bounds write. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-14",
+    "cve": "CVE-2026-129113",
+    "descripcion": "JSON::XS versions from 4.0_00 before 4.05 for Perl corrupt the incremental buffer length by chopping past its end in incr_skip after a top-level number. The incremental parser scans any run of digits, signs, dots and exponent markers as one number, but the decoder stops at the end of a valid number, so the parser keeps an offset into bytes it has not decoded. It then empties the buffer without clearing those bytes, and a later incr_parse call without new input reads them again and moves the offset past the end of the buffer. incr_skip, the documented recovery after an error, removes that many bytes and the buffer length wraps. A peer sending input such as &#34;1-2&#34; to an incr_parse consumer can make the next read of incr_text exit the process through perl&#39;s uncatchable out-of-memory path. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-14",
+    "cve": "CVE-2026-124541",
+    "descripcion": "JSON::XS versions before 4.05 for Perl leak the decoded part of a rejected long string in decode_str. A string is decoded through a fixed-size buffer (16 KiB in 4.04), and each time the buffer fills its contents move into a new scalar. Nothing frees that scalar when the string is then rejected for a control character, an invalid escape, malformed UTF-8 or the end of the input. A process that keeps running after a failed decode retains the decoded part of each rejected string, with its size chosen by the sender. Repeated requests exhaust process memory. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-14",
     "cve": "CVE-2026-124540",
     "descripcion": "JSON::XS versions before 4.05 for Perl allow stack exhaustion via nested tagged values under allow_tags in decode_tag. With allow_tags, &#34;(&#34; starts a tagged value. Its tag and value are decoded recursively, and each can start another tagged value. Unlike arrays and objects, this nesting is not counted against max_depth. A run of &#34;(&#34; bytes exhausts the C stack and triggers an uncatchable segmentation fault regardless of max_depth. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
@@ -13,40 +48,5 @@
     "fecha": "2026-11-14",
     "cve": "CVE-2026-124536",
     "descripcion": "JSON::XS versions before 4.05 for Perl allow memory exhaustion by buffering incremental input past max_size after a NUL byte in incr_parse. The parser appends each chunk to its buffer and compares max_size with how far it has progressed, not with the buffer length. It treats a NUL byte as the end of the input, so a NUL within the first max_size bytes keeps it short of the limit. The buffer keeps growing, and incr_skip cannot remove the NUL. A peer streaming data to an incr_parse consumer can exhaust process memory regardless of max_size. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-129248",
-    "descripcion": "A weakness has been identified in Akaunting up to 3.3.0. The affected element is the function calculation_to_quantity of the file helpers.php of the component Invoice Item Validation. Executing a manipulation of the argument quantity can lead to numeric range comparison without minimum check. The attack may be performed from remote. The vendor was contacted early about this disclosure but did not respond in any way. 14/11/2026 14/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-129247",
-    "descripcion": "A security flaw has been discovered in yangzongzhuan RuoYi up to 4.8.3. Impacted is the function VelocityUtils.getFileName of the file VelocityUtils.java of the component Code Generator. Performing a manipulation of the argument className results in path traversal. The attack is possible to be carried out remotely. 14/11/2026 14/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:M/C:P/I:P/A:P Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-18742",
-    "descripcion": "The Flatsome theme for WordPress is vulnerable to Stored Cross-Site Scripting via &#39;data-text-sec&#39;, &#39;data-title&#39;, and &#39;title&#39; Attributes via Custom HTML Block in all versions up to, and including, 3.20.12 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload survives server-side sanitization because wp_kses_post permits data-* attributes globally via _wp_add_global_attributes, allowing attacker-controlled values in data-text-sec, data-title, and title attributes to persist in saved post content and be later interpreted as HTML by the ux-countdown, scroll-to, and lightbox-gallery JavaScript behaviors. 14/11/2026 14/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-129181",
-    "descripcion": "A vulnerability has been found in projectworlds Visitor Management System 1.0. This issue affects the function mysqli_query of the file /img/user%20page.php of the component Login Endpoint. Such manipulation of the argument Username leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. 14/11/2026 14/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-129319",
-    "descripcion": "create-ecdh is a browserifiable implementation of Node.js crypto.createECDH. In versions 4.0.4 and below, the JavaScript implementation (browser.js, used by browser bundlers and on Node.js versions without a working native crypto.createECDH) did not validate peer public keys in ECDH.prototype.computeSecret or ECDH.prototype.setPublicKey. The peer point was multiplied by the local private key without checking that it was on the configured curve or in its prime-order subgroup. An attacker who can submit public keys to a party that reuses a static private key can perform an invalid-curve or small-subgroup attack and recover the private key modulo small factors, eventually recovering the full key via the Chinese Remainder Theorem. For the ed25519 and curve25519 curves, low-order points were also accepted, which could force a predictable shared secret. On modern Node.js, create-ecdh re-exports the native implementation, which is not affected. This issue is fixed in version 4.0.5. 14/11/2026 14/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 4.0 8.20 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-126697",
-    "descripcion": "The Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4 was distributed with a hidden update mechanism that fetched Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4 updates from its author&#39;s own server instead of WordPress.org, which was used to push a backdoored build to sites, allowing the attacker controlling that server to inject arbitrary content into pages and to deliver arbitrary code to affected sites. Version 5.2.1, as published on WordPress.org, bundled the Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4 Update Checker library (updater/ directory) configured to poll https://anadnet.com/updates/?action=get_metadata&slug=quick-pagepost-redirect-Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4. In March 2021 that server delivered a modified 5.2.3 build, different from the 5.2.3 later published on WordPress.org, which kept the update channel and added a the_content filter that, for logged-out visitors on single posts and pages, fetched content from https://w.anadnet.com/bro/3/ (passing the site host, request URI and visitor User-Agent) and prepended the response to the post (observed serving SEO spam links to search engine crawlers). Because the version string matched a later WordPress.org release, affected sites were not offered a clean update until 5.2.4. Indicators of compromise: - Outbound requests to anadnet.com or w.anadnet.com - An updater/ directory (Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4 Update Checker, Puc v4p10) inside wp-content/Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4/quick-pagepost-redirect-Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4/ - The strings filter_the_content_in_the_main_loop, ppr_pro, QQQEND or w.anadnet.com in page_post_redirect_Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4.php - page_post_redirect_Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4.php with MD5 ad717da18cf8a2b69899c0d7dafee05a (tampered 5.2.3) Remediation: remove the Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4 (it has been closed on WordPress.org), or at minimum reinstall the clean 5.2.4 from WordPress.org, delete any leftover updater/ directory, verify the files with &#34;wp Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4 verify-checksums quick-pagepost-redirect-Quick Page/Post Redirect Plugin WordPress plugin before 5.2.4&#34;, clear the opcode cache, and treat any site that ran the tampered build as potentially compromised. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-14",
-    "cve": "CVE-2026-126640",
-    "descripcion": "The WP Ultimate CSV Importer WordPress plugin before 9.3 does not escape values from imported files before using them in SQL queries when importing LifterLMS content, allowing high privilege users such as admin, including the administrator of a single site on a multisite network, to perform SQL injection attacks. 14/11/2026 14/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
