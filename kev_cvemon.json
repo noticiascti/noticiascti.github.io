@@ -26,6 +26,11 @@
   },
   {
     "fecha": "2026-11-16",
+    "cve": "CVE-2024-1086",
+    "descripcion": "A use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation. The nft_verdict_init() function allows positive values as drop error within the hook verdict, and hence the nf_hook_slow() function can ..."
+  },
+  {
+    "fecha": "2026-11-16",
     "cve": "CVE-2026-83835",
     "descripcion": "Buffer over-read in Windows Common Log File System Driver allows an authorized attacker to disclose information locally."
   },
@@ -43,10 +48,5 @@
     "fecha": "2026-11-16",
     "cve": "CVE-2026-123039",
     "descripcion": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root."
-  },
-  {
-    "fecha": "2026-11-16",
-    "cve": "CVE-2026-128049",
-    "descripcion": "OpenMage Magento LTS before 20.18.2 and 21.0.0-beta1 before 21.0.0-beta3 contains a cross-site request forgery vulnerability in the admin and storefront OAuth confirm and confirmSimple actions, which accept GET requests without form-key validation. Attackers holding OAuth ..."
   }
 ]
