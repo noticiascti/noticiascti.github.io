@@ -16,6 +16,11 @@
   },
   {
     "fecha": "2026-11-16",
+    "cve": "CVE-2024-1086",
+    "descripcion": "A use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation. The nft_verdict_init() function allows positive values as drop error within the hook verdict, and hence the nf_hook_slow() function can ..."
+  },
+  {
+    "fecha": "2026-11-16",
     "cve": "CVE-2026-126909",
     "descripcion": "Use after free in Passwords in Google Chrome prior to 157.0.8103.78 allowed a remote attacker leveraging social engineering to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)"
   },
@@ -23,11 +28,6 @@
     "fecha": "2026-11-16",
     "cve": "CVE-2026-96947",
     "descripcion": "Use after free in Windows Universal Disk Format File System Driver (UDFS) allows an authorized attacker to elevate privileges locally."
-  },
-  {
-    "fecha": "2026-11-16",
-    "cve": "CVE-2024-1086",
-    "descripcion": "A use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation. The nft_verdict_init() function allows positive values as drop error within the hook verdict, and hence the nf_hook_slow() function can ..."
   },
   {
     "fecha": "2026-11-16",
