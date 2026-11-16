@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2026-129490",
-    "descripcion": "littlefs through 2.11.3, when built with LFS_MIGRATE, contains a type confusion vulnerability in lfs_dir_traverse() that treats a stack lfs_diskoff struct as an lfs_attr array. Attackers can supply a crafted littlefs v1 image whose metadata is read as LFS_FROM_USERATTRS during migration, causing out-of-bounds stack reads and process crashes. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-129091",
+    "descripcion": "Improper Control of Filename for Include/Require Statement in PHP Program (&#39;PHP Remote File Inclusion&#39;) vulnerability in Mikado-Themes GrandPrix Core grandprix-core allows PHP Local File Inclusion.This issue affects GrandPrix Core: from n/a through 1.0. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2026-129485",
-    "descripcion": "Kroki before 0.36.0 contains a server-side request forgery vulnerability in the BlockDiag family of engines that allows unauthenticated attackers to make server requests via node icon and background attributes. Attackers can send crafted diagrams to POST /blockdiag/svg or sibling endpoints to query internal services or cloud metadata and read local image files from the server. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-125830",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Belingo belingoGeo belingogeo allows Reflected XSS.This issue affects belingoGeo: from n/a through 1.13.3. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2026-129484",
-    "descripcion": "Kroki before 0.36.0 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to inject scripts via unvalidated svg-color-dark-scheme and svg-color-light-scheme options. Attackers can craft a GET /goat/svg URL whose option value closes the SVG style element, executing JavaScript in the Kroki origin when victims open it. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-125826",
+    "descripcion": "Improper Limitation of a Pathname to a Restricted Directory (&#39;Path Traversal&#39;) vulnerability in Blubrry Podcasting PowerPress Podcasting powerpress allows Path Traversal.This issue affects PowerPress Podcasting: from n/a through 11.18.3. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2025-71470",
-    "descripcion": "MicroQuickJS (mquickjs) before commit 99eed3f contains an out-of-bounds read vulnerability because JS_Call() raises exceptions during frame setup without updating ctx->sp and ctx->fp. Attackers can supply JavaScript that calls a non-function value, causing build_backtrace() to walk stale frame pointers and crash the engine for denial of service. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-125823",
+    "descripcion": "Allocation of Resources Without Limits or Throttling vulnerability in Jegstudio Gutenverse gutenverse allows HTTP DoS.This issue affects Gutenverse: from n/a through 4.2.2. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2025-71469",
-    "descripcion": "GPAC before 26.02.0 contains a type confusion vulnerability in ctxload_process() that passes non-object descriptors to ODS_SetupOD() without checking the descriptor tag. Attackers can supply a crafted XMT file with a URL-bearing descriptor that crashes MP4Box or other GPAC-based applications in gf_scene_ns_connect_object(), causing denial of service. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-125822",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Nickboss WordPress File Upload wp-file-upload allows Stored XSS.This issue affects WordPress File Upload: from n/a through 5.2.3. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2025-71468",
-    "descripcion": "GPAC before 26.02.0 contains a NULL pointer dereference vulnerability in gf_dash_group_get_audio_channels() in src/media_tools/dash_client.c that allows attackers to crash applications via crafted DASH manifests. Attackers can supply an MPD whose AudioChannelConfiguration element omits schemeIdUri or value, crashing MP4Box or GPAC DASH clients and causing denial of service. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-125818",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in AdvancedCoding wpDiscuz wpdiscuz allows Stored XSS.This issue affects wpDiscuz: from n/a through 7.6.75. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2025-71467",
-    "descripcion": "GPAC before 26.02.0 contains a NULL pointer dereference vulnerability in gf_node_get_field_by_name() in src/scenegraph/base_scenegraph.c that lets attackers crash applications. Attackers can supply a crafted XMT scene referencing a never-created node to crash MP4Box or GPAC scene loader applications, causing denial of service. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-125817",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Themeisle Feedzy feedzy-rss-feeds allows Stored XSS.This issue affects Feedzy: from n/a through 5.2.15. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2025-71466",
-    "descripcion": "GPAC before 26.02.0 contains a NULL pointer dereference vulnerability in m2tsdmx_update_sdt() in src/filters/dmx_m2ts.c that allows attackers to crash the MPEG-2 TS demuxer. Attackers can supply a crafted .ts file with an invalid service descriptor leaving service or provider names NULL to crash MP4Box and cause denial of service. 15/11/2026 15/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-125804",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Meow Apps AI Engine ai-engine allows Stored XSS.This issue affects AI Engine: from n/a through 3.9.3. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2026-128893",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Marcin Wise Chat wise-chat allows Reflected XSS.This issue affects Wise Chat: from n/a through 3.4.5. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-125798",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;) vulnerability in Zaytech Smart Online Order for Clover clover-online-orders allows DOM-Based XSS.This issue affects Smart Online Order for Clover: from n/a through 1.6.6. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-15",
-    "cve": "CVE-2026-125799",
-    "descripcion": "Insertion of Sensitive Information into Externally-Accessible File or Directory vulnerability in Looks Awesome Flow-Flow Social Stream flow-flow-social-streams allows Retrieve Embedded Sensitive Data.This issue affects Flow-Flow Social Stream: from n/a through 5.0.5. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-125796",
+    "descripcion": "Missing Authorization vulnerability in Ahmad JS Help Desk js-support-ticket allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects JS Help Desk: from n/a through 5.0.5. 15/11/2026 15/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
