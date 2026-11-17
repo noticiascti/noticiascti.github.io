@@ -16,8 +16,18 @@
   },
   {
     "fecha": "2026-11-17",
+    "cve": "CVE-2026-99288",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: inet: reject unhashed sockets during established lookups TCP established ehash lookups are lockless. The socket caches involved use SLAB_TYPESAFE_BY_RCU, so memory can be reused before an RCU reader that ..."
+  },
+  {
+    "fecha": "2026-11-17",
+    "cve": "CVE-2026-98432",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq->ireq_opt to the child socket (newinet->inet_opt) without copying it. Another cpu can concurrently ..."
+  },
+  {
+    "fecha": "2026-11-17",
     "cve": "CVE-2026-46675",
-    "descripcion": "Currently trending CVE - Hype Score: 16"
+    "descripcion": "Currently trending CVE - Hype Score: 17"
   },
   {
     "fecha": "2026-11-17",
@@ -38,15 +48,5 @@
     "fecha": "2026-11-17",
     "cve": "CVE-2026-95512",
     "descripcion": "A flaw was found in FreeType, specifically within its CID font loader. A remote attacker could exploit this vulnerability by tricking a user into opening content that embeds or references a specially crafted CID-keyed font. This crafted font can cause repeated allocations and ..."
-  },
-  {
-    "fecha": "2026-11-17",
-    "cve": "CVE-2026-27171",
-    "descripcion": "zlib before 1.3.2 allows CPU consumption via crc32_combine64 and crc32_combine_gen64 because x2nmodp can do right shifts within a loop that has no termination condition."
-  },
-  {
-    "fecha": "2026-11-17",
-    "cve": "CVE-2025-29927",
-    "descripcion": "Next.js is a React framework for building full-stack web applications. Starting in version 1.11.4 and prior to versions 12.3.5, 13.5.9, 14.2.25, and 15.2.3, it is possible to bypass authorization checks within a Next.js application, if the authorization check occurs in ..."
   }
 ]
