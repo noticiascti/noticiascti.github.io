@@ -46,7 +46,7 @@
   },
   {
     "fecha": "2026-11-18",
-    "cve": "CVE-2026-109619",
-    "descripcion": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may ..."
+    "cve": "CVE-2026-27171",
+    "descripcion": "zlib before 1.3.2 allows CPU consumption via crc32_combine64 and crc32_combine_gen64 because x2nmodp can do right shifts within a loop that has no termination condition."
   }
 ]
