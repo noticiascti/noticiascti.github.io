@@ -1,13 +1,13 @@
 [
   {
     "fecha": "2026-11-18",
-    "cve": "CVE-2026-104007",
-    "descripcion": "LibreOffice can connect to databases through JDBC drivers written in Java. A spreadsheet can use a database as the source of a pivot table, and the database document that describes the connection names the driver to use. The location the driver was loaded from was taken from the ..."
+    "cve": "CVE-2026-104692",
+    "descripcion": "LibreOffice bundles the HSQLDB database engine, which can be used through the generic JDBC database driver as well as through the support for embedded databases. HSQLDB lets SQL statements call Java methods, limited to the classes that are permitted. When HSQLDB was used through ..."
   },
   {
     "fecha": "2026-11-18",
-    "cve": "CVE-2026-104692",
-    "descripcion": "LibreOffice bundles the HSQLDB database engine, which can be used through the generic JDBC database driver as well as through the support for embedded databases. HSQLDB lets SQL statements call Java methods, limited to the classes that are permitted. When HSQLDB was used through ..."
+    "cve": "CVE-2026-104007",
+    "descripcion": "LibreOffice can connect to databases through JDBC drivers written in Java. A spreadsheet can use a database as the source of a pivot table, and the database document that describes the connection names the driver to use. The location the driver was loaded from was taken from the ..."
   },
   {
     "fecha": "2026-11-18",
@@ -31,11 +31,6 @@
   },
   {
     "fecha": "2026-11-18",
-    "cve": "CVE-2026-109618",
-    "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
-  },
-  {
-    "fecha": "2026-11-18",
     "cve": "CVE-2026-50811",
     "descripcion": "An out-of-bounds read vulnerability exists in FreeType 2.14.3 and versions before commit 5a280ecde6f324de0d226261036e736e0cb49a71 in src/truetype/ttgxvar.c, in the TT_Get_Var_Design implementation used by FT_Get_Var_Design_Coordinates"
   },
@@ -48,5 +43,10 @@
     "fecha": "2026-11-18",
     "cve": "CVE-2026-27171",
     "descripcion": "zlib before 1.3.2 allows CPU consumption via crc32_combine64 and crc32_combine_gen64 because x2nmodp can do right shifts within a loop that has no termination condition."
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-109618",
+    "descripcion": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request ..."
   }
 ]
