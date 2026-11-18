@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-97698",
-    "descripcion": "Mistune is a Python Markdown parser with renderers and plugins. Prior to 3.3.4, parse_link_href performs an unbounded parenthesis-balancing scan to the end of the document for each unmatched opening parenthesis reached through an empty [] link label. In src/mistune/helpers.py and src/mistune/inline_parser.py, the empty label bypasses no_close_bracket_before, and no_link_before advances only past the short label, so successive [] ( candidates repeatedly scan the remaining document. Rendering untrusted Markdown with the default HTML renderer and no plugins can perform quadratic CPU work and keep a worker at 100 percent utilization. This issue is fixed in version 3.3.4. 17/11/2026 17/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-130816",
+    "descripcion": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Igor Funa Ad Inserter ad-inserter allows Code Injection.This issue affects Ad Inserter: from n/a through 2.8.19. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-95822",
-    "descripcion": "The SOCKS5 client in subsys/net/lib/socks/socks.c built the CONNECT request in socks5_tcp_connect() by choosing the SOCKS5 address type from the address family of the proxy (proxy->sa_family) while reading the bytes out of the destination address supplied to connect(). A SOCKS5 request encodes the destination independently of the transport used to reach the proxy, so the two families are unrelated and nothing in the path forces them to agree: set_context_proxy() only requires the proxy family to match the socket, and zsock_connect_ctx() enters the SOCKS branch before any destination validation. With an IPv6 proxy and an AF_INET destination the code treated an 8-byte struct net_sockaddr_in as a struct net_sockaddr_in6 and copied the 16-byte sin6_addr from it, reading 12 bytes past the end of the object and transmitting them to the proxy. With CONFIG_USERSPACE enabled, z_vrfy_zsock_connect() copies only addrlen user bytes into a stack-resident struct net_sockaddr_storage and enforces no per-family minimum length, so the oversized read stays within the storage but returns stale, uninitialised kernel-stack bytes. An unprivileged user-mode thread can therefore open an AF_INET6 stream socket, point setsockopt(SO_SOCKS5) at a proxy it controls, and call connect() with a short AF_INET destination to have the kernel send it 12 bytes of supervisor stack residue per attempt. Without CONFIG_USERSPACE the read runs past the end of the caller's own struct net_sockaddr_in, disclosing adjacent memory to the proxy; the family mismatch can arise unintentionally when a destination is obtained from DNS while an IPv6 proxy is configured. Impact is limited to information disclosure of at most 12 bytes per connect() call, with no write primitive; the leak is delivered to whoever operates the SOCKS5 proxy. The mirrored pairing (IPv6 destination through an IPv4 proxy) is memory-safe but encoded the destination as SOCKS5_ATYP_IPV4 from the first four bytes of the IPv6 address, causing the proxy to connect to an unrelated host. Exploitation requires the non-default CONFIG_SOCKS option, a socket with SO_SOCKS5 configured, and both IPv4 and IPv6 support in the image. The fix moves the encoding into a helper that selects the address type from dest->sa_family and validates dest_len against the matching struct net_sockaddr_in/struct net_sockaddr_in6 before copying, rejecting under-length or unsupported destinations with an error. 17/11/2026 17/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
+    "cve": "CVE-2026-130020",
+    "descripcion": "Privilege escalation due to incorrect boundary conditions in the Graphics: CanvasWebGL component on Android. This vulnerability was fixed in Firefox 160.0.1. 18/11/2026 18/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-82143",
-    "descripcion": "Dell SupportAssist OS Recovery, versions prior to 5.5.16.3 contain an Improper Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privilege. 17/11/2026 17/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-130021",
+    "descripcion": "Use-after-free in the Audio/Video: Playback component. This vulnerability was fixed in Firefox 160.0.1. 18/11/2026 18/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-82150",
-    "descripcion": "Dell SupportAssist OS Recovery, versions prior to 5.5.16.3, contain an Insufficient Verification of Data Authenticity vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability to bypass manifest signature validation, potentially leading to execution of unauthorized code with elevated privileges. 17/11/2026 17/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-130599",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Stored XSS.This issue affects TranslatePress: from n/a through 3.3.9. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-82037",
-    "descripcion": "Bludit through 3.22.0 contains a missing authorization vulnerability that allows authenticated low-privileged users to modify the site logo by calling unprotected AJAX endpoints. Attackers with Author or Editor roles can send requests to logo-upload.php or logo-remove.php under /admin/ajax/ to replace the site logo with an uploaded image or delete it. 17/11/2026 17/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-129089",
+    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in Cozmoslabs Paid Member Subscriptions paid-member-subscriptions allows Retrieve Embedded Sensitive Data.This issue affects Paid Member Subscriptions: from n/a through 3.1.4. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-82038",
-    "descripcion": "Bludit through 3.22.0 contains an improper session invalidation vulnerability that allows demoted users to retain revoked privileges because Login::isLogged() never re-reads the session-stored role. Attackers holding a session issued while their account was an administrator can keep using it after demotion to perform administrator actions such as creating new administrator accounts. 17/11/2026 17/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 7.40 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 5.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-129511",
+    "descripcion": "Improper Output Neutralization for Logs vulnerability in the FileAppender, RollingFileAppender, UdpAppender and SmtpAppender of Apache log4net. Characters the configured encoding could not represent were converted by that encoding's best-fit fallback, which turns fullwidth characters such as U+FF1C, U+FF1E and U+FF02 into and \". The conversion happened after XmlLayout or XmlLayoutSchemaLog4J had escaped the text, so a party whose data reaches a log message could forge complete log events in an XML log, for example a fake audit entry. On .NET Framework this needs no configuration where the ANSI code page is single-byte, since that is the default encoding; on .NET it needs a configured single-byte encoding such as ISO-8859-1. This is the best-fit conversion described by the WorstFit research. This issue affects Apache log4net: from 1.2.9 before 3.6.0. Users are recommended to upgrade to version 3.6.0, which fixes the issue. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-82136",
-    "descripcion": "Dell SupportAssist OS Recovery, versions prior to 5.5.16.3, contain a Download of Code Without Integrity Check vulnerability. A highly privileged attacker with local access could potentially exploit this vulnerability, leading to Code execution. 17/11/2026 17/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-129512",
+    "descripcion": "Improper Neutralization of Null Byte or NUL Character vulnerability in the AdoNetAppender of Apache log4net. Text parameters were bound unchanged, so a NUL character or an unpaired UTF-16 surrogate reached the database as it was. A database that refuses such a value, such as PostgreSQL, rejected the insert and the event was lost; only the first such loss per appender was reported. A party whose data reaches a log message could suppress that event. This issue affects Apache log4net: from 1.2.9 before 3.6.0. Users are recommended to upgrade to version 3.6.0, which fixes the issue. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-82138",
-    "descripcion": "Dell SupportAssist OS Recovery, versions prior to 5.5.16.3 contain a Download of Code Without Integrity Check vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Code execution. 17/11/2026 17/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-129067",
+    "descripcion": "Server-Side Request Forgery (SSRF) vulnerability in Shahidul Islam Sky Addons for Elementor sky-elementor-addons allows Server Side Request Forgery.This issue affects Sky Addons for Elementor: from n/a through 4.2.0. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-82139",
-    "descripcion": "Dell SupportAssist OS Recovery, versions prior to 5.5.16.3, contain an Improper Certificate Validation vulnerability. An unauthenticated attacker with local access could potentially exploit this vulnerability, leading to Protection mechanism bypass. 17/11/2026 17/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-129068",
+    "descripcion": "Missing Authorization vulnerability in Shahidul Islam Sky Addons for Elementor sky-elementor-addons allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Sky Addons for Elementor: from n/a through 4.2.0. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-17",
-    "cve": "CVE-2026-130874",
-    "descripcion": "Seerr before 3.5.2 contains an uncontrolled resource consumption vulnerability that allows unauthenticated attackers to exhaust disk space through unnormalized /imageproxy cache keys. Attackers can request the same TMDB image using many equivalent dot-segment path spellings, storing unlimited duplicate copies that fill the shared SQLite configuration volume and break logins and requests. 17/11/2026 17/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-129072",
+    "descripcion": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Wpmet ElementsKit Elementor addons Lite elementskit-lite allows Stored XSS.This issue affects ElementsKit Elementor addons Lite: from n/a through 4.1.0. 18/11/2026 18/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
