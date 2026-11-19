@@ -31,18 +31,18 @@
   },
   {
     "fecha": "2026-11-19",
+    "cve": "CVE-2026-98432",
+    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq->ireq_opt to the child socket (newinet->inet_opt) without copying it. Another cpu can concurrently ..."
+  },
+  {
+    "fecha": "2026-11-19",
     "cve": "CVE-2026-99288",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: inet: reject unhashed sockets during established lookups TCP established ehash lookups are lockless. The socket caches involved use SLAB_TYPESAFE_BY_RCU, so memory can be reused before an RCU reader that ..."
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-104692",
-    "descripcion": "LibreOffice bundles the HSQLDB database engine, which can be used through the generic JDBC database driver as well as through the support for embedded databases. HSQLDB lets SQL statements call Java methods, limited to the classes that are permitted. When HSQLDB was used through ..."
-  },
-  {
-    "fecha": "2026-11-19",
-    "cve": "CVE-2026-104007",
-    "descripcion": "LibreOffice can connect to databases through JDBC drivers written in Java. A spreadsheet can use a database as the source of a pivot table, and the database document that describes the connection names the driver to use. The location the driver was loaded from was taken from the ..."
+    "cve": "CVE-2026-46675",
+    "descripcion": "Currently trending CVE - Hype Score: 8"
   },
   {
     "fecha": "2026-11-19",
