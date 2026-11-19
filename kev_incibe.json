@@ -1,52 +1,52 @@
 [
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-132043",
-    "descripcion": "In Eclipse Yasson versions 3.0 to 3.0.5, a race condition (CWE-362) exists in the handling of @JsonbNumberFormat. Yasson creates one java.text.NumberFormat instance per annotated property and shares it across all threads that use the same Jsonb instance. NumberFormat is not thread-safe, and the deserializer called parse() on it without synchronization. When multiple threads deserialize concurrently, a thread can receive a numeric value that belongs to another thread's input, receive an incorrect value, or fail with an exception. A remote attacker who can send concurrent requests to an application that deserializes untrusted JSON this way may cause incorrect data to be processed or cause another user's value to be returned. Exploitation requires that the application use @JsonbNumberFormat with a shared Jsonb instance and that the attacker win a timing race. This issue is fixed in version 3.0.6 by synchronizing access to the shared NumberFormat instances. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-133055",
+    "descripcion": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 stored XSS on the Failure Conditions page was possible 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-101167",
-    "descripcion": "Missing Authorization vulnerability in Dataprom Bilişim Teknolojileri LTD. ŞTİ. DataPer Access Control and Security Systems allows Privilege Escalation. This issue affects DataPer Access Control and Security Systems: before v14.15(2026/11). 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-133056",
+    "descripcion": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 stored XSS in implicit agent requirements was possible 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-129001",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Gabe Livan Asset CleanUp: Page Speed Booster wp-asset-clean-up allows Reflected XSS.This issue affects Asset CleanUp: Page Speed Booster: from n/a through 1.4.0.6. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-133057",
+    "descripcion": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 the TFS helper server was exposed on all network interfaces 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 3.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-129013",
-    "descripcion": "Missing Authorization vulnerability in Deepen Bajracharya Video Conferencing with Zoom video-conferencing-with-zoom-api allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Video Conferencing with Zoom: from n/a through 4.6.12. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-19865",
+    "descripcion": "Mattermost versions 11.11.x 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-129014",
-    "descripcion": "Missing Authorization vulnerability in DynamiApps Frontend Admin by DynamiApps acf-frontend-form-element allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Frontend Admin by DynamiApps: from n/a through 3.30.2. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-22311",
+    "descripcion": "The failed-login limiter of the JTL-Wawi synchronisation interface of JTL-Shop derives the client identity from the client-controlled X-Forwarded-For header and counts requests without credentials as failed logins. An unauthenticated remote attacker can block the synchronisation between JTL-Shop and JTL-Wawi with a few requests and repeat this indefinitely, so that orders are no longer handed over to JTL-Wawi. No data is disclosed and no code is executed. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Gravedad 4.0 8.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-129030",
-    "descripcion": "Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in Mamunur Rashid ShopBuilder – Elementor WooCommerce Builder Addons shopbuilder allows Retrieve Embedded Sensitive Data.This issue affects ShopBuilder – Elementor WooCommerce Builder Addons: from n/a through 3.4.3. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-85413",
+    "descripcion": "The Foxtool All-in-One: Contact chat button, Custom login, Media optimize images plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'foxtool_image_id' parameter in all versions up to, and including, 2.5.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. A subscriber-level attacker can store a payload in their own profile's foxtoolpic user-meta that executes in an administrator's browser session when the administrator views the user via the Users → Edit screen. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-129048",
-    "descripcion": "Improper Control of Generation of Code ('Code Injection') vulnerability in Jacob N. Breetvelt WP Photo Album Plus wp-photo-album-plus allows Remote Code Inclusion.This issue affects WP Photo Album Plus: from n/a through 9.3.06.003. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.90 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+    "cve": "CVE-2026-133047",
+    "descripcion": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 stored XSS on the thread dump page was possible 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-128999",
-    "descripcion": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Saphali Saphali Woocommerce Lite saphali-woocommerce-lite allows Stored XSS.This issue affects Saphali Woocommerce Lite: from n/a through 2.0.2. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L Gravedad 3.1 (CVSS 3.1 Base Score) 7.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+    "cve": "CVE-2026-133048",
+    "descripcion": "In JetBrains TeamCity before 2026.2.1 improper authorization allowed using AWS connections of other projects in cloud profiles 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-112163",
-    "descripcion": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Kayaport Ödeme Kuruluşu A.Ş. BulutTahsilat – Virtual POS Infrastructure allows Cross-Site Scripting (XSS). This issue affects BulutTahsilat – Virtual POS Infrastructure: through 2026-11-05. 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+    "cve": "CVE-2026-133049",
+    "descripcion": "In JetBrains TeamCity before 2026.2.1 stored XSS in the Pull Requests health report for VCS roots was possible 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   },
   {
     "fecha": "2026-11-19",
-    "cve": "CVE-2026-19609",
-    "descripcion": "Cross-site scripting in the embedded co-browsing feature in Unblu inc. Unblu Spark 7.0 through 7.57.9 and 8.0 before 8.40.2, on on-premises and cloud deployments, allows an unauthenticated remote attacker in the visitor role to execute arbitrary JavaScript in the browser of an agent taking part in the attacker's co-browsing session, via manipulated synchronized page attributes of the co-browsed page. The JavaScript runs in the context and under the identity of the agent's session in the Agent Desk or the Single Conversation Desk. Exploitation requires an agent to join an embedded co-browsing session with the attacker. Mobile co-apping isn't affected. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.60 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+    "cve": "CVE-2026-133050",
+    "descripcion": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 stored and reflected XSS in Space project connection dialogs was possible 19/11/2026 19/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
