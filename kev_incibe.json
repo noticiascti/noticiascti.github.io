@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-91138",
+    "descripcion": "The Deco BE65 v3 firmware contains a shared hard-coded password hash for the root account in /etc/shadow. Where the corresponding credential is accepted by a production authentication path, an attacker with existing unprivileged shell access may recover or otherwise obtain the plaintext password and use it to escalate privileges. Successful exploitation may grant root-level access to the affected device. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-91139",
+    "descripcion": "Deco BE65 firmware contains a cryptographic weakness in the local web-management authentication flow due to the use of insufficient RSA key sizes. The /login?form=auth endpoint returns a 512-bit RSA public key and sequence value. Successful exploitation may compromise the cryptographic protections applied to local web-management authentication traffic. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132774",
+    "descripcion": "Attendize through 2.8.0 contains a cross-account authorization bypass vulnerability in EventAttendeesController::postMessageAttendees() that allows authenticated organisers to message other accounts' attendees by supplying a foreign event_id. Attackers, including self-registered organisers, can post to the attendees message endpoint for another event to send arbitrary emails to all attendees, enabling phishing and impersonation. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132775",
+    "descripcion": "GPAC before 26.07.0 contains a use-after-free vulnerability in xmt_node_end() that allows attackers to corrupt memory by attaching nodes from unrelated proto sub-graphs to field-replace commands. Attackers can supply a crafted XMT scene buffering such a command in a Conditional node, causing gf_node_try_destroy() to access the freed node, crashing MP4Box and corrupting the heap. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132776",
+    "descripcion": "GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability in the XMT loader that allows attackers to crash the process by supplying crafted XMT files. Attackers can assign a second node to an SFNode command field so xmt_node_end() frees a forward-referenced child still cached in peeked_nodes, triggering a crash during DEF lookup in xmt_find_node(). 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132777",
+    "descripcion": "GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability in Conditional_execute() because SetupConditional() stores a BIFS decoder pointer that gf_sm_load_run_isom() later frees without clearing. Attackers can supply a crafted MP4 file with a BIFS Conditional node processed with -nstatx to crash MP4Box and potentially corrupt the heap. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132778",
+    "descripcion": "GPAC before 26.07.0 contains an uncontrolled recursion vulnerability in gf_sg_proto_field_is_sftime_offset() in src/scenegraph/vrml_proto.c that allows attackers to crash MP4Box via crafted files. Attackers can supply an MP4 file whose BIFS scene contains cyclic PROTO IS relations, causing unbounded recursion that exhausts the stack and causes denial of service. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132767",
+    "descripcion": "GPAC before 26.07.0 contains a NULL pointer dereference vulnerability in xmt_parse_command() in loader_xmt.c that allows attackers to crash MP4Box via unchecked field lookups. Attackers can supply a crafted XMT scene whose atIndexField names a non-existent node field, causing a NULL read during import and denial of service. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132768",
+    "descripcion": "GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability in xmt_find_node() in loader_xmt.c that leaves freed forward-referenced nodes cached in parser->peeked_nodes. Attackers can supply a crafted XMT file with a node targeted by an SFCommandBuffer command, triggering a later DEF lookup on the freed node and crashing MP4Box. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H Gravedad 4.0 6.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 5.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-18",
+    "cve": "CVE-2026-132769",
+    "descripcion": "GPAC before 26.07.0 contains a type confusion vulnerability in xmt_parse_script_field() that allows attackers to trigger a heap out-of-bounds read via duplicate Script field names with conflicting types. Attackers can craft an XMT file that, when imported with MP4Box, causes gf_sg_vrml_mf_reset() to treat a single-value field as multi-value, crashing the application. 19/11/2026 19/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H Gravedad 4.0 6.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  }
+]
