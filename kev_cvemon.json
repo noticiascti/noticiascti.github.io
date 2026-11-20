@@ -6,26 +6,6 @@
   },
   {
     "fecha": "2026-11-20",
-    "cve": "CVE-2026-123633",
-    "descripcion": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for client connections and proxy client requests to a backend, a specially crafted request can result in use-after-free in the worker process, if this process is running low on worker_connections. Additionally, ..."
-  },
-  {
-    "fecha": "2026-11-20",
-    "cve": "CVE-2026-123634",
-    "descripcion": "This issue occurs when NGINX Plus or NGINX Open Source is configured as a proxy, the proxied server name includes variables, and a Server Side Includes (SSI) or mirror directive sends a subrequest to a location that resolves the same server name. Under these conditions, a ..."
-  },
-  {
-    "fecha": "2026-11-20",
-    "cve": "CVE-2026-121810",
-    "descripcion": "Description: This issue affects NGINX Plus and NGINX Open Source configurations that use HTTP/3. A remote, unauthenticated attacker can cause a use-after-free condition in the NGINX worker process, leading to a restart. Exploitation also depends on conditions beyond the ..."
-  },
-  {
-    "fecha": "2026-11-20",
-    "cve": "CVE-2026-113425",
-    "descripcion": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, undisclosed traffic can cause a use-after-free in an nginx worker process. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can ..."
-  },
-  {
-    "fecha": "2026-11-20",
     "cve": "CVE-2026-98432",
     "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq->ireq_opt to the child socket (newinet->inet_opt) without copying it. Another cpu can concurrently ..."
   },
@@ -38,6 +18,26 @@
     "fecha": "2026-11-20",
     "cve": "CVE-2024-10441",
     "descripcion": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via ..."
+  },
+  {
+    "fecha": "2026-11-20",
+    "cve": "CVE-2026-123633",
+    "descripcion": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for client connections and proxy client requests to a backend, a specially crafted request can result in use-after-free in the worker process, if this process is running low on worker_connections. Additionally, ..."
+  },
+  {
+    "fecha": "2026-11-20",
+    "cve": "CVE-2026-121810",
+    "descripcion": "Description: This issue affects NGINX Plus and NGINX Open Source configurations that use HTTP/3. A remote, unauthenticated attacker can cause a use-after-free condition in the NGINX worker process, leading to a restart. Exploitation also depends on conditions beyond the ..."
+  },
+  {
+    "fecha": "2026-11-20",
+    "cve": "CVE-2026-123634",
+    "descripcion": "This issue occurs when NGINX Plus or NGINX Open Source is configured as a proxy, the proxied server name includes variables, and a Server Side Includes (SSI) or mirror directive sends a subrequest to a location that resolves the same server name. Under these conditions, a ..."
+  },
+  {
+    "fecha": "2026-11-20",
+    "cve": "CVE-2026-113425",
+    "descripcion": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, undisclosed traffic can cause a use-after-free in an nginx worker process. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can ..."
   },
   {
     "fecha": "2026-11-20",
