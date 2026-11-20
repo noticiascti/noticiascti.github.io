@@ -6,18 +6,23 @@
   },
   {
     "fecha": "2026-11-20",
-    "cve": "CVE-2026-98432",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq->ireq_opt to the child socket (newinet->inet_opt) without copying it. Another cpu can concurrently ..."
+    "cve": "CVE-2026-129474",
+    "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
   },
   {
     "fecha": "2026-11-20",
-    "cve": "CVE-2026-99288",
-    "descripcion": "In the Linux kernel, the following vulnerability has been resolved: inet: reject unhashed sockets during established lookups TCP established ehash lookups are lockless. The socket caches involved use SLAB_TYPESAFE_BY_RCU, so memory can be reused before an RCU reader that ..."
+    "cve": "CVE-2026-129182",
+    "descripcion": "Use-after-free via repopulation of last_fatal_error_backtrace global after shutdown. A fatal error raised while modified INI settings are restored during request shutdown can repopulate the stored fatal error backtrace after the executor has been cleaned up. The request memory ..."
   },
   {
     "fecha": "2026-11-20",
-    "cve": "CVE-2024-10441",
-    "descripcion": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via ..."
+    "cve": "CVE-2026-126714",
+    "descripcion": "Partially overwritten session files can lead to remote code execution. The files session save handler, which is the default, writes updated session data into the existing session file without first clearing it. If a write is interrupted, the file can contain the beginning of ..."
+  },
+  {
+    "fecha": "2026-11-20",
+    "cve": "CVE-2026-115560",
+    "descripcion": "Session serializer mismatch can lead to remote code execution. Session upload progress, when enabled, can store attacker-controlled data in a session key using the php_binary or php_serialize session serializer. If the same session is later read with the php serializer, because ..."
   },
   {
     "fecha": "2026-11-20",
@@ -38,11 +43,6 @@
     "fecha": "2026-11-20",
     "cve": "CVE-2026-113425",
     "descripcion": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, undisclosed traffic can cause a use-after-free in an nginx worker process. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can ..."
-  },
-  {
-    "fecha": "2026-11-20",
-    "cve": "CVE-2026-46675",
-    "descripcion": "Currently trending CVE - Hype Score: 8"
   },
   {
     "fecha": "2026-11-20",
