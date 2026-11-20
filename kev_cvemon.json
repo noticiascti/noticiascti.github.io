@@ -1,8 +1,13 @@
 [
   {
     "fecha": "2026-11-20",
-    "cve": "CVE-2026-129289",
-    "descripcion": "PHP-FPM request smuggling through an unread HTTP request body. PHP does not discard the unread part of an HTTP request body at request shutdown when the application has opened php://input without reading it to the end. When the front end reuses backend connections, which is not ..."
+    "cve": "CVE-2026-129474",
+    "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
+  },
+  {
+    "fecha": "2026-11-20",
+    "cve": "CVE-2026-129182",
+    "descripcion": "Use-after-free via repopulation of last_fatal_error_backtrace global after shutdown. A fatal error raised while modified INI settings are restored during request shutdown can repopulate the stored fatal error backtrace after the executor has been cleaned up. The request memory ..."
   },
   {
     "fecha": "2026-11-20",
@@ -11,13 +16,8 @@
   },
   {
     "fecha": "2026-11-20",
-    "cve": "CVE-2026-129474",
-    "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
-  },
-  {
-    "fecha": "2026-11-20",
-    "cve": "CVE-2026-129182",
-    "descripcion": "Use-after-free via repopulation of last_fatal_error_backtrace global after shutdown. A fatal error raised while modified INI settings are restored during request shutdown can repopulate the stored fatal error backtrace after the executor has been cleaned up. The request memory ..."
+    "cve": "CVE-2026-129538",
+    "descripcion": "PHP-CGI out-of-bounds read and write during PATH_INFO correction. The PHP CGI binary (php-cgi), in CGI and FastCGI mode with cgi.fix_pathinfo enabled (the default), can perform an out-of-bounds read and write when the path removed from SCRIPT_FILENAME or PATH_TRANSLATED is ..."
   },
   {
     "fecha": "2026-11-20",
