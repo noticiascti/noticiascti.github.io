@@ -16,11 +16,6 @@
   },
   {
     "fecha": "2026-11-21",
-    "cve": "CVE-2026-129496",
-    "descripcion": "Timezone cache use-after-free can lead to remote code execution. In non-thread-safe builds, a diagnostic written to a file-based error_log during module startup, for example for an invalid date.timezone value or a session configuration warning, causes the timezone cache to be ..."
-  },
-  {
-    "fecha": "2026-11-21",
     "cve": "CVE-2026-129289",
     "descripcion": "PHP-FPM request smuggling through an unread HTTP request body. PHP does not discard the unread part of an HTTP request body at request shutdown when the application has opened php://input without reading it to the end. When the front end reuses backend connections, which is not ..."
   },
@@ -38,6 +33,11 @@
     "fecha": "2026-11-21",
     "cve": "CVE-2026-129182",
     "descripcion": "Use-after-free via repopulation of last_fatal_error_backtrace global after shutdown. A fatal error raised while modified INI settings are restored during request shutdown can repopulate the stored fatal error backtrace after the executor has been cleaned up. The request memory ..."
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-129496",
+    "descripcion": "Timezone cache use-after-free can lead to remote code execution. In non-thread-safe builds, a diagnostic written to a file-based error_log during module startup, for example for an invalid date.timezone value or a session configuration warning, causes the timezone cache to be ..."
   },
   {
     "fecha": "2026-11-21",
