@@ -1,51 +1,51 @@
 [
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-129474",
     "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-129182",
     "descripcion": "Use-after-free via repopulation of last_fatal_error_backtrace global after shutdown. A fatal error raised while modified INI settings are restored during request shutdown can repopulate the stored fatal error backtrace after the executor has been cleaned up. The request memory ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-115560",
     "descripcion": "Session serializer mismatch can lead to remote code execution. Session upload progress, when enabled, can store attacker-controlled data in a session key using the php_binary or php_serialize session serializer. If the same session is later read with the php serializer, because ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-129496",
     "descripcion": "Timezone cache use-after-free can lead to remote code execution. In non-thread-safe builds, a diagnostic written to a file-based error_log during module startup, for example for an invalid date.timezone value or a session configuration warning, causes the timezone cache to be ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-129538",
     "descripcion": "PHP-CGI out-of-bounds read and write during PATH_INFO correction. The PHP CGI binary (php-cgi), in CGI and FastCGI mode with cgi.fix_pathinfo enabled (the default), can perform an out-of-bounds read and write when the path removed from SCRIPT_FILENAME or PATH_TRANSLATED is ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-123007",
     "descripcion": "This issue affects NGINX Plus or NGINX Open Source configurations that use HTTP/2. When NGINX processes undisclosed traffic, the flow control window can exceed the allowed threshold, potentially resulting in a heap buffer overflow typically followed by an NGINX worker ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-123633",
     "descripcion": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for client connections and proxy client requests to a backend, a specially crafted request can result in use-after-free in the worker process, if this process is running low on worker_connections. Additionally, ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-123634",
     "descripcion": "This issue occurs when NGINX Plus or NGINX Open Source is configured as a proxy, the proxied server name includes variables, and a Server Side Includes (SSI) or mirror directive sends a subrequest to a location that resolves the same server name. Under these conditions, a ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-121810",
     "descripcion": "Description: This issue affects NGINX Plus and NGINX Open Source configurations that use HTTP/3. A remote, unauthenticated attacker can cause a use-after-free condition in the NGINX worker process, leading to a restart. Exploitation also depends on conditions beyond the ..."
   },
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-21",
     "cve": "CVE-2026-113425",
     "descripcion": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, undisclosed traffic can cause a use-after-free in an nginx worker process. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can ..."
   }
