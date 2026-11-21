@@ -6,21 +6,6 @@
   },
   {
     "fecha": "2026-11-21",
-    "cve": "CVE-2026-126714",
-    "descripcion": "Partially overwritten session files can lead to remote code execution. The files session save handler, which is the default, writes updated session data into the existing session file without first clearing it. If a write is interrupted, the file can contain the beginning of ..."
-  },
-  {
-    "fecha": "2026-11-21",
-    "cve": "CVE-2026-129496",
-    "descripcion": "Timezone cache use-after-free can lead to remote code execution. In non-thread-safe builds, a diagnostic written to a file-based error_log during module startup, for example for an invalid date.timezone value or a session configuration warning, causes the timezone cache to be ..."
-  },
-  {
-    "fecha": "2026-11-21",
-    "cve": "CVE-2026-129474",
-    "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
-  },
-  {
-    "fecha": "2026-11-21",
     "cve": "CVE-2026-123007",
     "descripcion": "This issue affects NGINX Plus or NGINX Open Source configurations that use HTTP/2. When NGINX processes undisclosed traffic, the flow control window can exceed the allowed threshold, potentially resulting in a heap buffer overflow typically followed by an NGINX worker ..."
   },
@@ -33,6 +18,21 @@
     "fecha": "2026-11-21",
     "cve": "CVE-2026-129289",
     "descripcion": "PHP-FPM request smuggling through an unread HTTP request body. PHP does not discard the unread part of an HTTP request body at request shutdown when the application has opened php://input without reading it to the end. When the front end reuses backend connections, which is not ..."
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-129474",
+    "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-129496",
+    "descripcion": "Timezone cache use-after-free can lead to remote code execution. In non-thread-safe builds, a diagnostic written to a file-based error_log during module startup, for example for an invalid date.timezone value or a session configuration warning, causes the timezone cache to be ..."
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-126714",
+    "descripcion": "Partially overwritten session files can lead to remote code execution. The files session save handler, which is the default, writes updated session data into the existing session file without first clearing it. If a write is interrupted, the file can contain the beginning of ..."
   },
   {
     "fecha": "2026-11-21",
