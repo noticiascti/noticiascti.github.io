@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-132081",
+    "descripcion": "The Titan Anti-spam & Security WordPress plugin before 7.5.5 does not protect or remove the diagnostic archive it writes to the uploads folder when an administrator exports its logs, and names it after the export date alone, allowing unauthenticated visitors to download the Titan Anti-spam & Security WordPress plugin before 7.5.5's logs, including visitor IP addresses, and the site's system information. 21/11/2026 21/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-132082",
+    "descripcion": "The RSVPMaker for Toastmasters WordPress plugin before 6.9.3 does not sanitise and escape a parameter before outputting it back in an admin page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin. 21/11/2026 21/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-132089",
+    "descripcion": "The Newsletter WordPress plugin before 9.4.0 does not keep a subscriber's secret key out of the redirect it returns after a subscription request when double opt-in is enabled, allowing unauthenticated attackers to confirm a subscription for any email address without access to its mailbox and, when the address already has an unconfirmed subscription, to reset that record with their own details. 21/11/2026 21/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-132781",
+    "descripcion": "The Booking Calendar plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'booking' shortcode in all versions up to, and including, 12.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. 21/11/2026 21/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-133439",
+    "descripcion": "The Coupon Creator plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'post_title' parameter in all versions up to, and including, 3.6.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This vulnerability is only exploitable when an administrator has enabled the 'Disable Print View' option (cctor_hide_print_link), as this setting is required to reach the vulnerable else branch; the default configuration is not affected. 21/11/2026 21/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-133471",
+    "descripcion": "The Fastcache by Host.it plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 's' parameter in all versions up to, and including, 1.7.14 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. This code path is only reachable when both the Light Images feature and the DOMDocument entity-decode branch are enabled (lightimgs_status = 1 and img_processing_entity_decode = 1), which reflect the default plugin configuration. 21/11/2026 21/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-131976",
+    "descripcion": "The Shortcodes Ultimate WordPress plugin before 7.9.1 does not prevent placeholders in a shortcode attribute from being expanded with unescaped nested shortcode output, allowing users with a role as low as contributor to perform Stored Cross-Site Scripting attacks. 21/11/2026 21/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-131977",
+    "descripcion": "The Shortcodes Ultimate WordPress plugin before 7.9.1 does not escape the error message returned when a remote feed cannot be retrieved before outputting it, which could allow users with the contributor role and above to perform Stored Cross-Site Scripting attacks against administrators by pointing the feed at a server they control. 21/11/2026 21/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-131978",
+    "descripcion": "The Shortcodes Ultimate WordPress plugin before 7.9.1 does not restrict which PHP functions a shortcode's filter attribute can call, allowing users with a role as low as Contributor to remove WordPress' term-slug sanitization and perform SQL injection attacks through another shortcode's taxonomy term attribute. 21/11/2026 21/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-21",
+    "cve": "CVE-2026-131979",
+    "descripcion": "The Shortcodes Ultimate WordPress plugin before 7.9.1 does not restrict the content type of its lightbox shortcode, allowing users with the contributor role and above to make the lightbox fetch HTML from an attacker-controlled server and insert it into the page unsanitised, leading to Stored Cross-Site Scripting when a user opens the lightbox. 21/11/2026 21/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  }
+]
