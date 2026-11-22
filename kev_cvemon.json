@@ -16,18 +16,18 @@
   },
   {
     "fecha": "2026-11-22",
+    "cve": "CVE-2026-133968",
+    "descripcion": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026."
+  },
+  {
+    "fecha": "2026-11-22",
+    "cve": "CVE-2026-124749",
+    "descripcion": "Currently trending CVE - Hype Score: 5"
+  },
+  {
+    "fecha": "2026-11-22",
     "cve": "CVE-2026-123007",
     "descripcion": "This issue affects NGINX Plus or NGINX Open Source configurations that use HTTP/2. When NGINX processes undisclosed traffic, the flow control window can exceed the allowed threshold, potentially resulting in a heap buffer overflow typically followed by an NGINX worker ..."
-  },
-  {
-    "fecha": "2026-11-22",
-    "cve": "CVE-2024-49138",
-    "descripcion": "Windows Common Log File System Driver Elevation of Privilege Vulnerability"
-  },
-  {
-    "fecha": "2026-11-22",
-    "cve": "CVE-2026-115560",
-    "descripcion": "Session serializer mismatch can lead to remote code execution. Session upload progress, when enabled, can store attacker-controlled data in a session key using the php_binary or php_serialize session serializer. If the same session is later read with the php serializer, because ..."
   },
   {
     "fecha": "2026-11-22",
@@ -36,17 +36,17 @@
   },
   {
     "fecha": "2026-11-22",
-    "cve": "CVE-2026-126714",
-    "descripcion": "Partially overwritten session files can lead to remote code execution. The files session save handler, which is the default, writes updated session data into the existing session file without first clearing it. If a write is interrupted, the file can contain the beginning of ..."
+    "cve": "CVE-2024-49138",
+    "descripcion": "Windows Common Log File System Driver Elevation of Privilege Vulnerability"
   },
   {
     "fecha": "2026-11-22",
-    "cve": "CVE-2026-129496",
-    "descripcion": "Timezone cache use-after-free can lead to remote code execution. In non-thread-safe builds, a diagnostic written to a file-based error_log during module startup, for example for an invalid date.timezone value or a session configuration warning, causes the timezone cache to be ..."
+    "cve": "CVE-2024-10441",
+    "descripcion": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via ..."
   },
   {
     "fecha": "2026-11-22",
-    "cve": "CVE-2026-129474",
-    "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
+    "cve": "CVE-2026-115560",
+    "descripcion": "Session serializer mismatch can lead to remote code execution. Session upload progress, when enabled, can store attacker-controlled data in a session key using the php_binary or php_serialize session serializer. If the same session is later read with the php serializer, because ..."
   }
 ]
