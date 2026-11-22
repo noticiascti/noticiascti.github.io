@@ -11,13 +11,18 @@
   },
   {
     "fecha": "2026-11-22",
-    "cve": "CVE-2024-49138",
-    "descripcion": "Windows Common Log File System Driver Elevation of Privilege Vulnerability"
+    "cve": "CVE-2026-76466",
+    "descripcion": "A vulnerability in the database service feature of Cisco Expressway Series could allow an unauthenticated, remote attacker with network access to a Cisco Expressway device to execute arbitrary operating system commands as root. This vulnerability is due to the use of ..."
   },
   {
     "fecha": "2026-11-22",
-    "cve": "CVE-2024-10441",
-    "descripcion": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via ..."
+    "cve": "CVE-2026-123007",
+    "descripcion": "This issue affects NGINX Plus or NGINX Open Source configurations that use HTTP/2. When NGINX processes undisclosed traffic, the flow control window can exceed the allowed threshold, potentially resulting in a heap buffer overflow typically followed by an NGINX worker ..."
+  },
+  {
+    "fecha": "2026-11-22",
+    "cve": "CVE-2024-49138",
+    "descripcion": "Windows Common Log File System Driver Elevation of Privilege Vulnerability"
   },
   {
     "fecha": "2026-11-22",
@@ -26,13 +31,13 @@
   },
   {
     "fecha": "2026-11-22",
-    "cve": "CVE-2026-126714",
-    "descripcion": "Partially overwritten session files can lead to remote code execution. The files session save handler, which is the default, writes updated session data into the existing session file without first clearing it. If a write is interrupted, the file can contain the beginning of ..."
+    "cve": "CVE-2026-123633",
+    "descripcion": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for client connections and proxy client requests to a backend, a specially crafted request can result in use-after-free in the worker process, if this process is running low on worker_connections. Additionally, ..."
   },
   {
     "fecha": "2026-11-22",
-    "cve": "CVE-2026-123633",
-    "descripcion": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for client connections and proxy client requests to a backend, a specially crafted request can result in use-after-free in the worker process, if this process is running low on worker_connections. Additionally, ..."
+    "cve": "CVE-2026-126714",
+    "descripcion": "Partially overwritten session files can lead to remote code execution. The files session save handler, which is the default, writes updated session data into the existing session file without first clearing it. If a write is interrupted, the file can contain the beginning of ..."
   },
   {
     "fecha": "2026-11-22",
@@ -43,10 +48,5 @@
     "fecha": "2026-11-22",
     "cve": "CVE-2026-129474",
     "descripcion": "Use-after-free in magic method backtraces can lead to remote code execution. When collecting the arguments of a method call handled by __call() or __callStatic() for a backtrace, PHP can read stale values that may refer to freed memory. If a fatal error such as exceeding ..."
-  },
-  {
-    "fecha": "2026-11-22",
-    "cve": "CVE-2026-123007",
-    "descripcion": "This issue affects NGINX Plus or NGINX Open Source configurations that use HTTP/2. When NGINX processes undisclosed traffic, the flow control window can exceed the allowed threshold, potentially resulting in a heap buffer overflow typically followed by an NGINX worker ..."
   }
 ]
