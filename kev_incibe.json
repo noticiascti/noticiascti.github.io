@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95457",
+    "descripcion": "In reconnect.shard.cml, there is a possible way to turn off the camera streaming and microphone mute indicator LEDs due to an unnecessary hardware capability grant. This could lead to local escalation of privilege with User execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95458",
+    "descripcion": "In BluetoothSetupImpl::OnAudioSourceConnectChanged of bluetooth_setup_impl.cc, there is a possible way for an unauthenticated nearby Bluetooth device to be saved as the audio output device due to a logic error in the code. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95459",
+    "descripcion": "In OnRxLeCreditBasedConnectionRequest of le_dynamic_channel.cc, there is a possible assertion failure due to improper input validation. This could lead to remote (proximal/adjacent) denial of service with no additional execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95460",
+    "descripcion": "In Phase2SecureConnections::OnPeerPublicKey of phase_2_secure_connections.cc, there is a possible way to learn the passkey used during pairing due to an incomplete check for a reflected public key. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95461",
+    "descripcion": "In HandleRxPacket of logical_link.cc, there is a possible resource exhaustion due to a missing limit on packets buffered for channels that are never opened. This could lead to remote (proximal/adjacent) denial of service with no additional execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95462",
+    "descripcion": "In ServiceSearchResponse::GetPDU of pdu.cc, there is a possible crash due to an incorrect size calculation. This could lead to remote (proximal/adjacent) denial of service with no additional execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95463",
+    "descripcion": "In DataElement::Read of data_element.cc, there is a possible stack exhaustion due to unbounded recursion. This could lead to remote (proximal/adjacent) denial of service with no additional execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95464",
+    "descripcion": "In SignalError of logical_link.cc, there is a possible use after free due to an error callback that can destroy the object while its channel list is still being iterated. This could lead to remote (proximal/adjacent) code execution with no additional execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95449",
+    "descripcion": "In NexustalkStream::PullFrameTask of nexustalk_stream.cc, there is a possible use after free due to a race condition. This could lead to remote code execution with no additional execution privileges needed. User interaction is needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-23",
+    "cve": "CVE-2026-95450",
+    "descripcion": "In HandleRxPdu of channel.cc, there is a possible use after free due to the channel being destroyed while it is still processing a received frame. This could lead to remote (proximal/adjacent) code execution with no additional execution privileges needed. User interaction is not needed for exploitation. 23/11/2026 23/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  }
+]
