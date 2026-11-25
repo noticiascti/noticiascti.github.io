@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-135768",
+    "descripcion": "A flaw was found in the keycloak-services component of Keycloak, which is used for managing authentication and authorization flows. The issue occurs when a client policy is configured to enforce a high-assurance authentication flow requiring OTP. Due to improper validation of existing sessions, a lower-assurance password-only SSO session can be incorrectly accepted if the request does not explicitly demand a specific assurance level. This allows an attacker with access to a user's password or session to bypass the second factor and obtain tokens claiming a higher level of security. 25/11/2026 25/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-136445",
+    "descripcion": "A flaw has been found in JaguarJack catch-admin up to 5.4.1. The impacted element is the function store of the file modules/Permissions/Http/Controllers/RolesController.php. Executing a manipulation can lead to dynamically-determined object attributes. It is possible to launch the attack remotely. The exploit has been published and may be used. This patch is called 3ae60d57ea6840bb33456596ad799b0a39ca94a2. It is best practice to apply a patch to resolve this issue. 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:S/C:N/I:P/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-126536",
+    "descripcion": "Akaunting 3.3.0 contains a stored cross-site scripting vulnerability in the XLSX tax-import workflow. An authenticated Manager can import HTML in a tax name and associate the tax with an item. When an Administrator attempts to disable that tax, Akaunting renders the original stored name in an error notification through Vue v-html, causing attacker-controlled markup to execute within the browser of another authenticated user. 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-134875",
+    "descripcion": "An unencrypted RSA private key for a default HTTPS certificate is included in GeoVision GV-EBD4700 firmware V1.11 (A02-GV-EBD4700_V1.11_2026_10_13.zip) at /program/www/ssl_cert.pem and copied to /config/ssl_cert.pem during initialization. When HTTPS is enabled using the default certificate, a network on-path attacker who obtains the firmware image can use the exposed private key to present an identical certificate and intercept HTTPS traffic. HTTPS is disabled by default . * Only impacts deployments where an administrator enables HTTPS and retains the default certificate. Because the private key is publicly distributed in the firmware image, an on-path attacker can impersonate the device with an identical certificate fingerprint, bypassing fingerprint checks and stored certificate exceptions (potentially capturing credentials if a user clicks through the expired-certificate warning). 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 4.90 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-136146",
+    "descripcion": "A security flaw has been discovered in vanna-ai vanna 2.0.0/2.0.1/2.0.2. Affected by this vulnerability is the function _load_index of the file src/vanna/integrations/faiss/agent_memory.py of the component FAISS AgentMemory Integration. Performing a manipulation results in deserialization. The attack needs to be approached locally. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:L/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 1.90 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-136147",
+    "descripcion": "A weakness has been identified in DWS Antik Browser 1.17.0. Affected by this issue is some unknown functionality of the file src/server/index.ts of the component Local API Server. Executing a manipulation can lead to origin validation error. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-136444",
+    "descripcion": "A vulnerability was detected in JaguarJack catch-admin up to 5.4.1. The affected element is the function Store/Update of the file modules/User/Http/Controllers/UserController.php of the component User Management. Performing a manipulation results in dynamically-determined object attributes. It is possible to initiate the attack remotely. The exploit is now public and may be used. The patch is named 3ae60d57ea6840bb33456596ad799b0a39ca94a2. Applying a patch is the recommended action to fix this issue. 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:S/C:P/I:P/A:P Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 6.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-122093",
+    "descripcion": "Strong::Random versions through 0.96 for Perl allow every later rand output to be predicted from three earlier ones. The generator keeps its state in a single number. Each call multiplies the state by a factor derived from it, and the returned digits encode that factor, so three consecutive outputs determine the state however the generator was seeded. Outputs are also biased: the first digit after the decimal point is never zero, so rand(256) never returns 1 to 24. An attacker who sees three consecutive outputs can predict the tokens, passwords or key bytes that the same object later issues to other users. 25/11/2026 25/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-132255",
+    "descripcion": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. From 0.3.4 before 0.11.0, LLM and other dynamically priced blocks run without charge when a priced input is left at its schema default. An account with a credit balance of zero can make unlimited language-model, code-generation, and image-generation calls at the operator's expense while the platform records the usage at zero cost. This issue is fixed in version 0.11.0. 25/11/2026 25/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-132256",
+    "descripcion": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.10.0, the format Jinja filter in TextFormatter accepts an unbounded width. An authenticated user who can author or run a workflow, or supply its input, can trigger a single synchronous multi-gigabyte allocation that exhausts the executor worker's memory and degrades or denies execution for other users. There is no confidentiality or integrity impact. This issue is fixed in version 0.10.0. 25/11/2026 25/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  }
+]
