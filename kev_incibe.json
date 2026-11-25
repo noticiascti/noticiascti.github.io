@@ -1,6 +1,26 @@
 [
   {
     "fecha": "2026-11-25",
+    "cve": "CVE-2026-109791",
+    "descripcion": "Rejected reason: not a vulnerability 25/11/2026 25/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-123479",
+    "descripcion": "Insertion of Sensitive Information Into Sent Data vulnerability in WPTasty Business Directory business-directory-plugin allows Retrieve Embedded Sensitive Data.This issue affects Business Directory: from n/a through 6.4.29. 25/11/2026 25/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-124252",
+    "descripcion": "Missing Authorization vulnerability in WPTasty Business Directory business-directory-plugin allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Business Directory: from n/a through 6.4.29. 25/11/2026 25/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 5.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-25",
+    "cve": "CVE-2026-105609",
+    "descripcion": "In Eclipse Che versions 7.61.0 through 7.124.0 three related defects in the SCM-OAuth flow, chain into a Medium-severity finding: 1. Open redirect (CWE-601) — `EmbeddedOAuthAPI.callback()` and the OAuth1 callback issue `307 Temporary Redirect` to whatever URL was carried in the `redirect_after_login` field of the OAuth `state` parameter. The value is fully attacker-controlled and never compared against an allow-list of permitted hosts. 2. Missing CSRF nonce in OAuth `state` (CWE-352) — `OAuthAuthenticator.prepareState()` builds the `state` parameter solely by URL-encoding the original request's query string. No random nonce is bound to the user's session, so an attacker can pre-compute a callback URL carrying _their own_ SCM authorization `code` and have a logged-in victim open it. `callback()` then stores the attacker's SCM token under the victim's Che identity (`personalAccessTokenManager.store(...)`). 3. Mutable field on a `@Singleton` (CWE-362 / CWE-488) — `EmbeddedOAuthAPI` is `@Singleton` but stores the per-request `redirect_after_login` value into the instance field `private String redirectAfterLogin`. Any user's `authenticate()` call overwrites the field for all concurrent users; the `access_denied` error-path of `callback()` then redirects to the _last writer's_ URL. 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.30 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-25",
     "cve": "CVE-2026-80271",
     "descripcion": "Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Use of Hard-coded Cryptographic Key vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to remote execution. 25/11/2026 25/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -28,25 +48,5 @@
     "fecha": "2026-11-25",
     "cve": "CVE-2026-80285",
     "descripcion": "Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Execution with Unnecessary Privileges vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges. 25/11/2026 25/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-25",
-    "cve": "CVE-2026-136706",
-    "descripcion": "This vulnerability exists in the DIGIT Platform due to improper neutralization of user supplied input while constructing SQL queries and execution in the affected User and Access Control Service components. An unauthenticated remote attacker could exploit this vulnerability by sending specially crafted input through the affected API endpoint to the targeted system. Successful exploitation of this vulnerability could allow the attacker to execute arbitrary SQL queries, potentially resulting in unauthorized disclosure, modification or deletion of database information on the targeted system. 25/11/2026 25/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-25",
-    "cve": "CVE-2026-78105",
-    "descripcion": "Cross Site Scripting/injection in WYSIWYG editor in Apache JSPWIKI from 2.10 through 3.0.0 on all platforms allows attacker to inject html or javascript outside of the textarea bounds used for rendering. Users are recommended to upgrade to version 3.0.1, which fixes this issue. 25/11/2026 25/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-25",
-    "cve": "CVE-2026-78108",
-    "descripcion": "Resource Exhaustion in Tika Search provider in Apache JSPWIKI versions 2.11.0.M7 through 3.0.0 on all platforms allows attackers to upload specifically crafted attachments that expiolt a known issue with Tika that leads to resource (system memory) exhaustion, causing denial of service. Users are recommended to either stop using the Tika provider in favor of another available provider or ti upgrade to version 3.0.1, which fixes this issue. 25/11/2026 25/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-25",
-    "cve": "CVE-2026-78110",
-    "descripcion": "Cascading Style Sheet injection in Image plugin in Apache JSPWIKI versions 2.1.4 through 3.0.0 on all platforms allows an authenticated attacker to edit an page and fool users into clickjacking/phishing attacks. Users are recommended to upgrade to version 3.0.1, which fixes this issue. 25/11/2026 25/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
