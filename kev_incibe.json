@@ -1,5 +1,45 @@
 [
   {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-135616",
+    "descripcion": "The W3 Total Cache plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.11.0 via deserialization of untrusted input that is injected into the Memcached object cache through request Host header key truncation. This allows authenticated attackers, with subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain (the bundled Guzzle FileCookieJar, reached through the W3TC\\CdnEngine_S3 autoload bridge) allows attackers to write arbitrary files and execute code. This requires the Object Cache to be enabled with the Memcached method backed by the pecl memcache extension and Minify to be enabled; using the same key collision, the attacker first escalates from Subscriber to Administrator. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-137702",
+    "descripcion": "Exim before 4.100.2 allows attackers to send SMTP traffic that triggers a heap out-of-bounds write in expansion code running as root. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.10 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-126717",
+    "descripcion": "The Translate WordPress with Weglot 2.0 – Multilingual AI Translation plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 6.4.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the target site to permit anonymous comment posting (comment_registration disabled) and have at least one Weglot destination language active; on sites with comment moderation enabled, an administrator must approve the carrier and trigger comments before the injected script executes for subsequent visitors. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 7.20 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-106125",
+    "descripcion": "The Sneeit Framework plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 8.7 via the 'callback' parameter of the sneeit_compact_menu_mega_content AJAX action. The handler sneeit_compact_menu_mega_content_callback() is registered on the wp_ajax_nopriv_ hook and passes the attacker-supplied 'callback' value directly into call_user_func() after only a function_exists() check, with the single argument also attacker-controlled via a JSON-decoded 'args' parameter. There is no authentication, no capability check, no nonce, and no allow-list of callable functions. This makes it possible for unauthenticated attackers to execute arbitrary existing PHP/WordPress functions with controlled arguments. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-113774",
+    "descripcion": "The Schema & Structured Data for WP & AMP plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 1.68. This is due to deserialization of untrusted input via the admin export (saswp_export_all_settings_and_schema) which calls unrestricted unserialize() on every raw post meta value, combined with saswp_review_form_process_data() which stores unauthenticated-visitor-supplied reviewer-name data through update_post_meta — the plugin sanitizes with sanitize_text_field(), which does not recognise PHP serialization syntax or the NUL property-name delimiters, and WordPress's maybe_serialize/is_serialized has no case for the legacy PHP 'C' custom-serialization token (ArrayObject), so the payload is persisted byte-for-byte and never wrapped in a protective extra serialize layer. This makes it possible for unauthenticated attackers to inject a PHP Object into the processing of the plugin. No known POP chain is present in the vulnerable plugin itself, but if a suitable chain exists via an additional plugin or theme installed on the blog, it could be used to delete arbitrary files, or achieve other impacts. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 8.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-115867",
+    "descripcion": "The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.5.5 via the copy_files function. This is due to missing file extension validation in the copy_files function, which accepts attacker-controlled stream wrapper URIs as the file source and derives the destination filename without restricting executable extensions. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The plugin places an .htaccess file in its uploads directory to block PHP execution, but this mitigation is ineffective on Nginx, LiteSpeed in certain configurations, and Apache servers with AllowOverride None, and the file is not restored if deleted. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 9.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-116494",
+    "descripcion": "The Forminator Forms plugin for WordPress is vulnerable to Account Approval Bypass in all versions up to, and including, 1.58.3 via the forminator_replace_custom_form_data() function. This is due to the function expanding the {all_fields} merge tag before {account_approval_link}, so a submitter-supplied field value containing the literal string {account_approval_link} is resolved into the real activation URL, including the secret activation key, in the user confirmation email. This makes it possible for unauthenticated attackers to obtain the activation link for their own pending registration and activate the account via the ?page=account_activation&key= endpoint, bypassing the manual approval configured on the registration form. Exploitation requires a user-registration form with manual approval enabled and a user confirmation email that includes the {all_fields} merge tag (the default template). Note: On WordPress Multisite installations with site registration enabled, the self-activated account also becomes the Administrator of the subsite created during registration. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N Gravedad 3.1 (CVSS 3.1 Base Score) 6.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-137677",
+    "descripcion": "A vulnerability has been found in code-projects Simple Laundry System 1.0. This affects an unknown function of the file viewdetailforuser.php. The manipulation of the argument serviceId leads to sql injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L Vector CVSS:2.0 AV:N/AC:L/Au:N/C:P/I:P/A:P Gravedad 4.0 5.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 7.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
+  },
+  {
     "fecha": "2026-11-26",
     "cve": "CVE-2026-137668",
     "descripcion": "A flaw has been found in ONNX ONNXMLTools up to 1.16.0. This impacts the function visualize_model of the file onnxmltools/utils/visualize.py. This manipulation of the argument producer_name causes basic cross site scripting. The attack is possible to be carried out remotely. The exploit has been published and may be used. The pull request to fix this issue awaits acceptance. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
@@ -8,45 +48,5 @@
     "fecha": "2026-11-26",
     "cve": "CVE-2026-136974",
     "descripcion": "Configuration injection in liblxc instance configuration generation in Canonical LXD before 6.10.2, 5.21.10, 5.0.12, 4.0.16 allows an authenticated user with restricted project access or a local user of the LXD user socket to execute arbitrary commands as root on the host via line breaks in instance configuration keys and values. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-136975",
-    "descripcion": "Authentication bypass by spoofing in bridged NIC MAC filtering in Canonical LXD before 4.0.16, 5.0.12, 5.21.10, 6.10.2 allows a privileged user inside an instance sharing a managed bridge to intercept and deny inbound network traffic addressed to a neighbour instance via sending frames with a spoofed source MAC address before filtering drops them. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.20 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-136976",
-    "descripcion": "Improper link resolution before file access in recursive file pull in Canonical LXD before 4.0.15, 5.0.11, 5.21.9, and 6.8 on case-insensitive client filesystems allows an authenticated user with write access to an instance directory or custom volume to write arbitrary files outside the target directory and execute code as the operator via case-variant symlinks. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-136977",
-    "descripcion": "Improper authentication in the guest API connection handling in Canonical LXD before 4.0.16, 5.0.12, 5.21.10, 6.10.2 allows a root user inside an unisolated instance to impersonate another instance and read its configuration, metadata, and devices across project boundaries via holding open connections across PID wrap-around. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 5.10 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-136978",
-    "descripcion": "Exposure of resource to wrong sphere in the instance file transfer API in Canonical LXD before 4.0.16, 5.0.12, 5.21.10, 6.10.2 allows an authenticated user with restricted project access to read and write arbitrary host block or character devices, compromise the host, and hang file transfer requests via importing device nodes or named pipes outside /dev in an image or backup and opening them on a stopped instance. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-137114",
-    "descripcion": "Exposure of resource to wrong sphere in image and backup metadata handling in Canonical LXD before 6.10.2, 5.21.10, 5.0.12, 4.0.16 allows an authenticated user with restricted project access to read and overwrite arbitrary host files, access other projects' data, and block the daemon via importing device nodes, hard links, symlinks, or named pipes. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.40 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-137667",
-    "descripcion": "A vulnerability was detected in ONNX ONNXMLTools up to 1.16.0. This affects the function get_set_node of the file onnxmltools/utils/visualize.py of the component Model Visualization. The manipulation results in cross site scripting. The attack can be executed remotely. The exploit is now public and may be used. The pull request to fix this issue awaits acceptance. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Vector CVSS:2.0 AV:N/AC:L/Au:N/C:N/I:P/A:N Gravedad 4.0 2.10 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-135381",
-    "descripcion": "Incorrect permission assignment for critical resources in rsync transfer sockets, instance storage directories, proxy socket paths, and disk staging mounts in Canonical LXD before 4.0.16, 5.0.12, 5.21.10, 6.10.2 allows an unprivileged local user to gain root privileges on the host, read or modify transferred volumes, alter host file permissions, and inject AppArmor rules via connecting to unauthenticated abstract Unix sockets, running setuid binaries, or racing path and mount operations. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
-  },
-  {
-    "fecha": "2026-11-26",
-    "cve": "CVE-2026-135382",
-    "descripcion": "Path traversal in backup, image, storage volume, and migration handling in Canonical LXD before 4.0.16, 5.0.12, 5.21.10, 6.10.2 allows an authenticated user with restricted project access to read and write arbitrary host files as root and exhaust daemon memory via crafted symlinks, unvalidated path components, or oversized metadata. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 6.50 Gravedad 4.0 txt MEDIUM Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
   }
 ]
