@@ -1,6 +1,36 @@
 [
   {
     "fecha": "2026-11-28",
+    "cve": "CVE-2026-112232",
+    "descripcion": "The Popup Builder WordPress plugin through 4.4.6 does not properly sanitize and escape a popup shortcode attribute before it is reflected into a page and evaluated client-side, allowing users with the Contributor role and above to inject arbitrary JavaScript that executes in the session of any higher-privileged user, such as an administrator, who views the affected content. 28/11/2026 28/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-28",
+    "cve": "CVE-2026-112233",
+    "descripcion": "The Popup Builder WordPress plugin through 4.4.6 does not check the publish status or the visitor's capabilities before rendering a popup requested by its ID in the URL, allowing unauthenticated users to read the content and configuration of popups that are still drafts or are marked private. 28/11/2026 28/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-28",
+    "cve": "CVE-2026-112234",
+    "descripcion": "The Popup Builder WordPress plugin through 4.4.6 does not validate a user-supplied URL before requesting it server-side and storing the fetched response so that it can be read back, allowing users with Administrator privileges to perform Server-Side Request Forgery (SSRF) attacks and read the responses of internal services. 28/11/2026 28/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-28",
+    "cve": "CVE-2026-112235",
+    "descripcion": "The Popup Builder WordPress plugin through 4.4.6 does not properly check authorization before allowing a user to store popup preview data against arbitrary posts, nor restrict who can read that content back on public requests, allowing users granted access to the Popup Builder WordPress plugin through 4.4.6 to disclose the private and draft content of posts they do not own to unauthenticated visitors. 28/11/2026 28/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-28",
+    "cve": "CVE-2026-123654",
+    "descripcion": "Themify Base WordPress theme through 1.2.4 does not perform capability checks on its option save and read AJAX actions, which are protected only by a generic nonce that other commonly expose on the front end, allowing users with a role as low as Subscriber to update arbitrary blog options such as the default role and open registration, and gain administrator access when such a is active. 28/11/2026 28/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-28",
+    "cve": "CVE-2026-112231",
+    "descripcion": "The Popup Builder WordPress plugin through 4.4.6 does not sanitise or escape a custom styling value before storing it and printing it back into the pages a popup loads on, allowing users who are allowed to manage popups (an ability that can be delegated to lower-privileged roles) to inject JavaScript that executes in the browser of every visitor, including logged-in administrators. 28/11/2026 28/11/2026 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-28",
     "cve": "CVE-2026-138161",
     "descripcion": "Gammu before 1.45.2 contains a buffer overflow vulnerability in LoadBackup() that allows attackers to corrupt memory by supplying an overlong MD5 value in a crafted backup file. Attackers can overwrite adjacent phonebook and calendar entry pointers via strcpy() into MD5Original when files are loaded with convertbackup or restore, causing crashes or potential code execution. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -18,35 +48,5 @@
     "fecha": "2026-11-28",
     "cve": "CVE-2026-138164",
     "descripcion": "Gammu before 1.45.2 contains a stack-based buffer overflow vulnerability in SaveBackupText() in backtext.c that allows attackers to corrupt stack memory by supplying long text fields. Attackers can craft a backup with long calendar or note fields that, when converted with gammu convertbackup, writes hex digits past the 10,000-byte stack buffer. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N Gravedad 4.0 4.80 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 3.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-11-28",
-    "cve": "CVE-2026-138158",
-    "descripcion": "libgphoto2 through 2.5.34 contains a stack buffer overflow in sierra_get_string_register() that lets a malicious sierra-protocol camera or USB device overwrite stack memory. When files are listed, the device can answer the file-name register with an oversized packet, writing up to 32 KB past small stack buffers to cause crashes or possible code execution. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:P/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.00 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-28",
-    "cve": "CVE-2026-138159",
-    "descripcion": "edbrowse through 3.8.19 contains an integer overflow in stringAndBytes() that allows malicious servers to write past a heap buffer by sending response bodies larger than 2 GB. When a user browses to an attacker-controlled HTTP, FTP, or gopher server, the oversized body skips reallocation and corrupts the heap, causing crashes or potentially code execution. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-28",
-    "cve": "CVE-2026-138160",
-    "descripcion": "Gammu before 1.45.2 contains a stack-based buffer overflow vulnerability in ReadBackupTextLen() that allows attackers to overwrite stack memory via crafted backup files. Attackers can supply overlong quoted text values decoded into a 10,000-byte stack array during convertbackup, restore, or GSM_ReadBackupFile calls, causing crashes or potential code execution. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 8.50 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-28",
-    "cve": "CVE-2026-138154",
-    "descripcion": "POSTAL 2 before build 26810491 contains a sandbox escape vulnerability that allows malicious Steam Workshop mods to execute code by calling ConsoleCommand with a start file URI. Attackers can ship a batch file in a mod at the predictable workshop install path and launch it via ShellExecuteW, executing commands as the player on Windows. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 8.60 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-28",
-    "cve": "CVE-2026-138153",
-    "descripcion": "Otter – Page Builder Blocks & Extensions for Gutenberg before 3.2.12 contains an incorrect authorization vulnerability in the Posts Grid block and Atomic Wind query loop that allows Contributor-level attackers to read non-public post type entries. Attackers can set the postTypes or queryPostType block attributes to types like flamingo_inbound or shop_coupon to expose titles and text, while the Atomic Wind custom_field path also leaks protected post meta. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.30 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-28",
-    "cve": "CVE-2026-138122",
-    "descripcion": "ClassroomIO through 1.0.0 contains an insecure direct object reference vulnerability that allows authenticated course members to access other tenants' newsfeed posts by supplying a foreign feedId under their own courseId. Attackers can read, react to, and comment on cross-organization posts, while team members or org admins can also overwrite content, pin flags, and delete them. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 5.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
