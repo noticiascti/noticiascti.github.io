@@ -1,6 +1,21 @@
 [
   {
     "fecha": "2026-11-27",
+    "cve": "CVE-2026-107967",
+    "descripcion": "HCL Verse for Android included a decryption code for compatibility with locally stored values and attachment files created by older application versions (no longer used for data stored by newer versions). HCL Verse for Android version 14.5.16 (November 2026) removed the legacy decryption code. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:L/AC:H/AT:N/PR:H/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Gravedad 4.0 0.90 Gravedad 4.0 txt LOW Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) Pendiente de análisis"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-138004",
+    "descripcion": "A security vulnerability has been detected in TRENDnet TEW-751DR and TEW-733GR 1.03B01. Affected is the function soapcgi_main of the file /soap.cgi of the component UPnP Igd Control Endpoint. Such manipulation of the argument service leads to os command injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used. 28/11/2026 28/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:L/Au:N/C:C/I:C/A:C Gravedad 4.0 9.30 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 10.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-11-27",
+    "cve": "CVE-2026-138003",
+    "descripcion": "A weakness has been identified in TRENDnet TEW-751DR 1.03B01. This impacts the function FUN_0040ed90 of the file wfadev.cgi of the component UPnP/WFA. This manipulation of the argument SOAPAction causes stack-based buffer overflow. The attack is possible to be carried out remotely. A high degree of complexity is needed for the attack. The exploitability is said to be difficult. The exploit has been made available to the public and could be used for attacks. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H Vector CVSS:2.0 AV:N/AC:H/Au:N/C:C/I:C/A:C Gravedad 4.0 9.00 Gravedad 4.0 txt CRITICAL Gravedad 3.1 (CVSS 3.1 Base Score) 9.00 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) CRITICAL"
+  },
+  {
+    "fecha": "2026-11-27",
     "cve": "CVE-2026-137941",
     "descripcion": "A flaw was found in GIMP. The Levels configuration setter does not validate the channel enum before using it to index fixed-size per-channel arrays. A crafted XCF file with a non-destructive Levels filter can set an out-of-range channel (LUMINANCE or RGB), causing a heap out-of-bounds read and write when the file is opened. This may lead to a crash or arbitrary code execution. 27/11/2026 27/11/2026 Vector CVSS:3.1 CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 3.1 (CVSS 3.1 Base Score) 7.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
   },
@@ -33,20 +48,5 @@
     "fecha": "2026-11-27",
     "cve": "CVE-2026-138028",
     "descripcion": "Bagel (bagel-mcp) before 2.5.5 contains an argument injection vulnerability in RsyncFilesToLocalDirectory that allows attackers to inject rsync options because only --quiet and --log-format values are rejected. Attackers who influence the LLM through prompt-injected content can trigger run_pipeline with -e/--rsh or --rsync-path options to execute commands as the Bagel server process. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H Gravedad 4.0 7.70 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 7.50 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) HIGH"
-  },
-  {
-    "fecha": "2026-11-27",
-    "cve": "CVE-2026-138029",
-    "descripcion": "Wazuh-MCP-Server before commit 2bbfe12 contains a server-side request forgery vulnerability in the blueteam_check_webshell tool because WebshellCheckInput.validate_url accepts DNS hostnames without resolving them. Attackers can supply URLs whose hostnames resolve or redirect to loopback, private, or link-local addresses, making curl reach internal services and cloud metadata endpoints and leak response details. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 4.0 5.30 Gravedad 4.0 txt MEDIUM Gravedad 3.1 (CVSS 3.1 Base Score) 4.70 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
-  },
-  {
-    "fecha": "2026-11-27",
-    "cve": "CVE-2026-138030",
-    "descripcion": "SylphxAI pdf-reader-mcp 2.4.1 through 3.0.14, 3.0.16, and 3.1.2 through 3.1.4 contains a server-side request forgery vulnerability in its PDF URL loader, which validates the resolved address but does not pin it for fetch(). Attackers controlling DNS for a url passed to read_pdf can return a public address at check time and an internal address at connection time to reach internal services and cloud metadata endpoints. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:N/A:N Gravedad 4.0 2.30 Gravedad 4.0 txt LOW Gravedad 3.1 (CVSS 3.1 Base Score) 3.40 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) LOW"
-  },
-  {
-    "fecha": "2026-11-27",
-    "cve": "CVE-2026-138031",
-    "descripcion": "Typebot from 2.14.0 before 3.19.0 contains an authorization flaw that allows authenticated bot authors to reference another workspace's legacy webhook by saving a foreign webhookId in an HTTP request block. Attackers can have executeHttpRequestBlock return the victim's URL, headers and body client-side, or use handleSubscribeHttpRequest to overwrite the victim's webhook URL and redirect its data. 27/11/2026 27/11/2026 Vector CVSS:4.0 CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X Vector CVSS:3.1 CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N Gravedad 4.0 7.60 Gravedad 4.0 txt HIGH Gravedad 3.1 (CVSS 3.1 Base Score) 6.80 Gravedad 3.1 Txt Gravedad 3.1 (CVSS 3.1 Base Score) MEDIUM"
   }
 ]
